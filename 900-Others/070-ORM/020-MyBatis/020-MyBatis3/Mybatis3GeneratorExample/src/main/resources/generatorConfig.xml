@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+	<context id="context1">
+		<!-- JDBC Connection -->
+		<jdbcConnection connectionURL="jdbc:h2:./test"
+			driverClass="org.h2.Driver" password="" userId="sa" />
+
+		<!-- Model -->
+		<javaModelGenerator targetPackage="com.ittechoffice.example.model"
+			targetProject="src/main/java">
+
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+
+		</javaModelGenerator>
+
+		<!-- SQL Map -->
+		<sqlMapGenerator targetPackage="com.ittechoffice.example.xml"
+			targetProject="src/main/java">
+			
+			<property name="enableSubPackages" value="true" />
+			
+		</sqlMapGenerator>
+
+		<!-- DAO -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.ittechoffice.example.dao" 
+			targetProject="src/main/java">
+			
+			<property name="enableSubPackages" value="true" />
+			
+		</javaClientGenerator>
+
+		<!-- Database Table Mapping -->
+		<table tableName="TABLE1">
+		</table>
+
+	</context>
+</generatorConfiguration>

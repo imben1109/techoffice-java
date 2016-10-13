@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        <title>JSF 2.0 Hello World</title>
+    </h:head>
+    <h:body>
+
+    	<h2>JSF 2.0 Hello World Example - basictag.xhtml</h2>
+		<h3>Basic Tag</h3>
+
+		<h:form>
+			<table>
+				<tr>
+					<td>h:inputText:</td>
+					<td><h:inputText/></td>
+				</tr>
+				<tr>
+					<td>h:inputSecret</td>
+					<td><h:inputSecret/></td>
+				</tr>
+				<tr>
+					<td>h:inputTextarea</td>
+					<td><h:inputTextarea/></td>
+				</tr>
+				<tr>
+					<td>h:inputHidden</td>
+					<td><h:inputHidden/></td>
+				</tr>
+				<tr>
+					<td>h:selectBooleanCheckbox</td>
+					<td><h:selectBooleanCheckbox /></td>
+				</tr>
+				<tr>
+					<td>h:selectManyCheckbox</td>
+					<td>
+						<h:selectManyCheckbox value="#{basicTagController.selectManyCheckboxValue}">
+					   		<f:selectItem itemValue="1" itemLabel="Item 1" />
+					   		<f:selectItem itemValue="2" itemLabel="Item 2" />
+						</h:selectManyCheckbox>
+					</td>
+				</tr>
+				<tr>
+					<td>h:selectOneRadio</td>
+					<td>
+						<h:selectOneRadio value="#{basicTagController.selectOnRadioValue}">
+   							<f:selectItem itemValue="1" itemLabel="Item 1" />
+   							<f:selectItem itemValue="2" itemLabel="Item 2" />	   			
+						</h:selectOneRadio>	 
+					</td>
+				</tr>
+				<tr>
+					<td>selectOneListbox</td>
+					<td>
+						<h:selectOneListbox value="#{basicTagController.selectOneListboxValue}">
+   							<f:selectItem itemValue="1" itemLabel="Item 1" />
+   							<f:selectItem itemValue="2" itemLabel="Item 2" />	   							
+						</h:selectOneListbox>	
+					</td>
+				</tr>
+				<tr>
+					<td>h:selectManyListbox</td>
+					<td>
+						<h:selectManyListbox value="#{basicTagController.selectManyListboxValue}">
+   							<f:selectItem itemValue="1" itemLabel="Item 1" />
+   							<f:selectItem itemValue="2" itemLabel="Item 2" />	   							
+						</h:selectManyListbox>		
+					</td>
+				</tr>
+				<tr>
+					<td>h:outputText</td>
+					<td><h:outputText value="Hello World!" /></td>
+				</tr>
+				<tr>
+					<td>h:outputFormat</td>
+					<td>
+						<h:outputFormat value="parameter 1 : {0}, parameter 2 : {1}" >
+   							<f:param value="Item 1" />
+   							<f:param value="Item 2" />
+						</h:outputFormat>	
+					</td>
+				</tr>
+				<tr>
+					<td>h:graphicImage</td>
+					<td>
+						<h:graphicImage value="http://www.tutorialspoint.com/images/jsf-mini-logo.png"/>
+					</td>
+				</tr>
+				<tr>
+					<td>h:outputStylesheet</td>
+					<td>
+						<!-- 
+						<h:outputStylesheet library="css" name="styles.css"  />
+						 --> 
+					</td>
+				</tr>
+				<tr>
+					<td>h:outputScript</td>
+					<td>
+						<!-- 
+						<h:outputScript library="js" name="help.js" />
+						 -->
+					</td>
+				</tr>
+				<tr>
+					<td>h:commandButton</td>
+					<td>
+						<h:commandButton value="Click Me!" onclick="alert('Hello World!');" />
+					</td>
+				</tr>
+				<tr>
+					<td>h:link</td>
+					<td>
+						<h:link value="facelet" outcome="facelet" />
+					</td>
+				</tr>
+				<tr>
+					<td>h:commandLink</td>
+					<td>
+						<h:commandLink value="ajax"/>
+					</td>
+				</tr>
+				<tr>
+					<td>h:outputLink</td>
+					<td>
+						<h:outputLink value="datatable.xhtml" >datatable</h:outputLink>
+					</td>
+				</tr>
+				<tr>
+					<td>h:panelGrid </td>
+					<td>
+						<h:panelGrid id="panel" columns="2" border="1" cellpadding="10" cellspacing="1">
+							<f:facet name="header">
+								<h:outputText value="Login"/>
+							</f:facet>
+							<h:outputLabel value="Username" />
+							<h:inputText  />
+							<h:outputLabel value="Password" />
+							<h:inputSecret />
+							<f:facet name="footer">
+  								<h:panelGroup style="display:block; text-align:center">
+   									<h:commandButton id="submit" value="Submit" />
+								</h:panelGroup>
+					      </f:facet>
+					</h:panelGrid>
+					</td>
+				</tr>
+				<tr>
+					<td>h:message</td>
+					<td>
+						<h:inputText  id="username"  size="20" label="UserName" required="true">
+   							<f:validateLength for="username" minimum="5" maximum="20" />			
+						</h:inputText>
+						<h:message for="username" style="color:red" />
+					</td>
+				</tr>
+				<tr>
+					<td>h:messages</td>
+					<td><h:messages style="color:red;margin:8px;" /></td>
+				</tr>
+				<tr>
+					<td>f:param</td>
+					<td>
+						<h:outputFormat value="Hello {0}!.">				
+   						<f:param value="World" />
+						</h:outputFormat>
+					</td>
+				</tr>
+				<tr>
+					<td>f:attribute</td>
+					<td>
+						<h:commandButton id="submit123" 
+							actionListener="#{userData.attributeListener}" action="result"> 
+   							<f:attribute name="value" value="Show Message" />				
+   							<f:attribute name="username" value="JSF 2.0 User" />
+						</h:commandButton>
+					</td>
+				</tr>
+				<tr>
+					<td>f:setPropertyActionListener</td>
+					<td>
+						<h:commandButton id="submit234" action="result" value="Show Message"> 
+   							<f:setPropertyActionListener target="#{userData.data}" 
+      							value="JSF 2.0 User" />
+						</h:commandButton>
+					</td>
+				</tr>
+				
+			</table>
+		</h:form>
+    </h:body>
+</html>
