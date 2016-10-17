@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ittechoffice.example</groupId>
+	<artifactId>MyBatisAssistant</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jaxb2-maven-plugin</artifactId>
+					<version>2.3</version>
+					<executions>
+						<execution>
+							<id>xjc</id>
+							<goals>
+								<goal>xjc</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<sourceType>dtd</sourceType>
+						<sources>
+							<source>src/main/dtd/sql-map-2.dtd</source>
+						</sources>
+						<clearOutputDir>true</clearOutputDir>
+						<outputDirectory>src/main/java</outputDirectory>
+						<packageName>com.ittechoffice.mybatis2.sqlmap.model</packageName>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

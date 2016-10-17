@@ -7,8 +7,18 @@
 ## Dependencies
 * Spring 4.3
 
-## Example 
-
 ## Spring Task Executor
 
 Spring provide many implement to TaskExecutor to control various aspects such as thread pools size.
+
+## Example 
+
+In this example, it declares a bean of ThreadPoolTaskExecutor which has only one thread pool.
+
+```
+<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+	<property name="corePoolSize" value="1" />
+	<property name="maxPoolSize" value="1" />
+	<property name="queueCapacity" value="1" />
+</bean>
+```

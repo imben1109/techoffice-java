@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ittechoffice.example.fx.controller.MavenProjectManagerController">
+	<children>
+		<GridPane>
+			<children>
+				<Label text="No. Of Maven Project: " 
+					GridPane.rowIndex="0" GridPane.columnIndex="0" />
+				<Label fx:id="numMvnProjLabel"
+					GridPane.rowIndex="0" GridPane.columnIndex="1" />
+					
+				<Label text="No. Of Invalid Maven Project: " 
+					 GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+				<Label fx:id="numInvalidMvnProjLabel"
+					 GridPane.rowIndex="1" GridPane.columnIndex="1" />
+			</children>
+		</GridPane> 
+		<Button fx:id="validMvnProjBtn" text="Valid" onAction="#validMvnProj"/>
+		<Label fx:id="validMvnProjLogLabel" />
+	</children>
+</VBox>
