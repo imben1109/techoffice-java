@@ -6,6 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
+	
+		<!-- Embedded Tomcat -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-core</artifactId>
@@ -36,6 +38,8 @@
 			<artifactId>tomcat-jsp-api</artifactId>
 			<version>8.0.28</version>
 		</dependency>
+		
+		<!-- JSP Stadard Tag Library -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>

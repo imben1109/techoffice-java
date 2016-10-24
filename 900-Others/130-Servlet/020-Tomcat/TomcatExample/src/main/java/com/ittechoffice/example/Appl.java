@@ -14,11 +14,12 @@ import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
 
 public class Appl {
+	
+	@SuppressWarnings("serial")
 	public static void main(String[] args) throws LifecycleException{
 	    Tomcat tomcat = new Tomcat();
 	    tomcat.setPort(8080);
         Context ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
-
         Tomcat.addServlet(ctx, "Embedded", new HttpServlet() {
             @Override
             protected void service(HttpServletRequest req, HttpServletResponse resp) 
@@ -30,12 +31,10 @@ public class Appl {
                 w.close();
             }
         });
-
-        ctx.addServletMapping("/*", "Embedded");
-
-        
+        ctx.addServletMapping("/*", "Embedded");        
 	    tomcat.start();
+	    System.out.println("Server is starting at localhost:8080");
 	    tomcat.getServer().await();
-
 	}
+	
 }

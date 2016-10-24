@@ -15,9 +15,7 @@ public class Appl {
 	private final static String webappPath = "src/main/webapp";
 	
 	public static void main(String[] args) throws ServletException, LifecycleException {
-		File file = new File(webappPath);
-		System.out.println(file.getAbsolutePath());
-		
+		File file = new File(webappPath);		
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
 

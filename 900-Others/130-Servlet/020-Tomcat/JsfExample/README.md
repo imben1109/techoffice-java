@@ -1,7 +1,7 @@
 # Emebedded Tomcat JSF Example
 
 ## Example
-This example show simple JSF Application on Embedded Tomcat.
+This example show simple JSF Application on Embedded Tomcat. It is very similar to JSPExample and add JSF capacity to it so that JSF Dependencies are required to add to pom.xml. 
 
 src/main/webapp/WEB-INF/web.xml
 ```
@@ -27,8 +27,112 @@ src/main/webapp/WEB-INF/web.xml
 </web-app>
 ```
 
+Appl.java (Main Program for Main Application)
+```
+public class Appl {
+	private final static String webappPath = "src/main/webapp";
+	
+	public static void main(String[] args) throws ServletException, LifecycleException {
+		File file = new File(webappPath);
+		System.out.println(file.getAbsolutePath());
+		
+        Tomcat tomcat = new Tomcat();
+        tomcat.setPort(8080);
+
+        StandardContext ctx = (StandardContext) tomcat.addWebapp("/", new File(webappPath).getAbsolutePath());
+        File additionWebInfClasses = new File("target/classes");
+        WebResourceRoot resources = new StandardRoot(ctx);
+        resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
+                additionWebInfClasses.getAbsolutePath(), "/"));
+        ctx.setResources(resources);
+
+        tomcat.start();
+        tomcat.getServer().await();
+
+	}
+}
+```
+
+HelloBean (Managed Bean)
+```
+package com.ittechoffice.example;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean
+public class HelloBean {
+	private String hello = "Hello123!!";
+	
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getHello(){
+		return hello;
+	}
+	
+
+}
+```
+
+hello.xhtml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        <title>JSF 2.0 Hello World</title>
+    </h:head>
+    <h:body>
+    	<h2>JSF 2.0 Hello World Example - hello.xhtml</h2>
+    	<div>${helloBean.hello}</div>
+    	<h:form>
+    	   <h:inputText value="#{helloBean.name}"></h:inputText>
+    	   <h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
+    	</h:form>
+    </h:body>
+</html>
+```
+
+welcome.xhtml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+    	<title>JSF 2.0 Hello World</title>
+    </h:head>
+    <h:body bgcolor="white">
+    	<h2>JSF 2.0 Hello World Example - welcome.xhtml</h2>
+    	<h2>Welcome #{helloBean.name}</h2>
+    </h:body>
+</html>
+```
+
+
 ## JSF Dependenecis
 ```
+<!-- JSP Standard Tag Library -->
+<dependency>
+	<groupId>jstl</groupId>
+	<artifactId>jstl</artifactId>
+	<version>1.2</version>
+</dependency>
+
+<!-- Mojarra JSF  -->
 <dependency>
 	<groupId>com.sun.faces</groupId>
 	<artifactId>jsf-api</artifactId>
@@ -39,6 +143,8 @@ src/main/webapp/WEB-INF/web.xml
 	<artifactId>jsf-impl</artifactId>
 	<version>2.1.13</version>
 </dependency>
+
+<!-- Servlet -->
 <dependency>
 	<groupId>javax.servlet</groupId>
 	<artifactId>javax.servlet-api</artifactId>
