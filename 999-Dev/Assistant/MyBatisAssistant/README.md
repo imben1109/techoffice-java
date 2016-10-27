@@ -1,5 +1,6 @@
 # My Batis Assistant
 
+## The SqlMap Version is 2.
 
 ## Maven Commands
 Maven Command to generate Java XML Blinding Code for MyBatis SQL Map XML file.

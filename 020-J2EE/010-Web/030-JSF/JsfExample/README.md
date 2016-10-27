@@ -1,4 +1,4 @@
-# Tomcat Jsf Example
+# Mojarra Jsf Example
 
 **Prerequisite**
 * Maven

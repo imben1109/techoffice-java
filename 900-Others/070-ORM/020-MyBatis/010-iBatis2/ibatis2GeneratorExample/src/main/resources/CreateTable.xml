@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace="CreateTable">
+
+	<update id="createTable1">
+		CREATE TABLE IF NOT EXISTS TABLE1 (
+			COL1 VARCHAR2(100), 
+			COL2 VARCHAR2(100) 
+		);
+	</update>
+		
+</mapper>
