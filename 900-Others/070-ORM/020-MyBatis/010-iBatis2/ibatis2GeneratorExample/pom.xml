@@ -10,7 +10,17 @@
 		<!-- ibatis -->
 		<dependency>
 			<groupId>com.ibatis</groupId>
-			<artifactId>ibatis-sqlmap</artifactId>
+			<artifactId>ibatis2-sqlmap</artifactId>
+			<version>2.1.7.597</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibatis</groupId>
+			<artifactId>ibatis2-dao</artifactId>
+			<version>2.1.7.597</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibatis</groupId>
+			<artifactId>ibatis2-common</artifactId>
 			<version>2.1.7.597</version>
 		</dependency>
 
@@ -19,6 +29,12 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.192</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging-api</artifactId>
+		    <version>1.1</version>
 		</dependency>
 
 	</dependencies>

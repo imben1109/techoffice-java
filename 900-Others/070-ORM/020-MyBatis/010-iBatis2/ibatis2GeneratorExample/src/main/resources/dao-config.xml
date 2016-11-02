@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE daoConfig PUBLIC "-//ibatis.apache.org//DTD DAO Configuration 2.0//EN" "http://ibatis.apache.org/dtd/dao-2.dtd">
+<daoConfig>
+	<context>
+		<transactionManager type="SQLMAP">
+		 	<property name="SqlMapConfigResource" value="sqlmap-config.xml"/>
+			<property name="DataSource" value="SIMPLE" />
+			<property name="JDBC.Driver" value="org.h2.Driver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:h2:./test" />
+			<property name="JDBC.Username" value="sa" />
+			<property name="JDBC.Password" value="" />
+		</transactionManager>
+		<dao interface="com.ittechoffice.example.dao.Table1DAO" implementation="com.ittechoffice.example.dao.Table1DAOImpl"/>
+	</context>
+</daoConfig>
