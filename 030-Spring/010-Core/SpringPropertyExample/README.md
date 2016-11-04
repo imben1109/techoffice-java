@@ -1,6 +1,7 @@
-# Spring Hello World Example
+# Spring Bean Property Example
 
 Spring is a Inversion of Control Container. In this example, it would show you how to use XML to configure and declare Spring bean for use. 
+In this example, it would create a spring bean and set a value for its property.
 
 bean.xml (XML configuration of Spring Application)
 ```
