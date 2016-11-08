@@ -1,0 +1,14 @@
+<project>
+	<!-- Execute Java -jar AntHelloWorldExample.jar -->
+	<target name="run">
+		<java jar="lib/AntHelloWorldExample.jar" fork="true"/>
+	</target>
+	
+	<target name="build">
+		<jar destfile="lib/AntHelloWorldExample.jar" basedir="target/classes">
+            <manifest>
+                <attribute name="Main-Class" value="com.techoffice.example.HelloWorld"/>
+            </manifest>
+		</jar>
+	</target>
+</project>
