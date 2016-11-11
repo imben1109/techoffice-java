@@ -1,2 +1,3 @@
-# Log4j Example
+# Log4j Mulit Log File Example
+
 
