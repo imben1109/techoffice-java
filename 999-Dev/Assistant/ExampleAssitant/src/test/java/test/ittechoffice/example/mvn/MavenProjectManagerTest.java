@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.ittechoffice.example.fx.Appl;
-import com.ittechoffice.example.mvn.MavenProjectManager;
+import com.techoffice.example.fx.Appl;
+import com.techoffice.example.mvn.MavenProjectManager;
 
 public class MavenProjectManagerTest {
 	

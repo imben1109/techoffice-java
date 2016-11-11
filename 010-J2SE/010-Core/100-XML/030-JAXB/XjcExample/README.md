@@ -24,3 +24,8 @@ It would generate two files
 * generated\Student.java       
 
 The generated Java Code could be used for Jaxb.
+
+## Related Bugs
+https://java.net/jira/browse/JAXB-1001
+Currently, there is a bug found that the local would not be passed to xjc.exe. Then the language of javadoc would be according to machine. 
+The workaround would be maven-xjc plugin. The locale configuration could be set in pom.xml.
