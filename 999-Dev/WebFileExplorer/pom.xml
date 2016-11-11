@@ -7,7 +7,7 @@
         <version>1.4.0.RELEASE</version>
     </parent>
     <groupId>com.techoffice.example</groupId>
-    <artifactId>SpringBootFileExplorer</artifactId>
+    <artifactId>WebFileExplorer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
         <dependency>

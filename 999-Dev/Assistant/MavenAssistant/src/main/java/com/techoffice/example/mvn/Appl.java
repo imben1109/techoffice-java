@@ -16,10 +16,10 @@ public class Appl {
 		for (File mavenProject: mavenProjectList){
 			String pomPath = new File(mavenProject.getPath(), "pom.xml").getPath();
 			Model model = PomReader.getModel(pomPath);
-			if (!model.getGroupId().equals("com.techoffice.example")){
-				model.setGroupId("com.techoffice.example");
+			if (!mavenProject.getName().equals(model.getArtifactId())){
+				model.setArtifactId(mavenProject.getName());
 				PomReader.saveModel(model, pomPath);
-				System.out.println("Updated Group Id of " + pomPath);
+				System.out.println("ArtifactId of " + pomPath + "updated");
 			}
 		}
 	}
