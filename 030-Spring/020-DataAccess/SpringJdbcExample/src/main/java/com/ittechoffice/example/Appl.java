@@ -24,7 +24,7 @@ public class Appl {
 	private JdbcTemplate jdbcTemplate;
 	
 	public Appl(){
-		System.out.println("IT Tech Office Spring Data Access Example");
+		System.out.println("Tech Office Spring Data Access Example");
 	}
 	
 	@Transactional()

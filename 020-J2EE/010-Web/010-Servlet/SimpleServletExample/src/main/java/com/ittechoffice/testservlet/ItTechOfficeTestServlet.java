@@ -13,7 +13,7 @@ public class ItTechOfficeTestServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<h1>IT Tech Office Test Servlet Example Update</h1>");
+		out.println("<h1>Tech Office Test Servlet Example Update</h1>");
 		
 	}
 }
