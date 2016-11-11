@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.techoffice.example.mvn.constant.MavenProjectContant;
 import com.techoffice.example.mvn.util.MavenProjectHelper;
+import com.techoffice.example.util.FileUtil;
 
 public class MavenProjectService {
 	
@@ -47,50 +48,16 @@ public class MavenProjectService {
 	
 	public void correctInvalidMavenProject(List<File> invalidMvnProjList) throws IOException{
 		for (File file: invalidMvnProjList){
-			File mainResources = new File(file.getPath() + MavenProjectContant.MAIN_RESOURCES_GITKEEP);
 			File mainFolder = new File(file.getPath() + "/src/main");
 			File mainResourcesFolder = new File(file.getPath() + "/src/main/resources");
-
 			File testFolder = new File(file.getPath() + "/src/test");
 			File testJavaFolder = new File(file.getPath() + "/src/test/java");
 			File testResourcesFolder = new File(file.getPath() + "/src/test/resources");
-			File testJava = new File(file.getPath() + "/src/test/java/.gitkeep");
-			File testResources = new File(file.getPath() + "/src/test/resources/.gitkeep");
-			
-			if (!mainFolder.exists()){
-				mainFolder.mkdirs();
-			}
-			
-			if (!mainResourcesFolder.exists()){
-				mainResourcesFolder.mkdirs();
-			}
-			
-			if (!mainResources.exists()){
-				System.out.println(mainResources.getPath() + " created");
-				mainResources.createNewFile();
-			}
-			
-			if (!testFolder.exists()){
-				testFolder.mkdirs();
-			}
-			
-			if (!testJavaFolder.exists()){
-				testJavaFolder.mkdirs();
-			}
-			
-			if (!testResourcesFolder.exists()){
-				testResourcesFolder.mkdirs();
-			}
-			
-			if (!testJava.exists()){
-				System.out.println(testJava.getPath() + " created");
-				testJava.createNewFile();
-			}
-			
-			if (!testResources.exists()){
-				System.out.println(testResources.getPath() + " created");
-				testResources.createNewFile();
-			}
+			FileUtil.createFolderIfNotExist(mainFolder);
+			FileUtil.createFolderIfNotExistWithGitKeep(mainResourcesFolder);
+			FileUtil.createFolderIfNotExist(testFolder);
+			FileUtil.createFolderIfNotExistWithGitKeep(testJavaFolder);
+			FileUtil.createFolderIfNotExistWithGitKeep(testResourcesFolder);
 		}
 	}
 	

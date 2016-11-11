@@ -31,7 +31,6 @@ public class PomReader {
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			StreamSource streamSource = new StreamSource(stream);
 			JAXBElement<Model> modelJaxbElement = jaxbUnmarshaller.unmarshal(streamSource, Model.class);
-			System.out.println(modelJaxbElement.getName().getNamespaceURI());
 			model = modelJaxbElement.getValue();
 		} catch (IOException e) {
 			throw new Exception("Fails to open file: " + path);
