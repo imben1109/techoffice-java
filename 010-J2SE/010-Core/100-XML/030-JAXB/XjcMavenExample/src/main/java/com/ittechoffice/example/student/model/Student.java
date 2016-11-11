@@ -1,8 +1,8 @@
 //
-// 此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.11 所產生 
-// 請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
-// 產生時間: 2016.10.04 於 11:56:30 AM CST 
+// Ce fichier a \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9 par l'impl\u00e9mentation de r\u00e9f\u00e9rence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
+// Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Toute modification apport\u00e9e \u00e0 ce fichier sera perdue lors de la recompilation du sch\u00e9ma source. 
+// G\u00e9n\u00e9r\u00e9 le : 2016.11.11 \u00e0 12:25:30 PM CST 
 //
 
 
@@ -14,9 +14,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>student complex type 的 Java 類別.
+ * <p>Classe Java pour student complex type.
  * 
- * <p>下列綱要片段會指定此類別中包含的預期內容.
+ * <p>Le fragment de sch\u00e9ma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="student"&gt;
@@ -41,7 +41,7 @@ public class Student {
     protected String name;
 
     /**
-     * 取得 name 特性的值.
+     * Obtient la valeur de la propri\u00e9t\u00e9 name.
      * 
      * @return
      *     possible object is
@@ -53,7 +53,7 @@ public class Student {
     }
 
     /**
-     * 設定 name 特性的值.
+     * D\u00e9finit la valeur de la propri\u00e9t\u00e9 name.
      * 
      * @param value
      *     allowed object is

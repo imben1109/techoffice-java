@@ -1,8 +1,8 @@
 //
-// 此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.11 所產生 
-// 請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
-// 產生時間: 2016.10.04 於 11:56:30 AM CST 
+// Ce fichier a \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9 par l'impl\u00e9mentation de r\u00e9f\u00e9rence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
+// Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Toute modification apport\u00e9e \u00e0 ce fichier sera perdue lors de la recompilation du sch\u00e9ma source. 
+// G\u00e9n\u00e9r\u00e9 le : 2016.11.11 \u00e0 12:25:30 PM CST 
 //
 
 

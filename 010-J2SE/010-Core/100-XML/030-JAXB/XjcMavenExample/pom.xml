@@ -20,6 +20,7 @@
 						</execution>
 					</executions>
 					<configuration>
+						<locale>fr</locale>
 						<sources>
 							<source>src/main/resources/student.xsd</source>
 						</sources>

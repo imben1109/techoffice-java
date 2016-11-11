@@ -20,7 +20,7 @@ public class Appl {
 	static {
 		try {
 			String homePath = System.getProperty("user.home");
-			System.out.println(homePath);
+			System.out.println("Home:" + homePath);
 			String configFolderPath = homePath + "/" + CONFIG_FOLDER_NAME;
 			File configFolder = new File(configFolderPath);
 			File propertyFile = new File(configFolderPath, APP_PROPERTIES_FILE);
@@ -43,6 +43,7 @@ public class Appl {
 		if (exampleHome == null){
 			throw new Exception("Cannot Find Example Project Home");
 		}
+		System.out.println("Project root: " + exampleHome);
 		MavenProjectManager mavenProjectManager = new MavenProjectManager(exampleHome);
 		mavenProjectManager.updateMavenProjectList();
 		mavenProjectManager.correctInvalidMavenProject();
