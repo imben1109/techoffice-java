@@ -1,34 +1,35 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ittechoffice.example</groupId>
-  <artifactId>MavenAssistant</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>jaxb2-maven-plugin</artifactId>
-					<version>2.3</version>
-					<executions>
-						<execution>
-							<id>xjc</id>
-							<goals>
-								<goal>xjc</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<locale>en</locale>
-						<sources>
-							<source>src/main/resources/maven-4.0.0.xsd</source>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.techoffice.example</groupId>
+    <artifactId>MavenAssistant</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>jaxb2-maven-plugin</artifactId>
+                    <version>2.3</version>
+                    <executions>
+                        <execution>
+                            <id>xjc</id>
+                            <goals>
+<goal>xjc</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <locale>en</locale>
+                        <sources>
+                            <source>src/main/resources/maven-4.0.0.xsd</source>
 						</sources>
-						<clearOutputDir>false</clearOutputDir>
-						<outputDirectory>src/main/java</outputDirectory>
-						<packageName>com.techoffice.example.mvn.model</packageName>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+                        <clearOutputDir>false</clearOutputDir>
+                        <outputDirectory>src/main/java</outputDirectory>
+                        <packageName>com.techoffice.example.mvn.model</packageName>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
