@@ -49,6 +49,7 @@
 						<sources>
 							<source>src/main/resources/xsd/maven-4.0.0.xsd</source>
 						</sources>
+						<clearOutputDir>false</clearOutputDir>
 						<outputDirectory>src/main/java</outputDirectory>
 						<packageName>com.techoffice.example.mvn.model</packageName>
 					</configuration>
