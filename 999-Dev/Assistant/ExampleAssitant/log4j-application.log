@@ -192,3 +192,146 @@
 2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant\src\main\resources\.gitkeep
 2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant\src\test\java\.gitkeep
 2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant\src\test\resources\.gitkeep
+2016-11-14 17:02:26 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:02:26 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:03:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:03:26 DEBUG PomUtil:72 - ExampleAssitant
+2016-11-14 17:08:28 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:08:28 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:17:22 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:17:22 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:17:22 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:22 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:22 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:22 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:23 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:24 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:25 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:26 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:27 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:28 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:29 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:30 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:31 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:32 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:17:33 DEBUG PomUtil:38 - http://maven.apache.org/POM/4.0.0
+2016-11-14 17:18:22 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:18:22 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:20:13 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:20:13 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:23:44 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:23:44 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:28:06 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:28:06 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:28:43 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:28:43 INFO  MavenProjectService:39 - Found 123 Maven Projects
+2016-11-14 17:28:44 INFO  MavenProjectService:35 - Finding Maven Project in d:\Users\Ben_c\github_workspace\techoffice-java
+2016-11-14 17:28:45 INFO  MavenProjectService:39 - Found 123 Maven Projects

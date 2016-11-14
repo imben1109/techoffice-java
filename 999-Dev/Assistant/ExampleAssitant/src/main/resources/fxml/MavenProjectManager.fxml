@@ -5,6 +5,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
 
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.example.fx.controller.MavenProjectManagerController">
 	<children>
@@ -20,8 +22,29 @@
 				<Label fx:id="numInvalidMvnProjLabel"
 					 GridPane.rowIndex="1" GridPane.columnIndex="1" />
 			</children>
-		</GridPane> 
-		<Button fx:id="validMvnProjBtn" text="Valid" onAction="#validMvnProj"/>
+		</GridPane>
+		<TableView fx:id="tableView">
+			<columns>
+				<TableColumn text="Group Id" prefWidth="200">
+					<cellValueFactory>
+						<PropertyValueFactory property="groupId" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn text="Artifact Id" prefWidth="200">
+					<cellValueFactory>
+						<PropertyValueFactory property="artifactId" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+			 	</FXCollections>
+		 	</items>
+		</TableView>
+		<HBox>
+			<Button fx:id="validMvnProjBtn" text="Valid" onAction="#validMvnProj"/>
+			<Button fx:id="loadProjInfo" text="Load Maven Meta" onAction="#loadProjInfo" /> 
+		</HBox>
 		<Label fx:id="validMvnProjLogLabel" />
 	</children>
 </VBox>

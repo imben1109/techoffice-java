@@ -4,14 +4,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.apache.log4j.Logger;
+
 import com.techoffice.example.fx.Appl;
 import com.techoffice.example.mvn.MavenProjectManager;
+import com.techoffice.example.mvn.pom.model.Model;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 
 public class MavenProjectManagerController implements Initializable {
+	
+	private final Logger logger = Logger.getLogger(this.getClass());
 	
 	@FXML
 	private Label numMvnProjLabel;
@@ -21,6 +27,9 @@ public class MavenProjectManagerController implements Initializable {
 	
 	@FXML
 	private Label validMvnProjLogLabel;
+	
+	@FXML
+	private TableView<Model> tableView;
 	
 	private MavenProjectManager mavenProjectManager;
 	
@@ -51,6 +60,15 @@ public class MavenProjectManagerController implements Initializable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}    	
+    }
+    
+    @FXML
+    private void loadProjInfo(){
+		try {
+			tableView.getItems().addAll(mavenProjectManager.getProjectModelList());
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
     }
 
 }

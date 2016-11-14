@@ -15,22 +15,7 @@ public class MavenProjectService {
 	
 	private final Logger logger = Logger.getLogger(this.getClass());
 	
-	private List<File> getMavenProjectList(File root){
-		List<File> mavenProjectList = new ArrayList<File>();
-		File[] files = root.listFiles();
-		for (int i=0; i<files.length; i ++){
-			File file = files[i];
-			if (file.isDirectory()){
-				if (MavenProjectHelper.isMavenProject(file)){
-					mavenProjectList.add(file);
-				}else{
-					mavenProjectList.addAll(getMavenProjectList(file));
-				}
-			}
-		}
-		return mavenProjectList;
-	}
-	
+
 	public List<File> getMavenProjectList(String path){
 		logger.info("Finding Maven Project in " + path);
 		List<File> mavenProjectList = new ArrayList<File>();
@@ -74,5 +59,21 @@ public class MavenProjectService {
 			}
 		}
 		return dummyFileList;
+	}
+	
+	private List<File> getMavenProjectList(File root){
+		List<File> mavenProjectList = new ArrayList<File>();
+		File[] files = root.listFiles();
+		for (int i=0; i<files.length; i ++){
+			File file = files[i];
+			if (file.isDirectory()){
+				if (MavenProjectHelper.isMavenProject(file)){
+					mavenProjectList.add(file);
+				}else{
+					mavenProjectList.addAll(getMavenProjectList(file));
+				}
+			}
+		}
+		return mavenProjectList;
 	}
 }

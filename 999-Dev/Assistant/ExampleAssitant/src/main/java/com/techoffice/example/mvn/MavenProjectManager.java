@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.techoffice.example.mvn.pom.model.Model;
 import com.techoffice.example.mvn.service.MavenProjectService;
+import com.techoffice.example.mvn.util.PomUtil;
 
 public class MavenProjectManager {
 	
@@ -63,6 +65,18 @@ public class MavenProjectManager {
 		return dummyFileList;
 	}
 	
+	public MavenProjectService getService(){
+		return mavenProjectService;
+	}
 	
+	public List<Model> getProjectModelList() throws Exception{
+		List<Model> modelList = new ArrayList<Model>();
+		for (File mavenProject: mavenProjectList){
+			File pom = new File(mavenProject.getPath(), "pom.xml");
+			Model model = PomUtil.getModel(pom.getPath());
+			modelList.add(model);
+		}
+		return modelList;
+	}
 	
 }
