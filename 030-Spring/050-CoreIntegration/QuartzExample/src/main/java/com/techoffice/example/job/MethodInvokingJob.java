@@ -1,4 +1,4 @@
-package com.ittechoffice.example.job;
+package com.techoffice.example.job;
 
 /**
  * It is a Quartz Job. 
