@@ -12,6 +12,18 @@ Job define what would be executed.
 Trigger define when would be executed
 
 Define a Job
+
+SimpleQuartzJob
+```
+public class SimpleQuartzJob implements Job{
+
+	public void execute(JobExecutionContext context) throws JobExecutionException {
+		System.out.println("running SimpleQuartzJob");
+	}
+	
+}
+```
+
 ```
 JobDetail job = JobBuilder.newJob(SimpleQuartzJob.class)
 	    .withIdentity("simpleQuartzJob1", "simpleQuartzJob")

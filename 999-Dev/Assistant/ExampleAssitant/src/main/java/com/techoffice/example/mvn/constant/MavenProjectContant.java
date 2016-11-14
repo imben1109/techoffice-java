@@ -1,6 +1,7 @@
 package com.techoffice.example.mvn.constant;
 
 public class MavenProjectContant {
+	public static final String GITKEEP = ".gitkeep";
 	public static final String MAIN_FOLDER = "/src/main";
 	public static final String MAIN_RESOURCES_FOLDER = "/src/main/resources";
 	public static final String MAIN_RESOURCES_GITKEEP = "/src/main/resources/.gitkeep";

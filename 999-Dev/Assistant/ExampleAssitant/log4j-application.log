@@ -1,0 +1,194 @@
+2016-11-14 16:14:40 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:14:40 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:27:19 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:27:19 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:27:19 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample\src\test\resources\src\main\resources\.gitkeep
+2016-11-14 16:29:29 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:29:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:29:44 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:29:49 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\main\resources\src\main\resources\.gitkeep
+2016-11-14 16:30:57 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:30:57 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExamplesrc\main\resources\src\main\resources\.gitkeep
+2016-11-14 16:31:51 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:31:51 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:31:51 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:31:51 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\java\src\main\resources\.gitkeep
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\020-Template\030-Roaster\RoasterExample
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\020-Template\030-Roaster\RoasterExample\src\main\resources\.gitkeep
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\020-Template\030-Roaster\RoasterExample\src\test\java\.gitkeep
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\020-Template\030-Roaster\RoasterExample\src\test\resources\.gitkeep
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\010-Maven\AntMavenExample
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\010-Maven\AntMavenExample\src\main\resources\.gitkeep
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\010-Maven\AntMavenExample\src\test\java\.gitkeep
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\010-Maven\AntMavenExample\src\test\resources\.gitkeep
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\030-Ant\AntHelloWorldExample
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\030-Ant\AntHelloWorldExample\src\main\resources\.gitkeep
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\030-Ant\AntHelloWorldExample\src\test\java\.gitkeep
+2016-11-14 16:35:31 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\110-Build\030-Ant\AntHelloWorldExample\src\test\resources\.gitkeep
+2016-11-14 16:35:31 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\GitAssitant
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\GitAssitant\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\GitAssitant\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\GitAssitant\src\test\resources\.gitkeep
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\JavaAssistant
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\JavaAssistant\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\JavaAssistant\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\JavaAssistant\src\test\resources\.gitkeep
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MyBatisAssistant
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MyBatisAssistant\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MyBatisAssistant\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MyBatisAssistant\src\test\resources\.gitkeep
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\SpringAssistant
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\SpringAssistant\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\SpringAssistant\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\SpringAssistant\src\test\resources\.gitkeep
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WordPressAssistant
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WordPressAssistant\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WordPressAssistant\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WordPressAssistant\src\test\resources\.gitkeep
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSAssistant
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSAssistant\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSAssistant\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSAssistant\src\test\resources\.gitkeep
+2016-11-14 16:35:32 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSCloneProfile
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSCloneProfile\src\main\resources\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSCloneProfile\src\test\java\.gitkeep
+2016-11-14 16:35:32 DEBUG FileUtil:22 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\WSCloneProfile\src\test\resources\.gitkeep
+2016-11-14 16:36:02 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:36:02 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:36:02 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:36:02 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:36:02 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:36:02 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:36:08 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:36:08 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:36:08 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:36:08 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:36:08 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:36:08 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:36:18 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:36:18 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:36:18 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:36:18 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:36:18 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:36:18 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:38:36 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:38:36 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:38:36 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:38:36 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:38:36 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:38:36 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:38:36 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:38:42 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:38:42 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:38:42 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:38:42 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:38:42 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:38:42 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:38:42 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:11 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:11 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:11 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:11 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:11 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:11 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:11 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:12 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:12 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:12 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:12 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:12 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:12 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:12 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:13 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:13 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:13 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:14 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:14 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:14 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:15 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:15 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:15 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:16 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:16 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:16 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:30 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\resources\.gitkeep
+2016-11-14 16:39:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:30 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:41 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample\src\main\resources\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample\src\test\java\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\080-Reflection\ReflectionExample\src\test\resources\.gitkeep
+2016-11-14 16:39:41 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample\src\main\resources\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample\src\test\java\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\010-J2SE\010-Core\100-XML\030-JAXB\XjcMavenExample\src\test\resources\.gitkeep
+2016-11-14 16:39:41 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\main\resources\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\030-Spring\010-Core\SpELExample\src\test\java\.gitkeep
+2016-11-14 16:39:41 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample\src\main\resources\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample\src\test\java\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntExample\src\test\resources\.gitkeep
+2016-11-14 16:39:41 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample\src\main\resources\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample\src\test\java\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\900-Others\070-ORM\010-Hibernate\Hibernate5ToolsAntMavenExample\src\test\resources\.gitkeep
+2016-11-14 16:39:41 INFO  MavenProjectService:55 - Correcting Project: d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant\src\main\resources\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant\src\test\java\.gitkeep
+2016-11-14 16:39:41 DEBUG FileUtil:24 - Creating file on d:\Users\Ben_c\github_workspace\techoffice-java\999-Dev\Assistant\MavenAssistant\src\test\resources\.gitkeep

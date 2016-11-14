@@ -43,6 +43,7 @@ public class MavenProjectManager {
 	
 	public List<File> updateMavenProjectList(){
 		mavenProjectList = this.mavenProjectService.getMavenProjectList(path);
+		updateInvalidMavenProjectList();
 		return mavenProjectList;
 	}
 	

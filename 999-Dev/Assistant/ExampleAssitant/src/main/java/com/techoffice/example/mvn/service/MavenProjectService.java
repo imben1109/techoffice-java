@@ -5,11 +5,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.techoffice.example.mvn.constant.MavenProjectContant;
 import com.techoffice.example.mvn.util.MavenProjectHelper;
 import com.techoffice.example.util.FileUtil;
 
 public class MavenProjectService {
+	
+	private final Logger logger = Logger.getLogger(this.getClass());
 	
 	private List<File> getMavenProjectList(File root){
 		List<File> mavenProjectList = new ArrayList<File>();
@@ -48,6 +52,7 @@ public class MavenProjectService {
 	
 	public void correctInvalidMavenProject(List<File> invalidMvnProjList) throws IOException{
 		for (File file: invalidMvnProjList){
+			logger.info("Correcting Project: " + file.getPath());
 			File mainFolder = new File(file.getPath() + "/src/main");
 			File mainResourcesFolder = new File(file.getPath() + "/src/main/resources");
 			File testFolder = new File(file.getPath() + "/src/test");
