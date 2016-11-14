@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="testingSpringBeanA" class="com.ittechoffice.example.spring.bean.TestingSpringBeanA">
+	<bean id="testingSpringBeanA" class="com.techoffice.example.spring.bean.TestingSpringBeanA">
 		<property name="name" value="Testing Spring Bean" />
 	</bean>
 

@@ -6,9 +6,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.example.controller.FxmlController">
+<VBox xmlns:fx="http://javafx.com/fxml/1">
 	<children>
 		<Label text="Hell World" />
-		<TextField fx:id="inputText1"/>
 	</children>
 </VBox>
