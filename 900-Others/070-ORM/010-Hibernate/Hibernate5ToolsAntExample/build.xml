@@ -1,0 +1,36 @@
+<project>
+	<!-- Execute Java -jar AntHelloWorldExample.jar -->
+	<path id="toolslib">
+	    <path location="lib/hibernate-core-5.1.0.Final.jar" />
+		<path location="lib/hibernate-tools-5.1.0.Final.jar" />
+		<path location="lib/slf4j-log4j12-1.7.21.jar" />
+		<path location="lib/slf4j-api-1.7.21.jar" />
+		<path location="lib/log4j-1.2.17.jar" />
+		<path location="lib/jboss-logging-3.3.0.Final.jar" />
+		<path location="lib/jta-1.1.jar" />
+		<path location="lib/dom4j-2.0.0.jar" />
+		<path location="lib/freemarker-2.3.23.jar" />
+		<path location="lib/commons-logging-1.2.jar" />
+		<path location="lib/javax.persistence-2.1.1.jar" />
+		<path location="lib/hibernate-commons-annotations-5.0.1.Final.jar" />
+		<path location="lib/h2-latest.jar" />
+		<path location="lib/classmate-1.3.0.jar" />
+	</path>
+
+	<target name="run">
+		<taskdef name="hibernatetool" 
+			classname="org.hibernate.tool.ant.HibernateToolTask" 
+         	classpathref="toolslib" />
+         	
+		<hibernatetool destdir="src/main/java">
+			 <configuration configurationfile="src/main/resources/hibernate.cfg.xml">
+			 	<fileset dir="src/main/resources" id="id">
+    				<include name="*.hbm.xml"/>
+				</fileset>
+			 </configuration>
+			 <hbm2java jdk5="true"/>
+		</hibernatetool>
+	</target>
+	
+
+</project>
