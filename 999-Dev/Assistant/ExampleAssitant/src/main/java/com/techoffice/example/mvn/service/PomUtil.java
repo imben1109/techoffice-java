@@ -16,10 +16,14 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.namespace.QName;
 import javax.xml.transform.stream.StreamSource;
 
+import org.apache.log4j.Logger;
+
 import com.techoffice.example.mvn.model.Model;
 import com.techoffice.example.mvn.model.ObjectFactory;
 
-public class PomReader {
+public class PomUtil {
+	
+	private static final Logger logger = Logger.getLogger(PomUtil.class);
 	
 	public static Model getModel(String path) throws Exception{
 		Model model = null;
@@ -31,7 +35,7 @@ public class PomReader {
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			StreamSource streamSource = new StreamSource(stream);
 			JAXBElement<Model> modelJaxbElement = jaxbUnmarshaller.unmarshal(streamSource, Model.class);
-			System.out.println(modelJaxbElement.getName().getNamespaceURI());
+			logger.debug(modelJaxbElement.getName().getNamespaceURI());
 			model = modelJaxbElement.getValue();
 		} catch (IOException e) {
 			throw new Exception("Fails to open file: " + path);
@@ -62,12 +66,12 @@ public class PomReader {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		String root  = Paths.get(PomReader.class.getClassLoader().getResource(".").toURI()).getParent().getParent().toString();
+		String root  = Paths.get(PomUtil.class.getClassLoader().getResource(".").toURI()).getParent().getParent().toString();
 		File pomFile = new File(root, "pom.xml");
-		Model model = PomReader.getModel(pomFile.getPath());
-		System.out.println(model.getArtifactId());
+		Model model = PomUtil.getModel(pomFile.getPath());
+		logger.debug(model.getArtifactId());
 		File genPomFile = new File(root, "genPom.xml");
-		PomReader.saveModel(model, genPomFile.getPath());
+		PomUtil.saveModel(model, genPomFile.getPath());
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.ittechoffice.javaproject;
+package com.techoffice.javaproject;
 
 import java.io.File;
 import java.util.ArrayList;

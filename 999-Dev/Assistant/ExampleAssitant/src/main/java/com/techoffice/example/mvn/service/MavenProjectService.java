@@ -32,11 +32,11 @@ public class MavenProjectService {
 	}
 	
 	public List<File> getMavenProjectList(String path){
-		System.out.println("Finding Maven Project in " + path);
+		logger.info("Finding Maven Project in " + path);
 		List<File> mavenProjectList = new ArrayList<File>();
 		File root = new File(path);
 		mavenProjectList = getMavenProjectList(root);
-		System.out.println("Found " + mavenProjectList.size() + " Maven Projects");
+		logger.info("Found " + mavenProjectList.size() + " Maven Projects");
 		return mavenProjectList;
 	}
 	

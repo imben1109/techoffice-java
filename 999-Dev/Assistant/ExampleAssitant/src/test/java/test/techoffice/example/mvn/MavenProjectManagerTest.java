@@ -1,4 +1,4 @@
-package test.ittechoffice.example.mvn;
+package test.techoffice.example.mvn;
 
 import java.io.File;
 import java.util.List;
