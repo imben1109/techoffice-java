@@ -5,8 +5,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
 
-<VBox xmlns:fx="http://javafx.com/fxml/1">
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ittechoffice.example.controller.ExampleController">
 	<children>
 		<Label text="Hell World" />
 		<GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
@@ -15,13 +18,26 @@
 			</padding>
     		<TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
     		     <columns>
-					<TableColumn text="First Name">
+					<TableColumn text="First Name" prefWidth="100">
+						<cellValueFactory>
+							<PropertyValueFactory property="firstName" />
+						</cellValueFactory>
 					</TableColumn>
-					<TableColumn text="Last Name">
+					<TableColumn text="Last Name" prefWidth="100">
+						<cellValueFactory>
+							<PropertyValueFactory property="firstName" />
+						</cellValueFactory>
 					</TableColumn>
-					<TableColumn text="Email Address">
+					<TableColumn text="Email Address" prefWidth="100">
+						<cellValueFactory>
+							<PropertyValueFactory property="firstName" />
+						</cellValueFactory>
 					</TableColumn>
 				 </columns>    
+				 <items>
+					<FXCollections fx:factory="observableArrayList">
+				 	</FXCollections>
+				 </items>
     		
     		</TableView>
 

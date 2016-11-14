@@ -19,7 +19,7 @@ public class Appl {
 			if (!mavenProject.getName().equals(model.getArtifactId())){
 				model.setArtifactId(mavenProject.getName());
 				PomReader.saveModel(model, pomPath);
-				System.out.println("ArtifactId of " + pomPath + "updated");
+				System.out.println("ArtifactId of " + pomPath + " updated");
 			}
 		}
 	}

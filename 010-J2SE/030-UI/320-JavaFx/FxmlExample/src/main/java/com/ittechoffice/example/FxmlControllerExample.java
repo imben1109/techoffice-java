@@ -2,7 +2,7 @@ package com.ittechoffice.example;
 
 import java.io.InputStream;
 
-import com.ittechoffice.example.controller.FxmlControler;
+import com.ittechoffice.example.controller.FxmlController;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,16 +10,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class FxmlControlerExample extends Application{
+public class FxmlControllerExample extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        InputStream applFxml = Appl.class.getClassLoader().getResourceAsStream("FxmlControler.fxml");
+        InputStream applFxml = Appl.class.getClassLoader().getResourceAsStream("FxmlController.fxml");
         VBox root = (VBox) loader.load(applFxml);
         
-        FxmlControler fxmlControler = (FxmlControler) loader.getController();
-        fxmlControler.setInputText1Value("FXML Controler Example Test Set Value");
+        FxmlController fxmlController = (FxmlController) loader.getController();
+        fxmlController.setInputText1Value("FXML Controler Example Test Set Value");
         
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
