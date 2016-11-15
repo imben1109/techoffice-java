@@ -10,7 +10,7 @@ import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.quartz.impl.StdSchedulerFactory;
 
-public class appl {
+public class Appl {
 	public static void main(String[] args) throws SchedulerException{
 
 		// Define a Job
@@ -31,6 +31,6 @@ public class appl {
 		Scheduler scheduler = schedulerFactory.getScheduler();
 		scheduler.start();
 		scheduler.scheduleJob(job, trigger);
-		
+
 	}
 }
