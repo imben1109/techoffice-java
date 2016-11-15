@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.techoffice.example.controller.FxmlController;
+import com.techoffice.example.controller.ApplController;
 import com.techoffice.example.javafx.SpringFxmlLoader;
 
 import javafx.application.Application;
@@ -24,7 +24,7 @@ public class HelloWorldExample extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		SpringFxmlLoader loader = new SpringFxmlLoader();
-        VBox root = (VBox) loader.load("FxmlControler.fxml");
+        VBox root = (VBox) loader.load("fxml/appl.fxml");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("FXML Controller Example");
@@ -42,7 +42,10 @@ public class HelloWorldExample extends Application{
 	public static void main(String[] args){
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		HelloWorldExample helloWorldExample = context.getBean(HelloWorldExample.class);
-		FxmlController fxmlController = context.getBean(FxmlController.class);
 		helloWorldExample.run(args);
+	}
+	
+	public void sayHi(){
+		System.out.println("Hello");
 	}
 }
