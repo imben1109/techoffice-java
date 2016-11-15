@@ -30,6 +30,8 @@ public class Appl {
 					SimpleScheduleBuilder.simpleSchedule()
 						.withIntervalInSeconds(1).repeatForever())
 				.build();
+		
+		// Load Quartz config from quartz.properties
         Properties prop = new Properties();
 		InputStream is = Appl.class.getClassLoader().getResourceAsStream("quartz.properties");
 		prop.load(is);
