@@ -1,0 +1,14 @@
+<jxb:bindings 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    version="2.1">
+
+    <jxb:bindings schemaLocation="student.xsd">
+       <jxb:bindings node="(//xs:element[@name='name'])[1]">
+                <jxb:property name="studentName"/>
+        </jxb:bindings>
+
+
+    </jxb:bindings>
+
+</jxb:bindings>
