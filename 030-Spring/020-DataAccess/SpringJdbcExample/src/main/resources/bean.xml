@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package="com.ittechoffice.example" />
+	<context:component-scan base-package="com.techoffice.example" />
 	<tx:annotation-driven transaction-manager="txManager"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">

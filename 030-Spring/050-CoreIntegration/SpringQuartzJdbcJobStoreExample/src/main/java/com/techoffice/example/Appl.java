@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Appl {
-	public static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 	public void run(){
 		System.out.println("Spring Quartz Example");

@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 
 import javax.sql.DataSource;
@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class Appl {
 
+	static ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+
 	@Autowired
 	private DataSource datasource;
 	
@@ -29,14 +31,13 @@ public class Appl {
 	
 	@Transactional()
 	public void run(){
-//		tableDao.createTable();
+		tableDao.createTable();
 		tableDao.insertData();
 		tableDao.insertData2();
 		tableDao.count();
 	}
 	
 	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 		Appl appl = context.getBean(Appl.class);
 		appl.run();
 	}

@@ -33,6 +33,7 @@
     	<!-- Repeat Interval in ms -->
     	<property name="repeatInterval" value="5000"/>
 	</bean>
+	
 	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 	    <property name="jobDetail" ref="methodInvokingJobDetail"/>
 	    <!-- Corn Expression. Specified the Schedule -->
