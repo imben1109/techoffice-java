@@ -1,4 +1,4 @@
-package com.ittechoffice.webcrawl.fap.hkex.stock.model;
+package com.techoffice.hkex.stock.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

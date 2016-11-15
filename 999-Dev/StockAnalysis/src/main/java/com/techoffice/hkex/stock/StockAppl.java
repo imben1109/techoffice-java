@@ -1,4 +1,4 @@
-package com.ittechoffice.webcrawl.fap.hkex.stock;
+package com.techoffice.hkex.stock;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -16,8 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.ittechoffice.webcrawl.fap.hkex.stock.dao.StockDao;
-import com.ittechoffice.webcrawl.fap.hkex.stock.model.Stock;
+import com.techoffice.hkex.stock.dao.StockDao;
+import com.techoffice.hkex.stock.model.Stock;
 
 @Component
 public class StockAppl {

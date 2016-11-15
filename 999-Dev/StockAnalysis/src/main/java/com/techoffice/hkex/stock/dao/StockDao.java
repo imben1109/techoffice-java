@@ -1,4 +1,4 @@
-package com.ittechoffice.webcrawl.fap.hkex.stock.dao;
+package com.techoffice.hkex.stock.dao;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ittechoffice.webcrawl.fap.hkex.stock.model.Stock;
+import com.techoffice.hkex.stock.model.Stock;
 
 @Repository
 public class StockDao {

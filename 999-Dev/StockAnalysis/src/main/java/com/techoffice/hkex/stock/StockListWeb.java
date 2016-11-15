@@ -1,4 +1,4 @@
-package com.ittechoffice.webcrawl.fap.hkex.stock;
+package com.techoffice.hkex.stock;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -26,7 +26,7 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.ittechoffice.webcrawl.fap.hkex.stock.model.Stock;
+import com.techoffice.hkex.stock.model.Stock;
 
 @Component
 public class StockListWeb {
