@@ -1,0 +1,17 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SpringAssistant 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- jaxb2-maven-plugin:2.3:xjc (default-cli) @ SpringAssistant ---
+[INFO] Setting default locale to [en]
+[INFO] Adding 'extension' flag to XJC arguments, since the 'generateEpisode' argument is given. (XJCs 'episode' argument requires that the 'extension' argument is provided).
+[INFO] Restoring default locale to [zh_TW]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.627 s
+[INFO] Finished at: 2016-11-15T14:26:57+08:00
+[INFO] Final Memory: 18M/224M
+[INFO] ------------------------------------------------------------------------

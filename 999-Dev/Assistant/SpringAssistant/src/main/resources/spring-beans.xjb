@@ -1,0 +1,36 @@
+<jxb:bindings 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    version="2.1">
+
+    <jxb:bindings schemaLocation="spring-beans.xsd">
+        <jxb:bindings node="(//xs:attribute[@name='ref'])[1]">
+                <jxb:property name="ref1"/>
+        </jxb:bindings>
+        <jxb:bindings node="(//xs:attribute[@name='ref'])[2]">
+                <jxb:property name="ref2"/>
+        </jxb:bindings>
+		<jxb:bindings node="(//xs:attribute[@name='value'])[1]">
+                <jxb:property name="value1"/>
+        </jxb:bindings>
+        <jxb:bindings node="(//xs:attribute[@name='value'])[2]">
+                <jxb:property name="value2"/>
+        </jxb:bindings>
+        <jxb:bindings node="(//xs:attribute[@name='value'])[3]">
+                <jxb:property name="value3"/>
+        </jxb:bindings>
+        <jxb:bindings node="(//xs:attribute[@name='value'])[4]">
+                <jxb:property name="value4"/>
+        </jxb:bindings>
+        <jxb:bindings node="(//xs:attribute[@name='key'])[1]">
+                <jxb:property name="key1"/>
+        </jxb:bindings>
+		<jxb:bindings node="(//xs:attribute[@name='key'])[2]">
+                <jxb:property name="key2"/>
+        </jxb:bindings>
+        <jxb:bindings node="(//xs:attribute[@name='key'])[3]">
+                <jxb:property name="key3"/>
+        </jxb:bindings>
+    </jxb:bindings>
+
+</jxb:bindings>
