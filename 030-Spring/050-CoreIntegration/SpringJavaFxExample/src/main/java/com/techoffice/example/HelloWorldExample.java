@@ -21,9 +21,6 @@ import javafx.stage.Stage;
  */
 public class HelloWorldExample extends Application{
 	
-	@Autowired
-	private FxmlController fxmlController;
-	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		SpringFxmlLoader loader = new SpringFxmlLoader();
@@ -35,7 +32,6 @@ public class HelloWorldExample extends Application{
 	}
 	
 	public void run(String[] args){
-		
 		launch(args);
 	}
 	
@@ -47,7 +43,6 @@ public class HelloWorldExample extends Application{
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		HelloWorldExample helloWorldExample = context.getBean(HelloWorldExample.class);
 		FxmlController fxmlController = context.getBean(FxmlController.class);
-		fxmlController.setInputText1Value("abc");
 		helloWorldExample.run(args);
 	}
 }

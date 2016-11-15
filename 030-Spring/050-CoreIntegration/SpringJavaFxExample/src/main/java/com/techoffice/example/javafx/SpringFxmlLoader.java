@@ -10,18 +10,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
-public class SpringFxmlLoader {
+public class SpringFxmlLoader extends FXMLLoader{
 	private static final ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-
-	public Object load(String fxml) throws IOException {
-		FXMLLoader loader = new FXMLLoader();
-		loader.setControllerFactory(new Callback<Class<?>, Object>() {
+	
+	public SpringFxmlLoader(){
+		this.setControllerFactory(new Callback<Class<?>, Object>() {
 			public Object call(Class<?> clazz) {
 				// TODO Auto-generated method stub
 				return applicationContext.getBean(clazz);
 			}
 		});
+	}
+	
+	
+	public Object load(String fxml) throws IOException {
 		InputStream applFxml = this.getClass().getClassLoader().getResourceAsStream(fxml);
-		return loader.load(applFxml);
+		return load(applFxml);
 	}
 }
