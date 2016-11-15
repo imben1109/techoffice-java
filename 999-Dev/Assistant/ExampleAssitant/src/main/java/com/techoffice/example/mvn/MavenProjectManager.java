@@ -5,26 +5,29 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.techoffice.example.fx.Appl;
 import com.techoffice.example.mvn.pom.model.Model;
 import com.techoffice.example.mvn.service.MavenProjectService;
 import com.techoffice.example.mvn.util.PomUtil;
 
+@Component
 public class MavenProjectManager {
 	
 	private String path;
 	private List<File> mavenProjectList;
 	private List<File> invalidMavenProjectList;
 	private List<File> dummyFileList;
+	
+	@Autowired
 	private MavenProjectService mavenProjectService;
 	
-	public MavenProjectManager(String path){
-		this.mavenProjectService = new MavenProjectService();
-		
-		this.path = path;
+	public MavenProjectManager(){
+		path = Appl.properties.getProperty(Appl.EXAMPLE_HOME);
 		this.mavenProjectList = new ArrayList<File>();
 		this.invalidMavenProjectList = new ArrayList<File>();
-		
-		this.updateMavenProjectList();
 	}
 	
 	public int getNumInvalidMvnProj(){

@@ -5,6 +5,7 @@
     <artifactId>SpringJavaFxExample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
+    	<!-- Spring Framework -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>

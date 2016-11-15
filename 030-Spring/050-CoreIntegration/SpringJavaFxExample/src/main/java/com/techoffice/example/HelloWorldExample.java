@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.techoffice.example.controller.ApplController;
-import com.techoffice.example.javafx.SpringFxmlLoader;
+import com.techoffice.example.fx.SpringFxmlLoader;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

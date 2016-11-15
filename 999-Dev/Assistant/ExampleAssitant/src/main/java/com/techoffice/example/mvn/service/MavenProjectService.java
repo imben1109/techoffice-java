@@ -6,16 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import com.techoffice.example.mvn.constant.MavenProjectContant;
 import com.techoffice.example.mvn.util.MavenProjectHelper;
 import com.techoffice.example.util.FileUtil;
 
+@Service
 public class MavenProjectService {
 	
 	private final Logger logger = Logger.getLogger(this.getClass());
 	
-
 	public List<File> getMavenProjectList(String path){
 		logger.info("Finding Maven Project in " + path);
 		List<File> mavenProjectList = new ArrayList<File>();

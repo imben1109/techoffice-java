@@ -1,4 +1,4 @@
-package com.techoffice.example.javafx;
+package com.techoffice.example.fx;
 
 import java.io.IOException;
 import java.io.InputStream;

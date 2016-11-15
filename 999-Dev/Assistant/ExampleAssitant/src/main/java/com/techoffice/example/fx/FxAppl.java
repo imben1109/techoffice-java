@@ -1,31 +1,36 @@
 package com.techoffice.example.fx;
 
 
-import java.io.InputStream;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+@Component
 public class FxAppl extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader();
-        InputStream applFxml = FxAppl.class.getClassLoader().getResourceAsStream("fxml/MavenProjectManager.fxml");
-        VBox root = (VBox) loader.load(applFxml);
-        
-        Scene scene = new Scene(root, 500, 500, Color.WHITE);
+		SpringFxmlLoader loader = new SpringFxmlLoader();
+        VBox root = (VBox) loader.load("fxml/appl.fxml");
+        Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("FXML Controller Example");
         primaryStage.show();
 	}
 	
-	public static void main(String[] args){
+	public void run(String[] args){
 		launch(args);
+	}
+	
+	public static void main(String[] args){
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		FxAppl fxAppl = context.getBean(FxAppl.class);
+		fxAppl.run(args);
 	}
 
 }

@@ -5,6 +5,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import com.techoffice.example.fx.Appl;
 import com.techoffice.example.mvn.MavenProjectManager;
@@ -15,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 
+@Controller
 public class MavenProjectManagerController implements Initializable {
 	
 	private final Logger logger = Logger.getLogger(this.getClass());
@@ -31,20 +34,15 @@ public class MavenProjectManagerController implements Initializable {
 	@FXML
 	private TableView<Model> tableView;
 	
+	@Autowired
 	private MavenProjectManager mavenProjectManager;
 	
 	public void initialize(URL fxmlFileLocation, ResourceBundle resources){
-		String exampleHome = Appl.properties.getProperty(Appl.EXAMPLE_HOME);
-		if (exampleHome != null){
-			// Init MavenProjectManager  
-			mavenProjectManager = new MavenProjectManager(exampleHome);
 			int numMvnProj = mavenProjectManager.getNumMvnProj();
 			int numInvalidMvnProj = mavenProjectManager.getNumInvalidMvnProj();
 			numMvnProjLabel.setText(Integer.toString(numMvnProj));
 			numInvalidMvnProjLabel.setText(Integer.toString(numInvalidMvnProj));
-		}else{
 
-		}
 	}
 	
     @FXML
