@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock;
+package com.techoffice.hkex.stock.service;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -29,9 +29,8 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.hkex.stock.model.Stock;
 
 @Component
-public class StockListWeb {
+public class StockListWebClientService {
 	public static final String URL = "https://www.hkex.com.hk/eng/market/sec_tradinfo/stockcode/eisdeqty.htm";
-	public static final String CHI_URL = "https://www.hkex.com.hk/chi/market/sec_tradinfo/stockcode/eisdeqty_c.htm";
 	
 	public List<Stock> retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
 	    final WebClient webClient = new WebClient(BrowserVersion.FIREFOX_45);
@@ -74,7 +73,10 @@ public class StockListWeb {
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		StockListWeb stockListWeb = new StockListWeb();
-		stockListWeb.retrieveStockListByWebClient();
+		StockListWebClientService stockListWeb = new StockListWebClientService();
+		List<Stock> stockList = stockListWeb.retrieveStockListByWebClient();
+		for(Stock stock: stockList){
+			System.out.println(stock.getStockCode());
+		}
 	}
 }
