@@ -1,12 +1,12 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-import com.ittechoffice.example.handler.RootHandler;
-import com.ittechoffice.example.handler.TestHandler;
 import com.sun.net.httpserver.HttpServer;
+import com.techoffice.example.handler.RootHandler;
+import com.techoffice.example.handler.TestHandler;
 
 public class HttpServerAppl {
 	public static void main(String[] args) throws UnknownHostException, IOException{
