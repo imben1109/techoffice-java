@@ -1,4 +1,4 @@
-package com.techoffice.example;
+package com.techoffice.example.config;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 
-public class ExampleProperty {
+public class ApplConfig {
 	
 	public static final String CONFIG_FOLDER_NAME = ".ittechoffice";
 	public static final String APP_PROPERTIES_FILE = "application.properties";
@@ -16,7 +16,7 @@ public class ExampleProperty {
 	public static final String GIT_PASSWORD = "git_password";
 	public static final String PROXY_HOST = "proxy.host";
 	public static final String PROXY_PORT = "proxy.port";
-	public static final String RPOXY_USERNAME = "proxy.username";
+	public static final String PROXY_USERNAME = "proxy.username";
 	public static final String PROXY_PASSWORD = "proxy.password";
 	public static final String PROXY_ENABLED = "proxy.enabled";
 	
@@ -42,11 +42,23 @@ public class ExampleProperty {
 		}
 	}
 	
-	public static void main(String[] args) throws Exception{
-		String exampleHome = ExampleProperty.config.getString(ExampleProperty.EXAMPLE_HOME);
-		if (exampleHome == null){
-			throw new Exception("Cannot Find Example Project Home");
-		}
-		System.out.println("Project root: " + exampleHome);
+	public static boolean isProxyEnabled(){
+		return config.getBoolean(PROXY_ENABLED);
+	}
+	
+	public static String getProxyHost(){
+		return config.getString(PROXY_HOST);
+	}
+	
+	public static String getProxyPort(){
+		return config.getString(PROXY_PORT);
+	}
+	
+	public static String getProxyUsername(){
+		return config.getString(PROXY_USERNAME);
+	}
+	
+	public static String getProxyPassword(){
+		return config.getString(PROXY_PASSWORD);
 	}
 }

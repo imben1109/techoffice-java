@@ -13,7 +13,7 @@
 	<!-- Auto-Scan Spring Bean -->
 	<context:component-scan base-package="com.techoffice" />
 
-	<bean class="com.gargoylesoftware.htmlunit.WebClient">
-		<constructor-arg value="#{T(com.gargoylesoftware.htmlunit.BrowserVersion).FIREFOX_45}"/>
-	</bean>
+	<bean class="com.techoffice.example.WebClientBeanFactory"/>
+
+	
 </beans>
