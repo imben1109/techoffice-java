@@ -1,4 +1,4 @@
-package com.techoffice.example;
+package com.techoffice.factory;
 
 import java.util.logging.Level;
 
@@ -9,7 +9,7 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.DefaultCredentialsProvider;
 import com.gargoylesoftware.htmlunit.ProxyConfig;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.techoffice.example.config.ApplConfig;
+import com.techoffice.hkex.stock.ApplConfig;
 
 
 public class WebClientBeanFactory implements FactoryBean<WebClient> {

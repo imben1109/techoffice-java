@@ -19,6 +19,7 @@ public class ApplConfig {
 	public static final String PROXY_USERNAME = "proxy.username";
 	public static final String PROXY_PASSWORD = "proxy.password";
 	public static final String PROXY_ENABLED = "proxy.enabled";
+	public static final String HTMLUNIT_LOGGING = "htmlunit.logging";
 	
 	public static Configuration config = null ;
     
@@ -60,5 +61,9 @@ public class ApplConfig {
 	
 	public static String getProxyPassword(){
 		return config.getString(PROXY_PASSWORD);
+	}
+	
+	public static boolean isHtmlUnitLogging(){
+		return config.getBoolean(HTMLUNIT_LOGGING);
 	}
 }

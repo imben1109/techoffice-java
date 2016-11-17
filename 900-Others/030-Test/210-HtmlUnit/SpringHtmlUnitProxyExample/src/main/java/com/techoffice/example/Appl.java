@@ -19,8 +19,8 @@ public class Appl {
 	private WebClient webClient;
 	
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, IOException{
-		HtmlPage page = webClient.getPage("http://htmlunit.sourceforge.net");
-		System.out.println(page.asXml());
+		HtmlPage page = webClient.getPage("http://www.hko.gov.hk/contente.htm");
+//		System.out.println(page.asXml());
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException{

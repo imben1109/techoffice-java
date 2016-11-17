@@ -16,6 +16,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -32,8 +33,10 @@ import com.techoffice.hkex.stock.model.Stock;
 public class StockListWebClientService {
 	public static final String URL = "https://www.hkex.com.hk/eng/market/sec_tradinfo/stockcode/eisdeqty.htm";
 	
+	@Autowired
+	private WebClient webClient; 
+	
 	public List<Stock> retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-	    final WebClient webClient = new WebClient(BrowserVersion.FIREFOX_45);
         final HtmlPage page = webClient.getPage(URL);
         String xml = page.asXml();
         List<Stock> stocks = parseXml(xml);
@@ -72,11 +75,4 @@ public class StockListWebClientService {
 		return stocks;
 	}
 	
-	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		StockListWebClientService stockListWebClientService = new StockListWebClientService();
-		List<Stock> stockList = stockListWebClientService.retrieveStockListByWebClient();
-		for(Stock stock: stockList){
-			System.out.println(stock.getStockCode());
-		}
-	}
 }

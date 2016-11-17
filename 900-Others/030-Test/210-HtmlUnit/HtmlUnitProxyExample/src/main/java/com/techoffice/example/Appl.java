@@ -2,6 +2,9 @@ package com.techoffice.example;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.logging.Level;
+
+import org.apache.commons.logging.LogFactory;
 
 import com.gargoylesoftware.htmlunit.DefaultCredentialsProvider;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -22,6 +25,10 @@ public class Appl {
 	        		ExampleConfig.config.getString(ExampleConfig.PROXY_USERNAME), 
 	        		ExampleConfig.config.getString(ExampleConfig.PROXY_PASSWORD));	
 	    }
+	    LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
+        java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF); 
+        java.util.logging.Logger.getLogger("org.apache.commons.httpclient").setLevel(Level.OFF);
+
         final HtmlPage page = webClient.getPage("http://htmlunit.sourceforge.net");
         final String pageAsXml = page.asXml();
         System.out.println(pageAsXml);
