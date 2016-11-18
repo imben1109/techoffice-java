@@ -1,4 +1,4 @@
-package com.ittechoffice.example.enumexample;
+package com.techoffice.example;
 
 public enum Color {
 	RED("RED", 1), BLUE("BLUE", 2), YELLOW("YELLOW", 3);

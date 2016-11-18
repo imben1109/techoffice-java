@@ -1,4 +1,4 @@
-package com.ittechoffice.example.exceptionexample;
+package com.techoffice.example.exceptionexample;
 
 public class ExceptionExample {
     public void method1() throws Exception{

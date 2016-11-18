@@ -1,4 +1,4 @@
-package com.ittechoffice.example.enumexample;
+package com.techoffice.example;
 
 public class SimpleEnumExample {
 	

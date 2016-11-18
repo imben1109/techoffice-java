@@ -1,4 +1,4 @@
-package com.ittechoffice.example.exceptionexample;
+package com.techoffice.example.exceptionexample;
 
 public class RuntimeExceptionExample {
     public void method1(){
