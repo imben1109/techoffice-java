@@ -26,7 +26,7 @@ public class SimpleAppl {
 	@ResponseBody
 	public String run(){
 		OAuth2RestTemplate oAuth2RestTemplate = new OAuth2RestTemplate(oAuth2ProtectedResourceDetails, oauth2ClientContext);
-		String result = oAuth2RestTemplate.getForObject("https://graph.facebook.com/me", String.class);
+		String result = oAuth2RestTemplate.getForObject("https://api.github.com/user", String.class);
 		return result;
 	}
 

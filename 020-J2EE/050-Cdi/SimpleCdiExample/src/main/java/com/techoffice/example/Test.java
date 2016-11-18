@@ -1,6 +1,4 @@
-package com.ittechoffice.example;
-
-import javax.enterprise.context.SessionScoped;
+package com.techoffice.example;
 
 public class Test{
 
