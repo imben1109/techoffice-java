@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

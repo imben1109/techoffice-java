@@ -6,7 +6,7 @@
 //
 
 
-package com.ittechoffice.example.student.model;
+package com.techoffice.example.student.model;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;

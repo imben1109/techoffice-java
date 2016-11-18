@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 /**
  * function join() allow a thread to wait a specified time for another to complete

@@ -1,4 +1,4 @@
-package com.ittechoffice.example.rsa;
+package com.techoffice.example.rsa;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;

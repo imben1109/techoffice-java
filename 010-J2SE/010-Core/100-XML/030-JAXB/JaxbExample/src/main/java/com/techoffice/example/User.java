@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

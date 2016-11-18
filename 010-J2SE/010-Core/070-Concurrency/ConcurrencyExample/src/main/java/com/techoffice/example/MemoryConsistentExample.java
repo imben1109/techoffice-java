@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 /**
  * A instance variable could be altered by different thread.

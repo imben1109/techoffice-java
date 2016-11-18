@@ -1,12 +1,12 @@
-package com.ittechoffice.example.student;
+package com.techoffice.example.student;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import com.ittechoffice.example.student.model.ObjectFactory;
-import com.ittechoffice.example.student.model.Student;
+import com.techoffice.example.student.model.ObjectFactory;
+import com.techoffice.example.student.model.Student;
 
 public class BeanToXml {
 	public static void main(String[] args) throws JAXBException{

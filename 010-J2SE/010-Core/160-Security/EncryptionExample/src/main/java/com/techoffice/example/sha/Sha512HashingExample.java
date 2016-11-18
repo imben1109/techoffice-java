@@ -1,4 +1,4 @@
-package com.ittechoffice.example.sha;
+package com.techoffice.example.sha;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

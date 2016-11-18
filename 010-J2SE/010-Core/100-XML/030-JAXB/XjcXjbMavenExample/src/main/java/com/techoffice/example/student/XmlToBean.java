@@ -1,4 +1,4 @@
-package com.ittechoffice.example.student;
+package com.techoffice.example.student;
 
 import java.io.InputStream;
 
@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
 
-import com.ittechoffice.example.student.model.Student;
+import com.techoffice.example.student.model.Student;
 
 public class XmlToBean {
 	public static void main(String[] args) throws JAXBException {

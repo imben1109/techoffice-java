@@ -26,7 +26,7 @@
 						</sources>
                         <clearOutputDir>true</clearOutputDir>
                         <outputDirectory>src/main/java</outputDirectory>
-                        <packageName>com.ittechoffice.example.student.model</packageName>
+                        <packageName>com.techoffice.example.student.model</packageName>
                     </configuration>
                 </plugin>
             </plugins>
