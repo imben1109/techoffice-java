@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcatjsf.model;
+package com.techoffice.example.model;
 
 public class User {
 	private String userName;

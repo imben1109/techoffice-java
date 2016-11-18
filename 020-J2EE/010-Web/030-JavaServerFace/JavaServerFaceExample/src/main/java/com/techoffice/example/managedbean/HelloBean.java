@@ -1,4 +1,4 @@
-package com.ittechoffice.example.managedbean;
+package com.techoffice.example.managedbean;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;

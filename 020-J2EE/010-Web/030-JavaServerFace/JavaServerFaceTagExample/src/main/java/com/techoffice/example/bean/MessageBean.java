@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcatjsf.bean;
+package com.techoffice.example.bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
-import com.ittechoffice.example.tomcatjsf.model.TextModel;
+import com.techoffice.example.model.TextModel;
 
 @ManagedBean(name="messageBean")
 @ApplicationScoped

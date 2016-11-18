@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcaticefaces.controller;
+package com.techoffice.example.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSession;
 
 import org.icefaces.application.PushRenderer;
 
-import com.ittechoffice.example.tomcaticefaces.bean.MessageBean;
+import com.techoffice.example.bean.MessageBean;
 
 @ManagedBean
 @ViewScoped

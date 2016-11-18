@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcatjsf.controller;
+package com.techoffice.example.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;

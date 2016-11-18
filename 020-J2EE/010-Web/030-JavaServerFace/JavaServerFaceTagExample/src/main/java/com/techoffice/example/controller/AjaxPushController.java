@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcatjsf.controller;
+package com.techoffice.example.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -6,7 +6,7 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
-import com.ittechoffice.example.tomcatjsf.bean.MessageBean;
+import com.techoffice.example.bean.MessageBean;
 
 @ManagedBean
 @ViewScoped

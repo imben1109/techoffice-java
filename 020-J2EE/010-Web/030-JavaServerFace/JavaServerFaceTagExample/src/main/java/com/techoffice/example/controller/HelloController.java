@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcatjsf.controller;
+package com.techoffice.example.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import com.ittechoffice.example.tomcatjsf.model.User;
+import com.techoffice.example.model.User;
 
 @ManagedBean
 @SessionScoped

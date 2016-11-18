@@ -1,4 +1,4 @@
-package com.ittechoffice.example.tomcaticefaces.model;
+package com.techoffice.example.model;
 
 public class TextModel {
 	private String text;
