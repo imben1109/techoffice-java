@@ -1,7 +1,13 @@
-# WordPress Assistant
+# Spring Oauth2 SSO Example
 
-There are many blogging service available in the Internet. WordPress is one of them. Apart from the online editing function provided, WordPress also provide web service to integrate with Word Press. 
+## Prerequisite
+* Maven 3
+* Eclipse Mars 4.5
 
-This Project is to explore the Word Press Web Service Ability and try to improve the efficiency when Word Press Page Development.
+## Dependencies
+* Spring Boot 1.4
+* AngularJs 1.4
+* Jquery 2.1
+* bootstrap 3.2
 
- 
+## Example
