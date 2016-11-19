@@ -12,7 +12,7 @@
 
 	<!-- Auto-Scan Spring Bean -->
 	<context:component-scan base-package="com.techoffice" />
-
+	<bean class="com.techoffice.javafx.SpringFxmlLoader"/>
 	<bean class="com.techoffice.factory.WebClientBeanFactory"/>
 
 	<!-- Database Connection Pool Datasource -->

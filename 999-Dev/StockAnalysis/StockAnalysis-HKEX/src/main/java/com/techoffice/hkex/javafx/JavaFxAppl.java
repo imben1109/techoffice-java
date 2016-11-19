@@ -19,8 +19,8 @@ public class JavaFxAppl extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		SpringFxmlLoader loader = new SpringFxmlLoader();
-        VBox root = (VBox) loader.load(APP_FXML_PATH);
+		SpringFxmlLoader springFxmlLoader = new SpringFxmlLoader();
+        VBox root = (VBox) springFxmlLoader.load(APP_FXML_PATH);
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle(TITLE);
