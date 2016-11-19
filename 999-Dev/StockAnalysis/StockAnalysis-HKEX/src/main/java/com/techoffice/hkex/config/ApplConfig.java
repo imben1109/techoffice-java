@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock;
+package com.techoffice.hkex.config;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class ApplConfig {
 	static {
 		try {
 			String homePath = System.getProperty("user.home");
-			System.out.println("Home:" + homePath);
+			System.out.println("User Home: " + homePath);
 			String configFolderPath = homePath + "/" + CONFIG_FOLDER_NAME;
 			File configFolder = new File(configFolderPath);
 			File propertyFile = new File(configFolderPath, APP_PROPERTIES_FILE);
@@ -44,7 +44,7 @@ public class ApplConfig {
 	}
 	
 	public static boolean isProxyEnabled(){
-		return config.getBoolean(PROXY_ENABLED);
+		return config.getBoolean(PROXY_ENABLED, false);
 	}
 	
 	public static String getProxyHost(){
@@ -64,6 +64,6 @@ public class ApplConfig {
 	}
 	
 	public static boolean isHtmlUnitLogging(){
-		return config.getBoolean(HTMLUNIT_LOGGING);
+		return config.getBoolean(HTMLUNIT_LOGGING, false);
 	}
 }

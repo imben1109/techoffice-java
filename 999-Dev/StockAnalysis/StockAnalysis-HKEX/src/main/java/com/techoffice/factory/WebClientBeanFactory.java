@@ -9,7 +9,7 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.DefaultCredentialsProvider;
 import com.gargoylesoftware.htmlunit.ProxyConfig;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.techoffice.hkex.stock.ApplConfig;
+import com.techoffice.hkex.config.ApplConfig;
 
 
 public class WebClientBeanFactory implements FactoryBean<WebClient> {

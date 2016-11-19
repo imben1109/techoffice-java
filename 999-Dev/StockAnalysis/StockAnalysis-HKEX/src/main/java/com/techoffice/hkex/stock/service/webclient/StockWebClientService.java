@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock.service;
+package com.techoffice.hkex.stock.service.webclient;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -30,7 +30,8 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.hkex.stock.model.Stock;
 
 @Component
-public class StockListWebClientService {
+public class StockWebClientService {
+	
 	public static final String URL = "https://www.hkex.com.hk/eng/market/sec_tradinfo/stockcode/eisdeqty.htm";
 	
 	@Autowired

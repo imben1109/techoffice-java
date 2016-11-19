@@ -18,20 +18,20 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.stock.dao.StockDao;
 import com.techoffice.hkex.stock.model.Stock;
-import com.techoffice.hkex.stock.service.StockListWebClientService;
+import com.techoffice.hkex.stock.service.webclient.StockWebClientService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private StockListWebClientService stockListWeb;
+	private StockWebClientService stockListWebClientService;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<Stock> stocks = stockListWeb.retrieveStockListByWebClient();
+		List<Stock> stocks = stockListWebClientService.retrieveStockListByWebClient();
 		for (Stock stock: stocks){
 			if (stock.getStockCode() != null){
 				System.out.println(stock.getStockCode());

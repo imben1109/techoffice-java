@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.hkex.javafx.controller.ApplController">
+	<children>
+		<Label text="Hell World" />
+		<Button fx:id="button" text="Do Something" onAction="#doSomething"/>
+	</children>
+</VBox>
