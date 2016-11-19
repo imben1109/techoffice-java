@@ -31,6 +31,7 @@ public class JavaFxAppl extends Application{
 		launch(args);
 	}
 	
+	@SuppressWarnings("resource")
 	public static void main(String[] args){
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		JavaFxAppl javaFxAppl = context.getBean(JavaFxAppl.class);

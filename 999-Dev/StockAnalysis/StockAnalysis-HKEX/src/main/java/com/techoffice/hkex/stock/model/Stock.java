@@ -12,8 +12,6 @@ import org.hibernate.annotations.GenericGenerator;
 public class Stock {
 	
 	@Id
-	@GeneratedValue(generator = "uuid")
-	@GenericGenerator(name = "uuid", strategy = "uuid2")
 	private String stockCode;
 	private String name;
 	private String chiName;

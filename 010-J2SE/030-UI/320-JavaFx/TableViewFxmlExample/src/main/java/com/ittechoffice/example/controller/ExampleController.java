@@ -11,11 +11,14 @@ public class ExampleController {
 	@FXML
 	private TableView<Person> tableView;
 	
-	public void init(){
+	@FXML
+	public void initialize(){
 		ObservableList<Person> list = tableView.getItems();
 		for (int i=1; i<6; i++){
 			String content = "Test " + i;
 			list.add(new Person(content, content, content));
 		}
 	}
+
+
 }

@@ -34,7 +34,7 @@ public class StockAppl {
 		List<Stock> stocks = stockListWebClientService.retrieveStockListByWebClient();
 		for (Stock stock: stocks){
 			if (stock.getStockCode() != null){
-				System.out.println(stock.getStockCode());
+				System.out.println(stock.getStockCode() + " " + stock.getName());
 				stockDao.save(stock);	
 			}
 		}

@@ -21,16 +21,13 @@ public class ApplController {
 	private SpringFxmlLoader springFxmlLoader;
 	
 	@FXML
-    private TextField inputText1;
-
-	@FXML
-	public void doSomething() throws IOException{
+	public void showStock() throws IOException{
 		Stage stage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        VBox root = (VBox) springFxmlLoader.load("fxml/Stage.fxml");
+        VBox root = (VBox) springFxmlLoader.load("fxml/stock.fxml");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("FXML Controller Example");
-        stage.show();		}
+        stage.show();		
+	}
 	
 }

@@ -17,8 +17,6 @@ public class Appl extends Application{
         FXMLLoader loader = new FXMLLoader();
         InputStream applFxml = Appl.class.getClassLoader().getResourceAsStream("Appl.fxml");
         VBox root = (VBox) loader.load(applFxml);
-        ExampleController fxmlController = (ExampleController) loader.getController();
-        fxmlController.init();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("FXML Example");
