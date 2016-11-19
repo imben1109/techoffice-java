@@ -11,7 +11,9 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Auto-Scan Spring Bean -->
-	<context:component-scan base-package="com.ittechoffice" />
+	<context:component-scan base-package="com.techoffice" />
+
+	<bean class="com.techoffice.factory.WebClientBeanFactory"/>
 
 	<!-- Database Connection Pool Datasource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
@@ -33,7 +35,7 @@
 	<bean id="sessionFactory"
             class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.ittechoffice" />
+		<property name="packagesToScan" value="com.techoffice" />
 		<property name="hibernateProperties">
 			<value>
 				hibernate.dialect=org.hibernate.dialect.H2Dialect

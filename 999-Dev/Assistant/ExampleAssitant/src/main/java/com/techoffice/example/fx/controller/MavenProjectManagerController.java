@@ -8,7 +8,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.techoffice.example.fx.Appl;
+import com.techoffice.example.ExampleProperty;
 import com.techoffice.example.mvn.MavenProjectManager;
 import com.techoffice.example.mvn.pom.model.Model;
 

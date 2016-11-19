@@ -8,7 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.techoffice.example.fx.Appl;
+import com.techoffice.example.ExampleProperty;
 import com.techoffice.example.mvn.pom.model.Model;
 import com.techoffice.example.mvn.service.MavenProjectService;
 import com.techoffice.example.mvn.util.PomUtil;
@@ -25,7 +25,7 @@ public class MavenProjectManager {
 	private MavenProjectService mavenProjectService;
 	
 	public MavenProjectManager(){
-		path = Appl.properties.getProperty(Appl.EXAMPLE_HOME);
+		path = ExampleProperty.properties.getProperty(ExampleProperty.EXAMPLE_HOME);
 		this.mavenProjectList = new ArrayList<File>();
 		this.invalidMavenProjectList = new ArrayList<File>();
 	}

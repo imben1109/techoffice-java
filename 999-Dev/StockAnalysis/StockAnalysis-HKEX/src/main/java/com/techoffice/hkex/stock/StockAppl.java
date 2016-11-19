@@ -18,12 +18,13 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.stock.dao.StockDao;
 import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.hkex.stock.service.StockListWebClientService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private StockListWeb stockListWeb;
+	private StockListWebClientService stockListWeb;
 	
 	@Autowired
 	private StockDao stockDao;
