@@ -10433,3 +10433,36 @@
 2016-11-20 02:13:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
 2016-11-20 02:13:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
 2016-11-20 02:13:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-20 11:02:06 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b80d80f: startup date [Sun Nov 20 11:02:06 HKT 2016]; root of context hierarchy
+2016-11-20 11:02:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-20 11:02:09 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-20 11:02:12 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c8b96ec: startup date [Sun Nov 20 11:02:12 HKT 2016]; root of context hierarchy
+2016-11-20 11:02:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-20 11:02:12 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-20 11:02:13 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-20 11:02:13 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-20 11:02:13 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-20 11:02:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-20 11:02:14 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-20 11:02:17 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@420bc288] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-20 11:02:17 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-20 11:02:17 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@6a0f2853] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-20 11:02:24 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-20 12:12:11 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16b3fc9e: startup date [Sun Nov 20 12:12:11 HKT 2016]; root of context hierarchy
+2016-11-20 12:12:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-20 12:12:12 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-20 12:12:16 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@47747fb9: startup date [Sun Nov 20 12:12:16 HKT 2016]; root of context hierarchy
+2016-11-20 12:12:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-20 12:12:16 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-20 12:12:17 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-20 12:12:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-20 12:12:17 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-20 12:12:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-20 12:12:18 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-20 12:12:21 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@7692cd34] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-20 12:12:21 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-20 12:12:21 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@2f894ad9] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-20 12:12:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-20 12:12:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-20 12:12:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-20 12:12:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.

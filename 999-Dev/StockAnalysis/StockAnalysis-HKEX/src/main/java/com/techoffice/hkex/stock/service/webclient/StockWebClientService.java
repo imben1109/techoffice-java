@@ -34,7 +34,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.hkex.stock.model.Stock;
-import com.techoffice.util.NodeUtil;
+import com.techoffice.util.XmlUtil;
 
 @Component
 public class StockWebClientService {
@@ -57,13 +57,8 @@ public class StockWebClientService {
 	
 	private List<Stock> parseXml(String xml) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException, TransformerException{
 		List<Stock> stocks = new ArrayList<Stock>();
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		DocumentBuilder db = dbf.newDocumentBuilder();
-		Document doc = db.parse(new ByteArrayInputStream(xml.getBytes()));
-		XPathFactory xPathfactory = XPathFactory.newInstance();
-		XPath xpath = xPathfactory.newXPath();
-		XPathExpression expr = xpath.compile("/html/body/center/table/tbody/tr[1]/td[2]/table/tbody/tr[6]/td/table/tbody/tr/td[2]/printfriendly/table/tbody/tr/td/table/tbody/tr/td/table[1]/tbody/tr");
-		NodeList tableNodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		String xPath = "/html/body/center/table/tbody/tr[1]/td[2]/table/tbody/tr[6]/td/table/tbody/tr/td[2]/printfriendly/table/tbody/tr/td/table/tbody/tr/td/table[1]/tbody/tr";
+		NodeList tableNodeList = XmlUtil.evaluateXpath(xml, xPath);
 		if (tableNodeList.getLength() > 0 ){
 			for (int i=1; i<tableNodeList.getLength(); i++){
 				Node row = tableNodeList.item(i);
