@@ -28,46 +28,20 @@
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg ref="dataSource"/>
 	</bean>
-	
-	<!-- Execute script for Creating Quartz Scheduler Table-->
+		
 	<bean id="dbInit" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
 		<property name="scripts">
 			<list>
-				<value>tables_h2.sql</value>
+				<value>db-schema.sql</value>
 			</list>
 		</property>
 		<property name="continueOnError" value="true"/>
 	</bean>
-	<bean class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+	
+	
+	<bean id="startupScripts" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="databasePopulator"><ref bean="dbInit"/></property>
-	</bean>
-	
-	<!-- Define Jobs -->
-	<bean name="simpleJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
-    	<property name="jobClass" value="com.techoffice.example.job.SimpleJob"/>
-	</bean>
-
-	<!-- Define Triggers -->
-	<bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
-    	<property name="jobDetail" ref="simpleJobDetail"/>
-    	<!-- Time of Start delay in ms -->
-    	<property name="startDelay" value="1000"/>
-    	<!-- Repeat Interval in ms -->
-    	<property name="repeatInterval" value="5000"/>
-	</bean>
-	
-	<!-- Define the scheduler -->
-	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
-	    <property name="configLocation" value="classpath:quartz.properties"/>
-	    <property name="dataSource" ref="dataSource"/>
-	    <property name="transactionManager" ref="txManager"/>
-		<property name="applicationContextSchedulerContextKey" value="applicationContext"/>
-	    <property name="triggers">
-	        <list>
-	            <ref bean="simpleTrigger"/>
-	        </list>
-	    </property>
 	</bean>
 	
 	

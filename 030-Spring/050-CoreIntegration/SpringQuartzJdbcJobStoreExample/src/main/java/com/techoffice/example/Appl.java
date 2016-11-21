@@ -15,6 +15,5 @@ public class Appl {
 	public static void main(String[] args){
 		Appl appl = context.getBean(Appl.class);
 		appl.run();
-		
 	}
 }
