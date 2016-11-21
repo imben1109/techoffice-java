@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<context:component-scan base-package="com.techoffice.example.controller" />
+	<context:component-scan base-package="com.ittechoffice.example.controller" />
 
 	<!-- Spring MVC Config -->
 	
@@ -20,6 +20,13 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!-- 
+		A default database schema is assumed, with two tables "users" and "authorities".
+	 -->
+	<bean id="userDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
 	<!-- Spring Security Config -->
