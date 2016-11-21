@@ -15,7 +15,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 public class Appl {
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
 	    final WebClient webClient = new WebClient();
-	    if (ExampleConfig.config.getBoolean(ExampleConfig.PROXY_ENABLED)){
+	    if (ExampleConfig.config.getBoolean(ExampleConfig.PROXY_ENABLED, false)){
 	    	ProxyConfig proxyConfig = new ProxyConfig(
 		    		ExampleConfig.config.getString(ExampleConfig.PROXY_HOST), 
 		    		ExampleConfig.config.getInt(ExampleConfig.PROXY_PORT));

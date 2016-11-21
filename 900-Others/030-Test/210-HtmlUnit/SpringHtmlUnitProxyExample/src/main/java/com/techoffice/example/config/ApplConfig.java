@@ -44,7 +44,7 @@ public class ApplConfig {
 	}
 	
 	public static boolean isProxyEnabled(){
-		return config.getBoolean(PROXY_ENABLED);
+		return config.getBoolean(PROXY_ENABLED, false);
 	}
 	
 	public static String getProxyHost(){
@@ -64,6 +64,6 @@ public class ApplConfig {
 	}
 	
 	public static boolean isHtmlUnitLogging(){
-		return config.getBoolean(HTMLUNIT_LOGGING);
+		return config.getBoolean(HTMLUNIT_LOGGING, false);
 	}
 }

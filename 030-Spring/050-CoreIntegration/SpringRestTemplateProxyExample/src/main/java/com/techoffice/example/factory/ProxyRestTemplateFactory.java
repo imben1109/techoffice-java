@@ -11,7 +11,7 @@ import com.techoffice.example.Config;
 public class ProxyRestTemplateFactory {
 	public static RestTemplate getRestTemplate(){
 		RestTemplate restTemplate = new RestTemplate();
-	    if (Config.config.getBoolean(Config.PROXY_ENABLED)){
+	    if (Config.config.getBoolean(Config.PROXY_ENABLED, false)){
 	        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
 		    InetSocketAddress address = new InetSocketAddress(Config.config.getString(Config.PROXY_HOST), 
 		    		Config.config.getInt(Config.PROXY_PORT));
