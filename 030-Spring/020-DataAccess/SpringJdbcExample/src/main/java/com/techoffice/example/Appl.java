@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Component
 public class Appl {
 
-	static ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 	@Autowired
 	private DataSource datasource;
