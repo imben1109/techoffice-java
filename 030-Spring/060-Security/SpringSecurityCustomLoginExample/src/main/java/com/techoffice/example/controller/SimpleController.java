@@ -1,4 +1,4 @@
-package com.ittechoffice.example.controller;
+package com.techoffice.example.controller;
 
 import org.springframework.http.HttpRequest;
 import org.springframework.security.core.Authentication;

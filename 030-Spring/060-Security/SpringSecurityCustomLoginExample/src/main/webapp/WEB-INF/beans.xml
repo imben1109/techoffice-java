@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<context:component-scan base-package="com.ittechoffice.example.controller" />
+	<context:component-scan base-package="com.techoffice.example.controller" />
 
 	<!-- Spring MVC Config -->
 	
