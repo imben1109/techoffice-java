@@ -13,7 +13,7 @@ create table if not exists authorities (
 delete from authorities;
 delete from users;
 
-insert into users values ('user', 'passsowrd', true) ;
-insert into authorities values ('user', 'ADMIN') ;
+insert into users values ('user', 'password', true) ;
+insert into authorities values ('user', 'ROLE_ADMIN') ;
 
 commit;

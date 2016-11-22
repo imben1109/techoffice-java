@@ -14,7 +14,7 @@
 		http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package="com.ittechoffice.example.controller" />
+	<context:component-scan base-package="com.techoffice.example.controller" />
 	
 	<tx:annotation-driven transaction-manager="txManager"/>
 
@@ -40,7 +40,8 @@
 	<!-- Spring Web Security Configuration -->
 	<security:http auto-config="true">
 		<!-- P.S. "**" means zero or more directories in the path -->
-		<security:intercept-url pattern="/**" access="hasAuthority('ADMIN')"/>
+		<security:intercept-url pattern="/userQuery" access="permitAll"/>
+		<security:intercept-url pattern="/**" access="hasAuthority('ROLE_ADMIN')"/>
 	</security:http>
 	
 	<!-- Spring Security -->
@@ -48,8 +49,10 @@
 	<!-- 
 		A default database schema is assumed, with two tables "users" and "authorities".
 	 -->
+	 
 	<bean id="userDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
 		<property name="dataSource" ref="dataSource"/>
+		<property name="enableAuthorities" value="true"/>
 	</bean>
 	
 	<bean id="daoAuthenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
