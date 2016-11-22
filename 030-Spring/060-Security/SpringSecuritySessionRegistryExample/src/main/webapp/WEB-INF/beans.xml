@@ -14,28 +14,54 @@
 	<context:component-scan base-package="com.techoffice.example.controller" />
 
 	<!-- Spring MVC Config -->
-	
+
 	<!-- Add support of JSP -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
+
 	<!-- Spring Security Config -->
 	<security:http auto-config="true">
 		<!-- P.S. "**" means zero or more directories in the path -->
-		<security:intercept-url pattern="/session" access="permitAll"/>
-		<security:intercept-url pattern="/**" access="hasAuthority('ADMIN')"/>
-		<security:session-management> 
-			<security:concurrency-control session-registry-alias="sessionRegistry"/>	
-		</security:session-management>
+		<security:intercept-url pattern="/session"
+			access="permitAll" />
+		<security:intercept-url pattern="/**"
+			access="hasAuthority('ADMIN')" />
+		<security:custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
+		<security:session-management session-authentication-strategy-ref="sas"/>
 	</security:http>
+
+	<bean id="concurrencyFilter" class="org.springframework.security.web.session.ConcurrentSessionFilter">
+		<constructor-arg ref="sessionRegistry"/>
+		<constructor-arg type="java.lang.String" value="/session-expired.htm"/>
+	</bean>
 	
+	<bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+	<bean id="sas" class="org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy">
+		<constructor-arg>
+			<list>
+				<bean class="org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy">
+					<constructor-arg ref="sessionRegistry"/>
+					<property name="maximumSessions" value="-1" />
+					<property name="exceptionIfMaximumExceeded" value="true" />
+				</bean>
+				<bean class="org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy"/>
+				<bean class="org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy">
+					<constructor-arg ref="sessionRegistry"/>
+				</bean>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<security:user-service>
-				<security:user name="user" password="password" authorities="ADMIN"/>
+				<security:user name="user" password="password"
+					authorities="ADMIN" />
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>

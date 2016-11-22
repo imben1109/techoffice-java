@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SessionController {
 	
 	@Autowired
-	@Qualifier("sessionRegistry")
 	private SessionRegistry sessionRegistry;
 
-	
 	@RequestMapping(value="/session")
 	@ResponseBody
 	public String home(){
