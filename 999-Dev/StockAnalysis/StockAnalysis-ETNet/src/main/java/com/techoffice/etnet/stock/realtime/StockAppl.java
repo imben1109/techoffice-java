@@ -1,4 +1,4 @@
-package com.techoffice.yahoo.finance.stock;
+package com.techoffice.etnet.stock.realtime;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -15,22 +15,21 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.yahoo.finance.stock.dao.StockDao;
-import com.techoffice.yahoo.finance.stock.service.webclient.StockListWebService;
+import com.techoffice.etnet.stock.realtime.dao.StockDao;
+import com.techoffice.etnet.stock.realtime.service.webclient.RealTimeStockWebService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private StockListWebService stockListWeb;
+	private RealTimeStockWebService stockListWeb;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		String xml = stockListWeb.retrieveStockListByWebClient();
-		System.out.println(xml);
+
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{

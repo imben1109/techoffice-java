@@ -1,4 +1,4 @@
-package com.techoffice.hkex.config;
+package com.techoffice.config;
 
 import java.io.File;
 import java.io.IOException;

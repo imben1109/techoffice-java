@@ -1,0 +1,35 @@
+2016-11-23 13:56:21 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e6ea0c6: startup date [Wed Nov 23 13:56:21 CST 2016]; root of context hierarchy
+2016-11-23 13:56:21 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-23 13:56:22 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-23 13:56:23 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-23 13:56:23 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-23 13:56:23 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-23 13:56:23 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-23 13:56:23 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-23 13:56:23 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@20576557'
+2016-11-23 13:56:23 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@733037] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-23 13:57:33 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e6ea0c6: startup date [Wed Nov 23 13:57:33 CST 2016]; root of context hierarchy
+2016-11-23 13:57:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-23 13:57:33 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-23 13:57:34 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-23 13:57:34 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-23 13:57:34 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-23 13:57:34 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-23 13:57:34 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-23 13:57:35 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2ec3633f'
+2016-11-23 13:57:35 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@733037] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-23 13:58:13 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e6ea0c6: startup date [Wed Nov 23 13:58:13 CST 2016]; root of context hierarchy
+2016-11-23 13:58:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-23 13:58:14 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-23 13:58:14 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-23 13:58:14 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-23 13:58:14 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-23 13:58:14 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-23 13:58:15 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-23 13:58:15 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2ec3633f'
+2016-11-23 13:58:15 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@733037] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-23 13:58:16 WARN  HttpAuthenticator:207 - NTLM authentication error: Credentials cannot be used for NTLM authentication: org.apache.http.auth.UsernamePasswordCredentials
+2016-11-23 13:58:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-23 13:58:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-23 13:58:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-23 13:58:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.

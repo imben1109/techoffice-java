@@ -49,7 +49,6 @@ public class StockWebClientService {
 	public List<Stock> retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
         final HtmlPage page = webClient.getPage(URL);
         String xml = page.asXml();
-//        log.trace(xml);
         List<Stock> stocks = parseXml(xml);
         webClient.close();
 		return stocks;

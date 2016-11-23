@@ -1,4 +1,4 @@
-package com.techoffice.yahoo.finance.stock;
+package com.techoffice.aastock.stock.service.webclient;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
