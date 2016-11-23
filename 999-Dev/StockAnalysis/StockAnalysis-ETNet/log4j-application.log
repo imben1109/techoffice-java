@@ -10466,3 +10466,42 @@
 2016-11-20 12:12:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
 2016-11-20 12:12:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
 2016-11-20 12:12:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-23 14:07:13 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e6ea0c6: startup date [Wed Nov 23 14:07:13 CST 2016]; root of context hierarchy
+2016-11-23 14:07:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-23 14:07:13 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-23 14:07:14 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-23 14:07:14 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-23 14:07:14 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-23 14:07:14 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-23 14:07:14 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-23 14:07:15 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2ec3633f'
+2016-11-23 14:07:15 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@733037] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-23 14:08:45 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@e6ea0c6: startup date [Wed Nov 23 14:08:45 CST 2016]; root of context hierarchy
+2016-11-23 14:08:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-23 14:08:46 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-23 14:08:46 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-23 14:08:46 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-23 14:08:46 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-23 14:08:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-23 14:08:47 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-23 14:08:47 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2ec3633f'
+2016-11-23 14:08:47 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@733037] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-23 14:08:48 WARN  HttpAuthenticator:207 - NTLM authentication error: Credentials cannot be used for NTLM authentication: org.apache.http.auth.UsernamePasswordCredentials
+2016-11-23 14:08:48 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: '*,:x' error: Invalid selector: :x).] sourceName=[http://www.etnet.com.hk/www/tc/common/js/jquery.min.js] line=[4] lineSource=[null] lineOffset=[0]
+2016-11-23 14:08:49 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:49 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:49 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:49 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:49 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.etnet.com.hk/www/tc/stocks/style/quote_super_light.min.css?20150904' [1:1246] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-23 14:08:49 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.etnet.com.hk/www/tc/stocks/style/quote_super_light.min.css?20150904' [1:1902] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-23 14:08:49 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.etnet.com.hk/www/tc/stocks/style/quote_super_light.min.css?20150904' [1:3787] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-23 14:08:49 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.etnet.com.hk/www/tc/stocks/style/quote_super_light.min.css?20150904' [1:4816] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-23 14:08:49 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.etnet.com.hk/www/tc/stocks/style/quote_super_light.min.css?20150904' [1:5079] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-23 14:08:49 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.etnet.com.hk/www/tc/stocks/style/quote_super_light.min.css?20150904' [1:5103] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-23 14:08:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:50 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-23 14:08:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-23 14:08:50 WARN  HTMLDocument:1015 - Ignoring call to open() during the parsing stage.
+2016-11-23 14:08:50 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-23 14:08:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.

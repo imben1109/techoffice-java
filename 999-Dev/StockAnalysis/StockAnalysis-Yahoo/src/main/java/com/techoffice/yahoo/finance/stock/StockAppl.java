@@ -22,14 +22,14 @@ import com.techoffice.yahoo.finance.stock.service.webclient.StockListWebService;
 public class StockAppl {
 	
 	@Autowired
-	private StockListWebService stockListWeb;
+	private StockListWebService stockListWebService;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		String xml = stockListWeb.retrieveStockListByWebClient();
+		String xml = stockListWebService.retrieveStockListByWebClient();
 		System.out.println(xml);
 	}
 	

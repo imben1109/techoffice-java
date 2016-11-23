@@ -16,7 +16,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 @Component
-public class StockListWeb {
+public class StockListWebService {
 	public static final String URL = "https://www.hkex.com.hk/eng/market/sec_tradinfo/stockcode/eisdeqty.htm";
 	public static final String CHI_URL = "https://www.hkex.com.hk/chi/market/sec_tradinfo/stockcode/eisdeqty_c.htm";
 	
@@ -28,7 +28,7 @@ public class StockListWeb {
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		StockListWeb stockListWeb = new StockListWeb();
+		StockListWebService stockListWeb = new StockListWebService();
 		stockListWeb.retrieveStockListByWebClient();
 	}
 }

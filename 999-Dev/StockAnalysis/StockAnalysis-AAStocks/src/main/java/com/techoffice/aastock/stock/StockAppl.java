@@ -1,4 +1,4 @@
-package com.techoffice.aastock.stock.service.webclient;
+package com.techoffice.aastock.stock;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -16,12 +16,13 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.aastock.stock.dao.StockDao;
+import com.techoffice.aastock.stock.service.webclient.StockListWebService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private StockListWeb stockListWeb;
+	private StockListWebService stockListWeb;
 	
 	@Autowired
 	private StockDao stockDao;

@@ -22,14 +22,15 @@ import com.techoffice.etnet.stock.realtime.service.webclient.RealTimeStockWebSer
 public class StockAppl {
 	
 	@Autowired
-	private RealTimeStockWebService stockListWeb;
+	private RealTimeStockWebService realTimeStockWebService;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-
+		String xml = realTimeStockWebService.retrieveXmlByCode("3988");
+		System.out.println(xml);
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
