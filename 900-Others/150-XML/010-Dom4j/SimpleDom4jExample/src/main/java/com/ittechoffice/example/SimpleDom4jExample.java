@@ -1,11 +1,9 @@
 package com.ittechoffice.example;
 
 import java.io.ByteArrayInputStream;
-import java.util.List;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
 public class SimpleDom4jExample {

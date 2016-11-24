@@ -27,8 +27,5 @@ public class StockListWebService {
         webClient.close();
 	}
 	
-	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		StockListWebService stockListWeb = new StockListWebService();
-		stockListWeb.retrieveStockListByWebClient();
-	}
+
 }
