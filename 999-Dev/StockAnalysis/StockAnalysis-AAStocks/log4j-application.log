@@ -5092,3 +5092,891 @@ _atrk_opts = { atrk_acct: "qyUki1agq800y2", domain: "aastocks.com", dynamic: tru
 
 2016-11-24 14:11:29 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@3a5ed7a6: startup date [Thu Nov 24 14:11:19 CST 2016]; root of context hierarchy
 2016-11-24 14:11:29 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:12:54 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:12:54 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:12:54 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7dc7cbad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d2cc05a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f933fd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548a9f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1753acfe]
+2016-11-24 20:12:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:12:56 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:12:56 HKT 2016]; root of context hierarchy
+2016-11-24 20:12:56 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:13:00 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:13:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:13:00 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:13:01 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:13:02 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:13:03 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3b4d50b'
+2016-11-24 20:13:04 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3add81c4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:13:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:09 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:13:09 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:13:09 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:13:09 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:13:09 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:13:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:13:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:13:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:13:15 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:16 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:16 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:16 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:16 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:17 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1014698874
+2016-11-24 20:13:18 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:13:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:20 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:13:21 ERROR DefaultJavaScriptErrorListener:53 - Error loading JavaScript from [https://pr.ybp.yahoo.com/ab/secure/true/imp/9JdCF4w4ao9HWnKwrlYLFMUdF8M8UN2PtQ_86xgtSkzP4x1uPY5rcNWU-OF27pIOUrd9TOQsXIbqf0zQwG2ATsbi00AIDMV5M2rzyTx5EkqzqZih0RmCwaHu0PDsHuLfWRTMqEdyGFnxuk8bC5Ocj3jawWr-h0RkvKaPdXJTumvjWEKgYINbHOvV8X3e7QtNTEoT4VDUTFC1SpJ154DG-qaGt3Huq0WJZ_ty_Ba8vZ-BN0D-cJhDaU1CdpRTR-d3pmAYmZFFQt6ZYNVz0qTZVrMnYn2mwrtymzXK6d9LEJN49rNcZH0ip0qJgX6a1q01gISFUsRFyIB0eRhFCaNrxSPszZh7LaYNeOviFaVoKFU-fqdp_cLiZE1ueCo-dgkUfPj--LnXBrlxHiewSgOY1nXPP29I_Ql1zIHLv2393DHsqpRolY2KleBRIYmRBf5wy5Gowh2r-vfJ7xxjXDR3DJueeoiJPbwgXXS-BY8fDYbRhS7R4JO9QnMiLBL76LJ3qjda92jARiSi0ldkTJsFoxMg03JIe4b5VHriedQGAm5hXX3klpotKSl2LiKD6t9To7SIaQMly33aBlkrC5vWjTxsCTSk3GvfslEEjEA7TcR3oWzXxeVcegbrWujwGoAIDxs2gsQ0yrfgJJOtExVA3rL90myaef3GMUhIkBaq-py-FzNoKyT2WBWgB4mjkhatjjc_keylGT6eumsqsqZbJuXmb7y1DCoqMOcBw4Ha8qJB9NulnCQ-pWqTKiE3w3PTKUJQm7V3TKVuyq9yQKfsCfBdDKF-E0t8BTy_puK_8xY7mgvqqKyPoJ4b0vGxRTG6/wp/C3A672843CED1633].
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory.connectSocket(HtmlUnitSSLConnectionSocketFactory.java:189)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:183)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1358)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1275)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1009)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.compile(JavaScriptEngine.java:746)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.compile(JavaScriptEngine.java:711)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:763)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.executeJavaScriptIfPossible(HtmlPage.java:904)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeInlineScriptIfNeeded(HtmlScript.java:307)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:368)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.evaluateInputSource(HTMLScanner.java:615)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.evaluateInputSource(HTMLConfiguration.java:349)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.pushInputString(HTMLParser.java:410)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.writeInParsedStream(HtmlPage.java:2094)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:603)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:489)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.sourceforge.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:153)
+	at net.sourceforge.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:384)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1540)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.exec(InterpretedFunction.java:118)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$3.doRun(JavaScriptEngine.java:794)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:975)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:767)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.executeJavaScriptIfPossible(HtmlPage.java:904)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeInlineScriptIfNeeded(HtmlScript.java:307)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:368)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.evaluateInputSource(HTMLScanner.java:615)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.evaluateInputSource(HTMLConfiguration.java:349)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.pushInputString(HTMLParser.java:410)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.writeInParsedStream(HtmlPage.java:2094)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:603)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:489)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.sourceforge.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:153)
+	at net.sourceforge.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:384)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1540)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.exec(InterpretedFunction.java:115)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$3.doRun(JavaScriptEngine.java:794)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:975)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.scanDocument(HTMLScanner.java:927)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:506)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:459)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.parse(HTMLParser.java:979)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser.parse(HTMLParser.java:241)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser.parseHtml(HTMLParser.java:187)
+	at com.gargoylesoftware.htmlunit.DefaultPageCreator.createHtmlPage(DefaultPageCreator.java:269)
+	at com.gargoylesoftware.htmlunit.DefaultPageCreator.createPage(DefaultPageCreator.java:157)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:512)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:386)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.html.BaseFrameElement.loadInnerPageIfPossible(BaseFrameElement.java:184)
+	at com.gargoylesoftware.htmlunit.html.BaseFrameElement.loadInnerPage(BaseFrameElement.java:122)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadFrames(HtmlPage.java:1818)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.initialize(HtmlPage.java:226)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:519)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:386)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:436)
+	at com.techoffice.aastock.stock.market.service.webclient.CalendarWebService.retrieveResultAnnounceXmlFromWebClient(CalendarWebService.java:41)
+	at com.techoffice.aastock.stock.market.service.webclient.CalendarWebService.retrieveXmlFromWebClient(CalendarWebService.java:34)
+	at com.techoffice.aastock.stock.market.service.webclient.CalendarWebServiceTest.retrieveStockListByWebClient(CalendarWebServiceTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:230)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 183 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:146)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:131)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 189 more
+2016-11-24 20:13:25 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:12:56 HKT 2016]; root of context hierarchy
+2016-11-24 20:13:25 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:19:06 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:19:06 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:19:06 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7dc7cbad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d2cc05a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f933fd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548a9f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1753acfe]
+2016-11-24 20:19:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:19:07 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:19:07 HKT 2016]; root of context hierarchy
+2016-11-24 20:19:07 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:19:11 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:19:11 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:19:11 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:19:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:19:13 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:19:15 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3b4d50b'
+2016-11-24 20:19:16 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3add81c4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:19:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:20 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:20 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:19:21 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:19:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:19:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:27 ERROR DefaultJavaScriptErrorListener:53 - Error loading JavaScript from [https://pr.ybp.yahoo.com/ab/secure/true/imp/mIw2UtLyUzfnR85kKfsnNwONAJiEU32V6OjgwKkO-uQ4c0AWprqTu6f3i-c1fZ8LUow1Xo-yHr8YW3Jb4cbPs7DtbTx8f7-daJVCE24lGuBipmaNr_L1HYgrRK_W_jQJSox4ERTkMaDPbIpReZpelzcYcxzgAa9htP5Sl2FhoBr5LzQYeN72ZSCdx2znUrXOxUH4m1d9i46e8RO9BWlxxhHv3QJDAx2fZBdXCauG5GXS9JBj8MKQPWIgAO6SKcDyUwEGBaiWJpuFKstHv2FMZ5ubtlPO7VsraROdEn8UW0AKixIwvofO-K-12wGIV2wH0B1xYczm9gnb17R3QoRqXdLCcItDjrNRPK9GoBARlWCn6q8ImyL3q2M6aKiLBMLTiFsMDirw8PpK5RSq8XC3OQDymslFU5BjXlAaCtEbcthVzyp4breQFjNvVxQFzA9sibFWI7ScWB2kh2aRNOTelSAg0o4_jk80jSOBX0M0T_0vXoNl2bl54kSYxg1B47B2B9lrX6qUXlglyCgfmx-cwbSkSxsplPojJsX32qlCwheEsRikgsybdozCgm9QHE-EWierKaOuBPsDEX2Sns3y3vkeq7LBj2GEIGhkxZU0dX7ry-TE4nIY8ZWfGaJBnx1_OqQjLDeVCBcwqCsnjQ3PDcwdD-oGq9pE7VeNPHcTuQW4N32v3fY6cldgx8m7YglCrD11uGdbJbaxnSmEsqJdUsET98eTRNNGQbjeXQvpeaCt-Xdd19NgbUhmrSwnJ8Ok_6estiVfGNpC2hx3cvM9XixOE-S9gW3k0jmHg9szrfzsU2pkJxFHtQVtCClEMAy-/wp/9F1464D98552CE82].
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory.connectSocket(HtmlUnitSSLConnectionSocketFactory.java:189)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:183)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1358)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1275)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1009)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.compile(JavaScriptEngine.java:746)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.compile(JavaScriptEngine.java:711)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:763)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.executeJavaScriptIfPossible(HtmlPage.java:904)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeInlineScriptIfNeeded(HtmlScript.java:307)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:368)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.evaluateInputSource(HTMLScanner.java:615)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.evaluateInputSource(HTMLConfiguration.java:349)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.pushInputString(HTMLParser.java:410)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.writeInParsedStream(HtmlPage.java:2094)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:603)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:489)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.sourceforge.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:153)
+	at net.sourceforge.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:384)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1540)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.exec(InterpretedFunction.java:118)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$3.doRun(JavaScriptEngine.java:794)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:975)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:767)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.executeJavaScriptIfPossible(HtmlPage.java:904)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeInlineScriptIfNeeded(HtmlScript.java:307)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:368)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.evaluateInputSource(HTMLScanner.java:615)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.evaluateInputSource(HTMLConfiguration.java:349)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.pushInputString(HTMLParser.java:410)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.writeInParsedStream(HtmlPage.java:2094)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:603)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:489)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.sourceforge.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:153)
+	at net.sourceforge.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:384)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1540)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.exec(InterpretedFunction.java:115)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$3.doRun(JavaScriptEngine.java:794)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:975)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.scanDocument(HTMLScanner.java:927)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:506)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:459)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.parse(HTMLParser.java:979)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser.parse(HTMLParser.java:241)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser.parseHtml(HTMLParser.java:187)
+	at com.gargoylesoftware.htmlunit.DefaultPageCreator.createHtmlPage(DefaultPageCreator.java:269)
+	at com.gargoylesoftware.htmlunit.DefaultPageCreator.createPage(DefaultPageCreator.java:157)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:512)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:386)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.html.BaseFrameElement.loadInnerPageIfPossible(BaseFrameElement.java:184)
+	at com.gargoylesoftware.htmlunit.html.BaseFrameElement.loadInnerPage(BaseFrameElement.java:122)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadFrames(HtmlPage.java:1818)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.initialize(HtmlPage.java:226)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:519)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:386)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:436)
+	at com.techoffice.aastock.stock.market.service.webclient.CalendarWebService.retrieveResultAnnounceXmlFromWebClient(CalendarWebService.java:41)
+	at com.techoffice.aastock.stock.market.service.webclient.CalendarWebService.retrieveXmlFromWebClient(CalendarWebService.java:34)
+	at com.techoffice.aastock.stock.market.service.webclient.CalendarWebServiceTest.retrieveStockListByWebClient(CalendarWebServiceTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:230)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 185 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:146)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:131)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 191 more
+2016-11-24 20:19:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:29 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1179830093
+2016-11-24 20:19:30 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:19:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:19:31 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=18942863&PluID=0&w=300&h=250&ord=628615&ucm=true&ncu=http%3A%2F%2Finsight.adsrvr.org%2Ftrack%2Fclk%3Fimp%3D27379bda-b2be-4c78-8cf6-7352a91012f8%26ag%3D5u0r06p%26crid%3D393hxygz%26cf%3D%26fq%3D0%26td_s%3Dwww.aastocks.com%26rcats%3Djl7%2C47u%2Cy29%26mcat%3D47u%26mste%3D%26mfld%3D3%26mssi%3Dbeeji7j%26mfsi%3Dur4qkdm6ww%26sv%3Dgoogle%26uhow%3D116%26agsa%3D%26rgco%3DHong%2520Kong%26rgre%3D%26rgme%3D%26rgci%3DCentral%2520District%26rgz%3D%26dt%3DPC%26osf%3DWindows%26os%3DWindows7%26br%3DFirefox%26svpid%3D1%26rlangs%3Den%26mlang%3Den%26did%3D%26rcxt%3DOther%26tmpc%3D%26vrtd%3D%26osi%3D%26osv%3D%26daid%3D%26dnr%3D0%26vpb%3D%26svsc%3D%26dur%3D%26crrelr%3D%26svscid%3D1%26r%3Dhttps://adclick.g.doubleclick.net/aclk%3Fsa%3Dl%26ai%3DCUmdI0to2WJrWHIHP9AX75pKQBJmi8ZRGjpKgjlfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHahvPoA8gBCagDAaoEfU_Qde9DgGSdOA2U3vp95eRESGVupZCSXDmIevKRTtYbWl3Dlv2ZP6-Ne82M-rhUdjXl33FYOVj66VvRIYUHZbg4knoc7XiqjFrvL63mI7C7JQUiRfNKbKANA6CBa9O6whHNBwd6DjZksO2Mn655Jb-fALSMsQ-c99i7B_qHgAbFh_bWtZqxvCagBiGoB6a-G9gHANIIBQiAYRAB%26num%3D1%26sig%3DAOD64_1F3ZfF1vrijuj2M6Ccxp5b9jrymQ%26client%3Dca-pub-4237320928945419%26adurl%3Dhttps://www.citibank.com.hk&ucm=true', but got 'text/html'.
+2016-11-24 20:19:32 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:19:07 HKT 2016]; root of context hierarchy
+2016-11-24 20:19:32 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:20:33 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:20:33 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:20:33 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79ca92b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1460a8c0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f638935, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4387b79e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e75aa0d]
+2016-11-24 20:20:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:20:34 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@2b662a77: startup date [Thu Nov 24 20:20:34 HKT 2016]; root of context hierarchy
+2016-11-24 20:20:35 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:20:37 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:20:37 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:20:37 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:20:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:20:38 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:20:39 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@31acfd4e'
+2016-11-24 20:20:39 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@48eb9836] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:20:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:20:44 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:20:44 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:20:44 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:20:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:20:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:20:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:20:46 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:20:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:20:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:20:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:20:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:52 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1227859754
+2016-11-24 20:20:53 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:20:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:20:54 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=18942860&PluID=0&w=728&h=90&ord=837686&ucm=true&ncu=http%3A%2F%2Finsight.adsrvr.org%2Ftrack%2Fclk%3Fimp%3Dfaa87703-e2e7-401b-a5d2-51ae98b49d17%26ag%3D5u0r06p%26crid%3Ddhe3x7cb%26cf%3D%26fq%3D0%26td_s%3Dwww.aastocks.com%26rcats%3Djl7%2C47u%2Cy29%26mcat%3D47u%26mste%3D%26mfld%3D3%26mssi%3Dbeeji7j%26mfsi%3Dur4qkdm6ww%26sv%3Dgoogle%26uhow%3D116%26agsa%3D%26rgco%3DHong%2520Kong%26rgre%3D%26rgme%3D%26rgci%3DCentral%2520District%26rgz%3D%26dt%3DPC%26osf%3DWindows%26os%3DWindows7%26br%3DFirefox%26svpid%3D1%26rlangs%3Den%26mlang%3Den%26did%3D%26rcxt%3DOther%26tmpc%3D%26vrtd%3D%26osi%3D%26osv%3D%26daid%3D%26dnr%3D0%26vpb%3D%26svsc%3D%26dur%3D%26crrelr%3D%26svscid%3D1%26r%3Dhttps://adclick.g.doubleclick.net/aclk%3Fsa%3Dl%26ai%3DCaMMVJds2WM_RLc6k9gWKvL6gBpmi8ZRG9v6PjlfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHahvPoA8gBCagDAaoEiwFP0FDtDYfAdywmGbwop78bHYhRoEQKRkFqaGhHxebpnOSaRPGMEoGmEa_4URQCCPwund-8Sk5qZTfqqkI3RbDR5XA1GdMjtOJwg_7mhDJ2rwzXG-UMQLZvaDIDWC32n4cufrWop_C58yhX9NoyNUcM1_nqsFVhTTGuCYjjHq4nlhgcqyeaFiPYwnGdgAa06Pb23OvAm2agBiGoB6a-G9gHANIIBQiAYRAB%26num%3D1%26sig%3DAOD64_2KrDzZt9ruF-kbeMF3MWdg246Tag%26client%3Dca-pub-4237320928945419%26adurl%3Dhttps://www.citibank.com.hk&ucm=true', but got 'text/html'.
+2016-11-24 20:20:55 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@2b662a77: startup date [Thu Nov 24 20:20:34 HKT 2016]; root of context hierarchy
+2016-11-24 20:20:55 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:22:36 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:22:36 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:22:36 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79ca92b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1460a8c0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f638935, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4387b79e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e75aa0d]
+2016-11-24 20:22:36 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:22:37 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@2b662a77: startup date [Thu Nov 24 20:22:37 HKT 2016]; root of context hierarchy
+2016-11-24 20:22:37 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:23:06 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:23:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:23:06 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:23:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:23:08 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:23:09 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5f726750'
+2016-11-24 20:23:10 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@6c518474] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:23:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:23:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:23:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:23:15 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:23:15 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:23:16 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:23:16 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:23:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:26 INFO  WebConsole:422 - _insertAd
+2016-11-24 20:23:26 INFO  WebConsole:422 - getAd
+2016-11-24 20:23:27 WARN  ResponseProcessCookies:122 - Cookie rejected [sspid="j%3A%225836dbc095d3028f2abd2285%22", version:0, domain:aralego.com, path:/, expiry:Sat Dec 24 20:23:27 HKT 2016] Illegal 'domain' attribute "aralego.com". Domain of origin: "cdn.innity.net"
+2016-11-24 20:23:27 INFO  WebConsole:422 - Get AD
+2016-11-24 20:23:27 WARN  ResponseProcessCookies:122 - Cookie rejected [B="ahfb9p9c3dmtv&b=3&s=iv", version:0, domain:yahoo.com, path:/, expiry:Sat Nov 24 20:23:27 HKT 2018] Illegal 'domain' attribute "yahoo.com". Domain of origin: "rtax.criteo.com"
+2016-11-24 20:23:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:27 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2016-11-24 20:23:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:23:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@792516391
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:30 WARN  IncorrectnessListenerImpl:38 - Recursive src attribute of iframe: url=[about:blank]. Ignored.
+2016-11-24 20:23:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:31 WARN  ResponseProcessCookies:122 - Cookie rejected [id="22a03420990c0040||t=1479990211|et=730|cs=002213fd486b37cef199399ce7", version:0, domain:doubleclick.net, path:/, expiry:Sat Nov 24 20:23:31 HKT 2018] Illegal 'domain' attribute "doubleclick.net". Domain of origin: "s0.2mdn.net"
+2016-11-24 20:23:31 WARN  ResponseProcessCookies:122 - Cookie rejected [test_cookie="", version:0, domain:doubleclick.net, path:/, expiry:Tue Jul 22 07:59:00 HKT 2008] Illegal 'domain' attribute "doubleclick.net". Domain of origin: "s0.2mdn.net"
+2016-11-24 20:23:31 WARN  ResponseProcessCookies:122 - Cookie rejected [IDE="AHWqTUlHzFuvdjZ7x0EJyN19oHZFKHbqwMAGuOlxmR-ZqK0JIS98eONGqQ", version:0, domain:doubleclick.net, path:/, expiry:Sat Nov 24 20:23:31 HKT 2018] Illegal 'domain' attribute "doubleclick.net". Domain of origin: "s0.2mdn.net"
+2016-11-24 20:23:31 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:23:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:32 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:32 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:23:32 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:24:16 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@2b662a77: startup date [Thu Nov 24 20:22:37 HKT 2016]; root of context hierarchy
+2016-11-24 20:24:16 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:24:42 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:24:42 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:24:42 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7dc7cbad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d2cc05a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f933fd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548a9f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1753acfe]
+2016-11-24 20:24:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:24:43 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:24:43 HKT 2016]; root of context hierarchy
+2016-11-24 20:24:43 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:24:45 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:24:45 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:24:45 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:24:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:24:46 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:24:46 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3b4d50b'
+2016-11-24 20:24:47 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3add81c4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:24:49 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:24:49 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:24:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:24:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:24:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:24:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:24:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:24:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:25:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:25:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:02 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:03 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:25:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:25:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:06 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:25:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:25:11 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:24:43 HKT 2016]; root of context hierarchy
+2016-11-24 20:25:11 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:29:45 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:29:45 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:29:45 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7dc7cbad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d2cc05a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f933fd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548a9f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1753acfe]
+2016-11-24 20:29:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:29:46 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:29:46 HKT 2016]; root of context hierarchy
+2016-11-24 20:29:46 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:29:48 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:29:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:29:48 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:29:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:29:48 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:29:49 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3b4d50b'
+2016-11-24 20:29:49 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3add81c4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:29:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:29:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:29:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:29:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:29:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:29:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:29:55 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:29:55 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:29:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:29:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:29:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:29:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:00 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@1745241742
+2016-11-24 20:30:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:01 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:30:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:06 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=19462027&PluID=0&w=300&h=250&ncu=$$http://a.tribalfusion.com/h.click/aNmQgM2PvePmbB3WYo0dUAmHiN4P3S4cjeVsvkWVMeP6MyTH33Urb42bZanVarvWqM7PaJZbQVbZdQbExRH7cUGnU2rqvnWar0q6y4dYZdQcFC2mQHot6qUWQaXFU9XrYeXaioPrYBUUUSVHJ5mFZbxPrZbr1E3y5aUj2T75nqjDYFYaWHfXm6YCmVvrpdUB3qMj5tmFutMmF9/$$&ord=1921829431&ucm=true', but got 'text/html'.
+2016-11-24 20:30:06 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:29:46 HKT 2016]; root of context hierarchy
+2016-11-24 20:30:06 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:30:49 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:30:49 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:30:49 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7dc7cbad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d2cc05a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f933fd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548a9f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1753acfe]
+2016-11-24 20:30:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:30:50 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:30:50 HKT 2016]; root of context hierarchy
+2016-11-24 20:30:51 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:30:52 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:30:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:30:52 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:30:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:30:53 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:30:54 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3b4d50b'
+2016-11-24 20:30:54 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3add81c4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:30:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:30:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:30:58 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:30:58 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:30:58 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:30:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:30:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:30:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:30:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:31:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:31:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:03 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2016-11-24 20:31:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:31:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@2002903874
+2016-11-24 20:31:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:06 WARN  HTMLDocument:1043 - close() called when document is not open.
+2016-11-24 20:31:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:08 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://pixel.adsafeprotected.com/jload?anId=923178&advId=10867&campId=9330812&pubId=1&placementId=33389710&adsafe_par&bidurl=http://www.aastocks.com/', but got 'text/plain'.
+2016-11-24 20:31:09 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://sc.iasds01.com/dtc?ias_callback=__IntegralAS_8c84c335cece468b24e5337c8b328781_5914&anId=923178&pubId=1&asid=8c84c335-cece-468b-24e5-337c8b328781', but got ''.
+2016-11-24 20:31:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:10 WARN  HtmlScript:425 - Script is not JavaScript (type: text/gwd-admetadata, language: ). Skipping execution.
+2016-11-24 20:31:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:31:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:31:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:31:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:31:16 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:30:50 HKT 2016]; root of context hierarchy
+2016-11-24 20:31:16 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-11-24 20:33:36 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-11-24 20:33:36 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-24 20:33:36 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7dc7cbad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@d2cc05a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f933fd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548a9f61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1753acfe]
+2016-11-24 20:33:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-11-24 20:33:37 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:33:37 HKT 2016]; root of context hierarchy
+2016-11-24 20:33:37 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-11-24 20:33:39 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2016-11-24 20:33:39 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-11-24 20:33:39 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-11-24 20:33:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-11-24 20:33:40 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-24 20:33:41 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3b4d50b'
+2016-11-24 20:33:41 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3add81c4] of Hibernate SessionFactory for HibernateTransactionManager
+2016-11-24 20:33:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [18:1] Ignoring the following declarations in this rule.
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [76:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [378:25] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.29' [389:214] Error in declaration. '*' is not allowed as first char of a property.
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2016-11-24 20:33:45 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.29' [93:70] Ignoring the following declarations in this rule.
+2016-11-24 20:33:50 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:52 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2016-11-24 20:33:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-11-24 20:33:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:54 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2016-11-24 20:33:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-11-24 20:33:58 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:33:37 HKT 2016]; root of context hierarchy
+2016-11-24 20:33:58 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'

@@ -30,7 +30,8 @@ public class CalendarWebServiceTest {
 	
 	@Test
 	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		String xml = calendarWebServiceTest.retrieveXmlFromWebClient("1");
-		log.info(xml);
+		String xml = calendarWebServiceTest.retrieveXmlFromWebClient();
+		calendarWebServiceTest.getPageCount(xml);
+//		log.info(xml);
 	}
 }

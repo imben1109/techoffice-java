@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import org.ehcache.Cache;
 import org.ehcache.CacheManager;
