@@ -1,0 +1,10 @@
+<aspectj>
+  <aspects>
+   <aspect name ="com.techoffice.example.ApplAspect"/>
+  </aspects>
+ 
+  <weaver options="-verbose -debug -showWeaveInfo">
+   <include within ="com.techoffice..*"/>
+  </weaver>
+ 
+</aspectj>
