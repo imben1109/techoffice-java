@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.ehcache.org/v3"
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.1.xsd">
+
+  <cache alias="basicCache">
+    <key-type>java.lang.Long</key-type>
+    <value-type>java.lang.String</value-type>
+    <resources>
+      <heap unit="entries">100</heap>
+      <offheap unit="MB">1</offheap>
+    </resources>
+  </cache>
+</config>

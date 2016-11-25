@@ -17,6 +17,7 @@ It would cover Java Base Library Example
 * 14  Logging
 * 16  Security
 * 17  Internationalization
+* 18  Platform
 
 # Reference
 * http://docs.oracle.com/javase/8/docs/index.html
