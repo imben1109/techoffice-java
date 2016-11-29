@@ -1,4 +1,4 @@
-package com.ittechoffice.example.hibernatejpa.model;
+package com.techoffice.example.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
