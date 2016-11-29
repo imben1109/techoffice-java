@@ -1,4 +1,4 @@
-package com.ittechoffice.example.h2jdbc;
+package com.techoffice.example.h2jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
