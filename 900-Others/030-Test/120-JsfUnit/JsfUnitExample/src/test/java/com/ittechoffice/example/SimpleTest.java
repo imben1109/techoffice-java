@@ -18,7 +18,6 @@ public class SimpleTest {
         JavaArchive jar = ShrinkWrap.create(JavaArchive.class)
             .addClasses(TestBean.class)
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-        // System.out.println(jar.toString(true));
         return jar;
     }
     

@@ -14,6 +14,7 @@
             <version>4.8.1</version>
             <scope>test</scope>
         </dependency>
+		
         <dependency>
             <groupId>org.jboss.arquillian</groupId>
             <artifactId>arquillian-bom</artifactId>
@@ -26,6 +27,7 @@
             <version>1.0.3.Final</version>
             <scope>test</scope>
         </dependency>
+		
         <dependency>
             <groupId>org.jboss.spec</groupId>
             <artifactId>jboss-javaee-6.0</artifactId>
@@ -33,19 +35,23 @@
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
-            <version>1.0.0.CR5</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
+		
+		<!-- WELD: CDI Provider -->
+		<dependency>
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-core</artifactId>
             <version>1.1.9.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.jboss.arquillian.container</groupId>
+            <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
+            <version>1.0.0.CR5</version>
+            <scope>test</scope>
+        </dependency>
+        
+        
+		<dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.6.4</version>
