@@ -8,17 +8,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
+    
+        <!-- Arquillian -->
         <dependency>
             <groupId>org.jboss.arquillian</groupId>
             <artifactId>arquillian-bom</artifactId>
             <version>1.0.3.Final</version>
             <type>pom</type>
+        </dependency>
+        
+        <!-- JUnit -->
+		<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.arquillian.junit</groupId>
@@ -26,6 +30,14 @@
             <version>1.0.3.Final</version>
             <scope>test</scope>
         </dependency>
+		
+		<!-- Embedded Tomcat -->
+		<dependency>
+		<groupId>org.jboss.arquillian.container</groupId>
+			<artifactId>arquillian-tomcat-embedded-7</artifactId>
+			<version>1.0.0.CR8</version>
+			<scope>test</scope>
+		</dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
@@ -35,7 +47,12 @@
         <dependency>
             <groupId>com.sun.faces</groupId>
             <artifactId>jsf-api</artifactId>
-            <version>2.0.3</version>
+            <version>2.1.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>2.1.13</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -61,5 +78,9 @@
             <version>3.7</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- JsfUnit -->
+
+
     </dependencies>
 </project>
