@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 import java.io.File;
 
 import org.eclipse.jetty.server.Handler;

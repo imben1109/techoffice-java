@@ -8,6 +8,8 @@ import javax.faces.bean.SessionScoped;
  * Managed Bean is Java Bean Class registered in JSF. Therefore, Managed Bean is manged in JSF framework. 
  * It can be accessed by JSF Page. 
  * 
+ * The default scope for managed bean is request.
+ * 
  * @author Ben_c
  *
  */

@@ -1,12 +1,9 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.io.File;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.jsfunit.api.InitialPage;
-import org.jboss.jsfunit.jsfsession.JSFClientSession;
-import org.jboss.jsfunit.jsfsession.JSFServerSession;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
@@ -36,7 +33,7 @@ public class SimpleTest {
     }
     
     @Test
-    @InitialPage("/hello.xhtml")
-    public void test(JSFClientSession client, JSFServerSession server) throws Exception{
+    public void test() {
+    	
     }
 }
