@@ -9,7 +9,7 @@ It is Java Example Project of Tech Office. It provide various example for buildi
 
 Blog: https://techofficejava.wordpress.com/
 
-Techoffice Blog: https://ittechoffice.wordpress.com/
+Tech Office Blog: https://ittechoffice.wordpress.com/
 
 
 

@@ -1,83 +1,34 @@
-# Spring Hello World Example
+# Spring Aspect-Oriented Programming (AOP) Example
+It is a programming paradigm which aims to increase modularity by separation of cross-cutting concerns.
 
-Spring is a Inversion of Control Container. In this example, it would show you how to use XML to configure and declare Spring bean for use. 
+## AOP Concepts
+* Aspect		: This is a class that used to cut the point of concern
+* Join Point	: This is a cutting point. That is where the method to be executed.
+* Pointcut		: This is an expression for Joint Point Matching. 
+* Advice		: This is an action token for the pointcut. It would be different point cut such before, around, after. 
 
-bean.xml (XML configuration of Spring Application)
+## Spring AOP 
+
+The AOP should be enabled in Spring XML Config
 ```
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
-	<bean class="com.ittechoffice.example.HelloWorldExample">
-		<property name="message" value="Hello! This is a Spring Hello World Example By Tech Office - Java!" />
-	</bean>
-
-</beans>
+<aop:aspectj-autoproxy/>
 ```
 
-It declare a HelloWorldExample Bean in Spring. Once Spring Application starts, Spring would create a bean of HelloWorldExample and set the value of message. 
-
-HelloWorldExample.java (Main Program and Spring Bean Definition)
 ```
-public class HelloWorldExample {
+@Aspect
+public class ExampleAspect {
 	
-	private String message;
+	@Pointcut("execution (* com.techoffice..*(..))")		
+	public void anyRun() {}
 	
-	public void setMessage(String message){
-		this.message = message;
+	@Before(value="anyRun()")
+	public void beforeAnyRun(JoinPoint jointPoint){
+		System.out.println("Before " + jointPoint.getClass().getName() + "." + jointPoint.getSignature().getName());
 	}
 	
-	public String getMessage(){
-		return message;
-	}
-	
-	/**
-	 * Main Program 
-	 * @param args
-	 */
-	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		HelloWorldExample helloWorldExample = context.getBean(HelloWorldExample.class);
-		System.out.println(helloWorldExample.getMessage());
+	@After(value="anyRun()")
+	public void afterAnyRun(JoinPoint jointPoint){
+		System.out.println("After " + jointPoint.getClass().getName() + "." + jointPoint.getSignature().getName());
 	}
 }
-
-```
-It would start a Spring Application and retrieve Spring Bean of HelloWorldExample. 
-
-
-pom.xml (Dependencies)
-```
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-core</artifactId>
-	<version>4.3.0.RELEASE</version>
-</dependency>
-
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-context</artifactId>
-	<version>4.3.0.RELEASE</version>
-</dependency>
-
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-beans</artifactId>
-	<version>4.3.0.RELEASE</version>
-</dependency>
-
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-context-support</artifactId>
-	<version>4.3.0.RELEASE</version>
-</dependency>
-
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-expression</artifactId>
-	<version>4.3.0.RELEASE</version>
-</dependency>
 ```

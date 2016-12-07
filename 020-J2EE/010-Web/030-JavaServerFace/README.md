@@ -1,6 +1,19 @@
-It is J2EE Component-based framework for building web application.
+# Java Servcer Face Example
 
-- JSF Page
-- Managed Bean
-- Tag
-- Page Navigation
+## Java Server Face (JSF)
+JSF is a Java Specification for building component-based user interface for web application
+
+### Implementations
+* Mojarra
+* Apache MyFaces
+
+### JSF Concept
+* JSF Page
+* Managed Bean
+
+### JSF Ajax Framework
+* ICEfaces
+* JBoss RickFaces
+* PrimeFaces
+
+
