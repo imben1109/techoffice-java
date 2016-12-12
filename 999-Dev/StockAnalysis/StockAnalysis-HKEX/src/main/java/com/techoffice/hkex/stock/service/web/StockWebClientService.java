@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock.service.webclient;
+package com.techoffice.hkex.stock.service.web;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

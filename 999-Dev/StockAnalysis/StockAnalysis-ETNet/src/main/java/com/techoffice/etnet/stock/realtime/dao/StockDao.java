@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class StockDao {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	

@@ -1,4 +1,4 @@
-package com.techoffice.aastock.stock.market.service.webclient;
+package com.techoffice.aastock.stock.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 

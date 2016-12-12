@@ -1,4 +1,4 @@
-package com.techoffice.aastock.stock.service.web;
+package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -17,22 +17,22 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.aastock.stock.service.web.CalendarWebService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class CalendarWebServiceTest {
+public class ResultWebServiceTest {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
-
 	
 	@Autowired
-	private CalendarWebService calendarWebServiceTest;
-	
+	private ResultWebService resultWebService;
+
 	@Test
-	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		String xml = calendarWebServiceTest.retrieveXmlFromWebClient();
-		calendarWebServiceTest.getPageCount(xml);
-//		log.info(xml);
+	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+//		String xml = resultWebService.retrieveXml();
+//		System.out.println(xml);
+		resultWebService.raceDateSelect();	
 	}
+	
+	
 }
