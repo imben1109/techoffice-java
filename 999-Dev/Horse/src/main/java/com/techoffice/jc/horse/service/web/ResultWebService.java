@@ -11,12 +11,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+
 import com.techoffice.util.XmlUtil;
 
 @Component
@@ -38,8 +40,16 @@ public class ResultWebService {
 	
 	public void raceDateSelect() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
 		String xml = retrieveXml();
-		NodeList nodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
-		System.out.println(nodeList.getLength());
-		System.out.println(nodeList.item(0).getTextContent());
+		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
+		Node dateSelect = dateSelectList.item(0);
+		NodeList raceDatesNodeList = dateSelect.getChildNodes();
+		for (int i=0; i<raceDatesNodeList.getLength(); i++){
+			Node raceDate = raceDatesNodeList.item(i);
+			if("option".equals(raceDate.getNodeName())){
+				System.out.println(raceDate.getAttributes().getNamedItem("value").getNodeValue());
+			}
+		}
+
+		
 	}
 }
