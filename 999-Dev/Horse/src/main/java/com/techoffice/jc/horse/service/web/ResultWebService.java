@@ -38,8 +38,8 @@ public class ResultWebService {
 	
 	public void raceDateSelect() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
 		String xml = retrieveXml();
-		log.info(xml);
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
-//		System.out.println(nodeList.getLength());
+		System.out.println(nodeList.getLength());
+		System.out.println(nodeList.item(0).getTextContent());
 	}
 }

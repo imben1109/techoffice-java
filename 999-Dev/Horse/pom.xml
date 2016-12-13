@@ -70,5 +70,12 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+        
+        <!-- HTML Tidy -->
+        <dependency>
+			<groupId>net.sf.jtidy</groupId>
+			<artifactId>jtidy</artifactId>
+			<version>r938</version>
+		</dependency>
     </dependencies>
 </project>
