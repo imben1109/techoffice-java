@@ -1,5 +1,5 @@
 # J2EE Example
-Reference: https://ittechoffice.wordpress.com/java-ee/
+Reference: https://techofficejava.wordpress.com/j2ee/
 
 J2EE is a Enterprise Application Development Platform. Enterprise Application is a large-scale application providing business logic and integrated with business process. J2EE require J2EE Container to provide functionality while J2EE is a specification to use the function.
 
