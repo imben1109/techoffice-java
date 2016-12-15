@@ -2,6 +2,8 @@ package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -18,7 +20,6 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-
 import com.techoffice.util.XmlUtil;
 
 @Component
@@ -49,7 +50,5 @@ public class ResultWebService {
 				System.out.println(raceDate.getAttributes().getNamedItem("value").getNodeValue());
 			}
 		}
-
-		
 	}
 }
