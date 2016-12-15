@@ -1,6 +1,5 @@
-* J2EE Web Profile
-
-- Sevelt
+# J2EE Web Profile
+- Servlet
 - JSP
 - JSF
 - WebSocket
