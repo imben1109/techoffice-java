@@ -7,8 +7,8 @@
 		JTA-Datasource would used configured in this file with tag <jta-data-source>.
 	 -->
 	 
-	<persistence-unit name="com.ittechoffice.example.hibernatejpa.model" transaction-type="RESOURCE_LOCAL">
-		<class>com.ittechoffice.example.hibernatejpa.model</class>
+	<persistence-unit name="techoffice.example" transaction-type="RESOURCE_LOCAL">
+		<class>com.techoffice.example.model</class>
 		<properties>
 	        <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
@@ -16,6 +16,7 @@
 			<property name="javax.persistence.jdbc.user" value="sa"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
 			<property name="hibernate.connection.pool_size" value="1"/>
+			<!-- Dialect for H2 Database -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 			<property name="show_sql" value="true"/>
 			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>

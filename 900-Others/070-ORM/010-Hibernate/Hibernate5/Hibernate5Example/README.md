@@ -4,7 +4,7 @@
 Hibernate is a Object-Relational Mapping (ORM) Framework. It provide a way to manipulate data from database to java application.
 
 ## Example
-This example demonstrate the Hibernate native way for ORM.
+This example demonstrate the Hibernate native way for ORM in H2 Database.
 Hibernate expose a Session object which would be used for operating with Hibernate.
 
 ```
