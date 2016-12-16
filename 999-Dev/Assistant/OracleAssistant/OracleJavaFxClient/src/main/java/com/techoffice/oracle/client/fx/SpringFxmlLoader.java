@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
 public class SpringFxmlLoader extends FXMLLoader{
+	
 	private static final ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 	
 	public SpringFxmlLoader(){

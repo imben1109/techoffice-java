@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 import com.techoffice.oracle.client.service.ApplService;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 
 @Component
@@ -16,10 +18,18 @@ public class ApplController {
 	
 	@FXML
 	private TextArea sql;
+	
+	@FXML
+	private TableView tableView;
 
 	@FXML
-	public void doSomething(){
+	public void initialize(){
 		applService.doSomething();
+	}
+	
+	@FXML
+	public void doSomething(){
+
 	}
 	
 }

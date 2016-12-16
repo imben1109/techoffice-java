@@ -15,21 +15,7 @@
 		<Button fx:id="button" text="Do Something" onAction="#doSomething"/>
 	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
 		     <columns>
-				<TableColumn text="First Name" prefWidth="100">
-					<cellValueFactory>
-						<PropertyValueFactory property="firstName" />
-					</cellValueFactory>
-				</TableColumn>
-				<TableColumn text="Last Name" prefWidth="100">
-					<cellValueFactory>
-						<PropertyValueFactory property="firstName" />
-					</cellValueFactory>
-				</TableColumn>
-				<TableColumn text="Email Address" prefWidth="100">
-					<cellValueFactory>
-						<PropertyValueFactory property="firstName" />
-					</cellValueFactory>
-				</TableColumn>
+
 			 </columns>    
 			 <items>
 				<FXCollections fx:factory="observableArrayList">
