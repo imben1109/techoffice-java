@@ -24,12 +24,11 @@ public class ApplController {
 
 	@FXML
 	public void initialize(){
-		applService.doSomething();
 	}
 	
 	@FXML
 	public void doSomething(){
-
+		applService.doSomething();
 	}
 	
 }

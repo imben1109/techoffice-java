@@ -1,4 +1,4 @@
-package com.techoffice.oracle.audit.config;
+package com.techoffice.oracle.client.config;
 
 import java.io.File;
 import java.io.IOException;
