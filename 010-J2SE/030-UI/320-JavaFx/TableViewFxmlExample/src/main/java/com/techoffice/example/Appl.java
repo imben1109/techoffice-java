@@ -1,8 +1,8 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.io.InputStream;
 
-import com.ittechoffice.example.controller.ExampleController;
+import com.techoffice.example.controller.ExampleController;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

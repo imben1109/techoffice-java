@@ -1,4 +1,4 @@
-package com.ittechoffice.example.model;
+package com.techoffice.example.model;
 
 import javafx.beans.property.SimpleStringProperty;
 

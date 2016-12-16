@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.ApplController">
+	<children>
+		<TextArea fx:id="sql"/>
+		<Button fx:id="button" text="Do Something" onAction="#doSomething"/>
+	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+		     <columns>
+				<TableColumn text="First Name" prefWidth="100">
+					<cellValueFactory>
+						<PropertyValueFactory property="firstName" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn text="Last Name" prefWidth="100">
+					<cellValueFactory>
+						<PropertyValueFactory property="firstName" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn text="Email Address" prefWidth="100">
+					<cellValueFactory>
+						<PropertyValueFactory property="firstName" />
+					</cellValueFactory>
+				</TableColumn>
+			 </columns>    
+			 <items>
+				<FXCollections fx:factory="observableArrayList">
+			 	</FXCollections>
+			 </items>
+		</TableView>
+	</children>
+</VBox>

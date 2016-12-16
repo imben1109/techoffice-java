@@ -1,6 +1,6 @@
-package com.ittechoffice.example.controller;
+package com.techoffice.example.controller;
 
-import com.ittechoffice.example.model.Person;
+import com.techoffice.example.model.Person;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
