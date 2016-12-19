@@ -32,7 +32,13 @@ public class JavaFxUtil {
 		        TableColumn<Map<String, Object>, String> tableColumn = new TableColumn<Map<String, Object>, String>(key);
 		        tableColumn.setCellValueFactory(new Callback<CellDataFeatures<Map<String, Object>, String>, ObservableValue<String>>(){
 					public ObservableValue<String> call(CellDataFeatures<Map<String, Object>, String> param) {
-						return new SimpleStringProperty(param.getValue().get(key).toString());
+						SimpleStringProperty simpleStringProperty;
+						if (param.getValue().get(key) != null){
+							simpleStringProperty = new SimpleStringProperty(param.getValue().get(key).toString());
+						}else {
+							simpleStringProperty = new SimpleStringProperty("(null)");
+						}
+						return simpleStringProperty;
 					}
 				});
 		        tableColumnList.add(tableColumn);

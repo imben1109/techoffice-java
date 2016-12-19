@@ -10,6 +10,15 @@
 
 
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.ApplController">
+	<MenuBar fx:id="menuBar">
+		<menus>
+			<Menu text="Tools">
+				<items>
+					<MenuItem text="Table Relationship"/>
+				</items>
+			</Menu>
+		</menus>
+	</MenuBar>
 	<children>
 		<TextArea fx:id="sqlTextArea"/>
 		<Button fx:id="button" text="execute" onAction="#executeSql"/>
