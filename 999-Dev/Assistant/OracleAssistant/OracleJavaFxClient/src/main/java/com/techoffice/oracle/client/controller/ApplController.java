@@ -40,4 +40,9 @@ public class ApplController {
 		}
 	}
 	
+	@FXML
+	public void tableRelationShip(){
+		System.out.println("Table Relationship");
+	}
+	
 }

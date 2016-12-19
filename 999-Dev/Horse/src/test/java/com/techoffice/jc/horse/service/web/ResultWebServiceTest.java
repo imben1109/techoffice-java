@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -27,11 +28,27 @@ public class ResultWebServiceTest {
 	@Autowired
 	private ResultWebService resultWebService;
 
-	@Test
+//	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-//		String xml = resultWebService.retrieveXml();
-//		System.out.println(xml);
-		resultWebService.raceDateSelect();	
+		String xml = resultWebService.retrieveXml();
+		System.out.println(xml);	
+	}
+	
+//	@Test
+	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		List<String> raceDateList = resultWebService.retrieveRaceDateList();
+		for(String raceDate: raceDateList){
+			System.out.println(raceDate);
+		}
+	}
+	
+	@Test
+	public void getRaceNumList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		List<String> raceDateList = resultWebService.retrieveRaceDateList();
+		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
+		for(String raceNum: raceNumList){
+			System.out.println(raceNum);
+		}
 	}
 	
 	

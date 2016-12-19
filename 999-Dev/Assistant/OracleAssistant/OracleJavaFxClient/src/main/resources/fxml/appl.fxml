@@ -14,7 +14,7 @@
 		<menus>
 			<Menu text="Tools">
 				<items>
-					<MenuItem text="Table Relationship"/>
+					<MenuItem text="Table Relationship" onAction="#tableRelationShip"/>
 				</items>
 			</Menu>
 		</menus>
@@ -24,7 +24,6 @@
 		<Button fx:id="button" text="execute" onAction="#executeSql"/>
 	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
 		     <columns>
-
 			 </columns>    
 			 <items>
 				<FXCollections fx:factory="observableArrayList">

@@ -27,19 +27,25 @@ public class ResultWebService {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
-	public static final String URL = "http://racing.hkjc.com/racing/Info/meeting/Results/chinese/Local/";	
+	public static final String HOST = "http://racing.hkjc.com";
+	public static final String LOCATION = "/racing/Info/meeting/Results/English/";	
 	
 	@Autowired
 	private WebClient webClient;
 	
 	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-        final HtmlPage page = webClient.getPage(URL);
+        return retrieveXml(LOCATION);
+	}
+	
+	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+        final HtmlPage page = webClient.getPage(HOST + location);
         String xml = page.asXml();
         webClient.close();
         return xml;
 	}
 	
-	public void raceDateSelect() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public List<String> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		List<String> raceDateList = new ArrayList<String>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
 		Node dateSelect = dateSelectList.item(0);
@@ -47,8 +53,30 @@ public class ResultWebService {
 		for (int i=0; i<raceDatesNodeList.getLength(); i++){
 			Node raceDate = raceDatesNodeList.item(i);
 			if("option".equals(raceDate.getNodeName())){
-				System.out.println(raceDate.getAttributes().getNamedItem("value").getNodeValue());
+				raceDateList.add(LOCATION + raceDate.getAttributes().getNamedItem("value").getNodeValue());
 			}
 		}
+		return raceDateList;
+	}
+	
+	public List<String> getRaceNumList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		List<String> raceNumList = new ArrayList<String>();
+		raceNumList.add(location);
+		String xml = retrieveXml(location);
+		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr/td");
+		for (int i =0; i<raceNumNodeList.getLength(); i++){
+			Node raceNumTdNode = raceNumNodeList.item(i);
+			if (raceNumTdNode.getChildNodes().getLength() > 1){
+				// The first node is #Text
+				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
+				if ("a".equals(raceNumNode.getNodeName())){
+					if (i == raceNumNodeList.getLength() - 1){
+						break;
+					}
+					raceNumList.add(raceNumNode.getAttributes().getNamedItem("href").getNodeValue());
+				}
+			}
+		}
+		return raceNumList;
 	}
 }
