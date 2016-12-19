@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
+		http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	
+	<named-native-query name="Dependency.getDependentTables" 
+		result-class="com.techoffice.oracle.client.model.DependentTable">
+		<query>
+			SELECT TABLE_NAME, 
+			  (SELECT LISTAGG(PUC.COLUMN_NAME, ', ') WITHIN GROUP (ORDER BY PUC.POSITION, PUC.TABLE_NAME)  
+			    FROM USER_CONS_COLUMNS PUC 
+			    WHERE 
+			      R.CONSTRAINT_NAME = PUC.CONSTRAINT_NAME
+			    GROUP BY PUC.TABLE_NAME, PUC.CONSTRAINT_NAME) AS COLUMNS,
+			  (SELECT P.TABLE_NAME FROM USER_CONSTRAINTS P WHERE CONSTRAINT_TYPE = 'P' AND P.CONSTRAINT_NAME = R.R_CONSTRAINT_NAME) AS DEPENDENT_TABLE,
+			  (SELECT LISTAGG(COLUMN_NAME, ', ') WITHIN GROUP (ORDER BY POSITION, COLUMN_NAME) COLUMN_NAMES 
+			    FROM USER_CONS_COLUMNS 
+			    WHERE CONSTRAINT_NAME = R.R_CONSTRAINT_NAME
+			    GROUP BY TABLE_NAME, CONSTRAINT_NAME) AS DEPENDENT_COLUMNS
+			  FROM USER_CONSTRAINTS R
+			WHERE 
+			  CONSTRAINT_TYPE = 'R' 
+
+		</query>
+	</named-native-query>
+	
+</entity-mappings>

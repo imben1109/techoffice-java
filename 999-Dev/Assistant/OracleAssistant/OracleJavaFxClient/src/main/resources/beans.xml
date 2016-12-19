@@ -30,7 +30,7 @@
 		</property>
 		<property name="jpaProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
 			</props>
 		</property>
 	</bean>
