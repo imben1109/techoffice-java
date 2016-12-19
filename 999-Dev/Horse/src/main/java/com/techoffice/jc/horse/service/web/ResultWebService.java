@@ -79,4 +79,28 @@ public class ResultWebService {
 		}
 		return raceNumList;
 	}
+	
+	public void getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		String xml = retrieveXml(location);
+		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[6]/table/tbody/tr");
+		for (int i=0; i<raceHorseNodeList.getLength(); i++){
+			if (i>0){
+				break;
+			}
+			Node raceHorseTrNode = raceHorseNodeList.item(i);
+			NodeList raceHorseTdNodeList = raceHorseTrNode.getChildNodes();
+			for (int j=0; j<raceHorseTdNodeList.getLength(); j++){
+				Node raceHourseTdNode = raceHorseTdNodeList.item(j);
+				if ("td".equals(raceHourseTdNode.getNodeName())){
+					if (raceHourseTdNode.getChildNodes().getLength() == 1){
+						System.out.println(raceHourseTdNode.getFirstChild().getNodeValue());
+					}else {
+						System.out.println(XmlUtil.getNodeText(raceHourseTdNode));
+					}
+				}
+			}
+		}
+
+	}
+	
 }

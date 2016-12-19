@@ -21,6 +21,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.h2.util.StringUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -61,6 +62,21 @@ public class XmlUtil {
 		XPathExpression expr = xpath.compile(xPath);
 		NodeList nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
 		return nodeList;
+	}
+	
+	public static String getNodeText(Node node){
+		String nodeText = "";
+		NodeList nodeList = node.getChildNodes();
+		for (int i=0; i<nodeList.getLength(); i++){
+			Node childNode = nodeList.item(i);
+			if (childNode.getChildNodes().getLength() == 1 ){
+				nodeText += " " + StringUtil.newLineToSpaceNoDoubleSpace(childNode.getFirstChild().getNodeValue());
+			}else {
+				nodeText += getNodeText(childNode);
+			}
+		}
+		nodeText = nodeText.trim();
+		return nodeText;
 	}
 	
 }

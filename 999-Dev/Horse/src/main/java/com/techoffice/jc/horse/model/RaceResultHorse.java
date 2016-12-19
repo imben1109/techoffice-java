@@ -1,9 +1,10 @@
 package com.techoffice.jc.horse.model;
 
-public class HorseRaceResult {
+public class RaceResultHorse {
 	private String place;
 	private String horseNo;
-	private String horse;
+	private String horseName;
+	private String horseId;
 	private String jockey;
 	private String trainer;
 	private String actualWt;
@@ -25,11 +26,18 @@ public class HorseRaceResult {
 	public void setHorseNo(String horseNo) {
 		this.horseNo = horseNo;
 	}
-	public String getHorse() {
-		return horse;
+
+	public String getHorseName() {
+		return horseName;
 	}
-	public void setHorse(String horse) {
-		this.horse = horse;
+	public void setHorseName(String horseName) {
+		this.horseName = horseName;
+	}
+	public String getHorseId() {
+		return horseId;
+	}
+	public void setHorseId(String horseId) {
+		this.horseId = horseId;
 	}
 	public String getJockey() {
 		return jockey;
