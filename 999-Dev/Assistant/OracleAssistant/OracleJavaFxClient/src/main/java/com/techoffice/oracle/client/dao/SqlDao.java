@@ -18,4 +18,9 @@ public class SqlDao {
 		List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
 		return results;
 	}
+	
+	public List<String> selectTableList() {
+		List<String> results = jdbcTemplate.queryForList("SELECT TABLE_NAME FROM USER_TABLES", String.class);
+		return results;
+	}
 }

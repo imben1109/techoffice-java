@@ -9,19 +9,8 @@
 <?import javafx.collections.*?> 
 
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.ApplController">
-	<MenuBar fx:id="menuBar">
-		<menus>
-			<Menu text="Tools">
-				<items>
-					<MenuItem text="Table Relationship" onAction="#tableRelationShip"/>
-				</items>
-			</Menu>
-		</menus>
-	</MenuBar>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.TableListController">
 	<children>
-		<TextArea fx:id="sqlTextArea" onKeyPressed="#handleSqlTextAreaKeyPressedEvent" onKeyReleased="#handleSqlTextAreaKeyReleasedEvent"/>
-		<Button fx:id="button" text="execute" onAction="#executeSql"/>
 	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
 		     <columns>
 			 </columns>    

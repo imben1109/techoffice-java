@@ -53,6 +53,7 @@ public class JavaFxTableViewUtil {
 		return tableView;
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static TableView tableViewSetBadSqlGrammarException(TableView tableView, BadSqlGrammarException exception){
 		tableView.getColumns().clear();
         TableColumn exceptionTableColumn = new TableColumn("Exception Message");

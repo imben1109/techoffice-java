@@ -18,4 +18,8 @@ public class ApplService {
 		List<Map<String, Object>> results = sqlDao.execute(sql);
 		return results;
 	}
+	
+	public List<String> selectTableList(){
+		return sqlDao.selectTableList();
+	}
 }

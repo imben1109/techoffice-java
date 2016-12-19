@@ -20,7 +20,7 @@ public class OracleJavaFxAppl extends Application{
         VBox root = (VBox) loader.load("fxml/appl.fxml");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("FXML Controller Example");
+        primaryStage.setTitle("Oracle JavaFx Application");
         primaryStage.show();
 	}
 	
