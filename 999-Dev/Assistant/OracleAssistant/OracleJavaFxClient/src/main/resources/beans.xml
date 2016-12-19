@@ -30,5 +30,16 @@
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg ref="dataSource"/>
 	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.H2Dialect
+				hibernate.show_sql=true
+			</value>
+		</property>
+	</bean>
+	
 
 </beans>
