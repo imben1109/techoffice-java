@@ -20,7 +20,7 @@
 		</menus>
 	</MenuBar>
 	<children>
-		<TextArea fx:id="sqlTextArea"/>
+		<TextArea fx:id="sqlTextArea" onKeyPressed="#handleSqlTextAreaKeyPressedEvent" onKeyReleased="#handleSqlTextAreaKeyReleasedEvent"/>
 		<Button fx:id="button" text="execute" onAction="#executeSql"/>
 	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
 		     <columns>
