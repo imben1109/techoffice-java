@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -20,7 +21,11 @@ public class StudentDao {
 	}
 	
 	public List<Student> findAll() {
-		return em.createQuery("SELECT s FROM Student s").getResultList();
+		Query query =  em.createQuery("SELECT s FROM Student s");
+		query.setMaxResults(10);
+		query.setFirstResult(1);
+		List<Student> results = query.getResultList();
+		return results;
 	}
 
 
