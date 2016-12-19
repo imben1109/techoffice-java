@@ -16,9 +16,9 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
-        <property name="url" value="<URL>"/>
-        <property name="username" value="<user>"/>
-        <property name="password" value="<password>"/>
+        <property name="url" value="#{T(com.techoffice.oracle.audit.config.OracleConfig).getOracleConntectionUrl()}"/>
+        <property name="username" value="#{T(com.techoffice.oracle.audit.config.OracleConfig).getOracleConnectionUser()}"/>
+        <property name="password" value="#{T(com.techoffice.oracle.audit.config.OracleConfig).getOracleConnectionPassword()}"/>
     </bean>
     
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -29,5 +29,8 @@
 		<constructor-arg ref="dataSource"/>
 	</bean>
 	
+	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="dataSource"/>
+	</bean>
 	
 </beans>

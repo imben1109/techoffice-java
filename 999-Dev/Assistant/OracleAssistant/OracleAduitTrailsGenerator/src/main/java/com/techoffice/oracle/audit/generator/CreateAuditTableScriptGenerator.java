@@ -14,6 +14,7 @@ import com.techoffice.oracle.audit.config.ApplConfig;
 import com.techoffice.oracle.audit.config.FreeMarkerConfiguration;
 import com.techoffice.oracle.audit.constant.ColumnConstant;
 import com.techoffice.oracle.audit.dao.TableDao;
+import com.techoffice.oracle.audit.exception.TableNotExistException;
 import com.techoffice.oracle.audit.model.Column;
 
 import freemarker.template.Template;
@@ -26,8 +27,12 @@ public class CreateAuditTableScriptGenerator {
 	private TableDao tableDao;
 	
 	public void generate() throws IOException, TemplateException{
+		String schema = ApplConfig.getString("schema");
 		String tableName = ApplConfig.getString("tableName");
-		List<Column> columnList = tableDao.getTableColumnList(tableName, ApplConfig.getString("schema"));
+		List<Column> columnList = tableDao.getTableColumnList(tableName, schema);
+		if (columnList.size() == 0 ){
+			throw new TableNotExistException(schema, tableName);
+		}
         FreeMarkerConfiguration cfg = new FreeMarkerConfiguration();
         Map<String, Object> map = createParameterMap();
         Writer out = new OutputStreamWriter(System.out);

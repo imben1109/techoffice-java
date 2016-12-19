@@ -2,11 +2,11 @@
 <config>
 	<prefix>A</prefix>
 	<tableAlias>TST</tableAlias>
-	<schema>BES</schema>
+	<schema>TEST</schema>
 	<tableName>${prefix}_${tableAlias}_TEST</tableName>
 	
 	<auditTable>
-		<schema>BESAUDIT</schema>
+		<schema>TESTAUDIT</schema>
 		<tableName>AT_A_TST</tableName>
 		<id>
 			<column>${tableAlias}_AT_SEQ_NO</column>
