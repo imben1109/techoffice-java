@@ -15,10 +15,8 @@ public class SqlDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	public void doSomethiing(){
-		List<Map<String, Object>> list = jdbcTemplate.queryForList("select TABLE_NAME from user_tables");
-		for (Map<String, Object> item: list){
-			System.out.println(item.get("TABLE_NAME"));
-		}
+	public List<Map<String, Object>> execute(String sql){
+		List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
+		return results;
 	}
 }

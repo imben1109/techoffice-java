@@ -20,6 +20,9 @@ public class ApplConfig {
 	public static final String PROXY_PASSWORD = "proxy.password";
 	public static final String PROXY_ENABLED = "proxy.enabled";
 	public static final String HTMLUNIT_LOGGING = "htmlunit.logging";
+	public static final String ORACLE_CONNECTION_URL = "oracle.connection.url";
+	public static final String ORACLE_CONNECTION_USER = "oracle.connection.user";
+	public static final String ORACLE_CONNECTION_PASSWORD = "oracle.connection.password";
 	
 	public static Configuration config = null ;
     
@@ -66,4 +69,18 @@ public class ApplConfig {
 	public static boolean isHtmlUnitLogging(){
 		return config.getBoolean(HTMLUNIT_LOGGING, false);
 	}
+	
+	public static String getOracleConntectionUrl(){
+		System.out.println(config.getString(ORACLE_CONNECTION_URL));
+		return config.getString(ORACLE_CONNECTION_URL);
+	}
+	
+	public static String getOracleConnectionUser(){
+		return config.getString(ORACLE_CONNECTION_USER);
+	}
+	
+	public static String getOracleConnectionPassword(){
+		return config.getString(ORACLE_CONNECTION_PASSWORD);
+	}
+	
 }

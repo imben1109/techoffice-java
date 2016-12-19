@@ -11,8 +11,8 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.ApplController">
 	<children>
-		<TextArea fx:id="sql"/>
-		<Button fx:id="button" text="Do Something" onAction="#doSomething"/>
+		<TextArea fx:id="sqlTextArea"/>
+		<Button fx:id="button" text="execute" onAction="#executeSql"/>
 	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
 		     <columns>
 

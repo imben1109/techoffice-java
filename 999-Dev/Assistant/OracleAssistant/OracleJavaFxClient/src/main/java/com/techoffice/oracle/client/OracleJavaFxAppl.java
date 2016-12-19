@@ -28,14 +28,10 @@ public class OracleJavaFxAppl extends Application{
 		launch(args);
 	}
 	
-	
 	public static void main(String[] args){
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		OracleJavaFxAppl helloWorldExample = context.getBean(OracleJavaFxAppl.class);
 		helloWorldExample.run(args);
 	}
 	
-	public void sayHi(){
-		System.out.println("Hello");
-	}
 }
