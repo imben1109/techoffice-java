@@ -10,7 +10,7 @@ import com.techoffice.fx.SpringFxmlLoader;
 import com.techoffice.fx.util.JavaFxTableViewUtil;
 import com.techoffice.oracle.client.model.RelationTable;
 import com.techoffice.oracle.client.service.SqlService;
-import com.techoffice.oracle.client.service.UserTableService;
+import com.techoffice.oracle.client.service.RelationService;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -29,15 +29,11 @@ import javafx.util.Callback;
 public class RelationTableListController {
 	
 	@Autowired
-	private SqlService sqlService;
-	
-	@Autowired
-	private UserTableService userTableService; 
+	private RelationService userTableService; 
 
 	@FXML
 	public TableView<RelationTable> tableView;
 	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@FXML
 	public void initialize(){
         List<RelationTable> results = userTableService.getRelationTableList();

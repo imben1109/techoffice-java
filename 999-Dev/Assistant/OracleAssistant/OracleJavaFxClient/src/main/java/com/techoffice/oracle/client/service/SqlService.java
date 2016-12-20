@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.techoffice.oracle.client.dao.SqlDao;
-import com.techoffice.oracle.client.dao.UserTableDao;
+import com.techoffice.oracle.client.dao.TableDao;
 
 @Service
 public class SqlService {

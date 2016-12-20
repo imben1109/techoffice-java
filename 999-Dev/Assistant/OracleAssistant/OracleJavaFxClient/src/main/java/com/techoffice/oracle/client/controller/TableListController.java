@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.techoffice.fx.SpringFxmlLoader;
 import com.techoffice.oracle.client.service.SqlService;
-import com.techoffice.oracle.client.service.UserTableService;
+import com.techoffice.oracle.client.service.RelationService;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -32,7 +32,7 @@ public class TableListController {
 	private SqlService sqlService;
 	
 	@Autowired
-	private UserTableService userTableService; 
+	private RelationService userTableService; 
 
 	@FXML
 	public TableView<String> tableView;

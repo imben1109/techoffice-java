@@ -8,6 +8,7 @@
 	 -->
 	<persistence-unit name="techoffice.example" transaction-type="RESOURCE_LOCAL">
 		<mapping-file>META-INF/jpql/relation.xml</mapping-file>
+		<mapping-file>META-INF/jpql/entity.xml</mapping-file>
 	</persistence-unit>
 	
 </persistence>

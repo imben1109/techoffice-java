@@ -8,17 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.techoffice.oracle.client.model.ChildTable;
+import com.techoffice.oracle.client.model.EntityTable;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class RelationDaoTest {
-	
+public class EntityDaoTest {
 	@Autowired
-	private RelationDao dependencyDao;
+	private EntityDao entityDao;
 	
 	@Test
-	public void findAll(){
-
+	public void getParentTableList(){
+		List<EntityTable> results = entityDao.getParentTableList();
+		for (EntityTable entityTable: results){
+			System.out.println(entityTable.getTableName());
+		}
 	}
 }

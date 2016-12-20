@@ -66,6 +66,16 @@ public class ApplController {
         stage.show();
 	}
 	
+	@FXML
+	public void modelGeneration() throws IOException{
+		SpringFxmlLoader loader = new SpringFxmlLoader();
+        VBox root = (VBox) loader.load("fxml/entityTableList.fxml");
+		Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Table Relationship");
+        stage.show();
+	}
 	
 	@FXML
 	public void handleSqlTextAreaKeyPressedEvent(KeyEvent event){

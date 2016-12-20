@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.techoffice.fx.util.JavaFxTableViewUtil;
 import com.techoffice.oracle.client.model.ChildTable;
 import com.techoffice.oracle.client.model.ParentTable;
-import com.techoffice.oracle.client.service.UserTableService;
+import com.techoffice.oracle.client.service.RelationService;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
@@ -17,7 +17,7 @@ import javafx.scene.control.TableView;
 public class RelationController {
 	
 	@Autowired
-	private UserTableService userTableService; 
+	private RelationService userTableService; 
 
 	@FXML
 	public TableView<ParentTable> parentTableView;

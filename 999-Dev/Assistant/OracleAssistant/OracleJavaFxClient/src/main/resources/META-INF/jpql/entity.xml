@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0" xmlns="http://java.sun.com/xml/ns/persistence/orm" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
+		http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	
+	<named-native-query name="Entity.getEntityTables" 
+		result-class="com.techoffice.oracle.client.model.EntityTable">
+		<query>
+			SELECT 
+		        C.TABLE_NAME, 
+		        COUNT(COLUMN_NAME) AS COLUMN_COUNT,
+		        CASE 
+		          WHEN (SELECT COUNT(1) FROM USER_VIEWS V WHERE V.VIEW_NAME = C.TABLE_NAME) > 0
+		            THEN 'Y'
+		          ELSE 'N'
+		        END AS VIEW_IND
+		     FROM USER_TAB_COLS C
+			GROUP BY C.TABLE_NAME
+		</query>
+	</named-native-query>
+	
+</entity-mappings>
