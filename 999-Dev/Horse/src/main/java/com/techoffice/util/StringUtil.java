@@ -15,9 +15,15 @@ public class StringUtil {
 		return newStr;
 	}
 	
-	public static String newLineToSpaceNoDoubleSpace(String str){
-		String newStr = replaceNewLineToSpace(str);
+	public static String removeSpecialCharacter(String str){
+		String newStr = removeQuestionMark(str);
+		newStr = replaceNewLineToSpace(newStr);
 		newStr = doubleSpaceToSingle(newStr);
+		return newStr;
+	}
+	
+	public static String removeQuestionMark(String str){
+		String newStr = str.replace("?", " ");
 		return newStr;
 	}
 	

@@ -1,8 +1,9 @@
 package com.techoffice.jc.horse.model;
 
 public class RaceResult {
-	private String raceDate;
 	private String location;
+	private String raceDate;
+	private String venue;
 	private String raceNum;
 	private String raceNo;
 	private String raceClass;
@@ -10,6 +11,7 @@ public class RaceResult {
 	private String rtgRange;
 	private String going;
 	private String course;
+	private String reward;
 	private String raceTime;
 	private String sectionalTime;
 	public String getRaceDate() {
@@ -20,6 +22,12 @@ public class RaceResult {
 	}
 	public String getLocation() {
 		return location;
+	}
+	public String getVenue(){
+		return venue;
+	}
+	public void setVenue(String venue){
+		this.venue = venue;
 	}
 	public void setLocation(String location) {
 		this.location = location;
@@ -77,6 +85,12 @@ public class RaceResult {
 	}
 	public void setSectionalTime(String sectionalTime) {
 		this.sectionalTime = sectionalTime;
+	}
+	public String getReward() {
+		return reward;
+	}
+	public void setReward(String reward) {
+		this.reward = reward;
 	}
 	
 }

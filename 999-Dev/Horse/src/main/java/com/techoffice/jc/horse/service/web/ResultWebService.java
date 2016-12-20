@@ -20,7 +20,10 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.jc.horse.service.web.helper.ResultWebServiceHelper;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Component
 public class ResultWebService {
@@ -56,6 +59,7 @@ public class ResultWebService {
 				raceDateList.add(LOCATION + raceDate.getAttributes().getNamedItem("value").getNodeValue());
 			}
 		}
+		
 		return raceDateList;
 	}
 	
@@ -70,9 +74,6 @@ public class ResultWebService {
 				// The first node is #Text
 				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
 				if ("a".equals(raceNumNode.getNodeName())){
-					if (i == raceNumNodeList.getLength() - 1){
-						break;
-					}
 					raceNumList.add(raceNumNode.getAttributes().getNamedItem("href").getNodeValue());
 				}
 			}
@@ -80,27 +81,12 @@ public class ResultWebService {
 		return raceNumList;
 	}
 	
-	public void getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException{
 		String xml = retrieveXml(location);
-		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[6]/table/tbody/tr");
-		for (int i=0; i<raceHorseNodeList.getLength(); i++){
-			if (i>0){
-				break;
-			}
-			Node raceHorseTrNode = raceHorseNodeList.item(i);
-			NodeList raceHorseTdNodeList = raceHorseTrNode.getChildNodes();
-			for (int j=0; j<raceHorseTdNodeList.getLength(); j++){
-				Node raceHourseTdNode = raceHorseTdNodeList.item(j);
-				if ("td".equals(raceHourseTdNode.getNodeName())){
-					if (raceHourseTdNode.getChildNodes().getLength() == 1){
-						System.out.println(raceHourseTdNode.getFirstChild().getNodeValue());
-					}else {
-						System.out.println(XmlUtil.getNodeText(raceHourseTdNode));
-					}
-				}
-			}
-		}
-
+		ResultWebServiceHelper.getRaceResult(xml, location);
+		List<RaceResultHorse> raceResultHorseList = ResultWebServiceHelper.getRaceResultHorseList(xml);
 	}
+	
+	
 	
 }

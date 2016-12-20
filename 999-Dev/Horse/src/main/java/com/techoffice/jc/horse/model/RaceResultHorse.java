@@ -14,6 +14,8 @@ public class RaceResultHorse {
 	private String runningPosition;
 	private String FinishTime;
 	private String winOdds;
+	
+
 	public String getPlace() {
 		return place;
 	}
