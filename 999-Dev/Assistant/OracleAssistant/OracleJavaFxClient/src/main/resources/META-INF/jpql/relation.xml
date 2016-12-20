@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm 
 		http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
 	
-	<named-native-query name="Dependency.getDependentTables" 
+	<named-native-query name="Relation.getParentTables" 
 		result-class="com.techoffice.oracle.client.model.ParentTable">
 		<query>
 			SELECT TABLE_NAME, 
@@ -28,7 +28,7 @@
 		</query>
 	</named-native-query>
 	
-	<named-native-query name="Dependency.getRelationTables"
+	<named-native-query name="Relation.getRelationTables"
 		result-class="com.techoffice.oracle.client.model.RelationTable">
 		<query>
 			SELECT 
@@ -42,6 +42,32 @@
 			    WHERE P.CONSTRAINT_TYPE = 'P' AND R.CONSTRAINT_TYPE = 'R' AND R.R_CONSTRAINT_NAME = P.CONSTRAINT_NAME 
 			    AND P.TABLE_NAME = T.TABLE_NAME) AS CHILD_TABLE_COUNT
 			FROM USER_TABLES T
+		</query>
+	</named-native-query>
+	
+	<named-native-query name="Relation.getChildTables" 
+		result-class="com.techoffice.oracle.client.model.ChildTable">
+		<query>
+			SELECT TABLE_NAME, 
+			  (SELECT LISTAGG(COLUMN_NAME, ', ')
+			    WITHIN GROUP (ORDER BY POSITION)
+			    FROM USER_CONS_COLUMNS 
+			    WHERE USER_CONS_COLUMNS.CONSTRAINT_NAME = P.CONSTRAINT_NAME
+			      AND POSITION IS NOT NULL
+			    GROUP BY CONSTRAINT_NAME, TABLE_NAME
+			  ) AS COLUMNS,
+			  (SELECT LISTAGG(TABLE_NAME, ', ')
+			    WITHIN GROUP (ORDER BY TABLE_NAME)
+			    FROM USER_CONSTRAINTS R 
+			    WHERE R.CONSTRAINT_TYPE = 'R' 
+			    AND R.R_CONSTRAINT_NAME = P.CONSTRAINT_NAME
+			    GROUP BY R.R_CONSTRAINT_NAME
+			  )AS PARENT_TABLES
+			FROM USER_CONSTRAINTS P
+			WHERE P.CONSTRAINT_TYPE = 'P'
+			  AND TABLE_NAME IN (SELECT TABLE_NAME FROM USER_TABLES)
+			  AND CONSTRAINT_NAME IN (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS)
+			  AND TABLE_NAME LIKE :TABLE_NAME
 		</query>
 	</named-native-query>
 	

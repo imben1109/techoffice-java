@@ -64,7 +64,7 @@ public class TableListController {
 				        Scene scene = new Scene(root);
 				        stage.setScene(scene);
 				        stage.setTitle("Table Relationship");
-				        DependencyListController dependencyListController = (DependencyListController) loader.getController();
+				        RelationController dependencyListController = (RelationController) loader.getController();
 				        dependencyListController.setTableName(tableName);
 				        stage.show();
 					} catch (IOException e) {

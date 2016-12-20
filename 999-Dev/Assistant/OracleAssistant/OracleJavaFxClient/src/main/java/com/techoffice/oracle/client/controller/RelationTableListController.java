@@ -26,7 +26,7 @@ import javafx.scene.control.TableView;
 import javafx.util.Callback;
 
 @Component
-public class TableRelationshipListController {
+public class RelationTableListController {
 	
 	@Autowired
 	private SqlService sqlService;
@@ -50,12 +50,12 @@ public class TableRelationshipListController {
 						if (tableView.getSelectionModel().getSelectedItem() != null ){
 							String tableName = tableView.getSelectionModel().getSelectedItem().getTableName();
 							SpringFxmlLoader loader = new SpringFxmlLoader();
-							VBox root = (VBox) loader.load("fxml/dependencyList.fxml");
+							VBox root = (VBox) loader.load("fxml/relation.fxml");
 							Stage stage = new Stage();
 					        Scene scene = new Scene(root);
 					        stage.setScene(scene);
 					        stage.setTitle("Table Relationship");
-					        DependencyListController dependencyListController = (DependencyListController) loader.getController();
+					        RelationController dependencyListController = (RelationController) loader.getController();
 					        dependencyListController.setTableName(tableName);
 					        stage.show();	
 						}

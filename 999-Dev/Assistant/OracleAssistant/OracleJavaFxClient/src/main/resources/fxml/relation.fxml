@@ -9,9 +9,17 @@
 <?import javafx.collections.*?> 
 
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.TableRelationshipListController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.oracle.client.controller.RelationController">
 	<children>
-	    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+	    <TableView fx:id="parentTableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+		     <columns>
+			 </columns>    
+			 <items>
+				<FXCollections fx:factory="observableArrayList">
+			 	</FXCollections>
+			 </items>
+		</TableView>
+		<TableView fx:id="childTableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
 		     <columns>
 			 </columns>    
 			 <items>

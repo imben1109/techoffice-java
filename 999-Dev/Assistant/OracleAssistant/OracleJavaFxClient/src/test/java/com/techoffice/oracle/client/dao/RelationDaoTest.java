@@ -8,20 +8,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.techoffice.oracle.client.model.ParentTable;
-import com.techoffice.oracle.client.model.RelationTable;
+import com.techoffice.oracle.client.model.ChildTable;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class DependencyDaoTest {
+public class RelationDaoTest {
 	
 	@Autowired
-	private DependencyDao dependencyDao;
+	private RelationDao dependencyDao;
 	
 	@Test
 	public void findAll(){
-		List<RelationTable> results = dependencyDao.getRelationTableList();
-		for(RelationTable dependentTable: results){
+		List<ChildTable> results = dependencyDao.getChildTableList("X_ICL_IMP_CTL_LOG");
+		for(ChildTable dependentTable: results){
 			System.out.println(dependentTable.getTableName());
 		}
 		

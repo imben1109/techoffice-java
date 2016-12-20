@@ -58,7 +58,7 @@ public class ApplController {
 	@FXML
 	public void tableRelationShip() throws IOException{
 		SpringFxmlLoader loader = new SpringFxmlLoader();
-        VBox root = (VBox) loader.load("fxml/tableList.fxml");
+        VBox root = (VBox) loader.load("fxml/relationTableList.fxml");
 		Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);

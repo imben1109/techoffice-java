@@ -5,8 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.techoffice.oracle.client.dao.DependencyDao;
+import com.techoffice.oracle.client.dao.RelationDao;
 import com.techoffice.oracle.client.dao.UserTableDao;
+import com.techoffice.oracle.client.model.ChildTable;
 import com.techoffice.oracle.client.model.ParentTable;
 import com.techoffice.oracle.client.model.RelationTable;
 
@@ -17,14 +18,18 @@ public class UserTableService {
 	private UserTableDao userTableDao;
 	
 	@Autowired
-	private DependencyDao dependencyDao;
+	private RelationDao dependencyDao;
 	
 	public List<String> selectTableList(){
 		return userTableDao.selectTableList();
 	}
 	
-	public List<ParentTable> getDependentTableList(String tableName){
-		return dependencyDao.getDependentTableList(tableName);
+	public List<ParentTable> getParentTableList(String tableName){
+		return dependencyDao.getParentTableList(tableName);
+	}
+	
+	public List<ChildTable> getChildTableList(String tableName){
+		return dependencyDao.getChildTableList(tableName);
 	}
 	
 	public List<RelationTable> getRelationTableList(){
