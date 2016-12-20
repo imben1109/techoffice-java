@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.techoffice.oracle.client.fx.SpringFxmlLoader;
+import com.techoffice.fx.SpringFxmlLoader;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

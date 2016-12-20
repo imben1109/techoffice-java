@@ -1,12 +1,16 @@
 
-package com.techoffice.javafx.util;
+package com.techoffice.fx.util;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.jdbc.BadSqlGrammarException;
+
+import com.google.common.base.CaseFormat;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -19,6 +23,21 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
 public class JavaFxTableViewUtil {
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static <T> TableView<T> tableViewSetBeanList(TableView<T> tableView, List<T> beanList, Class<T> clz){
+		Field[] fields = clz.getDeclaredFields();
+		for (int i = 0; i<fields.length; i++){
+			Field field = fields[i];
+			String fieldLabel = camelStrToLabel(field.getName());
+	        TableColumn tableColumn = new TableColumn(fieldLabel);
+	        tableColumn.setCellValueFactory(new PropertyValueFactory(field.getName()));
+	        tableView.getColumns().add(tableColumn);
+		}
+        ObservableList<T> data = FXCollections.observableArrayList(beanList);
+        tableView.setItems(data);
+		return tableView;
+	}
 	
 	/**
 	 * Set the result map to the table view. The key would be the header of Table View
@@ -62,6 +81,18 @@ public class JavaFxTableViewUtil {
         tableView.getColumns().add(exceptionTableColumn);
         tableView.setItems(data);
 		return tableView;
+	}
+	
+	public static String camelStrToLabel(String str){
+		String underscoreStr = CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, str);
+		String label = "";
+		String[] strArr = underscoreStr.split("_");
+		for (int i=0; i<strArr.length; i++){
+			String strArrItem = strArr[i];
+			label += " " + StringUtils.capitalize(strArrItem);
+		}
+		label = label.trim();
+		return label;
 	}
 	
 }

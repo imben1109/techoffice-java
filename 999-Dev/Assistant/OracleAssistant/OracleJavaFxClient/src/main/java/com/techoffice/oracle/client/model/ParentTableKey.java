@@ -2,7 +2,7 @@ package com.techoffice.oracle.client.model;
 
 import java.io.Serializable;
 
-public class DependentTableKey implements Serializable{
+public class ParentTableKey implements Serializable{
 	private static final long serialVersionUID = -2416187500348182733L;
 	
 	private String tableName;

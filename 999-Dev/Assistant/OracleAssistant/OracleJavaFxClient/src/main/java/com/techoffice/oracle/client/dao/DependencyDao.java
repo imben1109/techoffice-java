@@ -4,12 +4,12 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
-import com.techoffice.oracle.client.model.DependentTable;
+import com.techoffice.oracle.client.model.ParentTable;
+import com.techoffice.oracle.client.model.RelationTable;
 
 @Repository
 public class DependencyDao {
@@ -17,10 +17,16 @@ public class DependencyDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public List<DependentTable> getDependentTableList(String tableName) {
-		TypedQuery<DependentTable>  query = entityManager.createNamedQuery("Dependency.getDependentTables", DependentTable.class);
+	public List<ParentTable> getDependentTableList(String tableName) {
+		TypedQuery<ParentTable>  query = entityManager.createNamedQuery("Dependency.getDependentTables", ParentTable.class);
 		query.setParameter("TABLE_NAME", tableName);
-		List<DependentTable> results = query.getResultList();
+		List<ParentTable> results = query.getResultList();
+		return results;
+	}
+	
+	public List<RelationTable> getRelationTableList() {
+		TypedQuery<RelationTable>  query = entityManager.createNamedQuery("Dependency.getRelationTables", RelationTable.class);
+		List<RelationTable> results = query.getResultList();
 		return results;
 	}
 

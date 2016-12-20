@@ -1,4 +1,4 @@
-package com.techoffice.oracle.client.fx;
+package com.techoffice.fx;
 
 import java.io.IOException;
 import java.io.InputStream;

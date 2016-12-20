@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 
 @Entity
-@IdClass(DependentTableKey.class)
-public class DependentTable {
+@IdClass(ParentTableKey.class)
+public class ParentTable {
 	
 	@Id
 	@Column(name="TABLE_NAME")
@@ -17,11 +17,11 @@ public class DependentTable {
 	@Column(name="COLUMNS")
 	private String columns;
 	
-	@Column(name="DEPENDENT_TABLE")
-	private String dependentTable;
+	@Column(name="PARENT_TABLE")
+	private String parentTable;
 	
-	@Column(name="DEPENDENT_COLUMNS")
-	private String dependentColumns;
+	@Column(name="PARENT_COLUMNS")
+	private String parentTableColumns;
 
 	public String getTableName() {
 		return tableName;
@@ -29,18 +29,17 @@ public class DependentTable {
 	public void setTableName(String tableName) {
 		this.tableName = tableName;
 	}
-
-	public String getDependentTable() {
-		return dependentTable;
+	public String getParentTable() {
+		return parentTable;
 	}
-	public void setDependentTable(String dependentTable) {
-		this.dependentTable = dependentTable;
+	public void setParentTable(String parentTable) {
+		this.parentTable = parentTable;
 	}
-	public String getDependentColumns() {
-		return dependentColumns;
+	public String getParentTableColumns() {
+		return parentTableColumns;
 	}
-	public void setDependentColumns(String dependentColumns) {
-		this.dependentColumns = dependentColumns;
+	public void setParentTableColumns(String parentTableColumns) {
+		this.parentTableColumns = parentTableColumns;
 	}
 	public String getColumns() {
 		return columns;

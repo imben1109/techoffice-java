@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.stereotype.Component;
 
-import com.techoffice.javafx.util.JavaFxTableViewUtil;
-import com.techoffice.oracle.client.fx.SpringFxmlLoader;
-import com.techoffice.oracle.client.service.ApplService;
+import com.techoffice.fx.SpringFxmlLoader;
+import com.techoffice.fx.util.JavaFxTableViewUtil;
+import com.techoffice.oracle.client.service.SqlService;
 import com.techoffice.oracle.client.util.SqlUtil;
 
 import javafx.fxml.FXML;
@@ -27,7 +27,7 @@ import javafx.stage.Stage;
 public class ApplController {
 	
 	@Autowired
-	private ApplService applService;
+	private SqlService applService;
 	
 	@FXML
 	private TextArea sqlTextArea;

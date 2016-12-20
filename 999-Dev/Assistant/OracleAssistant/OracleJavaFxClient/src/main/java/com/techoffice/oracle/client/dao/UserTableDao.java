@@ -1,23 +1,19 @@
 package com.techoffice.oracle.client.dao;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class SqlDao {
-
+public class UserTableDao {
+	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	public List<Map<String, Object>> execute(String sql) {
-		List<Map<String, Object>> results = jdbcTemplate.queryForList(sql);
+	public List<String> selectTableList() {
+		List<String> results = jdbcTemplate.queryForList("SELECT TABLE_NAME FROM USER_TABLES", String.class);
 		return results;
 	}
-	
-
 }

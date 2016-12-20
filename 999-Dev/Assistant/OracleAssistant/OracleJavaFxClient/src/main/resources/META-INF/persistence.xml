@@ -7,7 +7,6 @@
 		JTA-Datasource would used configured in this file with tag <jta-data-source>.
 	 -->
 	<persistence-unit name="techoffice.example" transaction-type="RESOURCE_LOCAL">
-		<mapping-file>META-INF/jpql/dependency.xml</mapping-file>
-		<class>com.techoffice.oracle.client.model.DependentTable</class>
+		<mapping-file>META-INF/jpql/relation.xml</mapping-file>
 	</persistence-unit>
 </persistence>

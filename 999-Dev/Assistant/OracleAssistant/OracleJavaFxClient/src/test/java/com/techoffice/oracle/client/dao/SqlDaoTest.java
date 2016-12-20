@@ -17,9 +17,6 @@ public class SqlDaoTest {
 	
 	@Test
 	public void selectTableList(){
-		List<String> tableList = sqlDao.selectTableList();
-		for (String table: tableList){
-			System.out.println(table);
-		}
+
 	}
 }

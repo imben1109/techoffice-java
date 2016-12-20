@@ -7,9 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.techoffice.oracle.client.dao.SqlDao;
+import com.techoffice.oracle.client.dao.UserTableDao;
 
 @Service
-public class ApplService {
+public class SqlService {
 	
 	@Autowired
 	private SqlDao sqlDao;
@@ -19,7 +20,5 @@ public class ApplService {
 		return results;
 	}
 	
-	public List<String> selectTableList(){
-		return sqlDao.selectTableList();
-	}
+
 }

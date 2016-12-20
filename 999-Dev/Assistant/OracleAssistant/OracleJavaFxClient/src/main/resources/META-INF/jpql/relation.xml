@@ -5,7 +5,7 @@
 		http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
 	
 	<named-native-query name="Dependency.getDependentTables" 
-		result-class="com.techoffice.oracle.client.model.DependentTable">
+		result-class="com.techoffice.oracle.client.model.ParentTable">
 		<query>
 			SELECT TABLE_NAME, 
 			  (SELECT LISTAGG(PUC.COLUMN_NAME, ', ') WITHIN GROUP (ORDER BY PUC.POSITION, PUC.TABLE_NAME)  
@@ -13,15 +13,35 @@
 			    WHERE 
 			      R.CONSTRAINT_NAME = PUC.CONSTRAINT_NAME
 			    GROUP BY PUC.TABLE_NAME, PUC.CONSTRAINT_NAME) AS COLUMNS,
-			  (SELECT P.TABLE_NAME FROM USER_CONSTRAINTS P WHERE CONSTRAINT_TYPE = 'P' AND P.CONSTRAINT_NAME = R.R_CONSTRAINT_NAME) AS DEPENDENT_TABLE,
+			  (SELECT P.TABLE_NAME 
+			  	FROM USER_CONSTRAINTS P 
+			  	WHERE CONSTRAINT_TYPE = 'P' 
+			  		AND P.CONSTRAINT_NAME = R.R_CONSTRAINT_NAME) AS PARENT_TABLE,
 			  (SELECT LISTAGG(COLUMN_NAME, ', ') WITHIN GROUP (ORDER BY POSITION, COLUMN_NAME) COLUMN_NAMES 
 			    FROM USER_CONS_COLUMNS 
 			    WHERE CONSTRAINT_NAME = R.R_CONSTRAINT_NAME
-			    GROUP BY TABLE_NAME, CONSTRAINT_NAME) AS DEPENDENT_COLUMNS
+			    GROUP BY TABLE_NAME, CONSTRAINT_NAME) AS PARENT_COLUMNS
 			  FROM USER_CONSTRAINTS R
 			WHERE 
 			  CONSTRAINT_TYPE = 'R' 
 			  AND TABLE_NAME = :TABLE_NAME
+		</query>
+	</named-native-query>
+	
+	<named-native-query name="Dependency.getRelationTables"
+		result-class="com.techoffice.oracle.client.model.RelationTable">
+		<query>
+			SELECT 
+			  TABLE_NAME,
+			  (SELECT COUNT(1) 
+			    FROM USER_CONSTRAINTS R 
+			    WHERE CONSTRAINT_TYPE = 'R' 
+			    AND R.TABLE_NAME = T.TABLE_NAME ) AS PARENT_TABLE_COUNT,
+			  (SELECT COUNT(1) 
+			    FROM USER_CONSTRAINTS P, USER_CONSTRAINTS R  
+			    WHERE P.CONSTRAINT_TYPE = 'P' AND R.CONSTRAINT_TYPE = 'R' AND R.R_CONSTRAINT_NAME = P.CONSTRAINT_NAME 
+			    AND P.TABLE_NAME = T.TABLE_NAME) AS CHILD_TABLE_COUNT
+			FROM USER_TABLES T
 		</query>
 	</named-native-query>
 	
