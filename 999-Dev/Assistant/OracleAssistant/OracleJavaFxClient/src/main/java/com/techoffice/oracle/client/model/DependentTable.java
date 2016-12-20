@@ -3,14 +3,17 @@ package com.techoffice.oracle.client.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 @Entity
+@IdClass(DependentTableKey.class)
 public class DependentTable {
 	
 	@Id
 	@Column(name="TABLE_NAME")
 	private String tableName;
 	
+	@Id
 	@Column(name="COLUMNS")
 	private String columns;
 	

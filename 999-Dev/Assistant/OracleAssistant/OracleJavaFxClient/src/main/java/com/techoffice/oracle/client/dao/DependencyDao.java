@@ -17,8 +17,9 @@ public class DependencyDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public List<DependentTable> findAll() {
+	public List<DependentTable> getDependentTableList(String tableName) {
 		TypedQuery<DependentTable>  query = entityManager.createNamedQuery("Dependency.getDependentTables", DependentTable.class);
+		query.setParameter("TABLE_NAME", tableName);
 		List<DependentTable> results = query.getResultList();
 		return results;
 	}

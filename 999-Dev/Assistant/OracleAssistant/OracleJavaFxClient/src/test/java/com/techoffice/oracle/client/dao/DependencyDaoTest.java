@@ -21,7 +21,7 @@ public class DependencyDaoTest {
 	@Test
 	public void findAll(){
 		try{
-		List<DependentTable> results = dependencyDao.findAll();
+		List<DependentTable> results = dependencyDao.getDependentTableList("X_GEQ_GOVT_ENQ");
 		for(DependentTable dependentTable: results){
 			System.out.println(dependentTable.getTableName());
 		}

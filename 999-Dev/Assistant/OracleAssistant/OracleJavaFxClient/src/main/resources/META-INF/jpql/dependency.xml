@@ -21,7 +21,7 @@
 			  FROM USER_CONSTRAINTS R
 			WHERE 
 			  CONSTRAINT_TYPE = 'R' 
-
+			  AND TABLE_NAME = :TABLE_NAME
 		</query>
 	</named-native-query>
 	
