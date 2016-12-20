@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -53,7 +54,7 @@ public class ResultWebServiceTest {
 	}
 	
 	@Test
-	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException{
+	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		List<String> raceDateList = resultWebService.retrieveRaceDateList();
 		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
 		resultWebService.getRaceResult(raceNumList.get(0));

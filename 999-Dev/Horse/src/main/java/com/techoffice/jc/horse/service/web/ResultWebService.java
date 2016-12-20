@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,7 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.service.web.helper.ResultWebServiceHelper;
 import com.techoffice.util.XmlUtil;
@@ -81,12 +83,12 @@ public class ResultWebService {
 		return raceNumList;
 	}
 	
-	public void getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException{
+	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		String xml = retrieveXml(location);
-		ResultWebServiceHelper.getRaceResult(xml, location);
+		RaceResult raceResult = ResultWebServiceHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = ResultWebServiceHelper.getRaceResultHorseList(xml);
+		raceResult.setRaceResultHorseList(raceResultHorseList);
+		return raceResult;
 	}
-	
-	
 	
 }

@@ -1,8 +1,11 @@
 package com.techoffice.jc.horse.model;
 
+import java.util.Date;
+import java.util.List;
+
 public class RaceResult {
 	private String location;
-	private String raceDate;
+	private Date raceDate;
 	private String venue;
 	private String raceNum;
 	private String raceNo;
@@ -10,14 +13,17 @@ public class RaceResult {
 	private String distance;
 	private String rtgRange;
 	private String going;
+	private String raceName;
 	private String course;
 	private String reward;
 	private String raceTime;
 	private String sectionalTime;
-	public String getRaceDate() {
+	private List<RaceResultHorse> raceResultHorseList;
+	
+	public Date getRaceDate() {
 		return raceDate;
 	}
-	public void setRaceDate(String raceDate) {
+	public void setRaceDate(Date raceDate) {
 		this.raceDate = raceDate;
 	}
 	public String getLocation() {
@@ -91,6 +97,18 @@ public class RaceResult {
 	}
 	public void setReward(String reward) {
 		this.reward = reward;
+	}
+	public String getRaceName() {
+		return raceName;
+	}
+	public void setRaceName(String raceName) {
+		this.raceName = raceName;
+	}
+	public List<RaceResultHorse> getRaceResultHorseList() {
+		return raceResultHorseList;
+	}
+	public void setRaceResultHorseList(List<RaceResultHorse> raceResultHorseList) {
+		this.raceResultHorseList = raceResultHorseList;
 	}
 	
 }
