@@ -30,5 +30,13 @@ public class HelloWorldExample {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		HelloWorldExample helloWorldExample = context.getBean(HelloWorldExample.class);
 		System.out.println(helloWorldExample.getMessage());
+		Thread t1 = new Thread(new Runnable(){
+			public void run() {
+				while(true){
+					
+				}
+			}
+		});
+		t1.start();
 	}
 }

@@ -19,6 +19,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.jc.horse.dao.RaceResultQueueDao;
+import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -29,6 +31,9 @@ public class ResultWebServiceTest {
 	
 	@Autowired
 	private ResultWebService resultWebService;
+	
+	@Autowired
+	private RaceResultQueueDao raceResultQueueDao ;
 
 //	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
@@ -46,14 +51,23 @@ public class ResultWebServiceTest {
 	
 //	@Test
 	public void getRaceNumList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		raceResultQueueDao.deleteAll();
+		int raceResultCount = 0;
 		List<String> raceDateList = resultWebService.retrieveRaceDateList();
-		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
-		for(String raceNum: raceNumList){
-			System.out.println(raceNum);
+		for(String raceDate: raceDateList){
+			List<String> raceNumList = resultWebService.getRaceNumList(raceDate);
+			for(String raceNum: raceNumList){
+				RaceResultQueue queue = new RaceResultQueue();
+				queue.setLocation(raceNum);
+				raceResultQueueDao.addRaceResultQueue(queue);
+				raceResultCount++;
+				System.out.println(raceNum);
+			}
 		}
+		System.out.println(raceResultCount + " Reace Results is inserted into the Queue.");
 	}
 	
-	@Test
+//	@Test
 	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		List<String> raceDateList = resultWebService.retrieveRaceDateList();
 		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));

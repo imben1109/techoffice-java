@@ -8,9 +8,5 @@
 	<bean class="com.techoffice.example.HelloWorldExample">
 		<property name="message" value="Hello! This is a Spring Hello World Example By Tech Office - Java!" />
 	</bean>
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-	<property name="locations">
-	<value>file:${activemq.base}/conf/credentials.properties</value>
-	</property>
-	</bean>
+
 </beans>
