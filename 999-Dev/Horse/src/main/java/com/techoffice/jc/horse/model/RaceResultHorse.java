@@ -1,6 +1,28 @@
 package com.techoffice.jc.horse.model;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="RACE_RESULT_HORSE")
 public class RaceResultHorse {
+	
+	@Id
+	@GeneratedValue(generator="increment")
+	@GenericGenerator(name="increment", strategy = "increment")
+	private int id;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="RACE_RESULT_ID")
+	private RaceResult raceResult;
+	
 	private String place;
 	private String horseNo;
 	private String horseName;
@@ -16,6 +38,12 @@ public class RaceResultHorse {
 	private String winOdds;
 	
 
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getPlace() {
 		return place;
 	}
@@ -94,6 +122,12 @@ public class RaceResultHorse {
 	}
 	public void setWinOdds(String winOdds) {
 		this.winOdds = winOdds;
+	}
+	public RaceResult getRaceResult() {
+		return raceResult;
+	}
+	public void setRaceResult(RaceResult raceResult) {
+		this.raceResult = raceResult;
 	}
 	
 }

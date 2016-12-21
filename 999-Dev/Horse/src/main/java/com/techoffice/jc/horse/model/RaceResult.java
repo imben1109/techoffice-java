@@ -3,7 +3,23 @@ package com.techoffice.jc.horse.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="RACE_RESULT")
 public class RaceResult {
+	
+	@Id
+	@GeneratedValue(generator="increment")
+	@GenericGenerator(name="increment", strategy = "increment")
+	private int id;
 	private String location;
 	private Date raceDate;
 	private String venue;
@@ -18,6 +34,16 @@ public class RaceResult {
 	private String reward;
 	private String raceTime;
 	private String sectionalTime;
+	
+	public int getId(){
+		return id;
+	}
+	
+	public void setId(int id){
+		this.id = id;
+	}
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="raceResult")
 	private List<RaceResultHorse> raceResultHorseList;
 	
 	public Date getRaceDate() {

@@ -20265,3 +20265,965 @@ For assistance, contact your network support team.
 2016-12-21 23:29:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
 2016-12-21 23:29:56 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@1993335: startup date [Wed Dec 21 23:27:24 CST 2016]; root of context hierarchy
 2016-12-21 23:29:56 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:10:54 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:10:54 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:10:54 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:10:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:10:55 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:10:55 CST 2016]; root of context hierarchy
+2016-12-22 00:10:57 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:10:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:10:57 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:10:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:10:57 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:10:59 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@177fa5'
+2016-12-22 00:10:59 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@b41d6] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:11:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:01 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:01 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:02 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:03 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:11:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:03 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:03 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:11:04 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:11:05 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:10:55 CST 2016]; root of context hierarchy
+2016-12-22 00:11:05 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:12:06 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:12:06 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:12:06 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:12:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:12:07 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:12:07 CST 2016]; root of context hierarchy
+2016-12-22 00:12:08 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:12:08 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:12:08 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:12:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:12:09 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:12:10 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@177fa5'
+2016-12-22 00:12:10 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@b41d6] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:12:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:12 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:12 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:13 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:13 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:13 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:13 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:13 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:13 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:12:14 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:12:15 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:12:07 CST 2016]; root of context hierarchy
+2016-12-22 00:12:15 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:14:50 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:14:50 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:14:50 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:14:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:14:51 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:14:51 CST 2016]; root of context hierarchy
+2016-12-22 00:14:52 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:14:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:14:52 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:14:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:14:53 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:14:53 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@177fa5'
+2016-12-22 00:14:54 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@b41d6] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:14:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:56 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:58 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:58 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:58 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:14:58 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:14:58 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:58 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:14:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:14:59 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:14:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:14:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:14:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:15:00 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:15:00 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:15:01 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:14:51 CST 2016]; root of context hierarchy
+2016-12-22 00:15:01 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:16:14 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:16:14 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:16:14 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:16:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:16:14 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:16:14 CST 2016]; root of context hierarchy
+2016-12-22 00:16:16 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:16:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:16:16 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:16:16 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:16:16 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:16:17 WARN  GenericApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+2016-12-22 00:16:17 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2] to prepare test instance [com.techoffice.jc.horse.service.web.ResultWebServiceTest@13f6585]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1752)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1696)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1583)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:692)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:727)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:511)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:495)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 53 more
+2016-12-22 00:17:41 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:17:41 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:17:41 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:17:41 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:17:42 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:17:42 CST 2016]; root of context hierarchy
+2016-12-22 00:17:43 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:17:43 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:17:43 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:17:43 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:17:44 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:17:44 WARN  GenericApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+2016-12-22 00:17:44 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2] to prepare test instance [com.techoffice.jc.horse.service.web.ResultWebServiceTest@2a209e]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1752)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1696)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1583)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:692)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:727)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:511)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:495)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 53 more
+2016-12-22 00:18:02 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:18:02 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:18:02 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:18:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:18:03 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:18:03 CST 2016]; root of context hierarchy
+2016-12-22 00:18:04 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:18:04 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:18:04 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:18:04 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:18:05 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:18:05 WARN  GenericApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+2016-12-22 00:18:05 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2] to prepare test instance [com.techoffice.jc.horse.service.web.ResultWebServiceTest@2a209e]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1752)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1696)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1583)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:692)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:727)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:511)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:495)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 53 more
+2016-12-22 00:18:50 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:18:50 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:18:50 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:18:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:18:51 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:18:51 CST 2016]; root of context hierarchy
+2016-12-22 00:18:52 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:18:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:18:52 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:18:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:18:53 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:18:53 WARN  GenericApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+2016-12-22 00:18:53 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2] to prepare test instance [com.techoffice.jc.horse.service.web.ResultWebServiceTest@104d4b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.techoffice.jc.horse.model.RaceResultHorse.raceResultId references an unknown entity: int
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1752)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1696)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1583)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:692)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:727)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:511)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:495)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 53 more
+2016-12-22 00:19:40 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:19:40 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:19:40 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:19:40 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:19:41 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:19:41 CST 2016]; root of context hierarchy
+2016-12-22 00:19:42 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:19:42 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:19:42 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:19:42 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:19:43 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:19:43 WARN  GenericApplicationContext:550 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.techoffice.jc.horse.model.RaceResultHorse.raceResultId in com.techoffice.jc.horse.model.RaceResult.raceResultHorseList
+2016-12-22 00:19:43 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2] to prepare test instance [com.techoffice.jc.horse.service.web.ResultWebServiceTest@12e028d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'raceResultDao': Unsatisfied dependency expressed through field 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.techoffice.jc.horse.model.RaceResultHorse.raceResultId in com.techoffice.jc.horse.model.RaceResult.raceResultHorseList
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.techoffice.jc.horse.model.RaceResultHorse.raceResultId in com.techoffice.jc.horse.model.RaceResult.raceResultHorseList
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1583)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 43 more
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.techoffice.jc.horse.model.RaceResultHorse.raceResultId in com.techoffice.jc.horse.model.RaceResult.raceResultHorseList
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:774)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:724)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1621)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1589)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:692)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:727)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:511)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:495)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1579)
+	... 53 more
+2016-12-22 00:20:17 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:20:17 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:20:17 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:20:17 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:20:18 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:20:18 CST 2016]; root of context hierarchy
+2016-12-22 00:20:19 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:20:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:20:19 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:20:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:20:20 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:20:21 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@f0dd86'
+2016-12-22 00:20:21 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@b41d6] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:20:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:23 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:20:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:25 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:20:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:20:27 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:20:27 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:20:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:20:28 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:20:18 CST 2016]; root of context hierarchy
+2016-12-22 00:20:28 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:20:28 ERROR SchemaDropperImpl$DelayedDropActionImpl:538 - HHH000478: Unsuccessful: drop table RACE_RESULT_HORSE if exists
+2016-12-22 00:20:28 ERROR SchemaDropperImpl$DelayedDropActionImpl:538 - HHH000478: Unsuccessful: drop table RACE_RESULT_QUEUE if exists
+2016-12-22 00:20:28 WARN  SqlExceptionHelper:129 - SQL Error: 0, SQLState: null
+2016-12-22 00:20:28 ERROR SqlExceptionHelper:131 - Already closed.
+2016-12-22 00:20:28 WARN  DisposableBeanAdapter:281 - Invocation of destroy method failed on bean with name 'sessionFactory': org.hibernate.exception.GenericJDBCException: Unable to release JDBC Connection used for DDL execution

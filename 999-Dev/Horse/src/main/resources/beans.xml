@@ -39,12 +39,14 @@
 			<value>
 				hibernate.dialect=org.hibernate.dialect.H2Dialect
 				hibernate.show_sql=true
-				hibernate.hbm2ddl.auto=create-drop
+				hibernate.hbm2ddl.auto=update
 			</value>
 		</property>
 		<property name="annotatedClasses">
 			<list>
 				<value>com.techoffice.jc.horse.model.RaceResultQueue</value>
+				<value>com.techoffice.jc.horse.model.RaceResult</value>
+				<value>com.techoffice.jc.horse.model.RaceResultHorse</value>
 			</list>
 		</property>
 	</bean>

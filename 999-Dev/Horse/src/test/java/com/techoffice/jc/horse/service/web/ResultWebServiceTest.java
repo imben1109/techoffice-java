@@ -9,6 +9,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
@@ -34,6 +36,9 @@ public class ResultWebServiceTest {
 	
 	@Autowired
 	private RaceResultQueueDao raceResultQueueDao ;
+	
+	@Autowired
+	private RaceResultDao raceResultDao;
 
 //	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
@@ -67,10 +72,12 @@ public class ResultWebServiceTest {
 		System.out.println(raceResultCount + " Reace Results is inserted into the Queue.");
 	}
 	
-//	@Test
+	@Test
 	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		List<String> raceDateList = resultWebService.retrieveRaceDateList();
 		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
 		RaceResult raceResult = resultWebService.getRaceResult(raceNumList.get(0));
+		raceResultDao.add(raceResult);
+		System.out.println(raceResult.getId() + " is created.");
 	}
 }
