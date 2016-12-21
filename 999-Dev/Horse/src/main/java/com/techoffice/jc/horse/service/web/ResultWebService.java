@@ -61,7 +61,6 @@ public class ResultWebService {
 				raceDateList.add(LOCATION + raceDate.getAttributes().getNamedItem("value").getNodeValue());
 			}
 		}
-		
 		return raceDateList;
 	}
 	

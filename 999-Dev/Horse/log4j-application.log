@@ -21227,3 +21227,550 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 2016-12-22 00:20:28 WARN  SqlExceptionHelper:129 - SQL Error: 0, SQLState: null
 2016-12-22 00:20:28 ERROR SqlExceptionHelper:131 - Already closed.
 2016-12-22 00:20:28 WARN  DisposableBeanAdapter:281 - Invocation of destroy method failed on bean with name 'sessionFactory': org.hibernate.exception.GenericJDBCException: Unable to release JDBC Connection used for DDL execution
+2016-12-22 00:23:47 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:23:47 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:23:47 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:23:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:23:48 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:23:48 CST 2016]; root of context hierarchy
+2016-12-22 00:23:50 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:23:50 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:23:50 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:23:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:23:50 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:23:51 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:395 - HHH000262: Table not found: RACE_RESULT
+2016-12-22 00:23:51 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:395 - HHH000262: Table not found: RACE_RESULT
+2016-12-22 00:23:51 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@b41d6] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:23:52 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:54 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:54 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:23:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:56 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:56 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:56 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:23:57 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:23:57 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:23:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:23:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:05 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:31:05 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:31:05 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:31:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:31:06 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:31:06 CST 2016]; root of context hierarchy
+2016-12-22 00:31:07 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:31:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:31:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:31:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:31:08 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:31:09 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@c281ed'
+2016-12-22 00:31:16 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:31:16 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:31:16 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1565ec2]
+2016-12-22 00:31:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:31:17 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:31:17 CST 2016]; root of context hierarchy
+2016-12-22 00:31:18 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:31:18 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:31:18 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:31:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:31:18 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:31:19 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@c281ed'
+2016-12-22 00:31:20 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@b41d6] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:31:20 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:21 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:22 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:31:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:22 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:22 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:22 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:23 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:24 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:24 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:24 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:31:25 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:31:25 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:31:25 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@322d26: startup date [Thu Dec 22 00:31:17 CST 2016]; root of context hierarchy
+2016-12-22 00:31:25 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:35:01 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:35:01 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:35:01 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@be2bc2, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@feb3fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@15d3402, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1565ec2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2f8f11]
+2016-12-22 00:35:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:35:02 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@12b07fd: startup date [Thu Dec 22 00:35:02 CST 2016]; root of context hierarchy
+2016-12-22 00:35:04 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:35:04 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:35:04 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:35:04 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:35:04 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:35:05 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@998e21'
+2016-12-22 00:35:05 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1718392] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:35:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:08 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:08 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:35:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:10 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:10 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:35:11 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:35:11 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:35:12 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@12b07fd: startup date [Thu Dec 22 00:35:02 CST 2016]; root of context hierarchy
+2016-12-22 00:35:12 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2016-12-22 00:37:20 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-12-22 00:37:20 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-12-22 00:37:20 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@be2bc2, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@feb3fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@15d3402, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1565ec2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2f8f11]
+2016-12-22 00:37:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2016-12-22 00:37:21 INFO  GenericApplicationContext:582 - Refreshing org.springframework.context.support.GenericApplicationContext@12b07fd: startup date [Thu Dec 22 00:37:21 CST 2016]; root of context hierarchy
+2016-12-22 00:37:22 INFO  Version:37 - HHH000412: Hibernate Core {5.1.1.Final}
+2016-12-22 00:37:22 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-12-22 00:37:22 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-12-22 00:37:22 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-12-22 00:37:23 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-22 00:37:24 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@998e21'
+2016-12-22 00:37:24 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1718392] of Hibernate SessionFactory for HibernateTransactionManager
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:26 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/Info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:26 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:28 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:28 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  HtmlScript:425 - Script is not JavaScript (type: text/jscript, language: javascript). Skipping execution.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [93:34] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/GlobalMenu/English/css/global.css' [96:41] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Error in style rule. (Invalid token "@charset". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_global.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [17:72] Error in declaration. '*' is not allowed as first char of a property.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [48:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [51:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/English/revamp/css/jcrw_racing.css' [123:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Error in style rule. (Invalid token "*". Was expecting one of: <S>, <LBRACE>, ".", ":", "[", <COMMA>, <HASH>, <S>.)
+2016-12-22 00:37:29 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://racing.hkjc.com/racing/info/Content/english/RacingMenu.css' [1:2] Ignoring the following declarations in this rule.
+2016-12-22 00:37:29 ERROR StrictErrorReporter:82 - runtimeError: message=[An invalid or illegal selector was specified (selector: 'form.hiddenableCtrl :checkbox' error: Invalid selector: form.hiddenableCtrl :checkbox).] sourceName=[http://racing.hkjc.com/racing/info/Scripts/jquery-1.4.1.min.js] line=[56] lineSource=[null] lineOffset=[0]
+2016-12-22 00:37:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2016-12-22 00:37:30 INFO  GenericApplicationContext:987 - Closing org.springframework.context.support.GenericApplicationContext@12b07fd: startup date [Thu Dec 22 00:37:21 CST 2016]; root of context hierarchy
+2016-12-22 00:37:30 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'

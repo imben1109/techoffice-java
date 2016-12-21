@@ -1,5 +1,6 @@
 package com.techoffice.jc.horse.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -23,21 +24,45 @@ public class RaceResultHorse {
 	@JoinColumn(name="RACE_RESULT_ID")
 	private RaceResult raceResult;
 	
+	@Column(name="PLACE")
 	private String place;
+	
+	@Column(name="HORSE_NO")
 	private String horseNo;
+	
+	@Column(name="HORSE_NAME")
 	private String horseName;
+	
+	@Column(name="HORSE_ID")
 	private String horseId;
+	
+	@Column(name="JOCKEY")
 	private String jockey;
+	
+	@Column(name="TRAINER")
 	private String trainer;
+	
+	@Column(name="ACTUAL_WT")
 	private String actualWt;
+	
+	@Column(name="DECLARED_WT")
 	private String declaredWt;
+	
+	@Column(name="DRAW")
 	private String draw;
+	
+	@Column(name="LBW")
 	private String lbw;
+	
+	@Column(name="RUNNING_POSITION")
 	private String runningPosition;
+	
+	@Column(name="FINISH_TIME")
 	private String FinishTime;
+	
+	@Column(name="WIN_ODDS")
 	private String winOdds;
 	
-
 	public int getId() {
 		return id;
 	}

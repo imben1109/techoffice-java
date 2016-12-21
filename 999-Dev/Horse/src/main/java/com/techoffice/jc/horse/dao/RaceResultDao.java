@@ -10,6 +10,7 @@ import com.techoffice.jc.horse.model.RaceResult;
 
 @Repository
 public class RaceResultDao {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	

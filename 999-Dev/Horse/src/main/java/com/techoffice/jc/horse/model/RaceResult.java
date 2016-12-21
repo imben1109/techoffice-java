@@ -3,6 +3,7 @@ package com.techoffice.jc.horse.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,19 +21,47 @@ public class RaceResult {
 	@GeneratedValue(generator="increment")
 	@GenericGenerator(name="increment", strategy = "increment")
 	private int id;
+	
+	@Column(name="LOCATION")
 	private String location;
+	
+	@Column(name="RACE_DATE")
 	private Date raceDate;
+	
+	@Column(name="VENUE")
 	private String venue;
+	
+	@Column(name="RACE_NUM")
 	private String raceNum;
+	
+	@Column(name="RACE_NO")
 	private String raceNo;
+	
+	@Column(name="RACE_CLASS")
 	private String raceClass;
+	
+	@Column(name="DISTANCE")
 	private String distance;
+	
+	@Column(name="RTG_RANGE")
 	private String rtgRange;
+	
+	@Column(name="GOING")
 	private String going;
+	
+	@Column(name="RACE_NAME")
 	private String raceName;
+	
+	@Column(name="COURSE")
 	private String course;
+	
+	@Column(name="REWARD")
 	private String reward;
+	
+	@Column(name="RACE_TIME")
 	private String raceTime;
+	
+	@Column(name="SECTIONAL_TIME")
 	private String sectionalTime;
 	
 	public int getId(){
