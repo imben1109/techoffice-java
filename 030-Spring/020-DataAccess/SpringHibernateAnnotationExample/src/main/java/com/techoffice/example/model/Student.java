@@ -1,11 +1,28 @@
 package com.techoffice.example.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="STUDENT")
 public class Student {
+	
+	@Id
+	@GeneratedValue(generator="increment")
+	@GenericGenerator(name="increment", strategy = "increment")
 	private int id;
+	
+	@Column(name="NAME")
 	private String name;
+	
+	@Column(name="DESC")
 	private String desc;
+	
 	public int getId() {
 		return id;
 	}
