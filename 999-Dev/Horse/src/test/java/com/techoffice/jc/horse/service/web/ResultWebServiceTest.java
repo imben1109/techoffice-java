@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -18,6 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -42,7 +44,7 @@ public class ResultWebServiceTest {
 		}
 	}
 	
-	@Test
+//	@Test
 	public void getRaceNumList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
 		List<String> raceDateList = resultWebService.retrieveRaceDateList();
 		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
@@ -51,5 +53,10 @@ public class ResultWebServiceTest {
 		}
 	}
 	
-	
+	@Test
+	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
+		List<String> raceDateList = resultWebService.retrieveRaceDateList();
+		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
+		resultWebService.getRaceResult(raceNumList.get(0));
+	}
 }

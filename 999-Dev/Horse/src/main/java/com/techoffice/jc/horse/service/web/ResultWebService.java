@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.service.web;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,11 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.jc.horse.model.RaceResult;
+import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.jc.horse.service.web.helper.ResultWebServiceHelper;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Component
 public class ResultWebService {
@@ -56,6 +61,7 @@ public class ResultWebService {
 				raceDateList.add(LOCATION + raceDate.getAttributes().getNamedItem("value").getNodeValue());
 			}
 		}
+		
 		return raceDateList;
 	}
 	
@@ -70,13 +76,19 @@ public class ResultWebService {
 				// The first node is #Text
 				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
 				if ("a".equals(raceNumNode.getNodeName())){
-					if (i == raceNumNodeList.getLength() - 1){
-						break;
-					}
 					raceNumList.add(raceNumNode.getAttributes().getNamedItem("href").getNodeValue());
 				}
 			}
 		}
 		return raceNumList;
 	}
+	
+	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
+		String xml = retrieveXml(location);
+		RaceResult raceResult = ResultWebServiceHelper.getRaceResult(xml, location);
+		List<RaceResultHorse> raceResultHorseList = ResultWebServiceHelper.getRaceResultHorseList(xml);
+		raceResult.setRaceResultHorseList(raceResultHorseList);
+		return raceResult;
+	}
+	
 }

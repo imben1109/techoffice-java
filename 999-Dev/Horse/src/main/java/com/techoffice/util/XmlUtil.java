@@ -21,11 +21,14 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.h2.util.StringUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
 import org.xml.sax.SAXException;
+
+import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class XmlUtil {
 	
@@ -61,6 +64,38 @@ public class XmlUtil {
 		XPathExpression expr = xpath.compile(xPath);
 		NodeList nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
 		return nodeList;
+	}
+	
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException{
+		String nodeText = "";
+		NodeList nodeList = evaluateXpath(xml, xPath);
+		if (nodeList.getLength() != 1){
+			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions" );
+		}else {
+			Node node = nodeList.item(0);
+			nodeText = getNodeText(node);
+		}
+		nodeText = StringUtil.removeSpecialCharacter(nodeText);
+		return nodeText;
+	}
+	
+	public static String getNodeText(Node node){
+		String nodeText = "";
+		NodeList nodeList = node.getChildNodes();
+		if (nodeList.getLength() > 0){
+			for (int i=0; i<nodeList.getLength(); i++){
+				Node childNode = nodeList.item(i);
+				if (childNode.getChildNodes().getLength() == 1 ){
+					nodeText += " " + StringUtil.removeSpecialCharacter(childNode.getFirstChild().getNodeValue());
+				}else {
+					nodeText += " " + getNodeText(childNode);
+				}
+			}
+		}else{
+			nodeText += " " + node.getTextContent();
+		}
+		nodeText = nodeText.trim();
+		return nodeText;
 	}
 	
 }
