@@ -18,7 +18,7 @@ public class EntityDaoTest {
 	
 	@Test
 	public void getParentTableList(){
-		List<EntityTable> results = entityDao.getParentTableList();
+		List<EntityTable> results = entityDao.getEntityTableList();
 		for (EntityTable entityTable: results){
 			System.out.println(entityTable.getTableName());
 		}

@@ -5,16 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.techoffice.fx.util.JavaFxTableViewUtil;
+import com.techoffice.oracle.client.model.Column;
 import com.techoffice.oracle.client.model.EntityTable;
-import com.techoffice.oracle.client.model.RelationTable;
 import com.techoffice.oracle.client.service.EntityService;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
 @Component
-public class EntityTableListController {
+public class EntityController {
 	
 	@Autowired
 	private EntityService entityService;
@@ -24,8 +23,9 @@ public class EntityTableListController {
 	
 	@FXML
 	public void initialize(){
-		List<EntityTable> results = entityService.getEntityTableList();
-        JavaFxTableViewUtil.tableViewSetBeanList(entityTableView, results, EntityTable.class);
-
+	}
+	
+	public void init(String tableName){
+		List<Column> results = entityService.getTableColumnList(tableName);
 	}
 }

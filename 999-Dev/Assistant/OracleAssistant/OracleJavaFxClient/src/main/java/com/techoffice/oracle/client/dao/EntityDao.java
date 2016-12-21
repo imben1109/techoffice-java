@@ -16,7 +16,7 @@ public class EntityDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	public List<EntityTable> getParentTableList() {
+	public List<EntityTable> getEntityTableList() {
 		TypedQuery<EntityTable>  query = entityManager.createNamedQuery("Entity.getEntityTables", EntityTable.class);
 		List<EntityTable> results = query.getResultList();
 		return results;
