@@ -2,7 +2,6 @@ package com.techoffice.example.model;
 
 import javax.persistence.Entity;
 
-@Entity
 public class Student {
 	private int id;
 	private String name;

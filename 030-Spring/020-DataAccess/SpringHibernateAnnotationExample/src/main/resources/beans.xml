@@ -11,8 +11,7 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Auto-Scan Spring Bean -->
-	<context:component-scan base-package="com.techoffice" />
-	<bean class="com.techoffice.factory.WebClientBeanFactory"/>
+	<context:component-scan base-package="com.techoffice.example" />
 
 	<!-- Database Connection Pool Datasource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
@@ -34,19 +33,16 @@
 	<bean id="sessionFactory"
             class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.ittechoffice" />
 		<property name="hibernateProperties">
 			<value>
 				hibernate.dialect=org.hibernate.dialect.H2Dialect
 				hibernate.show_sql=true
-				hibernate.hbm2ddl.auto=update
+				hibernate.hbm2ddl.auto=create-drop
 			</value>
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.techoffice.jc.horse.model.RaceResultQueue</value>
-				<value>com.techoffice.jc.horse.model.RaceResult</value>
-				<value>com.techoffice.jc.horse.model.RaceResultHorse</value>
+				<value>com.techoffice.example.model.Student</value>
 			</list>
 		</property>
 	</bean>

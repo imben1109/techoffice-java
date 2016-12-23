@@ -1,21 +1,74 @@
 package com.techoffice.jc.horse.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="RACE_RESULT_HORSE")
 public class RaceResultHorse {
+	
+	@Id
+	@GeneratedValue(generator="increment")
+	@GenericGenerator(name="increment", strategy = "increment")
+	private int id;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="RACE_RESULT_ID")
+	private RaceResult raceResult;
+	
+	@Column(name="PLACE")
 	private String place;
+	
+	@Column(name="HORSE_NO")
 	private String horseNo;
+	
+	@Column(name="HORSE_NAME")
 	private String horseName;
+	
+	@Column(name="HORSE_ID")
 	private String horseId;
+	
+	@Column(name="JOCKEY")
 	private String jockey;
+	
+	@Column(name="TRAINER")
 	private String trainer;
+	
+	@Column(name="ACTUAL_WT")
 	private String actualWt;
+	
+	@Column(name="DECLARED_WT")
 	private String declaredWt;
+	
+	@Column(name="DRAW")
 	private String draw;
+	
+	@Column(name="LBW")
 	private String lbw;
+	
+	@Column(name="RUNNING_POSITION")
 	private String runningPosition;
+	
+	@Column(name="FINISH_TIME")
 	private String FinishTime;
+	
+	@Column(name="WIN_ODDS")
 	private String winOdds;
 	
-
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getPlace() {
 		return place;
 	}
@@ -94,6 +147,12 @@ public class RaceResultHorse {
 	}
 	public void setWinOdds(String winOdds) {
 		this.winOdds = winOdds;
+	}
+	public RaceResult getRaceResult() {
+		return raceResult;
+	}
+	public void setRaceResult(RaceResult raceResult) {
+		this.raceResult = raceResult;
 	}
 	
 }
