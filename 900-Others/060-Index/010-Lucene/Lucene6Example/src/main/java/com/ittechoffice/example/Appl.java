@@ -16,11 +16,10 @@ import org.apache.lucene.queryparser.classic.ParseException;
  */
 public class Appl {
 	public static void main(String[] args) throws IOException, ParseException{
-		String home = Paths.get(Appl.class.getClassLoader().getResource(".").getPath()).getParent().getParent().toString();
-		Indexer indexer = new Indexer(home + "/Index");
-		indexer.indexFile(new File(home + "/Data/Testing.txt"));
+		Indexer indexer = new Indexer("Index");
+		indexer.indexFile(new File("Data/Testing.txt"));
 		indexer.close();
-		Searcher searcher = new Searcher(home + "/Index");
+		Searcher searcher = new Searcher("Index");
 		searcher.search("Testing");
 	}
 }
