@@ -82,6 +82,6 @@ public class ResultWebServiceTest {
 	
 	@Test
 	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
-		resultService.executeResultQueue();
+		resultService.executeResultQueueList();
 	}
 }
