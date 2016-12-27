@@ -77,7 +77,7 @@ public class ResultWebServiceHelper {
 		return raceResult;
 	}
 	
-	public static List<RaceResultHorse> getRaceResultHorseList(String xml) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
 		List<RaceResultHorse> raceResultHorseList = new ArrayList<RaceResultHorse>();
 		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[6]/table/tbody/tr");
 		for (int i=0; i<raceHorseNodeList.getLength(); i++){
@@ -97,6 +97,7 @@ public class ResultWebServiceHelper {
 				}
 			}
 			RaceResultHorse raceResultHorse = listToRaceResultHorse(tdValueList);
+			raceResultHorse.setRaceResult(raceResult);
 			raceResultHorseList.add(raceResultHorse);
 		}
 		return raceResultHorseList;

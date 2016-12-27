@@ -3,6 +3,7 @@ package com.techoffice.jc.horse.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -64,6 +65,9 @@ public class RaceResult {
 	@Column(name="SECTIONAL_TIME")
 	private String sectionalTime;
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="raceResult", cascade=CascadeType.ALL)
+	private List<RaceResultHorse> raceResultHorseList;
+	
 	public int getId(){
 		return id;
 	}
@@ -71,9 +75,6 @@ public class RaceResult {
 	public void setId(int id){
 		this.id = id;
 	}
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="raceResult")
-	private List<RaceResultHorse> raceResultHorseList;
 	
 	public Date getRaceDate() {
 		return raceDate;

@@ -23,6 +23,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.jc.horse.service.web.helper.ResultWebServiceHelper;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
@@ -64,9 +65,12 @@ public class ResultWebService {
 		return raceDateList;
 	}
 	
-	public List<String> getRaceNumList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<String> raceNumList = new ArrayList<String>();
-		raceNumList.add(location);
+	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
+		RaceResultQueue firstRaceResultQueue = new RaceResultQueue();
+		firstRaceResultQueue.setLocation(location);
+		firstRaceResultQueue.setRaceNum("1");
+		raceNumList.add(firstRaceResultQueue);
 		String xml = retrieveXml(location);
 		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr/td");
 		for (int i =0; i<raceNumNodeList.getLength(); i++){
@@ -75,7 +79,10 @@ public class ResultWebService {
 				// The first node is #Text
 				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
 				if ("a".equals(raceNumNode.getNodeName())){
-					raceNumList.add(raceNumNode.getAttributes().getNamedItem("href").getNodeValue());
+					String queueLocation = raceNumNode.getAttributes().getNamedItem("href").getNodeValue();
+					RaceResultQueue raceResultQueue = new RaceResultQueue();
+					raceResultQueue.setLocation(queueLocation);
+					raceNumList.add(raceResultQueue);
 				}
 			}
 		}
@@ -85,7 +92,7 @@ public class ResultWebService {
 	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		String xml = retrieveXml(location);
 		RaceResult raceResult = ResultWebServiceHelper.getRaceResult(xml, location);
-		List<RaceResultHorse> raceResultHorseList = ResultWebServiceHelper.getRaceResultHorseList(xml);
+		List<RaceResultHorse> raceResultHorseList = ResultWebServiceHelper.getRaceResultHorseList(xml, raceResult);
 		raceResult.setRaceResultHorseList(raceResultHorseList);
 		return raceResult;
 	}

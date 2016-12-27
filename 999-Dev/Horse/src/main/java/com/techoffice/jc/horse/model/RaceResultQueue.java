@@ -49,5 +49,17 @@ public class RaceResultQueue {
 	public void setRunInd(String runInd) {
 		this.runInd = runInd;
 	}
+	public Date getRaceDate() {
+		return raceDate;
+	}
+	public void setRaceDate(Date raceDate) {
+		this.raceDate = raceDate;
+	}
+	public String getRaceNum() {
+		return raceNum;
+	}
+	public void setRaceNum(String raceNum) {
+		this.raceNum = raceNum;
+	}
 	
 }

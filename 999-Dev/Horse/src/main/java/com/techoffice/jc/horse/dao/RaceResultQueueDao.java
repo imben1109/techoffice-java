@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,12 @@ public class RaceResultQueueDao {
 	public void deleteAll(){
 		Session session = sessionFactory.getCurrentSession();
 		session.createQuery("DELETE From RaceResultQueue").executeUpdate();
+	}
+	
+	@Transactional
+	public List<RaceResultQueue> list(){
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("from RaceResultQueue");
+		return query.list();
 	}
 }

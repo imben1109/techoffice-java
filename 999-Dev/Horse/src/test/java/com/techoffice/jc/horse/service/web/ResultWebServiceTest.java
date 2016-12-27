@@ -64,10 +64,10 @@ public class ResultWebServiceTest {
 		int raceResultCount = 0;
 		List<String> raceDateList = resultWebService.retrieveRaceDateList();
 		for(String raceDate: raceDateList){
-			List<String> raceNumList = resultWebService.getRaceNumList(raceDate);
-			for(String raceNum: raceNumList){
+			List<RaceResultQueue> raceResultQueueList = resultWebService.getRaceResultQueueList(raceDate);
+			for(RaceResultQueue raceNum: raceResultQueueList){
 				RaceResultQueue queue = new RaceResultQueue();
-				queue.setLocation(raceNum);
+				queue.setLocation(raceNum.getLocation());
 				raceResultQueueDao.addRaceResultQueue(queue);
 				raceResultCount++;
 				System.out.println(raceNum);
@@ -78,12 +78,10 @@ public class ResultWebServiceTest {
 	
 	@Test
 	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
-		List<String> raceDateList = resultWebService.retrieveRaceDateList();
-		List<String> raceNumList = resultWebService.getRaceNumList(raceDateList.get(0));
-		RaceResult raceResult = resultWebService.getRaceResult(raceNumList.get(0));
+		List<RaceResultQueue> raceResultQueueList = raceResultQueueDao.list();
+		RaceResult raceResult = resultWebService.getRaceResult(raceResultQueueList.get(0).getLocation());
 		raceResultDao.add(raceResult);
-		raceResultHorseDao.addList(raceResult.getRaceResultHorseList());
+//		raceResultHorseDao.addList(raceResult.getRaceResultHorseList());
 		System.out.println("raceResult with id:" + raceResult.getId() + " is created.");
-		System.out.println(raceResult.getRaceResultHorseList().get(0).getId());
 	}
 }
