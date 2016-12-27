@@ -48,10 +48,6 @@ public class ResultWebService {
 	
 	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
         final HtmlPage page = webClient.getPage(HOST + location);
-        List list = page.getByXPath("//*[@id='loading']");
-        if(list.size() > 0){
-        	System.out.println("Loading");
-        }
         String xml = page.asXml();
         webClient.close();
         return xml;
