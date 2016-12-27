@@ -24,6 +24,7 @@ import com.techoffice.jc.horse.dao.RaceResultHorseDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
+import com.techoffice.jc.horse.service.ResultService;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -43,6 +44,9 @@ public class ResultWebServiceTest {
 	
 	@Autowired
 	private RaceResultHorseDao raceResultHorseDao;
+	
+	@Autowired
+	private ResultService resultService;
 
 //	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
@@ -78,10 +82,6 @@ public class ResultWebServiceTest {
 	
 	@Test
 	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
-		List<RaceResultQueue> raceResultQueueList = raceResultQueueDao.list();
-		RaceResult raceResult = resultWebService.getRaceResult(raceResultQueueList.get(0).getLocation());
-		raceResultDao.add(raceResult);
-//		raceResultHorseDao.addList(raceResult.getRaceResultHorseList());
-		System.out.println("raceResult with id:" + raceResult.getId() + " is created.");
+		resultService.executeResultQueue();
 	}
 }
