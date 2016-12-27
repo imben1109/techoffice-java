@@ -70,7 +70,7 @@ public class XmlUtil {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() != 1){
-			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions" );
+			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
 		}else {
 			Node node = nodeList.item(0);
 			nodeText = getNodeText(node);

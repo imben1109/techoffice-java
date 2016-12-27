@@ -17,11 +17,17 @@ public class RaceResultQueueDaoTest {
 	@Autowired
 	private RaceResultQueueDao raceResultQueueDao;
 	
-	@Test
+//	@Test
 	public void listActiveQueue(){
 		List<RaceResultQueue> list = raceResultQueueDao.listActiveQueue();
 		for (RaceResultQueue queue: list){
 			System.out.println(queue.getLocation() + " " + queue.getRunInd());
 		}
+	}
+	
+	@Test
+	public void getRaceResultQueueByLocation(){
+		RaceResultQueue queue = raceResultQueueDao.getRaceResultQueueByLocation("/racing/Info/Meeting/Results/English/Local/20161211/ST/4");
+		System.out.println(queue.getId());
 	}
 }

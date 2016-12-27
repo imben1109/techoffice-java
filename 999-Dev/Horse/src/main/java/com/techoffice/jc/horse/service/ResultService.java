@@ -55,11 +55,11 @@ public class ResultService {
 				successCount++;
 			} catch (Exception e) {
 				resultQueueService.updateFailResultQueue(raceResultQueue);
-				failCount++;
 				log.error("Exception when executing " + raceResultQueue.getLocation(), e);
+				failCount++;
 			}
 		}
 		log.info("Success Count: " + successCount);
-		log.info(" Fail Count: " + failCount);
+		log.info("Fail Count: " + failCount);
 	}
 }

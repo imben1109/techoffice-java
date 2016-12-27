@@ -19,13 +19,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.jc.horse.dao.RaceDateDao;
 import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultHorseDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
-import com.techoffice.jc.horse.model.RaceResult;
-import com.techoffice.jc.horse.model.RaceResultQueue;
+import com.techoffice.jc.horse.model.RaceDate;
+import com.techoffice.jc.horse.service.ResultQueueService;
 import com.techoffice.jc.horse.service.ResultService;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -47,6 +47,12 @@ public class ResultWebServiceTest {
 	
 	@Autowired
 	private ResultService resultService;
+	
+	@Autowired
+	private ResultQueueService resultQueueService;
+	
+	@Autowired
+	private RaceDateDao raceDateDao;
 
 //	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
@@ -56,32 +62,10 @@ public class ResultWebServiceTest {
 	
 //	@Test
 	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<String> raceDateList = resultWebService.retrieveRaceDateList();
-		for(String raceDate: raceDateList){
-			System.out.println(raceDate);
+		List<RaceDate> raceDateList = resultWebService.retrieveRaceDateList();
+		for(RaceDate raceDate: raceDateList){
+			System.out.println(raceDate.getRaceDate());
 		}
 	}
 	
-//	@Test
-	public void getRaceNumList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		raceResultQueueDao.deleteAll();
-		int raceResultCount = 0;
-		List<String> raceDateList = resultWebService.retrieveRaceDateList();
-		for(String raceDate: raceDateList){
-			List<RaceResultQueue> raceResultQueueList = resultWebService.getRaceResultQueueList(raceDate);
-			for(RaceResultQueue raceNum: raceResultQueueList){
-				RaceResultQueue queue = new RaceResultQueue();
-				queue.setLocation(raceNum.getLocation());
-				raceResultQueueDao.addRaceResultQueue(queue);
-				raceResultCount++;
-				System.out.println(raceNum);
-			}
-		}
-		System.out.println(raceResultCount + " Reace Results is inserted into the Queue.");
-	}
-	
-	@Test
-	public void getRaceResult() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
-		resultService.executeResultQueueList();
-	}
 }

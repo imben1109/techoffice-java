@@ -119,4 +119,10 @@ public class ResultWebServiceHelper {
 		raceResultHorse.setWinOdds(tdValueList.get(11));
 		return raceResultHorse;
 	}
+	
+	public static Date getRaceDate(String raceDateStr) throws ParseException{
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyymmdd");
+		Date raceDate = simpleDateFormat.parse(raceDateStr);
+		return raceDate;
+	}
 }

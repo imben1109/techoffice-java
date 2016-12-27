@@ -34,6 +34,20 @@ public class RaceResultQueueDao {
 	}
 	
 	@Transactional
+	public RaceResultQueue getRaceResultQueueByLocation(String location){
+		Session session = sessionFactory.getCurrentSession();
+		Query<RaceResultQueue> query = session.createQuery("From RaceResultQueue where lower(LOCATION) = lower(:LOCATION) ", RaceResultQueue.class);
+		query.setParameter("LOCATION", location);
+		List<RaceResultQueue> resultQueueList = query.getResultList();
+		if (resultQueueList.size() == 0 ){
+			return null;
+		}else if (resultQueueList.size() == 1){
+			return resultQueueList.get(0);
+		}
+		return null;
+	}
+	
+	@Transactional
 	public void deleteAll(){
 		Session session = sessionFactory.getCurrentSession();
 		session.createQuery("DELETE From RaceResultQueue").executeUpdate();

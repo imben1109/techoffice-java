@@ -44,6 +44,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
+				<value>com.techoffice.jc.horse.model.RaceDate</value>
 				<value>com.techoffice.jc.horse.model.RaceResultQueue</value>
 				<value>com.techoffice.jc.horse.model.RaceResult</value>
 				<value>com.techoffice.jc.horse.model.RaceResultHorse</value>

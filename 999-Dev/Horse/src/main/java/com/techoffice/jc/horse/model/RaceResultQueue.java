@@ -28,6 +28,12 @@ public class RaceResultQueue {
 	@Column(name="LOCATION")
 	private String location;
 	
+	@Column(name="RACE_TYPE")
+	private String raceType;
+	
+	@Column(name="VENUE")
+	private String venue;
+	
 	@Column(name="RUN_IND")
 	private String runInd;
 	
@@ -60,6 +66,18 @@ public class RaceResultQueue {
 	}
 	public void setRaceNum(String raceNum) {
 		this.raceNum = raceNum;
+	}
+	public String getRaceType() {
+		return raceType;
+	}
+	public void setRaceType(String raceType) {
+		this.raceType = raceType;
+	}
+	public String getVenue() {
+		return venue;
+	}
+	public void setVenue(String venue) {
+		this.venue = venue;
 	}
 	
 }

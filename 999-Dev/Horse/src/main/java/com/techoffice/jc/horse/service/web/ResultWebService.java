@@ -3,7 +3,9 @@ package com.techoffice.jc.horse.service.web;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -21,6 +23,7 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
@@ -45,31 +48,44 @@ public class ResultWebService {
 	
 	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
         final HtmlPage page = webClient.getPage(HOST + location);
+        List list = page.getByXPath("//*[@id='loading']");
+        if(list.size() > 0){
+        	System.out.println("Loading");
+        }
         String xml = page.asXml();
         webClient.close();
         return xml;
 	}
 	
-	public List<String> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<String> raceDateList = new ArrayList<String>();		
+	public List<RaceDate> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
 		Node dateSelect = dateSelectList.item(0);
 		NodeList raceDatesNodeList = dateSelect.getChildNodes();
 		for (int i=0; i<raceDatesNodeList.getLength(); i++){
-			Node raceDate = raceDatesNodeList.item(i);
-			if("option".equals(raceDate.getNodeName())){
-				raceDateList.add(LOCATION + raceDate.getAttributes().getNamedItem("value").getNodeValue());
+			Node raceDateNode = raceDatesNodeList.item(i);
+			if("option".equals(raceDateNode.getNodeName())){
+				RaceDate raceDate = new RaceDate();
+				raceDate.setRaceDate(LOCATION + raceDateNode.getAttributes().getNamedItem("value").getNodeValue());
+				raceDateList.add(raceDate);
 			}
 		}
 		return raceDateList;
 	}
 	
-	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
+		String[] locationArr = location.split("/");
+		Date raceDate = ResultWebServiceHelper.getRaceDate(locationArr[7]);
+		String raceType = locationArr[6];
+		String venue = locationArr[8];
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		RaceResultQueue firstRaceResultQueue = new RaceResultQueue();
 		firstRaceResultQueue.setLocation(location);
 		firstRaceResultQueue.setRaceNum("1");
+		firstRaceResultQueue.setRaceDate(raceDate);
+		firstRaceResultQueue.setRaceType(raceType);
+		firstRaceResultQueue.setVenue(venue);
 		raceNumList.add(firstRaceResultQueue);
 		String xml = retrieveXml(location);
 		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr/td");
@@ -82,6 +98,9 @@ public class ResultWebService {
 					String queueLocation = raceNumNode.getAttributes().getNamedItem("href").getNodeValue();
 					RaceResultQueue raceResultQueue = new RaceResultQueue();
 					raceResultQueue.setLocation(queueLocation);
+					raceResultQueue.setRaceDate(raceDate);
+					raceResultQueue.setRaceType(raceType);
+					raceResultQueue.setVenue(venue);
 					raceNumList.add(raceResultQueue);
 				}
 			}
