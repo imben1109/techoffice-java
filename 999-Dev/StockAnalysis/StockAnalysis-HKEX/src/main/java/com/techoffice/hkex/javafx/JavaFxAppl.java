@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 @Component
 public class JavaFxAppl extends Application{
 	
+	private static final double HEIGHT = 300;
+	private static final double WIDTH = 500;
+	
 	public static final String TITLE = "Stock Analysis - HKEX";
 	public static final String APP_FXML_PATH = "fxml/appl.fxml";
 	
@@ -22,6 +25,8 @@ public class JavaFxAppl extends Application{
 		SpringFxmlLoader springFxmlLoader = new SpringFxmlLoader();
         VBox root = (VBox) springFxmlLoader.load(APP_FXML_PATH);
         Scene scene = new Scene(root);
+        primaryStage.setWidth(WIDTH);
+        primaryStage.setHeight(HEIGHT);
         primaryStage.setScene(scene);
         primaryStage.setTitle(TITLE);
         primaryStage.show();

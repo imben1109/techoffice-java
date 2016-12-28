@@ -16,20 +16,20 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.yahoo.finance.stock.dao.StockDao;
-import com.techoffice.yahoo.finance.stock.service.webclient.StockListWebService;
+import com.techoffice.yahoo.finance.stock.service.web.StockHistoryDataWebService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private StockListWebService stockListWebService;
+	private StockHistoryDataWebService stockListWebService;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		String xml = stockListWebService.retrieveStockListByWebClient();
+		String xml = stockListWebService.downloadHistoryData();
 		System.out.println(xml);
 	}
 	
