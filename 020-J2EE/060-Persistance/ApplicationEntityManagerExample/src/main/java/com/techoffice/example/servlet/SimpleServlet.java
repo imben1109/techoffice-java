@@ -1,4 +1,4 @@
-package com.ittechoffice.example.servlet;
+package com.techoffice.example.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ittechoffice.example.model.User;
+import com.techoffice.example.model.User;
 
 public class SimpleServlet extends HttpServlet{
 	

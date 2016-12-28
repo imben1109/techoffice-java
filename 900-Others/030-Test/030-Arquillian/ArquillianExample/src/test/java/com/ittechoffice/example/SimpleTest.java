@@ -10,6 +10,8 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import com.techoffice.example.TestBean;
+
 @RunWith(Arquillian.class)
 public class SimpleTest {
 	
