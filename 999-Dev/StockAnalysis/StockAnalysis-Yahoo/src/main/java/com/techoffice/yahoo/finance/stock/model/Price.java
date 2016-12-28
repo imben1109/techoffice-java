@@ -2,7 +2,10 @@ package com.techoffice.yahoo.finance.stock.model;
 
 import java.util.Date;
 
+import com.opencsv.bean.CsvBind;
+
 public class Price {
+	@CsvBind
 	private Date date;
 	private double open;
 	private double high;
