@@ -13,6 +13,7 @@ import com.techoffice.hkex.stock.model.Stock;
 
 @Repository
 public class StockDao {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 
