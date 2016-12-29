@@ -16,12 +16,12 @@ import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.jc.horse.crawler.RaceResultCrawler;
 import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultHorseDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
-import com.techoffice.jc.horse.service.web.ResultWebService;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Service
@@ -30,7 +30,7 @@ public class ResultService {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
-	private ResultWebService resultWebService;
+	private RaceResultCrawler resultWebService;
 	
 	@Autowired
 	private RaceResultQueueDao raceResultQueueDao ;

@@ -1,4 +1,4 @@
-package com.techoffice.jc.horse.service.web;
+package com.techoffice.jc.horse.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -19,6 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.jc.horse.crawler.RaceResultCrawler;
 import com.techoffice.jc.horse.dao.RaceDateDao;
 import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultHorseDao;
@@ -29,42 +30,24 @@ import com.techoffice.jc.horse.service.ResultService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class ResultWebServiceTest {
+public class RaceResultCrawlerTest {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
-	private ResultWebService resultWebService;
+	private RaceResultCrawler raceResultCrawler;
 	
-	@Autowired
-	private RaceResultQueueDao raceResultQueueDao ;
-	
-	@Autowired
-	private RaceResultDao raceResultDao;
-	
-	@Autowired
-	private RaceResultHorseDao raceResultHorseDao;
-	
-	@Autowired
-	private ResultService resultService;
-	
-	@Autowired
-	private ResultQueueService resultQueueService;
-	
-	@Autowired
-	private RaceDateDao raceDateDao;
-
-//	@Test
+	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		String xml = resultWebService.retrieveXml();
-		System.out.println(xml);	
+		String xml = raceResultCrawler.retrieveXml();
+		log.info(xml);
 	}
 	
-//	@Test
+	@Test
 	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<RaceDate> raceDateList = resultWebService.retrieveRaceDateList();
+		List<RaceDate> raceDateList = raceResultCrawler.retrieveRaceDateList();
 		for(RaceDate raceDate: raceDateList){
-			System.out.println(raceDate.getRaceDate());
+			log.info(raceDate.getRaceDate());
 		}
 	}
 	

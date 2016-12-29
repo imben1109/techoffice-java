@@ -1,4 +1,4 @@
-package com.techoffice.jc.horse.service.web.helper;
+package com.techoffice.jc.horse.helper;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -19,7 +19,7 @@ import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
-public class ResultWebServiceHelper {
+public class RaceResultHelper {
 	
 	public static RaceResult getRaceResult(String xml, String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException{
 		RaceResult raceResult = new RaceResult();

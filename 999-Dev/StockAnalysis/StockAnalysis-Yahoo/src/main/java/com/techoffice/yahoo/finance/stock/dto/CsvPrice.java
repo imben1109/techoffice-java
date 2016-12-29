@@ -1,22 +1,21 @@
-package com.techoffice.yahoo.finance.stock.model;
+package com.techoffice.yahoo.finance.stock.dto;
 
 import java.util.Date;
 
 import com.opencsv.bean.CsvBind;
 
-public class Price {
-	private Date date;
+public class CsvPrice {
+	private String date;
 	private double open;
 	private double high;
 	private double low;
 	private double close;
 	private double adjClose;
 
-
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public double getOpen() {

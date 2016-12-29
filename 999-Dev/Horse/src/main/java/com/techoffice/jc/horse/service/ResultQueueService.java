@@ -17,13 +17,13 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.jc.horse.crawler.RaceResultCrawler;
 import com.techoffice.jc.horse.dao.RaceDateDao;
 import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
-import com.techoffice.jc.horse.service.web.ResultWebService;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Service
@@ -31,7 +31,7 @@ public class ResultQueueService {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
-	private ResultWebService resultWebService;
+	private RaceResultCrawler raceResultCrawler;
 	
 	@Autowired
 	private RaceResultQueueDao raceResultQueueDao ;
@@ -45,7 +45,7 @@ public class ResultQueueService {
 	@Transactional
 	public void executeResultQueue(RaceResultQueue raceResultQueue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		log.info("It is executing " + raceResultQueue.getLocation() );
-		RaceResult raceResult = resultWebService.getRaceResult(raceResultQueue.getLocation());
+		RaceResult raceResult = raceResultCrawler.getRaceResult(raceResultQueue.getLocation());
 		raceResultDao.add(raceResult);
 		raceResultQueue.setRunInd("Y");
 		raceResultQueueDao.update(raceResultQueue);
@@ -75,7 +75,7 @@ public class ResultQueueService {
 	@Transactional
 	public int updateResultQueueByRaceDate(String raceDate) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
 		int raceResultCount = 0;
-		List<RaceResultQueue> raceResultQueueList = resultWebService.getRaceResultQueueList(raceDate);
+		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(raceDate);
 		for(RaceResultQueue queue: raceResultQueueList){
 			updateResultQueue(queue);
 			raceResultCount++;
@@ -85,7 +85,7 @@ public class ResultQueueService {
 	
 	@Transactional
 	public void updateRaceDate() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<RaceDate> newRaceDateList = resultWebService.retrieveRaceDateList();
+		List<RaceDate> newRaceDateList = raceResultCrawler.retrieveRaceDateList();
 		for (RaceDate newRaceDate: newRaceDateList){
 			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
 			if (raceDate == null){

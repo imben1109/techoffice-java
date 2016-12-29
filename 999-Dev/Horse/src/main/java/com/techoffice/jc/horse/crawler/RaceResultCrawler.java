@@ -1,4 +1,4 @@
-package com.techoffice.jc.horse.service.web;
+package com.techoffice.jc.horse.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -23,16 +23,16 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.jc.horse.helper.RaceResultHelper;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
-import com.techoffice.jc.horse.service.web.helper.ResultWebServiceHelper;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Component
-public class ResultWebService {
+public class RaceResultCrawler {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -72,7 +72,7 @@ public class ResultWebService {
 	
 	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
 		String[] locationArr = location.split("/");
-		Date raceDate = ResultWebServiceHelper.getRaceDate(locationArr[7]);
+		Date raceDate = RaceResultHelper.getRaceDate(locationArr[7]);
 		String raceType = locationArr[6];
 		String venue = locationArr[8];
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
@@ -106,8 +106,8 @@ public class ResultWebService {
 	
 	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		String xml = retrieveXml(location);
-		RaceResult raceResult = ResultWebServiceHelper.getRaceResult(xml, location);
-		List<RaceResultHorse> raceResultHorseList = ResultWebServiceHelper.getRaceResultHorseList(xml, raceResult);
+		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
+		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);
 		raceResult.setRaceResultHorseList(raceResultHorseList);
 		return raceResult;
 	}
