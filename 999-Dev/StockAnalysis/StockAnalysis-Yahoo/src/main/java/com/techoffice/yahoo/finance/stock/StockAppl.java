@@ -1,6 +1,7 @@
 package com.techoffice.yahoo.finance.stock;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,25 +16,25 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
 import com.techoffice.yahoo.finance.stock.dao.StockDao;
-import com.techoffice.yahoo.finance.stock.service.web.StockHistoryDataWebService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private StockHistoryDataWebService stockListWebService;
+	private StockHistoryDataCrawler stockListWebService;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
-	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, IllegalAccessException, InvocationTargetException{
 		String xml = stockListWebService.downloadHistoryData();
 		System.out.println(xml);
 	}
 	
-	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, IllegalAccessException, InvocationTargetException{
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		StockAppl appl = context.getBean(StockAppl.class);
 		appl.run();
