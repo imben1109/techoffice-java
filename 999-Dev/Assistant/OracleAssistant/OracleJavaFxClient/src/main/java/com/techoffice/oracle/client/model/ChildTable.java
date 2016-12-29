@@ -17,8 +17,8 @@ public class ChildTable {
 	@Column(name="COLUMNS")
 	private String columns;
 	
-	@Column(name="PARENT_TABLES")
-	private String parentTables;
+	@Column(name="CHILD_TABLES")
+	private String childTables;
 
 	public String getTableName() {
 		return tableName;
@@ -36,13 +36,14 @@ public class ChildTable {
 		this.columns = columns;
 	}
 
-	public String getParentTables() {
-		return parentTables;
+	public String getChildTables() {
+		return childTables;
 	}
 
-	public void setParentTables(String parentTables) {
-		this.parentTables = parentTables;
+	public void setChildTables(String childTables) {
+		this.childTables = childTables;
 	}
+
 
 
 	
