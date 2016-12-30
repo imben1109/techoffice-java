@@ -1,4 +1,4 @@
-package com.ittehoffice.example.poi.word;
+package com.tehoffice.example.poi.word;
 
 import java.io.File;
 import java.io.FileInputStream;
