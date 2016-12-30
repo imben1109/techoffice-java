@@ -14,8 +14,12 @@ import org.docx4j.wml.R;
 import org.docx4j.wml.Tbl;
 import org.docx4j.wml.Text;
 
-import com.techoffice.example.Appl;
-
+/**
+ * The Feature can be found in POI Library. Used POI directly instead.
+ * @author Ben_c
+ *
+ */
+@Deprecated
 public class ContentParser {
 	
 	public static final String EMPTY_PARAGRAPH = "EMPTY_PARAGRAPH";
