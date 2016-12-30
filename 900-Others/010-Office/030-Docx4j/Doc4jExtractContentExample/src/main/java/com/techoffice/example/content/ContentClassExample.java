@@ -86,7 +86,9 @@ import com.techoffice.example.Appl;
  * 
  * @author Ben_c
  *
+ * The Feature can be found in POI Library. Used POI directly instead.
  */
+@Deprecated
 public class ContentClassExample {
 	public static void main(String[] args) throws Exception{
 		WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.load(new File("Sample.docx"));

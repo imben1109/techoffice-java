@@ -9,8 +9,12 @@ import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.docx4j.wml.P;
 import org.docx4j.wml.PPr;
 
-import com.techoffice.example.Appl;
-
+/**
+ * The Feature can be found in POI Library. Used POI directly instead.
+ * @author Ben_c
+ *
+ */
+@Deprecated
 public class ParagraphHelper {
 	private static final String STYLE= "STYLE";
 	private static final String LIST = "LIST";
