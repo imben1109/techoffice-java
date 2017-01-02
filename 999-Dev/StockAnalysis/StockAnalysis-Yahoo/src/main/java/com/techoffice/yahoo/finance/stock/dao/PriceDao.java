@@ -12,10 +12,19 @@ import org.springframework.transaction.annotation.Transactional;
 import com.techoffice.yahoo.finance.stock.model.Price;
 
 @Repository
-public class StockDao {
+public class PriceDao {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
+	
+	@SuppressWarnings("rawtypes")
+	@Transactional
+	public void deletePrice(String stockNo){
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("DELETE From Price Where stockNo = :stockNo");
+		query.setParameter("stockNo", stockNo);
+		query.executeUpdate();
+	}
 	
 	@Transactional
 	public void addPriceList(List<Price> priceList){
@@ -32,4 +41,11 @@ public class StockDao {
 		return query.getResultList();
 	}
 	
+	@Transactional
+	public List<Price> getPriceList(String stockNo){
+		Session session = sessionFactory.getCurrentSession();
+		Query<Price> query = session.createQuery("from Price where stockNo = :stockNo ", Price.class);
+		query.setParameter("stockNo", stockNo);
+		return query.getResultList();
+	}
 }
