@@ -6,12 +6,13 @@ import javax.persistence.Table;
 
 /**
  * This model represents Stock in Hong Kong Hang Seng Index (HSI).
+ * Stock in Hang Seng Index is Blue chip in Hong Kong.
  * 
  * @author ben
  *
  */
 @Entity
-@Table(name="HKSE_STOCK")
+@Table(name="HSI_STOCK")
 public class HsiStock {
 	
 	@Column(name="STOCK_NO")
