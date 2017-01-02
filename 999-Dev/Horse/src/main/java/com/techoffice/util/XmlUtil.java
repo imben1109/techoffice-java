@@ -77,7 +77,7 @@ public class XmlUtil {
 			Node node = nodeList.item(0);
 			nodeText = getNodeText(node);
 		}
-		nodeText = StringUtil.removeSpecialCharacter(nodeText);
+		nodeText = SpecialStringUtil.removeSpecialCharacter(nodeText);
 		return nodeText;
 	}
 	
@@ -88,7 +88,7 @@ public class XmlUtil {
 			for (int i=0; i<nodeList.getLength(); i++){
 				Node childNode = nodeList.item(i);
 				if (childNode.getChildNodes().getLength() == 1 ){
-					nodeText += " " + StringUtil.removeSpecialCharacter(childNode.getFirstChild().getNodeValue());
+					nodeText += " " + SpecialStringUtil.removeSpecialCharacter(childNode.getFirstChild().getNodeValue());
 				}else {
 					nodeText += " " + getNodeText(childNode);
 				}

@@ -1,6 +1,6 @@
 package com.techoffice.util;
 
-public class StringUtil {
+public class SpecialStringUtil {
 	
 	public static String replaceNewLineToSpace(String str){
 		String newStr = str.replace("\n", " ");
