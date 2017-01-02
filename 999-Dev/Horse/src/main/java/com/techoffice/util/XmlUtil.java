@@ -51,6 +51,8 @@ public class XmlUtil {
 	public static String tidyXml(String xml){
 		Tidy tidy = new Tidy();
 		tidy.setXmlTags(true);
+		tidy.setInputEncoding("UTF-8");
+		tidy.setOutputEncoding("UTF-8");
 		OutputStream out = new ByteArrayOutputStream();
 		tidy.parse(new ByteArrayInputStream(xml.getBytes()), out);
 		String tiddiedXml = out.toString();

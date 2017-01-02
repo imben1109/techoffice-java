@@ -7,6 +7,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
@@ -21,6 +23,8 @@ import com.techoffice.util.XmlUtil;
 @Component
 public class HsiStockListCrawler {
 	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+
 	public static final String URL = "https://hk.finance.yahoo.com/q/cp?s=%5EHSI";
 
 	@Autowired
@@ -28,7 +32,7 @@ public class HsiStockListCrawler {
 
 	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
 		webClient.getOptions().setThrowExceptionOnScriptError(false);
-        final HtmlPage page = webClient.getPage(URL);
+		final HtmlPage page = webClient.getPage(URL);
         String xml = page.asXml();
         webClient.close();
         webClient.getOptions().setThrowExceptionOnScriptError(true);

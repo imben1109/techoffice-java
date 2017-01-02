@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -44,15 +45,17 @@ public class XmlUtil {
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 		String tiddedXml = tidyXml(xml);
-		Document document = documentBuilder.parse(new ByteArrayInputStream(tiddedXml.getBytes()));
+		Document document = documentBuilder.parse(new ByteArrayInputStream(tiddedXml.getBytes("UTF-8")));
 		return document;
 	}
 	
-	public static String tidyXml(String xml){
+	public static String tidyXml(String xml) throws UnsupportedEncodingException{
 		Tidy tidy = new Tidy();
 		tidy.setXmlTags(true);
+		tidy.setInputEncoding("UTF-8");
+		tidy.setOutputEncoding("UTF-8");
 		OutputStream out = new ByteArrayOutputStream();
-		tidy.parse(new ByteArrayInputStream(xml.getBytes()), out);
+		tidy.parse(new ByteArrayInputStream(xml.getBytes("UTF-8")), out);
 		String tiddiedXml = out.toString();
 		return tiddiedXml;
 	}
