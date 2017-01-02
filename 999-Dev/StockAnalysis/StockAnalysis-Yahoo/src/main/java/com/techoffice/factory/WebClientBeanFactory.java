@@ -33,6 +33,7 @@ public class WebClientBeanFactory implements FactoryBean<WebClient> {
 	        java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF); 
 	        java.util.logging.Logger.getLogger("org.apache.commons.httpclient").setLevel(Level.OFF);
 		}
+		
 	}
 	
 	public WebClient getObject() throws Exception {
