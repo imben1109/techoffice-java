@@ -17,8 +17,8 @@ public class HsiStock {
 	@Column(name="STOCK_NO")
 	private String stockNo;
 	
-	@Column(name="NAME")
-	private String name;
+	@Column(name="CHI_NAME")
+	private String chiName;
 	
 	
 }
