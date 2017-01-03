@@ -5980,3 +5980,120 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 2016-11-24 20:33:55 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
 2016-11-24 20:33:58 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@73846619: startup date [Thu Nov 24 20:33:37 HKT 2016]; root of context hierarchy
 2016-11-24 20:33:58 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-01-03 22:01:25 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-03 22:01:25 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-03 22:01:25 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@feb3fa, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@15d3402, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1565ec2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2f8f11, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@193948d]
+2017-01-03 22:01:25 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-03 22:01:26 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@bfbc86: startup date [Tue Jan 03 22:01:26 CST 2017]; root of context hierarchy
+2017-01-03 22:01:26 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-03 22:01:28 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-03 22:01:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-03 22:01:28 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-03 22:01:28 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-03 22:01:28 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-03 22:01:29 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@151e129'
+2017-01-03 22:01:29 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@44052e] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-03 22:01:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [20:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [20:1] Ignoring the following declarations in this rule.
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [78:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [380:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [391:214] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.37' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2017-01-03 22:01:31 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.37' [93:70] Ignoring the following declarations in this rule.
+2017-01-03 22:01:34 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:35 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:35 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:35 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:35 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:35 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@16534212
+2017-01-03 22:01:35 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:01:35 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:36 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:36 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:37 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2017-01-03 22:01:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:01:37 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'http://s.update.rubiconproject.com/2/873648/analytics.js?si=37314&di=www.aastocks.com&ap=&ti=1f22723f-9eae-4258-8d93-d9aee36b8997&dt=8736481428691810142000', but got ''.
+2017-01-03 22:01:38 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:38 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:38 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:01:41 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@bfbc86: startup date [Tue Jan 03 22:01:26 CST 2017]; root of context hierarchy
+2017-01-03 22:01:41 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-01-03 22:02:32 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-03 22:02:32 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-03 22:02:32 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@feb3fa, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@15d3402, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1565ec2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2f8f11, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@193948d]
+2017-01-03 22:02:32 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-03 22:02:33 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@bfbc86: startup date [Tue Jan 03 22:02:33 CST 2017]; root of context hierarchy
+2017-01-03 22:02:33 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-03 22:02:34 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-03 22:02:34 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-03 22:02:34 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-03 22:02:34 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-03 22:02:35 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-03 22:02:35 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1a3f4de'
+2017-01-03 22:02:35 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@44052e] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-03 22:02:36 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:36 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:37 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [20:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [20:1] Ignoring the following declarations in this rule.
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [78:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [380:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [391:214] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.37' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2017-01-03 22:02:37 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.37' [93:70] Ignoring the following declarations in this rule.
+2017-01-03 22:02:40 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:40 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:40 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:41 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2017-01-03 22:02:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:02:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:42 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@23021388
+2017-01-03 22:02:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:43 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:02:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:02:47 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@bfbc86: startup date [Tue Jan 03 22:02:33 CST 2017]; root of context hierarchy
+2017-01-03 22:02:47 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'

@@ -1,4 +1,4 @@
-package com.techoffice.aastock.stock.service.web;
+package com.techoffice.aastock.stock.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -20,7 +20,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.util.XmlUtil;
 
 @Service
-public class CalendarWebService {
+public class CalendarCrawler {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	

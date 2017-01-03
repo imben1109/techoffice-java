@@ -1,4 +1,4 @@
-package com.techoffice.aastock.stock.service.web;
+package com.techoffice.aastock.stock.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -17,17 +17,16 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.aastock.stock.service.web.CalendarWebService;
+import com.techoffice.aastock.stock.crawler.CalendarCrawler;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class CalendarWebServiceTest {
+public class CalendarCrawlerTest {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
-	
 	@Autowired
-	private CalendarWebService calendarWebServiceTest;
+	private CalendarCrawler calendarWebServiceTest;
 	
 	@Test
 	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{

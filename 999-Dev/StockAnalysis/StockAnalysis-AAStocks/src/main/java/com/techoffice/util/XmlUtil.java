@@ -1,7 +1,9 @@
 package com.techoffice.util;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.StringWriter;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -21,7 +23,10 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.tidy.Tidy;
 import org.xml.sax.SAXException;
+
+import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class XmlUtil {
 	
@@ -34,10 +39,22 @@ public class XmlUtil {
 	}
 	
 	public static Document convertXmlStrToDocument(String xml) throws ParserConfigurationException, SAXException, IOException{
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		DocumentBuilder db = dbf.newDocumentBuilder();
-		Document doc = db.parse(new ByteArrayInputStream(xml.getBytes()));
-		return doc;
+		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+		String tiddedXml = tidyXml(xml);
+		Document document = documentBuilder.parse(new ByteArrayInputStream(tiddedXml.getBytes()));
+		return document;
+	}
+	
+	public static String tidyXml(String xml){
+		Tidy tidy = new Tidy();
+		tidy.setXmlTags(true);
+		tidy.setInputEncoding("UTF-8");
+		tidy.setOutputEncoding("UTF-8");
+		OutputStream out = new ByteArrayOutputStream();
+		tidy.parse(new ByteArrayInputStream(xml.getBytes()), out);
+		String tiddiedXml = out.toString();
+		return tiddiedXml;
 	}
 	
 	public static NodeList evaluateXpath(String xml, String xPath) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
@@ -47,6 +64,38 @@ public class XmlUtil {
 		XPathExpression expr = xpath.compile(xPath);
 		NodeList nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
 		return nodeList;
+	}
+	
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException{
+		String nodeText = "";
+		NodeList nodeList = evaluateXpath(xml, xPath);
+		if (nodeList.getLength() != 1){
+			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
+		}else {
+			Node node = nodeList.item(0);
+			nodeText = getNodeText(node);
+		}
+		nodeText = SpecialStringUtil.removeSpecialCharacter(nodeText);
+		return nodeText;
+	}
+	
+	public static String getNodeText(Node node){
+		String nodeText = "";
+		NodeList nodeList = node.getChildNodes();
+		if (nodeList.getLength() > 0){
+			for (int i=0; i<nodeList.getLength(); i++){
+				Node childNode = nodeList.item(i);
+				if (childNode.getChildNodes().getLength() == 1 ){
+					nodeText += " " + SpecialStringUtil.removeSpecialCharacter(childNode.getFirstChild().getNodeValue());
+				}else {
+					nodeText += " " + getNodeText(childNode);
+				}
+			}
+		}else{
+			nodeText += " " + node.getTextContent();
+		}
+		nodeText = nodeText.trim();
+		return nodeText;
 	}
 	
 }
