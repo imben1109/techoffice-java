@@ -32,7 +32,7 @@ public class RelationService {
 		return relationDao.getChildTableList(tableName);
 	}
 	
-	public List<RelationTable> getRelationTableList(){
+	public List<RelationTable> getRelationalTableList(){
 		return relationDao.getRelationTableList();
 
 	}

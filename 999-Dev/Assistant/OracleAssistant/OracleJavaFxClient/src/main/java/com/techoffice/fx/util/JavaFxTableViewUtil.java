@@ -26,6 +26,7 @@ public class JavaFxTableViewUtil {
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static <T> TableView<T> tableViewSetBeanList(TableView<T> tableView, List<T> beanList, Class<T> clz){
+		tableView.getColumns().clear();
 		Field[] fields = clz.getDeclaredFields();
 		for (int i = 0; i<fields.length; i++){
 			Field field = fields[i];
