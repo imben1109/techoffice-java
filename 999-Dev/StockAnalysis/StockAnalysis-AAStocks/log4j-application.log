@@ -6097,3 +6097,989 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 2017-01-03 22:02:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
 2017-01-03 22:02:47 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@bfbc86: startup date [Tue Jan 03 22:02:33 CST 2017]; root of context hierarchy
 2017-01-03 22:02:47 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-01-03 22:19:40 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-03 22:19:40 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-03 22:19:40 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16905e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2d45ba, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ca609, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e2cbe0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@be2bc2]
+2017-01-03 22:19:40 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-03 22:19:40 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@fd02e5: startup date [Tue Jan 03 22:19:40 CST 2017]; root of context hierarchy
+2017-01-03 22:19:40 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-03 22:19:42 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-03 22:19:42 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-03 22:19:42 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-03 22:19:42 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-03 22:19:43 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-03 22:19:44 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1257031] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-03 22:19:44 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:45 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:46 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [20:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [20:1] Ignoring the following declarations in this rule.
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [78:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [380:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [391:214] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/ddlevelsmenu-base_tc.css?v=1.0.37' [27:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/ddlevelsmenu-base_tc.css?v=1.0.37' [27:1] Ignoring the following declarations in this rule.
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/hk_stock.css?v=1.0.37' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2017-01-03 22:19:46 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/hk_stock.css?v=1.0.37' [93:70] Ignoring the following declarations in this rule.
+2017-01-03 22:19:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:51 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:51 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:52 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:19:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:52 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@28777764
+2017-01-03 22:19:53 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:19:53 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:19:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:54 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:19:57 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453194900#17) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=940086352805787659&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D940086352805787659%26mt_id%3D3364305%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D2911586b-b30c-4368-9657-669440249caa%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DCN3WcC7NrWJXNOMLm2ASg9KfADPXZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0I1ZvGy80uaU3a465jHz8G8M_4QJbG_IYJd-FT2sFHrZ8bO8VqW1TD1K-wgBrcuIy5QHB8T5hyKWlvS66wdmx8Rs4cEWm62mSvSeFaZcSfRo1JgnjcPwJ6eR8B5aTMg5gr7lZQsnQIYFj4323AucBgBIieEF_tvhae65R3JBU2OABrz4pu6jwZ65K6AGIagHpr4b2AcA0ggFCIBhEAE%2526num%253D1%2526sig%253DAOD64_2TdaX5pY1nnNm4AU0Cx2-lyXSIHg%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:19:57 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453194900#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=940086352805787659&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D940086352805787659%26mt_id%3D3364305%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D2911586b-b30c-4368-9657-669440249caa%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DCN3WcC7NrWJXNOMLm2ASg9KfADPXZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0I1ZvGy80uaU3a465jHz8G8M_4QJbG_IYJd-FT2sFHrZ8bO8VqW1TD1K-wgBrcuIy5QHB8T5hyKWlvS66wdmx8Rs4cEWm62mSvSeFaZcSfRo1JgnjcPwJ6eR8B5aTMg5gr7lZQsnQIYFj4323AucBgBIieEF_tvhae65R3JBU2OABrz4pu6jwZ65K6AGIagHpr4b2AcA0ggFCIBhEAE%2526num%253D1%2526sig%253DAOD64_2TdaX5pY1nnNm4AU0Cx2-lyXSIHg%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:19:57 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453194900#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=940086352805787659&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D940086352805787659%26mt_id%3D3364305%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D2911586b-b30c-4368-9657-669440249caa%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DCN3WcC7NrWJXNOMLm2ASg9KfADPXZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0I1ZvGy80uaU3a465jHz8G8M_4QJbG_IYJd-FT2sFHrZ8bO8VqW1TD1K-wgBrcuIy5QHB8T5hyKWlvS66wdmx8Rs4cEWm62mSvSeFaZcSfRo1JgnjcPwJ6eR8B5aTMg5gr7lZQsnQIYFj4323AucBgBIieEF_tvhae65R3JBU2OABrz4pu6jwZ65K6AGIagHpr4b2AcA0ggFCIBhEAE%2526num%253D1%2526sig%253DAOD64_2TdaX5pY1nnNm4AU0Cx2-lyXSIHg%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:19:57 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453194900#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=940086352805787659&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D940086352805787659%26mt_id%3D3364305%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D2911586b-b30c-4368-9657-669440249caa%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DCN3WcC7NrWJXNOMLm2ASg9KfADPXZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0I1ZvGy80uaU3a465jHz8G8M_4QJbG_IYJd-FT2sFHrZ8bO8VqW1TD1K-wgBrcuIy5QHB8T5hyKWlvS66wdmx8Rs4cEWm62mSvSeFaZcSfRo1JgnjcPwJ6eR8B5aTMg5gr7lZQsnQIYFj4323AucBgBIieEF_tvhae65R3JBU2OABrz4pu6jwZ65K6AGIagHpr4b2AcA0ggFCIBhEAE%2526num%253D1%2526sig%253DAOD64_2TdaX5pY1nnNm4AU0Cx2-lyXSIHg%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:19:57 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453194900#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.48629298667906795&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=940086352805787659&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D940086352805787659%26mt_id%3D3364305%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D2911586b-b30c-4368-9657-669440249caa%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DCN3WcC7NrWJXNOMLm2ASg9KfADPXZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0I1ZvGy80uaU3a465jHz8G8M_4QJbG_IYJd-FT2sFHrZ8bO8VqW1TD1K-wgBrcuIy5QHB8T5hyKWlvS66wdmx8Rs4cEWm62mSvSeFaZcSfRo1JgnjcPwJ6eR8B5aTMg5gr7lZQsnQIYFj4323AucBgBIieEF_tvhae65R3JBU2OABrz4pu6jwZ65K6AGIagHpr4b2AcA0ggFCIBhEAE%2526num%253D1%2526sig%253DAOD64_2TdaX5pY1nnNm4AU0Cx2-lyXSIHg%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:19:57 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@fd02e5: startup date [Tue Jan 03 22:19:40 CST 2017]; root of context hierarchy
+2017-01-03 22:21:12 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-03 22:21:12 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-03 22:21:12 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16905e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2d45ba, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ca609, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e2cbe0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@be2bc2]
+2017-01-03 22:21:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-03 22:21:13 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@fd02e5: startup date [Tue Jan 03 22:21:13 CST 2017]; root of context hierarchy
+2017-01-03 22:21:13 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-03 22:21:14 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-03 22:21:14 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-03 22:21:14 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-03 22:21:14 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-03 22:21:15 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-03 22:21:16 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1257031] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-03 22:21:16 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:16 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:17 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:18 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [20:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [20:1] Ignoring the following declarations in this rule.
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [78:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [380:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [391:214] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/ddlevelsmenu-base_tc.css?v=1.0.37' [27:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/ddlevelsmenu-base_tc.css?v=1.0.37' [27:1] Ignoring the following declarations in this rule.
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/hk_stock.css?v=1.0.37' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2017-01-03 22:21:18 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/hk_stock.css?v=1.0.37' [93:70] Ignoring the following declarations in this rule.
+2017-01-03 22:21:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:24 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:21:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:25 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:27 ERROR DefaultJavaScriptErrorListener:53 - Error loading JavaScript from [https://cdn.adsfactor.net/viewability/viewability.js].
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:394)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:353)
+	at com.gargoylesoftware.htmlunit.httpclient.HtmlUnitSSLConnectionSocketFactory.connectSocket(HtmlUnitSSLConnectionSocketFactory.java:189)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at com.gargoylesoftware.htmlunit.HttpWebConnection.getResponse(HttpWebConnection.java:183)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseFromWebConnection(WebClient.java:1358)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponse(WebClient.java:1275)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadJavaScriptFromUrl(HtmlPage.java:1009)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:960)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.compile(JavaScriptEngine.java:746)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.compile(JavaScriptEngine.java:711)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:763)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.executeJavaScriptIfPossible(HtmlPage.java:904)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeInlineScriptIfNeeded(HtmlScript.java:307)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:368)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.evaluateInputSource(HTMLScanner.java:615)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.evaluateInputSource(HTMLConfiguration.java:349)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.pushInputString(HTMLParser.java:410)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.writeInParsedStream(HtmlPage.java:2094)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:603)
+	at com.gargoylesoftware.htmlunit.javascript.host.html.HTMLDocument.write(HTMLDocument.java:489)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.sourceforge.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:153)
+	at net.sourceforge.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:384)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1540)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.exec(InterpretedFunction.java:115)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$3.doRun(JavaScriptEngine.java:794)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadExternalJavaScriptFile(HtmlPage.java:975)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:352)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.doProcessPostponedActions(JavaScriptEngine.java:966)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.access$500(JavaScriptEngine.java:101)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:916)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:803)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:779)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.execute(JavaScriptEngine.java:767)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.executeJavaScriptIfPossible(HtmlPage.java:904)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeInlineScriptIfNeeded(HtmlScript.java:307)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.executeScriptIfNeeded(HtmlScript.java:368)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript$2.execute(HtmlScript.java:238)
+	at com.gargoylesoftware.htmlunit.html.HtmlScript.onAllChildrenAddedToPage(HtmlScript.java:257)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:772)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.endElement(HTMLParser.java:729)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.callEndElement(HTMLTagBalancer.java:1209)
+	at net.sourceforge.htmlunit.cyberneko.HTMLTagBalancer.endElement(HTMLTagBalancer.java:1111)
+	at net.sourceforge.htmlunit.cyberneko.filters.DefaultFilter.endElement(DefaultFilter.java:207)
+	at net.sourceforge.htmlunit.cyberneko.filters.NamespaceBinder.endElement(NamespaceBinder.java:337)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scanEndElement(HTMLScanner.java:3137)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner$ContentScanner.scan(HTMLScanner.java:2100)
+	at net.sourceforge.htmlunit.cyberneko.HTMLScanner.scanDocument(HTMLScanner.java:927)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:506)
+	at net.sourceforge.htmlunit.cyberneko.HTMLConfiguration.parse(HTMLConfiguration.java:459)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser$HtmlUnitDOMBuilder.parse(HTMLParser.java:979)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser.parse(HTMLParser.java:241)
+	at com.gargoylesoftware.htmlunit.html.HTMLParser.parseHtml(HTMLParser.java:187)
+	at com.gargoylesoftware.htmlunit.DefaultPageCreator.createHtmlPage(DefaultPageCreator.java:269)
+	at com.gargoylesoftware.htmlunit.DefaultPageCreator.createPage(DefaultPageCreator.java:157)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:512)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:386)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.html.BaseFrameElement.loadInnerPageIfPossible(BaseFrameElement.java:184)
+	at com.gargoylesoftware.htmlunit.html.BaseFrameElement.loadInnerPage(BaseFrameElement.java:122)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.loadFrames(HtmlPage.java:1818)
+	at com.gargoylesoftware.htmlunit.html.HtmlPage.initialize(HtmlPage.java:226)
+	at com.gargoylesoftware.htmlunit.WebClient.loadWebResponseInto(WebClient.java:519)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:386)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:304)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:451)
+	at com.gargoylesoftware.htmlunit.WebClient.getPage(WebClient.java:436)
+	at com.techoffice.aastock.stock.crawler.IndustryPerformanceCrawler.retrieveXml(IndustryPerformanceCrawler.java:29)
+	at com.techoffice.aastock.stock.crawler.IndustryPerformanceCrawler.retrieveIndustryList(IndustryPerformanceCrawler.java:36)
+	at com.techoffice.aastock.stock.crawler.IndustryPerformaceCrawlerTest.getIndrustryList(IndustryPerformaceCrawlerTest.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-01-03 22:21:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:27 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:28 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@4153721
+2017-01-03 22:21:28 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:21:28 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:21:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:28 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:29 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:21:29 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:30 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:30 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:31 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:31 ERROR JavaScriptJobManagerImpl:429 - Job run failed with unexpected RuntimeException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+======= EXCEPTION START ========
+EcmaError: lineNumber=[1] column=[0] lineSource=[  function () {] name=[ReferenceError] sourceName=[script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)] message=[ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)]
+com.gargoylesoftware.htmlunit.ScriptException: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:921)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	... 10 more
+Enclosed exception: 
+net.sourceforge.htmlunit.corejs.javascript.EcmaError: ReferenceError: "check_viewablity" is not defined. (script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988)#1)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3915)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:3899)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:3976)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.nameOrFunction(ScriptRuntime.java:1885)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.getNameFunctionAndThis(ScriptRuntime.java:2304)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:1330)
+	at script(script in http://hkg.aastocks.com/ad/banner/image/4511_2011627104959.htm from (1, 1059) to (1, 1988):1)
+	at net.sourceforge.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:800)
+	at net.sourceforge.htmlunit.corejs.javascript.InterpretedFunction.call(InterpretedFunction.java:105)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.doTopCall(ContextFactory.java:413)
+	at com.gargoylesoftware.htmlunit.javascript.HtmlUnitContextFactory.doTopCall(HtmlUnitContextFactory.java:252)
+	at net.sourceforge.htmlunit.corejs.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3264)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$4.doRun(JavaScriptEngine.java:845)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:906)
+	at net.sourceforge.htmlunit.corejs.javascript.Context.call(Context.java:628)
+	at net.sourceforge.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:515)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:852)
+	at com.gargoylesoftware.htmlunit.javascript.JavaScriptEngine.callFunction(JavaScriptEngine.java:824)
+	at com.gargoylesoftware.htmlunit.InteractivePage.executeJavaScriptFunctionIfPossible(InteractivePage.java:216)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptFunctionJob.runJavaScript(JavaScriptFunctionJob.java:52)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:102)
+	at com.gargoylesoftware.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:426)
+	at com.gargoylesoftware.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:157)
+	at java.lang.Thread.run(Thread.java:745)
+== CALLING JAVASCRIPT ==
+  function () {
+      if (ad_stats.vatt == 0.0001) {
+          check_viewablity(ad, ad_stats, true, 0);
+      }
+      if (is_active && document.hasFocus()) {
+          check_viewablity(ad, ad_stats, false, interval);
+          if (ad_stats.vat >= 30) {
+              clearInterval(timer);
+          }
+      }
+  }
+======= EXCEPTION END ========
+2017-01-03 22:21:31 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453289216#17) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=5224532374794958954&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D5224532374794958954%26mt_id%3D3378830%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D973b586b-b36a-4b1b-ac85-afd6e438fd5c%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DC5pDDarNrWOi1DMXm2QTcwoSwB_XZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0LafZJWyP1jTMjfpIyCYOqmazEJWx5pvQQu_FpPTqCssdKOqfHrJxClp1GRiqEST1XSMa7KSL7uMe1oWuW-EFT4pt1nGLHQpOrub889vkRhD2Xv6QT2Yxura0gqz8oR2_hmXVbK9P8pM-fu8tmlhdtzm4bocg_t52hqPu6tgUkaABoXNjrmS15fb3AGgBiGoB6a-G9gHANIIBQiAYRAB%2526num%253D1%2526sig%253DAOD64_3gWApRv5oH8YdZNA3Vm2Q9W4xgrw%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:21:31 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453289216#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=5224532374794958954&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D5224532374794958954%26mt_id%3D3378830%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D973b586b-b36a-4b1b-ac85-afd6e438fd5c%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DC5pDDarNrWOi1DMXm2QTcwoSwB_XZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0LafZJWyP1jTMjfpIyCYOqmazEJWx5pvQQu_FpPTqCssdKOqfHrJxClp1GRiqEST1XSMa7KSL7uMe1oWuW-EFT4pt1nGLHQpOrub889vkRhD2Xv6QT2Yxura0gqz8oR2_hmXVbK9P8pM-fu8tmlhdtzm4bocg_t52hqPu6tgUkaABoXNjrmS15fb3AGgBiGoB6a-G9gHANIIBQiAYRAB%2526num%253D1%2526sig%253DAOD64_3gWApRv5oH8YdZNA3Vm2Q9W4xgrw%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:21:31 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453289216#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=5224532374794958954&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D5224532374794958954%26mt_id%3D3378830%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D973b586b-b36a-4b1b-ac85-afd6e438fd5c%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DC5pDDarNrWOi1DMXm2QTcwoSwB_XZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0LafZJWyP1jTMjfpIyCYOqmazEJWx5pvQQu_FpPTqCssdKOqfHrJxClp1GRiqEST1XSMa7KSL7uMe1oWuW-EFT4pt1nGLHQpOrub889vkRhD2Xv6QT2Yxura0gqz8oR2_hmXVbK9P8pM-fu8tmlhdtzm4bocg_t52hqPu6tgUkaABoXNjrmS15fb3AGgBiGoB6a-G9gHANIIBQiAYRAB%2526num%253D1%2526sig%253DAOD64_3gWApRv5oH8YdZNA3Vm2Q9W4xgrw%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:21:31 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453289216#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=5224532374794958954&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D5224532374794958954%26mt_id%3D3378830%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D973b586b-b36a-4b1b-ac85-afd6e438fd5c%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DC5pDDarNrWOi1DMXm2QTcwoSwB_XZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0LafZJWyP1jTMjfpIyCYOqmazEJWx5pvQQu_FpPTqCssdKOqfHrJxClp1GRiqEST1XSMa7KSL7uMe1oWuW-EFT4pt1nGLHQpOrub889vkRhD2Xv6QT2Yxura0gqz8oR2_hmXVbK9P8pM-fu8tmlhdtzm4bocg_t52hqPu6tgUkaABoXNjrmS15fb3AGgBiGoB6a-G9gHANIIBQiAYRAB%2526num%253D1%2526sig%253DAOD64_3gWApRv5oH8YdZNA3Vm2Q9W4xgrw%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:21:31 WARN  StrictErrorReporter:49 - warning: message=[RHINO USAGE WARNING: Missed Context.javaToJS() conversion:
+Rhino runtime detected object com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: Wrapped com.gargoylesoftware.htmlunit.ScriptException: TypeError: Cannot find function getOwnPropertySymbols in object function Object() {
+    [native code]
+}. (https://sdk.streamrail.com/player/sr.ads.js?cb=1483453289216#17) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) (http://optimized-by.rubiconproject.com/a/11692/39386/163568-15.js?&cb=0.2697266580872566&tk_st=1&rf=http%3A//www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx&rp_s=c&p_pos=btf&p_screen_res=1024x768&ad_slot=39386_15#2) of class com.gargoylesoftware.htmlunit.ScriptException where it expected String, Number, Boolean or Scriptable instance. Please check your code for missing Context.javaToJS() call.] sourceName=[https://cloud.selectmedia.asia/Code/sm_main_script_streamrail_minified.js?server=production&cv=&sellerId=adx&campaignId=1828523&placementId=1279563014&PUBLISHER_ID=http%3A//www.aastocks.com&smcreativeid=3311820&declaredurl=www.aastocks.com&cb=5224532374794958954&click=http://pixel.mathtag.com/click/img%3Fmt_aid%3D5224532374794958954%26mt_id%3D3378830%26mt_adid%3D167532%26mt_sid%3D1828523%26mt_exid%3D4%26mt_inapp%3D0%26mt_uuid%3D973b586b-b36a-4b1b-ac85-afd6e438fd5c%26mt_3pck%3Dhttps%253A//adclick.g.doubleclick.net/aclk%253Fsa%253Dl%2526ai%253DC5pDDarNrWOi1DMXm2QTcwoSwB_XZ7pRGlN3W_XfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHg6pnsA8gBCagDAaoEgQFP0LafZJWyP1jTMjfpIyCYOqmazEJWx5pvQQu_FpPTqCssdKOqfHrJxClp1GRiqEST1XSMa7KSL7uMe1oWuW-EFT4pt1nGLHQpOrub889vkRhD2Xv6QT2Yxura0gqz8oR2_hmXVbK9P8pM-fu8tmlhdtzm4bocg_t52hqPu6tgUkaABoXNjrmS15fb3AGgBiGoB6a-G9gHANIIBQiAYRAB%2526num%253D1%2526sig%253DAOD64_3gWApRv5oH8YdZNA3Vm2Q9W4xgrw%2526client%253Dca-pub-4237320928945419%2526adurl%253D%26mt_lp%3Dhttps%253A//www.wework.com/%26redirect%3D] line=[1] lineSource=[null] lineOffset=[0]
+2017-01-03 22:21:31 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@fd02e5: startup date [Tue Jan 03 22:21:13 CST 2017]; root of context hierarchy
+2017-01-03 22:22:53 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-03 22:22:53 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-03 22:22:53 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16905e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2d45ba, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ca609, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e2cbe0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@be2bc2]
+2017-01-03 22:22:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-03 22:22:54 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@fd02e5: startup date [Tue Jan 03 22:22:54 CST 2017]; root of context hierarchy
+2017-01-03 22:22:54 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-03 22:22:55 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-03 22:22:55 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-03 22:22:55 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-03 22:22:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-03 22:22:56 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-03 22:22:57 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1257031] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-03 22:22:57 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:58 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:22:59 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [20:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [20:1] Ignoring the following declarations in this rule.
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [78:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [380:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/master.css?v=1.0.37' [391:214] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/ddlevelsmenu-base_tc.css?v=1.0.37' [27:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/ddlevelsmenu-base_tc.css?v=1.0.37' [27:1] Ignoring the following declarations in this rule.
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/tc/resources/style/hk_stock.css?v=1.0.37' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2017-01-03 22:22:59 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/tc/resources/style/hk_stock.css?v=1.0.37' [93:70] Ignoring the following declarations in this rule.
+2017-01-03 22:23:04 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:23:05 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:23:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:23:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:23:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:06 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:06 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/tc/stocks/market/industry/industry-performance.aspx)@33264591
+2017-01-03 22:23:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:07 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:23:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:07 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:08 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:09 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:10 WARN  HtmlScript:425 - Script is not JavaScript (type: text/x-vi, language: ). Skipping execution.
+2017-01-03 22:23:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:23:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:23:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:10 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:23:14 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@fd02e5: startup date [Tue Jan 03 22:22:54 CST 2017]; root of context hierarchy
+2017-01-03 22:24:14 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-03 22:24:14 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-03 22:24:14 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1565ec2, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f8f11, org.springframework.test.context.support.DirtiesContextTestExecutionListener@193948d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1604f19, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@23a2f9]
+2017-01-03 22:24:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-03 22:24:15 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@1d56113: startup date [Tue Jan 03 22:24:15 CST 2017]; root of context hierarchy
+2017-01-03 22:24:15 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-03 22:24:16 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-03 22:24:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-03 22:24:17 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-03 22:24:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-03 22:24:17 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-03 22:24:18 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1257031] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-03 22:24:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:19 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:20 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [20:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [20:1] Ignoring the following declarations in this rule.
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [78:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [380:25] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/master.css?v=1.0.37' [391:214] Error in declaration. '*' is not allowed as first char of a property.
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.37' [93:70] Error in style rule. (Invalid token ")". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, "}", ";", "/", "-", <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <RESOLUTION_DPI>, <RESOLUTION_DPCM>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "progid:".)
+2017-01-03 22:24:20 WARN  DefaultCssErrorHandler:55 - CSS warning: 'http://www.aastocks.com/en/resources/style/hk_stock.css?v=1.0.37' [93:70] Ignoring the following declarations in this rule.
+2017-01-03 22:24:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-03 22:24:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:24:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:24:23 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:23 WARN  HtmlPage:2280 - ElementFromPointHandler was not specicifed for HtmlPage(http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1)@25019534
+2017-01-03 22:24:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:24:24 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'text/javascript'.
+2017-01-03 22:24:24 WARN  HTMLDocument:1043 - close() called when document is not open.
+2017-01-03 22:24:24 WARN  IncorrectnessListenerImpl:38 - Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=18942872&PluID=0&w=728&h=90&ord=782438&ucm=true&ncu=http%3A%2F%2Finsight.adsrvr.org%2Ftrack%2Fclk%3Fimp%3D55df9856-c745-4003-93ee-b7ae646cd70a%26ag%3D5u0r06p%26crid%3Dxrrtb6b7%26cf%3D%26fq%3D0%26td_s%3Dwww.aastocks.com%26rcats%3Djl7%2C47u%2Cy29%26mcat%3D47u%26mste%3D%26mfld%3D3%26mssi%3Dbeeji7j%26mfsi%3Dur4qkdm6ww%26sv%3Dgoogle%26uhow%3D70%26agsa%3D%26rgco%3DHong%2520Kong%26rgre%3D%26rgme%3D%26rgci%3DCentral%2520District%26rgz%3D%26dt%3DPC%26osf%3DWindows%26os%3DWindows7%26br%3DFirefox%26svpid%3D1%26rlangs%3Dzh%26mlang%3Dzh%26did%3D%26rcxt%3DOther%26tmpc%3D%26vrtd%3D%26osi%3D%26osv%3D%26daid%3D%26dnr%3D0%26vpb%3D%26svsc%3D%26dur%3D%26crrelr%3D%26svscid%3D1%26r%3Dhttps://adclick.g.doubleclick.net/aclk%3Fsa%3Dl%26ai%3DCxxm9GrRrWJjQEoP22ASTt7-gC5mi8ZRG9v6PjlfAjbcBEAEgAGDZAoIBF2NhLXB1Yi00MjM3MzIwOTI4OTQ1NDE5oAHahvPoA8gBCagDAaoEgAFP0IL3Txiol2tMdB_Ho0qMd4oUZWUvMqOXPaivmUH1fA5gK36_uvobyGUT2tidXQFkTZAS_yFml9KBKCw8XCuOBW7u8pXL5IRlQIP-hBI_iNTX3j29JlKYNMwisRdgi-nq9MskmvW_rBW2AaVtGmcX_1qbnWMSmZZyy8ZTgtPIxoAGrbmy58S4zNQioAYhqAemvhvYBwDSCAUIgGEQAQ%26num%3D1%26sig%3DAOD64_24uiQjvuyAsY_UuLm-i4fpkzwW6A%26client%3Dca-pub-4237320928945419%26adurl%3Dhttps://www.citibank.com.hk&ucm=true', but got 'text/html'.
+2017-01-03 22:24:25 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@1d56113: startup date [Tue Jan 03 22:24:15 CST 2017]; root of context hierarchy
