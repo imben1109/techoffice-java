@@ -11,6 +11,8 @@ public class Appl {
 		System.setProperty("webdriver.chrome.driver", chromeDriverFile.getAbsolutePath());
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
-		driver.close();
+		String pageSource = driver.getPageSource();
+		driver.quit();
+		System.out.println(pageSource);
 	}
 }
