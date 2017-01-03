@@ -38,4 +38,9 @@ public class HsiStockService {
 		hsiStockDao.add(hsiStockList);
 	}
 	
+	@Transactional
+	public List<HsiStock> list(){
+		return hsiStockDao.list();
+	}
+	
 }
