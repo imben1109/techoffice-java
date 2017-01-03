@@ -55,6 +55,7 @@ public class RelationTableListController {
 							SpringFxmlLoader loader = new SpringFxmlLoader();
 							VBox root = (VBox) loader.load("fxml/relation.fxml");
 							Stage stage = new Stage();
+							stage.setWidth(600);
 					        Scene scene = new Scene(root);
 					        stage.setScene(scene);
 					        stage.setTitle("Table Relationship");

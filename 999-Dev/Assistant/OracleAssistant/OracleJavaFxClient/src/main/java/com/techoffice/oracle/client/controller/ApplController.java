@@ -63,6 +63,7 @@ public class ApplController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Table Relationship");
+        stage.setWidth(600);
         stage.show();
 	}
 	
@@ -74,6 +75,7 @@ public class ApplController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Table Relationship");
+        stage.setWidth(600);
         stage.show();
 	}
 	

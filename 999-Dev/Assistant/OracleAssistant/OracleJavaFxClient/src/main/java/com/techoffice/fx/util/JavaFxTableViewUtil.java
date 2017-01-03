@@ -24,6 +24,14 @@ import javafx.util.Callback;
 
 public class JavaFxTableViewUtil {
 	
+	/**
+	 * Sets the List of Beans to the table view. The header of the table view could be property name (word separated by space and the first charachter would be capitalized.)
+	 * 
+	 * @param tableView	
+	 * @param beanList
+	 * @param clz
+	 * @return tableView
+	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static <T> TableView<T> tableViewSetBeanList(TableView<T> tableView, List<T> beanList, Class<T> clz){
 		tableView.getColumns().clear();
@@ -33,6 +41,7 @@ public class JavaFxTableViewUtil {
 			String fieldLabel = camelStrToLabel(field.getName());
 	        TableColumn tableColumn = new TableColumn(fieldLabel);
 	        tableColumn.setCellValueFactory(new PropertyValueFactory(field.getName()));
+	        
 	        tableView.getColumns().add(tableColumn);
 		}
         ObservableList<T> data = FXCollections.observableArrayList(beanList);
