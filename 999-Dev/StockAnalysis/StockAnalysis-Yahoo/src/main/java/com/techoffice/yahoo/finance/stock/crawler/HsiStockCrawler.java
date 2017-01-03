@@ -53,6 +53,7 @@ public class HsiStockCrawler {
 			Node stockNoNode = stockRowNodeList.item(1);
 			Node stockNameNode = stockRowNodeList.item(3);
 			String stockNoText = XmlUtil.getNodeText(stockNoNode);
+			stockNoText = stockNoText.replace(".HK", "");
 			String stockNameText = XmlUtil.getNodeText(stockNameNode);
 			HsiStock hsiStock = new HsiStock();
 			hsiStock.setStockNo(stockNoText);

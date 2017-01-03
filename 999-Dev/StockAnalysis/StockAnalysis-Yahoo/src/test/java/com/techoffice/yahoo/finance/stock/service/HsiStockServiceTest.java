@@ -34,7 +34,7 @@ public class HsiStockServiceTest {
 	public void list(){
 		List<HsiStock> list = hsiStockService.list();
 		for (HsiStock hsiStock: list){
-			System.out.println(hsiStock.getChiName());
+			System.out.println(hsiStock.getChiName() + "(" + hsiStock.getStockNo() + ")");
 		}
 	}
 
