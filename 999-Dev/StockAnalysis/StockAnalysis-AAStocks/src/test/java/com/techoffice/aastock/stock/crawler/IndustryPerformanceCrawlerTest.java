@@ -17,7 +17,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class IndustryPerformaceCrawlerTest {
+public class IndustryPerformanceCrawlerTest {
 	
 	@Autowired
 	private IndustryPerformanceCrawler industryPerformanceCrawler;
