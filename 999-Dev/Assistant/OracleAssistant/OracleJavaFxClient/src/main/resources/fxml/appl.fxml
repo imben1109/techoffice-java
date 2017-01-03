@@ -14,8 +14,8 @@
 		<menus>
 			<Menu text="Tools">
 				<items>
-					<MenuItem text="Table Relationship" onAction="#tableRelationShip"/>
-					<MenuItem text="Model Generation" onAction="#modelGeneration"/>
+					<MenuItem text="Table Relationship" onAction="#callTableRelationShipWindow"/>
+					<MenuItem text="Model Generation" onAction="#callModelGenerationWindow"/>
 				</items>
 			</Menu>
 		</menus>

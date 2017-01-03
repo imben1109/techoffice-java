@@ -47,6 +47,7 @@ public class JavaFxTableViewUtil {
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static TableView tableViewSetListOfMap(TableView tableView, List<Map<String, Object>> results){
+		tableView.getColumns().clear();
 		if (results.size() > 0){
 			List<TableColumn> tableColumnList = new ArrayList<TableColumn>();
 			Set<String> keySet = results.get(0).keySet();

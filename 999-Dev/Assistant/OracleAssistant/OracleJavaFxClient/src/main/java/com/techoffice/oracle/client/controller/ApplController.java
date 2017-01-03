@@ -56,7 +56,7 @@ public class ApplController {
 	}
 	
 	@FXML
-	public void tableRelationShip() throws IOException{
+	public void callTableRelationShipWindow() throws IOException{
 		SpringFxmlLoader loader = new SpringFxmlLoader();
         VBox root = (VBox) loader.load("fxml/relationTableList.fxml");
 		Stage stage = new Stage();
@@ -67,7 +67,7 @@ public class ApplController {
 	}
 	
 	@FXML
-	public void modelGeneration() throws IOException{
+	public void callModelGenerationWindow() throws IOException{
 		SpringFxmlLoader loader = new SpringFxmlLoader();
         VBox root = (VBox) loader.load("fxml/entityTableList.fxml");
 		Stage stage = new Stage();
