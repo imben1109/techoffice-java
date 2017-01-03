@@ -21,7 +21,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 public class HsiStockListCrawlerTest {
 	
 	@Autowired
-	private HsiStockListCrawler hsiStockListCrawler;
+	private HsiStockCrawler hsiStockListCrawler;
 	
 	@Test
 	public void retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{

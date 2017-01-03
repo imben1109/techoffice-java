@@ -45,6 +45,7 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.techoffice.yahoo.finance.stock.model.Price</value>
+				<value>com.techoffice.yahoo.finance.stock.model.HsiStock</value>
 			</list>
 		</property>
 	</bean>
