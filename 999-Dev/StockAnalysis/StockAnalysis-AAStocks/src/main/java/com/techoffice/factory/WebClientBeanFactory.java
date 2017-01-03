@@ -11,7 +11,6 @@ import com.gargoylesoftware.htmlunit.ProxyConfig;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.techoffice.config.ApplConfig;
 
-
 public class WebClientBeanFactory implements FactoryBean<WebClient> {
 	private WebClient webClient;
 	

@@ -1,5 +1,6 @@
 package com.techoffice.aastock.stock.crawler;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
@@ -7,6 +8,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,7 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.XmlUtil;
 
 @Service
@@ -26,23 +30,25 @@ public class CalendarCrawler {
 	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx";
 	
-	@Autowired
-	private WebClient webClient;
-	
 	public String retrieveXmlFromWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		String xml = retrieveResultAnnounceXmlFromWebClient(null);
+		File chromeDriverFile = new File("chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", chromeDriverFile.getAbsolutePath());
+		WebDriver driver = new ChromeDriver();
+		driver.get(URL);
+		String xml = driver.getPageSource();
+		driver.quit();
 		return xml;
 	}
 	
 	public String retrieveResultAnnounceXmlFromWebClient(String page) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-        HtmlPage htmlPage;
+		WebDriver webDriver = WebDriverFactory.getWebDriver();
         if (page == null){
-        	htmlPage = webClient.getPage(URL+"?type=1");
+        	webDriver.get(URL+"?type=1");
         }else {
-        	htmlPage = webClient.getPage(URL + "?type=1&page=" + page);
+        	webDriver.get(URL + "?type=1&page=" + page);
         }
-        String xml = htmlPage.asXml();
-        webClient.close();
+        String xml = webDriver.getPageSource();
+        webDriver.quit();
         return xml;
 	}
 	
