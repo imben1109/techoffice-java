@@ -1,0 +1,4 @@
+LIBRARY JniCaller.dll
+
+EXPORTS
+_Java_com_techoffice_example_JniCaller_print@8
