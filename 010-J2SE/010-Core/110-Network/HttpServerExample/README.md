@@ -1,0 +1,1 @@
+Since Java SE 1.6, a built-in light HTTP server is shipped with Java Runtime.
