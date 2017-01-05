@@ -19,7 +19,7 @@ public class RaceDateDaoTest {
 	
 	@Test
 	public void listPendingProcessRaceDate(){
-		List<RaceDate> raceDateList = raceDateDao.listPendingProcessRaceDate();
+		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
 		for (RaceDate raceDate: raceDateList){
 			System.out.println(raceDate.getRaceDate() + " "  + raceDate.getRaceCount());
 		}

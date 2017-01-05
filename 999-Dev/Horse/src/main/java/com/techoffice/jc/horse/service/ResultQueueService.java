@@ -72,6 +72,24 @@ public class ResultQueueService {
 		}
 	}
 	
+	/**
+	 * For each race data, there would be a number of race. 
+	 * The number of race would corresponds to a queue for updating the race result.
+	 * 
+	 * The methods is to update/insert race result queue for a specified race date.
+	 * 
+	 * @param raceDate
+	 * @return
+	 * @throws FailingHttpStatusCodeException
+	 * @throws MalformedURLException
+	 * @throws XPathExpressionException
+	 * @throws IOException
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws InterruptedException
+	 * @throws TransformerException
+	 * @throws ParseException
+	 */
 	@Transactional
 	public int updateResultQueueByRaceDate(String raceDate) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
 		int raceResultCount = 0;
@@ -83,27 +101,59 @@ public class ResultQueueService {
 		return raceResultCount;
 	}
 	
+	/**
+	 * Update Database Race Date from HKJC web site.
+	 * 
+	 * @throws FailingHttpStatusCodeException
+	 * @throws MalformedURLException
+	 * @throws XPathExpressionException
+	 * @throws IOException
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws InterruptedException
+	 * @throws TransformerException
+	 */
 	@Transactional
-	public void updateRaceDate() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		int count = 0; 
 		List<RaceDate> newRaceDateList = raceResultCrawler.retrieveRaceDateList();
 		for (RaceDate newRaceDate: newRaceDateList){
 			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
 			if (raceDate == null){
-				raceDateDao.add(raceDate);
+				raceDateDao.add(newRaceDate);
+				count++;
 			}
 		}
+		log.info("Retrieved Race Date Count: " + newRaceDateList.size());
+		log.info("Inserted Race Date Count: " + count);
 	}
 	
+	/**
+	 * For each race date, it would be more than one races. 
+	 * The races would be corresponded to a race queue for updating race result.
+	 *
+	 * This method would create race queue for race date.
+	 * 
+	 * @throws FailingHttpStatusCodeException
+	 * @throws MalformedURLException
+	 * @throws XPathExpressionException
+	 * @throws IOException
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws InterruptedException
+	 * @throws TransformerException
+	 * @throws ParseException
+	 */
 	@Transactional
-	public void executePendingProcessRaceDate() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException {
+	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException {
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;
 		int processedCount = 0;
-		List<RaceDate> raceDateList = raceDateDao.listPendingProcessRaceDate();
+		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
 		for(RaceDate raceDate: raceDateList){
 			int raceResultCount = updateResultQueueByRaceDate(raceDate.getRaceDate());
 			raceDate.setRaceCount(raceResultCount);
-			raceDateDao.add(raceDate);
+			raceDateDao.update(raceDate);
 			raceResultTotalCount += raceResultCount;
 			if(raceResultCount > 1){
 				processedCount++;
@@ -111,6 +161,8 @@ public class ResultQueueService {
 				pendingCount++;
 			}
 		}
+		int totalRaceResultQueueCount = raceResultQueueDao.list().size();
+		log.info("Total Race Result Queue: " + totalRaceResultQueueCount);
 		log.info(raceResultTotalCount + " Reace Results is inserted or updated into the Queue.");
 		log.info("Pending Race Date Count: " + pendingCount);
 		log.info("Processed Race Date Count: " + processedCount);

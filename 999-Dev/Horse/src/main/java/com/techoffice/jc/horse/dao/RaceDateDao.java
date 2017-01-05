@@ -24,6 +24,12 @@ public class RaceDateDao {
 	}
 	
 	@Transactional
+	public void update(RaceDate raceDate){
+		Session session = sessionFactory.getCurrentSession();
+		session.update(raceDate);
+	}
+	
+	@Transactional
 	public List<RaceDate> list(){
 		Session session = sessionFactory.getCurrentSession();
 		Query<RaceDate> query = session.createQuery("From RaceDate", RaceDate.class);
@@ -31,9 +37,9 @@ public class RaceDateDao {
 	}
 	
 	@Transactional
-	public List<RaceDate> listPendingProcessRaceDate(){
+	public List<RaceDate> getPendingRaceDateList(){
 		Session session = sessionFactory.getCurrentSession();
-		Query<RaceDate> query = session.createQuery("From RaceDate where raceCount = 1 ", RaceDate.class);
+		Query<RaceDate> query = session.createQuery("From RaceDate where raceCount < 2 ", RaceDate.class);
 		return query.getResultList();
 	}
 	
@@ -43,6 +49,7 @@ public class RaceDateDao {
 	public RaceDate getByRaceDate(String raceDate){
 		Session session = sessionFactory.getCurrentSession();
 		Query<RaceDate> query = session.createQuery("from RaceDate where raceDate = :RACEDATE", RaceDate.class);
+		query.setParameter("RACEDATE", raceDate);
 		List<RaceDate> list = query.getResultList();
 		if (list.size() == 1){
 			return list.get(0);

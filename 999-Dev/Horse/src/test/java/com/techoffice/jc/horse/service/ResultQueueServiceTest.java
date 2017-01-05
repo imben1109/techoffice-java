@@ -25,9 +25,14 @@ public class ResultQueueServiceTest {
 	private ResultQueueService resultQueueService;
 	
 	@Test
-	public void executePendingProcessRaceDate() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
+	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
 		for (int i=0; i<50; i++){
-			resultQueueService.executePendingProcessRaceDate();	
+			resultQueueService.updateRaceResultQueueList();	
 		}
+	}
+	
+	@Test
+	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+		resultQueueService.updateRaceDateList();
 	}
 }
