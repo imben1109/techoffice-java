@@ -1703,3 +1703,181 @@
 2017-01-08 18:02:04 INFO  RaceResultCrawlerTest:50 - /racing/Info/meeting/Results/English/Local/20150909/HV
 2017-01-08 18:02:04 INFO  RaceResultCrawlerTest:50 - /racing/Info/meeting/Results/English/Local/20150906/ST
 2017-01-08 18:02:04 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@71423665: startup date [Sun Jan 08 18:00:53 CST 2017]; root of context hierarchy
+2017-01-08 18:02:36 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-08 18:02:36 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-08 18:02:36 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-01-08 18:02:36 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-08 18:02:36 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Sun Jan 08 18:02:36 CST 2017]; root of context hierarchy
+2017-01-08 18:02:36 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-08 18:02:37 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-08 18:02:37 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-08 18:02:37 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-08 18:02:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-08 18:02:38 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-08 18:02:39 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@420745d7] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-08 18:03:46 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-08 18:03:46 INFO  ResultQueueService:127 - Retrieved Race Date Count: 141
+2017-01-08 18:03:46 INFO  ResultQueueService:128 - Inserted Race Date Count: 0
+2017-01-08 18:06:04 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-08 18:06:04 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-08 18:06:04 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-01-08 18:06:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-08 18:06:04 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Sun Jan 08 18:06:04 CST 2017]; root of context hierarchy
+2017-01-08 18:06:04 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-08 18:06:05 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-08 18:06:05 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-08 18:06:05 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-08 18:06:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-08 18:06:06 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-08 18:06:07 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@420745d7] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-08 18:07:17 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-08 18:07:17 INFO  ResultQueueService:127 - Retrieved Race Date Count: 141
+2017-01-08 18:07:17 INFO  ResultQueueService:128 - Inserted Race Date Count: 0
+2017-01-08 18:07:17 INFO  RaceResultCrawler:83 - ===Retrieve XML===
+2017-01-08 18:07:22 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:07:58 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-08 18:07:58 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-08 18:07:58 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-01-08 18:07:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-08 18:07:59 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Sun Jan 08 18:07:59 CST 2017]; root of context hierarchy
+2017-01-08 18:07:59 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-08 18:08:00 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-08 18:08:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-08 18:08:00 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-08 18:08:00 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-08 18:08:01 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-08 18:08:02 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@420745d7] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-08 18:09:09 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-08 18:09:10 INFO  ResultQueueService:127 - Retrieved Race Date Count: 141
+2017-01-08 18:09:10 INFO  ResultQueueService:128 - Inserted Race Date Count: 0
+2017-01-08 18:09:10 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161225/S1===
+2017-01-08 18:09:13 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:10:21 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161118/S1===
+2017-01-08 18:10:26 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:11:28 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161105/S1===
+2017-01-08 18:11:32 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:11:53 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Sun Jan 08 18:07:59 CST 2017]; root of context hierarchy
+2017-01-08 18:13:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-08 18:13:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-08 18:13:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-01-08 18:13:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-08 18:13:53 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Sun Jan 08 18:13:53 CST 2017]; root of context hierarchy
+2017-01-08 18:13:53 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-08 18:13:54 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-08 18:13:54 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-08 18:13:54 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-08 18:13:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-08 18:13:54 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-08 18:13:56 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@420745d7] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-08 18:14:00 INFO  XmlUtil:66 - Convert XML to Document
+2017-01-08 18:15:02 INFO  XmlUtil:68 - XPath Compile
+2017-01-08 18:15:03 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-08 18:15:03 INFO  ResultQueueService:127 - Retrieved Race Date Count: 141
+2017-01-08 18:15:03 INFO  ResultQueueService:128 - Inserted Race Date Count: 0
+2017-01-08 18:15:03 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161225/S1===
+2017-01-08 18:15:11 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:15:11 INFO  XmlUtil:66 - Convert XML to Document
+2017-01-08 18:16:13 INFO  XmlUtil:68 - XPath Compile
+2017-01-08 18:16:13 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161118/S1===
+2017-01-08 18:16:17 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:16:17 INFO  XmlUtil:66 - Convert XML to Document
+2017-01-08 18:17:20 INFO  XmlUtil:68 - XPath Compile
+2017-01-08 18:17:20 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161105/S1===
+2017-01-08 18:17:23 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-08 18:17:23 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-08 18:17:23 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-01-08 18:17:23 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-08 18:17:23 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Sun Jan 08 18:17:23 CST 2017]; root of context hierarchy
+2017-01-08 18:17:24 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-08 18:17:25 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-08 18:17:25 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-08 18:17:25 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-08 18:17:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-08 18:17:25 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-08 18:17:27 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@420745d7] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-08 18:17:30 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:17:30 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:17:30 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-08 18:17:31 INFO  ResultQueueService:127 - Retrieved Race Date Count: 141
+2017-01-08 18:17:31 INFO  ResultQueueService:128 - Inserted Race Date Count: 0
+2017-01-08 18:17:31 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161225/S1===
+2017-01-08 18:17:35 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:17:35 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:17:35 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:17:35 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161118/S1===
+2017-01-08 18:17:38 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:17:38 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:17:38 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:17:38 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161105/S1===
+2017-01-08 18:17:45 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:17:45 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:17:45 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:17:45 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161101/S1===
+2017-01-08 18:17:50 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:17:50 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:17:50 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:17:50 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161029/S1===
+2017-01-08 18:18:23 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:23 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:23 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:23 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161022/S1===
+2017-01-08 18:18:26 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:26 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:26 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:27 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161015/S1===
+2017-01-08 18:18:31 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:31 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:31 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:31 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20161002/S1===
+2017-01-08 18:18:35 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:35 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:35 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:35 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160618/S1===
+2017-01-08 18:18:39 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:39 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:39 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:39 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160616/S2===
+2017-01-08 18:18:42 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:42 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:42 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:42 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160614/S1===
+2017-01-08 18:18:48 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:48 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:48 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:48 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160604/S1===
+2017-01-08 18:18:53 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:53 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:53 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:53 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160417/S1===
+2017-01-08 18:18:57 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:18:57 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:18:57 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:18:57 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160409/S1===
+2017-01-08 18:19:00 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:00 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:00 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:00 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160402/S1===
+2017-01-08 18:19:05 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:05 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:05 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:05 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160326/S1===
+2017-01-08 18:19:09 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:09 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:09 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:09 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160319/S1===
+2017-01-08 18:19:14 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:14 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:14 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:14 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160305/S1===
+2017-01-08 18:19:19 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:19 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:19 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:19 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20160227/S1===
+2017-01-08 18:19:24 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:24 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:24 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:24 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20151107/S1===
+2017-01-08 18:19:29 INFO  RaceResultCrawler:85 - ===Evaluate XPath===
+2017-01-08 18:19:29 INFO  XmlUtil:72 - Convert XML to Document
+2017-01-08 18:19:29 INFO  XmlUtil:74 - XPath Compile
+2017-01-08 18:19:29 INFO  RaceResultCrawler:83 - ===Retrieve XML for /racing/Info/meeting/Results/English/Simulcast/20151103/S1===

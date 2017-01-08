@@ -46,6 +46,12 @@ public class XmlUtil {
 	
 	public static Document convertXmlStrToDocument(String xml) throws ParserConfigurationException, SAXException, IOException{
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+		documentBuilderFactory.setNamespaceAware(false);
+		documentBuilderFactory.setValidating(false);
+		documentBuilderFactory.setFeature("http://xml.org/sax/features/namespaces", false);
+		documentBuilderFactory.setFeature("http://xml.org/sax/features/validation", false);
+		documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+		documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
 		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 		Document document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes()));
 		return document;

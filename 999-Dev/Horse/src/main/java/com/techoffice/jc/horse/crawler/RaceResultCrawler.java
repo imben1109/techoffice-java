@@ -80,7 +80,9 @@ public class RaceResultCrawler {
 		firstRaceResultQueue.setRaceType(raceType);
 		firstRaceResultQueue.setVenue(venue);
 		raceNumList.add(firstRaceResultQueue);
+		log.info("===Retrieve XML for {}===", location);
 		String xml = retrieveXml(location);
+		log.info("===Evaluate XPath===");
 		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr/td");
 		for (int i =0; i<raceNumNodeList.getLength(); i++){
 			Node raceNumTdNode = raceNumNodeList.item(i);

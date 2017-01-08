@@ -22,6 +22,8 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.h2.util.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -31,6 +33,8 @@ import org.xml.sax.SAXException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class XmlUtil {
+	
+	private static Logger log = LoggerFactory.getLogger(XmlUtil.class);
 	
 	public static String covertNodeToXmlString(Node node) throws TransformerException{
 		StringWriter writer = new StringWriter();
@@ -42,9 +46,14 @@ public class XmlUtil {
 	
 	public static Document convertXmlStrToDocument(String xml) throws ParserConfigurationException, SAXException, IOException{
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+		documentBuilderFactory.setNamespaceAware(false);
+		documentBuilderFactory.setValidating(false);
+		documentBuilderFactory.setFeature("http://xml.org/sax/features/namespaces", false);
+		documentBuilderFactory.setFeature("http://xml.org/sax/features/validation", false);
+		documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+		documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
 		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-		String tiddedXml = tidyXml(xml);
-		Document document = documentBuilder.parse(new ByteArrayInputStream(tiddedXml.getBytes()));
+		Document document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes()));
 		return document;
 	}
 	
@@ -60,7 +69,9 @@ public class XmlUtil {
 	}
 	
 	public static NodeList evaluateXpath(String xml, String xPath) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
+		log.info("Convert XML to Document");
 		Document doc = convertXmlStrToDocument(xml);
+		log.info("XPath Compile");
 		XPathFactory xPathfactory = XPathFactory.newInstance();
 		XPath xpath = xPathfactory.newXPath();
 		XPathExpression expr = xpath.compile(xPath);
