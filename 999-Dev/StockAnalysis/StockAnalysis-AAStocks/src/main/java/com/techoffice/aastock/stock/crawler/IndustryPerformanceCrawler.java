@@ -17,6 +17,7 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.factory.WebDriverFactory;
+import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 
 @Component
@@ -27,14 +28,7 @@ public class IndustryPerformanceCrawler {
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/industry/industry-performance.aspx";
 		
 	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException{
-		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
-		webDriver.get(URL);
-		String sourceStr = webDriver.getPageSource();
-		webDriver.quit();
-		org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
-	    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
-	    document.select("script").remove();
-	    String xml = document.html();
+		String xml = WebDriverUtil.getXml(URL);
 		return xml;
 	}
 	

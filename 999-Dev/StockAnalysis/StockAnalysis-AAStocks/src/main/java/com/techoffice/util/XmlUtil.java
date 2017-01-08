@@ -47,8 +47,7 @@ public class XmlUtil {
 	public static Document convertXmlStrToDocument(String xml) throws ParserConfigurationException, SAXException, IOException{
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-		String tiddedXml = tidyXml(xml);
-		Document document = documentBuilder.parse(new ByteArrayInputStream(tiddedXml.getBytes()));
+		Document document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes()));
 		return document;
 	}
 	
