@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -20,6 +21,9 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.jsoup.Jsoup;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -29,6 +33,8 @@ import org.xml.sax.SAXException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class XmlUtil {
+	
+	private static Logger log = LoggerFactory.getLogger(XmlUtil.class);
 	
 	public static String covertNodeToXmlString(Node node) throws TransformerException{
 		StringWriter writer = new StringWriter();
@@ -49,6 +55,9 @@ public class XmlUtil {
 	public static String tidyXml(String xml){
 		Tidy tidy = new Tidy();
 		tidy.setXmlTags(true);
+		tidy.setXHTML(true);
+		tidy.setQuiet(true);
+		tidy.setShowWarnings(false);
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
 		OutputStream out = new ByteArrayOutputStream();

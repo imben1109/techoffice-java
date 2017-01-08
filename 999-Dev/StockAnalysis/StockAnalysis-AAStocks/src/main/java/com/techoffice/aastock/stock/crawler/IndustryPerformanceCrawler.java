@@ -6,30 +6,35 @@ import java.net.MalformedURLException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
-import org.openqa.selenium.By;
+import org.jsoup.Jsoup;
 import org.openqa.selenium.WebDriver;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.XmlUtil;
 
 @Component
 public class IndustryPerformanceCrawler {
 	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/industry/industry-performance.aspx";
 		
 	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException{
-		WebDriver webDriver = WebDriverFactory.getWebDriver();
+		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
 		webDriver.get(URL);
-		String xml = webDriver.getPageSource();
+		String sourceStr = webDriver.getPageSource();
 		webDriver.quit();
+		org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
+	    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
+	    document.select("script").remove();
+	    String xml = document.html();
 		return xml;
 	}
 	

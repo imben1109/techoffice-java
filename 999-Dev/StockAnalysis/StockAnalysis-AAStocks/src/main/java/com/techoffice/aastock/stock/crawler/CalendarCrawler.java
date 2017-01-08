@@ -1,6 +1,5 @@
 package com.techoffice.aastock.stock.crawler;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
@@ -9,17 +8,13 @@ import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.XmlUtil;
 
@@ -31,9 +26,7 @@ public class CalendarCrawler {
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx";
 	
 	public String retrieveXmlFromWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		File chromeDriverFile = new File("chromedriver_win32/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", chromeDriverFile.getAbsolutePath());
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = WebDriverFactory.getPhantomJSDriver();
 		driver.get(URL);
 		String xml = driver.getPageSource();
 		driver.quit();
@@ -41,7 +34,7 @@ public class CalendarCrawler {
 	}
 	
 	public String retrieveResultAnnounceXmlFromWebClient(String page) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		WebDriver webDriver = WebDriverFactory.getWebDriver();
+		WebDriver webDriver = WebDriverFactory.getChormeDriver();
         if (page == null){
         	webDriver.get(URL+"?type=1");
         }else {
