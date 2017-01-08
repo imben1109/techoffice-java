@@ -69,9 +69,7 @@ public class XmlUtil {
 	}
 	
 	public static NodeList evaluateXpath(String xml, String xPath) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
-		log.info("Convert XML to Document");
 		Document doc = convertXmlStrToDocument(xml);
-		log.info("XPath Compile");
 		XPathFactory xPathfactory = XPathFactory.newInstance();
 		XPath xpath = xPathfactory.newXPath();
 		XPathExpression expr = xpath.compile(xPath);

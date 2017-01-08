@@ -63,12 +63,6 @@ public class ResultQueueService {
 		RaceResultQueue raceResultQueue = raceResultQueueDao.getRaceResultQueueByLocation(queue.getLocation());
 		if (raceResultQueue == null){
 			raceResultQueueDao.addRaceResultQueue(queue);
-		}else{
-			// Special Handling here because the previous processing do not include venue, race type and race date
-			raceResultQueue.setRaceDate(queue.getRaceDate());
-			raceResultQueue.setRaceType(queue.getRaceType());
-			raceResultQueue.setVenue(queue.getVenue());
-			raceResultQueueDao.update(raceResultQueue);
 		}
 	}
 	

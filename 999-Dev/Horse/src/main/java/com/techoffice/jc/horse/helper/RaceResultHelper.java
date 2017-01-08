@@ -4,12 +4,14 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.apache.commons.lang3.time.DateUtils;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -123,6 +125,7 @@ public class RaceResultHelper {
 	public static Date getRaceDate(String raceDateStr) throws ParseException{
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyymmdd");
 		Date raceDate = simpleDateFormat.parse(raceDateStr);
+		raceDate = DateUtils.truncate(raceDate, Calendar.DATE);
 		return raceDate;
 	}
 }

@@ -83,8 +83,10 @@ public class XmlUtil {
 	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException{
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
-		if (nodeList.getLength() != 1){
+		if (nodeList.getLength() > 1){
 			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
+		}else if (nodeList.getLength() == 0){
+			throw new XmlUtilXpathNotUniqueException(xPath + " cannot be found. "); 
 		}else {
 			Node node = nodeList.item(0);
 			nodeText = getNodeText(node);

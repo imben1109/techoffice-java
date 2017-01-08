@@ -21,6 +21,9 @@ public class RaceDate {
 	
 	@Column(name="RACE_COUNT")
 	private int raceCount;
+	
+	@Column(name="RACE_TYPE")
+	private String raceType;
 
 	public int getId() {
 		return id;
@@ -45,6 +48,16 @@ public class RaceDate {
 	public void setRaceCount(int raceCount) {
 		this.raceCount = raceCount;
 	}
+
+	public String getRaceType() {
+		return raceType;
+	}
+
+	public void setRaceType(String raceType) {
+		this.raceType = raceType;
+	}
+
+
 	
 	
 }

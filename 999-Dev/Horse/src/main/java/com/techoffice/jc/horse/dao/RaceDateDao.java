@@ -39,7 +39,7 @@ public class RaceDateDao {
 	@Transactional
 	public List<RaceDate> getPendingRaceDateList(){
 		Session session = sessionFactory.getCurrentSession();
-		Query<RaceDate> query = session.createQuery("From RaceDate where raceCount < 2 ", RaceDate.class);
+		Query<RaceDate> query = session.createQuery("From RaceDate where raceCount < 2 and raceType != 'Simulcast' ", RaceDate.class);
 		return query.getResultList();
 	}
 	

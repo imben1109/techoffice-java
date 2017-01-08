@@ -38,9 +38,6 @@ public class RaceResultCrawler {
 	public static final String HOST = "http://racing.hkjc.com";
 	public static final String LOCATION = "/racing/Info/meeting/Results/English/";	
 	
-	@Autowired
-	private WebClient webClient;
-	
 	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
         return retrieveXml(LOCATION);
 	}
@@ -60,7 +57,10 @@ public class RaceResultCrawler {
 			Node raceDateNode = raceDatesNodeList.item(i);
 			if("option".equals(raceDateNode.getNodeName())){
 				RaceDate raceDate = new RaceDate();
-				raceDate.setRaceDate(LOCATION + raceDateNode.getAttributes().getNamedItem("value").getNodeValue());
+				String raceDateValue = LOCATION + raceDateNode.getAttributes().getNamedItem("value").getNodeValue();
+				String raceType = raceDateValue.split("/")[6];
+				raceDate.setRaceDate(raceDateValue);
+				raceDate.setRaceType(raceType);
 				raceDateList.add(raceDate);
 			}
 		}
@@ -68,34 +68,30 @@ public class RaceResultCrawler {
 	}
 	
 	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
-		String[] locationArr = location.split("/");
-		Date raceDate = RaceResultHelper.getRaceDate(locationArr[7]);
-		String raceType = locationArr[6];
-		String venue = locationArr[8];
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
-		RaceResultQueue firstRaceResultQueue = new RaceResultQueue();
-		firstRaceResultQueue.setLocation(location);
-		firstRaceResultQueue.setRaceNum("1");
-		firstRaceResultQueue.setRaceDate(raceDate);
-		firstRaceResultQueue.setRaceType(raceType);
-		firstRaceResultQueue.setVenue(venue);
-		raceNumList.add(firstRaceResultQueue);
-		log.info("===Retrieve XML for {}===", location);
+		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);
-		log.info("===Evaluate XPath===");
-		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr/td");
-		for (int i =0; i<raceNumNodeList.getLength(); i++){
+		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[1]/td");
+		for (int i =0; i<raceNumNodeList.getLength() - 1; i++){
 			Node raceNumTdNode = raceNumNodeList.item(i);
 			if (raceNumTdNode.getChildNodes().getLength() > 1){
 				// The first node is #Text
 				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
 				if ("a".equals(raceNumNode.getNodeName())){
 					String queueLocation = raceNumNode.getAttributes().getNamedItem("href").getNodeValue();
+					log.info(queueLocation);
+
+					String[] locationArr = queueLocation.split("/");
+					Date raceDate = RaceResultHelper.getRaceDate(locationArr[7]);
+					String raceType = locationArr[6];
+					String venue = locationArr[8];
+					String raceNum = locationArr[9];
 					RaceResultQueue raceResultQueue = new RaceResultQueue();
 					raceResultQueue.setLocation(queueLocation);
 					raceResultQueue.setRaceDate(raceDate);
 					raceResultQueue.setRaceType(raceType);
 					raceResultQueue.setVenue(venue);
+					raceResultQueue.setRaceNum(raceNum);
 					raceNumList.add(raceResultQueue);
 				}
 			}
