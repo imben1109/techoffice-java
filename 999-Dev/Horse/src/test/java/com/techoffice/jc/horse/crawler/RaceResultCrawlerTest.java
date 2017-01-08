@@ -37,7 +37,7 @@ public class RaceResultCrawlerTest {
 	@Autowired
 	private RaceResultCrawler raceResultCrawler;
 	
-//	@Test
+	@Test
 	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
 		String xml = raceResultCrawler.retrieveXml();
 		log.info(xml);

@@ -3,7 +3,6 @@ package com.techoffice.jc.horse.crawler;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,12 +21,12 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.jc.horse.helper.RaceResultHelper;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
+import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
@@ -47,9 +46,7 @@ public class RaceResultCrawler {
 	}
 	
 	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-        final HtmlPage page = webClient.getPage(HOST + location);
-        String xml = page.asXml();
-        webClient.close();
+        String xml = WebDriverUtil.getXml(HOST + location);
         return xml;
 	}
 	
