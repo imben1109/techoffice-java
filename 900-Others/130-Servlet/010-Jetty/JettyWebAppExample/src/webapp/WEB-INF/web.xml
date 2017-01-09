@@ -11,5 +11,14 @@
 	</welcome-file-list>
 	
 
+	<servlet>
+		<servlet-name>ApplServlet</servlet-name>
+		<servlet-class>com.techoffice.example.ApplServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ApplServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
 	
 </web-app>

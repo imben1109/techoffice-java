@@ -1,8 +1,9 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
+import java.nio.file.Files;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +17,17 @@ import org.apache.catalina.startup.Tomcat;
 public class Appl {
 	
 	@SuppressWarnings("serial")
-	public static void main(String[] args) throws LifecycleException{
+	public static void main(String[] args) throws LifecycleException, IOException{		
+
 	    Tomcat tomcat = new Tomcat();
 	    tomcat.setPort(8080);
+	    
+	    //  
+		File tempFolder = Files.createTempDirectory(null).toFile();
+		tempFolder.deleteOnExit();
+	    tomcat.setBaseDir(tempFolder.getAbsolutePath());
+	    
+	    // 
         Context ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
         Tomcat.addServlet(ctx, "Embedded", new HttpServlet() {
             @Override
@@ -33,7 +42,10 @@ public class Appl {
         });
         ctx.addServletMapping("/*", "Embedded");        
 	    tomcat.start();
+	    
 	    System.out.println("Server is starting at localhost:8080");
+	    System.out.println("Server Temporay Directory: " + tempFolder.getAbsolutePath());
+	    
 	    tomcat.getServer().await();
 	}
 	
