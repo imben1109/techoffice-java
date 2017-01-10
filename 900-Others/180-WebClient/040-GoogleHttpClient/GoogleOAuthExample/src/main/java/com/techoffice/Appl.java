@@ -22,6 +22,9 @@ import com.google.api.client.json.jackson.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 
 public class Appl {
+
+	public static String USE_SYSTEM_PROXIES = "java.net.useSystemProxies";
+
 	private static final String SCOPE = "read";
 
 	private static final java.io.File DATA_STORE_DIR = new File(System.getProperty("user.home"),
@@ -44,38 +47,34 @@ public class Appl {
 	private static final String LOCALHOST = "localhost";
 
 	private static final int PORT = 8080;
-	
+
 	private static final String userInfoUrl = "https://api.github.com/user";
 
-
 	private static Credential authorize() throws IOException {
-
 		AuthorizationCodeFlow flow = new AuthorizationCodeFlow.Builder(BearerToken.authorizationHeaderAccessMethod(),
 				HTTP_TRANSPORT, JSON_FACTORY, new GenericUrl(TOKEN_SERVER_URL),
 				new ClientParametersAuthentication(clientId, clientSecret), clientId, AUTHORIZATION_SERVER_URL)
 						.setScopes(Arrays.asList(SCOPE)).setDataStoreFactory(DATA_STORE_FACTORY).build();
-
 		LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost(LOCALHOST).setPort(PORT).build();
-
 		return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
 
 	}
 
 	public static void main(String[] args) throws IOException {
-	      DATA_STORE_FACTORY = new FileDataStoreFactory(DATA_STORE_DIR);
-	      final Credential credential = authorize();
-	      HttpRequestFactory requestFactory = HTTP_TRANSPORT.createRequestFactory(new HttpRequestInitializer() {
-            @Override
-            public void initialize(HttpRequest request) throws IOException {
-              credential.initialize(request);
-              request.setParser(new JsonObjectParser(JSON_FACTORY));
-            }
-          });
-	      HttpRequest request = requestFactory.buildGetRequest(new GenericUrl(userInfoUrl));
-	      String content = request.execute().getContent().toString();
-	      System.out.println(content);
-	      System.exit(1);
+		System.setProperty(USE_SYSTEM_PROXIES, "true");
+		DATA_STORE_FACTORY = new FileDataStoreFactory(DATA_STORE_DIR);
+		final Credential credential = authorize();
+		HttpRequestFactory requestFactory = HTTP_TRANSPORT.createRequestFactory(new HttpRequestInitializer() {
+			@Override
+			public void initialize(HttpRequest request) throws IOException {
+				credential.initialize(request);
+				request.setParser(new JsonObjectParser(JSON_FACTORY));
+			}
+		});
+		HttpRequest request = requestFactory.buildGetRequest(new GenericUrl(userInfoUrl));
+		String content = request.execute().getContent().toString();
+		System.out.println(content);
+		System.exit(1);
 
 	}
 }
-
