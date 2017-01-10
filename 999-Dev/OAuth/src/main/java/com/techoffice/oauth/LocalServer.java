@@ -11,9 +11,8 @@ public class LocalServer {
 	
 	public LocalServer(){
         server = new Server(8080);
-        ServletHandler handler = new ServletHandler();
+        LocalServerHandler handler = new LocalServerHandler();
         server.setHandler(handler);
-        handler.addServletWithMapping(LocalServerHandler.class, "/*");
 	}
 	
 	public void start()  {

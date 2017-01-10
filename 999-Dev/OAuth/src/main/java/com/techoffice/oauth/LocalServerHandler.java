@@ -1,20 +1,108 @@
 package com.techoffice.oauth;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LocalServerHandler extends HttpServlet {
+import org.eclipse.jetty.server.Connector;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.HttpConnection;
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.Server;
 
-	private static final long serialVersionUID = -6700938237303509137L;
+public class LocalServerHandler implements Handler {
 
-	@Override
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-		response.setStatus(HttpServletResponse.SC_OK);
-		response.getWriter().println("<h1>Hello from ApplServlet</h1>");
+	private Server server;
+
+	public void start() throws Exception {
+
+	}
+
+	public void stop() throws Exception {
+
+	}
+
+	public boolean isRunning() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isStarted() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isStarting() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isStopping() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isStopped() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isFailed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void addLifeCycleListener(Listener listener) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void removeLifeCycleListener(Listener listener) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		
+		String code = request.getParameter("code");
+		
+		System.out.println("code: " + code);
+		
+		if (!"".equals(code)){
+			for (Connector connector : server.getConnectors()) {
+				connector.shutdown();
+			}
+			response.sendError(200, "Connectors closed, commencing full shutdown");
+			baseRequest.setHandled(true);
+			response.flushBuffer();
+			final Server server = getServer();
+			new Thread() {
+				@Override
+				public void run() {
+					try {
+						server.stop();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					} catch (Exception e) {
+						throw new RuntimeException("Shutting down server", e);
+					}
+				}
+			}.start();
+		}
+	}
+
+	public void setServer(Server server) {
+		this.server = server;
+	}
+
+	public Server getServer() {
+		return server;
+	}
+
+	public void destroy() {
 	}
 
 }
