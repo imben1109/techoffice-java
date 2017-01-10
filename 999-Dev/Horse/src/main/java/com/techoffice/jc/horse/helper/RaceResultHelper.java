@@ -47,14 +47,17 @@ public class RaceResultHelper {
 		String raceClassStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[1]/td[1]");
 		
 		String[] raceClassStrArr = raceClassStr.split(" - ");
+		
 		String raceClass = raceClassStrArr[0];
 		raceResult.setRaceClass(raceClass);
 		
 		String distance = raceClassStrArr[1];
 		raceResult.setDistance(distance);
-		
-		String rtgRange = raceClassStrArr[2];
-		raceResult.setRtgRange(rtgRange);
+		if (raceClassStrArr.length > 2){
+			String rtgRange = raceClassStrArr[2];
+			raceResult.setRtgRange(rtgRange);	
+		}
+
 		
 		String goingStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[1]/td[3]");
 		raceResult.setGoing(goingStr);

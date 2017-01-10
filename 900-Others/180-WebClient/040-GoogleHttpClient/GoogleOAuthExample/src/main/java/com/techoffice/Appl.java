@@ -54,7 +54,7 @@ public class Appl {
 				HTTP_TRANSPORT, JSON_FACTORY, new GenericUrl(TOKEN_SERVER_URL),
 				new ClientParametersAuthentication(clientId, clientSecret), clientId, AUTHORIZATION_SERVER_URL)
 						.setScopes(Arrays.asList(SCOPE)).setDataStoreFactory(DATA_STORE_FACTORY).build();
-
+		
 		LocalServerReceiver receiver = new LocalServerReceiver.Builder().setHost(LOCALHOST).setPort(PORT).build();
 
 		return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");

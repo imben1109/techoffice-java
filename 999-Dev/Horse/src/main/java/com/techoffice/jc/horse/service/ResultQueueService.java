@@ -44,7 +44,7 @@ public class ResultQueueService {
 	
 	@Transactional
 	public void executeResultQueue(RaceResultQueue raceResultQueue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
-		log.info("It is executing " + raceResultQueue.getLocation() );
+		log.info("It is executing " + raceResultQueue.getLocation());
 		RaceResult raceResult = raceResultCrawler.getRaceResult(raceResultQueue.getLocation());
 		raceResultDao.add(raceResult);
 		raceResultQueue.setRunInd("Y");
