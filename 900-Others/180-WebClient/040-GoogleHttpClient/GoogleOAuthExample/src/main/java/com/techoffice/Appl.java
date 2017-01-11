@@ -47,7 +47,6 @@ public class Appl {
 	
 	private static final String userInfoUrl = "https://api.github.com/user";
 
-
 	private static Credential authorize() throws IOException {
 
 		AuthorizationCodeFlow flow = new AuthorizationCodeFlow.Builder(BearerToken.authorizationHeaderAccessMethod(),

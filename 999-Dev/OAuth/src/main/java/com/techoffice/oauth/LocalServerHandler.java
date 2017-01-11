@@ -72,6 +72,7 @@ public class LocalServerHandler implements Handler {
 		System.out.println("code: " + code);
 		
 		if (!"".equals(code)){
+			LocalServer.setCode(code);
 			for (Connector connector : server.getConnectors()) {
 				connector.shutdown();
 			}

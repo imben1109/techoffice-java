@@ -12,17 +12,17 @@ public class OAuthFlow {
 		this.oauth = oauth;
 	}
 	
-	public void requestAccess(){
+	public String requestAccess(){
 		try {
-			LocalServer localServer = new LocalServer();
-			localServer.start();
+			LocalServer.start();
 			Desktop desktop = Desktop.getDesktop();
 			URI AuthorizeUri = AuthorizeUriBuilder.build(oauth.getAuthorizeUrl(), oauth.getClientId(), oauth.getRedirectUrl());
 			desktop.browse(AuthorizeUri);
-			localServer.waitFor();
-			System.out.println("DONE");
+			LocalServer.waitFor();			
+			return LocalServer.getCode();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
+		return null;
 	}
 }

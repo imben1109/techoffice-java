@@ -8,14 +8,14 @@ public class LocalServer {
 	private static String code;
 	
 	private static Server server;
-	
-	public LocalServer(){
+
+	static {
         server = new Server(8080);
         LocalServerHandler handler = new LocalServerHandler();
         server.setHandler(handler);
 	}
 	
-	public void start()  {
+	public static void start()  {
 		try {
 			server.start();
 		} catch (Exception e) {
@@ -23,15 +23,15 @@ public class LocalServer {
 		}
 	}
 	
-	public static void setCode(){
-		try {
-			server.stop();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public static void setCode(String lcode){
+		code = lcode;
 	}
 	
-	public void waitFor(){
+	public static String getCode(){
+		return code;
+	}
+	
+	public static void waitFor(){
 		try {
 			server.join();
 		} catch (InterruptedException e) {
