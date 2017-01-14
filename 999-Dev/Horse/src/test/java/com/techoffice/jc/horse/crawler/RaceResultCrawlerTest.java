@@ -27,6 +27,7 @@ import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.service.ResultQueueService;
 import com.techoffice.jc.horse.service.ResultService;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -44,7 +45,7 @@ public class RaceResultCrawlerTest {
 	}
 	
 	@Test
-	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		List<RaceDate> raceDateList = raceResultCrawler.retrieveRaceDateList();
 		for(RaceDate raceDate: raceDateList){
 			log.info(raceDate.getRaceDate());

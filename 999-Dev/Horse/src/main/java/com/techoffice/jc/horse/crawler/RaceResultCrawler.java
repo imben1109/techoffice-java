@@ -28,6 +28,7 @@ import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Component
@@ -43,11 +44,11 @@ public class RaceResultCrawler {
 	}
 	
 	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-        String xml = WebDriverUtil.getXml(HOST + location);
+        String xml = WebDriverUtil.getRaceResultXml(HOST + location);
         return xml;
 	}
 	
-	public List<RaceDate> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public List<RaceDate> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
@@ -67,7 +68,7 @@ public class RaceResultCrawler {
 		return raceDateList;
 	}
 	
-	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
+	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException{
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);
@@ -99,7 +100,7 @@ public class RaceResultCrawler {
 		return raceNumList;
 	}
 	
-	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
+	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
 		String xml = retrieveXml(location);
 		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);

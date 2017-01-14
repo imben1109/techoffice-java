@@ -19,11 +19,12 @@ import org.xml.sax.SAXException;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class RaceResultHelper {
 	
-	public static RaceResult getRaceResult(String xml, String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException{
+	public static RaceResult getRaceResult(String xml, String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
 		RaceResult raceResult = new RaceResult();
 		raceResult.setLocation(location);
 		if (location.split("/").length > 9 ){
@@ -82,7 +83,7 @@ public class RaceResultHelper {
 		return raceResult;
 	}
 	
-	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		List<RaceResultHorse> raceResultHorseList = new ArrayList<RaceResultHorse>();
 		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[6]/table/tbody/tr");
 		for (int i=0; i<raceHorseNodeList.getLength(); i++){

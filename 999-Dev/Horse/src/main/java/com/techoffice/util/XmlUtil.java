@@ -4,7 +4,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -21,7 +20,6 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.h2.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -30,6 +28,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
 import org.xml.sax.SAXException;
 
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class XmlUtil {
@@ -44,40 +43,70 @@ public class XmlUtil {
 		return xml;
 	}
 	
-	public static Document convertXmlStrToDocument(String xml) throws ParserConfigurationException, SAXException, IOException{
-		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-		documentBuilderFactory.setNamespaceAware(false);
-		documentBuilderFactory.setValidating(false);
-		documentBuilderFactory.setFeature("http://xml.org/sax/features/namespaces", false);
-		documentBuilderFactory.setFeature("http://xml.org/sax/features/validation", false);
-		documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
-		documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-		DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-		Document document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes()));
+	/**
+	 * 
+	 * @param xml
+	 * @return
+	 * @throws XmlUtilDocumentConversionException
+	 */
+	public static Document convertXmlStrToDocument(String xml) throws XmlUtilDocumentConversionException{
+		Document document = null;
+		try{
+			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+			documentBuilderFactory.setNamespaceAware(false);
+			documentBuilderFactory.setValidating(false);
+			documentBuilderFactory.setFeature("http://xml.org/sax/features/namespaces", false);
+			documentBuilderFactory.setFeature("http://xml.org/sax/features/validation", false);
+			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes()));	
+		}catch(Exception e){
+			log.error("Try to convert xml: " + xml);
+			throw new XmlUtilDocumentConversionException("Cannot xml to Document: " + e.getMessage());
+		}
 		return document;
 	}
 	
 	public static String tidyXml(String xml){
 		Tidy tidy = new Tidy();
-		tidy.setXmlTags(true);
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
+		tidy.setXHTML(true);
 		OutputStream out = new ByteArrayOutputStream();
 		tidy.parse(new ByteArrayInputStream(xml.getBytes()), out);
 		String tiddiedXml = out.toString();
 		return tiddiedXml;
 	}
 	
-	public static NodeList evaluateXpath(String xml, String xPath) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException{
+	/**
+	 * 
+	 * @param xml
+	 * @param xPath
+	 * @return
+	 * @throws XmlUtilDocumentConversionException
+	 * @throws XPathExpressionException
+	 */
+	public static NodeList evaluateXpath(String xml, String xPath) throws XmlUtilDocumentConversionException, XPathExpressionException{
+		NodeList nodeList = null;
 		Document doc = convertXmlStrToDocument(xml);
 		XPathFactory xPathfactory = XPathFactory.newInstance();
 		XPath xpath = xPathfactory.newXPath();
 		XPathExpression expr = xpath.compile(xPath);
-		NodeList nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
-		return nodeList;
+		nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		return nodeList;	
 	}
 	
-	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException{
+	/**
+	 * 
+	 * @param xml
+	 * @param xPath
+	 * @return
+	 * @throws XPathExpressionException
+	 * @throws XmlUtilDocumentConversionException
+	 * @throws XmlUtilXpathNotUniqueException
+	 */
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){

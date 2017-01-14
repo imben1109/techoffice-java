@@ -24,6 +24,7 @@ import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Service
@@ -43,7 +44,7 @@ public class ResultQueueService {
 	private RaceDateDao raceDateDao;
 	
 	@Transactional
-	public void executeResultQueue(RaceResultQueue raceResultQueue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
+	public void executeResultQueue(RaceResultQueue raceResultQueue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
 		log.info("It is executing " + raceResultQueue.getLocation());
 		RaceResult raceResult = raceResultCrawler.getRaceResult(raceResultQueue.getLocation());
 		raceResultDao.add(raceResult);
@@ -83,9 +84,10 @@ public class ResultQueueService {
 	 * @throws InterruptedException
 	 * @throws TransformerException
 	 * @throws ParseException
+	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public int updateResultQueueByRaceDate(String raceDate) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException{
+	public int updateResultQueueByRaceDate(String raceDate) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException{
 		int raceResultCount = 0;
 		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(raceDate);
 		for(RaceResultQueue queue: raceResultQueueList){
@@ -106,9 +108,10 @@ public class ResultQueueService {
 	 * @throws SAXException
 	 * @throws InterruptedException
 	 * @throws TransformerException
+	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		int count = 0; 
 		List<RaceDate> newRaceDateList = raceResultCrawler.retrieveRaceDateList();
 		for (RaceDate newRaceDate: newRaceDateList){
@@ -137,9 +140,10 @@ public class ResultQueueService {
 	 * @throws InterruptedException
 	 * @throws TransformerException
 	 * @throws ParseException
+	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException {
+	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException {
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;
 		int processedCount = 0;
