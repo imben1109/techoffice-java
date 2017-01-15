@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock.service.web;
+package com.techoffice.hkex.stock.crawler;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -37,7 +37,7 @@ import com.techoffice.hkex.stock.model.Stock;
 import com.techoffice.util.XmlUtil;
 
 @Component
-public class StockWebClientService {
+public class StockCrawler {
 	
 	final Logger log = LoggerFactory.getLogger(this.getClass());		
 

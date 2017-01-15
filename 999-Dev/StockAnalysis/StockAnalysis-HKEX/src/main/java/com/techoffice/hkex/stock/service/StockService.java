@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.hkex.stock.crawler.StockCrawler;
 import com.techoffice.hkex.stock.dao.StockDao;
 import com.techoffice.hkex.stock.model.Stock;
-import com.techoffice.hkex.stock.service.web.StockWebClientService;
 
 @Service
 public class StockService {
@@ -25,7 +25,7 @@ public class StockService {
 	private StockDao stockDao;
 	
 	@Autowired
-	private StockWebClientService stockWebClientService;
+	private StockCrawler stockWebClientService;
 	
 	public List<Stock> getStockList(){
 		return stockDao.list();
