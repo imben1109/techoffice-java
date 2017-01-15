@@ -1,11 +1,11 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
-import com.ittechoffice.example.control.AlertButton;
-import com.ittechoffice.example.control.DialogButton;
-import com.ittechoffice.example.control.DirControl;
-import com.ittechoffice.example.control.DirPickerControl;
-import com.ittechoffice.example.control.FileControl;
-import com.ittechoffice.example.control.FilePickerControl;
+import com.techoffice.example.control.AlertButton;
+import com.techoffice.example.control.DialogButton;
+import com.techoffice.example.control.DirControl;
+import com.techoffice.example.control.DirPickerControl;
+import com.techoffice.example.control.FileControl;
+import com.techoffice.example.control.FilePickerControl;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

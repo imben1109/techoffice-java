@@ -1,4 +1,4 @@
-package com.ittechoffice.example.control;
+package com.techoffice.example.control;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
