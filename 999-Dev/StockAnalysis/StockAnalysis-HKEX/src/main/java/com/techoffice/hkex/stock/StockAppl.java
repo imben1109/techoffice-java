@@ -24,14 +24,14 @@ import com.techoffice.hkex.stock.model.Stock;
 public class StockAppl {
 	
 	@Autowired
-	private StockCrawler stockListWebClientService;
+	private StockCrawler stockCrawler;
 	
 	@Autowired
 	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		List<Stock> stocks = stockListWebClientService.retrieveStockListByWebClient();
+		List<Stock> stocks = stockCrawler.retrieveStockList();
 		for (Stock stock: stocks){
 			if (stock.getStockCode() != null){
 				System.out.println(stock.getStockCode() + " " + stock.getName());

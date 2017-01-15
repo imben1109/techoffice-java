@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 import javafx.fxml.FXMLLoader;
 import javafx.util.Callback;
 
-@Component
 public class SpringFxmlLoader extends FXMLLoader{
+	
 	private static final ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 	
 	public SpringFxmlLoader(){

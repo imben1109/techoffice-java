@@ -17,11 +17,9 @@ import javafx.stage.Stage;
 @Component
 public class ApplController {
 	
-	@Autowired
-	private SpringFxmlLoader springFxmlLoader;
-	
 	@FXML
 	public void showStock() throws IOException{
+		SpringFxmlLoader springFxmlLoader = new SpringFxmlLoader();
 		Stage stage = new Stage();
         VBox root = (VBox) springFxmlLoader.load("fxml/stock.fxml");
         Scene scene = new Scene(root);

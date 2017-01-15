@@ -46,7 +46,7 @@ public class StockCrawler {
 	@Autowired
 	private WebClient webClient; 
 	
-	public List<Stock> retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public List<Stock> retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
         final HtmlPage page = webClient.getPage(URL);
         String xml = page.asXml();
         List<Stock> stocks = parseXml(xml);

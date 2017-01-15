@@ -2933,3 +2933,213 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/use
 2017-01-14 16:41:28 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 2017-01-14 16:41:29 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b809711] of Hibernate SessionFactory for HibernateTransactionManager
 2017-01-14 16:41:37 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 16:41:26 CST 2017]; root of context hierarchy
+2017-01-14 16:43:34 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-14 16:43:34 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-14 16:43:34 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@475530b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26be92ad, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c70fda8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@224edc67]
+2017-01-14 16:43:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-14 16:43:34 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 16:43:34 CST 2017]; root of context hierarchy
+2017-01-14 16:43:34 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-14 16:43:35 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-14 16:43:35 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-14 16:43:35 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-14 16:43:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-14 16:43:36 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-14 16:43:37 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b809711] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-14 16:43:45 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 16:43:34 CST 2017]; root of context hierarchy
+2017-01-14 16:44:11 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-14 16:44:11 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-14 16:44:11 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@12d4bf7e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4c1d9d4b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7b227d8d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7219ec67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@45018215]
+2017-01-14 16:44:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-14 16:44:12 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@57c758ac: startup date [Sat Jan 14 16:44:12 CST 2017]; root of context hierarchy
+2017-01-14 16:44:12 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-14 16:44:13 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-14 16:44:13 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-14 16:44:13 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-14 16:44:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-14 16:44:14 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-14 16:44:15 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@4fc142ec] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-14 16:45:57 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@57c758ac: startup date [Sat Jan 14 16:44:12 CST 2017]; root of context hierarchy
+2017-01-14 17:00:48 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-14 17:00:48 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-14 17:00:48 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@475530b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26be92ad, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c70fda8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@224edc67]
+2017-01-14 17:00:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-14 17:00:48 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 17:00:48 CST 2017]; root of context hierarchy
+2017-01-14 17:00:48 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-14 17:00:49 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-14 17:00:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-14 17:00:49 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-14 17:00:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-14 17:00:50 WARN  JdbcEnvironmentInitiator:132 - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+2017-01-14 17:00:50 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-14 17:00:50 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2017-01-14 17:00:51 WARN  SqlExceptionHelper:129 - SQL Error: 0, SQLState: null
+2017-01-14 17:00:51 ERROR SqlExceptionHelper:131 - Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+2017-01-14 17:00:51 WARN  GenericApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currentOddsCrawler': Unsatisfied dependency expressed through field 'horseAdjTimeDao': Error creating bean with name 'horseAdjTimeDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'horseAdjTimeDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2017-01-14 17:00:51 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39] to prepare test instance [com.techoffice.jc.horse.crawler.CurrentOddsCrawlerTest@370c1968]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'currentOddsCrawler': Unsatisfied dependency expressed through field 'horseAdjTimeDao': Error creating bean with name 'horseAdjTimeDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'horseAdjTimeDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:775)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'horseAdjTimeDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1048)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1018)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:570)
+	... 43 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1048)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1018)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:570)
+	... 57 more
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:70)
+	at org.hibernate.tool.schema.internal.DdlTransactionIsolatorSharedImpl.getIsolatedConnection(DdlTransactionIsolatorSharedImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorH2DatabaseImpl.extractMetadata(SequenceInformationExtractorH2DatabaseImpl.java:35)
+	at org.hibernate.tool.schema.internal.exec.ImprovedDatabaseInformationImpl.initializeSequences(ImprovedDatabaseInformationImpl.java:64)
+	at org.hibernate.tool.schema.internal.exec.ImprovedDatabaseInformationImpl.<init>(ImprovedDatabaseInformationImpl.java:58)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:126)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:176)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:65)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:307)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:490)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:710)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:726)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:504)
+	at org.springframework.orm.hibernate5.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:488)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 68 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 85 more
+Caused by: org.h2.jdbc.JdbcSQLException: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.mvstore.db.MVTableEngine$Store.convertIllegalStateException(MVTableEngine.java:187)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:167)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2463)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:64)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.engine.Engine.createSession(Engine.java:27)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:102)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 90 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/user/test.mv.db [1.4.192/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:344)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2893)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	... 108 more
+2017-01-14 17:01:01 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-14 17:01:01 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-14 17:01:01 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@475530b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26be92ad, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c70fda8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@224edc67]
+2017-01-14 17:01:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-14 17:01:02 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 17:01:02 CST 2017]; root of context hierarchy
+2017-01-14 17:01:02 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-14 17:01:03 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-14 17:01:03 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-14 17:01:03 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-14 17:01:03 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-14 17:01:04 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-14 17:01:05 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b809711] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-14 17:01:13 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 17:01:02 CST 2017]; root of context hierarchy
+2017-01-14 17:02:34 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-14 17:02:34 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-14 17:02:34 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@475530b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26be92ad, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c70fda8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@224edc67]
+2017-01-14 17:02:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-14 17:02:35 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 17:02:35 CST 2017]; root of context hierarchy
+2017-01-14 17:02:35 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-14 17:02:36 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-14 17:02:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-14 17:02:36 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-14 17:02:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-14 17:02:36 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-14 17:02:38 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b809711] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-14 17:02:47 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Jan 14 17:02:35 CST 2017]; root of context hierarchy

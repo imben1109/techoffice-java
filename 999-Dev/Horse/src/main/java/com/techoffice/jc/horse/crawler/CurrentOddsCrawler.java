@@ -32,7 +32,7 @@ import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 public class CurrentOddsCrawler {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
-	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en";
+	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en&date=14-01-2017&venue=ST&raceno=10";
 	
 	@Autowired
 	private HorseAdjTimeDao horseAdjTimeDao;
@@ -80,8 +80,12 @@ public class CurrentOddsCrawler {
 			Double drawTime = drawTimeMap.get(odd.getDraw());
 			odd.setDrawTime(drawTime);
 			if (odd.getAdjTime() != null){
-				Double calcTime = odd.getAdjTime() + drawTime;
-				odd.setCalcTime(calcTime);	
+				if (odd.getDrawTime() != null){
+					Double calcTime = odd.getAdjTime() + drawTime;
+					odd.setCalcTime(calcTime);		
+				}else{
+					odd.setCalcTime(odd.getAdjTime());		
+				}
 			}
 		}
 		Collections.sort(horseList);
