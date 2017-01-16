@@ -1,9 +1,11 @@
 package com.techoffice.example.model;
 
+import com.opencsv.bean.CsvBind;
+
 public class Person {
-	
+	@CsvBind
 	private String name;
-	
+	@CsvBind
 	private String title;
 	public String getName() {
 		return name;

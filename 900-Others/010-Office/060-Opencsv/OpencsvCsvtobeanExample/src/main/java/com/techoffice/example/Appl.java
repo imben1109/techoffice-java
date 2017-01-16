@@ -19,6 +19,7 @@ public class Appl {
 		CSVReader reader = new CSVReader(new FileReader("test.csv"));
 		HeaderColumnNameMappingStrategy<Person> strategy = new HeaderColumnNameMappingStrategy<Person>();
 		strategy.setType(Person.class);
+		
 		CsvToBean<Person> csvToBean = new CsvToBean<Person>();
 		List<Person> persons = csvToBean.parse(strategy, reader);
 		reader.close();
