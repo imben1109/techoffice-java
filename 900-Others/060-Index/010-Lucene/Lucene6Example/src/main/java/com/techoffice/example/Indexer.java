@@ -1,14 +1,17 @@
 package com.techoffice.example;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
 import org.apache.lucene.document.Field.Store;
+import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
@@ -31,13 +34,10 @@ public class Indexer {
 	
 	public void indexFile(File file) throws IOException{
 		Document document = new Document();
-		String content = FileUtils.readFileToString(file, "UTF-8");
-		document.add(new TextField("path", file.getPath(), Store.YES));
-		document.add(new TextField("content", content, Store.YES));
-		indexWriter.updateDocument(new Term("id", file.getPath()), document);
-		indexWriter.maybeMerge();
-		indexWriter.commit();
-		
+		BufferedReader contentReader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+		document.add(new StringField("path", file.getPath(), Store.YES));
+		document.add(new TextField("content", contentReader));
+		indexWriter.updateDocument(new Term("path", file.toString()), document);
 	}
 	
 	public void close() throws IOException{
