@@ -34,6 +34,12 @@
 			 	</FXCollections>
 			 </items>
 		</TableView>
-		<Button text="Refresh" onAction="#refresh"/>
+		
+		<HBox>
+			<children>
+				<Button text="Refresh" onAction="#refresh"/>
+				<Button text="Export" onAction="#export" />	
+			</children
+		</HBox>
 	</children>
 </VBox>

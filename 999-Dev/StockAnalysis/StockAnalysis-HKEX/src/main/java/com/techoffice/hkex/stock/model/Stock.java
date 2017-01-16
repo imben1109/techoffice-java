@@ -1,15 +1,13 @@
 package com.techoffice.hkex.stock.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Table
 @Entity
 public class Stock {
+	
 	
 	@Id
 	private String stockCode;

@@ -2,7 +2,6 @@ package com.techoffice.hkex.javafx.controller;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -19,7 +18,7 @@ import com.techoffice.hkex.stock.service.StockService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
-
+ 
 @Component
 public class StockController {
 	
@@ -39,6 +38,11 @@ public class StockController {
 		stockService.updateFromInternet();
 		tableView.getItems().clear();
 		tableView.getItems().addAll(stockService.getStockList());
+	}
+	
+	@FXML
+	public void export(ActionEvent event){
+		
 	}
 	
 }
