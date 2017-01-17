@@ -10,8 +10,7 @@ import java.util.Map;
 
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.BeanToCsv;
-import com.opencsv.bean.HeaderColumnNameMappingStrategy;
-import com.opencsv.bean.HeaderColumnNameTranslateMappingStrategy;
+import com.opencsv.bean.ColumnPositionMappingStrategy;
 import com.techoffice.example.model.Person;
 
 public class Appl {
@@ -34,9 +33,11 @@ public class Appl {
 		Map<String, String> mapping = new HashMap<String, String>();
 		mapping.put("Person Name", "name");
 		mapping.put("Person Title", "title");
-		HeaderColumnNameTranslateMappingStrategy<Person> strategy = new HeaderColumnNameTranslateMappingStrategy<Person>();
-		strategy.setColumnMapping(mapping);
+		ColumnPositionMappingStrategy<Person> strategy = new ColumnPositionMappingStrategy<Person>();
 		strategy.setType(Person.class);
+	    String[] columns = new String[]{"name", "title"};
+	    strategy.setColumnMapping(columns);
+
 		BeanToCsv<Person> beanToCsv = new BeanToCsv<Person>();
 		beanToCsv.write(strategy, writer, persons);
 		writer.close();

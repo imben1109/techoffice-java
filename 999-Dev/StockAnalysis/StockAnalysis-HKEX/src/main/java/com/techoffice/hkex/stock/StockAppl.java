@@ -40,6 +40,7 @@ public class StockAppl {
 		}
 	}
 	
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		StockAppl appl = context.getBean(StockAppl.class);

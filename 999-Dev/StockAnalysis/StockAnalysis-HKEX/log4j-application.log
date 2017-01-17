@@ -10655,3 +10655,68 @@
 2017-01-16 23:35:24 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@30b975ad] of Hibernate SessionFactory for HibernateTransactionManager
 2017-01-16 23:35:24 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3a7b503d] of Hibernate SessionFactory for HibernateTransactionManager
 2017-01-16 23:35:26 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-18 00:41:22 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@244038d0: startup date [Wed Jan 18 00:41:22 CST 2017]; root of context hierarchy
+2017-01-18 00:41:22 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:41:23 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:41:24 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-18 00:41:24 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-18 00:41:24 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-18 00:41:24 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-18 00:41:24 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:41:25 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7a45d714: startup date [Wed Jan 18 00:41:25 CST 2017]; root of context hierarchy
+2017-01-18 00:41:25 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:41:25 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:41:25 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:41:25 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@436bd4df] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-18 00:41:26 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@ecf9049] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-18 00:41:29 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-18 00:41:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-18 00:41:30 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-18 00:41:31 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-01-18 00:41:32 WARN  SqlExceptionHelper:129 - SQL Error: 23505, SQLState: 23505
+2017-01-18 00:41:32 ERROR SqlExceptionHelper:131 - Unique index or primary key violation: "PRIMARY_KEY_4 ON PUBLIC.STOCK(STOCKCODE) VALUES ('00001', 1)"; SQL statement:
+insert into Stock (chiName, name, stockCode) values (?, ?, ?) [23505-192]
+2017-01-18 00:41:32 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2017-01-18 00:41:32 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2017-01-18 00:42:06 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@649d209a: startup date [Wed Jan 18 00:42:06 CST 2017]; root of context hierarchy
+2017-01-18 00:42:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:42:07 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:42:07 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-18 00:42:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-18 00:42:07 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-18 00:42:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-18 00:42:08 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:42:09 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2f7efd0b: startup date [Wed Jan 18 00:42:09 CST 2017]; root of context hierarchy
+2017-01-18 00:42:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:42:09 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:42:09 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:42:09 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3ddeaa5f] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-18 00:42:09 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1bc53649] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-18 00:42:57 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@649d209a: startup date [Wed Jan 18 00:42:57 CST 2017]; root of context hierarchy
+2017-01-18 00:42:57 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:42:57 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:42:58 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-18 00:42:58 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-18 00:42:58 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-18 00:42:58 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-18 00:42:58 WARN  JdbcEnvironmentInitiator:132 - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+2017-01-18 00:42:58 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:42:58 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2017-01-18 00:42:59 WARN  SqlExceptionHelper:129 - SQL Error: 0, SQLState: null
+2017-01-18 00:42:59 ERROR SqlExceptionHelper:131 - Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+2017-01-18 00:42:59 WARN  ClassPathXmlApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockController': Unsatisfied dependency expressed through field 'stockService': Error creating bean with name 'stockService': Unsatisfied dependency expressed through field 'stockDao': Error creating bean with name 'stockDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockService': Unsatisfied dependency expressed through field 'stockDao': Error creating bean with name 'stockDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockDao': Unsatisfied dependency expressed through field 'sessionFactory': Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2017-01-18 00:43:05 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@649d209a: startup date [Wed Jan 18 00:43:05 CST 2017]; root of context hierarchy
+2017-01-18 00:43:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:43:05 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:43:06 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-18 00:43:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-18 00:43:06 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-18 00:43:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-18 00:43:06 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:43:07 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2f7efd0b: startup date [Wed Jan 18 00:43:07 CST 2017]; root of context hierarchy
+2017-01-18 00:43:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-18 00:43:07 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-18 00:43:07 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-18 00:43:07 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3ddeaa5f] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-18 00:43:08 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@1bc53649] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-18 00:43:09 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory

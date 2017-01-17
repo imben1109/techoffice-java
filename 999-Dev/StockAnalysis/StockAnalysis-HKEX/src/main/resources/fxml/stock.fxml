@@ -39,7 +39,7 @@
 			<children>
 				<Button text="Refresh" onAction="#refresh"/>
 				<Button text="Export" onAction="#export" />	
-			</children
+			</children>
 		</HBox>
 	</children>
 </VBox>
