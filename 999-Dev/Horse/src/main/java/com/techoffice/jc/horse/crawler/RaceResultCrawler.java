@@ -51,7 +51,8 @@ public class RaceResultCrawler {
 	public List<RaceDate> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
-		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[2]/select");
+		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "//*[@id='raceDateSelect']");
+		
 		Node dateSelect = dateSelectList.item(0);
 		NodeList raceDatesNodeList = dateSelect.getChildNodes();
 		for (int i=0; i<raceDatesNodeList.getLength(); i++){

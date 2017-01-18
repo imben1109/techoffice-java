@@ -112,7 +112,7 @@ public class XmlUtil {
 		if (nodeList.getLength() > 1){
 			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
 		}else if (nodeList.getLength() == 0 ){
-			log.info(xml);
+			log.error(xml);
 			throw new XmlUtilXpathNotUniqueException(xPath + " cannot be found. ");
 		}else {
 			Node node = nodeList.item(0);

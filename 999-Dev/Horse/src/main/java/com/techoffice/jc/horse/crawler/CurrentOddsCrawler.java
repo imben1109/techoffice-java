@@ -32,7 +32,7 @@ import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 public class CurrentOddsCrawler {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
-	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en&date=14-01-2017&venue=ST&raceno=10";
+	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en";
 	
 	@Autowired
 	private HorseAdjTimeDao horseAdjTimeDao;
@@ -106,7 +106,7 @@ public class CurrentOddsCrawler {
 	
 	private String getCourse(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
 		String trackXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[4]";
-		String courseXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[5]";
+		String courseXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[3]";
 		String courseStr = XmlUtil.getXpathText(xml, courseXpath);
 		courseStr = courseStr.toUpperCase();
 		String trackStr = XmlUtil.getXpathText(xml, trackXpath);
@@ -116,7 +116,7 @@ public class CurrentOddsCrawler {
 	}
 	
 	private String getDistance(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		String distanceXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[6]";
+		String distanceXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[5]";
 		String distanceStr = XmlUtil.getXpathText(xml, distanceXpath);
 		distanceStr = distanceStr.toUpperCase();
 		return distanceStr;
