@@ -46,6 +46,7 @@
 			<list>
 				<value>com.techoffice.yahoo.finance.stock.model.Price</value>
 				<value>com.techoffice.yahoo.finance.stock.model.HsiStock</value>
+				<value>com.techoffice.hkex.stock.model.Stock</value>
 			</list>
 		</property>
 	</bean>
