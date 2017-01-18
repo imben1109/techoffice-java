@@ -18,8 +18,13 @@ public class Appl {
 	public static void main(String[] args) throws IOException, ParseException{
 		Indexer indexer = new Indexer("Index");
 		indexer.indexFile(new File("Data/Testing.txt"));
+		indexer.indexFile(new File("Data/Testing1.txt"));
+		indexer.indexFile(new File("Data/Testing2.txt"));
+		indexer.indexFile(new File("Data/Testing3.txt"));
+		indexer.indexFile(new File("Data/Testing4.txt"));
+		indexer.indexFile(new File("Data/Testing5.txt"));
 		indexer.close();
 		Searcher searcher = new Searcher("Index");
-		searcher.search("Testing");
+		searcher.search("efg");
 	}
 }

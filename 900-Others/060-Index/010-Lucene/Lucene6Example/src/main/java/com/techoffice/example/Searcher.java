@@ -33,7 +33,6 @@ public class Searcher {
         for (ScoreDoc scoreDoc : topDocs.scoreDocs) {           
             Document document = indexSearcher.doc(scoreDoc.doc);
             System.out.println("path " + document.get("path"));
-            System.out.println("content " + document.get("content"));
         }
 	}
 	
