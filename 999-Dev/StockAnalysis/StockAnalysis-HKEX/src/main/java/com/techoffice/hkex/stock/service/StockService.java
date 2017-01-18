@@ -27,6 +27,7 @@ public class StockService {
 	@Autowired
 	private StockCrawler stockWebClientService;
 	
+	
 	public List<Stock> getStockList(){
 		return stockDao.list();
 	}

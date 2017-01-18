@@ -2,6 +2,7 @@ package com.techoffice.hkex.javafx.controller;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -13,6 +14,7 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.hkex.stock.service.CsvExportService;
 import com.techoffice.hkex.stock.service.StockService;
 
 import javafx.event.ActionEvent;
@@ -25,12 +27,18 @@ public class StockController {
 	@Autowired
 	private StockService stockService;
 	
+	@Autowired
+	private CsvExportService csvExportService;
+	
+	private List<Stock> stocks;
+	
 	@FXML
 	private TableView<Stock> tableView;
 	
 	@FXML
 	public void initialize(){
-		tableView.getItems().addAll(stockService.getStockList());
+		stocks = stockService.getStockList();
+		tableView.getItems().addAll(stocks);
 	}
 	
 	@FXML
@@ -41,8 +49,8 @@ public class StockController {
 	}
 	
 	@FXML
-	public void export(ActionEvent event){
-		
+	public void export(ActionEvent event) throws IOException{
+		csvExportService.export(stocks);
 	}
 	
 }
