@@ -1,18 +1,18 @@
-EclipseAssistant
-ExampleAssitant
-ExcelAssistant
-GitAssitant
-GithubAssistant
-HibernateAssistant
-iBatisAssistant
-JavaAssistant
-JeeAssistant
-MavenAssistant
-MyBatisAssistant
-OracleAssistant
-PMAssistant
-SDLCAssistant
-SpringAssistant
-WebsphereAssistant
-WebsphereCloneAssistant
-WordAssistant
+git mv EclipseAssistant Eclipse
+git mv ExampleAssistant Example
+git mv ExcelAssistant Excel
+git mv GitAssistant Git
+git mv GithubAssistant Github
+git mv HibernateAssistant Hibernate
+git mv iBatisAssistant iBatis
+git mv JavaAssistant Java
+git mv JeeAssistant Jee
+git mv MavenAssistant Maven
+git mv MyBatisAssistant MyBatis
+git mv OracleAssistant Oracle
+git mv PMAssistant PM
+git mv SDLCAssistant SDLC
+git mv SpringAssistant Spring
+git mv WebsphereAssistant Websphere
+git mv WebsphereCloneAssistant WebsphereClone
+git mv WordAssistant Word
