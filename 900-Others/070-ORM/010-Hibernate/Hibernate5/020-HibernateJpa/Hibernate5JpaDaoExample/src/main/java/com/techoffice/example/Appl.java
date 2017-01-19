@@ -17,22 +17,14 @@ public class Appl {
 	public static void main(String[] args){
 
 		StudentDao studentDao = new StudentDao();
-		
-		try{
-			Student student = new Student();
-			student.setStudentName("Test 1");
-			
-			studentDao.save(student);
-			// 
-			List<Student> results = studentDao.list();
-			for (Student result: results){
-				System.out.println(result.getStudentName());
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			// close the factory and release any resource it holds.
-			entityManagerFactory.close();	
+		Student student = new Student();
+		student.setStudentName("Test 1");
+		studentDao.save(student);
+		List<Student> results = studentDao.list();
+		for (Student result: results){
+			System.out.println(result.getStudentName());
 		}
+		entityManagerFactory.close();	
+		
 	}
 }
