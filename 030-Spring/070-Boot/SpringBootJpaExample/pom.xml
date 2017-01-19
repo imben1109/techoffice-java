@@ -8,7 +8,7 @@
 		<version>1.4.0.RELEASE</version>
 	</parent>
 	<groupId>com.techoffice.example</groupId>
-	<artifactId>SpringBootHibernateExample</artifactId>
+	<artifactId>SpringBootJpaExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
