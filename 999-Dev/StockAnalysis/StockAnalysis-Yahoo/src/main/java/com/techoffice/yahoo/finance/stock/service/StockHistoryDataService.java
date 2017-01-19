@@ -1,5 +1,40 @@
 package com.techoffice.yahoo.finance.stock.service;
 
-public class StockHistoryDataService {
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.MalformedURLException;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.hkex.stock.dao.StockDao;
+import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
+import com.techoffice.yahoo.finance.stock.dao.PriceDao;
+import com.techoffice.yahoo.finance.stock.model.Price;
+
+@Service
+public class StockHistoryDataService {
+	
+	@Autowired
+	private PriceDao priceDao;
+	
+	@Autowired
+	private StockDao stockDao;
+	
+	@Autowired
+	private StockHistoryDataCrawler stockHistoryDataCrawler;
+	
+	public void updateAllStockPrice() throws FailingHttpStatusCodeException, MalformedURLException, IllegalAccessException, InvocationTargetException, IOException{
+		List<Stock> stocks = stockDao.list();
+		for (Stock stock: stocks){
+			System.out.println(stock.getName());
+			String stockCode = stock.getStockCode().substring(1);
+			List<Price> prices = stockHistoryDataCrawler.retrieveHistoryPriceData(stockCode);
+			priceDao.deletePrice("0939");
+			priceDao.addPriceList(prices);
+		}
+	}
 }

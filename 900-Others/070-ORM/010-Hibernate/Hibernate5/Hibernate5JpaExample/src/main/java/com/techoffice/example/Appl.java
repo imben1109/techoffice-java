@@ -19,7 +19,7 @@ public class Appl {
 			
 			entityManager.persist(student);
 			
-			// HQL
+			// 
 			List<Student> results = entityManager.createQuery("From Student", Student.class).getResultList();
 			for (Student result: results){
 				System.out.println(result.getStudentName());

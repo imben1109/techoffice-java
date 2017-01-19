@@ -32,6 +32,7 @@ public class StockAppl {
 	
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, IllegalAccessException, InvocationTargetException{
 		List<Price> prices =stockHistoryDataCrawler.retrieveHistoryPriceData("0939");
+		priceDao.deletePrice("0939");
 		priceDao.addPriceList(prices);
 		List<Price> dbPrices = priceDao.getPriceList();
 		for(Price price: dbPrices){
