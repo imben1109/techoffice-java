@@ -23,6 +23,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.jc.horse.dao.DrawAccelerateTimeDao;
 import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
 import com.techoffice.jc.horse.dto.CurrentOdd;
+import com.techoffice.jc.horse.helper.CurrentOddsHelper;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
@@ -60,23 +61,27 @@ public class CurrentOddsCrawler {
 		}
 	}
 	
-	public void getHorses() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
+	public List<CurrentOdd> getCurrent() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
 		String xml = retrieveXml();
+		return getOddsList(xml);
+	}
+	
+	public List<CurrentOdd> getOddsList(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
 		String xPath = "//*[@id='detailWPTable']/table/tbody/tr";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
-		List<CurrentOdd> horseList = new ArrayList<CurrentOdd>();
+		List<CurrentOdd> oddsList = new ArrayList<CurrentOdd>();
 		for (int i=1; i<nodeList.getLength()-1; i++){
 			Node trNode = nodeList.item(i);
-			CurrentOdd currentOdd = getNodeInfo(trNode);
-			horseList.add(currentOdd);
+			CurrentOdd currentOdd = CurrentOddsHelper.getNodeInfo(trNode);
+			oddsList.add(currentOdd);
 		}
-		String course = getCourse(xml);
-		String distance = getDistance(xml);
-		String venue = getVenue(xml);
-		horseList= horseAdjTimeDao.getAdjTime(horseList);
+		String course = CurrentOddsHelper.getCourse(xml);
+		String distance = CurrentOddsHelper.getDistance(xml);
+		String venue = CurrentOddsHelper.getVenue(xml);
+		oddsList= horseAdjTimeDao.getAdjTime(oddsList);
 		Map<String, Double> drawTimeMap = drawAccelerateTimeDao.getDrawAccelerateTime(venue, course, distance);
 		System.out.println(venue + " " + distance + " " + course) ;
-		for (CurrentOdd odd: horseList){
+		for (CurrentOdd odd: oddsList){
 			Double drawTime = drawTimeMap.get(odd.getDraw());
 			odd.setDrawTime(drawTime);
 			if (odd.getAdjTime() != null){
@@ -88,65 +93,13 @@ public class CurrentOddsCrawler {
 				}
 			}
 		}
-		Collections.sort(horseList);
-		for (CurrentOdd odd: horseList){
+		Collections.sort(oddsList);
+		for (CurrentOdd odd: oddsList){
 			System.out.println(odd.getHorseName() + " " + odd.getCalcTime());
 		}
-
+		return oddsList;
 	}
 	
-	private String getVenue(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		String venueXpath = "//*[@id='trMeetingInfo']/td[2]/table/tbody/tr/td[4]/nobr[2]";
-		String venueStr = XmlUtil.getXpathText(xml, venueXpath);
-		if (venueStr.equals("Sha Tin")){
-			return "Tin";
-		}
-		return "";
-	}
 	
-	private String getCourse(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		String trackXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[4]";
-		String courseXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[3]";
-		String courseStr = XmlUtil.getXpathText(xml, courseXpath);
-		courseStr = courseStr.toUpperCase();
-		String trackStr = XmlUtil.getXpathText(xml, trackXpath);
-		trackStr = trackStr.toUpperCase();
-		String course = trackStr + " - " + courseStr;
-		return course;
-	}
-	
-	private String getDistance(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		String distanceXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[5]";
-		String distanceStr = XmlUtil.getXpathText(xml, distanceXpath);
-		distanceStr = distanceStr.toUpperCase();
-		return distanceStr;
-	}
-	
-	private CurrentOdd getNodeInfo(Node node){
-		CurrentOdd currentOdd = new CurrentOdd();
-		String horseFullName = "";
-		int tdNodeSeq = 0;
-		NodeList nodeList = node.getChildNodes();
-		for (int i=0; i<nodeList.getLength(); i++){
-			Node item = nodeList.item(i);
-			if (item.getNodeName().equals("td")){
-				tdNodeSeq++;
-				Node tdNode = item;
-				if (tdNodeSeq == 3){
-					Node aNode = tdNode.getChildNodes().item(0);
-					String hrefString = aNode.getAttributes().getNamedItem("href").getNodeValue();
-					String horseId = hrefString.replace("javascript:WACommonTagging('horse');goHorseRecord2('http://www.hkjc.com/english',%20'", "").replace("');", "");
-					String horseNmae= aNode.getChildNodes().item(0).getTextContent();
-					horseFullName = horseNmae + " (" + horseId + ")";
-					currentOdd.setHorseName(horseFullName);
-				}
-				if (tdNodeSeq == 4){
-					String draw = tdNode.getTextContent();
-					currentOdd.setDraw(draw);
-				}
-			}
-		}
-		return currentOdd;
-	}
 
 }

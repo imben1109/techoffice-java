@@ -36,6 +36,6 @@ public class CurrentOddsCrawlerTest {
 	
 	@Test
 	public void getHorse() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		currentOddsCrawler.getHorses();
+		currentOddsCrawler.getCurrent();
 	}
 }
