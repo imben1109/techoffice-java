@@ -40,16 +40,16 @@ public class CurrentOddsCrawler {
 	@Autowired
 	private DrawAccelerateTimeDao drawAccelerateTimeDao;
 	
-	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public String retrieveXml() {
         return retrieveXml("");
 	}
 	
-	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public String retrieveXml(String location) {
         String xml = WebDriverUtil.getXml(HOST + location);
         return xml;
 	}
 	
-	public void getRaceNums() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public void getRaceNums() throws XPathExpressionException, XmlUtilDocumentConversionException {
 		String xml = retrieveXml();
 		String xPath = "//*[@id='info_bar']/tbody/tr[2]/td/div/table/tbody/tr/td/a/img";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
@@ -60,7 +60,7 @@ public class CurrentOddsCrawler {
 		}
 	}
 	
-	public void getHorses() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
+	public void getHorses() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
 		String xml = retrieveXml();
 		String xPath = "//*[@id='detailWPTable']/table/tbody/tr";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
