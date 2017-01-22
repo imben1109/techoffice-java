@@ -2792,3 +2792,31 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 2017-01-19 01:24:04 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 2017-01-19 01:24:05 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b718392] of Hibernate SessionFactory for HibernateTransactionManager
 2017-01-19 01:24:06 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-19 08:10:13 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-19 08:10:13 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-19 08:10:13 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58651fd0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4520ebad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5419f379, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7dc7cbad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d2cc05a]
+2017-01-19 08:10:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-19 08:10:13 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@59ec2012: startup date [Thu Jan 19 08:10:13 CST 2017]; root of context hierarchy
+2017-01-19 08:10:13 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 08:10:15 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-19 08:10:15 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-19 08:10:15 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-19 08:10:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-19 08:10:17 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-19 08:10:18 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b718392] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-19 08:10:19 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-19 11:25:57 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@59ec2012: startup date [Thu Jan 19 08:10:13 CST 2017]; root of context hierarchy
+2017-01-19 23:41:34 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-01-19 23:41:34 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-01-19 23:41:34 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58651fd0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4520ebad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5419f379, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7dc7cbad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d2cc05a]
+2017-01-19 23:41:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-01-19 23:41:35 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@59ec2012: startup date [Thu Jan 19 23:41:35 CST 2017]; root of context hierarchy
+2017-01-19 23:41:35 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-01-19 23:41:36 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-01-19 23:41:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-01-19 23:41:36 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-01-19 23:41:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-01-19 23:41:37 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-01-19 23:41:38 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b718392] of Hibernate SessionFactory for HibernateTransactionManager
+2017-01-19 23:41:38 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-01-20 01:02:21 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@59ec2012: startup date [Thu Jan 19 23:41:35 CST 2017]; root of context hierarchy
