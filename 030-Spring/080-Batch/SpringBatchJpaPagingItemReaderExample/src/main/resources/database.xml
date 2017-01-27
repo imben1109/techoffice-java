@@ -10,9 +10,6 @@
         http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<!-- Auto-Scan Spring Bean -->
-	<context:component-scan base-package="com.techoffice.example" />
-
 	<!-- Database Connection Pool Datasource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
@@ -35,10 +32,23 @@
 		</property>
 	</bean>
 	
-	<bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
 	</bean>
 
-	<tx:annotation-driven transaction-manager="txManager"/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<bean id="dbInit" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+		<property name="scripts">
+			<list>
+				<value>db-schema.sql</value>
+			</list>
+		</property>
+		<property name="continueOnError" value="true"/>
+	</bean>
+	<bean id="startupScripts" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="databasePopulator"><ref bean="dbInit"/></property>
+	</bean>
 	
 </beans>
