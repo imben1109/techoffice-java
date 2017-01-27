@@ -1,4 +1,4 @@
-package com.ittechoffice.service;
+package com.techoffice.service;
 
 import org.springframework.stereotype.Service;
 

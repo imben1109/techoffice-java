@@ -39,7 +39,7 @@ Create a Spring config file, applicationContext.xml. The below is an example.
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:component-scan base-package="com.ittechoffice" />
+	<context:component-scan base-package="com.techoffice" />
 
 </beans>
 
