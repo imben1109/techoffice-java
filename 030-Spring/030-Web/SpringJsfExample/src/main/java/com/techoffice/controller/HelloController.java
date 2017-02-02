@@ -1,4 +1,4 @@
-package com.ittechoffice.controller;
+package com.techoffice.controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -6,7 +6,7 @@ import javax.faces.bean.SessionScoped;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.ittechoffice.service.HelloService;
+import com.techoffice.service.HelloService;
 
 @Component
 @ManagedBean

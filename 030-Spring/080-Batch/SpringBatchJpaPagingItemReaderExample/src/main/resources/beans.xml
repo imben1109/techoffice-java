@@ -15,21 +15,27 @@
 
 	<context:component-scan base-package="com.techoffice.example" />
 
+	<import resource="database.xml"/>
+
 	<!-- Spring Batch -->
 	<bean id="jobRepository"
 		class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
 		<property name="transactionManager" ref="transactionManager" />
 	</bean>
 
-	<bean id="transactionManager"
-		class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
-
 	<bean id="jobLauncher"
 		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
 		<property name="jobRepository" ref="jobRepository" />
 	</bean>
 
-	<bean id="simpleItemReader" class="com.techoffice.example.batch.SimpleItemReader" />
+	<bean id="simpleItemReader2" class="com.techoffice.example.batch.SimpleItemReader" />
+
+	<bean id="simpleItemReader" class="org.springframework.batch.item.database.JpaPagingItemReader" >
+		<property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
+	    <property name="queryString" value="select s from Student s"/>
+	    <property name="pageSize" value="5"/>
+	</bean>
+	
 	<bean id="simpleItemWriter" class="com.techoffice.example.batch.SimpleItemWriter" />
 	<bean id="simpleItemProcessor" class="com.techoffice.example.batch.SimpleProcessor" />
 
@@ -43,7 +49,5 @@
 			</batch:tasklet>
 		</batch:step>
 	</batch:job>
-
-
 
 </beans>
