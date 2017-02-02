@@ -2,6 +2,7 @@ package com.techoffice.aastock.stock.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
@@ -24,6 +25,9 @@ public class IndustryPerformanceCrawlerTest {
 	
 	@Test
 	public void getIndrustryList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException{
-		industryPerformanceCrawler.retrieveIndustryList();
+		List<String> industryList = industryPerformanceCrawler.retrieveIndustryList();
+		for(String industry: industryList){
+			System.out.println(industry);
+		}
 	}
 }

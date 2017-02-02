@@ -19,6 +19,7 @@ public class SpecialStringUtil {
 		String newStr = removeQuestionMark(str);
 		newStr = replaceNewLineToSpace(newStr);
 		newStr = doubleSpaceToSingle(newStr);
+		newStr = newStr.trim();
 		return newStr;
 	}
 	
