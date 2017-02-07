@@ -4052,3 +4052,336 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/use
 2017-01-22 14:13:04 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 2017-01-22 14:13:06 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@236ab296] of Hibernate SessionFactory for HibernateTransactionManager
 2017-01-22 14:13:14 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sun Jan 22 14:13:02 CST 2017]; root of context hierarchy
+2017-02-07 22:17:18 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-07 22:17:18 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-07 22:17:18 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-02-07 22:17:19 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-07 22:17:19 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Tue Feb 07 22:17:19 CST 2017]; root of context hierarchy
+2017-02-07 22:17:19 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-02-07 22:17:20 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-07 22:17:20 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-07 22:17:20 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-07 22:17:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-07 22:17:21 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-07 22:17:22 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b0f7d9d] of Hibernate SessionFactory for HibernateTransactionManager
+2017-02-07 22:17:31 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-07 22:17:32 INFO  ResultQueueService:124 - Retrieved Race Date Count: 150
+2017-02-07 22:17:32 INFO  ResultQueueService:125 - Inserted Race Date Count: 6
+2017-02-07 22:17:32 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Tue Feb 07 22:17:19 CST 2017]; root of context hierarchy
+2017-02-07 22:17:39 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-07 22:17:39 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-07 22:17:39 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b98378d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@475530b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d057a39, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26be92ad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c70fda8]
+2017-02-07 22:17:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-07 22:17:39 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@4bec1f0c: startup date [Tue Feb 07 22:17:39 CST 2017]; root of context hierarchy
+2017-02-07 22:17:40 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-02-07 22:17:41 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-07 22:17:41 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-07 22:17:41 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-07 22:17:41 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-07 22:17:41 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-07 22:17:43 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3b0f7d9d] of Hibernate SessionFactory for HibernateTransactionManager
+2017-02-07 22:17:43 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-07 22:17:43 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:17:50 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:17:56 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:18:02 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:18:08 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:18:13 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:18:17 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:18:20 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:18:26 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:18:32 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:18:32 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:18:32 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:18:32 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:18:32 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:18:35 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:18:38 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:18:44 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:18:48 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:18:51 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:19:04 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:19:08 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:19:11 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:19:14 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:19:14 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:19:14 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:19:14 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:19:14 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:19:17 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:19:24 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:19:27 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:19:30 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:19:34 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:19:37 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:19:40 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:19:44 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:19:48 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:19:48 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:19:48 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:19:48 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:19:48 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:19:51 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:19:57 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:20:00 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:20:04 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:20:08 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:20:15 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:20:18 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:20:24 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:20:28 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:20:28 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:20:28 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:20:28 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:20:28 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:20:31 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:20:34 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:20:39 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:20:43 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:20:47 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:20:51 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:20:54 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:20:58 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:21:01 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:21:01 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:21:01 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:21:01 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:21:01 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:21:04 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:21:07 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:21:11 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:21:14 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:21:17 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:21:21 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:21:24 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:21:30 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:21:37 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:21:37 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:21:37 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:21:37 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:21:37 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:21:40 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:21:43 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:21:46 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:21:50 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:21:53 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:21:57 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:22:03 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:22:07 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:22:10 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:22:10 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:22:10 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:22:10 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:22:10 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:22:13 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:22:17 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:22:20 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:22:23 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:22:29 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:22:33 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:22:36 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:22:39 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:22:43 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:22:43 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:22:43 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:22:43 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:22:43 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:22:47 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:22:52 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:22:55 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:23:01 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:23:06 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:23:09 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:23:12 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:23:15 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:23:19 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:23:19 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:23:19 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:23:19 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:23:19 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:23:23 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:23:26 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:23:40 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:23:42 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:23:46 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:23:49 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:23:54 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:24:01 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:24:04 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:24:04 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:24:04 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:24:04 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:24:04 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:24:07 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:24:11 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:24:17 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:24:21 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:24:24 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:24:27 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:24:33 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:24:37 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:24:41 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:24:41 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:24:41 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:24:41 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:24:41 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:24:45 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:24:49 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:24:55 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:24:59 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:25:55 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:25:59 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:26:21 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:26:27 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:26:32 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:26:32 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:26:32 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:26:32 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:26:32 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:26:35 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:26:42 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:26:47 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:26:53 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:26:58 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:27:02 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:27:05 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:27:08 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:27:11 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:27:11 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:27:11 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:27:11 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:27:11 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:27:15 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:27:18 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:27:21 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:27:25 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:27:28 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:27:31 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:27:35 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:27:41 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:27:44 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:27:44 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:27:44 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:27:44 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:27:44 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:27:47 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:27:53 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:27:57 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:28:00 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:28:03 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:28:05 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:28:09 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:28:13 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:28:16 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:28:16 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:28:16 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:28:16 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:28:16 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:28:19 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:28:22 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:28:26 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:28:32 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:28:35 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:28:38 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:28:41 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:28:44 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:28:47 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:28:47 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:28:47 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:28:47 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:28:47 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:28:50 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:28:53 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:28:57 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:29:00 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:29:04 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:29:10 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:29:13 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:29:16 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:29:20 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:29:20 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:29:20 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:29:20 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:29:20 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:29:23 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:29:26 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:29:29 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:29:32 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:29:34 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:29:38 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:29:42 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:29:45 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:29:48 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:29:48 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:29:48 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:29:48 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:29:48 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:29:55 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:29:58 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:30:02 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:30:05 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:30:09 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:30:12 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:30:15 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:30:18 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:30:22 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:30:22 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:30:22 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:30:22 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:30:22 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:30:26 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:30:30 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:30:33 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:30:36 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:30:41 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:30:45 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:30:48 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:30:51 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:30:54 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:30:54 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:30:54 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:30:54 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:30:54 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:30:57 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:31:01 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:31:05 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:31:09 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:31:11 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:31:15 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:31:18 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:31:21 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:31:24 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:31:24 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:31:24 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:31:24 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:31:24 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:31:27 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:31:31 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:31:34 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:31:37 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:31:40 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:31:44 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:31:47 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:31:51 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:31:54 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:31:54 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:31:54 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:31:54 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:31:54 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:31:57 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:32:00 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:32:03 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:32:06 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 22:32:09 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170202/HV
+2017-02-07 22:32:13 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170130/ST
+2017-02-07 22:32:16 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170125/HV
+2017-02-07 22:32:21 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170122/ST
+2017-02-07 22:32:24 INFO  ResultQueueService:163 - Total Race Result Queue: 991
+2017-02-07 22:32:24 INFO  ResultQueueService:164 - 0 Reace Results is inserted or updated into the Queue.
+2017-02-07 22:32:24 INFO  ResultQueueService:165 - Pending Race Date Count: 9
+2017-02-07 22:32:24 INFO  ResultQueueService:166 - Processed Race Date Count: 0
+2017-02-07 22:32:24 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170118/ST
+2017-02-07 22:32:27 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170114/ST
+2017-02-07 22:32:30 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
+2017-02-07 22:32:34 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
+2017-02-07 22:32:37 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
