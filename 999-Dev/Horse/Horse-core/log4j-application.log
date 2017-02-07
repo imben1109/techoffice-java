@@ -4385,3 +4385,234 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/use
 2017-02-07 22:32:30 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170111/HV
 2017-02-07 22:32:34 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170208/HV
 2017-02-07 22:32:37 INFO  RaceResultCrawler:74 - Retrieving XML from /racing/Info/meeting/Results/English/Local/20170205/ST
+2017-02-07 23:13:20 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-07 23:13:20 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-07 23:13:20 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@14acaea5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@46d56d67, org.springframework.test.context.support.DirtiesContextTestExecutionListener@d8355a8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@59fa1d9b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@28d25987]
+2017-02-07 23:13:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-07 23:13:20 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@49993335: startup date [Tue Feb 07 23:13:20 CST 2017]; root of context hierarchy
+2017-02-07 23:13:20 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-02-07 23:13:22 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-07 23:13:22 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-07 23:13:22 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-07 23:13:22 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-07 23:13:23 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-07 23:13:24 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@2a415aa9] of Hibernate SessionFactory for HibernateTransactionManager
+2017-02-07 23:13:25 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-07 23:13:25 INFO  ResultService:51 - Number of Active Queue: 1
+2017-02-07 23:13:25 INFO  ResultQueueService:48 - It is executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+2017-02-07 23:13:32 ERROR XmlUtil:65 - Try to convert xml: null
+2017-02-07 23:13:32 ERROR ResultService:58 - Exception when executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+com.techoffice.util.exception.XmlUtilDocumentConversionException: Cannot xml to Document: null
+	at com.techoffice.util.XmlUtil.convertXmlStrToDocument(XmlUtil.java:66)
+	at com.techoffice.util.XmlUtil.evaluateXpath(XmlUtil.java:92)
+	at com.techoffice.util.XmlUtil.getXpathText(XmlUtil.java:111)
+	at com.techoffice.jc.horse.helper.RaceResultHelper.getRaceResult(RaceResultHelper.java:37)
+	at com.techoffice.jc.horse.crawler.RaceResultCrawler.getRaceResult(RaceResultCrawler.java:106)
+	at com.techoffice.jc.horse.service.ResultQueueService.executeResultQueue(ResultQueueService.java:49)
+	at com.techoffice.jc.horse.service.ResultQueueService$$FastClassBySpringCGLIB$$654b44d1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.techoffice.jc.horse.service.ResultQueueService$$EnhancerBySpringCGLIB$$4e2a4e19.executeResultQueue(<generated>)
+	at com.techoffice.jc.horse.service.ResultService.executeResultQueueList(ResultService.java:54)
+	at com.techoffice.jc.horse.service.ResultServiceTest.executeResultQueue(ResultServiceTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-02-07 23:13:32 INFO  ResultService:62 - Success Count: 0
+2017-02-07 23:13:32 INFO  ResultService:63 - Fail Count: 1
+2017-02-07 23:13:32 INFO  ResultService:51 - Number of Active Queue: 1
+2017-02-07 23:13:32 INFO  ResultQueueService:48 - It is executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+2017-02-07 23:13:37 ERROR XmlUtil:65 - Try to convert xml: null
+2017-02-07 23:13:37 ERROR ResultService:58 - Exception when executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+com.techoffice.util.exception.XmlUtilDocumentConversionException: Cannot xml to Document: null
+	at com.techoffice.util.XmlUtil.convertXmlStrToDocument(XmlUtil.java:66)
+	at com.techoffice.util.XmlUtil.evaluateXpath(XmlUtil.java:92)
+	at com.techoffice.util.XmlUtil.getXpathText(XmlUtil.java:111)
+	at com.techoffice.jc.horse.helper.RaceResultHelper.getRaceResult(RaceResultHelper.java:37)
+	at com.techoffice.jc.horse.crawler.RaceResultCrawler.getRaceResult(RaceResultCrawler.java:106)
+	at com.techoffice.jc.horse.service.ResultQueueService.executeResultQueue(ResultQueueService.java:49)
+	at com.techoffice.jc.horse.service.ResultQueueService$$FastClassBySpringCGLIB$$654b44d1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.techoffice.jc.horse.service.ResultQueueService$$EnhancerBySpringCGLIB$$4e2a4e19.executeResultQueue(<generated>)
+	at com.techoffice.jc.horse.service.ResultService.executeResultQueueList(ResultService.java:54)
+	at com.techoffice.jc.horse.service.ResultServiceTest.executeResultQueue(ResultServiceTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-02-07 23:13:37 INFO  ResultService:62 - Success Count: 0
+2017-02-07 23:13:37 INFO  ResultService:63 - Fail Count: 1
+2017-02-07 23:13:37 INFO  ResultService:51 - Number of Active Queue: 1
+2017-02-07 23:13:37 INFO  ResultQueueService:48 - It is executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+2017-02-07 23:13:43 ERROR XmlUtil:65 - Try to convert xml: null
+2017-02-07 23:13:43 ERROR ResultService:58 - Exception when executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+com.techoffice.util.exception.XmlUtilDocumentConversionException: Cannot xml to Document: null
+	at com.techoffice.util.XmlUtil.convertXmlStrToDocument(XmlUtil.java:66)
+	at com.techoffice.util.XmlUtil.evaluateXpath(XmlUtil.java:92)
+	at com.techoffice.util.XmlUtil.getXpathText(XmlUtil.java:111)
+	at com.techoffice.jc.horse.helper.RaceResultHelper.getRaceResult(RaceResultHelper.java:37)
+	at com.techoffice.jc.horse.crawler.RaceResultCrawler.getRaceResult(RaceResultCrawler.java:106)
+	at com.techoffice.jc.horse.service.ResultQueueService.executeResultQueue(ResultQueueService.java:49)
+	at com.techoffice.jc.horse.service.ResultQueueService$$FastClassBySpringCGLIB$$654b44d1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.techoffice.jc.horse.service.ResultQueueService$$EnhancerBySpringCGLIB$$4e2a4e19.executeResultQueue(<generated>)
+	at com.techoffice.jc.horse.service.ResultService.executeResultQueueList(ResultService.java:54)
+	at com.techoffice.jc.horse.service.ResultServiceTest.executeResultQueue(ResultServiceTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-02-07 23:13:43 INFO  ResultService:62 - Success Count: 0
+2017-02-07 23:13:43 INFO  ResultService:63 - Fail Count: 1
+2017-02-07 23:13:43 INFO  ResultService:51 - Number of Active Queue: 1
+2017-02-07 23:13:43 INFO  ResultQueueService:48 - It is executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+2017-02-07 23:13:49 ERROR XmlUtil:65 - Try to convert xml: null
+2017-02-07 23:13:49 ERROR ResultService:58 - Exception when executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
+com.techoffice.util.exception.XmlUtilDocumentConversionException: Cannot xml to Document: null
+	at com.techoffice.util.XmlUtil.convertXmlStrToDocument(XmlUtil.java:66)
+	at com.techoffice.util.XmlUtil.evaluateXpath(XmlUtil.java:92)
+	at com.techoffice.util.XmlUtil.getXpathText(XmlUtil.java:111)
+	at com.techoffice.jc.horse.helper.RaceResultHelper.getRaceResult(RaceResultHelper.java:37)
+	at com.techoffice.jc.horse.crawler.RaceResultCrawler.getRaceResult(RaceResultCrawler.java:106)
+	at com.techoffice.jc.horse.service.ResultQueueService.executeResultQueue(ResultQueueService.java:49)
+	at com.techoffice.jc.horse.service.ResultQueueService$$FastClassBySpringCGLIB$$654b44d1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.techoffice.jc.horse.service.ResultQueueService$$EnhancerBySpringCGLIB$$4e2a4e19.executeResultQueue(<generated>)
+	at com.techoffice.jc.horse.service.ResultService.executeResultQueueList(ResultService.java:54)
+	at com.techoffice.jc.horse.service.ResultServiceTest.executeResultQueue(ResultServiceTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-02-07 23:13:49 INFO  ResultService:62 - Success Count: 0
+2017-02-07 23:13:49 INFO  ResultService:63 - Fail Count: 1
+2017-02-07 23:13:49 INFO  ResultService:51 - Number of Active Queue: 1
+2017-02-07 23:13:49 INFO  ResultQueueService:48 - It is executing /racing/Info/meeting/Results/English/Local/20161026/HV/4
