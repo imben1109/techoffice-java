@@ -9,8 +9,8 @@ public class WebDriverUtil {
 	
 	/**
 	 * Get Source Code by Web Driver (PhantomJS) and convert into xhtml
-	 * @param url
-	 * @return
+	 * @param url URL
+	 * @return Xml Content
 	 */
 	public static String getXml(String url){
 		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
