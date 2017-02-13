@@ -4,6 +4,13 @@ import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 
+/**
+ * OAuth for Github
+ * Reference: https://developer.github.com/v3/oauth/
+ * 
+ * @author Ben_c
+ *
+ */
 public class OAuthFlow {
 	
 	private OAuth oauth;
@@ -18,7 +25,9 @@ public class OAuthFlow {
 			Desktop desktop = Desktop.getDesktop();
 			URI AuthorizeUri = AuthorizeUriBuilder.build(oauth.getAuthorizeUrl(), oauth.getClientId(), oauth.getRedirectUrl());
 			desktop.browse(AuthorizeUri);
-			LocalServer.waitFor();			
+			LocalServer.waitFor();
+			String code = LocalServer.getCode();
+			AccessTokenBuilder.setCode(code);
 			return LocalServer.getCode();
 		} catch (IOException e) {
 			e.printStackTrace();

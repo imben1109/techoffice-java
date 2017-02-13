@@ -1,5 +1,11 @@
 package com.techoffice;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
+import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.oauth.AccessTokenBuilder;
+import com.techoffice.oauth.ApiClient;
 import com.techoffice.oauth.OAuth;
 import com.techoffice.oauth.OAuthFlow;
 
@@ -12,10 +18,12 @@ public class Appl {
 	
 	public static String API_USER_INFO_URL = "https://api.github.com/user";
 	
-	public static void main(String[] args){
+	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
 		OAuth oauth = new OAuth(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET);
 		OAuthFlow OAuthFlow = new OAuthFlow(oauth);
-		OAuthFlow.requestAccess();
+		String code = OAuthFlow.requestAccess();
+		String accessToken = AccessTokenBuilder.getToken();
+		ApiClient.getApiReturn(API_USER_INFO_URL);
 	}
 	
 }
