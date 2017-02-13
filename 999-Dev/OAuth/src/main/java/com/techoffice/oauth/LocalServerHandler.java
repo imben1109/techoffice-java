@@ -1,6 +1,7 @@
 package com.techoffice.oauth;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -8,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
-import org.eclipse.jetty.server.HttpConnection;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Server;
 
@@ -73,12 +73,24 @@ public class LocalServerHandler implements Handler {
 		
 		if (!"".equals(code)){
 			LocalServer.setCode(code);
+		    response.setContentType("text/html");
+		    PrintWriter out = response.getWriter();
+		    out.println("<html>");
+		    out.println("<head>");
+		    out.println("<title>Tech Office</title>");
+		    out.println("</head>");
+		    out.println("<body>");
+		    out.println("<p>The Code obtained. Please close this browser</p>");
+		    out.println("</body>");
+		    out.println("</html>");
+		    out.flush();
+			response.flushBuffer();
+
+			baseRequest.setHandled(true);
+			
 			for (Connector connector : server.getConnectors()) {
 				connector.shutdown();
 			}
-			response.sendError(200, "Connectors closed, commencing full shutdown");
-			baseRequest.setHandled(true);
-			response.flushBuffer();
 			final Server server = getServer();
 			new Thread() {
 				@Override

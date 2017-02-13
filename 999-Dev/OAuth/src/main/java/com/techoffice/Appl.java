@@ -21,8 +21,8 @@ public class Appl {
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
 		OAuth oauth = new OAuth(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET);
 		OAuthFlow OAuthFlow = new OAuthFlow(oauth);
-		String code = OAuthFlow.requestAccess();
-		String accessToken = AccessTokenBuilder.getToken();
+		OAuthFlow.requestAccess();
+		AccessTokenBuilder.getToken();
 		ApiClient.getApiReturn(API_USER_INFO_URL);
 	}
 	
