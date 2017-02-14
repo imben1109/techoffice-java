@@ -46,7 +46,7 @@ public class MavenProjectManagerController implements Initializable {
 	}
 	
     @FXML
-    private void validMvnProj(){
+    public void validMvnProj(){
     	try {
 			mavenProjectManager.correctInvalidMavenProject();
 			int numMvnProj = mavenProjectManager.getNumMvnProj();
@@ -61,7 +61,7 @@ public class MavenProjectManagerController implements Initializable {
     }
     
     @FXML
-    private void loadProjInfo(){
+    public void loadProjInfo(){
 		try {
 			tableView.getItems().addAll(mavenProjectManager.getProjectModelList());
 		} catch (Exception e) {
