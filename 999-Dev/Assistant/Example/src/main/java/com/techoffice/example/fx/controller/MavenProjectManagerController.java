@@ -3,17 +3,20 @@ package com.techoffice.example.fx.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.techoffice.example.ExampleProperty;
 import com.techoffice.example.mvn.MavenProjectManager;
 import com.techoffice.example.mvn.pom.model.Model;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 
@@ -33,6 +36,12 @@ public class MavenProjectManagerController implements Initializable {
 	
 	@FXML
 	private TableView<Model> tableView;
+	
+	@FXML
+	private Button validMvnProjBtn;
+	
+	@FXML
+	private Button loadProjInfo;
 	
 	@Autowired
 	private MavenProjectManager mavenProjectManager;
@@ -63,7 +72,23 @@ public class MavenProjectManagerController implements Initializable {
     @FXML
     public void loadProjInfo(){
 		try {
-			tableView.getItems().addAll(mavenProjectManager.getProjectModelList());
+			Callable<String> caller = new Callable<String>(){
+				public String call()  {
+					try {
+						loadProjInfo.setDisable(true);
+						mavenProjectManager.updateMavenProjectList();
+						tableView.getItems().addAll(mavenProjectManager.getProjectModelList());
+						loadProjInfo.setDisable(false);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					return "done";
+				}
+			};
+
+			ExecutorService executorService = Executors.newSingleThreadExecutor();
+			executorService.submit(caller);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
