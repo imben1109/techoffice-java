@@ -9,6 +9,11 @@ import com.techoffice.oauth.ApiClient;
 import com.techoffice.oauth.OAuth;
 import com.techoffice.oauth.OAuthFlow;
 
+/**
+ * This is GitHub OAuth Example
+ * @author Ben_c
+ *
+ */
 public class Appl {
 	
 	public static String TOKEN_URL = "https://github.com/login/oauth/access_token";
