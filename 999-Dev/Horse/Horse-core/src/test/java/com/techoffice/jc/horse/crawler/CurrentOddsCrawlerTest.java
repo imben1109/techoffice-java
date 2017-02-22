@@ -34,8 +34,19 @@ public class CurrentOddsCrawlerTest {
 		currentOddsCrawler.getRaceNums();		
 	}
 	
-	@Test
+//	@Test
 	public void getHorse() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		currentOddsCrawler.getCurrent();
+		currentOddsCrawler.getCurrentOdd();
+	}
+	
+//	@Test
+	public void getCurrentUrl(){
+		String currentUrl = currentOddsCrawler.getCurrentUrl();
+		System.out.println(currentUrl);
+	}
+	
+	@Test
+	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+		currentOddsCrawler.run();
 	}
 }

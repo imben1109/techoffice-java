@@ -1,25 +1,21 @@
 package com.techoffice.jc.horse.crawler;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.jc.horse.dao.DrawAccelerateTimeDao;
 import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
 import com.techoffice.jc.horse.dto.CurrentOdd;
@@ -41,29 +37,61 @@ public class CurrentOddsCrawler {
 	@Autowired
 	private DrawAccelerateTimeDao drawAccelerateTimeDao;
 	
+	public String getCurrentUrl(){
+		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
+		webDriver.get(HOST);
+		String currentUrl = webDriver.getCurrentUrl();
+		webDriver.close();
+		webDriver.quit();
+		return currentUrl;
+	}
+	
 	public String retrieveXml() {
         return retrieveXml("");
 	}
 	
 	public String retrieveXml(String location) {
-        String xml = WebDriverUtil.getXml(HOST + location);
+		String currentUrl = getCurrentUrl();
+		System.out.println("+++++++++++++++++++++++++++++++++");
+		System.out.println(currentUrl + location);
+        String xml = WebDriverUtil.getXml(currentUrl + location);
         return xml;
 	}
 	
-	public void getRaceNums() throws XPathExpressionException, XmlUtilDocumentConversionException {
+	public String retrieveXmlByRaceNum(String raceNum){
+		String xml = retrieveXml("&raceno=" + raceNum.replace("Race ", ""));
+		return xml;
+	}
+
+	public List<String> getRaceNums() throws XPathExpressionException, XmlUtilDocumentConversionException {
+		List<String> raceNums = new ArrayList<String>();
 		String xml = retrieveXml();
 		String xPath = "//*[@id='info_bar']/tbody/tr[2]/td/div/table/tbody/tr/td/a/img";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
 		for (int i=0; i<nodeList.getLength(); i++){
 			Node node = nodeList.item(i);
 			Node titleNode = node.getAttributes().getNamedItem("title");
-			System.out.println(titleNode.getTextContent());
+			raceNums.add(titleNode.getTextContent());
 		}
+		return raceNums;
 	}
 	
-	public List<CurrentOdd> getCurrent() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public List<CurrentOdd> getCurrentOdd() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
 		String xml = retrieveXml();
 		return getOddsList(xml);
+	}
+	
+	public List<CurrentOdd> getCurrentOddByRaceNum(String raceNum) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+		String xml = retrieveXmlByRaceNum(raceNum);
+		return getOddsList(xml);
+	}
+	
+	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+		List<String> raceNums = this.getRaceNums();
+		for (String raceNum: raceNums){
+			log.info("raceNum" + raceNum);
+			getCurrentOddByRaceNum(raceNum);
+		}
 	}
 	
 	public List<CurrentOdd> getOddsList(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
@@ -95,7 +123,7 @@ public class CurrentOddsCrawler {
 		}
 		Collections.sort(oddsList);
 		for (CurrentOdd odd: oddsList){
-			System.out.println(odd.getHorseName() + " " + odd.getCalcTime());
+			log.info(odd.getHorseName() + " " + odd.getCalcTime());
 		}
 		return oddsList;
 	}
