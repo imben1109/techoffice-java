@@ -3,12 +3,18 @@ package com.techoffice.wordpress.oauth;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
 import org.apache.commons.logging.LogFactory;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gargoylesoftware.htmlunit.DefaultCredentialsProvider;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.HttpMethod;
@@ -16,6 +22,7 @@ import com.gargoylesoftware.htmlunit.ProxyConfig;
 import com.gargoylesoftware.htmlunit.UnexpectedPage;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
+import com.gargoylesoftware.htmlunit.util.NameValuePair;
 import com.techoffice.wordpress.Appl;
 
 public class AccessTokenBuilder {
@@ -50,28 +57,36 @@ public class AccessTokenBuilder {
         System.out.println(url);
         // For wordpress, it require POST Method
         WebRequest requestSettings = new WebRequest(new URL(url), HttpMethod.POST);
+        
+        // 
+        List<NameValuePair> requestParms = new ArrayList<NameValuePair>();
+        requestParms.add(new NameValuePair("client_id", Appl.CLIENT_ID));
+        requestParms.add(new NameValuePair("client_secret", Appl.CLIENT_SECRET));
+        requestParms.add(new NameValuePair("code", code));
+        requestParms.add(new NameValuePair("grant_type", "authorization_code"));
+        requestParms.add(new NameValuePair("redirect_uri", Appl.APPL_URL));
+        requestSettings.setRequestParameters(requestParms);
+        
         final UnexpectedPage page = webClient.getPage(requestSettings);
         final String pageAsXml = page.getWebResponse().getContentAsString();
         webClient.close();
         System.out.println(pageAsXml);
         Map<String, String> tokenMap = convertTokenMap(pageAsXml);
         String accessToken = tokenMap.get("access_token");
+        System.out.println("accessToken: " + accessToken);
         ApiClient.setAccessToken(accessToken);
         return accessToken;
 	}
 	
+	
+	
 	private static Map<String, String> convertTokenMap(String str){
+		ObjectMapper mapper = new ObjectMapper();
 		Map<String, String> map = new HashMap<String, String>();
-		String[] tokenPairs= str.split("&");
-		for (int i=0; i<tokenPairs.length; i++){
-			String tokenPair = tokenPairs[i];
-			String[] tokenPairArr = tokenPair.split("=");
-			String key = tokenPairArr[0];
-			String value = "";
-			if (tokenPairArr.length > 1){
-				value = tokenPairArr[1];
-			}
-			map.put(key, value);
+		try {
+			map = mapper.readValue(str, new TypeReference<Map<String, String>>(){});
+		} catch (Exception e) {
+			System.err.println("Cannot convert Json to Map");
 		}
 		return map;
 	}
