@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Regular Expression 
+ * This Example introduces the basic concepts of regular expressions.
  * 
  * Syntax
  * \d		A digit: [0-9]
