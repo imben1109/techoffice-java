@@ -12,6 +12,13 @@ import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Server;
 
+/**
+ * Handler for Local Server. It handles the request and response of the Jetty Server. 
+ * Once authorized code is received from the jetty server, it would stop the Jetty server.  
+ * 
+ * @author Ben_c
+ *
+ */
 public class LocalServerHandler implements Handler {
 
 	/**
@@ -43,26 +50,41 @@ public class LocalServerHandler implements Handler {
 		    out.flush();
 			response.flushBuffer();
 			baseRequest.setHandled(true);
-
-			// shut down all jetty server connector 
-			for (Connector connector : server.getConnectors()) {
-				connector.shutdown();
+			
+			// Stop the jetty server after handling the request.
+			try{
+				stop();
+			}catch (Exception e){
+				e.printStackTrace();
 			}
 			
-			// Create a thread to stop Jetty Server
-			new Thread() {
-				@Override
-				public void run() {
-					try {
-						server.stop();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					} catch (Exception e) {
-						throw new RuntimeException("Shutting down server", e);
-					}
-				}
-			}.start();
 		}
+	}
+	
+	/**
+	 * Stop Jetty Server
+	 * 
+	 * @throws Exception
+	 */
+	public void stop() throws Exception {
+		// shut down all jetty server connector 
+		for (Connector connector : server.getConnectors()) {
+			connector.shutdown();
+		}
+		
+		// Create a thread to stop Jetty Server
+		new Thread() {
+			@Override
+			public void run() {
+				try {
+					server.stop();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				} catch (Exception e) {
+					throw new RuntimeException("Shutting down server", e);
+				}
+			}
+		}.start();
 	}
 	
 	public void setServer(Server server) {
@@ -83,7 +105,7 @@ public class LocalServerHandler implements Handler {
 	
 	
 	public void start() throws Exception {}
-	public void stop() throws Exception {}
+	
 	public void destroy() {}
 	public boolean isRunning() {return false;}
 	public boolean isStarted() {return false;}
