@@ -6,6 +6,7 @@ import java.net.URI;
 
 /**
  * OAuth for Github
+ * 
  * Reference: https://developer.github.com/v3/oauth/
  * 
  * @author Ben_c
@@ -13,23 +14,30 @@ import java.net.URI;
  */
 public class OAuthFlow {
 	
-	private OAuth oauth;
+	private OAuthInfo oAuthInfo;
 	
-	public OAuthFlow(OAuth oauth){
-		this.oauth = oauth;
+	public OAuthFlow(OAuthInfo oAuthInfo){
+		this.oAuthInfo = oAuthInfo;
 	}
 	
-	public String requestAccess(){
+	public String requestAccessToken(){
 		try {
+			// Start a Local Server for receive code redirect from WordPress Authorize Page.
 			LocalServer.start();
+			
+			// Because it need a browser for user to press and obtain the authorization right.
 			Desktop desktop = Desktop.getDesktop();
-			URI authorizeUri = AuthorizeUriBuilder.build(oauth.getAuthorizeUrl(), oauth.getClientId(), oauth.getRedirectUrl());
+			URI authorizeUri = AuthorizeUriBuilder.build(oAuthInfo.getAuthorizeUrl(), oAuthInfo.getClientId(), oAuthInfo.getRedirectUrl());
 			System.out.println(authorizeUri);
 			desktop.browse(authorizeUri);
+			
+			// Wait for Local Server receiving the code 
 			LocalServer.waitFor();
 			String code = LocalServer.getCode();
-			AccessTokenBuilder.setCode(code);
-			return LocalServer.getCode();
+			
+			String token = AccessTokenRequest.getToken(code);
+			
+			return token;
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 

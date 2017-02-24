@@ -25,19 +25,25 @@ import com.gargoylesoftware.htmlunit.WebRequest;
 import com.gargoylesoftware.htmlunit.util.NameValuePair;
 import com.techoffice.wordpress.Appl;
 
-public class AccessTokenBuilder {
-	
-	private static String code;
-	
-	public static void setCode(String lCode){
-		code = lCode;
-	}
-	
-	private static String getAccessTokenUrl(){
-		return Appl.TOKEN_URL + "?code=" + code + "&client_id=" + Appl.CLIENT_ID + "&client_secret=" + Appl.CLIENT_SECRET; 
-	}
-	
-	public static String getToken() throws FailingHttpStatusCodeException, MalformedURLException, IOException{
+/**
+ * This Class represents the Access Token Request to obtain access token. 
+ * 
+ * @author Ben_c
+ *
+ */
+public class AccessTokenRequest {
+
+	/**
+	 * This method is to obtain token by HTMLUnit
+	 * 
+	 * @param code
+	 * @return access token
+	 * 
+	 * @throws FailingHttpStatusCodeException
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 */
+	public static String getToken(String code) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
 	    final WebClient webClient = new WebClient();
 	    if (ExampleConfig.config.getBoolean(ExampleConfig.PROXY_ENABLED, false)){
 	    	ProxyConfig proxyConfig = new ProxyConfig(
@@ -77,7 +83,6 @@ public class AccessTokenBuilder {
         ApiClient.setAccessToken(accessToken);
         return accessToken;
 	}
-	
 	
 	
 	private static Map<String, String> convertTokenMap(String str){

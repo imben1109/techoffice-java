@@ -1,13 +1,14 @@
 package com.techoffice.wordpress.oauth;
 
-public class OAuth {
+public class OAuthInfo {
 	
 	private String authorizeUrl;
 	private String tokenUrl;
 	private String clientSecret;
 	private String clientId;
+	private String applUrl;
 	
-	public OAuth(String authorizeUrl, String tokenUrl, String clientId, String clientSecret){
+	public OAuthInfo(String authorizeUrl, String tokenUrl, String clientId, String clientSecret, String APPL_URL){
 		this.authorizeUrl = authorizeUrl;
 		this.tokenUrl = tokenUrl;
 		this.clientId = clientId;
@@ -54,6 +55,14 @@ public class OAuth {
 
 	public void setRedirectUrl(String redirectUrl) {
 		this.redirectUrl = redirectUrl;
+	}
+
+	public String getApplUrl() {
+		return applUrl;
+	}
+
+	public void setApplUrl(String applUrl) {
+		this.applUrl = applUrl;
 	}
 	
 	
