@@ -81,7 +81,6 @@ public class AccessTokenRequest {
         Map<String, String> tokenMap = convertTokenMap(pageAsXml);
         String accessToken = tokenMap.get("access_token");
         System.out.println("accessToken: " + accessToken);
-        ApiClient.setAccessToken(accessToken);
         return accessToken;
 	}
 	

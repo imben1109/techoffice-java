@@ -20,13 +20,7 @@ import com.techoffice.wordpress.config.ExampleConfig;
 
 public class ApiClient {
 	
-	private static String accessToken;
-	
-	public static void setAccessToken(String lAccessToken){
-		accessToken = lAccessToken;
-	}
-	
-	public static String getApiReturn(String apiURL) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
+	public static String getApiReturn(String apiURL, String accessToken) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
 	    WebClient webClient = WebClientFactory.create();
 	    
         WebRequest requestSettings = new WebRequest(new URL(apiURL), HttpMethod.GET);
@@ -39,4 +33,5 @@ public class ApiClient {
         System.out.println(pageAsXml);
         return pageAsXml;
 	}
+	
 }

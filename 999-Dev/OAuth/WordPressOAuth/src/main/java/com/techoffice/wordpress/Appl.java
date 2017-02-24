@@ -29,8 +29,8 @@ public class Appl {
 	public static void main(String[] args) throws Exception{
 		OAuthInfo oAuthInfo = new OAuthInfo(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET, APPL_URL);
 		OAuthFlow OAuthFlow = new OAuthFlow(oAuthInfo);
-		OAuthFlow.requestAccessToken();
-		ApiClient.getApiReturn(API_USER_INFO_URL);
+		String token = OAuthFlow.requestAccessToken();
+		ApiClient.getApiReturn(API_USER_INFO_URL, token);
 	}
 	
 }
