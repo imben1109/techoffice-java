@@ -7,7 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import com.gargoylesoftware.htmlunit.DefaultCredentialsProvider;
 import com.gargoylesoftware.htmlunit.ProxyConfig;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.techoffice.wordpress.config.ExampleConfig;
+import com.techoffice.wordpress.config.ApplConfig;
 
 /**
  * Web Client Factory 
@@ -19,15 +19,15 @@ public class WebClientFactory {
 	
 	public static WebClient create(){
 	    WebClient webClient = new WebClient();
-	    if (ExampleConfig.config.getBoolean(ExampleConfig.PROXY_ENABLED, false)){
+	    if (ApplConfig.config.getBoolean(ApplConfig.PROXY_ENABLED, false)){
 	    	ProxyConfig proxyConfig = new ProxyConfig(
-		    		ExampleConfig.config.getString(ExampleConfig.PROXY_HOST), 
-		    		ExampleConfig.config.getInt(ExampleConfig.PROXY_PORT));
+		    		ApplConfig.config.getString(ApplConfig.PROXY_HOST), 
+		    		ApplConfig.config.getInt(ApplConfig.PROXY_PORT));
 		    webClient.getOptions().setProxyConfig(proxyConfig);
 	        final DefaultCredentialsProvider credentialsProvider = (DefaultCredentialsProvider) webClient.getCredentialsProvider();
 	        credentialsProvider.addCredentials(
-	        		ExampleConfig.config.getString(ExampleConfig.PROXY_USERNAME), 
-	        		ExampleConfig.config.getString(ExampleConfig.PROXY_PASSWORD));	
+	        		ApplConfig.config.getString(ApplConfig.PROXY_USERNAME), 
+	        		ApplConfig.config.getString(ApplConfig.PROXY_PASSWORD));	
 	    }
 	    LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
         java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF); 

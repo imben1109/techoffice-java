@@ -30,6 +30,7 @@ public class Appl {
 		OAuthInfo oAuthInfo = new OAuthInfo(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET, APPL_URL);
 		OAuthFlow OAuthFlow = new OAuthFlow(oAuthInfo);
 		String token = OAuthFlow.requestAccessToken();
+		System.out.println("Access Token: " + token);
 		ApiClient.getApiReturn(API_USER_INFO_URL, token);
 	}
 	

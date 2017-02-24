@@ -7,7 +7,7 @@ import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.builder.fluent.Configurations;
 import org.apache.commons.configuration2.ex.ConfigurationException;
 
-public class ExampleConfig {
+public class ApplConfig {
 	
 	public static final String CONFIG_FOLDER_NAME = ".ittechoffice";
 	public static final String APP_PROPERTIES_FILE = "application.properties";
@@ -21,12 +21,13 @@ public class ExampleConfig {
 	public static final String PROXY_ENABLED = "proxy.enabled";
 	
 	public static Configuration config = null ;
+	public static String configFolderPath = null;
     
 	static {
 		try {
 			String homePath = System.getProperty("user.home");
 			System.out.println("Home:" + homePath);
-			String configFolderPath = homePath + "/" + CONFIG_FOLDER_NAME;
+			configFolderPath = homePath + "/" + CONFIG_FOLDER_NAME;
 			File configFolder = new File(configFolderPath);
 			File propertyFile = new File(configFolderPath, APP_PROPERTIES_FILE);
 			if (!configFolder.exists()){
@@ -43,7 +44,7 @@ public class ExampleConfig {
 	}
 	
 	public static void main(String[] args) throws Exception{
-		String exampleHome = ExampleConfig.config.getString(ExampleConfig.EXAMPLE_HOME);
+		String exampleHome = ApplConfig.config.getString(ApplConfig.EXAMPLE_HOME);
 		if (exampleHome == null){
 			throw new Exception("Cannot Find Example Project Home");
 		}

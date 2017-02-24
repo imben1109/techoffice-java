@@ -24,7 +24,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
 import com.gargoylesoftware.htmlunit.util.NameValuePair;
 import com.techoffice.wordpress.Appl;
-import com.techoffice.wordpress.config.ExampleConfig;
+import com.techoffice.wordpress.config.ApplConfig;
 
 /**
  * This Class represents the Access Token Request to obtain access token. 
@@ -46,15 +46,15 @@ public class AccessTokenRequest {
 	 */
 	public static String getToken(String code) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
 	    final WebClient webClient = new WebClient();
-	    if (ExampleConfig.config.getBoolean(ExampleConfig.PROXY_ENABLED, false)){
+	    if (ApplConfig.config.getBoolean(ApplConfig.PROXY_ENABLED, false)){
 	    	ProxyConfig proxyConfig = new ProxyConfig(
-		    		ExampleConfig.config.getString(ExampleConfig.PROXY_HOST), 
-		    		ExampleConfig.config.getInt(ExampleConfig.PROXY_PORT));
+		    		ApplConfig.config.getString(ApplConfig.PROXY_HOST), 
+		    		ApplConfig.config.getInt(ApplConfig.PROXY_PORT));
 		    webClient.getOptions().setProxyConfig(proxyConfig);
 	        final DefaultCredentialsProvider credentialsProvider = (DefaultCredentialsProvider) webClient.getCredentialsProvider();
 	        credentialsProvider.addCredentials(
-	        		ExampleConfig.config.getString(ExampleConfig.PROXY_USERNAME), 
-	        		ExampleConfig.config.getString(ExampleConfig.PROXY_PASSWORD));	
+	        		ApplConfig.config.getString(ApplConfig.PROXY_USERNAME), 
+	        		ApplConfig.config.getString(ApplConfig.PROXY_PASSWORD));	
 	    }
 	    LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
         java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF); 

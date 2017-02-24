@@ -16,7 +16,7 @@ import com.gargoylesoftware.htmlunit.UnexpectedPage;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
 import com.techoffice.htmlunit.WebClientFactory;
-import com.techoffice.wordpress.config.ExampleConfig;
+import com.techoffice.wordpress.config.ApplConfig;
 
 public class ApiClient {
 	
