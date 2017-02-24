@@ -1,6 +1,12 @@
 package com.techoffice.wordpress;
 
+import java.text.MessageFormat;
+import java.util.List;
+import java.util.Map;
+
+import com.techoffice.common.util.JsonUtil;
 import com.techoffice.wordpress.api.ApiClient;
+import com.techoffice.wordpress.api.ApiUrlConstants;
 import com.techoffice.wordpress.oauth.OAuthFlow;
 import com.techoffice.wordpress.oauth.OAuthInfo;
 
@@ -12,7 +18,7 @@ import com.techoffice.wordpress.oauth.OAuthInfo;
  */
 public class Appl {
 	
-	public static final String AUTHORIZE_URL = "https://public-api.wordpress.com/oauth2/authorize?response_type=code";
+	public static final String AUTHORIZE_URL = "https://public-api.wordpress.com/oauth2/authorize?response_type=code&scope=global";
 	public static final String TOKEN_URL = "https://public-api.wordpress.com/oauth2/token";
 	
 	public static final String CLIENT_ID = "50479";
@@ -30,6 +36,31 @@ public class Appl {
 		String token = oAuthFlow.requestAccessToken();
 		System.out.println("Access Token: " + token);
 		ApiClient.getApiReturn(API_USER_INFO_URL, token);
+		String sitesjsonReturn = ApiClient.getApiReturn(ApiUrlConstants.ME_SITES, token);
+		Map<String, Object> sitesjsonMap = JsonUtil.toMap(sitesjsonReturn);
+		Object sites = sitesjsonMap.get("sites");
+		if (sites instanceof List){
+			List<Map<String, Object>> siteList = (List<Map<String, Object>>) sites;
+			for (Map<String, Object> site: siteList){
+				String id = site.get("ID").toString();
+				String name = site.get("name").toString();
+				String url = site.get("URL").toString();
+				System.out.println(id + ": " + name + "(" + url + ")");
+			}
+//			String siteId = siteList.get(0).get("ID").toString();
+//			String listSitePostsUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POSIT, siteId);
+//			String postsjsonReturn = ApiClient.getApiReturn(listSitePostsUrl, token);
+//			Map<String, Object> postsjsonMap = JsonUtil.toMap(postsjsonReturn);
+//			Object posts = postsjsonMap.get("posts");
+//			if (sites instanceof List){
+//				List<Map<String, Object>> postList = (List<Map<String, Object>>) posts;
+//				for (Map<String, Object> post: postList){
+//					String content = post.get("content").toString();
+//					System.out.println(content);
+//				}
+//
+//			}
+		}
 	}
 	
 }
