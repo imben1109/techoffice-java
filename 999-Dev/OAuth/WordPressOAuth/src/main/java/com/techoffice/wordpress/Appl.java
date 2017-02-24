@@ -1,13 +1,8 @@
 package com.techoffice.wordpress;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.wordpress.api.ApiClient;
-import com.techoffice.wordpress.oauth.OAuthInfo;
-import com.techoffice.wordpress.oauth.request.AccessTokenRequest;
 import com.techoffice.wordpress.oauth.OAuthFlow;
+import com.techoffice.wordpress.oauth.OAuthInfo;
 
 /**
  * This is GitHub OAuth Example
@@ -30,8 +25,8 @@ public class Appl {
 	
 	public static void main(String[] args) throws Exception{
 		OAuthInfo oAuthInfo = new OAuthInfo(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET, APPL_URL, API_VALIDATE_TOKEN_URL);
-		OAuthFlow OAuthFlow = new OAuthFlow(oAuthInfo);
-		String token = OAuthFlow.requestAccessToken();
+		OAuthFlow oAuthFlow = new OAuthFlow(oAuthInfo);
+		String token = oAuthFlow.requestAccessToken();
 		System.out.println("Access Token: " + token);
 		ApiClient.getApiReturn(API_USER_INFO_URL, token);
 	}
