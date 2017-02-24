@@ -1,4 +1,4 @@
-package com.techoffice.wordpress.oauth;
+package com.techoffice.wordpress.oauth.request.helper;
 
 import java.net.URI;
 import java.net.URISyntaxException;

@@ -1,4 +1,4 @@
-package com.techoffice.wordpress.oauth;
+package com.techoffice.wordpress.oauth.request;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -23,8 +23,11 @@ import com.gargoylesoftware.htmlunit.UnexpectedPage;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
 import com.gargoylesoftware.htmlunit.util.NameValuePair;
+import com.techoffice.common.util.JsonUtil;
+import com.techoffice.htmlunit.WebClientFactory;
 import com.techoffice.wordpress.Appl;
 import com.techoffice.wordpress.config.ApplConfig;
+import com.techoffice.wordpress.oauth.OAuthInfo;
 
 /**
  * This Class represents the Access Token Request to obtain access token. 
@@ -44,55 +47,32 @@ public class AccessTokenRequest {
 	 * @throws MalformedURLException
 	 * @throws IOException
 	 */
-	public static String getToken(String code) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
-	    final WebClient webClient = new WebClient();
-	    if (ApplConfig.config.getBoolean(ApplConfig.PROXY_ENABLED, false)){
-	    	ProxyConfig proxyConfig = new ProxyConfig(
-		    		ApplConfig.config.getString(ApplConfig.PROXY_HOST), 
-		    		ApplConfig.config.getInt(ApplConfig.PROXY_PORT));
-		    webClient.getOptions().setProxyConfig(proxyConfig);
-	        final DefaultCredentialsProvider credentialsProvider = (DefaultCredentialsProvider) webClient.getCredentialsProvider();
-	        credentialsProvider.addCredentials(
-	        		ApplConfig.config.getString(ApplConfig.PROXY_USERNAME), 
-	        		ApplConfig.config.getString(ApplConfig.PROXY_PASSWORD));	
-	    }
-	    LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
-        java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF); 
-        java.util.logging.Logger.getLogger("org.apache.commons.httpclient").setLevel(Level.OFF);
+	public static String getToken(OAuthInfo oAuthInfo, String code) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
+		
+	    WebClient webClient = WebClientFactory.create();
 
-        String url = Appl.TOKEN_URL;
+        String url = oAuthInfo.getTokenUrl();
         System.out.println(url);
         // For wordpress, it require POST Method
         WebRequest requestSettings = new WebRequest(new URL(url), HttpMethod.POST);
         
         // 
         List<NameValuePair> requestParms = new ArrayList<NameValuePair>();
-        requestParms.add(new NameValuePair("client_id", Appl.CLIENT_ID));
-        requestParms.add(new NameValuePair("client_secret", Appl.CLIENT_SECRET));
+        requestParms.add(new NameValuePair("client_id", oAuthInfo.getClientId()));
+        requestParms.add(new NameValuePair("client_secret", oAuthInfo.getClientSecret()));
         requestParms.add(new NameValuePair("code", code));
         requestParms.add(new NameValuePair("grant_type", "authorization_code"));
-        requestParms.add(new NameValuePair("redirect_uri", Appl.APPL_URL));
+        requestParms.add(new NameValuePair("redirect_uri", oAuthInfo.getApplUrl()));
         requestSettings.setRequestParameters(requestParms);
         
         final UnexpectedPage page = webClient.getPage(requestSettings);
         final String pageAsXml = page.getWebResponse().getContentAsString();
         webClient.close();
         System.out.println(pageAsXml);
-        Map<String, String> tokenMap = convertTokenMap(pageAsXml);
-        String accessToken = tokenMap.get("access_token");
-        System.out.println("accessToken: " + accessToken);
-        return accessToken;
+        Map<String, Object> tokenMap = JsonUtil.toMap(pageAsXml);
+        Object accessToken = tokenMap.get("access_token");
+        System.out.println("Access Token: " + accessToken);
+        return accessToken.toString();
 	}
 	
-	
-	private static Map<String, String> convertTokenMap(String str){
-		ObjectMapper mapper = new ObjectMapper();
-		Map<String, String> map = new HashMap<String, String>();
-		try {
-			map = mapper.readValue(str, new TypeReference<Map<String, String>>(){});
-		} catch (Exception e) {
-			System.err.println("Cannot convert Json to Map");
-		}
-		return map;
-	}
 }

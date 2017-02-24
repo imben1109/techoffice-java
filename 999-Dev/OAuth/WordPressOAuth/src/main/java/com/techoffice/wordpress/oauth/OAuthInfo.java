@@ -7,12 +7,15 @@ public class OAuthInfo {
 	private String clientSecret;
 	private String clientId;
 	private String applUrl;
+	private String tokenValidateUrl;
 	
-	public OAuthInfo(String authorizeUrl, String tokenUrl, String clientId, String clientSecret, String APPL_URL){
+	public OAuthInfo(String authorizeUrl, String tokenUrl, String clientId, String clientSecret, String applUrl, String tokenValidateUrl){
 		this.authorizeUrl = authorizeUrl;
 		this.tokenUrl = tokenUrl;
 		this.clientId = clientId;
 		this.clientSecret = clientSecret;
+		this.applUrl = applUrl;
+		this.tokenValidateUrl = tokenValidateUrl;
 	}
 	
 	private String redirectUrl = "http://localhost:8080";
@@ -63,6 +66,14 @@ public class OAuthInfo {
 
 	public void setApplUrl(String applUrl) {
 		this.applUrl = applUrl;
+	}
+
+	public String getTokenValidateUrl() {
+		return tokenValidateUrl;
+	}
+
+	public void setTokenValidateUrl(String tokenValidateUrl) {
+		this.tokenValidateUrl = tokenValidateUrl;
 	}
 	
 	

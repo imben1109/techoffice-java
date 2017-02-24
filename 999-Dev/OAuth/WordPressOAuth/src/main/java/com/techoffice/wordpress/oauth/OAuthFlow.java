@@ -6,6 +6,9 @@ import java.net.URI;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.techoffice.wordpress.oauth.request.AccessTokenRequest;
+import com.techoffice.wordpress.oauth.request.ValidateTokenRequest;
+import com.techoffice.wordpress.oauth.request.helper.AuthorizeUriBuilder;
 import com.techoffice.wordpress.oauth.server.LocalServer;
 
 /**
@@ -27,15 +30,17 @@ public class OAuthFlow {
 	public String requestAccessToken() throws Exception{
 		try {
 			String token = "";
-			
 			token = TokenStore.readStoreFile();
 			
-			if (StringUtils.isEmpty(token)){
+			
+			boolean validToken = ValidateTokenRequest.validateToken(token, oAuthInfo);
+			
+			if (StringUtils.isEmpty(token) || !validToken){
 				// retrieve authorized code
 				String code = requestAuthorizedCode();
 				
 				// retrieve token 
-				token = AccessTokenRequest.getToken(code);
+				token = AccessTokenRequest.getToken(oAuthInfo, code);
 				
 				// store code into codeStore 
 				TokenStore.writeStoreFile(token);
