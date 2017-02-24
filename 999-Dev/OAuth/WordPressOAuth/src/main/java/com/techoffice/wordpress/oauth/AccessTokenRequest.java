@@ -24,6 +24,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
 import com.gargoylesoftware.htmlunit.util.NameValuePair;
 import com.techoffice.wordpress.Appl;
+import com.techoffice.wordpress.config.ExampleConfig;
 
 /**
  * This Class represents the Access Token Request to obtain access token. 

@@ -1,4 +1,4 @@
-package com.techoffice.wordpress.oauth;
+package com.techoffice.wordpress.config;
 
 import java.io.File;
 import java.io.IOException;

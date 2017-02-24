@@ -15,6 +15,8 @@ import com.gargoylesoftware.htmlunit.ProxyConfig;
 import com.gargoylesoftware.htmlunit.UnexpectedPage;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.WebRequest;
+import com.techoffice.htmlunit.WebClientFactory;
+import com.techoffice.wordpress.config.ExampleConfig;
 
 public class ApiClient {
 	
@@ -25,27 +27,15 @@ public class ApiClient {
 	}
 	
 	public static String getApiReturn(String apiURL) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
-	    final WebClient webClient = new WebClient();
-	    if (ExampleConfig.config.getBoolean(ExampleConfig.PROXY_ENABLED, false)){
-	    	ProxyConfig proxyConfig = new ProxyConfig(
-		    		ExampleConfig.config.getString(ExampleConfig.PROXY_HOST), 
-		    		ExampleConfig.config.getInt(ExampleConfig.PROXY_PORT));
-		    webClient.getOptions().setProxyConfig(proxyConfig);
-	        final DefaultCredentialsProvider credentialsProvider = (DefaultCredentialsProvider) webClient.getCredentialsProvider();
-	        credentialsProvider.addCredentials(
-	        		ExampleConfig.config.getString(ExampleConfig.PROXY_USERNAME), 
-	        		ExampleConfig.config.getString(ExampleConfig.PROXY_PASSWORD));	
-	    }
-	    LogFactory.getFactory().setAttribute("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
-        java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF); 
-        java.util.logging.Logger.getLogger("org.apache.commons.httpclient").setLevel(Level.OFF);
-
+	    WebClient webClient = WebClientFactory.create();
+	    
         WebRequest requestSettings = new WebRequest(new URL(apiURL), HttpMethod.GET);
         requestSettings.setAdditionalHeader("Authorization", "BEARER " + accessToken);
-
+        
         final UnexpectedPage page = webClient.getPage(requestSettings);
         final String pageAsXml = page.getWebResponse().getContentAsString();
         webClient.close();
+        
         System.out.println(pageAsXml);
         return pageAsXml;
 	}

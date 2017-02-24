@@ -4,6 +4,8 @@ import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 
+import com.techoffice.wordpress.oauth.server.LocalServer;
+
 /**
  * OAuth for Github
  * 
@@ -20,10 +22,12 @@ public class OAuthFlow {
 		this.oAuthInfo = oAuthInfo;
 	}
 	
-	public String requestAccessToken(){
+	public String requestAccessToken() throws Exception{
 		try {
 			// Start a Local Server for receive code redirect from WordPress Authorize Page.
-			LocalServer.start();
+			LocalServer oAuthLocalServer = new LocalServer();
+			oAuthLocalServer.start();
+			
 			
 			// Because it need a browser for user to press and obtain the authorization right.
 			Desktop desktop = Desktop.getDesktop();
@@ -32,8 +36,8 @@ public class OAuthFlow {
 			desktop.browse(authorizeUri);
 			
 			// Wait for Local Server receiving the code 
-			LocalServer.waitFor();
-			String code = LocalServer.getCode();
+			oAuthLocalServer.waitFor();
+			String code = oAuthLocalServer.getCode();
 			
 			String token = AccessTokenRequest.getToken(code);
 			

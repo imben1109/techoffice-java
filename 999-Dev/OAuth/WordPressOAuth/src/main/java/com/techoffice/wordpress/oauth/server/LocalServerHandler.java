@@ -1,4 +1,4 @@
-package com.techoffice.wordpress.oauth;
+package com.techoffice.wordpress.oauth.server;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,84 +14,42 @@ import org.eclipse.jetty.server.Server;
 
 public class LocalServerHandler implements Handler {
 
+	/**
+	 * Jetty Server
+	 */
 	private Server server;
+	
+	/**
+	 * Local Server
+	 */
+	private LocalServer oAuthLocalServer;
 
-	public void start() throws Exception {
-
-	}
-
-	public void stop() throws Exception {
-
-	}
-
-	public boolean isRunning() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean isStarted() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean isStarting() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean isStopping() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean isStopped() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public boolean isFailed() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	public void addLifeCycleListener(Listener listener) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void removeLifeCycleListener(Listener listener) {
-		// TODO Auto-generated method stub
-
-	}
-
+	/**
+	 * This method handle the request and response 
+	 */
 	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		
+		// Get Code from the parameter
 		String code = request.getParameter("code");
-		
 		System.out.println("code: " + code);
 		
+		// If the code is not null 
 		if (!"".equals(code)){
-			LocalServer.setCode(code);
+			oAuthLocalServer.setCode(code);
 		    response.setContentType("text/html");
 		    PrintWriter out = response.getWriter();
-		    out.println("<html>");
-		    out.println("<head>");
-		    out.println("<title>Tech Office</title>");
-		    out.println("</head>");
-		    out.println("<body>");
-		    out.println("<p>The Code obtained. Please close this browser</p>");
-		    out.println("</body>");
-		    out.println("</html>");
+		    out.println("<html><head><title>Tech Office</title></head><p>The Code obtained. Please close this browser</p></body></html>");
 		    out.flush();
 			response.flushBuffer();
-
 			baseRequest.setHandled(true);
-			
+
+			// shut down all jetty server connector 
 			for (Connector connector : server.getConnectors()) {
 				connector.shutdown();
 			}
-			final Server server = getServer();
+			
+			// Create a thread to stop Jetty Server
 			new Thread() {
 				@Override
 				public void run() {
@@ -106,7 +64,7 @@ public class LocalServerHandler implements Handler {
 			}.start();
 		}
 	}
-
+	
 	public void setServer(Server server) {
 		this.server = server;
 	}
@@ -114,8 +72,26 @@ public class LocalServerHandler implements Handler {
 	public Server getServer() {
 		return server;
 	}
-
-	public void destroy() {
+	
+	public void setOAuthLocalServer(LocalServer oAuthLocalServer){
+		this.oAuthLocalServer = oAuthLocalServer;
 	}
-
+	
+	public LocalServer oAuthLocalServer(){
+		return oAuthLocalServer;
+	}
+	
+	
+	public void start() throws Exception {}
+	public void stop() throws Exception {}
+	public void destroy() {}
+	public boolean isRunning() {return false;}
+	public boolean isStarted() {return false;}
+	public boolean isStarting() {return false;}
+	public boolean isStopping() {return false;}
+	public boolean isStopped() {return false;}
+	public boolean isFailed() {return false;}
+	public void addLifeCycleListener(Listener listener) {}
+	public void removeLifeCycleListener(Listener listener) {}
+	
 }

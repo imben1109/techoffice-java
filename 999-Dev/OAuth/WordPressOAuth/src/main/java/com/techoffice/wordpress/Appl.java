@@ -26,7 +26,7 @@ public class Appl {
 	
 	public static String API_USER_INFO_URL = "https://public-api.wordpress.com/rest/v1/me/";
 	
-	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException{
+	public static void main(String[] args) throws Exception{
 		OAuthInfo oAuthInfo = new OAuthInfo(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET, APPL_URL);
 		OAuthFlow OAuthFlow = new OAuthFlow(oAuthInfo);
 		OAuthFlow.requestAccessToken();
