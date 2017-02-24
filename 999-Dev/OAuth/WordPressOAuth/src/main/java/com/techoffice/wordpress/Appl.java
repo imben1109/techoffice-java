@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.wordpress.api.ApiClient;
 import com.techoffice.wordpress.oauth.AccessTokenRequest;
-import com.techoffice.wordpress.oauth.ApiClient;
 import com.techoffice.wordpress.oauth.OAuthInfo;
 import com.techoffice.wordpress.oauth.OAuthFlow;
 

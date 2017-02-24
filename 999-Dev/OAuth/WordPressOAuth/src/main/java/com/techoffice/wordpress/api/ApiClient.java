@@ -1,4 +1,4 @@
-package com.techoffice.wordpress.oauth;
+package com.techoffice.wordpress.api;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
