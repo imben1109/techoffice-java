@@ -5,7 +5,8 @@ import com.techoffice.wordpress.oauth.OAuthFlow;
 import com.techoffice.wordpress.oauth.OAuthInfo;
 
 /**
- * This is GitHub OAuth Example
+ * This is Wordpress.com OAuth Example
+ * 
  * @author Ben_c
  *
  */
