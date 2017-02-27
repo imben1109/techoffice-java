@@ -1,270 +1,1243 @@
-2017-02-11 16:23:34 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-02-11 16:23:34 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
-2017-02-11 16:23:34 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@475530b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26be92ad, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c70fda8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@224edc67]
-2017-02-11 16:23:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
-2017-02-11 16:23:35 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Feb 11 16:23:35 CST 2017]; root of context hierarchy
-2017-02-11 16:23:36 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-11 16:23:37 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
-2017-02-11 16:23:37 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2017-02-11 16:23:37 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
-2017-02-11 16:23:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-02-11 16:23:37 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2017-02-11 16:23:39 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@236ab296] of Hibernate SessionFactory for HibernateTransactionManager
-2017-02-11 16:24:13 INFO  CurrentOddsCrawler:92 - raceNumRace 1
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - SURE PEACE (S326) 16.763241666666666
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - THE SHOW (T256) 22.21406
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - SUM WIN DRAGON (S148) 31.904675
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - DIAMOND FRIENDS (S376) 31.959758333333333
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - UNIQUE JOYOUS (S244) 34.276442857142854
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - EXPEDITE (N111) 39.2962
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - ENREACHING (V291) 40.1099
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - IMPERIAL CONCORDE (P425) 41.291015384615385
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - WINNING BOY (N186) 53.60780666666667
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - TRAVEL AMBASSADOR (T113) 53.8788
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - LONDON CITY (T080) 60.49018
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - INVISIBLE (T418) 60.6229625
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - EQUITY DOCTRINE (T329) 65.99932222222222
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:126 - EMPEROR VICTORY (T340) 76.60997857142857
-2017-02-11 16:24:30 INFO  CurrentOddsCrawler:92 - raceNumRace 2
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - TELEPHATIA (P405) 18.536166666666666
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - LIGHTNING AND GOLD (P354) 40.261236363636364
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - WIN CHANCE (P415) 43.14775
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - MALAYAN PEARL (N416) 47.027275
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - GORGEOUS AGAIN (V326) 47.32024
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - BEST JADE TRIUMPH (P070) 54.81278
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - HOLY STAR (T068) 63.5518
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - MY FOLKS (T323) 65.95265
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - WEALTHY FORTUNE (P324) 70.68887142857143
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - FAITHFUL BOY (T089) 76.52042857142857
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - GENTLEMEN (V060) 77.61278
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - HAPPY FRIENDSHIP (S074) 83.9164
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - FORTUNE GIGGLES (S346) 91.47646666666667
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:126 - DRAGON GLORY (P130) 110.33645
-2017-02-11 16:24:44 INFO  CurrentOddsCrawler:92 - raceNumRace 3
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - BELOVED (V312) null
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - HAPPY HAPPY STAR (A011) null
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - PLANET STAR (A049) null
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - REGENCY HONEY (A059) null
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - ART OF SUCCESS (P231) null
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - CAREFREE LET GO (T059) 21.031366666666667
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - GOLDEN DEER (P121) 43.19523076923077
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - AMBITIOUS HEART (V303) 51.2373
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - RICHCITY FORTUNE (V088) 53.4471875
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - BOSSIEE (S405) 59.901833333333336
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - NOTED PERFORMER (V365) 68.7938
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:126 - FOREVER ACCURATE (S301) 71.20034166666667
-2017-02-11 16:24:59 INFO  CurrentOddsCrawler:92 - raceNumRace 4
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - ENORMOUS HONOUR (T236) -5.287625
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - VANILLA (P439) 2.411783333333333
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - RED MARVEL (T417) 3.423978947368421
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - ELECTRONIC PHOENIX (S343) 12.9461
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - SUPER MAN (T213) 17.64668
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - HERO LOOK (V053) 20.188354545454544
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - LOTUS STRIKES BACK (T145) 24.909475
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - DEJA VU (T376) 27.094975
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - WAH MAY BABY (S247) 27.83663529411765
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - MASTER CERAMIBO (V113) 49.092666666666666
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - SILLY BUDDIES (S054) 53.51555
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - LITTERATEUR (V183) 55.7373
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - ASSOCIATION FANS (V207) 58.8567
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:126 - MY GIFT (V242) 70.4729
-2017-02-11 16:25:17 INFO  CurrentOddsCrawler:92 - raceNumRace 5
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - BIG TIME BABY (A157) null
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - SUPER WISE (A100) null
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - INTREPIC (A139) null
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - MAGIC LEGEND (A170) null
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - GALLANT ROCK (S240) null
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - SO FAST (S419) -10.34394
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - DIEGO KOSTA (T357) 6.36182
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - TRAVEL DATUK (V235) 19.870916666666666
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - BOTH LUCKY (T196) 35.09892
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - FORTUNE BO BO (V017) 38.77035
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - DIAMOND DRAGON (V002) 42.10318
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - TRIUMPHANT JEWEL (P310) 68.0486
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - ACE KING (T331) 73.8516375
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:126 - BEAUTY MASTER (V135) 74.81903333333334
-2017-02-11 16:25:33 INFO  CurrentOddsCrawler:92 - raceNumRace 6
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - GO BEAUTY GO (V316) 23.086266666666667
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - KING'S MAN (V156) 28.38815
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - TRIUMPHANT LIGHT (T224) 31.33235833333333
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - HIT A HOME RUN (N248) 38.98676666666667
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - WORKS OF ART (V212) 39.97148333333333
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - LITTLE FANTASY (T298) 41.32882857142857
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - BEST EFFORT (T220) 44.04391
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - HASTILY FEET (T259) 49.45965714285714
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - DASHING DART (V038) 60.448033333333335
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - C P POWER (V037) 66.904675
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - GENTRY (V042) 81.76555
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - EASTERN PROWESS (V295) 86.00453333333333
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - SUPER DUKE (A029) 109.426
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:126 - SEVEN LUCK (V044) 113.9825
-2017-02-11 16:25:48 INFO  CurrentOddsCrawler:92 - raceNumRace 7
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - CIRCUIT HASSLER (A041) null
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - TRAVEL FIRST (T098) -27.784118181818183
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - CALIFORNIA DISEGNO (V170) -27.574
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - ULTIMATE GLORY (S235) -23.04401875
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - PEOPLE'S KNIGHT (T305) -8.799544444444445
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - BABA MAMA (V214) 8.819033333333334
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - LET US WIN (V381) 11.6712
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - HAPPILABABY (T315) 14.3599
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - LUCKY GIRL (T355) 24.271766666666668
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:126 - RAGHU (V395) 141.6712
-2017-02-11 16:26:03 INFO  CurrentOddsCrawler:92 - raceNumRace 8
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - SANGRIA (A065) null
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - PABLOSKY (S156) -20.623575
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - CLEVER BEAVER (S352) -3.4178777777777776
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - TURF SPRINT (T396) 0.6122083333333334
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - GOLDEN HARVEST (N236) 1.1848222222222222
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - PERPETUAL TREASURE (S191) 2.128025
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - LINE SEEKER (S269) 3.1664
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - HOUSE OF FUN (V092) 4.69785
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - KEEN VENTURE (A024) 6.4729
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - MALMSTEEN (V059) 10.51086
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - SKY HERO (T083) 16.39157857142857
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:126 - LUCKY EVER (T293) 23.6346875
-2017-02-11 16:26:18 INFO  CurrentOddsCrawler:92 - raceNumRace 9
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - SICHUAN BOSS (V416) null
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - WINWIN RUBY (A120) null
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - PIKACHU (S298) -15.3889
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - AGREE (A116) -9.2062
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - KINGSFIELD (T403) -0.12643636363636362
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - BRILLIANT DREAM (S203) 9.875388235294118
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - THE SUPREME (V370) 17.2341
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - MR POTENTIAL (V270) 19.78847142857143
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - VOLITATION (V223) 21.68058
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - CONVINCIBLE (T399) 26.08612
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - ALL MY GAIN (T018) 31.345775
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - SHINNING MOON (V268) 64.89295
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - BEAUTY FLARE (V240) 70.2938
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:126 - SHAMAL (V290) 76.88442
-2017-02-11 16:26:33 INFO  CurrentOddsCrawler:92 - raceNumRace 10
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - ROYAL PERFORMER (V405) null
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - CELESTIAL ARROW (A169) null
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - DELIGHT EXPRESS (A099) null
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - GLORIOUS PARTNERS (A089) null
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - BEAT THE CLOCK (V397) -10.677766666666667
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - WINSTON'S LAD (T348) 4.432925
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - KA YING KID (P189) 4.559507692307692
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - ENERGETIC CLASS (T082) 13.848883333333333
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - ROUNDABOUT (T352) 14.184090909090909
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - LUCKY GUY (T349) 22.91451111111111
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - TOP SCORE (V357) 23.212066666666665
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - THE JAZZ (A004) 37.0486
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - DARING FIT (V398) 46.33346
-2017-02-11 16:26:58 INFO  CurrentOddsCrawler:126 - PROUD SKY (V406) 67.0486
-2017-02-11 16:26:58 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Sat Feb 11 16:23:35 CST 2017]; root of context hierarchy
-2017-02-22 21:12:35 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2017-02-22 21:12:35 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
-2017-02-22 21:12:35 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@475530b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1d057a39, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26be92ad, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c70fda8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@224edc67]
-2017-02-22 21:12:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
-2017-02-22 21:12:35 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Wed Feb 22 21:12:35 CST 2017]; root of context hierarchy
-2017-02-22 21:12:36 INFO  AutowiredAnnotationBeanPostProcessor:156 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-22 21:12:37 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
-2017-02-22 21:12:37 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2017-02-22 21:12:37 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
-2017-02-22 21:12:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-02-22 21:12:38 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2017-02-22 21:12:40 INFO  HibernateTransactionManager:357 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@236ab296] of Hibernate SessionFactory for HibernateTransactionManager
-2017-02-22 21:12:51 INFO  CurrentOddsCrawler:92 - raceNumRace 1
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - AGIAAL (N177) 15.514133333333334
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - SPEEDY WALLY (T002) 43.709
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - SUPERNATURAL (V063) 54.385133333333336
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - YOURTHEWONFORME (T258) 55.238366666666664
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - GREAT SPEED (S251) 60.21385
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - RISING POWER (N294) 61.91782666666667
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - SMART SALUTE (V117) 67.1179
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - PRECISIONCRAFTSMAN (V036) 72.48826
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - ATOMIC BLAST (T203) 76.2986
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - ISLAND FLYER (S423) 79.899875
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - SEVEN LUCK (V044) 113.9825
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:126 - LUCKY FRIENDS (V155) 141.3599
-2017-02-22 21:13:04 INFO  CurrentOddsCrawler:92 - raceNumRace 2
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - DARING HEART (V260) 16.9825
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - TRENDY WIN (P099) 18.649166666666666
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - SPINNING DANCER (S078) 31.839405555555555
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - HOUSE OF LUCK (S127) 53.45265
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - PEARL FURU (T431) 53.91363
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - VICTORY MUSIC (V308) 59.6712
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - YOUNG DREAMER (T378) 65.09266666666667
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - CURLING LUXURY (A083) 68.51555
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - EXCELLENCE (T314) 69.9228
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - FUN MANAGER (V220) 95.52164285714285
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - CATCHMEIFYOUCAN (A026) 115.6712
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:126 - YOU HAVE MY WORD (V149) 415.8567
-2017-02-22 21:13:13 INFO  CurrentOddsCrawler:92 - raceNumRace 3
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - GOLDEN ACHIEVER (V216) 14.4793
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - GAME OF FUN (V146) 34.1712
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - G-ONE LOVER (T427) 34.778166666666664
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - AH BO (P295) 38.399875
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - CONTRIBUTION (A146) 38.9825
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - BRIGHT STAR (N387) 39.85852857142857
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - DR RACE (T284) 59.54772727272727
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - ROBUST MOMENTUM (P422) 61.14956
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - VERY RICH MAN (V286) 70.777275
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - ROCKET LET WIN (P330) 74.03580588235295
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - GO-GETTER (S303) 84.58881818181818
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:126 - KWAICHUNG BROTHERS (A012) 138.9164
-2017-02-22 21:13:22 INFO  CurrentOddsCrawler:92 - raceNumRace 4
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - SUPER CLAN (V185) 16.537785714285715
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - GO GO WIN (S073) 26.59527222222222
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - HAPPY JOURNEY (S299) 29.928308333333334
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - BEST TANGO (S121) 30.142027272727272
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - LUCKY PROFIT (S335) 31.323653846153846
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - UNIQUE JOYFUL (S241) 34.4228
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - GOBI STORM (A101) 40.3599
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - IMPERIAL SEAL (T223) 45.4857
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - ST YAZIN (N409) 50.025622222222225
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - AMAZING ALWAYS (N432) 53.96942666666666
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - HASTA LA VISTA (T350) 68.06237692307693
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:126 - DUTCH WINDMILL (T288) 79.57294166666667
-2017-02-22 21:13:32 INFO  CurrentOddsCrawler:92 - raceNumRace 5
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - JETWINGS (T124) -12.7062
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - CHARITY JOY (P278) -2.6401
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - FLYING MOOCHI (T116) 4.866226666666667
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - BACK IN BLACK (T358) 10.343375
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - IRON BOY (V071) 21.1618
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - D B PIN (V344) 42.539
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - DIAMOND MASTER (S397) 45.40448181818182
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - TRIUMPHANT JEWEL (P310) 68.0486
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - BEAUTY MASTER (V135) 74.81903333333334
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:126 - CITY WINNER (V311) 134.9164
-2017-02-22 21:13:42 INFO  CurrentOddsCrawler:92 - raceNumRace 6
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - BUMBLE BABY (V306) null
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - WINNING CONTROLLER (A075) null
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - CHEER WIN (V347) 17.19465
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - PAKISTAN BABY (S442) 28.24391
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - NEVER BETTER (T140) 28.77863076923077
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - GRACE HEART (S399) 42.19131333333333
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - BUDDY BUNDY (T157) 46.156983333333336
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - SHOWING CHARACTER (T289) 51.75798
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - NASHASHUK (V143) 51.7938
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - FOREVER FUN (S130) 65.51235
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - RAY OF GOLD (N443) 78.5462
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:126 - GOOD MATE (T154) 162.94945
-2017-02-22 21:13:51 INFO  CurrentOddsCrawler:92 - raceNumRace 7
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - MOMENT OF POWER (V138) null
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - SECRET COMMAND (S275) -5.901825
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - DIAMOND KING (S347) -2.51558
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - NAVAS (V362) 9.95425
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - VICTORY MARVEL (T426) 15.86651
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - GIANT STARS (T218) 19.38568181818182
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - MONEY BOY (A008) 22.938433333333332
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - CHARITY GLORY (T302) 27.190033333333332
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - OTOUTO (V074) 31.51555
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - HAPPY YEAH YEAH (M085) 37.20897142857143
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - BLAZE STAMINA (V070) 48.354391666666665
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:126 - BREEDERS' STAR (V197) 51.46928
-2017-02-22 21:14:00 INFO  CurrentOddsCrawler:92 - raceNumRace 8
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - HIGH AND MIGHTY (S362) -29.7427125
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - SUNNY WAY (V176) -16.5271
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - NITRO EXPRESS (T353) 1.252709090909091
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - RIGHT CALL (V024) 1.6599
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - SUPER FLUKE (T382) 9.744576470588235
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - ACCLAIMED LIGHT (T369) 13.68165
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - VARA PEARL (S138) 17.170135294117646
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - JADE FORTUNE (V020) 24.526566666666668
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - WAH MAY BABY (S247) 27.83663529411765
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - CHEERFUL BOY (V019) 43.93962222222222
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - THUNDER STOMP (V279) 44.315125
-2017-02-22 21:14:10 INFO  CurrentOddsCrawler:126 - ASSOCIATION FANS (V207) 58.8567
-2017-02-22 21:14:10 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Wed Feb 22 21:12:35 CST 2017]; root of context hierarchy
+2017-02-27 15:09:47 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:09:47 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:09:47 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:09:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:09:47 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:09:47 CST 2017]; root of context hierarchy
+2017-02-27 15:09:47 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:09:47 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:09:48 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:09:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:09:48 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:09:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:09:48 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:09:49 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@d5ce97f'
+2017-02-27 15:09:49 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:09:50 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:09:47 CST 2017]; root of context hierarchy
+2017-02-27 15:09:50 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:09:50 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-02-27 15:09:54 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:09:54 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:09:54 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:09:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:09:54 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:09:54 CST 2017]; root of context hierarchy
+2017-02-27 15:09:54 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:09:54 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:09:54 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:09:54 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:09:54 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:09:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:09:55 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:09:55 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@d5ce97f'
+2017-02-27 15:09:55 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:09:56 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:09:57 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:09:54 CST 2017]; root of context hierarchy
+2017-02-27 15:09:57 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:09:57 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-02-27 15:10:44 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:10:44 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:10:44 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@65466a6a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4ddced80, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1534f01b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@78e117e3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2ea227af]
+2017-02-27 15:10:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:10:45 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@479d31f3: startup date [Mon Feb 27 15:10:45 CST 2017]; root of context hierarchy
+2017-02-27 15:10:45 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:10:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:10:45 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:10:45 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:10:45 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:10:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:10:46 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:10:47 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5ff6dd3c'
+2017-02-27 15:10:47 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:10:53 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:11:02 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@479d31f3: startup date [Mon Feb 27 15:10:45 CST 2017]; root of context hierarchy
+2017-02-27 15:11:02 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:11:02 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-02-27 15:11:09 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:11:09 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:11:09 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4ddced80, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1534f01b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@78e117e3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2ea227af, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4386f16]
+2017-02-27 15:11:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:11:10 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@40ef3420: startup date [Mon Feb 27 15:11:10 CST 2017]; root of context hierarchy
+2017-02-27 15:11:10 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:11:10 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:11:10 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:11:10 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:11:10 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:11:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:11:11 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:11:11 INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@799f916e'
+2017-02-27 15:11:11 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:11:19 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:11:32 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@40ef3420: startup date [Mon Feb 27 15:11:10 CST 2017]; root of context hierarchy
+2017-02-27 15:11:32 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:11:32 INFO  SchemaDropperImpl$DelayedDropActionImpl:522 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2017-02-27 15:12:48 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:12:48 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:12:48 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:12:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:12:49 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:12:49 CST 2017]; root of context hierarchy
+2017-02-27 15:12:49 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:12:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:12:49 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:12:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:12:49 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:12:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:12:49 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_DATE
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_DATE
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_RESULT
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_RESULT
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_RESULT_HORSE
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_RESULT_HORSE
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_RESULT_QUEUE
+2017-02-27 15:12:50 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: RACE_RESULT_QUEUE
+2017-02-27 15:12:50 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:12:51 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:12:51 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:12:49 CST 2017]; root of context hierarchy
+2017-02-27 15:12:51 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:12:56 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:12:56 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:12:56 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:12:56 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:12:56 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:12:56 CST 2017]; root of context hierarchy
+2017-02-27 15:12:56 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:12:56 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:12:56 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:12:56 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:12:56 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:12:56 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:12:57 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:12:57 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:12:58 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:12:59 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:12:56 CST 2017]; root of context hierarchy
+2017-02-27 15:12:59 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:13:18 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:13:18 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:13:18 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:13:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:13:19 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:13:19 CST 2017]; root of context hierarchy
+2017-02-27 15:13:19 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:13:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:13:19 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:13:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:13:19 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:13:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:13:19 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:13:20 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:13:21 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:13:22 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:13:19 CST 2017]; root of context hierarchy
+2017-02-27 15:13:22 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:16:41 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:16:41 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:16:41 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:16:41 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:16:41 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:16:41 CST 2017]; root of context hierarchy
+2017-02-27 15:16:42 WARN  GenericApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+2017-02-27 15:16:42 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7] to prepare test instance [com.techoffice.jc.horse.dao.RaceDateDaoTest@791d1f8b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:146)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.readPersistenceUnitInfos(DefaultPersistenceUnitManager.java:487)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.preparePersistenceUnitInfos(DefaultPersistenceUnitManager.java:440)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.afterPropertiesSet(DefaultPersistenceUnitManager.java:424)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:310)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 3; The element type "persistence-unit" must be terminated by the matching end-tag "</persistence-unit>".
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLScanner.reportFatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.buildDocument(PersistenceUnitReader.java:166)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:133)
+	... 48 more
+2017-02-27 15:16:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:16:42 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@39b43d60: startup date [Mon Feb 27 15:16:42 CST 2017]; root of context hierarchy
+2017-02-27 15:16:42 WARN  GenericApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+2017-02-27 15:16:42 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7] to prepare test instance [com.techoffice.jc.horse.dao.RaceDateDaoTest@59d4cd39]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:146)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.readPersistenceUnitInfos(DefaultPersistenceUnitManager.java:487)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.preparePersistenceUnitInfos(DefaultPersistenceUnitManager.java:440)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.afterPropertiesSet(DefaultPersistenceUnitManager.java:424)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:310)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 3; The element type "persistence-unit" must be terminated by the matching end-tag "</persistence-unit>".
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLScanner.reportFatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.buildDocument(PersistenceUnitReader.java:166)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:133)
+	... 48 more
+2017-02-27 15:17:00 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:17:00 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:17:00 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:17:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:17:01 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:17:01 CST 2017]; root of context hierarchy
+2017-02-27 15:17:01 WARN  GenericApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+2017-02-27 15:17:01 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7] to prepare test instance [com.techoffice.jc.horse.dao.RaceDateDaoTest@791d1f8b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:146)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.readPersistenceUnitInfos(DefaultPersistenceUnitManager.java:487)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.preparePersistenceUnitInfos(DefaultPersistenceUnitManager.java:440)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.afterPropertiesSet(DefaultPersistenceUnitManager.java:424)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:310)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 3; The element type "persistence-unit" must be terminated by the matching end-tag "</persistence-unit>".
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLScanner.reportFatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.buildDocument(PersistenceUnitReader.java:166)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:133)
+	... 48 more
+2017-02-27 15:17:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:17:01 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@39b43d60: startup date [Mon Feb 27 15:17:01 CST 2017]; root of context hierarchy
+2017-02-27 15:17:01 WARN  GenericApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+2017-02-27 15:17:01 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7] to prepare test instance [com.techoffice.jc.horse.dao.RaceDateDaoTest@59d4cd39]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: Invalid XML in persistence unit from URL [file:/D:/Users/Ben_c/git_workspace/TechOffice-Java/999-Dev/Horse/Horse-core/target/classes/META-INF/persistence.xml]
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:146)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.readPersistenceUnitInfos(DefaultPersistenceUnitManager.java:487)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.preparePersistenceUnitInfos(DefaultPersistenceUnitManager.java:440)
+	at org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager.afterPropertiesSet(DefaultPersistenceUnitManager.java:424)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:310)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 3; The element type "persistence-unit" must be terminated by the matching end-tag "</persistence-unit>".
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLScanner.reportFatalError(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.buildDocument(PersistenceUnitReader.java:166)
+	at org.springframework.orm.jpa.persistenceunit.PersistenceUnitReader.readPersistenceUnitInfos(PersistenceUnitReader.java:133)
+	... 48 more
+2017-02-27 15:17:26 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:17:26 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:17:26 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:17:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:17:26 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:17:26 CST 2017]; root of context hierarchy
+2017-02-27 15:17:26 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:17:26 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:17:26 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:17:26 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:17:26 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:17:26 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4af0df05
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7216fb24
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@d3957fe
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@37052337
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@37052337
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@77a7cf58
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@77a7cf58
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@7e5d9a50
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@7e5d9a50
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@56e8b606
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7966baa7
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@3b0c9195
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3b0c9195
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@8c11eee
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@8c11eee
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@4c2cc639
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@4c2cc639
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7c1e2a2d
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7c1e2a2d
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3d9f6567
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3d9f6567
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@7e276594
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@7e276594
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3ecd267f
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3ecd267f
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@1a9c38eb
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@1a9c38eb
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@54a67a45
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@54a67a45
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@5ee2b6f9
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5ee2b6f9
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@3fb6cf60
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3fb6cf60
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@235a0c16
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@68044f4
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@2f05be7f
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@2f05be7f
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@64a8c844
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@64a8c844
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@68ad99fe
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@68ad99fe
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@17cdf2d0
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@17cdf2d0
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@14dda234
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@14dda234
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@5a411614
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@bf1ec20
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@435fb7b5
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@73dce0e6
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@14d14731
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@31e4bb20
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@31e4bb20
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@765f05af
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@40f70521
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@40f70521
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@476b0ae6
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@476b0ae6
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@549949be
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3eeb318f
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@18025ced
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@1021f6c9
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1021f6c9
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5e81e5ac
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4189d70b
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3fa2213
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3e7634b9
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@6f0b0a5e
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6035b93b
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@320de594
+2017-02-27 15:17:26 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3dd1dc90
+2017-02-27 15:17:27 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:17:27 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@7051777c
+2017-02-27 15:17:27 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:17:29 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:17:29 DEBUG SQL:92 - select racedate0_.id as id1_0_, racedate0_.RACE_COUNT as RACE_COU2_0_, racedate0_.RACE_DATE as RACE_DAT3_0_, racedate0_.RACE_TYPE as RACE_TYP4_0_ from RACE_DATE racedate0_ where racedate0_.RACE_COUNT<2 and racedate0_.RACE_TYPE<>'Simulcast'
+2017-02-27 15:17:29 DEBUG SQL:92 - select max(id) from RACE_DATE
+2017-02-27 15:17:29 DEBUG SQL:92 - insert into RACE_DATE (RACE_COUNT, RACE_DATE, RACE_TYPE, id) values (?, ?, ?, ?)
+2017-02-27 15:17:29 TRACE BasicBinder:65 - binding parameter [1] as [INTEGER] - [0]
+2017-02-27 15:17:29 TRACE BasicBinder:53 - binding parameter [2] as [VARCHAR] - [null]
+2017-02-27 15:17:29 TRACE BasicBinder:53 - binding parameter [3] as [VARCHAR] - [null]
+2017-02-27 15:17:29 TRACE BasicBinder:65 - binding parameter [4] as [INTEGER] - [4]
+2017-02-27 15:17:29 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:17:26 CST 2017]; root of context hierarchy
+2017-02-27 15:17:29 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:17:49 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:17:49 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:17:49 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:17:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:17:49 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:17:49 CST 2017]; root of context hierarchy
+2017-02-27 15:17:50 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:17:50 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:17:50 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:17:50 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:17:50 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:17:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4af0df05
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7216fb24
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@d3957fe
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@37052337
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@37052337
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@77a7cf58
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@77a7cf58
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@7e5d9a50
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@7e5d9a50
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@56e8b606
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7966baa7
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@3b0c9195
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3b0c9195
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@8c11eee
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@8c11eee
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@4c2cc639
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@4c2cc639
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7c1e2a2d
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7c1e2a2d
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3d9f6567
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3d9f6567
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@7e276594
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@7e276594
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3ecd267f
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3ecd267f
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@1a9c38eb
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@1a9c38eb
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@54a67a45
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@54a67a45
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@5ee2b6f9
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5ee2b6f9
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@3fb6cf60
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3fb6cf60
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@235a0c16
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@68044f4
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@2f05be7f
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@2f05be7f
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@64a8c844
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@64a8c844
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@68ad99fe
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@68ad99fe
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@17cdf2d0
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@17cdf2d0
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@14dda234
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@14dda234
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@5a411614
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@bf1ec20
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@435fb7b5
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@73dce0e6
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@14d14731
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@31e4bb20
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@31e4bb20
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@765f05af
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@40f70521
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@40f70521
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@476b0ae6
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@476b0ae6
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@549949be
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3eeb318f
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@18025ced
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@1021f6c9
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1021f6c9
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5e81e5ac
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4189d70b
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3fa2213
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3e7634b9
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@6f0b0a5e
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6035b93b
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@320de594
+2017-02-27 15:17:50 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3dd1dc90
+2017-02-27 15:17:50 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:17:50 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@7051777c
+2017-02-27 15:17:51 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:17:52 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:17:52 DEBUG SQL:92 - select racedate0_.id as id1_0_, racedate0_.RACE_COUNT as RACE_COU2_0_, racedate0_.RACE_DATE as RACE_DAT3_0_, racedate0_.RACE_TYPE as RACE_TYP4_0_ from RACE_DATE racedate0_ where racedate0_.RACE_COUNT<2 and racedate0_.RACE_TYPE<>'Simulcast'
+2017-02-27 15:17:52 DEBUG SQL:92 - select max(id) from RACE_DATE
+2017-02-27 15:17:52 DEBUG SQL:92 - insert into RACE_DATE (RACE_COUNT, RACE_DATE, RACE_TYPE, id) values (?, ?, ?, ?)
+2017-02-27 15:17:52 TRACE BasicBinder:65 - binding parameter [1] as [INTEGER] - [0]
+2017-02-27 15:17:52 TRACE BasicBinder:53 - binding parameter [2] as [VARCHAR] - [null]
+2017-02-27 15:17:52 TRACE BasicBinder:53 - binding parameter [3] as [VARCHAR] - [null]
+2017-02-27 15:17:52 TRACE BasicBinder:65 - binding parameter [4] as [INTEGER] - [5]
+2017-02-27 15:17:52 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:17:49 CST 2017]; root of context hierarchy
+2017-02-27 15:17:52 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:19:48 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:19:48 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:19:48 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:19:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:19:49 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:19:49 CST 2017]; root of context hierarchy
+2017-02-27 15:19:49 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:19:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:19:49 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:19:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:19:49 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:19:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@47f4e407
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@47f4e407
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@47f4e407
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@2dd80673
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4b45dcb8
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@732f29af
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@25a6944c
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@25a6944c
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@25a6944c
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@1d131e1b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@1d131e1b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1d131e1b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@19648c40
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@19648c40
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@19648c40
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@70ab2d48
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@70ab2d48
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@70ab2d48
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@49872d67
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@49872d67
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@49872d67
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4983159f
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4983159f
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4983159f
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@18bc345
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@18bc345
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@18bc345
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@424ebba3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@424ebba3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@53f0a4cb
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@53f0a4cb
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@7e7b159b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@7e7b159b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1dd6d4b7
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@40dff0b7
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@61c9c3fd
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@61c9c3fd
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@5cdd09b1
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5cdd09b1
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@7f6f61c8
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@7f6f61c8
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2a5b3fee
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2a5b3fee
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@119020fb
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@119020fb
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@655ef322
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@655ef322
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@77d2e85
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@77d2e85
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@3c9bfddc
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@3c9bfddc
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2e554a3b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2e554a3b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@5ddea849
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5ddea849
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@13e547a9
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@13e547a9
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@4b9df8a
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4b9df8a
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4b9df8a
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@6955cb39
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@6b7906b3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@6b7906b3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@6b7906b3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@256f8274
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@6c5945a7
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6c5945a7
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@78365cfa
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@78365cfa
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@3a0d172f
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3a0d172f
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@2e9fda69
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@2e9fda69
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1af687fe
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1af687fe
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@74a6a609
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@47a5b70d
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@47a5b70d
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@47a5b70d
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@6e6d5d29
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@6e6d5d29
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@6e6d5d29
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@48a12036
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@4e858e0a
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@5733f295
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@5733f295
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@5733f295
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@19553973
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@19553973
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@19553973
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@32c8e539
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@53dacd14
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@7c098bb3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7c098bb3
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@463b4ac8
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@aeab9a1
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@aeab9a1
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@c1bd0be
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@c1bd0be
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@655f7ea
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@17a87e37
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@75b25825
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@5bc9ba1d
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5bc9ba1d
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@488eb7f2
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@5e81e5ac
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4189d70b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3fa2213
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3e7634b9
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6f0b0a5e
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6035b93b
+2017-02-27 15:19:49 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@320de594
+2017-02-27 15:19:49 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:19:50 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@703feacd
+2017-02-27 15:19:50 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:19:51 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:19:51 DEBUG SQL:92 - select racedate0_.id as id1_0_, racedate0_.RACE_COUNT as RACE_COU2_0_, racedate0_.RACE_DATE as RACE_DAT3_0_, racedate0_.RACE_TYPE as RACE_TYP4_0_ from RACE_DATE racedate0_ where racedate0_.RACE_COUNT<2 and racedate0_.RACE_TYPE<>'Simulcast'
+2017-02-27 15:19:51 DEBUG SQL:92 - select max(id) from RACE_DATE
+2017-02-27 15:19:51 DEBUG SQL:92 - insert into RACE_DATE (RACE_COUNT, RACE_DATE, RACE_TYPE, id) values (?, ?, ?, ?)
+2017-02-27 15:19:51 TRACE BasicBinder:65 - binding parameter [1] as [INTEGER] - [0]
+2017-02-27 15:19:51 TRACE BasicBinder:53 - binding parameter [2] as [VARCHAR] - [null]
+2017-02-27 15:19:51 TRACE BasicBinder:53 - binding parameter [3] as [VARCHAR] - [null]
+2017-02-27 15:19:51 TRACE BasicBinder:65 - binding parameter [4] as [INTEGER] - [6]
+2017-02-27 15:19:51 ERROR ErrorCounter:60 - line 1:8: unexpected token: *
+2017-02-27 15:19:51 ERROR ErrorCounter:55 - line 1:8: unexpected token: *
+line 1:8: unexpected token: *
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1257)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1034)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:742)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:313)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:195)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:279)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:187)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:142)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:152)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:526)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:628)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:652)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:491)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:298)
+	at com.sun.proxy.$Proxy44.createQuery(Unknown Source)
+	at com.techoffice.jc.horse.dao.RaceDateDao.list(RaceDateDao.java:27)
+	at com.techoffice.jc.horse.dao.RaceDateDao$$FastClassBySpringCGLIB$$e6c4d520.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.techoffice.jc.horse.dao.RaceDateDao$$EnhancerBySpringCGLIB$$920f72a3.list(<generated>)
+	at com.techoffice.jc.horse.dao.RaceDateDaoTest.list(RaceDateDaoTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:491)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2017-02-27 15:19:51 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:19:49 CST 2017]; root of context hierarchy
+2017-02-27 15:19:51 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:21:06 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:21:06 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:21:06 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:21:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:21:06 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:21:06 CST 2017]; root of context hierarchy
+2017-02-27 15:21:06 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:21:06 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:21:06 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:21:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:21:06 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:21:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@47f4e407
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@47f4e407
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@47f4e407
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@2dd80673
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4b45dcb8
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@732f29af
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@25a6944c
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@25a6944c
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@25a6944c
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@1d131e1b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@1d131e1b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1d131e1b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@19648c40
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@19648c40
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@19648c40
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@70ab2d48
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@70ab2d48
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@70ab2d48
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@49872d67
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@49872d67
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@49872d67
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4983159f
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4983159f
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4983159f
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@18bc345
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@18bc345
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@18bc345
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@424ebba3
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@424ebba3
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@53f0a4cb
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@53f0a4cb
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@7e7b159b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@7e7b159b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1dd6d4b7
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@40dff0b7
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@61c9c3fd
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@61c9c3fd
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@5cdd09b1
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5cdd09b1
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@7f6f61c8
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@7f6f61c8
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2a5b3fee
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2a5b3fee
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@119020fb
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@119020fb
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@655ef322
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@655ef322
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@77d2e85
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@77d2e85
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@3c9bfddc
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@3c9bfddc
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2e554a3b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2e554a3b
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@5ddea849
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5ddea849
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@13e547a9
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@13e547a9
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@4b9df8a
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4b9df8a
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4b9df8a
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@6955cb39
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@6b7906b3
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@6b7906b3
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@6b7906b3
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@256f8274
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@6c5945a7
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6c5945a7
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@78365cfa
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@78365cfa
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@3a0d172f
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3a0d172f
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@2e9fda69
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@2e9fda69
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1af687fe
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1af687fe
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@74a6a609
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@47a5b70d
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@47a5b70d
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@47a5b70d
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@6e6d5d29
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@6e6d5d29
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@6e6d5d29
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@48a12036
+2017-02-27 15:21:06 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@4e858e0a
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@5733f295
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@5733f295
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@5733f295
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@19553973
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@19553973
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@19553973
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@32c8e539
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@53dacd14
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@7c098bb3
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7c098bb3
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@463b4ac8
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@aeab9a1
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@aeab9a1
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@c1bd0be
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@c1bd0be
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@655f7ea
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@17a87e37
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@75b25825
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@5bc9ba1d
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5bc9ba1d
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@488eb7f2
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@5e81e5ac
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4189d70b
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3fa2213
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3e7634b9
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6f0b0a5e
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@6035b93b
+2017-02-27 15:21:07 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@320de594
+2017-02-27 15:21:07 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:21:07 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@703feacd
+2017-02-27 15:21:07 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:21:09 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:21:09 DEBUG SQL:92 - select racedate0_.id as id1_0_, racedate0_.RACE_COUNT as RACE_COU2_0_, racedate0_.RACE_DATE as RACE_DAT3_0_, racedate0_.RACE_TYPE as RACE_TYP4_0_ from RACE_DATE racedate0_ where racedate0_.RACE_COUNT<2 and racedate0_.RACE_TYPE<>'Simulcast'
+2017-02-27 15:21:09 DEBUG SQL:92 - select max(id) from RACE_DATE
+2017-02-27 15:21:09 DEBUG SQL:92 - insert into RACE_DATE (RACE_COUNT, RACE_DATE, RACE_TYPE, id) values (?, ?, ?, ?)
+2017-02-27 15:21:09 TRACE BasicBinder:65 - binding parameter [1] as [INTEGER] - [0]
+2017-02-27 15:21:09 TRACE BasicBinder:53 - binding parameter [2] as [VARCHAR] - [null]
+2017-02-27 15:21:09 TRACE BasicBinder:53 - binding parameter [3] as [VARCHAR] - [null]
+2017-02-27 15:21:09 TRACE BasicBinder:65 - binding parameter [4] as [INTEGER] - [7]
+2017-02-27 15:21:09 DEBUG SQL:92 - select racedate0_.id as id1_0_, racedate0_.RACE_COUNT as RACE_COU2_0_, racedate0_.RACE_DATE as RACE_DAT3_0_, racedate0_.RACE_TYPE as RACE_TYP4_0_ from RACE_DATE racedate0_
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [1]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [2]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [3]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [4]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [5]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [6]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [7]
+2017-02-27 15:21:09 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 TRACE BasicExtractor:51 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [null]
+2017-02-27 15:21:09 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:21:06 CST 2017]; root of context hierarchy
+2017-02-27 15:21:09 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:21:53 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-27 15:21:53 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-02-27 15:21:53 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343f4d3d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5442a311, org.springframework.test.context.transaction.TransactionalTestExecutionListener@548e7350, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a968a59]
+2017-02-27 15:21:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-02-27 15:21:53 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:21:53 CST 2017]; root of context hierarchy
+2017-02-27 15:21:53 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:21:53 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-02-27 15:21:54 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-02-27 15:21:54 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-02-27 15:21:54 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-02-27 15:21:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2d1dee39
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4af0df05
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7216fb24
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@d3957fe
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@5e1fa5b1
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@71cf1b07
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@12bd8a64
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5b068087
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@56303b57
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@44e3a2b2
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@42f8285e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@37052337
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@37052337
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@77a7cf58
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@77a7cf58
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@7e5d9a50
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@7e5d9a50
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@56e8b606
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@7966baa7
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@3b0c9195
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3b0c9195
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@8c11eee
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@8c11eee
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@4c2cc639
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@4c2cc639
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7c1e2a2d
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7c1e2a2d
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3d9f6567
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3d9f6567
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@7e276594
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@7e276594
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3ecd267f
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@3ecd267f
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@1a9c38eb
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@1a9c38eb
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@54a67a45
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@54a67a45
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@5ee2b6f9
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5ee2b6f9
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@3fb6cf60
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3fb6cf60
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5e8ac0e1
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@235a0c16
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@3a1dd365
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@68044f4
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@2f05be7f
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@2f05be7f
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@64a8c844
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@64a8c844
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@68ad99fe
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@68ad99fe
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@17cdf2d0
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@17cdf2d0
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@14dda234
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@14dda234
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@5a411614
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@424fd310
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@5c530d1e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@bf1ec20
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@435fb7b5
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@1c3146bc
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7bb6ab3a
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@73dce0e6
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@14d14731
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@31e4bb20
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@31e4bb20
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@765f05af
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@40f70521
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@40f70521
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@476b0ae6
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@476b0ae6
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@549949be
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@3eeb318f
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@18025ced
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@1021f6c9
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@1021f6c9
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5e81e5ac
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@4189d70b
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3fa2213
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3e7634b9
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@6f0b0a5e
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6035b93b
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@320de594
+2017-02-27 15:21:54 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3dd1dc90
+2017-02-27 15:21:54 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-27 15:21:54 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@7051777c
+2017-02-27 15:21:55 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-02-27 15:21:56 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-02-27 15:21:56 DEBUG SQL:92 - select raceresult0_.id as id1_3_, raceresult0_.LOCATION as LOCATION2_3_, raceresult0_.RACE_DATE as RACE_DAT3_3_, raceresult0_.RACE_NUM as RACE_NUM4_3_, raceresult0_.RACE_TYPE as RACE_TYP5_3_, raceresult0_.RUN_IND as RUN_IND6_3_, raceresult0_.VENUE as VENUE7_3_ from RACE_RESULT_QUEUE raceresult0_ where isnull(raceresult0_.RUN_IND, '')<>'Y'
+2017-02-27 15:21:56 DEBUG SQL:92 - select raceresult0_.id as id1_3_, raceresult0_.LOCATION as LOCATION2_3_, raceresult0_.RACE_DATE as RACE_DAT3_3_, raceresult0_.RACE_NUM as RACE_NUM4_3_, raceresult0_.RACE_TYPE as RACE_TYP5_3_, raceresult0_.RUN_IND as RUN_IND6_3_, raceresult0_.VENUE as VENUE7_3_ from RACE_RESULT_QUEUE raceresult0_ where lower(LOCATION)=lower(?)
+2017-02-27 15:21:56 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [/racing/Info/Meeting/Results/English/Local/20161211/ST/4]
+2017-02-27 15:21:56 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@370736d9: startup date [Mon Feb 27 15:21:53 CST 2017]; root of context hierarchy
+2017-02-27 15:21:56 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'

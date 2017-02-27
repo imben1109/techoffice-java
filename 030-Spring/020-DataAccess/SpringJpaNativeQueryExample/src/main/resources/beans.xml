@@ -11,26 +11,17 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Auto-Scan Spring Bean -->
-	<context:component-scan base-package="com.techoffice" />
-	<bean class="com.techoffice.factory.WebClientBeanFactory"/>
+	<context:component-scan base-package="com.techoffice.example" />
 
 	<!-- Database Connection Pool Datasource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:~/test" />
+		<property name="url" value="jdbc:h2:./test" />
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 	</bean>
 
-	<!-- 
-		Using org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean 
-		instead of LocalSessionFactoryBean to Support Annotation
-		
-		- LocalSessionFactoryBean: create Hibernate's Session which could be inject into DAO class
-		- HibernateTransactionManager: provide support for the sessionFactory. @Transactional could be used in the DAO to manage transaction
-		
-	 -->
 	<bean id="entityManagerFactoryBean" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="jpaVendorAdapter">
@@ -39,7 +30,7 @@
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
 			</props>
 		</property>
 	</bean>
@@ -47,7 +38,7 @@
 	<bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
 	</bean>
-	
+
 	<tx:annotation-driven transaction-manager="txManager"/>
 	
 </beans>

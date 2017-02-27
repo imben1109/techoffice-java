@@ -117,7 +117,7 @@ public class ResultQueueService {
 		for (RaceDate newRaceDate: newRaceDateList){
 			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
 			if (raceDate == null){
-				raceDateDao.add(newRaceDate);
+				raceDateDao.update(newRaceDate);
 				count++;
 			}
 		}
