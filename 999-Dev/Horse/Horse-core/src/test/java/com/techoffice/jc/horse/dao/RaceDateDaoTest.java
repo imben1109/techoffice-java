@@ -25,4 +25,18 @@ public class RaceDateDaoTest {
 		}
 	}
 	
+	@Test
+	public void list(){
+		List<RaceDate> raceDateList = raceDateDao.list();
+		for (RaceDate raceDate: raceDateList){
+			System.out.println(raceDate.getRaceDate() + " "  + raceDate.getRaceCount());
+		}
+	}
+	
+	@Test
+	public void add(){
+		RaceDate raceDate = new RaceDate();
+		raceDateDao.update(raceDate);
+	}
+	
 }

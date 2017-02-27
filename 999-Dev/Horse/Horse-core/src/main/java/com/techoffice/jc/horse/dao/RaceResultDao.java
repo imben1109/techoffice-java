@@ -1,5 +1,8 @@
 package com.techoffice.jc.horse.dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +14,11 @@ import com.techoffice.jc.horse.model.RaceResult;
 @Repository
 public class RaceResultDao {
 	
-	@Autowired
-	private SessionFactory sessionFactory;
+	@PersistenceContext
+	private EntityManager em;
 	
 	@Transactional
 	public void add(RaceResult raceResult){
-		Session session = sessionFactory.getCurrentSession();
-		session.persist(raceResult);
+		em.persist(raceResult);
 	}
 }

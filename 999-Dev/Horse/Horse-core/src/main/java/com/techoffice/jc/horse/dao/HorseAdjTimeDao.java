@@ -4,11 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.NativeQuery;
-import org.hibernate.transform.Transformers;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,8 +16,8 @@ import com.techoffice.jc.horse.dto.CurrentOdd;
 @Repository
 public class HorseAdjTimeDao {
 	
-	@Autowired
-	private SessionFactory sessionFactory;
+	@PersistenceContext
+	private EntityManager em;
 	
 	@Transactional
 	public List<CurrentOdd>  getAdjTime(List<CurrentOdd> horseList){
@@ -32,15 +31,13 @@ public class HorseAdjTimeDao {
 			horseQuery += "'" + horseName + "'";
 		}
 		horseQuery += ")";
-		Session session = sessionFactory.getCurrentSession();
-		NativeQuery query = session.createNativeQuery("SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in " + horseQuery + " ORDER BY AVG_ADJ_TIME ASC");
-		query.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+		
+		Query query = em.createNativeQuery("SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in " + horseQuery + " ORDER BY AVG_ADJ_TIME ASC");
 		Map<String, Double> map = new HashMap<String,Double>();
-		List<Map<String,Object>> results = query.getResultList();
-		for (Map<String, Object> result: results){
-			String horseName = result.get("HORSE_NAME").toString();
-			Double adjTime = Double.parseDouble(result.get("AVG_ADJ_TIME").toString());
-//			System.out.println(horseName + " " + adjTime); 
+		List<Object[]> results = query.getResultList();
+		for (Object[] result: results){
+			String horseName = result[0].toString();
+			Double adjTime = Double.parseDouble(result[1].toString());
 			for (CurrentOdd currentOdd: horseList){
 				if (currentOdd.getHorseName().equals(horseName)){
 					currentOdd.setAdjTime(adjTime);
