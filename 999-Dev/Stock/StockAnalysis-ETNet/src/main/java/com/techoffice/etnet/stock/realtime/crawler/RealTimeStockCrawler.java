@@ -1,4 +1,4 @@
-package com.techoffice.etnet.stock.realtime.service.webclient;
+package com.techoffice.etnet.stock.realtime.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -17,7 +17,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 @Component
-public class RealTimeStockWebService {
+public class RealTimeStockCrawler {
 	public static final String URL = "http://www.etnet.com.hk/www/tc/stocks/realtime/quote_super.php?code=";
 	
 	@Autowired

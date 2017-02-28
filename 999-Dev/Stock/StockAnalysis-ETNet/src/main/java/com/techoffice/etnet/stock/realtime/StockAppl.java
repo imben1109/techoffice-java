@@ -15,14 +15,14 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.etnet.stock.realtime.crawler.RealTimeStockCrawler;
 import com.techoffice.etnet.stock.realtime.dao.StockDao;
-import com.techoffice.etnet.stock.realtime.service.webclient.RealTimeStockWebService;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
-	private RealTimeStockWebService realTimeStockWebService;
+	private RealTimeStockCrawler realTimeStockWebService;
 	
 	@Autowired
 	private StockDao stockDao;
