@@ -22,7 +22,7 @@ public class Appl {
 		Query query ;
 		query = em.createNativeQuery("insert into student values (1, 'Test Student', 'Test Desc')");
 		query.executeUpdate();
-		query = em.createNativeQuery("select * from student");
+		query = em.createNativeQuery("select id, name, desc from student");
 		List<Object[]> results = query.getResultList();
 		for (Object[] result: results){
 			System.out.println(result[0].toString() + " " + result[1].toString() + " " + result[2].toString());
