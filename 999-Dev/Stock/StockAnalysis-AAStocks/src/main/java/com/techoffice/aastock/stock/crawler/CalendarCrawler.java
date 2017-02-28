@@ -16,6 +16,7 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.factory.WebDriverFactory;
+import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 
 @Service
@@ -25,23 +26,18 @@ public class CalendarCrawler {
 	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx";
 	
-	public String retrieveXmlFromWebClient() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		WebDriver driver = WebDriverFactory.getPhantomJSDriver();
-		driver.get(URL);
-		String xml = driver.getPageSource();
-		driver.quit();
+	public String retrieveXmlFromWebClient() {
+		String xml = WebDriverUtil.getXml(URL);
 		return xml;
 	}
 	
-	public String retrieveResultAnnounceXmlFromWebClient(String page) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		WebDriver webDriver = WebDriverFactory.getChormeDriver();
+	public String retrieveResultAnnounceXmlFromWebClient(String page) {
+		String xml = "";
         if (page == null){
-        	webDriver.get(URL+"?type=1");
+        	WebDriverUtil.getXml(URL+"?type=1");
         }else {
-        	webDriver.get(URL + "?type=1&page=" + page);
+        	WebDriverUtil.getXml(URL + "?type=1&page=" + page);
         }
-        String xml = webDriver.getPageSource();
-        webDriver.quit();
         return xml;
 	}
 	
