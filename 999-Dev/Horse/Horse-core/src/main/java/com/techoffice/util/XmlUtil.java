@@ -5,6 +5,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -60,7 +62,7 @@ public class XmlUtil {
 			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
 			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes()));	
+			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)));	
 		}catch(Exception e){
 			log.error("Try to convert xml: " + xml);
 			throw new XmlUtilDocumentConversionException("Cannot xml to Document: " + e.getMessage());
@@ -73,9 +75,14 @@ public class XmlUtil {
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
 		tidy.setXHTML(true);
-		OutputStream out = new ByteArrayOutputStream();
-		tidy.parse(new ByteArrayInputStream(xml.getBytes()), out);
-		String tiddiedXml = out.toString();
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		tidy.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)), out);
+		String tiddiedXml = "";
+		try {
+			tiddiedXml = out.toString("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		return tiddiedXml;
 	}
 	

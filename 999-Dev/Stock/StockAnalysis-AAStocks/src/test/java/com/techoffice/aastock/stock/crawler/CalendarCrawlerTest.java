@@ -18,6 +18,7 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.aastock.stock.crawler.CalendarCrawler;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -29,7 +30,7 @@ public class CalendarCrawlerTest {
 	private CalendarCrawler calendarWebServiceTest;
 	
 	@Test
-	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		String xml = calendarWebServiceTest.retrieveXmlFromWebClient();
 		int pageCount = calendarWebServiceTest.getPageCount(xml);
 		log.info("Page Count: " + pageCount);

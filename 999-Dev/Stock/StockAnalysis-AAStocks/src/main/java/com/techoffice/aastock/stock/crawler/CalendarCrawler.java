@@ -18,6 +18,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @Service
 public class CalendarCrawler {
@@ -45,7 +46,7 @@ public class CalendarCrawler {
 		String xPath = "/html/body/form/div[2]/div[6]/table[2]/tbody/tr";
 	}
 	
-	public int getPageCount(String xml) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public int getPageCount(String xml) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		String xPath = "/html/body/form/div[2]/div[6]/div[8]/table/tbody/tr/td[2]/a";
 		NodeList tableNodeList = XmlUtil.evaluateXpath(xml, xPath);
 		int pageCount = tableNodeList.getLength() + 1;

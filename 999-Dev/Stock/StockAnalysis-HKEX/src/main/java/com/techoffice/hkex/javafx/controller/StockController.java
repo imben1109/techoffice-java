@@ -16,6 +16,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.stock.model.Stock;
 import com.techoffice.hkex.stock.service.CsvExportService;
 import com.techoffice.hkex.stock.service.StockService;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,7 +43,7 @@ public class StockController {
 	}
 	
 	@FXML
-	public void refresh(ActionEvent event) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void refresh(ActionEvent event) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		stockService.updateFromInternet();
 		tableView.getItems().clear();
 		tableView.getItems().addAll(stockService.getStockList());

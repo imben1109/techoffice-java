@@ -35,6 +35,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.techoffice.hkex.stock.model.Stock;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @Component
 public class StockCrawler {
@@ -46,7 +47,7 @@ public class StockCrawler {
 	@Autowired
 	private WebClient webClient; 
 	
-	public List<Stock> retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public List<Stock> retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
         final HtmlPage page = webClient.getPage(URL);
         String xml = page.asXml();
         List<Stock> stocks = parseXml(xml);
@@ -54,7 +55,7 @@ public class StockCrawler {
 		return stocks;
 	}
 	
-	private List<Stock> parseXml(String xml) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException, TransformerException{
+	private List<Stock> parseXml(String xml) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException, TransformerException, XmlUtilDocumentConversionException{
 		List<Stock> stocks = new ArrayList<Stock>();
 		String xPath = "/html/body/center/table/tbody/tr[1]/td[2]/table/tbody/tr[6]/td/table/tbody/tr/td[2]/printfriendly/table/tbody/tr/td/table/tbody/tr/td/table[1]/tbody/tr";
 		NodeList tableNodeList = XmlUtil.evaluateXpath(xml, xPath);

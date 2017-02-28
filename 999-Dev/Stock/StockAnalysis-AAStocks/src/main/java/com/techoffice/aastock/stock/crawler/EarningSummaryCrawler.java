@@ -15,6 +15,7 @@ import org.xml.sax.SAXException;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @Service
 public class EarningSummaryCrawler {
@@ -28,7 +29,7 @@ public class EarningSummaryCrawler {
 		return xml;
 	}
 	
-	public void getYearList(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public void getYearList(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		String xml = getXml(symbol);
 		String xpath = "//*[@id='highcharts-0']/svg/g[6]/text";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
@@ -40,7 +41,7 @@ public class EarningSummaryCrawler {
 		}
 	}
 	
-	public void getEarningPerShare(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public void getEarningPerShare(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		String xml = getXml(symbol);
 		String xpath = "//*[@id='cnhk-list']/tbody/tr[6]/td";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
@@ -52,7 +53,7 @@ public class EarningSummaryCrawler {
 		}
 	}
 	
-	public void getDividendPerShare(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public void getDividendPerShare(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		String xml = getXml(symbol);
 		String xpath = "//*[@id='cnhk-list']/tbody/tr[10]/td";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);

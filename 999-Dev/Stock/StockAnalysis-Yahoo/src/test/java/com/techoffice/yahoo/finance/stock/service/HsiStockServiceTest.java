@@ -16,6 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.yahoo.finance.stock.model.HsiStock;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,7 +27,7 @@ public class HsiStockServiceTest {
 	private HsiStockService hsiStockService;
 
 //	@Test
-	public void updateHsiStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void updateHsiStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		hsiStockService.updateHsiStockList();
 	}
 	

@@ -14,6 +14,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
 public class EarningSummaryCrawlerTest {
@@ -24,17 +26,17 @@ public class EarningSummaryCrawlerTest {
 	private EarningSummaryCrawler earningSummaryCrawler;
 	
 //	@Test
-	public void getYearList() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public void getYearList() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		earningSummaryCrawler.getYearList("00010");
 	}
 	
 //	@Test
-	public void getEarningPerShare() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public void getEarningPerShare() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		earningSummaryCrawler.getEarningPerShare("00010");
 	}
 	
 	@Test
-	public void test() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException{
+	public void test() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		earningSummaryCrawler.getDividendPerShare("00010");
 	}
 	

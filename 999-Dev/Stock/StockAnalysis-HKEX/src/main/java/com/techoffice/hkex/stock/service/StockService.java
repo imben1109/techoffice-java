@@ -17,6 +17,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.stock.crawler.StockCrawler;
 import com.techoffice.hkex.stock.dao.StockDao;
 import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @Service
 public class StockService {
@@ -37,7 +38,7 @@ public class StockService {
 	}
 	
 	@Transactional
-	public void updateFromInternet() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void updateFromInternet() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
 		stockDao.clear();
 		List<Stock> stockList = stockWebClientService.retrieveStockList();
 		for(Stock stock: stockList){

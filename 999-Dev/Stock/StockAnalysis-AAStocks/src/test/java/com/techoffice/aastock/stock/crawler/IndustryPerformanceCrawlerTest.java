@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -24,7 +25,7 @@ public class IndustryPerformanceCrawlerTest {
 	private IndustryPerformanceCrawler industryPerformanceCrawler;
 	
 	@Test
-	public void getIndrustryList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException{
+	public void getIndrustryList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, XmlUtilDocumentConversionException{
 		List<String> industryList = industryPerformanceCrawler.retrieveIndustryList();
 		for(String industry: industryList){
 			System.out.println(industry);
