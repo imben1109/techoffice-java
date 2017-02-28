@@ -13,6 +13,7 @@ import com.techoffice.config.ApplConfig;
 
 
 public class WebClientBeanFactory implements FactoryBean<WebClient> {
+	
 	private WebClient webClient;
 	
 	public WebClientBeanFactory(){

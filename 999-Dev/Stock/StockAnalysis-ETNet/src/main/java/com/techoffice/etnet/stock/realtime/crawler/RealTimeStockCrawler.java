@@ -15,18 +15,14 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.util.WebDriverUtil;
 
 @Component
 public class RealTimeStockCrawler {
 	public static final String URL = "http://www.etnet.com.hk/www/tc/stocks/realtime/quote_super.php?code=";
 	
-	@Autowired
-	private WebClient webClient;
-	
 	public String retrieveXmlByCode(String code) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-        final HtmlPage page = webClient.getPage(URL+code);
-        String xml = page.asXml();
-        webClient.close();
+		String xml = WebDriverUtil.getXml(URL+code);
         return xml;
 	}
 	
