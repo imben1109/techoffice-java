@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.yahoo.finance.stock.model.HsiStock;
 
@@ -30,15 +30,8 @@ public class HsiStockCrawler {
 
 	public static final String URL = "https://hk.finance.yahoo.com/q/cp?s=%5EHSI";
 
-	@Autowired
-	private WebClient webClient;
-
 	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
-		webClient.getOptions().setThrowExceptionOnScriptError(false);
-		final HtmlPage page = webClient.getPage(URL);
-        String xml = page.asXml();
-        webClient.close();
-        webClient.getOptions().setThrowExceptionOnScriptError(true);
+		String xml = WebDriverUtil.getXml(URL);
         return xml;
 	}
 	
