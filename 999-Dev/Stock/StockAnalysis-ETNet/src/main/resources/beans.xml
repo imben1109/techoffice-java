@@ -31,23 +31,23 @@
 		- HibernateTransactionManager: provide support for the sessionFactory. @Transactional could be used in the DAO to manage transaction
 		
 	 -->
-	<bean id="sessionFactory"
-            class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<bean id="entityManagerFactoryBean" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.ittechoffice" />
-		<property name="hibernateProperties">
-			<value>
-				hibernate.dialect=org.hibernate.dialect.H2Dialect
-				hibernate.show_sql=true
-				hibernate.hbm2ddl.auto=create-drop
-			</value>
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
 		</property>
 	</bean>
 	
-	<bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory"/>
+	<bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
 	</bean>
-
+	
 	<tx:annotation-driven transaction-manager="txManager"/>
 	
 </beans>
