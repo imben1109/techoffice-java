@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 
 public class WordDocument {
 	
@@ -13,7 +14,7 @@ public class WordDocument {
 	
 	public WordDocument(File file) throws IOException{
 		this.wordFile = file;
-		FileInputStream fileInputStream = new FileInputStream(new File("SimpleWordWriterExample.docx"));
+		FileInputStream fileInputStream = new FileInputStream(file);
 		document = new XWPFDocument(fileInputStream);
 	}
 	
@@ -23,6 +24,7 @@ public class WordDocument {
 	
 	
 	public void getParagraph(int seq){
+		XWPFParagraph paragraph = document.getParagraphs().get(seq);
 	}
 	
 	public WordTable getTable(int seq){
