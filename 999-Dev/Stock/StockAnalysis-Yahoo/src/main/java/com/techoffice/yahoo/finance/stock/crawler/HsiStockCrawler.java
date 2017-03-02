@@ -21,7 +21,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 import com.techoffice.yahoo.finance.stock.model.HsiStock;
 
 @Component
@@ -36,7 +36,7 @@ public class HsiStockCrawler {
         return xml;
 	}
 	
-	public List<HsiStock> retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public List<HsiStock> retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
 		List<HsiStock> hsiStockList = new ArrayList<HsiStock>();
 		String xPath = "//*[@id='yfncsumtab']/tbody/tr[2]/td[1]/table[2]/tbody/tr/td/table/tbody/tr";
 		String xml = retrieveXml();

@@ -19,7 +19,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.stock.crawler.StockCrawler;
 import com.techoffice.hkex.stock.dao.StockDao;
 import com.techoffice.hkex.stock.model.Stock;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 
 @Component
 public class StockAppl {
@@ -31,7 +31,7 @@ public class StockAppl {
 	private StockDao stockDao;
 	
 	@Transactional
-	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
 		List<Stock> stocks = stockCrawler.retrieveStockList();
 		for (Stock stock: stocks){
 			if (stock.getStockCode() != null){
@@ -42,7 +42,7 @@ public class StockAppl {
 	}
 	
 	@SuppressWarnings("resource")
-	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		StockAppl appl = context.getBean(StockAppl.class);
 		appl.run();

@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 import com.techoffice.yahoo.finance.stock.crawler.HsiStockCrawler;
 import com.techoffice.yahoo.finance.stock.dao.HsiStockDao;
 import com.techoffice.yahoo.finance.stock.model.HsiStock;
@@ -33,7 +33,7 @@ public class HsiStockService {
 	private HsiStockDao hsiStockDao;
 	
 	@Transactional
-	public void updateHsiStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public void updateHsiStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
 		hsiStockDao.removeAll();
 		List<HsiStock> hsiStockList = hsiStockCrawler.retrieveStockList();
 		hsiStockDao.add(hsiStockList);

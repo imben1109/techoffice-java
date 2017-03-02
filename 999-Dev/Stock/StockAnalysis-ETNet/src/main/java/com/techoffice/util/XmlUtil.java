@@ -30,7 +30,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
 import org.xml.sax.SAXException;
 
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 public class XmlUtil {
@@ -49,9 +49,9 @@ public class XmlUtil {
 	 * 
 	 * @param xml
 	 * @return
-	 * @throws XmlUtilDocumentConversionException
+	 * @throws XmlUtilInvalidDocumentException
 	 */
-	public static Document convertXmlStrToDocument(String xml) throws XmlUtilDocumentConversionException{
+	public static Document convertXmlStrToDocument(String xml) throws XmlUtilInvalidDocumentException{
 		Document document = null;
 		try{
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -65,7 +65,7 @@ public class XmlUtil {
 			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)));	
 		}catch(Exception e){
 			log.error("Try to convert xml: " + xml);
-			throw new XmlUtilDocumentConversionException("Cannot xml to Document: " + e.getMessage());
+			throw new XmlUtilInvalidDocumentException("Cannot xml to Document: " + e.getMessage());
 		}
 		return document;
 	}
@@ -91,10 +91,10 @@ public class XmlUtil {
 	 * @param xml
 	 * @param xPath
 	 * @return
-	 * @throws XmlUtilDocumentConversionException
+	 * @throws XmlUtilInvalidDocumentException
 	 * @throws XPathExpressionException
 	 */
-	public static NodeList evaluateXpath(String xml, String xPath) throws XmlUtilDocumentConversionException, XPathExpressionException{
+	public static NodeList evaluateXpath(String xml, String xPath) throws XmlUtilInvalidDocumentException, XPathExpressionException{
 		NodeList nodeList = null;
 		Document doc = convertXmlStrToDocument(xml);
 		XPathFactory xPathfactory = XPathFactory.newInstance();
@@ -110,10 +110,10 @@ public class XmlUtil {
 	 * @param xPath
 	 * @return
 	 * @throws XPathExpressionException
-	 * @throws XmlUtilDocumentConversionException
+	 * @throws XmlUtilInvalidDocumentException
 	 * @throws XmlUtilXpathNotUniqueException
 	 */
-	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, XmlUtilInvalidDocumentException, XmlUtilXpathNotUniqueException {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){
