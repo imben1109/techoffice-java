@@ -19,7 +19,7 @@ import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 
 @Component
 public class IndustryPerformanceCrawler {
@@ -33,7 +33,7 @@ public class IndustryPerformanceCrawler {
 		return xml;
 	}
 	
-	public List<String> retrieveIndustryList() throws FailingHttpStatusCodeException, MalformedURLException, IOException, XPathExpressionException, ParserConfigurationException, SAXException, XmlUtilDocumentConversionException{
+	public List<String> retrieveIndustryList() throws FailingHttpStatusCodeException, MalformedURLException, IOException, XPathExpressionException, ParserConfigurationException, SAXException, XmlUtilInvalidDocumentException{
 		String xml = retrieveXml();
 		List<String> industryList = new ArrayList<String>();
 		String xPath = "//*[@id='IndustyMain']/div[6]/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/a";
