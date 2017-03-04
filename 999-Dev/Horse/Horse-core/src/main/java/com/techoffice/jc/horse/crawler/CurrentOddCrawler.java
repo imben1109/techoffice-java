@@ -20,6 +20,7 @@ import com.techoffice.jc.horse.dao.DrawAccelerateTimeDao;
 import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.jc.horse.helper.CurrentOddHelper;
+import com.techoffice.util.UrlUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
@@ -44,6 +45,9 @@ public class CurrentOddCrawler {
 	
 	public String retrieveXml(String location) {
 		String currentUrl = WebDriverUtil.getCurrentUrl(HOST);
+		Map<String, String> params = UrlUtil.getParam(currentUrl);
+		System.out.println(params.get("venue"));
+		System.out.println(params.get("date"));
 		log.info(currentUrl + location);
         String xml = WebDriverUtil.getXml(currentUrl + location);
         return xml;
