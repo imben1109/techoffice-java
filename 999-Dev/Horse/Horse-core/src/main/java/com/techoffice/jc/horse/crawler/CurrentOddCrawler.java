@@ -38,21 +38,12 @@ public class CurrentOddCrawler {
 	@Autowired
 	private DrawAccelerateTimeDao drawAccelerateTimeDao;
 	
-	public String getCurrentUrl(){
-		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
-		webDriver.get(HOST);
-		String currentUrl = webDriver.getCurrentUrl();
-		webDriver.close();
-		webDriver.quit();
-		return currentUrl;
-	}
-	
 	public String retrieveXml() {
         return retrieveXml("");
 	}
 	
 	public String retrieveXml(String location) {
-		String currentUrl = getCurrentUrl();
+		String currentUrl = WebDriverUtil.getCurrentUrl(HOST);
 		log.info(currentUrl + location);
         String xml = WebDriverUtil.getXml(currentUrl + location);
         return xml;

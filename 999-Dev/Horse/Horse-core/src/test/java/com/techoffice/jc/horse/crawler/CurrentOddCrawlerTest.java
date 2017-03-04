@@ -39,12 +39,6 @@ public class CurrentOddCrawlerTest {
 		currentOddCrawler.getCurrentOdd();
 	}
 	
-//	@Test
-	public void getCurrentUrl(){
-		String currentUrl = currentOddCrawler.getCurrentUrl();
-		System.out.println(currentUrl);
-	}
-	
 	@Test
 	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
 		currentOddCrawler.run();

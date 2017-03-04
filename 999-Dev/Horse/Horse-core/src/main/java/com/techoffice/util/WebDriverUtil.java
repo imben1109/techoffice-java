@@ -12,6 +12,11 @@ import com.techoffice.factory.WebDriverFactory;
 
 public class WebDriverUtil {
 	
+	/**
+	 * Get XML
+	 * @param url
+	 * @return xml 
+	 */
 	public static String getXml(String url){
 		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
 		webDriver.get(url);
@@ -24,6 +29,20 @@ public class WebDriverUtil {
 		String xml = document.html();
 	    String tiddedXml = XmlUtil.tidyXml(xml);
 		return tiddedXml;
+	}
+	
+	/**
+	 * Get the redirect url
+	 * @param url
+	 * @return url
+	 */
+	public static String getCurrentUrl(String url){
+		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
+		webDriver.get(url);
+		String currentUrl = webDriver.getCurrentUrl();
+		webDriver.close();
+		webDriver.quit();
+		return currentUrl;
 	}
 	
 	/**

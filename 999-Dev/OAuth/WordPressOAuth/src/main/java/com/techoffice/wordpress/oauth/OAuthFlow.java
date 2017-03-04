@@ -12,7 +12,7 @@ import com.techoffice.wordpress.oauth.request.helper.AuthorizeUriBuilder;
 import com.techoffice.wordpress.oauth.server.LocalServer;
 
 /**
- * OAuth for Github
+ * OAuth for WordPress
  * 
  * Reference: https://developer.github.com/v3/oauth/
  * 
