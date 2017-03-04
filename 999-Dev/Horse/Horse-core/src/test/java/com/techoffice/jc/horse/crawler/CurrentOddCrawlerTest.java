@@ -21,32 +21,32 @@ import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class CurrentOddsCrawlerTest {
+public class CurrentOddCrawlerTest {
 	
 	@Autowired
-	private CurrentOddsCrawler currentOddsCrawler;
+	private CurrentOddCrawler currentOddCrawler;
 	
 	@Autowired
 	private HorseAdjTimeDao horseAdjTimeDao;
 	
 //	@Test
 	public void getRaceNums() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
-		currentOddsCrawler.getRaceNums();		
+		currentOddCrawler.getRaceNums();		
 	}
 	
 //	@Test
 	public void getHorse() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		currentOddsCrawler.getCurrentOdd();
+		currentOddCrawler.getCurrentOdd();
 	}
 	
 //	@Test
 	public void getCurrentUrl(){
-		String currentUrl = currentOddsCrawler.getCurrentUrl();
+		String currentUrl = currentOddCrawler.getCurrentUrl();
 		System.out.println(currentUrl);
 	}
 	
 	@Test
 	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		currentOddsCrawler.run();
+		currentOddCrawler.run();
 	}
 }

@@ -19,14 +19,15 @@ import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.jc.horse.dao.DrawAccelerateTimeDao;
 import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
 import com.techoffice.jc.horse.dto.CurrentOdd;
-import com.techoffice.jc.horse.helper.CurrentOddsHelper;
+import com.techoffice.jc.horse.helper.CurrentOddHelper;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Component
-public class CurrentOddsCrawler {
+public class CurrentOddCrawler {
+	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en";
@@ -52,8 +53,7 @@ public class CurrentOddsCrawler {
 	
 	public String retrieveXml(String location) {
 		String currentUrl = getCurrentUrl();
-		System.out.println("+++++++++++++++++++++++++++++++++");
-		System.out.println(currentUrl + location);
+		log.info(currentUrl + location);
         String xml = WebDriverUtil.getXml(currentUrl + location);
         return xml;
 	}
@@ -100,15 +100,15 @@ public class CurrentOddsCrawler {
 		List<CurrentOdd> oddsList = new ArrayList<CurrentOdd>();
 		for (int i=1; i<nodeList.getLength()-1; i++){
 			Node trNode = nodeList.item(i);
-			CurrentOdd currentOdd = CurrentOddsHelper.getNodeInfo(trNode);
+			CurrentOdd currentOdd = CurrentOddHelper.getNodeInfo(trNode);
 			oddsList.add(currentOdd);
 		}
-		String course = CurrentOddsHelper.getCourse(xml);
-		String distance = CurrentOddsHelper.getDistance(xml);
-		String venue = CurrentOddsHelper.getVenue(xml);
+		String course = CurrentOddHelper.getCourse(xml);
+		String distance = CurrentOddHelper.getDistance(xml);
+		String venue = CurrentOddHelper.getVenue(xml);
 		oddsList= horseAdjTimeDao.getAdjTime(oddsList);
 		Map<String, Double> drawTimeMap = drawAccelerateTimeDao.getDrawAccelerateTime(venue, course, distance);
-		System.out.println(venue + " " + distance + " " + course) ;
+		log.info(venue + " " + distance + " " + course) ;
 		for (CurrentOdd odd: oddsList){
 			Double drawTime = drawTimeMap.get(odd.getDraw());
 			odd.setDrawTime(drawTime);

@@ -7,7 +7,7 @@
 		JTA-Datasource would used configured in this file with tag <jta-data-source>.
 	 -->
 	<persistence-unit name="techoffice.example" transaction-type="RESOURCE_LOCAL">
-		<class>com.techoffice.jc.horse.model</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 	</persistence-unit>
 	
 </persistence>

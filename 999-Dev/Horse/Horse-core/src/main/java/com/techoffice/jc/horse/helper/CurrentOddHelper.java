@@ -10,7 +10,7 @@ import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
-public class CurrentOddsHelper {
+public class CurrentOddHelper {
 	
 	public static String getVenue(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
 		String venueXpath = "//*[@id='trMeetingInfo']/td[2]/table/tbody/tr/td[4]/nobr[2]";
