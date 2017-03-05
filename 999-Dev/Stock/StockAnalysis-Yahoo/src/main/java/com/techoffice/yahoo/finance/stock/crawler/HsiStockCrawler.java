@@ -31,12 +31,12 @@ public class HsiStockCrawler {
 
 	public static final String URL = "https://hk.finance.yahoo.com/q/cp?s=%5EHSI";
 
-	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public String retrieveXml() {
 		String xml = WebDriverUtil.getXml(URL);
         return xml;
 	}
 	
-	public List<HsiStock> retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
+	public List<HsiStock> retrieveStockList() throws XPathExpressionException, XmlUtilInvalidDocumentException {
 		List<HsiStock> hsiStockList = new ArrayList<HsiStock>();
 		String xPath = "//*[@id='yfncsumtab']/tbody/tr[2]/td[1]/table[2]/tbody/tr/td/table/tbody/tr";
 		String xml = retrieveXml();

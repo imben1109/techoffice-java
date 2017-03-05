@@ -27,7 +27,7 @@ public class StockHistoryDataService {
 	@Autowired
 	private StockHistoryDataCrawler stockHistoryDataCrawler;
 	
-	public void updateAllStockPrice() throws FailingHttpStatusCodeException, MalformedURLException, IllegalAccessException, InvocationTargetException, IOException{
+	public void updateAllStockPrice() throws IllegalAccessException, InvocationTargetException, IOException {
 		List<Stock> stocks = stockDao.list();
 		for (Stock stock: stocks){
 			System.out.println(stock.getName());

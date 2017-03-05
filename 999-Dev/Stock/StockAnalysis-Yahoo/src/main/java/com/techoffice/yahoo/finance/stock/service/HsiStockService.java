@@ -33,7 +33,7 @@ public class HsiStockService {
 	private HsiStockDao hsiStockDao;
 	
 	@Transactional
-	public void updateHsiStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
+	public void updateHsiStockList() throws XPathExpressionException, XmlUtilInvalidDocumentException {
 		hsiStockDao.removeAll();
 		List<HsiStock> hsiStockList = hsiStockCrawler.retrieveStockList();
 		hsiStockDao.add(hsiStockList);
