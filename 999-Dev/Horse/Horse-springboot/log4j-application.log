@@ -19542,3 +19542,599 @@ java.lang.UnsupportedClassVersionError: JVMCFRE003 不正確的主要版本；�
 2017-03-05 12:32:19 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 8.142 seconds (JVM running for 8.63)
 2017-03-05 12:32:24 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
 2017-03-05 12:32:24 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2017-03-05 12:33:13 INFO  SpringBootExampleAppl:48 - Starting SpringBootExampleAppl on LAPTOP-PFAGQ4HQ with PID 9520 (C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Horse\Horse-springboot\target\classes started by user in C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Horse\Horse-springboot)
+2017-03-05 12:33:13 INFO  SpringBootExampleAppl:637 - No active profile set, falling back to default profiles: default
+2017-03-05 12:33:13 INFO  AnnotationConfigEmbeddedWebApplicationContext:581 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@276438c9: startup date [Sun Mar 05 12:33:13 CST 2017]; root of context hierarchy
+2017-03-05 12:33:14 INFO  Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-05 12:33:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 12:33:15 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2017-03-05 12:33:15 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-05 12:33:16 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 12:33:16 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 12:33:16 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9f3311fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 12:33:17 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-03-05 12:33:17 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 4392 ms
+2017-03-05 12:33:18 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-05 12:33:18 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-05 12:33:18 INFO  FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-05 12:33:18 INFO  FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-05 12:33:18 INFO  FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-05 12:33:18 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:33:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 12:33:18 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 12:33:18 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 12:33:18 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 12:33:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@20a7953c
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@20a7953c
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@20a7953c
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4e83a98
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@542f6803
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@53a84ff4
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@717d7587
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@717d7587
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@717d7587
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@7c0777b5
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@7c0777b5
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7c0777b5
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@2fd954f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@2fd954f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2fd954f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@6dc1dc69
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@6dc1dc69
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6dc1dc69
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@b0a1231
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@b0a1231
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@b0a1231
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@77f905e3
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@77f905e3
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@77f905e3
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@31142d58
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@31142d58
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@31142d58
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@5f5effb0
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@5f5effb0
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@659feb22
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@659feb22
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@2b2954e1
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@2b2954e1
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@2da16263
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5ebffb44
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@5edacf20
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@5edacf20
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@234cff57
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@234cff57
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@6bc24e72
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@6bc24e72
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7650ded6
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7650ded6
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@3811510
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@3811510
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@22d9bc14
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@22d9bc14
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@40d60f2
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@40d60f2
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@27be17c8
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@27be17c8
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2c2a027c
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2c2a027c
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@34a2d6e0
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@34a2d6e0
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@34b87182
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@34b87182
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@5fef2aac
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@5fef2aac
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@5fef2aac
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@124d02b2
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@5d342959
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@5d342959
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@5d342959
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@42cc183e
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@6aa7b67f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6aa7b67f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@6bee793f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@6bee793f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@2e86807a
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@2e86807a
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@39c96e48
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@39c96e48
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3a1706e1
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3a1706e1
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@594d9f07
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@949c598
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@949c598
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@949c598
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@6f1b8544
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@6f1b8544
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@6f1b8544
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@303c55fa
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@b5de58f
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@74d6736
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@74d6736
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@74d6736
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@3eb3232b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@3eb3232b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@3eb3232b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@663f237a
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@4a3bd45b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@4a2e7bcb
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@4a2e7bcb
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@73c3cd09
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@3ba348ca
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3ba348ca
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@2ee48610
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@2ee48610
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1015a4b9
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2f382a5e
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@7316523a
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@d2e6b0b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@d2e6b0b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@75b6dd5b
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@b3e86d5
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@72b43104
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@e111c7c
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4d0e54e0
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@32f96bba
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@611640f0
+2017-03-05 12:33:18 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@67e25252
+2017-03-05 12:33:19 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 12:33:19 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@37af24cb
+2017-03-05 12:33:19 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:33:20 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@276438c9: startup date [Sun Mar 05 12:33:13 CST 2017]; root of context hierarchy
+2017-03-05 12:33:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/test]}" onto public java.util.Map<java.lang.String, java.util.List<com.techoffice.jc.horse.dto.CurrentOdd>> com.techoffice.example.controller.SampleController.test() throws javax.xml.xpath.XPathExpressionException,com.techoffice.util.exception.XmlUtilDocumentConversionException,com.techoffice.util.exception.XmlUtilXpathNotUniqueException
+2017-03-05 12:33:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/map]}" onto public java.util.Map<java.lang.String, java.lang.String> com.techoffice.example.controller.SampleController.getMap()
+2017-03-05 12:33:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.techoffice.example.controller.SampleController.home()
+2017-03-05 12:33:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-05 12:33:20 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-05 12:33:20 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 12:33:20 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 12:33:21 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 12:33:21 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-05 12:33:21 INFO  TomcatEmbeddedServletContainer:192 - Tomcat started on port(s): 8080 (http)
+2017-03-05 12:33:21 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 8.698 seconds (JVM running for 9.209)
+2017-03-05 12:33:32 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-05 12:33:32 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-03-05 12:33:37 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en
+2017-03-05 12:33:44 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=1
+2017-03-05 12:33:48 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('EASY TOUCH (V269)', 'SAKURA FIGHTER (V393)', 'SHARPMIND (V348)', 'SUCH A HAPPINESS (A152)', 'YOUNG EMPIRE (V116)', 'WHISTLE UP (A082)', 'CLEVER SPIRIT (T333)', 'RICHCITY FORTUNE (V088)', 'GO-GETTER (S303)', 'GREENERY FORTUNE (T332)', 'RED SUN (V145)', 'THE CHAMP (V271)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CLEVER SPIRIT (T333)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [48.4938]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RICHCITY FORTUNE (V088)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [53.4471875]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [EASY TOUCH (V269)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [63.16374]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [YOUNG EMPIRE (V116)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.38975]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GO-GETTER (S303)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [84.58881818181818181818181818182]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [THE CHAMP (V271)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [133.926]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RED SUN (V145)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [174.70425]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GREENERY FORTUNE (T332)]
+2017-03-05 12:33:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [193.926]
+2017-03-05 12:33:51 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:33:51 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:33:51 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:33:51 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 4]
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 4
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - SAKURA FIGHTER (V393) null
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - SHARPMIND (V348) null
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - SUCH A HAPPINESS (A152) null
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - WHISTLE UP (A082) null
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - CLEVER SPIRIT (T333) 48.4938
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - RICHCITY FORTUNE (V088) 53.4471875
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - EASY TOUCH (V269) 63.16374
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - YOUNG EMPIRE (V116) 78.38975
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - GO-GETTER (S303) 84.58881818181818
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - THE CHAMP (V271) 133.926
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - RED SUN (V145) 174.70425
+2017-03-05 12:33:51 INFO  CurrentOddCrawler:121 - GREENERY FORTUNE (T332) 193.926
+2017-03-05 12:33:53 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=2
+2017-03-05 12:33:57 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('DASHING DART (V038)', 'RED HORSE (V334)', 'POLYMER LUCK (T326)', 'STRIKING STAR (V015)', 'DOUBLE POINT (S246)', 'FORTUNE GIGGLES (S346)', 'AUDACITY (V238)', 'HAR HAR CHARMING (S440)', 'SUPERNATURAL (V063)', 'EMPIRE OF MONGOLIA (V317)', 'MY FOLKS (T323)', 'SPICY DOUBLE (T393)', 'STORM KID (S338)', 'PERFECT TIMING (T019)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SUPERNATURAL (V063)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [54.38513333333333333333333333333]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DASHING DART (V038)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [60.44803333333333333333333333333]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SPICY DOUBLE (T393)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [61.3705625]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MY FOLKS (T323)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [65.95265]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [POLYMER LUCK (T326)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [66.13346]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RED HORSE (V334)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [70.01733333333333333333333333333]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [STRIKING STAR (V015)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [70.89295]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DOUBLE POINT (S246)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.062725]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HAR HAR CHARMING (S440)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [79.06743333333333333333333333333]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [AUDACITY (V238)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [88.819925]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FORTUNE GIGGLES (S346)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [91.47646666666666666666666666667]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [PERFECT TIMING (T019)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [99.61278]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [EMPIRE OF MONGOLIA (V317)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [114.28456666666666666666666666667]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [STORM KID (S338)]
+2017-03-05 12:33:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [178.61278]
+2017-03-05 12:33:59 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:33:59 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:33:59 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:33:59 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 5]
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 5
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - SUPERNATURAL (V063) 54.385133333333336
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - DASHING DART (V038) 60.448033333333335
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - SPICY DOUBLE (T393) 61.3705625
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - MY FOLKS (T323) 65.95265
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - POLYMER LUCK (T326) 66.13346
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - RED HORSE (V334) 70.01733333333334
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - STRIKING STAR (V015) 70.89295
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - DOUBLE POINT (S246) 78.062725
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - HAR HAR CHARMING (S440) 79.06743333333333
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - AUDACITY (V238) 88.819925
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - FORTUNE GIGGLES (S346) 91.47646666666667
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - PERFECT TIMING (T019) 99.61278
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - EMPIRE OF MONGOLIA (V317) 114.28456666666666
+2017-03-05 12:33:59 INFO  CurrentOddCrawler:121 - STORM KID (S338) 178.61278
+2017-03-05 12:34:03 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=3
+2017-03-05 12:34:06 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('PENIAPHOBIA (S143)', 'NOT LISTENIN''TOME (T235)', 'AMBER SKY (N241)', 'BAD BOY (V251)', 'MR STUNNING (V153)', 'MY LITTLE FRIEND (S010)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [PENIAPHOBIA (S143)]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-62.87738571428571428571428571429]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [NOT LISTENIN'TOME (T235)]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-61.284025]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MR STUNNING (V153)]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-12.44394]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [AMBER SKY (N241)]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [19.46366666666666666666666666667]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MY LITTLE FRIEND (S010)]
+2017-03-05 12:34:07 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [37.503825]
+2017-03-05 12:34:07 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:34:07 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:34:07 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:34:07 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 1]
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 1
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:121 - BAD BOY (V251) null
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:121 - PENIAPHOBIA (S143) -62.877385714285715
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:121 - NOT LISTENIN'TOME (T235) -61.284025
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:121 - MR STUNNING (V153) -12.44394
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:121 - AMBER SKY (N241) 19.463666666666665
+2017-03-05 12:34:07 INFO  CurrentOddCrawler:121 - MY LITTLE FRIEND (S010) 37.503825
+2017-03-05 12:34:11 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=4
+2017-03-05 12:34:14 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('MR KOOL (T335)', 'FIVE STARS AGENT (V001)', 'SPARKLING TALENT (T346)', 'VICTOR EMPEROR (S425)', 'FAST ROCKET (V064)', 'SHINING CHAMPION (S305)', 'O''SOCOOLE (S032)', 'DYNAMIC VOYAGE (P066)', 'LAUGHING LORD (T071)', 'FRIENDS FOREVER (T079)', 'BERNARD''S CHOICE (N156)', 'INTELLECTUAL GLIDE (S124)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [VICTOR EMPEROR (S425)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [55.10782777777777777777777777778]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [O'SOCOOLE (S032)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [55.7938]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SPARKLING TALENT (T346)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.01875]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MR KOOL (T335)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.47854285714285714285714285714]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FIVE STARS AGENT (V001)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [62.56337142857142857142857142857]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SHINING CHAMPION (S305)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [63.80396666666666666666666666667]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DYNAMIC VOYAGE (P066)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [64.16492222222222222222222222222]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FRIENDS FOREVER (T079)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [69.41338333333333333333333333333]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LAUGHING LORD (T071)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [75.5675]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BERNARD'S CHOICE (N156)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.21385]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [INTELLECTUAL GLIDE (S124)]
+2017-03-05 12:34:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [83.86554285714285714285714285714]
+2017-03-05 12:34:17 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:34:17 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:34:17 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:34:17 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 5]
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 5
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - FAST ROCKET (V064) null
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - VICTOR EMPEROR (S425) 55.10782777777778
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - O'SOCOOLE (S032) 55.7938
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - SPARKLING TALENT (T346) 58.01875
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - MR KOOL (T335) 58.478542857142855
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - FIVE STARS AGENT (V001) 62.56337142857143
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - SHINING CHAMPION (S305) 63.80396666666667
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - DYNAMIC VOYAGE (P066) 64.16492222222222
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - FRIENDS FOREVER (T079) 69.41338333333333
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - LAUGHING LORD (T071) 75.5675
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - BERNARD'S CHOICE (N156) 78.21385
+2017-03-05 12:34:17 INFO  CurrentOddCrawler:121 - INTELLECTUAL GLIDE (S124) 83.86554285714286
+2017-03-05 12:34:20 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=5
+2017-03-05 12:34:23 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('CAREFREE LET GO (T059)', 'DIAMOND MYSTERIOUS (S426)', 'DOCTORS DELIGHT (A044)', 'FANTASTIC EIGHT (A079)', 'MI BLANCO (A186)', 'UP TO YOU (A076)', 'EVEREST (V296)', 'DON''T MISS (A017)', 'LOVE CHUNGHWA (T207)', 'BOSSIEE (S405)', 'RAY OF GOLD (N443)', 'WINNER ST PAUL''S (T027)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CAREFREE LET GO (T059)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [21.03136666666666666666666666667]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [EVEREST (V296)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [49.470775]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [WINNER ST PAUL'S (T027)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [55.09764]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DIAMOND MYSTERIOUS (S426)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.9483875]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BOSSIEE (S405)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [59.90183333333333333333333333333]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LOVE CHUNGHWA (T207)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [67.1083]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RAY OF GOLD (N443)]
+2017-03-05 12:34:25 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.5462]
+2017-03-05 12:34:25 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:34:25 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:34:25 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:34:25 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 4]
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 4
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - DOCTORS DELIGHT (A044) null
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - FANTASTIC EIGHT (A079) null
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - MI BLANCO (A186) null
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - UP TO YOU (A076) null
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - DON'T MISS (A017) null
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - CAREFREE LET GO (T059) 21.031366666666667
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - EVEREST (V296) 49.470775
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - WINNER ST PAUL'S (T027) 55.09764
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - DIAMOND MYSTERIOUS (S426) 58.9483875
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - BOSSIEE (S405) 59.901833333333336
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - LOVE CHUNGHWA (T207) 67.1083
+2017-03-05 12:34:25 INFO  CurrentOddCrawler:121 - RAY OF GOLD (N443) 78.5462
+2017-03-05 12:34:28 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=6
+2017-03-05 12:34:32 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('CHIU CHOW KID (T412)', 'BOLD STITCH (S323)', 'BO DUKE (S378)', 'PLANET STAR (A049)', 'FURLONG DRAGON (A034)', 'GOOD METHOD (S218)', 'AMBITIOUS HEART (V303)', 'NOBLE DE LOVE (V324)', 'COOL AND NEAT (V087)', 'FLYING MACHINE (T413)', 'BONITO (V319)', 'WINGOLD (T202)', 'INVISIBLE (T418)', 'FUN MANAGER (V220)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BOLD STITCH (S323)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [13.62877]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GOOD METHOD (S218)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [29.48165]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [COOL AND NEAT (V087)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [40.71086]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [NOBLE DE LOVE (V324)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [46.3599]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CHIU CHOW KID (T412)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [47.1712]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [WINGOLD (T202)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [50.81996153846153846153846153846]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [AMBITIOUS HEART (V303)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [51.2373]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [INVISIBLE (T418)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [60.6229625]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FLYING MACHINE (T413)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [72.55487777777777777777777777778]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FUN MANAGER (V220)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [95.52164285714285714285714285714]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BO DUKE (S378)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [102.63033333333333333333333333333]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BONITO (V319)]
+2017-03-05 12:34:34 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [110.3599]
+2017-03-05 12:34:34 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:34:34 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:34:34 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:34:34 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 4]
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 4
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - PLANET STAR (A049) null
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - FURLONG DRAGON (A034) null
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - BOLD STITCH (S323) 13.62877
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - GOOD METHOD (S218) 29.48165
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - COOL AND NEAT (V087) 40.71086
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - NOBLE DE LOVE (V324) 46.3599
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - CHIU CHOW KID (T412) 47.1712
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - WINGOLD (T202) 50.81996153846154
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - AMBITIOUS HEART (V303) 51.2373
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - INVISIBLE (T418) 60.6229625
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - FLYING MACHINE (T413) 72.55487777777778
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - FUN MANAGER (V220) 95.52164285714285
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - BO DUKE (S378) 102.63033333333334
+2017-03-05 12:34:34 INFO  CurrentOddCrawler:121 - BONITO (V319) 110.3599
+2017-03-05 12:34:37 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=7
+2017-03-05 12:34:41 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('DASHING FELLOW (S284)', 'LUCKY YEAR (T245)', 'RIVER BOBO (A604)', 'ROMANTIC TOUCH (S393)', 'RACING SUPERNOVA (V128)', 'INVINCIBLE DRAGON (V166)', 'JOLLY BANNER (V077)', 'SIMPLY INVINCIBLE (V094)', 'BOBO SO CUTE (V628)', 'NEW ASIA SUNRISE (T268)', 'GOLDEN DOUBLE (A611)', 'SPARTA (A622)', 'KELOWNA STAR (A623)', 'PERFECT ALLOY (A624)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [ROMANTIC TOUCH (S393)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-59.6366375]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BOBO SO CUTE (V628)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-55.1305]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DASHING FELLOW (S284)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-44.28156153846153846153846153846]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RACING SUPERNOVA (V128)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-32.27208]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LUCKY YEAR (T245)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-32.15124545454545454545454545455]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [JOLLY BANNER (V077)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-22.48184444444444444444444444444]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [INVINCIBLE DRAGON (V166)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-18.1449]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [NEW ASIA SUNRISE (T268)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-6.19330909090909090909090909091]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SIMPLY INVINCIBLE (V094)]
+2017-03-05 12:34:43 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-3.89767]
+2017-03-05 12:34:43 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:34:43 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:34:43 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:34:43 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 1]
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 1
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - RIVER BOBO (A604) null
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - GOLDEN DOUBLE (A611) null
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - SPARTA (A622) null
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - KELOWNA STAR (A623) null
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - PERFECT ALLOY (A624) null
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - ROMANTIC TOUCH (S393) -59.6366375
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - BOBO SO CUTE (V628) -55.1305
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - DASHING FELLOW (S284) -44.28156153846154
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - RACING SUPERNOVA (V128) -32.27208
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - LUCKY YEAR (T245) -32.15124545454545
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - JOLLY BANNER (V077) -22.481844444444445
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - INVINCIBLE DRAGON (V166) -18.1449
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - NEW ASIA SUNRISE (T268) -6.193309090909091
+2017-03-05 12:34:43 INFO  CurrentOddCrawler:121 - SIMPLY INVINCIBLE (V094) -3.89767
+2017-03-05 12:34:46 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=8
+2017-03-05 12:34:49 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('TURF SPRINT (T396)', 'HEALTHY JOYFUL (S358)', 'SKY HERO (T083)', 'TIME WARP (A066)', 'BEAT THE CLOCK (V397)', 'MR GENUINE (S253)', 'WATER DIVINER (V356)', 'PACKING STONES (A158)', 'DUKEDOM (V372)', 'GREEN CARD (V126)', 'SMART DECLARATION (S436)', 'SILLY BUDDIES (S054)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MR GENUINE (S253)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-16.7627]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HEALTHY JOYFUL (S358)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-11.91924166666666666666666666667]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BEAT THE CLOCK (V397)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-10.67776666666666666666666666667]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [TURF SPRINT (T396)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [0.61220833333333333333333333333]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DUKEDOM (V372)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [11.25613333333333333333333333333]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SKY HERO (T083)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [16.39157857142857142857142857143]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GREEN CARD (V126)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [22.38335]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SMART DECLARATION (S436)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [30.5323]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SILLY BUDDIES (S054)]
+2017-03-05 12:34:51 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [53.51555]
+2017-03-05 12:34:51 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:34:51 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:34:51 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:34:51 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 3]
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 3
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - TIME WARP (A066) null
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - WATER DIVINER (V356) null
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - PACKING STONES (A158) null
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - MR GENUINE (S253) -16.7627
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - HEALTHY JOYFUL (S358) -11.919241666666666
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - BEAT THE CLOCK (V397) -10.677766666666667
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - TURF SPRINT (T396) 0.6122083333333334
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - DUKEDOM (V372) 11.256133333333333
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - SKY HERO (T083) 16.39157857142857
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - GREEN CARD (V126) 22.38335
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - SMART DECLARATION (S436) 30.5323
+2017-03-05 12:34:51 INFO  CurrentOddCrawler:121 - SILLY BUDDIES (S054) 53.51555
+2017-03-05 12:34:54 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=9
+2017-03-05 12:34:58 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('FANTASTIC KAKA (P363)', 'VOLITATION (V223)', 'CONVINCIBLE (T399)', 'HINYUEN SWIFTNESS (V250)', 'BEAUTY KINGDOM (T189)', 'RULE THEE (A172)', 'LUCKY DOUBLE EIGHT (P212)', 'KINGSFIELD (T403)', 'CELESTIAL NOVA (V045)', 'OUTLAWED (T100)', 'VICTORY MACHINE (V358)', 'CHARITY KINGDOM (S278)', 'NOBLE DE BOY (T373)', 'SMILING CHARM (V321)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [VICTORY MACHINE (V358)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-5.2691]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BEAUTY KINGDOM (T189)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-3.4852]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [KINGSFIELD (T403)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-0.12643636363636363636363636364]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LUCKY DOUBLE EIGHT (P212)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [4.69206428571428571428571428571]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FANTASTIC KAKA (P363)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [5.31583333333333333333333333333]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CHARITY KINGDOM (S278)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [19.98524285714285714285714285714]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [VOLITATION (V223)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [21.68058]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [NOBLE DE BOY (T373)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [22.598175]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CONVINCIBLE (T399)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [26.08612]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SMILING CHARM (V321)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [26.494225]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [OUTLAWED (T100)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [33.631225]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HINYUEN SWIFTNESS (V250)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [53.69465]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CELESTIAL NOVA (V045)]
+2017-03-05 12:35:00 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [129.8503]
+2017-03-05 12:35:00 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:35:00 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:35:00 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:35:00 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 3]
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 3
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - RULE THEE (A172) null
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - VICTORY MACHINE (V358) -5.2691
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - BEAUTY KINGDOM (T189) -3.4852
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - KINGSFIELD (T403) -0.12643636363636362
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - LUCKY DOUBLE EIGHT (P212) 4.692064285714285
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - FANTASTIC KAKA (P363) 5.315833333333333
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - CHARITY KINGDOM (S278) 19.985242857142858
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - VOLITATION (V223) 21.68058
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - NOBLE DE BOY (T373) 22.598175
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - CONVINCIBLE (T399) 26.08612
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - SMILING CHARM (V321) 26.494225
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - OUTLAWED (T100) 33.631225
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - HINYUEN SWIFTNESS (V250) 53.69465
+2017-03-05 12:35:00 INFO  CurrentOddCrawler:121 - CELESTIAL NOVA (V045) 129.8503
+2017-03-05 12:35:03 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=10
+2017-03-05 12:35:06 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('LAND GRANT (V131)', 'MIGHTY MAVERICK (V150)', 'ROYAL ELITE (V300)', 'CITRON SPIRIT (T286)', 'ROUNDABOUT (T352)', 'CHEVALIER STAR (T167)', 'LITTLE DEVIL (V339)', 'DARING FIT (V398)', 'THE SUPREME (V370)', 'KING OF MONGOLIA (S414)', 'COURAGEOUS BROTHER (T397)', 'ROMAN IMPERO (V371)', 'SHAMAL (V290)', 'WISKY (T368)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MIGHTY MAVERICK (V150)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-17.46931]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LAND GRANT (V131)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-7.13751428571428571428571428571]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CHEVALIER STAR (T167)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [7.17381818181818181818181818182]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [KING OF MONGOLIA (S414)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [9.70118125]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [ROUNDABOUT (T352)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [14.18409090909090909090909090909]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CITRON SPIRIT (T286)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [16.53346]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [THE SUPREME (V370)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [17.2341]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [WISKY (T368)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [18.99188]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [ROYAL ELITE (V300)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [19.2874]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [ROMAN IMPERO (V371)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [25.0486]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [COURAGEOUS BROTHER (T397)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [30.28551111111111111111111111111]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DARING FIT (V398)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [46.33346]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LITTLE DEVIL (V339)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.539]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SHAMAL (V290)]
+2017-03-05 12:35:08 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [76.88442]
+2017-03-05 12:35:08 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:35:08 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:35:08 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:35:08 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 3]
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 3
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - MIGHTY MAVERICK (V150) -17.46931
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - LAND GRANT (V131) -7.1375142857142855
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - CHEVALIER STAR (T167) 7.173818181818182
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - KING OF MONGOLIA (S414) 9.70118125
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - ROUNDABOUT (T352) 14.184090909090909
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - CITRON SPIRIT (T286) 16.53346
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - THE SUPREME (V370) 17.2341
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - WISKY (T368) 18.99188
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - ROYAL ELITE (V300) 19.2874
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - ROMAN IMPERO (V371) 25.0486
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - COURAGEOUS BROTHER (T397) 30.285511111111113
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - DARING FIT (V398) 46.33346
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - LITTLE DEVIL (V339) 58.539
+2017-03-05 12:35:08 INFO  CurrentOddCrawler:121 - SHAMAL (V290) 76.88442
+2017-03-05 12:35:12 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=11
+2017-03-05 12:35:16 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('BASIC TRILOGY (V133)', 'SUPREME PROFIT (P230)', 'HELENE SUPER STAR (S152)', 'LIMITLESS (A115)', 'SOLAR HEI HEI (T242)', 'HAPPILABABY (T315)', 'HAPPY PLACE (S380)', 'STAR MAJESTIC (S093)', 'CIRCUIT HASSLER (A041)', 'PRAWN BABA (A002)', 'RAGHU (V395)', 'ENSURING (S437)', 'LET US WIN (V381)', 'WHO DAT SINGA (A003)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [STAR MAJESTIC (S093)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-60.59106]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HELENE SUPER STAR (S152)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-35.67315]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SOLAR HEI HEI (T242)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-20.63157272727272727272727272727]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [WHO DAT SINGA (A003)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-20.574]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [PRAWN BABA (A002)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-17.461]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HAPPY PLACE (S380)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [5.08105555555555555555555555556]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BASIC TRILOGY (V133)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [9.13815]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SUPREME PROFIT (P230)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [9.3599]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LET US WIN (V381)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [11.6712]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HAPPILABABY (T315)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [14.3599]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RAGHU (V395)]
+2017-03-05 12:35:17 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [141.6712]
+2017-03-05 12:35:17 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:35:17 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:35:17 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:35:17 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 2]
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 2
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - LIMITLESS (A115) null
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - CIRCUIT HASSLER (A041) null
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - ENSURING (S437) null
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - STAR MAJESTIC (S093) -60.59106
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - HELENE SUPER STAR (S152) -35.67315
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - SOLAR HEI HEI (T242) -20.631572727272726
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - WHO DAT SINGA (A003) -20.574
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - PRAWN BABA (A002) -17.461
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - HAPPY PLACE (S380) 5.081055555555555
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - BASIC TRILOGY (V133) 9.13815
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - SUPREME PROFIT (P230) 9.3599
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - LET US WIN (V381) 11.6712
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - HAPPILABABY (T315) 14.3599
+2017-03-05 12:35:17 INFO  CurrentOddCrawler:121 - RAGHU (V395) 141.6712
