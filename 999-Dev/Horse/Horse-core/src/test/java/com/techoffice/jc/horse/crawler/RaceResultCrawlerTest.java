@@ -26,7 +26,7 @@ import com.techoffice.jc.horse.dao.RaceResultHorseDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.service.ResultQueueService;
-import com.techoffice.jc.horse.service.ResultService;
+import com.techoffice.jc.horse.service.ResultQueueBatchService;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
 @RunWith(SpringJUnit4ClassRunner.class)

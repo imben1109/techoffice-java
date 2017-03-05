@@ -25,7 +25,7 @@ import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Service
-public class ResultService {
+public class ResultQueueBatchService {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	

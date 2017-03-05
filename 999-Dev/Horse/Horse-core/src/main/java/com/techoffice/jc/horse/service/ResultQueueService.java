@@ -40,23 +40,20 @@ public class ResultQueueService {
 	@Autowired
 	private RaceResultDao raceResultDao;
 	
-	@Autowired
-	private RaceDateDao raceDateDao;
-	
 	@Transactional
-	public void executeResultQueue(RaceResultQueue raceResultQueue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
-		log.info("It is executing " + raceResultQueue.getLocation());
-		RaceResult raceResult = raceResultCrawler.getRaceResult(raceResultQueue.getLocation());
+	public void executeResultQueue(RaceResultQueue queue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
+		log.info("It is executing " + queue.getLocation());
+		RaceResult raceResult = raceResultCrawler.getRaceResult(queue.getLocation());
 		raceResultDao.add(raceResult);
-		raceResultQueue.setRunInd("Y");
-		raceResultQueueDao.update(raceResultQueue);
+		queue.setRunInd("Y");
+		raceResultQueueDao.update(queue);
 		log.info("raceResult with id:" + raceResult.getId() + " is created.");
 	}
 	
 	@Transactional
-	public void updateFailResultQueue(RaceResultQueue raceResultQueue){
-		raceResultQueue.setRunInd("E");
-		raceResultQueueDao.update(raceResultQueue);
+	public void updateFailResultQueue(RaceResultQueue queue){
+		queue.setRunInd("E");
+		raceResultQueueDao.update(queue);
 	}
 	
 	@Transactional
@@ -97,74 +94,7 @@ public class ResultQueueService {
 		return raceResultCount;
 	}
 	
-	/**
-	 * Update Database Race Date from HKJC web site.
-	 * 
-	 * @throws FailingHttpStatusCodeException
-	 * @throws MalformedURLException
-	 * @throws XPathExpressionException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws InterruptedException
-	 * @throws TransformerException
-	 * @throws XmlUtilDocumentConversionException 
-	 */
-	@Transactional
-	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
-		int count = 0; 
-		List<RaceDate> newRaceDateList = raceResultCrawler.retrieveRaceDateList();
-		for (RaceDate newRaceDate: newRaceDateList){
-			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
-			if (raceDate == null){
-				raceDateDao.update(newRaceDate);
-				count++;
-			}
-		}
-		log.info("Retrieved Race Date Count: " + newRaceDateList.size());
-		log.info("Inserted Race Date Count: " + count);
-	}
 	
-	/**
-	 * For each race date, it would be more than one races. 
-	 * The races would be corresponded to a race queue for updating race result.
-	 *
-	 * This method would create race queue for race date.
-	 * 
-	 * @throws FailingHttpStatusCodeException
-	 * @throws MalformedURLException
-	 * @throws XPathExpressionException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws InterruptedException
-	 * @throws TransformerException
-	 * @throws ParseException
-	 * @throws XmlUtilDocumentConversionException 
-	 */
-	@Transactional
-	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException {
-		int raceResultTotalCount = 0;
-		int pendingCount = 0;
-		int processedCount = 0;
-		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
-		for(RaceDate raceDate: raceDateList){
-			int raceResultCount = updateResultQueueByRaceDate(raceDate.getRaceDate());
-			raceDate.setRaceCount(raceResultCount);
-			raceDateDao.update(raceDate);
-			raceResultTotalCount += raceResultCount;
-			if(raceResultCount > 1){
-				processedCount++;
-			}else{
-				pendingCount++;
-			}
-		}
-		int totalRaceResultQueueCount = raceResultQueueDao.list().size();
-		log.info("Total Race Result Queue: " + totalRaceResultQueueCount);
-		log.info(raceResultTotalCount + " Reace Results is inserted or updated into the Queue.");
-		log.info("Pending Race Date Count: " + pendingCount);
-		log.info("Processed Race Date Count: " + processedCount);
-	}
 	
 	
 }

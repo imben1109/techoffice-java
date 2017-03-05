@@ -23,7 +23,7 @@ import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 public class ResultServiceTest {
 	
 	@Autowired
-	private ResultService resultService;
+	private ResultQueueBatchService resultService;
 	
 	@Test
 	public void executeResultQueue() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{

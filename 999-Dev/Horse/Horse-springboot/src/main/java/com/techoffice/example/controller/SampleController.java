@@ -27,19 +27,11 @@ public class SampleController {
         return "welcome";
     }
 
-	@RequestMapping("/test")
+	@RequestMapping("/currentAnalysis")
 	@ResponseBody
 	public Map<String, List<CurrentOdd>> test() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
 		Map<String, List<CurrentOdd>> map = currentOddService.getCurrentOddMap();
 		return map;
 	}
 	
-	@RequestMapping("/map")
-	@ResponseBody
-	public Map<String, String> getMap(){
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("Test1", "Testing Value 1");
-		map.put("Test2", "Testing Value 2");
-		return map;
-	}
 }
