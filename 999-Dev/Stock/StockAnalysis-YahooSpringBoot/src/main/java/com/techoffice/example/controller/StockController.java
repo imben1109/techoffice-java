@@ -38,4 +38,10 @@ public class StockController {
 		return map;
 	}
 	
+	@RequestMapping("test")
+	@ResponseBody
+	public String test(){
+		return "test";
+	}
+	
 }
