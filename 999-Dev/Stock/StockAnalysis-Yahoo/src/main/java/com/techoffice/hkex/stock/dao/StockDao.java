@@ -23,7 +23,6 @@ public class StockDao {
 		return results;
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Transactional
 	public int clear(){
 		Query query = em.createQuery("DELETE FROM Stock");
