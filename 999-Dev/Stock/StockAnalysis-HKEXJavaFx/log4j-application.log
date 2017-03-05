@@ -1,0 +1,31 @@
+2017-03-05 20:57:01 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6833ce2c: startup date [Sun Mar 05 20:57:01 CST 2017]; root of context hierarchy
+2017-03-05 20:57:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 20:57:02 WARN  ClassPathXmlApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'techoffice.example': file:/C:/Users/user/git_workdspace/TechOffice-Java/999-Dev/Stock/StockAnalysis-HKEX/target/classes, file:/C:/Users/user/git_workdspace/TechOffice-Java/999-Dev/Stock/StockAnalysis-HKEXJavaFx/target/classes
+2017-03-05 20:58:51 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6833ce2c: startup date [Sun Mar 05 20:58:51 CST 2017]; root of context hierarchy
+2017-03-05 20:58:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 20:58:52 WARN  ClassPathXmlApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'techoffice.example': file:/C:/Users/user/git_workdspace/TechOffice-Java/999-Dev/Stock/StockAnalysis-HKEX/target/classes, file:/C:/Users/user/git_workdspace/TechOffice-Java/999-Dev/Stock/StockAnalysis-HKEXJavaFx/target/classes
+2017-03-05 20:59:20 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6833ce2c: startup date [Sun Mar 05 20:59:20 CST 2017]; root of context hierarchy
+2017-03-05 20:59:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 20:59:21 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 20:59:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 20:59:21 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 20:59:21 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 20:59:21 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 20:59:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 20:59:21 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 20:59:22 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 20:59:23 INFO  ClassPathXmlApplicationContext:581 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@101a461c: startup date [Sun Mar 05 20:59:23 CST 2017]; root of context hierarchy
+2017-03-05 20:59:23 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 20:59:23 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 20:59:23 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 20:59:23 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 20:59:23 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 20:59:25 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-03-05 20:59:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-03-05 20:59:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-03-05 20:59:41 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
+2017-03-05 20:59:43 WARN  IncorrectnessListenerImpl:38 - Obsolete content type encountered: 'application/x-javascript'.
