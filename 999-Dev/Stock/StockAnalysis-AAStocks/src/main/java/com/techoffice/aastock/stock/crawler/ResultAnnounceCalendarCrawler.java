@@ -20,12 +20,17 @@ import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 
+/**
+ * Web Crawler for http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1
+ * @author imben1109
+ *
+ */
 @Service
-public class CalendarCrawler {
+public class ResultAnnounceCalendarCrawler {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
-	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx";
+	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1";
 	
 	public String retrieveXmlFromWebClient() {
 		String xml = WebDriverUtil.getXml(URL);
@@ -35,9 +40,9 @@ public class CalendarCrawler {
 	public String retrieveResultAnnounceXmlFromWebClient(String page) {
 		String xml = "";
         if (page == null){
-        	WebDriverUtil.getXml(URL+"?type=1");
+        	WebDriverUtil.getXml(URL);
         }else {
-        	WebDriverUtil.getXml(URL + "?type=1&page=" + page);
+        	WebDriverUtil.getXml(URL + page);
         }
         return xml;
 	}

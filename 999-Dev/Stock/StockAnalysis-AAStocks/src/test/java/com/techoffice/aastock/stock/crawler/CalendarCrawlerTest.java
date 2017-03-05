@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.aastock.stock.crawler.CalendarCrawler;
+import com.techoffice.aastock.stock.crawler.ResultAnnounceCalendarCrawler;
 import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,7 +27,7 @@ public class CalendarCrawlerTest {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
-	private CalendarCrawler calendarWebServiceTest;
+	private ResultAnnounceCalendarCrawler calendarWebServiceTest;
 	
 	@Test
 	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
