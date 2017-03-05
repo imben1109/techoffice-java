@@ -20,6 +20,7 @@ import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
  
 @Component
@@ -37,16 +38,22 @@ public class StockController {
 	private TableView<Stock> tableView;
 	
 	@FXML
+	private Label stockCount;
+	
+	@FXML
 	public void initialize(){
 		stocks = stockService.getStockList();
 		tableView.getItems().addAll(stocks);
+		stockCount.setText(Integer.toString(stocks.size()));
 	}
 	
 	@FXML
 	public void refresh(ActionEvent event) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
 		stockService.updateFromInternet();
 		tableView.getItems().clear();
-		tableView.getItems().addAll(stockService.getStockList());
+		stocks = stockService.getStockList();
+		tableView.getItems().addAll(stocks);
+		stockCount.setText(Integer.toString(stocks.size()));
 	}
 	
 	@FXML

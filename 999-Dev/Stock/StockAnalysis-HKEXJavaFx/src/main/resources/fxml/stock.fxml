@@ -34,12 +34,22 @@
 			 	</FXCollections>
 			 </items>
 		</TableView>
-		
-		<HBox>
+		<VBox>
 			<children>
-				<Button text="Refresh" onAction="#refresh"/>
-				<Button text="Export" onAction="#export" />	
+				<HBox>
+					<children>
+						<Label text="Stock Count: " />
+						<Label fx:id="stockCount" />
+					</children>
+				</HBox>
+				<HBox>
+					<children>
+						<Button text="Refresh" onAction="#refresh"/>
+						<Button text="Export" onAction="#export" />	
+					</children>
+				</HBox>
 			</children>
-		</HBox>
+		</VBox>
+		
 	</children>
 </VBox>
