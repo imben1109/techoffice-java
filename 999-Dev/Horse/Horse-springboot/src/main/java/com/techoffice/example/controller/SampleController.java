@@ -1,6 +1,5 @@
 package com.techoffice.example.controller;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.jc.horse.service.CurrentOddService;
+import com.techoffice.jc.horse.service.ResultQueueDateService;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
@@ -21,6 +21,9 @@ public class SampleController {
     
 	@Autowired
 	private CurrentOddService currentOddService;
+	
+	@Autowired
+	private ResultQueueDateService resultQueueDateService;
 	
 	@RequestMapping("/")
 	public String home() {
@@ -34,4 +37,9 @@ public class SampleController {
 		return map;
 	}
 	
+	@RequestMapping("/udapteRaceDateList")
+	@ResponseBody
+	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException{
+		return resultQueueDateService.updateRaceDateList();
+	}
 }

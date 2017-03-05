@@ -3,7 +3,9 @@ package com.techoffice.jc.horse.service;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.ParseException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -42,6 +44,7 @@ public class ResultQueueDateService {
 	
 	/**
 	 * Update Database Race Date from HKJC web site.
+	 * http://racing.hkjc.com/racing/Info/meeting/Results/English/
 	 * 
 	 * @throws FailingHttpStatusCodeException
 	 * @throws MalformedURLException
@@ -54,7 +57,8 @@ public class ResultQueueDateService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException  {
+		Map<String, Integer> map = new HashMap<String, Integer>();
 		int count = 0; 
 		List<RaceDate> newRaceDateList = raceResultCrawler.retrieveRaceDateList();
 		for (RaceDate newRaceDate: newRaceDateList){
@@ -66,6 +70,9 @@ public class ResultQueueDateService {
 		}
 		log.info("Retrieved Race Date Count: " + newRaceDateList.size());
 		log.info("Inserted Race Date Count: " + count);
+		map.put("retrievedCount", newRaceDateList.size());
+		map.put("InsertedCount", count);
+		return map;
 	}
 	
 	/**
@@ -86,7 +93,8 @@ public class ResultQueueDateService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException {
+	public Map<String, Integer> updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException {
+		Map<String, Integer> map = new HashMap<String, Integer>();
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;
 		int processedCount = 0;
@@ -107,5 +115,9 @@ public class ResultQueueDateService {
 		log.info(raceResultTotalCount + " Reace Results is inserted or updated into the Queue.");
 		log.info("Pending Race Date Count: " + pendingCount);
 		log.info("Processed Race Date Count: " + processedCount);
+		map.put("totalDateQueues", totalRaceResultQueueCount);
+		map.put("pendingDateQueues", pendingCount);
+		map.put("processedDateQueues", totalRaceResultQueueCount);
+		return map;
 	}
 }

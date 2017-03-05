@@ -39,16 +39,16 @@ public class RaceResultCrawler {
 	public static final String HOST = "http://racing.hkjc.com";
 	public static final String LOCATION = "/racing/Info/meeting/Results/English/";	
 	
-	public String retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public String retrieveXml() {
         return retrieveXml(LOCATION);
 	}
 	
-	public String retrieveXml(String location) throws FailingHttpStatusCodeException, MalformedURLException, IOException, ParserConfigurationException, SAXException, XPathExpressionException, InterruptedException, TransformerException{
+	public String retrieveXml(String location) {
         String xml = WebDriverUtil.getRaceResultXml(HOST + location);
         return xml;
 	}
 	
-	public List<RaceDate> retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public List<RaceDate> retrieveRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException {
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "//*[@id='raceDateSelect']");
