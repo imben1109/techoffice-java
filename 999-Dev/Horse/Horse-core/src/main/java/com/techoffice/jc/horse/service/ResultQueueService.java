@@ -84,7 +84,7 @@ public class ResultQueueService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public int updateResultQueueByRaceDate(String raceDate) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException{
+	public int updateResultQueueByRaceDate(String raceDate) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		int raceResultCount = 0;
 		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(raceDate);
 		for(RaceResultQueue queue: raceResultQueueList){

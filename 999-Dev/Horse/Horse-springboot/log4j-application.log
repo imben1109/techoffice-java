@@ -24942,3 +24942,225 @@ insert into RACE_DATE (id, RACE_COUNT, RACE_DATE, RACE_TYPE) values (null, ?, ?,
 2017-03-05 16:47:48 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [161]
 2017-03-05 16:47:48 INFO  ResultQueueDateService:72 - Retrieved Race Date Count: 160
 2017-03-05 16:47:48 INFO  ResultQueueDateService:73 - Inserted Race Date Count: 0
+2017-03-05 17:02:41 INFO  SpringBootExampleAppl:48 - Starting SpringBootExampleAppl on LAPTOP-PFAGQ4HQ with PID 3132 (C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Horse\Horse-springboot\target\classes started by user in C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Horse\Horse-springboot)
+2017-03-05 17:02:41 INFO  SpringBootExampleAppl:637 - No active profile set, falling back to default profiles: default
+2017-03-05 17:02:41 INFO  AnnotationConfigEmbeddedWebApplicationContext:581 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@276438c9: startup date [Sun Mar 05 17:02:41 CST 2017]; root of context hierarchy
+2017-03-05 17:02:41 INFO  Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-05 17:02:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 17:02:42 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2017-03-05 17:02:42 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-05 17:02:44 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 17:02:44 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 17:02:44 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2f0734a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 17:02:44 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-03-05 17:02:45 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 4805 ms
+2017-03-05 17:02:46 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-05 17:02:46 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-05 17:02:46 INFO  FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-05 17:02:46 INFO  FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-05 17:02:46 INFO  FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-05 17:02:46 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 17:02:46 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 17:02:46 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 17:02:46 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 17:02:46 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 17:02:46 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@1ee27d73
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@1ee27d73
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1ee27d73
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@53a84ff4
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@717d7587
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@5b7aa898
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@4e642ee1
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@4e642ee1
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4e642ee1
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@1eff3cfb
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@1eff3cfb
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1eff3cfb
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@3976ebfa
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@3976ebfa
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3976ebfa
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@56928e17
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@56928e17
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@56928e17
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@221a2068
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@221a2068
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@221a2068
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4f8d86e4
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4f8d86e4
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4f8d86e4
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@25d0cb3a
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@25d0cb3a
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@25d0cb3a
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2b2954e1
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2b2954e1
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2da16263
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2da16263
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@5ebffb44
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@5ebffb44
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5edacf20
+2017-03-05 17:02:46 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@234cff57
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@3f362135
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@3f362135
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@2a097d77
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@2a097d77
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@6d2a2560
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@6d2a2560
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@748f93bb
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@748f93bb
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@25f723b0
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@25f723b0
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@27be17c8
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@27be17c8
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@1e95b653
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@1e95b653
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@3df1a1ac
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@3df1a1ac
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1e0fdb2f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1e0fdb2f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@5fef2aac
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5fef2aac
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@72503b19
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@72503b19
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@53e76c11
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@53e76c11
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@53e76c11
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@6a1d6ef2
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@79aee22a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@79aee22a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@79aee22a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6bee793f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@2e86807a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@2e86807a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@39c96e48
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@39c96e48
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@3a4ab7f7
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3a4ab7f7
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@3c6c4689
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3c6c4689
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@6bfaa0a6
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@6bfaa0a6
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6f1b8544
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@303c55fa
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@303c55fa
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@303c55fa
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@b5de58f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@b5de58f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@b5de58f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@74d6736
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@3eb3232b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@663f237a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@663f237a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@663f237a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@4a3bd45b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@4a3bd45b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@4a3bd45b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@6d099323
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@3138953b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@f5cf29b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@f5cf29b
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@5c7dfc05
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@2db2a05f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@2db2a05f
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@42505474
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@42505474
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7316523a
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1a1cc163
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@3625a016
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@67e25252
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@67e25252
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@72eb6200
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@76ececd
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@7affc159
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1682c08c
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3fd05b3e
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4eb9f2af
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4a481728
+2017-03-05 17:02:47 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4ace284d
+2017-03-05 17:02:47 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 17:02:47 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@6aa5974e
+2017-03-05 17:02:48 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 17:02:48 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@276438c9: startup date [Sun Mar 05 17:02:41 CST 2017]; root of context hierarchy
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/ResultQueueDate/updateRaceResultQueueList]}" onto public java.util.Map<java.lang.String, java.lang.Integer> com.techoffice.example.controller.ResultQueueDateController.updateRaceResultQueueList() throws javax.xml.xpath.XPathExpressionException,com.techoffice.util.exception.XmlUtilDocumentConversionException,java.text.ParseException
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/ResultQueueDate/pendingQueueDateList]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.techoffice.example.controller.ResultQueueDateController.pendingQueueDateList()
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/currentAnalysis]}" onto public java.util.Map<java.lang.String, java.util.List<com.techoffice.jc.horse.dto.CurrentOdd>> com.techoffice.example.controller.SampleController.test() throws javax.xml.xpath.XPathExpressionException,com.techoffice.util.exception.XmlUtilDocumentConversionException,com.techoffice.util.exception.XmlUtilXpathNotUniqueException
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/udapteRaceDateList]}" onto public java.util.Map<java.lang.String, java.lang.Integer> com.techoffice.example.controller.SampleController.updateRaceDateList() throws javax.xml.xpath.XPathExpressionException,com.techoffice.util.exception.XmlUtilDocumentConversionException
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.techoffice.example.controller.SampleController.home()
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-05 17:02:49 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-05 17:02:49 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 17:02:49 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 17:02:49 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 17:02:49 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-05 17:02:49 INFO  TomcatEmbeddedServletContainer:192 - Tomcat started on port(s): 8080 (http)
+2017-03-05 17:02:49 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 9.216 seconds (JVM running for 9.757)
+2017-03-05 17:03:03 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-05 17:03:03 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-03-05 17:03:11 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-03-05 17:03:11 DEBUG SQL:92 - select racedate0_.id as id1_0_, racedate0_.RACE_COUNT as RACE_COU2_0_, racedate0_.RACE_DATE as RACE_DAT3_0_, racedate0_.RACE_TYPE as RACE_TYP4_0_ from RACE_DATE racedate0_ where racedate0_.RACE_COUNT<2 and racedate0_.RACE_TYPE<>'Simulcast'
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [142]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170118/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [143]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170114/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [144]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170111/HV]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [145]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170208/HV]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [146]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170205/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [147]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170202/HV]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [148]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170130/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [149]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170125/HV]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [150]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170122/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [152]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170305/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [154]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170301/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [155]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170226/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [157]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170222/HV]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [158]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170219/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [160]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170215/HV]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([id1_0_] : [INTEGER]) - [161]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_COU2_0_] : [INTEGER]) - [0]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_DAT3_0_] : [VARCHAR]) - [/racing/Info/meeting/Results/English/Local/20170211/ST]
+2017-03-05 17:03:11 TRACE BasicExtractor:61 - extracted value ([RACE_TYP4_0_] : [VARCHAR]) - [Local]

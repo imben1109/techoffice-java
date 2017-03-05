@@ -69,7 +69,7 @@ public class RaceResultCrawler {
 		return raceDateList;
 	}
 	
-	public List<RaceResultQueue> getRaceResultQueueList(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException{
+	public List<RaceResultQueue> getRaceResultQueueList(String location) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);

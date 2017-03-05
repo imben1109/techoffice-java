@@ -42,6 +42,8 @@ public class ResultQueueDateService {
 	@Autowired
 	private RaceResultQueueDao raceResultQueueDao ;
 	
+	
+	
 	/**
 	 * Update Database Race Date from HKJC web site.
 	 * http://racing.hkjc.com/racing/Info/meeting/Results/English/
@@ -68,10 +70,23 @@ public class ResultQueueDateService {
 				count++;
 			}
 		}
+		int total = raceDateDao.list().size();
 		log.info("Retrieved Race Date Count: " + newRaceDateList.size());
 		log.info("Inserted Race Date Count: " + count);
-		map.put("retrievedCount", newRaceDateList.size());
-		map.put("InsertedCount", count);
+		log.info("Total Race Date in Database: " + total );
+		map.put("retrieved", newRaceDateList.size());
+		map.put("Inserted", count);
+		map.put("total", total);
+		return map;
+	}
+	
+	
+	@Transactional
+	public Map<String, Object> getPendingQueueDateList(){
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
+		map.put("list", raceDateList);
+		map.put("count", raceDateList.size());
 		return map;
 	}
 	
@@ -93,7 +108,7 @@ public class ResultQueueDateService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public Map<String, Integer> updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException {
+	public Map<String, Integer> updateRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;
