@@ -19388,3 +19388,157 @@ java.lang.UnsupportedClassVersionError: JVMCFRE003 不正確的主要版本；�
 2017-03-04 12:37:23 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 7.872 seconds (JVM running for 8.351)
 2017-03-04 12:37:31 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
 2017-03-04 12:37:31 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-03-05 12:32:11 INFO  SpringBootExampleAppl:48 - Starting SpringBootExampleAppl on LAPTOP-PFAGQ4HQ with PID 4928 (C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Horse\Horse-springboot\target\classes started by user in C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Horse\Horse-springboot)
+2017-03-05 12:32:11 INFO  SpringBootExampleAppl:637 - No active profile set, falling back to default profiles: default
+2017-03-05 12:32:11 INFO  AnnotationConfigEmbeddedWebApplicationContext:581 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@276438c9: startup date [Sun Mar 05 12:32:11 CST 2017]; root of context hierarchy
+2017-03-05 12:32:12 INFO  Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-05 12:32:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 12:32:13 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2017-03-05 12:32:13 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-05 12:32:14 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 12:32:14 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 12:32:14 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$154b7c2c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 12:32:15 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-03-05 12:32:16 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 4450 ms
+2017-03-05 12:32:16 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-05 12:32:16 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-05 12:32:16 INFO  FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-05 12:32:16 INFO  FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-05 12:32:16 INFO  FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-05 12:32:16 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:32:16 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 12:32:16 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 12:32:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 12:32:16 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 12:32:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@56382bc9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@56382bc9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@56382bc9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@77bc2e16
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@4e83a98
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@18a25bbd
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@53a84ff4
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@53a84ff4
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@53a84ff4
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@7930ffa9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@7930ffa9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@7930ffa9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@7c0777b5
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@7c0777b5
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7c0777b5
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@4e642ee1
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@4e642ee1
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4e642ee1
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@6dc1dc69
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@6dc1dc69
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@6dc1dc69
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4694f434
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@4694f434
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4694f434
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@77f905e3
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@77f905e3
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@77f905e3
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1192b58e
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1192b58e
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3134153d
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3134153d
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@6e3eb0cd
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@6e3eb0cd
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@421def93
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@235d659c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@101a461c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@101a461c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@31db34da
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@31db34da
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@234cff57
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@234cff57
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@3f362135
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@3f362135
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7650ded6
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7650ded6
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@3811510
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@3811510
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2e7157c7
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2e7157c7
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@25f723b0
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@25f723b0
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@31120021
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@31120021
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@2c2a027c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@2c2a027c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@3664f108
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3664f108
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@1e0fdb2f
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@1e0fdb2f
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@1e0fdb2f
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@47768e74
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@7f973a14
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7f973a14
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7f973a14
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3451f01d
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@2ecf5915
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@2ecf5915
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@2721044
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@2721044
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@36920bd6
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@36920bd6
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@28369db0
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@28369db0
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@40d23c82
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@40d23c82
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@3a4ab7f7
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@3c6c4689
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@3c6c4689
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@3c6c4689
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1a565afb
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1a565afb
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1a565afb
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@76e9f00b
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@5de5e95
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@2ee83775
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@2ee83775
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@2ee83775
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@3f81621c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@3f81621c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@3f81621c
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@19a20bb2
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@40fa8766
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@756aadfc
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@756aadfc
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@d535a3d
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@48a663e9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@48a663e9
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@465b38e6
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@465b38e6
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7bd96822
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1e4c6583
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@2f382a5e
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@7e83992
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7e83992
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@267cde2e
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@609e57da
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@56dd6efa
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4d634127
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@d2e6b0b
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1f1cddf3
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@228bda54
+2017-03-05 12:32:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@75b6dd5b
+2017-03-05 12:32:17 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 12:32:17 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@423ed3b5
+2017-03-05 12:32:18 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:32:18 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@276438c9: startup date [Sun Mar 05 12:32:11 CST 2017]; root of context hierarchy
+2017-03-05 12:32:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/test]}" onto public java.lang.String com.techoffice.example.controller.SampleController.test() throws javax.xml.xpath.XPathExpressionException,com.techoffice.util.exception.XmlUtilDocumentConversionException,com.techoffice.util.exception.XmlUtilXpathNotUniqueException
+2017-03-05 12:32:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/map]}" onto public java.util.Map<java.lang.String, java.lang.String> com.techoffice.example.controller.SampleController.getMap()
+2017-03-05 12:32:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.techoffice.example.controller.SampleController.home()
+2017-03-05 12:32:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-05 12:32:19 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-05 12:32:19 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 12:32:19 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 12:32:19 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 12:32:19 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-05 12:32:19 INFO  TomcatEmbeddedServletContainer:192 - Tomcat started on port(s): 8080 (http)
+2017-03-05 12:32:19 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 8.142 seconds (JVM running for 8.63)
+2017-03-05 12:32:24 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-05 12:32:24 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
