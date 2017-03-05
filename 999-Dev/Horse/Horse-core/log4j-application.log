@@ -27564,3 +27564,499 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/use
 2017-03-04 14:45:22 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=04-03-2017&venue=S1&lang=en&raceno=1
 2017-03-04 14:45:30 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@5cb9f472: startup date [Sat Mar 04 14:45:02 CST 2017]; root of context hierarchy
 2017-03-04 14:45:30 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 00:36:20 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-03-05 00:36:20 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-03-05 00:36:20 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2017-03-05 00:36:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 00:36:20 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@5cb9f472: startup date [Sun Mar 05 00:36:20 CST 2017]; root of context hierarchy
+2017-03-05 00:36:21 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 00:36:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 00:36:21 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 00:36:21 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 00:36:21 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 00:36:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@604f2bd2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@604f2bd2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@604f2bd2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@30b19518
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@44b3606b
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@5b202a3a
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@1ecee32c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@1ecee32c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1ecee32c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@74960bfa
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@74960bfa
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@74960bfa
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@7f36662c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@7f36662c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7f36662c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@767e20cf
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@767e20cf
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@767e20cf
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@52066604
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@52066604
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@52066604
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@362045c0
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@362045c0
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@362045c0
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@241e8ea6
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@241e8ea6
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@241e8ea6
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@53d102a2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@53d102a2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@42463763
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@42463763
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@67c2e933
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@67c2e933
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1b765a2c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@72c28d64
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@2c532cd8
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@2c532cd8
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@5911e990
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5911e990
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@64ba3208
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@64ba3208
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2f17e30d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2f17e30d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@43b6123e
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@43b6123e
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@70ab2d48
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@70ab2d48
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7cbc3762
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7cbc3762
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@8692d67
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@8692d67
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@6b53bcc2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@6b53bcc2
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@7a560583
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@7a560583
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@616fe72b
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@616fe72b
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@293a5f75
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@293a5f75
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@293a5f75
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@56e8b606
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@7966baa7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7966baa7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7966baa7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2d36e77e
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@302a07d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@302a07d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@5cbe877d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5cbe877d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4218500f
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4218500f
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@3cc41abc
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3cc41abc
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4097cac
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4097cac
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@7c1e2a2d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@710b18a6
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@710b18a6
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@710b18a6
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@35e5d0e5
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@35e5d0e5
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@35e5d0e5
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@3401a114
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@58ffcbd7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@319bc845
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@319bc845
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@319bc845
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@544820b7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@544820b7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@544820b7
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@e84a8e1
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@522a32b1
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@315f43d5
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@315f43d5
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2f05be7f
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@3f390d63
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3f390d63
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@4e858e0a
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4e858e0a
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@b7838a9
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1c3146bc
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@4c4748bf
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@3f07b12c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3f07b12c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3e14c16d
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@3c989952
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@784b990c
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3d3ba765
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@25bc0606
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5d1659ea
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@793138bd
+2017-03-05 00:36:21 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1951b871
+2017-03-05 00:36:22 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 00:36:23 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@3e9803c2
+2017-03-05 00:36:23 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 00:36:30 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=04-03-2017&venue=S1&lang=en
+2017-03-05 00:36:37 INFO  CurrentOddCrawler:87 - raceNumRace 1
+2017-03-05 00:36:40 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=04-03-2017&venue=S1&lang=en&raceno=1
+2017-03-05 00:36:44 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@5cb9f472: startup date [Sun Mar 05 00:36:20 CST 2017]; root of context hierarchy
+2017-03-05 00:36:44 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:13:16 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-03-05 12:13:16 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-03-05 12:13:16 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c7fa833, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@39aeed2f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@724af044, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4678c730, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6767c1fc]
+2017-03-05 12:13:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 12:13:16 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@5cb9f472: startup date [Sun Mar 05 12:13:16 CST 2017]; root of context hierarchy
+2017-03-05 12:13:17 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:13:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 12:13:17 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 12:13:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 12:13:17 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 12:13:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@604f2bd2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration boolean -> org.hibernate.type.BooleanType@604f2bd2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@604f2bd2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@30b19518
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@44b3606b
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration yes_no -> org.hibernate.type.YesNoType@5b202a3a
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@1ecee32c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration byte -> org.hibernate.type.ByteType@1ecee32c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1ecee32c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration character -> org.hibernate.type.CharacterType@74960bfa
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration char -> org.hibernate.type.CharacterType@74960bfa
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@74960bfa
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@7f36662c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration short -> org.hibernate.type.ShortType@7f36662c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7f36662c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration integer -> org.hibernate.type.IntegerType@767e20cf
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration int -> org.hibernate.type.IntegerType@767e20cf
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@767e20cf
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@52066604
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration long -> org.hibernate.type.LongType@52066604
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@52066604
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@362045c0
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration float -> org.hibernate.type.FloatType@362045c0
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@362045c0
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@241e8ea6
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration double -> org.hibernate.type.DoubleType@241e8ea6
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@241e8ea6
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@53d102a2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@53d102a2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@42463763
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@42463763
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration string -> org.hibernate.type.StringType@67c2e933
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.String -> org.hibernate.type.StringType@67c2e933
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@1b765a2c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@72c28d64
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration url -> org.hibernate.type.UrlType@2c532cd8
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@2c532cd8
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration Duration -> org.hibernate.type.DurationType@5911e990
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5911e990
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration Instant -> org.hibernate.type.InstantType@64ba3208
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@64ba3208
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2f17e30d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2f17e30d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@43b6123e
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@43b6123e
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@70ab2d48
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@70ab2d48
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7cbc3762
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7cbc3762
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@8692d67
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@8692d67
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@6b53bcc2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@6b53bcc2
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration date -> org.hibernate.type.DateType@7a560583
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@7a560583
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration time -> org.hibernate.type.TimeType@616fe72b
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@616fe72b
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration timestamp -> org.hibernate.type.TimestampType@293a5f75
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@293a5f75
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@293a5f75
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@56e8b606
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration calendar -> org.hibernate.type.CalendarType@7966baa7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7966baa7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7966baa7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2d36e77e
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration locale -> org.hibernate.type.LocaleType@302a07d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@302a07d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration currency -> org.hibernate.type.CurrencyType@5cbe877d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5cbe877d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4218500f
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4218500f
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration class -> org.hibernate.type.ClassType@3cc41abc
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3cc41abc
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4097cac
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4097cac
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@7c1e2a2d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration binary -> org.hibernate.type.BinaryType@710b18a6
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration byte[] -> org.hibernate.type.BinaryType@710b18a6
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration [B -> org.hibernate.type.BinaryType@710b18a6
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@35e5d0e5
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@35e5d0e5
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@35e5d0e5
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration row_version -> org.hibernate.type.RowVersionType@3401a114
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration image -> org.hibernate.type.ImageType@58ffcbd7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration characters -> org.hibernate.type.CharArrayType@319bc845
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration char[] -> org.hibernate.type.CharArrayType@319bc845
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration [C -> org.hibernate.type.CharArrayType@319bc845
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@544820b7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@544820b7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@544820b7
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration text -> org.hibernate.type.TextType@e84a8e1
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration ntext -> org.hibernate.type.NTextType@522a32b1
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration blob -> org.hibernate.type.BlobType@315f43d5
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@315f43d5
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2f05be7f
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration clob -> org.hibernate.type.ClobType@3f390d63
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3f390d63
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration nclob -> org.hibernate.type.NClobType@4e858e0a
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4e858e0a
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@b7838a9
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1c3146bc
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration serializable -> org.hibernate.type.SerializableType@4c4748bf
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration object -> org.hibernate.type.ObjectType@3f07b12c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3f07b12c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3e14c16d
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@3c989952
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@784b990c
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3d3ba765
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@25bc0606
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5d1659ea
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@793138bd
+2017-03-05 12:13:17 DEBUG BasicTypeRegistry:145 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1951b871
+2017-03-05 12:13:18 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 12:13:19 TRACE TypeFactory:58 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@3e9803c2
+2017-03-05 12:13:19 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 12:13:28 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en
+2017-03-05 12:13:32 INFO  CurrentOddCrawler:87 - raceNumRace 1
+2017-03-05 12:13:35 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=1
+2017-03-05 12:13:39 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('EASY TOUCH (V269)', 'SAKURA FIGHTER (V393)', 'SHARPMIND (V348)', 'SUCH A HAPPINESS (A152)', 'YOUNG EMPIRE (V116)', 'WHISTLE UP (A082)', 'CLEVER SPIRIT (T333)', 'RICHCITY FORTUNE (V088)', 'GO-GETTER (S303)', 'GREENERY FORTUNE (T332)', 'RED SUN (V145)', 'THE CHAMP (V271)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CLEVER SPIRIT (T333)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [48.4938]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RICHCITY FORTUNE (V088)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [53.4471875]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [EASY TOUCH (V269)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [63.16374]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [YOUNG EMPIRE (V116)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.38975]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GO-GETTER (S303)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [84.58881818181818181818181818182]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [THE CHAMP (V271)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [133.926]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RED SUN (V145)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [174.70425]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GREENERY FORTUNE (T332)]
+2017-03-05 12:13:42 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [193.926]
+2017-03-05 12:13:42 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:13:42 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:13:42 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:13:42 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 4]
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 4
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - SAKURA FIGHTER (V393) null
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - SHARPMIND (V348) null
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - SUCH A HAPPINESS (A152) null
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - WHISTLE UP (A082) null
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - CLEVER SPIRIT (T333) 48.4938
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - RICHCITY FORTUNE (V088) 53.4471875
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - EASY TOUCH (V269) 63.16374
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - YOUNG EMPIRE (V116) 78.38975
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - GO-GETTER (S303) 84.58881818181818
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - THE CHAMP (V271) 133.926
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - RED SUN (V145) 174.70425
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:121 - GREENERY FORTUNE (T332) 193.926
+2017-03-05 12:13:42 INFO  CurrentOddCrawler:87 - raceNumRace 2
+2017-03-05 12:13:45 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=2
+2017-03-05 12:13:49 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('DASHING DART (V038)', 'RED HORSE (V334)', 'POLYMER LUCK (T326)', 'STRIKING STAR (V015)', 'DOUBLE POINT (S246)', 'FORTUNE GIGGLES (S346)', 'AUDACITY (V238)', 'HAR HAR CHARMING (S440)', 'SUPERNATURAL (V063)', 'EMPIRE OF MONGOLIA (V317)', 'MY FOLKS (T323)', 'SPICY DOUBLE (T393)', 'STORM KID (S338)', 'PERFECT TIMING (T019)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SUPERNATURAL (V063)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [54.38513333333333333333333333333]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DASHING DART (V038)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [60.44803333333333333333333333333]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SPICY DOUBLE (T393)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [61.3705625]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MY FOLKS (T323)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [65.95265]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [POLYMER LUCK (T326)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [66.13346]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RED HORSE (V334)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [70.01733333333333333333333333333]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [STRIKING STAR (V015)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [70.89295]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DOUBLE POINT (S246)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.062725]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [HAR HAR CHARMING (S440)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [79.06743333333333333333333333333]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [AUDACITY (V238)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [88.819925]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FORTUNE GIGGLES (S346)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [91.47646666666666666666666666667]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [PERFECT TIMING (T019)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [99.61278]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [EMPIRE OF MONGOLIA (V317)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [114.28456666666666666666666666667]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [STORM KID (S338)]
+2017-03-05 12:13:52 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [178.61278]
+2017-03-05 12:13:52 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:13:52 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:13:52 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:13:52 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 5]
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 5
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - SUPERNATURAL (V063) 54.385133333333336
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - DASHING DART (V038) 60.448033333333335
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - SPICY DOUBLE (T393) 61.3705625
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - MY FOLKS (T323) 65.95265
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - POLYMER LUCK (T326) 66.13346
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - RED HORSE (V334) 70.01733333333334
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - STRIKING STAR (V015) 70.89295
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - DOUBLE POINT (S246) 78.062725
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - HAR HAR CHARMING (S440) 79.06743333333333
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - AUDACITY (V238) 88.819925
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - FORTUNE GIGGLES (S346) 91.47646666666667
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - PERFECT TIMING (T019) 99.61278
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - EMPIRE OF MONGOLIA (V317) 114.28456666666666
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:121 - STORM KID (S338) 178.61278
+2017-03-05 12:13:52 INFO  CurrentOddCrawler:87 - raceNumRace 3
+2017-03-05 12:13:55 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=3
+2017-03-05 12:13:59 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('PENIAPHOBIA (S143)', 'NOT LISTENIN''TOME (T235)', 'AMBER SKY (N241)', 'BAD BOY (V251)', 'MR STUNNING (V153)', 'MY LITTLE FRIEND (S010)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [PENIAPHOBIA (S143)]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-62.87738571428571428571428571429]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [NOT LISTENIN'TOME (T235)]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-61.284025]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MR STUNNING (V153)]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [-12.44394]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [AMBER SKY (N241)]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [19.46366666666666666666666666667]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MY LITTLE FRIEND (S010)]
+2017-03-05 12:13:59 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [37.503825]
+2017-03-05 12:13:59 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:13:59 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:13:59 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:13:59 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 1]
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 1
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:121 - BAD BOY (V251) null
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:121 - PENIAPHOBIA (S143) -62.877385714285715
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:121 - NOT LISTENIN'TOME (T235) -61.284025
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:121 - MR STUNNING (V153) -12.44394
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:121 - AMBER SKY (N241) 19.463666666666665
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:121 - MY LITTLE FRIEND (S010) 37.503825
+2017-03-05 12:13:59 INFO  CurrentOddCrawler:87 - raceNumRace 4
+2017-03-05 12:14:02 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=4
+2017-03-05 12:14:06 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('MR KOOL (T335)', 'FIVE STARS AGENT (V001)', 'SPARKLING TALENT (T346)', 'VICTOR EMPEROR (S425)', 'FAST ROCKET (V064)', 'SHINING CHAMPION (S305)', 'O''SOCOOLE (S032)', 'DYNAMIC VOYAGE (P066)', 'LAUGHING LORD (T071)', 'FRIENDS FOREVER (T079)', 'BERNARD''S CHOICE (N156)', 'INTELLECTUAL GLIDE (S124)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [VICTOR EMPEROR (S425)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [55.10782777777777777777777777778]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [O'SOCOOLE (S032)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [55.7938]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SPARKLING TALENT (T346)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.01875]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [MR KOOL (T335)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.47854285714285714285714285714]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FIVE STARS AGENT (V001)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [62.56337142857142857142857142857]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [SHINING CHAMPION (S305)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [63.80396666666666666666666666667]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DYNAMIC VOYAGE (P066)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [64.16492222222222222222222222222]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FRIENDS FOREVER (T079)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [69.41338333333333333333333333333]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LAUGHING LORD (T071)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [75.5675]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BERNARD'S CHOICE (N156)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.21385]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [INTELLECTUAL GLIDE (S124)]
+2017-03-05 12:14:09 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [83.86554285714285714285714285714]
+2017-03-05 12:14:09 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:14:09 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:14:09 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:14:09 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 5]
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 5
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - FAST ROCKET (V064) null
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - VICTOR EMPEROR (S425) 55.10782777777778
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - O'SOCOOLE (S032) 55.7938
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - SPARKLING TALENT (T346) 58.01875
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - MR KOOL (T335) 58.478542857142855
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - FIVE STARS AGENT (V001) 62.56337142857143
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - SHINING CHAMPION (S305) 63.80396666666667
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - DYNAMIC VOYAGE (P066) 64.16492222222222
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - FRIENDS FOREVER (T079) 69.41338333333333
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - LAUGHING LORD (T071) 75.5675
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - BERNARD'S CHOICE (N156) 78.21385
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:121 - INTELLECTUAL GLIDE (S124) 83.86554285714286
+2017-03-05 12:14:09 INFO  CurrentOddCrawler:87 - raceNumRace 5
+2017-03-05 12:14:13 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=5
+2017-03-05 12:14:17 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('CAREFREE LET GO (T059)', 'DIAMOND MYSTERIOUS (S426)', 'DOCTORS DELIGHT (A044)', 'FANTASTIC EIGHT (A079)', 'MI BLANCO (A186)', 'UP TO YOU (A076)', 'EVEREST (V296)', 'DON''T MISS (A017)', 'LOVE CHUNGHWA (T207)', 'BOSSIEE (S405)', 'RAY OF GOLD (N443)', 'WINNER ST PAUL''S (T027)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CAREFREE LET GO (T059)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [21.03136666666666666666666666667]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [EVEREST (V296)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [49.470775]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [WINNER ST PAUL'S (T027)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [55.09764]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [DIAMOND MYSTERIOUS (S426)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [58.9483875]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BOSSIEE (S405)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [59.90183333333333333333333333333]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [LOVE CHUNGHWA (T207)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [67.1083]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [RAY OF GOLD (N443)]
+2017-03-05 12:14:19 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [78.5462]
+2017-03-05 12:14:19 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:14:19 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:14:19 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:14:19 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 4]
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 4
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - DOCTORS DELIGHT (A044) null
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - FANTASTIC EIGHT (A079) null
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - MI BLANCO (A186) null
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - UP TO YOU (A076) null
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - DON'T MISS (A017) null
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - CAREFREE LET GO (T059) 21.031366666666667
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - EVEREST (V296) 49.470775
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - WINNER ST PAUL'S (T027) 55.09764
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - DIAMOND MYSTERIOUS (S426) 58.9483875
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - BOSSIEE (S405) 59.901833333333336
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - LOVE CHUNGHWA (T207) 67.1083
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:121 - RAY OF GOLD (N443) 78.5462
+2017-03-05 12:14:19 INFO  CurrentOddCrawler:87 - raceNumRace 6
+2017-03-05 12:14:22 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=6
+2017-03-05 12:14:26 DEBUG SQL:92 - SELECT HORSE_NAME, AVG_ADJ_TIME FROM HORSE_ADJ_TIME WHERE HORSE_NAME in ('CHIU CHOW KID (T412)', 'BOLD STITCH (S323)', 'BO DUKE (S378)', 'PLANET STAR (A049)', 'FURLONG DRAGON (A034)', 'GOOD METHOD (S218)', 'AMBITIOUS HEART (V303)', 'NOBLE DE LOVE (V324)', 'COOL AND NEAT (V087)', 'FLYING MACHINE (T413)', 'BONITO (V319)', 'WINGOLD (T202)', 'INVISIBLE (T418)', 'FUN MANAGER (V220)') ORDER BY AVG_ADJ_TIME ASC
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BOLD STITCH (S323)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [13.62877]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [GOOD METHOD (S218)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [29.48165]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [COOL AND NEAT (V087)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [40.71086]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [NOBLE DE LOVE (V324)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [46.3599]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [CHIU CHOW KID (T412)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [47.1712]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [WINGOLD (T202)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [50.81996153846153846153846153846]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [AMBITIOUS HEART (V303)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [51.2373]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [INVISIBLE (T418)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [60.6229625]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FLYING MACHINE (T413)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [72.55487777777777777777777777778]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [FUN MANAGER (V220)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [95.52164285714285714285714285714]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BO DUKE (S378)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [102.63033333333333333333333333333]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([HORSE_NAME] : [VARCHAR]) - [BONITO (V319)]
+2017-03-05 12:14:29 TRACE BasicExtractor:61 - extracted value ([AVG_ADJ_TIME] : [NUMERIC]) - [110.3599]
+2017-03-05 12:14:29 DEBUG SQL:92 - SELECT DRAW, ACCELERATE_TIME FROM DRAW_ACCERATE_TIME WHERE DISTANCE = ? AND VENUE = ? AND COURSE = ?
+2017-03-05 12:14:29 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - ["C" COURSE]
+2017-03-05 12:14:29 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [Tin]
+2017-03-05 12:14:29 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [TURF - CLASS 4]
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:106 - Tin "C" COURSE TURF - CLASS 4
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - PLANET STAR (A049) null
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - FURLONG DRAGON (A034) null
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - BOLD STITCH (S323) 13.62877
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - GOOD METHOD (S218) 29.48165
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - COOL AND NEAT (V087) 40.71086
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - NOBLE DE LOVE (V324) 46.3599
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - CHIU CHOW KID (T412) 47.1712
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - WINGOLD (T202) 50.81996153846154
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - AMBITIOUS HEART (V303) 51.2373
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - INVISIBLE (T418) 60.6229625
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - FLYING MACHINE (T413) 72.55487777777778
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - FUN MANAGER (V220) 95.52164285714285
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - BO DUKE (S378) 102.63033333333334
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:121 - BONITO (V319) 110.3599
+2017-03-05 12:14:29 INFO  CurrentOddCrawler:87 - raceNumRace 7
+2017-03-05 12:14:32 INFO  CurrentOddCrawler:51 - http://bet.hkjc.com/racing/pages/odds_wp.aspx?date=05-03-2017&venue=ST&lang=en&raceno=7

@@ -25,7 +25,7 @@ public class SampleController {
 	@RequestMapping("/test")
 	@ResponseBody
 	public String test() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
-		currentOddService.run();
+		currentOddService.getCurrentOddMap();
 		return "";
 	}
 }

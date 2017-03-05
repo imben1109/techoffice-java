@@ -1,6 +1,8 @@
 package com.techoffice.jc.horse.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.xpath.XPathExpressionException;
 
@@ -18,10 +20,13 @@ public class CurrentOddService {
 	@Autowired
 	private CurrentOddCrawler currentOddCrawler;
 	
-	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public Map<String, List<CurrentOdd>> getCurrentOddMap() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+		Map<String, List<CurrentOdd>> map = new HashMap<String, List<CurrentOdd>>();
 		List<String> raceNums = currentOddCrawler.getRaceNums();
 		for (String raceNum: raceNums){
 			List<CurrentOdd> currentOddList = currentOddCrawler.getCurrentOddByRaceNum(raceNum);
+			map.put(raceNum, currentOddList);
 		}
+		return map;
 	}
 }
