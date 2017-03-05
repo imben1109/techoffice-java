@@ -2,13 +2,11 @@ package com.techoffice.yahoo.finance.stock.service;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.net.MalformedURLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.hkex.csvimport.stock.dao.StockDao;
 import com.techoffice.hkex.csvimport.stock.model.Stock;
 import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
@@ -33,7 +31,6 @@ public class StockHistoryDataService {
 			System.out.println(stock.getName());
 			String stockCode = stock.getStockCode().substring(1);
 			List<Price> prices = stockHistoryDataCrawler.retrieveHistoryPriceData(stockCode);
-			priceDao.deletePrice("0939");
 			priceDao.addPriceList(prices);
 		}
 	}
