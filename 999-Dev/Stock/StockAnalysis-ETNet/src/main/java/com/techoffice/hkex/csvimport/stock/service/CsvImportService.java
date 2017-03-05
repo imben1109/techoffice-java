@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock.service;
+package com.techoffice.hkex.csvimport.stock.service;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,8 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.HeaderColumnNameMappingStrategy;
-import com.techoffice.hkex.stock.dao.StockDao;
-import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.hkex.csvimport.stock.dao.StockDao;
+import com.techoffice.hkex.csvimport.stock.model.Stock;
 
 @Component
 public class CsvImportService {

@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.hkex.stock.dao.StockDao;
-import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.hkex.csvimport.stock.dao.StockDao;
+import com.techoffice.hkex.csvimport.stock.model.Stock;
 import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
 import com.techoffice.yahoo.finance.stock.dao.PriceDao;
 import com.techoffice.yahoo.finance.stock.model.Price;

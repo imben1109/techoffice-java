@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock.model;
+package com.techoffice.hkex.csvimport.stock.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

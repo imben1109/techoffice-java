@@ -1,4 +1,4 @@
-package com.techoffice.hkex.stock.dao;
+package com.techoffice.hkex.csvimport.stock.dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.hkex.csvimport.stock.model.Stock;
 
 @Repository
 public class StockDao {
