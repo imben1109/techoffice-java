@@ -1,0 +1,125 @@
+2017-03-05 22:07:45 INFO  SpringBootExampleAppl:48 - Starting SpringBootExampleAppl on LAPTOP-PFAGQ4HQ with PID 16056 (C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Stock\StockAnalysis-YahooSpringBoot\target\classes started by user in C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Stock\StockAnalysis-YahooSpringBoot)
+2017-03-05 22:07:45 INFO  SpringBootExampleAppl:637 - No active profile set, falling back to default profiles: default
+2017-03-05 22:07:45 INFO  AnnotationConfigEmbeddedWebApplicationContext:581 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33b37288: startup date [Sun Mar 05 22:07:45 CST 2017]; root of context hierarchy
+2017-03-05 22:07:46 INFO  Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-05 22:07:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 22:07:47 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2017-03-05 22:07:47 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-05 22:07:49 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:07:49 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:07:49 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b0f2eee5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:07:50 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-03-05 22:07:51 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 5583 ms
+2017-03-05 22:07:51 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-05 22:07:51 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-05 22:07:51 INFO  FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-05 22:07:51 INFO  FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-05 22:07:51 INFO  FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-05 22:07:51 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 22:07:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 22:07:51 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 22:07:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 22:07:52 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 22:07:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 22:07:53 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 22:07:54 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 22:07:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33b37288: startup date [Sun Mar 05 22:07:45 CST 2017]; root of context hierarchy
+2017-03-05 22:07:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.techoffice.example.controller.SampleController.home()
+2017-03-05 22:07:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/stock/list]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.techoffice.example.controller.StockController.list()
+2017-03-05 22:07:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-05 22:07:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-05 22:07:55 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:07:55 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:07:56 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:07:56 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-05 22:07:56 INFO  TomcatEmbeddedServletContainer:192 - Tomcat started on port(s): 8080 (http)
+2017-03-05 22:07:56 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 11.78 seconds (JVM running for 12.445)
+2017-03-05 22:07:57 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-05 22:07:57 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2017-03-05 22:08:08 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-03-05 22:15:45 INFO  SpringBootExampleAppl:48 - Starting SpringBootExampleAppl on LAPTOP-PFAGQ4HQ with PID 10496 (C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Stock\StockAnalysis-YahooSpringBoot\target\classes started by user in C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Stock\StockAnalysis-YahooSpringBoot)
+2017-03-05 22:15:45 INFO  SpringBootExampleAppl:637 - No active profile set, falling back to default profiles: default
+2017-03-05 22:15:45 INFO  AnnotationConfigEmbeddedWebApplicationContext:581 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33b37288: startup date [Sun Mar 05 22:15:45 CST 2017]; root of context hierarchy
+2017-03-05 22:15:46 INFO  Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-05 22:15:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 22:15:47 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2017-03-05 22:15:47 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-05 22:15:48 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:15:49 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:15:49 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a51786ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:15:49 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-03-05 22:15:50 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 4696 ms
+2017-03-05 22:15:50 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-05 22:15:50 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-05 22:15:50 INFO  FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-05 22:15:50 INFO  FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-05 22:15:51 INFO  FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-05 22:15:51 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 22:15:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 22:15:51 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 22:15:51 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 22:15:51 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 22:15:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 22:15:52 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 22:15:54 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 22:15:54 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33b37288: startup date [Sun Mar 05 22:15:45 CST 2017]; root of context hierarchy
+2017-03-05 22:15:54 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.techoffice.example.controller.SampleController.home()
+2017-03-05 22:15:54 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/stock/list]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.techoffice.example.controller.StockController.list()
+2017-03-05 22:15:54 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/stock/]}" onto public org.springframework.web.servlet.ModelAndView com.techoffice.example.controller.StockController.home()
+2017-03-05 22:15:54 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-05 22:15:54 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-05 22:15:54 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:15:54 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:15:55 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:15:55 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-05 22:15:56 INFO  TomcatEmbeddedServletContainer:192 - Tomcat started on port(s): 8080 (http)
+2017-03-05 22:15:56 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 10.789 seconds (JVM running for 11.952)
+2017-03-05 22:15:56 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-05 22:15:56 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 76 ms
+2017-03-05 22:16:07 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-03-05 22:18:34 INFO  SpringBootExampleAppl:48 - Starting SpringBootExampleAppl on LAPTOP-PFAGQ4HQ with PID 9868 (C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Stock\StockAnalysis-YahooSpringBoot\target\classes started by user in C:\Users\user\git_workdspace\TechOffice-Java\999-Dev\Stock\StockAnalysis-YahooSpringBoot)
+2017-03-05 22:18:34 INFO  SpringBootExampleAppl:637 - No active profile set, falling back to default profiles: default
+2017-03-05 22:18:34 INFO  AnnotationConfigEmbeddedWebApplicationContext:581 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33b37288: startup date [Sun Mar 05 22:18:34 CST 2017]; root of context hierarchy
+2017-03-05 22:18:34 INFO  Version:30 - HV000001: Hibernate Validator 5.3.4.Final
+2017-03-05 22:18:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-05 22:18:35 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor' with a different definition: replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2017-03-05 22:18:35 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=transactionalEventListenerFactory,declaringClass=org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration]: a definition for bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' already exists. This top-level bean definition is considered as an override.
+2017-03-05 22:18:36 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:18:37 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:18:37 INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker:328 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3459a1c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-03-05 22:18:37 INFO  TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2017-03-05 22:18:38 INFO  ContextLoader:276 - Root WebApplicationContext: initialization completed in 4150 ms
+2017-03-05 22:18:38 INFO  ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2017-03-05 22:18:38 INFO  FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-03-05 22:18:38 INFO  FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-03-05 22:18:38 INFO  FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-03-05 22:18:38 INFO  FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2017-03-05 22:18:38 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 22:18:38 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-05 22:18:38 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-05 22:18:38 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-05 22:18:38 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-05 22:18:38 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-05 22:18:39 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-05 22:18:40 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-05 22:18:41 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@33b37288: startup date [Sun Mar 05 22:18:34 CST 2017]; root of context hierarchy
+2017-03-05 22:18:41 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.techoffice.example.controller.SampleController.home()
+2017-03-05 22:18:41 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/stock/list]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.techoffice.example.controller.StockController.list()
+2017-03-05 22:18:41 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/stock/]}" onto public org.springframework.web.servlet.ModelAndView com.techoffice.example.controller.StockController.home()
+2017-03-05 22:18:41 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-03-05 22:18:41 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-03-05 22:18:41 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:18:41 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:18:41 INFO  SimpleUrlHandlerMapping:354 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-03-05 22:18:42 INFO  AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2017-03-05 22:18:42 INFO  TomcatEmbeddedServletContainer:192 - Tomcat started on port(s): 8080 (http)
+2017-03-05 22:18:42 INFO  SpringBootExampleAppl:57 - Started SpringBootExampleAppl in 8.692 seconds (JVM running for 9.403)
+2017-03-05 22:18:45 INFO  DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2017-03-05 22:18:45 INFO  DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+2017-03-05 22:18:45 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
