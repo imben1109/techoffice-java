@@ -8,7 +8,7 @@
 <body>
 	<h1>Stock List</h1>
 	<c:if test="${not empty stocks}">
-		<table border="1">
+		<table border="1" id="stockList">
 			<thead>
 				<tr>
 					<th>Code</th>

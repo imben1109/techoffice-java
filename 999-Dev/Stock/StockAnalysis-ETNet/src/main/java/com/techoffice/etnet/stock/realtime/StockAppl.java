@@ -16,16 +16,12 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.etnet.stock.realtime.crawler.RealTimeStockCrawler;
-import com.techoffice.etnet.stock.realtime.dao.StockDao;
 
 @Component
 public class StockAppl {
 	
 	@Autowired
 	private RealTimeStockCrawler realTimeStockWebService;
-	
-	@Autowired
-	private StockDao stockDao;
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{

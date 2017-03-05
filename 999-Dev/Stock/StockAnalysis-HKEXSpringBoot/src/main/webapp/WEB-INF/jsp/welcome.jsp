@@ -6,7 +6,7 @@
 <html lang="en">
 
 <body>
-	<h1>Horse Analysis</h1>
+	<h1>Stock Analysis</h1>
 	
 </body>
 
