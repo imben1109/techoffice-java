@@ -26,12 +26,16 @@ public class HsiStockListCrawlerTest {
 	@Autowired
 	private HsiStockCrawler hsiStockCrawler;
 	
-	@Test
-	public void retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
-		List<HsiStock> hsiStockList = hsiStockCrawler.retrieveStockList();
-		for (HsiStock stock: hsiStockList){
-			System.out.println(stock.getChiName());
-		}
-	}
+//	@Test
+//	public void retrieveStockList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
+//		List<HsiStock> hsiStockList = hsiStockCrawler.retrieveStockList();
+//		for (HsiStock stock: hsiStockList){
+//			System.out.println(stock.getChiName());
+//		}
+//	}
 	
+	@Test
+	public void test(){
+		
+	}
 }

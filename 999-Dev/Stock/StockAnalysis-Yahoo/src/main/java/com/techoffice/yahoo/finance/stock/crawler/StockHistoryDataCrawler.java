@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -15,22 +14,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.xpath.XPathExpressionException;
-
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.converters.DateConverter;
-import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Component;
-import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.HeaderColumnNameTranslateMappingStrategy;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 import com.techoffice.yahoo.finance.stock.dto.CsvPrice;
 import com.techoffice.yahoo.finance.stock.model.Price;
 

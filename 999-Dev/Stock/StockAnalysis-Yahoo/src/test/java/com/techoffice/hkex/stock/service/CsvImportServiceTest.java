@@ -21,9 +21,14 @@ public class CsvImportServiceTest {
 	@Autowired
 	private StockDao stockDao;
 	
+//	@Test
+//	public void updateStockList() throws IOException{
+//		csvImportService.updateStockList();
+//		System.out.println(stockDao.list().size());
+//	}
+	
 	@Test
-	public void updateStockList() throws IOException{
-		csvImportService.updateStockList();
-		System.out.println(stockDao.list().size());
+	public void test(){
+		
 	}
 }

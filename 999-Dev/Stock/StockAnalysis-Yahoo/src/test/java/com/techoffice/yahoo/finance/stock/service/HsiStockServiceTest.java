@@ -31,12 +31,17 @@ public class HsiStockServiceTest {
 		hsiStockService.updateHsiStockList();
 	}
 	
+//	@Test
+//	public void list(){
+//		List<HsiStock> list = hsiStockService.list();
+//		for (HsiStock hsiStock: list){
+//			System.out.println(hsiStock.getChiName() + "(" + hsiStock.getStockNo() + ")");
+//		}
+//	}
+	
 	@Test
-	public void list(){
-		List<HsiStock> list = hsiStockService.list();
-		for (HsiStock hsiStock: list){
-			System.out.println(hsiStock.getChiName() + "(" + hsiStock.getStockNo() + ")");
-		}
+	public void test(){
+		
 	}
 
 }
