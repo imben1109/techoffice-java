@@ -6,7 +6,8 @@
 <html lang="en">
 
 <body>
-	Hello World! This is Spring Boot JSP Page!!!
+	<h1>Horse Analysis</h1>
+	
 </body>
 
 </html>
