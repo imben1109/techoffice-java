@@ -1,12 +1,19 @@
 package com.techoffice.hkex.csvimport.stock.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table
 @Entity
-public class Stock {
+public class Stock implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4536242756643954977L;
 	
 	@Id
 	private String stockCode;

@@ -31,13 +31,13 @@ public class StockAppl {
 	private PriceDao priceDao;
 	
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, IllegalAccessException, InvocationTargetException{
-		List<Price> prices =stockHistoryDataCrawler.retrieveHistoryPriceData("0939");
-		priceDao.deletePrice("0939");
-		priceDao.addPriceList(prices);
-		List<Price> dbPrices = priceDao.getPriceList();
-		for(Price price: dbPrices){
-			System.out.println(price.getAdjClose());
-		}
+//		List<Price> prices =stockHistoryDataCrawler.retrieveHistoryPriceData("0939");
+//		priceDao.deletePrice("0939");
+//		priceDao.addPriceList(prices);
+//		List<Price> dbPrices = priceDao.getPriceList();
+//		for(Price price: dbPrices){
+//			System.out.println(price.getAdjClose());
+//		}
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, IllegalAccessException, InvocationTargetException{

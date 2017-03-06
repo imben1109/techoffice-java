@@ -2,13 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:batch="http://www.springframework.org/schema/batch" 
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx 
-        http://www.springframework.org/schema/tx/spring-tx.xsd">
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/batch
+        http://www.springframework.org/schema/batch/spring-batch-2.2.xsd">
 
 	<!-- Auto-Scan Spring Bean -->
 	<context:component-scan base-package="com.techoffice" />
@@ -44,10 +47,46 @@
 		</property>
 	</bean>
 	
-	<bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
 	</bean>
 
-	<tx:annotation-driven transaction-manager="txManager"/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<!-- Spring Batch -->
+	<bean id="jobRepository"
+		class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+
+	<bean id="jobLauncher"
+		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository" />
+	</bean>
+	
+	<bean id="stockReader" class="com.techoffice.yahoo.finance.stock.batch.StockReader" scope="step">
+		<property name="stockList" value="#{stepExecutionContext[stockList]}"/>
+	</bean>
+	<bean id="stockWriter" class="com.techoffice.yahoo.finance.stock.batch.StockWriter" />
+	<bean id="stockProcessor" class="com.techoffice.yahoo.finance.stock.batch.StockProcessor" />
+	<bean id="stockPartitioner" class="com.techoffice.yahoo.finance.stock.batch.StockPartitioner" />
+	
+	<bean id="taskExecutor" class="org.springframework.core.task.SimpleAsyncTaskExecutor" />
+	
+	<batch:job id="updateHistoryPriceJob">
+		<batch:step id="step1">
+			<batch:partition step="updateHistoryPriceStep" partitioner="stockPartitioner">
+				<batch:handler grid-size="10" task-executor="taskExecutor"/>
+			</batch:partition>
+		</batch:step>
+	</batch:job>
+	
+	<batch:step id="updateHistoryPriceStep">
+		<batch:tasklet>
+			<batch:chunk reader="stockReader" writer="stockWriter"
+				processor="stockProcessor" commit-interval="1"/>
+		</batch:tasklet>
+	</batch:step>
+	
 	
 </beans>

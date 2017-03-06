@@ -37,7 +37,7 @@
 	<bean id="simpleItemProcessor" class="com.techoffice.example.batch.SimpleProcessor" />
 
 	<!-- Job Definition -->
-	<batch:job id="reportJob">
+	<batch:job id="updateHistoryPrice">
 		<batch:step id="step1">
 			<batch:partition step="slaveJob" partitioner="techofficePartitioner">
 				<batch:handler grid-size="10" task-executor="taskExecutor"/>

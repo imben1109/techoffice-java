@@ -65,19 +65,18 @@ public class StockHistoryDataCrawler {
 	}
 	
 	public List<Price> convertCsvPriceToPrice(List<CsvPrice> csvPriceList) throws IllegalAccessException, InvocationTargetException{
-		DateConverter dateConverter = new DateConverter();
-		dateConverter.setPattern("yyyy-MM-dd");
-		ConvertUtils.register(dateConverter, java.util.Date.class);
-		
+
+
 		List<Price> priceList = new ArrayList<Price>();
 		
 		for (CsvPrice csvPrice: csvPriceList){
 			Price price = new Price();
+			DateConverter dateConverter = new DateConverter();
+			dateConverter.setPattern("yyyy-MM-dd");
+			ConvertUtils.register(dateConverter, java.util.Date.class);
 			BeanUtils.copyProperties(price, csvPrice);
 			priceList.add(price);
 		}
-		
-		ConvertUtils.deregister();
 		
 		return priceList;
 	}
