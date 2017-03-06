@@ -13,7 +13,7 @@ public class StockReader implements ItemReader<Stock>{
 
 	private List<Stock> stockList;
 	
-	public Stock read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+	public Stock read()  {
 		if (!stockList.isEmpty()){
 			Stock stock = stockList.remove(0);
 			return stock;

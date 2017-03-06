@@ -1,20 +1,15 @@
 package com.techoffice.yahoo.finance.stock.batch;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.batch.item.ItemWriter;
 
-import com.techoffice.yahoo.finance.stock.model.Price;
+public class StockWriter implements ItemWriter<Map<String, Object>>{
 
-public class StockWriter implements ItemWriter<List<Price>>{
-	
-	
-	public void write(List<? extends List<Price>> items) throws Exception {
-		for (List<Price> item: items){
-			
-		}
+	public void write(List<? extends Map<String, Object>> items) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
-
-
 
 }
