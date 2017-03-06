@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:batch="http://www.springframework.org/schema/batch" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/batch
+        http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<context:component-scan base-package="com.techoffice.example" />
+
+	<!-- Spring Batch -->
+	<bean id="jobRepository"
+		class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+
+	<bean id="jobLauncher"
+		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository" />
+	</bean>
+
+	<bean id="simpleItemReader" class="com.techoffice.example.batch.SimpleItemReader" scope="step">
+		<property name="param1" value="#{stepExecutionContext[param1]}"/>
+		<property name="param2" value="#{stepExecutionContext[param2]}"/>
+	</bean>
+	<bean id="simpleItemWriter" class="com.techoffice.example.batch.SimpleItemWriter" />
+	<bean id="simpleItemProcessor" class="com.techoffice.example.batch.SimpleProcessor" />
+
+	<!-- Job Definition -->
+	<batch:job id="reportJob">
+		<batch:step id="step1">
+			<batch:partition step="slaveJob" partitioner="techofficePartitioner">
+				<batch:handler grid-size="10" task-executor="taskExecutor"/>
+			</batch:partition>
+		</batch:step>
+	</batch:job>
+
+  	<bean id="taskExecutor" class="org.springframework.core.task.SimpleAsyncTaskExecutor" />
+
+	<bean id="techofficePartitioner" class="com.techoffice.example.batch.TechofficePartitioner" />
+	
+	<batch:step id="slaveJob">
+		<batch:tasklet>
+			<batch:chunk reader="simpleItemReader" writer="simpleItemWriter"
+				processor="simpleItemProcessor" commit-interval="1"/>
+		</batch:tasklet>
+	</batch:step>
+
+</beans>
