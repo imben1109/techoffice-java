@@ -6174,3 +6174,161 @@ org.springframework.batch.core.JobExecutionException: Partition handler returned
 2017-03-06 23:13:31 INFO  SimpleJobLauncher:136 - Job: [FlowJob: [name=updateHistoryPriceJob]] completed with the following parameters: [{}] and the following status: [FAILED]
 2017-03-06 23:13:31 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@10bdf5e5: startup date [Mon Mar 06 23:12:27 CST 2017]; root of context hierarchy
 2017-03-06 23:13:31 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-06 23:23:12 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-03-06 23:23:12 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-03-06 23:23:12 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61832929, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@29774679, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ffc5af1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e5792a0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@26653222]
+2017-03-06 23:23:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-06 23:23:13 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@10bdf5e5: startup date [Mon Mar 06 23:23:13 CST 2017]; root of context hierarchy
+2017-03-06 23:23:13 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'stockReader' with a different definition: replacing [Generic bean: class [com.techoffice.yahoo.finance.stock.batch.StockReader]; scope=step; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [beans.xml]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [beans.xml]]
+2017-03-06 23:23:13 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-06 23:23:13 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-06 23:23:13 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-06 23:23:13 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-06 23:23:13 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-06 23:23:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-06 23:23:14 WARN  JdbcEnvironmentInitiator:132 - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+2017-03-06 23:23:14 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-06 23:23:14 INFO  LobCreatorBuilderImpl:63 - HHH000422: Disabling contextual LOB creation as connection was null
+2017-03-06 23:23:14 WARN  SqlExceptionHelper:129 - SQL Error: 0, SQLState: null
+2017-03-06 23:23:14 ERROR SqlExceptionHelper:131 - Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+2017-03-06 23:23:14 WARN  GenericApplicationContext:549 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: techoffice.example] Unable to build Hibernate SessionFactory
+2017-03-06 23:23:14 ERROR TestContextManager:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@29774679] to prepare test instance [com.techoffice.hkex.stock.batch.HistoryPriceBatchServiceTest@63ec445c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactoryBean' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: techoffice.example] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: techoffice.example] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:951)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:881)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 40 more
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:70)
+	at org.hibernate.tool.schema.internal.DdlTransactionIsolatorSharedImpl.getIsolatedConnection(DdlTransactionIsolatorSharedImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorH2DatabaseImpl.extractMetadata(SequenceInformationExtractorH2DatabaseImpl.java:35)
+	at org.hibernate.tool.schema.internal.exec.ImprovedDatabaseInformationImpl.initializeSequences(ImprovedDatabaseInformationImpl.java:64)
+	at org.hibernate.tool.schema.internal.exec.ImprovedDatabaseInformationImpl.<init>(ImprovedDatabaseInformationImpl.java:58)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:126)
+	at org.hibernate.tool.schema.internal.SchemaMigratorImpl.doMigration(SchemaMigratorImpl.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:176)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:65)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:307)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:490)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:878)
+	... 46 more
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192])
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 58 more
+Caused by: org.h2.jdbc.JdbcSQLException: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.mvstore.db.MVTableEngine$Store.convertIllegalStateException(MVTableEngine.java:187)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:167)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2463)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:64)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.engine.Engine.createSession(Engine.java:27)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:118)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:102)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 63 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/user/StockAnalysisYahoo.mv.db [1.4.192/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:344)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2893)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	... 81 more
+2017-03-06 23:23:24 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-03-06 23:23:24 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-03-06 23:23:24 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61832929, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@29774679, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ffc5af1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e5792a0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@26653222]
+2017-03-06 23:23:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2017-03-06 23:23:25 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@10bdf5e5: startup date [Mon Mar 06 23:23:25 CST 2017]; root of context hierarchy
+2017-03-06 23:23:25 INFO  DefaultListableBeanFactory:842 - Overriding bean definition for bean 'stockReader' with a different definition: replacing [Generic bean: class [com.techoffice.yahoo.finance.stock.batch.StockReader]; scope=step; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [beans.xml]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [beans.xml]]
+2017-03-06 23:23:25 INFO  LocalContainerEntityManagerFactoryBean:334 - Building JPA container EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-06 23:23:25 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: techoffice.example
+	...]
+2017-03-06 23:23:25 INFO  Version:45 - HHH000412: Hibernate Core {5.2.2.Final}
+2017-03-06 23:23:25 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-03-06 23:23:25 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2017-03-06 23:23:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-06 23:23:26 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-06 23:23:26 INFO  LocalContainerEntityManagerFactoryBean:382 - Initialized JPA EntityManagerFactory for persistence unit 'techoffice.example'
+2017-03-06 23:23:28 INFO  SimpleJobLauncher:195 - No TaskExecutor has been set, defaulting to synchronous executor.
+2017-03-06 23:23:28 WARN  HibernateJpaDialect:366 - JDBC Connection to reset not identical to originally prepared Connection - please make sure to use connection release mode ON_CLOSE (the default) and to run against Hibernate 4.2+ (or switch HibernateJpaDialect's prepareConnection flag to false
+2017-03-06 23:23:28 WARN  HibernateJpaDialect:366 - JDBC Connection to reset not identical to originally prepared Connection - please make sure to use connection release mode ON_CLOSE (the default) and to run against Hibernate 4.2+ (or switch HibernateJpaDialect's prepareConnection flag to false
+2017-03-06 23:23:28 INFO  SimpleJobLauncher:133 - Job: [FlowJob: [name=updateHistoryPriceJob]] launched with the following parameters: [{}]
+2017-03-06 23:23:29 INFO  SimpleStepHandler:146 - Executing step: [step1]
+2017-03-06 23:23:29 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-03-07 00:34:59 INFO  SimpleJobLauncher:136 - Job: [FlowJob: [name=updateHistoryPriceJob]] completed with the following parameters: [{}] and the following status: [COMPLETED]
+2017-03-07 00:34:59 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@10bdf5e5: startup date [Mon Mar 06 23:23:25 CST 2017]; root of context hierarchy
+2017-03-07 00:34:59 INFO  LocalContainerEntityManagerFactoryBean:551 - Closing JPA EntityManagerFactory for persistence unit 'techoffice.example'
