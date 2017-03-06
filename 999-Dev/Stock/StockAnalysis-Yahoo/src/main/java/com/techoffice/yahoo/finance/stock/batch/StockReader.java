@@ -16,6 +16,7 @@ public class StockReader implements ItemReader<Stock>{
 	public Stock read()  {
 		if (!stockList.isEmpty()){
 			Stock stock = stockList.remove(0);
+			System.out.println("Now Reading: " + stock.getStockCode());
 			return stock;
 		}
 		return null;

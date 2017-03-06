@@ -84,7 +84,7 @@
 	<batch:step id="updateHistoryPriceStep">
 		<batch:tasklet>
 			<batch:chunk reader="stockReader" writer="stockWriter"
-				processor="stockProcessor" commit-interval="1"/>
+				processor="stockProcessor" commit-interval="5"/>
 		</batch:tasklet>
 	</batch:step>
 	

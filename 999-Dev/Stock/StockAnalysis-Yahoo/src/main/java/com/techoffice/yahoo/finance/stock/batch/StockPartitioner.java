@@ -30,6 +30,7 @@ public class StockPartitioner implements Partitioner{
 			context.put("stockList", new ArrayList<Stock>(partitionStockList.get(i)));
 			results.put("partition-" + i, context);
 		}
+		
 		return results;
 	}
 

@@ -22,10 +22,11 @@ public class StockProcessor implements ItemProcessor<Stock, Map<String, Object>>
 	public Map<String, Object> process(Stock stock)  {
 		System.out.println("Now processing: " + stock.getStockCode());
 		Map<String, Object> result = new HashMap<String, Object>();
-		result.put("stockCode", stock);
+		result.put("stock", stock);
 		List<Price> prices = new ArrayList<Price>();;
 		try {
 			prices = stockHistoryDataCrawler.retrieveHistoryPriceData(stock.getStockCode().substring(1));
+			result.put("result", "success");
 		} catch (Exception e) {
 			result.put("result", "fail");
 			result.put("exception", e);
