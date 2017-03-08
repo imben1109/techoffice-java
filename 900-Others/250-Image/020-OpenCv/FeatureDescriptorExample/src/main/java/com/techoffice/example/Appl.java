@@ -68,9 +68,9 @@ public class Appl {
 		DescriptorMatcher descriptorMatcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE);
 		descriptorMatcher.match(descriptors1, descriptors1, matches);
 		
-		Mat found = new Mat();
-		Features2d.drawMatches(grayMat1, keypoints1, grayMat2, keypoints2, matches, found);
-		Imgcodecs.imwrite("match.png", found);
+//		Mat found = new Mat();
+//		Features2d.drawMatches(grayMat1, keypoints1, grayMat2, keypoints2, matches, found);
+//		Imgcodecs.imwrite("match.png", found);
 
 		// 
 		List<DMatch> matchesList = matches.toList();
@@ -79,10 +79,11 @@ public class Appl {
 
         for (int i = 0; i < matchesList.size(); i++) {
             float dist =  matchesList.get(i).distance;
-            
+            if(dist != 0 ){
             	System.out.println(dist);
             	bestMatchesList.add(matchesList.get(i));
-            
+            }
+
         }
         bestMatches.fromList(bestMatchesList);
         
