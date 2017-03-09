@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
+import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfRect;
 import org.opencv.core.Point;
 import org.opencv.core.Rect;
@@ -11,6 +12,7 @@ import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
+import org.opencv.objdetect.Objdetect;
 
 public class Appl {
 	
@@ -37,7 +39,10 @@ public class Appl {
 		
 		// Detect face
 		MatOfRect detector = new MatOfRect();
-		faceCascade.detectMultiScale(mat, detector);								
+		faceCascade.detectMultiScale(mat, detector);	
+		
+		Objdetect.groupRectangles(detector, new MatOfInt(), 1, 0.8);
+
 		for (Rect rect : detector.toArray()) {
 			Imgproc.rectangle(mat, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height),
 					new Scalar(0, 255, 0), 3);
