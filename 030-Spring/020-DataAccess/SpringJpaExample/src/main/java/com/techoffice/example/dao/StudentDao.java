@@ -21,6 +21,7 @@ public class StudentDao {
 	}
 	
 	public List<Student> findAll() {
+		
 		Query query =  em.createQuery("SELECT s FROM Student s");
 		query.setMaxResults(10);
 		query.setFirstResult(1);

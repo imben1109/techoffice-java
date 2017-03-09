@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techoffice.hkex.javafx.controller.StockController">
+	<children>
+		<Label text="HKEX Stock List" />
+		<TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+		     <columns>
+				<TableColumn text="Code" prefWidth="100">
+					<cellValueFactory>
+						<PropertyValueFactory property="stockCode" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn text="Name" prefWidth="100">
+					<cellValueFactory>
+						<PropertyValueFactory property="name" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn text="Chinese Name" prefWidth="100">
+					<cellValueFactory>
+						<PropertyValueFactory property="chiName" />
+					</cellValueFactory>
+				</TableColumn>
+			 </columns>    
+			 <items>
+				<FXCollections fx:factory="observableArrayList">
+			 	</FXCollections>
+			 </items>
+		</TableView>
+		<VBox>
+			<children>
+				<HBox>
+					<children>
+						<Label text="Stock Count: " />
+						<Label fx:id="stockCount" />
+					</children>
+				</HBox>
+				<HBox>
+					<children>
+						<Button text="Refresh" onAction="#refresh"/>
+						<Button text="Export" onAction="#export" />	
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		
+	</children>
+</VBox>

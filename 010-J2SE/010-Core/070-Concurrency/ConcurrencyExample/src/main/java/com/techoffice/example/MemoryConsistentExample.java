@@ -35,6 +35,7 @@ public class MemoryConsistentExample {
 				}
 				if (memoryConsistentExample.getCount() != count){
 					System.out.println("The count is alter by other thread. Expected Count is " + count + ". But current count is " + memoryConsistentExample.getCount() );
+					break;
 				}
 			}
 		}

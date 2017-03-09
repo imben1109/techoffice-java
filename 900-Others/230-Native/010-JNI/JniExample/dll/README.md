@@ -1,0 +1,1 @@
+tcc.exe -I<JDK HOME>\include -shared -I<JDK HOME>\include\win32 com_techoffice_example_JniCaller.c -o JniCaller.dll

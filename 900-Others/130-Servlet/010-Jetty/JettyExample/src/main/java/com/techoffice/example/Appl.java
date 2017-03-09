@@ -7,7 +7,6 @@ public class Appl {
         Server server = new Server(8080);
         ServletHandler handler = new ServletHandler();
         server.setHandler(handler);
-        
         handler.addServletWithMapping(ApplServlet.class, "/*");
         
         server.start();

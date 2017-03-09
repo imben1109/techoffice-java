@@ -16,8 +16,8 @@ public class RemoteRepositoryAppl {
 	public static void main(String[] args) throws SVNException{
 		
 		SVNRepository repository = null;
-		repository = SVNRepositoryFactory.create(SVNURL.parseURIDecoded(url));
-		ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager( user, password );
+		repository = SVNRepositoryFactory.create(SVNURL.parseURIEncoded(url));
+		ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager(user, password.toCharArray());
 		repository.setAuthenticationManager(authManager);
 		
 		System.out.println("Repository Root: " + repository.getRepositoryRoot( true ) );

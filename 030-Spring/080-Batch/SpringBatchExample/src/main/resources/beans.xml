@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 
-	<context:component-scan base-package="com.ittechoffice.example" />
+	<context:component-scan base-package="com.techoffice.example" />
 
 	<!-- Spring Batch -->
 	<bean id="jobRepository"
@@ -29,9 +29,9 @@
 		<property name="jobRepository" ref="jobRepository" />
 	</bean>
 
-	<bean id="simpleItemReader" class="com.ittechoffice.example.batch.SimpleItemReader" />
-	<bean id="simpleItemWriter" class="com.ittechoffice.example.batch.SimpleItemWriter" />
-	<bean id="simpleItemProcessor" class="com.ittechoffice.example.batch.SimpleProcessor" />
+	<bean id="simpleItemReader" class="com.techoffice.example.batch.SimpleItemReader" />
+	<bean id="simpleItemWriter" class="com.techoffice.example.batch.SimpleItemWriter" />
+	<bean id="simpleItemProcessor" class="com.techoffice.example.batch.SimpleProcessor" />
 
 	<!-- Job Definition -->
 	<batch:job id="reportJob">

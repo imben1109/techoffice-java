@@ -12,3 +12,5 @@ Hibernate is an Object-Oriented Mapping (ORM) Framework, also a JPA provider. It
 * Hibernate5ToolsAntExample:		An example demonstrate how to use Hibernate Tools to generate Model by Ant
 * Hibernate5ToolsAntMavenExample:	An example demonstrate how to use Hibernate Tools to generate Model by Maven (Ant plugin)
 
+# Reference
+* http://hibernate.org/
