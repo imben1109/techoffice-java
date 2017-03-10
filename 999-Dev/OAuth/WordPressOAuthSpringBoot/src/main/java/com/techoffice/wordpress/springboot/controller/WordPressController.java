@@ -1,4 +1,4 @@
-package com.techoffice.controller;
+package com.techoffice.wordpress.springboot.controller;
 
 import java.util.List;
 import java.util.Map;

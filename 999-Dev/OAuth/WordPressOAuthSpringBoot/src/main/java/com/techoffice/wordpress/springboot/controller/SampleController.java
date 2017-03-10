@@ -1,4 +1,4 @@
-package com.techoffice.controller;
+package com.techoffice.wordpress.springboot.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
