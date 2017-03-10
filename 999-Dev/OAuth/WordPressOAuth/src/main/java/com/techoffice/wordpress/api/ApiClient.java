@@ -2,6 +2,7 @@ package com.techoffice.wordpress.api;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -58,18 +59,10 @@ public class ApiClient {
 	
 	public static List<Map<String, Object>> getAllPosts(String siteId) throws ApiClientException{
 		List<Map<String, Object>> results = new ArrayList<Map<String, Object>>();
-		Map<String, Object> pageCountMap = getPostCount(siteId);
-		int publishCount = 0;
-		int draftCount = 0;
+		Map<String, Integer> pageCountMap = getPostCount(siteId);
 		int totalCount = 0;
 		int postPerPage = 20;
-		if (pageCountMap.get("publish") instanceof Integer){
-			publishCount = (Integer) pageCountMap.get("publish");
-		}
-		if (pageCountMap.get("draft") instanceof Integer){
-			draftCount = (Integer) pageCountMap.get("draft");
-		}
-		totalCount = publishCount + draftCount;
+		totalCount = pageCountMap.get("count");
 		int pageNum = (int) Math.ceil((double)totalCount / (double)postPerPage); 
 		System.out.println("Post Count: " + totalCount + " pageNum: " + pageNum);
 		for (int i=0; i<pageNum; i++){
@@ -81,16 +74,23 @@ public class ApiClient {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static Map<String, Object> getPostCount(String siteId) throws ApiClientException{
+	public static Map<String, Integer> getPostCount(String siteId) throws ApiClientException{
+		Map<String, Integer> result = new HashMap<String, Integer>();
 		String token = TokenUtil.getToken();
-		String listSitePostsUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POSTCOUNT, siteId);
-		String postCountjsonReturn = ApiClientUtil.getApiReturn(listSitePostsUrl, token);
-		Map<String, Object> postCountjsonMap = JsonUtil.toMap(postCountjsonReturn);
-		Map<String, Map<String, Object>> result = (Map<String, Map<String, Object>>) postCountjsonMap.get("counts");
-		Map<String, Object> allCountMap = result.get("all");
-		allCountMap.put("siteId", siteId);
-		return allCountMap;
-
-
+		String postCountsPageUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POSTCOUNTS, siteId, "page");
+		String postCountsPostUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POSTCOUNTS, siteId, "post");
+		String postCountsPagejsonReturn = ApiClientUtil.getApiReturn(postCountsPageUrl, token);
+		String postCountsPostjsonReturn = ApiClientUtil.getApiReturn(postCountsPostUrl, token);
+		Map<String, Object> postCountsPageJsonMap = JsonUtil.toMap(postCountsPagejsonReturn);
+		Map<String, Object> postCountsPostJsonMap = JsonUtil.toMap(postCountsPostjsonReturn);
+		Map<String, Map<String, Integer>> pageCountMap = (Map<String, Map<String, Integer>>) postCountsPageJsonMap.get("counts");
+		Map<String, Map<String, Integer>> postCountMap = (Map<String, Map<String, Integer>>) postCountsPostJsonMap.get("counts");
+		Map<String, Integer> allPageCountMap = pageCountMap.get("all");
+		Map<String, Integer> allPostCountMap = postCountMap.get("all");
+		Integer pagePublishCount = allPageCountMap.get("publish");
+		Integer pagePostCount = allPostCountMap.get("publish");
+		Integer total = pagePublishCount + pagePostCount;
+		result.put("count", total);
+		return result;
 	}
 }

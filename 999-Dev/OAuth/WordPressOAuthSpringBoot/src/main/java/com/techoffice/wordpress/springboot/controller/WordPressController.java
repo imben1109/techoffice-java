@@ -48,8 +48,8 @@ public class WordPressController {
 	
 	@RequestMapping("postCount")
 	@ResponseBody
-	public Map<String, Object> postCount(@RequestParam(name="siteId") String siteId) throws ApiClientException {
-		Map<String, Object> posts = ApiClient.getPostCount(siteId);
+	public Map<String, Integer> postCount(@RequestParam(name="siteId") String siteId) throws ApiClientException {
+		Map<String, Integer> posts = ApiClient.getPostCount(siteId);
 		return posts;
 	}
 	

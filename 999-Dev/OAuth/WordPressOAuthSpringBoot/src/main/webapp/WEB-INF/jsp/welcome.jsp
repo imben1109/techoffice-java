@@ -7,6 +7,9 @@
 
 <body>
 	<h1>WordPress OAuth</h1>
+	<ul>
+		<li><a href="wordpress/">Sites</a></li>
+	</ul>
 </body>
 
 </html>
