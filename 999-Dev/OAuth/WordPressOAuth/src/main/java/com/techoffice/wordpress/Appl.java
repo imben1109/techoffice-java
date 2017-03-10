@@ -9,6 +9,7 @@ import com.techoffice.wordpress.api.ApiClient;
 import com.techoffice.wordpress.api.ApiUrlConstants;
 import com.techoffice.wordpress.oauth.OAuthFlow;
 import com.techoffice.wordpress.oauth.OAuthInfo;
+import com.techoffice.wordpress.oauth.util.TokenUtil;
 
 /**
  * This is Wordpress.com OAuth Example
@@ -31,9 +32,7 @@ public class Appl {
 	
 	
 	public static void main(String[] args) throws Exception{
-		OAuthInfo oAuthInfo = new OAuthInfo(AUTHORIZE_URL, TOKEN_URL, CLIENT_ID, CLIENT_SECRET, APPL_URL, API_VALIDATE_TOKEN_URL);
-		OAuthFlow oAuthFlow = new OAuthFlow(oAuthInfo);
-		String token = oAuthFlow.requestAccessToken();
+		String token = TokenUtil.getToken();
 		System.out.println("Access Token: " + token);
 		ApiClient.getApiReturn(API_USER_INFO_URL, token);
 		String sitesjsonReturn = ApiClient.getApiReturn(ApiUrlConstants.ME_SITES, token);

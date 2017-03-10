@@ -11,9 +11,6 @@ public class ApplConfig {
 	
 	public static final String CONFIG_FOLDER_NAME = ".ittechoffice";
 	public static final String APP_PROPERTIES_FILE = "application.properties";
-	public static final String EXAMPLE_HOME = "example_home";
-	public static final String GIT_USER = "git_user";
-	public static final String GIT_PASSWORD = "git_password";
 	public static final String PROXY_HOST = "proxy.host";
 	public static final String PROXY_PORT = "proxy.port";
 	public static final String PROXY_USERNAME = "proxy.username";
@@ -43,11 +40,5 @@ public class ApplConfig {
 		}
 	}
 	
-	public static void main(String[] args) throws Exception{
-		String exampleHome = ApplConfig.config.getString(ApplConfig.EXAMPLE_HOME);
-		if (exampleHome == null){
-			throw new Exception("Cannot Find Example Project Home");
-		}
-		System.out.println("Project root: " + exampleHome);
-	}
+
 }
