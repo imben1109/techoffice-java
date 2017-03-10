@@ -1,5 +1,8 @@
 package com.techoffice.wordpress;
 
+import java.util.List;
+import java.util.Map;
+
 import com.techoffice.wordpress.api.ApiClient;
 
 /**
@@ -10,7 +13,10 @@ import com.techoffice.wordpress.api.ApiClient;
  */
 public class Appl {	
 	public static void main(String[] args) throws Exception{
-		ApiClient.getSites();
+		List<Map<String, Object>> sites = ApiClient.getSites();
+		for (Map<String, Object> site : sites){
+			System.out.println(site.get("ID"));
+		}
 	}
 	
 }

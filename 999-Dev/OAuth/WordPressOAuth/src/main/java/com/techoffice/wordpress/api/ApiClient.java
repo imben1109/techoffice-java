@@ -21,36 +21,76 @@ public class ApiClient {
 		return ApiClientUtil.getApiReturn(API_USER_INFO_URL, token);
 	}
 	
-	public static List<Map<String, String>> getSites() throws ApiClientException{
-		List<Map<String, String>> result = new ArrayList<Map<String, String>>();
+	@SuppressWarnings("unchecked")
+	public static List<Map<String, Object>> getSites() throws ApiClientException{
+		List<Map<String, Object>> results = new ArrayList<Map<String, Object>>();
 		String token = TokenUtil.getToken();
 		String sitesjsonReturn = ApiClientUtil.getApiReturn(ApiUrlConstants.ME_SITES, token);
 		Map<String, Object> sitesjsonMap = JsonUtil.toMap(sitesjsonReturn);
 		Object sites = sitesjsonMap.get("sites");
-		if (sites instanceof List){
-			List<Map<String, Object>> siteList = (List<Map<String, Object>>) sites;
-			for (Map<String, Object> site: siteList){
-				String id = site.get("ID").toString();
-				String name = site.get("name").toString();
-				String url = site.get("URL").toString();
-				System.out.println(id + ": " + name + "(" + url + ")");
-			}
-		}
-		return result;
+		results = (List<Map<String, Object>>) sites;
+		return results;
 	}
 	
-	public static void test(String siteId) throws ApiClientException{
+	@SuppressWarnings("unchecked")
+	public static List<Map<String, Object>> getPosts(String siteId) throws ApiClientException{
+		List<Map<String, Object>> results = new ArrayList<Map<String, Object>>();
 		String token = TokenUtil.getToken();
-		String listSitePostsUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POSIT, siteId);
+		String listSitePostsUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POST, siteId);
 		String postsjsonReturn = ApiClientUtil.getApiReturn(listSitePostsUrl, token);
 		Map<String, Object> postsjsonMap = JsonUtil.toMap(postsjsonReturn);
 		Object posts = postsjsonMap.get("posts");
-		if (posts instanceof List){
-			List<Map<String, Object>> postList = (List<Map<String, Object>>) posts;
-			for (Map<String, Object> post: postList){
-				String content = post.get("content").toString();
-				System.out.println(content);
-			}
+		results = (List<Map<String, Object>>) posts;
+		return results;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static List<Map<String, Object>> getPosts(String siteId, int page) throws ApiClientException{
+		List<Map<String, Object>> results = new ArrayList<Map<String, Object>>();
+		String token = TokenUtil.getToken();
+		String listSitePostsUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POST, siteId);
+		String postsjsonReturn = ApiClientUtil.getApiReturn(listSitePostsUrl + "?type=any&offset=" + page*20, token);
+		Map<String, Object> postsjsonMap = JsonUtil.toMap(postsjsonReturn);
+		Object posts = postsjsonMap.get("posts");
+		results = (List<Map<String, Object>>) posts;
+		return results;
+	}
+	
+	public static List<Map<String, Object>> getAllPosts(String siteId) throws ApiClientException{
+		List<Map<String, Object>> results = new ArrayList<Map<String, Object>>();
+		Map<String, Object> pageCountMap = getPostCount(siteId);
+		int publishCount = 0;
+		int draftCount = 0;
+		int totalCount = 0;
+		int postPerPage = 20;
+		if (pageCountMap.get("publish") instanceof Integer){
+			publishCount = (Integer) pageCountMap.get("publish");
 		}
+		if (pageCountMap.get("draft") instanceof Integer){
+			draftCount = (Integer) pageCountMap.get("draft");
+		}
+		totalCount = publishCount + draftCount;
+		int pageNum = (int) Math.ceil((double)totalCount / (double)postPerPage); 
+		System.out.println("Post Count: " + totalCount + " pageNum: " + pageNum);
+		for (int i=0; i<pageNum; i++){
+			List<Map<String, Object>> result = getPosts(siteId, i);
+			System.out.println("pageNum: " + i + " Result Count:" + result.size());
+			results.addAll(result);
+		}
+		return results;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static Map<String, Object> getPostCount(String siteId) throws ApiClientException{
+		String token = TokenUtil.getToken();
+		String listSitePostsUrl = MessageFormat.format(ApiUrlConstants.SITES_SITE_POSTCOUNT, siteId);
+		String postCountjsonReturn = ApiClientUtil.getApiReturn(listSitePostsUrl, token);
+		Map<String, Object> postCountjsonMap = JsonUtil.toMap(postCountjsonReturn);
+		Map<String, Map<String, Object>> result = (Map<String, Map<String, Object>>) postCountjsonMap.get("counts");
+		Map<String, Object> allCountMap = result.get("all");
+		allCountMap.put("siteId", siteId);
+		return allCountMap;
+
+
 	}
 }
