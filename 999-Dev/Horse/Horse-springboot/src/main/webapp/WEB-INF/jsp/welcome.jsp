@@ -7,7 +7,9 @@
 
 <body>
 	<h1>Horse Analysis</h1>
-	
+	<ul>
+		<li><a href="/udapteRaceDateList">udapteRaceDateList</a></li>
+	</ul>
 </body>
 
 </html>
