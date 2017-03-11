@@ -1,4 +1,4 @@
-package com.techoffice.example.controller;
+package com.techoffice.jc.springboot.controller;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.techoffice.example.config;
+package com.techoffice.jc.springboot.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ImportResource;
