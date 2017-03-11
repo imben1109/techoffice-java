@@ -108,7 +108,7 @@ public class ResultQueueDateService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public Map<String, Integer> updateRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
+	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;

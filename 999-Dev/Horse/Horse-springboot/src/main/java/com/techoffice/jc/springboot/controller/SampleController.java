@@ -37,7 +37,7 @@ public class SampleController {
 		return map;
 	}
 	
-	@RequestMapping("/udapteRaceDateList")
+	@RequestMapping("/updateRaceDateList")
 	@ResponseBody
 	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException{
 		return resultQueueDateService.updateRaceDateList();

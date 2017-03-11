@@ -27,9 +27,9 @@ public class ResultQueueDateController {
 		return resultQueueDateService.getPendingQueueDateList();
 	}
 	
-	@RequestMapping("updateRaceResultQueueList")
+	@RequestMapping("processRaceResultQueueList")
 	@ResponseBody
-	public Map<String, Integer> updateRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
-		return resultQueueDateService.updateRaceResultQueueList();
+	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+		return resultQueueDateService.processRaceResultQueueList();
 	}
 }
