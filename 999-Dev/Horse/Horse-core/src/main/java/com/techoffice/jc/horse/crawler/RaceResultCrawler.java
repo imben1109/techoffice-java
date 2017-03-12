@@ -73,16 +73,15 @@ public class RaceResultCrawler {
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);
-		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[1]/td");
+		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "//*[@id='results']/div[2]/table/tbody/tr[1]/td");
 		for (int i =0; i<raceNumNodeList.getLength() - 1; i++){
 			Node raceNumTdNode = raceNumNodeList.item(i);
-			if (raceNumTdNode.getChildNodes().getLength() > 1){
+			if (raceNumTdNode.getChildNodes().getLength() >= 1){
 				// The first node is #Text
-				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
+				Node raceNumNode = raceNumTdNode.getChildNodes().item(0);
 				if ("a".equals(raceNumNode.getNodeName())){
 					String queueLocation = raceNumNode.getAttributes().getNamedItem("href").getNodeValue();
 					log.info(queueLocation);
-
 					String[] locationArr = queueLocation.split("/");
 					Date raceDate = RaceResultHelper.getRaceDate(locationArr[7]);
 					String raceType = locationArr[6];

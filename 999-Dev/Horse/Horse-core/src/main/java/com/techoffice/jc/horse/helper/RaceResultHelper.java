@@ -127,7 +127,7 @@ public class RaceResultHelper {
 	}
 	
 	public static Date getRaceDate(String raceDateStr) throws ParseException{
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyymmdd");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
 		Date raceDate = simpleDateFormat.parse(raceDateStr);
 		raceDate = DateUtils.truncate(raceDate, Calendar.DATE);
 		return raceDate;

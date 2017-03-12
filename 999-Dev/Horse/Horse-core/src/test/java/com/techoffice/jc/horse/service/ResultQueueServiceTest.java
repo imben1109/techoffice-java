@@ -23,8 +23,6 @@ import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 public class ResultQueueServiceTest {
 	
 	@Autowired
-	private ResultQueueService resultQueueService;
-	
 	private ResultQueueDateService resultQueueDateService;
 
 //	@Test
