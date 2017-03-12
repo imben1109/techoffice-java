@@ -3,6 +3,7 @@ package com.techoffice.jc.horse.service;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -18,10 +19,9 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.jc.horse.crawler.RaceResultCrawler;
-import com.techoffice.jc.horse.dao.RaceDateDao;
 import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
-import com.techoffice.jc.horse.model.RaceDate;
+import com.techoffice.jc.horse.helper.RaceResultHelper;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
@@ -92,6 +92,22 @@ public class ResultQueueService {
 			raceResultCount++;
 		}
 		return raceResultCount;
+	}
+	
+	@Transactional
+	public void correctQueueRaceDate() throws ParseException{
+		List<RaceResultQueue> raceResultQueueList = raceResultQueueDao.list();
+		for (RaceResultQueue queue: raceResultQueueList ){
+			String location = queue.getLocation();
+			String[] locationArr = location.split("/");
+			String dateStr = locationArr[7];
+			Date parsedDate = RaceResultHelper.getRaceDate(dateStr);
+			Date raceDate = queue.getRaceDate();
+			if (parsedDate != raceDate){
+				queue.setRaceDate(parsedDate);
+				raceResultQueueDao.update(queue);
+			}
+		}
 	}
 	
 	

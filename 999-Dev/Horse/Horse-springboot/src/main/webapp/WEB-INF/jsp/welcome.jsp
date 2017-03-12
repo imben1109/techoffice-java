@@ -10,6 +10,7 @@
 	<ul>
 		<li><a href="/updateRaceDateList">Update Race Date</a></li>
 		<li><a href="/ResultQueueDate/processRaceResultQueueList">Process Race Result Queue</a></li>
+		<li><a href="/ResultQueueDate/executeResultQueueList">executeResultQueueList</a></li>
 	</ul>
 </body>
 

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.techoffice.jc.horse.service.ResultQueueBatchService;
 import com.techoffice.jc.horse.service.ResultQueueDateService;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 
@@ -20,6 +21,8 @@ public class ResultQueueDateController {
 	@Autowired
 	private ResultQueueDateService resultQueueDateService;
 
+	@Autowired
+	private ResultQueueBatchService resultQueueBatchService;
 
 	@RequestMapping("pendingQueueDateList")
 	@ResponseBody
@@ -32,4 +35,13 @@ public class ResultQueueDateController {
 	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		return resultQueueDateService.processRaceResultQueueList();
 	}
+	
+	@RequestMapping("executeResultQueueList")
+	@ResponseBody
+	public String executeResultQueueList(){
+		resultQueueBatchService.executeResultQueueList();
+		return "completed";
+	}
+	
+	
 }
