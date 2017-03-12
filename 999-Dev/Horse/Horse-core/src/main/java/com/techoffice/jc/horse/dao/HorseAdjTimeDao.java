@@ -40,7 +40,6 @@ public class HorseAdjTimeDao {
 			Double adjTime = Double.parseDouble(result[1].toString());
 			for (CurrentOdd currentOdd: horseList){
 				if (currentOdd.getHorseName().equals(horseName)){
-					currentOdd.setAdjTime(adjTime);
 				}
 			}
 			map.put(horseName, adjTime);

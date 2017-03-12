@@ -61,6 +61,26 @@ public class CurrentOddHelper {
 					String draw = tdNode.getTextContent();
 					currentOdd.setDraw(draw);
 				}
+				if(tdNodeSeq == 5){
+					String weight = tdNode.getTextContent();
+					currentOdd.setWeight(weight);
+				}
+				if(tdNodeSeq == 6){
+					String jockey = tdNode.getTextContent();
+					currentOdd.setJockey(jockey);	
+				}
+				if(tdNodeSeq == 7){
+					String trainer = tdNode.getTextContent();
+					currentOdd.setTrainer(trainer );		
+				}
+				if(tdNodeSeq == 8){
+					String win = tdNode.getTextContent();
+					currentOdd.setWin(win);
+				}
+				if(tdNodeSeq == 9){
+					String place = tdNode.getTextContent();
+					currentOdd.setPlace(place);
+				}
 			}
 		}
 		return currentOdd;

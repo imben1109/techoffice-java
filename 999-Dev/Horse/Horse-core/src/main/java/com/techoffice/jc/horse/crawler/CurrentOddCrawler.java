@@ -101,25 +101,7 @@ public class CurrentOddCrawler {
 		String course = CurrentOddHelper.getCourse(xml);
 		String distance = CurrentOddHelper.getDistance(xml);
 		String venue = CurrentOddHelper.getVenue(xml);
-		oddsList= horseAdjTimeDao.getAdjTime(oddsList);
-		Map<String, Double> drawTimeMap = drawAccelerateTimeDao.getDrawAccelerateTime(venue, course, distance);
 		log.info(venue + " " + distance + " " + course) ;
-		for (CurrentOdd odd: oddsList){
-			Double drawTime = drawTimeMap.get(odd.getDraw());
-			odd.setDrawTime(drawTime);
-			if (odd.getAdjTime() != null){
-				if (odd.getDrawTime() != null){
-					Double calcTime = odd.getAdjTime() + drawTime;
-					odd.setCalcTime(calcTime);		
-				}else{
-					odd.setCalcTime(odd.getAdjTime());		
-				}
-			}
-		}
-		Collections.sort(oddsList);
-		for (CurrentOdd odd: oddsList){
-			log.info(odd.getHorseName() + " " + odd.getCalcTime());
-		}
 		return oddsList;
 	}
 	

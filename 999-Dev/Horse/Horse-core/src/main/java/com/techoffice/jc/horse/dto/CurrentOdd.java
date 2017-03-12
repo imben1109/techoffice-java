@@ -1,22 +1,18 @@
 package com.techoffice.jc.horse.dto;
 
-public class CurrentOdd implements Comparable<CurrentOdd>{
+public class CurrentOdd {
 	private String horseName;
 	private String draw;
-	private Double adjTime;
-	private Double drawTime;
-	private Double calcTime; 
+	private String weight;
+	private String jockey;
+	private String trainer;
+	private String win;
+	private String place;
 	public String getHorseName() {
 		return horseName;
 	}
 	public void setHorseName(String horseName) {
 		this.horseName = horseName;
-	}
-	public Double getDrawTime() {
-		return drawTime;
-	}
-	public void setDrawTime(Double drawTime) {
-		this.drawTime = drawTime;
 	}
 	public String getDraw() {
 		return draw;
@@ -24,37 +20,35 @@ public class CurrentOdd implements Comparable<CurrentOdd>{
 	public void setDraw(String draw) {
 		this.draw = draw;
 	}
-	public Double getAdjTime() {
-		return adjTime;
+	public String getWeight() {
+		return weight;
 	}
-	public void setAdjTime(Double adjTime) {
-		this.adjTime = adjTime;
+	public void setWeight(String weight) {
+		this.weight = weight;
 	}
-	public Double getCalcTime() {
-		return calcTime;
+	public String getJockey() {
+		return jockey;
 	}
-	public void setCalcTime(Double calcTime) {
-		this.calcTime = calcTime;
+	public void setJockey(String jockey) {
+		this.jockey = jockey;
 	}
-	public int compareTo(CurrentOdd that) {
-		if (that.getAdjTime() != null && this.getAdjTime() != null){
-			if (this.getAdjTime() > that.getAdjTime()){
-				return 1;
-			}
-			if (this.getAdjTime() < that.getAdjTime()){
-				return -1;
-			}
-			if (this.getAdjTime() == that.getAdjTime()){
-				return 0;
-			}
-		}
-		if (that.getAdjTime() == null){
-			return 1;
-		}
-		if (this.getAdjTime() == null){
-			return -1;
-		}
-		return 1;
+	public String getTrainer() {
+		return trainer;
+	}
+	public void setTrainer(String trainer) {
+		this.trainer = trainer;
+	}
+	public String getWin() {
+		return win;
+	}
+	public void setWin(String win) {
+		this.win = win;
+	}
+	public String getPlace() {
+		return place;
+	}
+	public void setPlace(String place) {
+		this.place = place;
 	}
 	
 	
