@@ -20,6 +20,7 @@ import org.xml.sax.SAXException;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.jc.horse.crawler.RaceResultCrawler;
 import com.techoffice.jc.horse.dao.RaceResultDao;
+import com.techoffice.jc.horse.dao.RaceResultHorseDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.helper.RaceResultHelper;
 import com.techoffice.jc.horse.model.RaceResult;
@@ -40,11 +41,15 @@ public class ResultQueueService {
 	@Autowired
 	private RaceResultDao raceResultDao;
 	
+	@Autowired
+	private RaceResultHorseDao raceResultHorseDao ;
+	
 	@Transactional
 	public void executeResultQueue(RaceResultQueue queue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
 		log.info("It is executing " + queue.getLocation());
 		RaceResult raceResult = raceResultCrawler.getRaceResult(queue.getLocation());
 		raceResultDao.update(raceResult);
+		raceResultHorseDao.addList(raceResult.getRaceResultHorseList());
 		queue.setRunInd("Y");
 		raceResultQueueDao.update(queue);
 		log.info("raceResult with id:" + raceResult.getId() + " is created.");
