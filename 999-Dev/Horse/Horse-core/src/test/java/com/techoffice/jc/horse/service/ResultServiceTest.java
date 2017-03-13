@@ -23,12 +23,20 @@ import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 public class ResultServiceTest {
 	
 	@Autowired
+	private RaceResultService raceResultService;
+	
+	@Autowired
 	private ResultQueueBatchService resultService;
 	
-	@Test
+//	@Test
 	public void executeResultQueue() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		for (int i=0; i<50; i++){
 			resultService.executeResultQueueList();	
 		}
+	}
+	
+	@Test
+	public void correctRaceDate() throws ParseException{
+		raceResultService.correctRaceDate();
 	}
 }

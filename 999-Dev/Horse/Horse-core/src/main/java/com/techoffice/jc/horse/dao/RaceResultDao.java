@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +20,14 @@ public class RaceResultDao {
 	private EntityManager em;
 	
 	@Transactional
-	public void add(RaceResult raceResult){
+	public void update(RaceResult raceResult){
 		em.persist(raceResult);
+	}
+	
+	@Transactional
+	public List<RaceResult> list(){
+		TypedQuery<RaceResult> query = em.createQuery("From RaceResult", RaceResult.class);
+		return query.getResultList();
 	}
 
 	@Transactional

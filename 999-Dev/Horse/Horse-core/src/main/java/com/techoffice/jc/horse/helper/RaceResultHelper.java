@@ -34,18 +34,18 @@ public class RaceResultHelper {
 			raceResult.setRaceNum("1");
 		}
 		
-		String raceMeetingStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[1]");
+		String raceMeetingStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[3]/table/tbody/tr/td[1]");
 		raceMeetingStr = raceMeetingStr.replace("Race Meeting: ", "");
 		
 		String[] raceMeetingStrArr = raceMeetingStr.split(" ");
-		SimpleDateFormat raceDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat raceDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date raceDate = raceDateFormat.parse(raceMeetingStrArr[0]);
 		raceResult.setRaceDate(raceDate);
 		
 		String venue = raceMeetingStrArr[1];
 		raceResult.setVenue(venue);
 		
-		String raceClassStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[1]/td[1]");
+		String raceClassStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[1]/td[1]");
 		
 		String[] raceClassStrArr = raceClassStr.split(" - ");
 		
@@ -60,23 +60,23 @@ public class RaceResultHelper {
 		}
 
 		
-		String goingStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[1]/td[3]");
+		String goingStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[1]/td[3]");
 		raceResult.setGoing(goingStr);
 		
-		String raceNameStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[2]/td[1]");
+		String raceNameStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[2]/td[1]");
 		raceResult.setRaceName(raceNameStr);
 		
-		String courseStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[2]/td[3]");
+		String courseStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[2]/td[3]");
 		raceResult.setCourse(courseStr);
 		
-		String rewardAndTimeStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[3]");
+		String rewardAndTimeStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[3]");
 		String[] rewardAndTimeStrArr = rewardAndTimeStr.split("Time : ");
 		String reward = rewardAndTimeStrArr[0];
 		raceResult.setReward(reward);
 		String raceTime = rewardAndTimeStrArr[1];
 		raceResult.setRaceTime(raceTime);
 		
-		String sectionalTimeStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[4]");
+		String sectionalTimeStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[4]");
 		sectionalTimeStr = sectionalTimeStr.replace("Sectional Time : ", "");
 		raceResult.setSectionalTime(sectionalTimeStr);
 		
