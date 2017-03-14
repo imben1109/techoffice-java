@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +19,8 @@ import javax.persistence.Table;
 public class RaceResult {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@SequenceGenerator(name="RACE_RESULT_SEQ", sequenceName="RACE_RESULT_SEQ")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="RACE_RESULT_SEQ")
 	private int id;
 	
 	@Column(name="LOCATION")

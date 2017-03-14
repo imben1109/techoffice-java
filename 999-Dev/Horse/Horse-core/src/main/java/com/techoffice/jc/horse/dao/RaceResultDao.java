@@ -24,10 +24,22 @@ public class RaceResultDao {
 		em.persist(raceResult);
 	}
 	
+	public RaceResult get(int id){
+		TypedQuery<RaceResult> query = em.createQuery("From RaceResult where id = :id", RaceResult.class);
+		query.setParameter("id", id);
+		return query.getSingleResult();
+	}
+	
 	@Transactional
 	public List<RaceResult> list(){
 		TypedQuery<RaceResult> query = em.createQuery("From RaceResult", RaceResult.class);
 		return query.getResultList();
+	}
+	
+	@Transactional
+	public void delete(RaceResult raceResult){
+		// The remove operation can be cascaded to association of an entity. 
+		em.remove(em.merge(raceResult));
 	}
 
 	@Transactional
