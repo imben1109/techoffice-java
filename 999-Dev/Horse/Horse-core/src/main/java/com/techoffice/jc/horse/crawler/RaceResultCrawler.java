@@ -100,7 +100,7 @@ public class RaceResultCrawler {
 		return raceNumList;
 	}
 	
-	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
+	public RaceResult getRaceResult(String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException {
 		String xml = retrieveXml(location);
 		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);

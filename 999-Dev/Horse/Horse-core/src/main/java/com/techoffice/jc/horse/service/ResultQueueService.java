@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
@@ -44,20 +45,27 @@ public class ResultQueueService {
 	@Autowired
 	private RaceResultHorseDao raceResultHorseDao ;
 	
-	@Transactional
-	public void executeResultQueue(RaceResultQueue queue) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public void executeResultQueue(RaceResultQueue queue) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException {
 		log.info("It is executing " + queue.getLocation());
 		RaceResult raceResult = raceResultCrawler.getRaceResult(queue.getLocation());
 		raceResultDao.update(raceResult);
 		raceResultHorseDao.addList(raceResult.getRaceResultHorseList());
-		queue.setRunInd("Y");
-		raceResultQueueDao.update(queue);
+		updateSuccessResultQueue(queue);
 		log.info("raceResult with id:" + raceResult.getId() + " is created.");
 	}
 	
 	@Transactional
 	public void updateFailResultQueue(RaceResultQueue queue){
+		queue = raceResultQueueDao.get(queue.getId());
 		queue.setRunInd("E");
+		raceResultQueueDao.update(queue);
+	}
+	
+	@Transactional
+	public void updateSuccessResultQueue(RaceResultQueue queue){
+		queue = raceResultQueueDao.get(queue.getId());
+		queue.setRunInd("Y");
 		raceResultQueueDao.update(queue);
 	}
 	

@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name="RACE_RESULT")
@@ -22,6 +23,9 @@ public class RaceResult {
 	@SequenceGenerator(name="RACE_RESULT_SEQ", sequenceName="RACE_RESULT_SEQ")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="RACE_RESULT_SEQ")
 	private int id;
+	
+	@Version
+	private int version;
 	
 	@Column(name="LOCATION")
 	private String location;
