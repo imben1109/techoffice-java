@@ -85,7 +85,7 @@ public class RaceResultHelper {
 	
 	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
 		List<RaceResultHorse> raceResultHorseList = new ArrayList<RaceResultHorse>();
-		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[6]/table/tbody/tr");
+		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "//*[@id='results']/div[6]/table/tbody/tr");
 		for (int i=0; i<raceHorseNodeList.getLength(); i++){
 			Node raceHorseTrNode = raceHorseNodeList.item(i);
 			NodeList raceHorseTdNodeList = raceHorseTrNode.getChildNodes();

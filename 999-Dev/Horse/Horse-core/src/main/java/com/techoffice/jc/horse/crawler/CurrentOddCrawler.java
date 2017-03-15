@@ -33,12 +33,6 @@ public class CurrentOddCrawler {
 
 	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en";
 	
-	@Autowired
-	private HorseAdjTimeDao horseAdjTimeDao;
-	
-	@Autowired
-	private DrawAccelerateTimeDao drawAccelerateTimeDao;
-	
 	public String retrieveXml() {
         return retrieveXml("");
 	}

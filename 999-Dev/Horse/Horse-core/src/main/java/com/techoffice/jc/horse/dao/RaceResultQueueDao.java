@@ -63,4 +63,12 @@ public class RaceResultQueueDao {
 	public void update(RaceResultQueue raceResultQueue){
 		em.persist(raceResultQueue);
 	}
+	
+	@Transactional
+	public RaceResultQueue get(int id){
+		TypedQuery<RaceResultQueue> query = em.createQuery("From RaceResultQueue Where id = :id", RaceResultQueue.class);
+		query.setParameter("id", id);
+		return query.getSingleResult();
+	}
+	
 }

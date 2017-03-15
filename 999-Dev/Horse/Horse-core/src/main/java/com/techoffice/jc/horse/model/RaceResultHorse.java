@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Entity
 @Table(name="RACE_RESULT_HORSE")
@@ -17,6 +18,9 @@ public class RaceResultHorse {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
+	@Version
+	private int version;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="RACE_RESULT_ID")
