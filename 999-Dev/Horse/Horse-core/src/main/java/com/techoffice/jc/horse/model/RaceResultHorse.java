@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -16,8 +15,7 @@ import javax.persistence.Table;
 public class RaceResultHorse {
 	
 	@Id
-	@SequenceGenerator(name="RACE_RESULT_HORSE_SEQ", sequenceName="RACE_RESULT_HORSE_SEQ")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="RACE_RESULT_HORSE_SEQ")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
