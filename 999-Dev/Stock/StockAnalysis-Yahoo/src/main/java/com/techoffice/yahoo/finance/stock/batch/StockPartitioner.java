@@ -27,8 +27,13 @@ public class StockPartitioner implements Partitioner{
 		
 		for(int i=0; i<gridSize; i++){
 			ExecutionContext context = new ExecutionContext();
-			context.put("stockList", new ArrayList<Stock>(partitionStockList.get(i)));
-			results.put("partition-" + i, context);
+			if (partitionStockList.size() > 0){
+				context.put("stockList", new ArrayList<Stock>(partitionStockList.get(i)));
+				results.put("partition-" + i, context);
+			}else{
+				context.put("stockList", new ArrayList<Stock>());
+				results.put("partition-" + i, context);
+			}
 		}
 		
 		return results;

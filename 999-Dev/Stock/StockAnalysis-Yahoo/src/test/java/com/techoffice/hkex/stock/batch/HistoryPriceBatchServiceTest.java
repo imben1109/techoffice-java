@@ -21,7 +21,7 @@ public class HistoryPriceBatchServiceTest {
 
 	@Test
 	public void run() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException{
-		historyPriceBatchService.run();
+//		historyPriceBatchService.run();
 	}
 
 }
