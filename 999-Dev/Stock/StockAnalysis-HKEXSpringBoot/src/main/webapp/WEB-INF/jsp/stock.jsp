@@ -6,8 +6,10 @@
 <html lang="en">
 
 <head>
-	<script src="/js/jquery-3.2.0.min.js"></script>
-	<script src="/js/pagingtable.js"></script>
+	<script src="/lib/jquery-3.2.0.min.js"></script>
+	<link rel="stylesheet" href="/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+	<script src="/js/bootstrapPagingtable.js"></script>
 	<script>
 		$(function(){
 			$("#stockList").pagingTable({pageLimit: 25, enableSearchHeader: true});	
