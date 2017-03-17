@@ -1,5 +1,7 @@
 package com.techoffice.util;
 
+import java.nio.charset.StandardCharsets;
+
 import org.jsoup.Jsoup;
 import org.openqa.selenium.WebDriver;
 
@@ -19,9 +21,12 @@ public class WebDriverUtil {
 		webDriver.quit();
 		org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
 	    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
+	    document.outputSettings().charset(StandardCharsets.UTF_8);
 	    document.select("script").remove();
+	    document.select("style").remove();
 	    String xml = document.html();
 	    String tiddedXml = XmlUtil.tidyXml(xml);
+	    tiddedXml = SpecialStringUtil.removeIllegalXml(tiddedXml);
 		return tiddedXml;
 	}
 }

@@ -36,7 +36,7 @@ public class IndustryPerformanceCrawler {
 	public List<String> retrieveIndustryList() throws FailingHttpStatusCodeException, MalformedURLException, IOException, XPathExpressionException, ParserConfigurationException, SAXException, XmlUtilInvalidDocumentException{
 		String xml = retrieveXml();
 		List<String> industryList = new ArrayList<String>();
-		String xPath = "//*[@id='IndustyMain']/div[6]/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/a";
+		String xPath = "//*[@id='IndustyMain']/div[3]/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]/a";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xPath);
 		for (int i=0; i<rowNodeList.getLength(); i++){
 			Node industryNode = rowNodeList.item(i);

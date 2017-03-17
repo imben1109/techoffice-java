@@ -22,6 +22,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -57,12 +58,13 @@ public class XmlUtil {
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			documentBuilderFactory.setNamespaceAware(false);
 			documentBuilderFactory.setValidating(false);
+			documentBuilderFactory.setIgnoringComments(true);
 			documentBuilderFactory.setFeature("http://xml.org/sax/features/namespaces", false);
 			documentBuilderFactory.setFeature("http://xml.org/sax/features/validation", false);
 			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
 			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)));	
+			document = documentBuilder.parse(IOUtils.toInputStream(xml, StandardCharsets.UTF_8));	
 		}catch(Exception e){
 			log.error("Try to convert xml: " + xml);
 			throw new XmlUtilInvalidDocumentException("Cannot xml to Document: " + e.getMessage());
@@ -75,6 +77,7 @@ public class XmlUtil {
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
 		tidy.setXHTML(true);
+		tidy.setHideComments(true);
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		tidy.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)), out);
 		String tiddiedXml = "";
