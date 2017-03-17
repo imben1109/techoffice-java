@@ -1,8 +1,8 @@
-package com.techoffice.example;
+package com.techoffice.yahoo.finance.springboot;
 
 import org.springframework.boot.SpringApplication;
 
-import com.techoffice.example.config.Config;
+import com.techoffice.yahoo.finance.springboot.config.Config;
 
 public class SpringBootExampleAppl {
 	

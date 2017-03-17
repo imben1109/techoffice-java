@@ -1,4 +1,4 @@
-package com.techoffice.example.controller;
+package com.techoffice.yahoo.finance.springboot.controller;
 
 import java.util.HashMap;
 import java.util.List;

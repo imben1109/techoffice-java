@@ -1,8 +1,8 @@
-package com.techoffice.example;
+package com.techoffice.hkex.stock;
 
 import org.springframework.boot.SpringApplication;
 
-import com.techoffice.example.config.Config;
+import com.techoffice.hkex.stock.config.Config;
 
 public class SpringBootExampleAppl {
 	

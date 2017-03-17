@@ -1,4 +1,4 @@
-package com.techoffice.example.controller;
+package com.techoffice.hkex.stock.controller;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

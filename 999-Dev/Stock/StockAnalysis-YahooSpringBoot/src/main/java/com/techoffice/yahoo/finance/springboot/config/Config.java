@@ -1,4 +1,4 @@
-package com.techoffice.example.config;
+package com.techoffice.yahoo.finance.springboot.config;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
