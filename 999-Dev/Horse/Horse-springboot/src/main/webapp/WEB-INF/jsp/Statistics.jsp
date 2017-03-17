@@ -7,7 +7,6 @@
 
 <body>
 	<h1>Horse Statistics</h1>
-
 </body>
 
 </html>

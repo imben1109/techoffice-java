@@ -26,18 +26,11 @@ public class ResultQueueServiceTest {
 	private ResultQueueDateService resultQueueDateService;
 	
 	@Autowired
-	private ResultQueueService resultQueueService;
-
-//	@Test
-	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException{
-		for (int i=0; i<50; i++){
-			resultQueueDateService.processRaceResultQueueList();	
-		}
-	}
+	private RaceResultQueueService resultQueueService;
 	
 	@Test
 	public void correctQueueRaceDate() throws ParseException{
-		resultQueueService.correctQueueRaceDate();
+//		resultQueueService.correctQueueRaceDate();
 	}
 	
 }

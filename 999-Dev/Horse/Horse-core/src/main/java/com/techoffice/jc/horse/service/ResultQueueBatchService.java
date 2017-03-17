@@ -32,7 +32,7 @@ public class ResultQueueBatchService {
 	private RaceResultHorseDao raceResultHorseDao;
 	
 	@Autowired
-	private ResultQueueService resultQueueService;
+	private RaceResultQueueService resultQueueService;
 	
 	public void executeResultQueueList() {
 		int successCount = 0;
@@ -44,7 +44,7 @@ public class ResultQueueBatchService {
 				resultQueueService.executeResultQueue(raceResultQueue);
 				successCount++;
 			} catch (Exception e) {
-				resultQueueService.updateFailResultQueue(raceResultQueue);
+				resultQueueService.updateResultQueueStatus(raceResultQueue, "E");
 				log.error("Exception when executing " + raceResultQueue.getLocation(), e);
 				failCount++;
 			}

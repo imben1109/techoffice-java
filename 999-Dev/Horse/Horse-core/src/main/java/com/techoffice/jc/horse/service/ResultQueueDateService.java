@@ -31,10 +31,7 @@ public class ResultQueueDateService {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
-	private ResultQueueService resultQueueService;
-	
-	@Autowired
-	private RaceResultCrawler raceResultCrawler;
+	private RaceResultQueueService resultQueueService;
 	
 	@Autowired
 	private RaceDateDao raceDateDao;
@@ -52,49 +49,5 @@ public class ResultQueueDateService {
 		return map;
 	}
 	
-	/**
-	 * For each race date, it would be more than one races. 
-	 * The races would be corresponded to a race queue for updating race result.
-	 *
-	 * This method would create race queue for race date.
-	 * 
-	 * @throws FailingHttpStatusCodeException
-	 * @throws MalformedURLException
-	 * @throws XPathExpressionException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws InterruptedException
-	 * @throws TransformerException
-	 * @throws ParseException
-	 * @throws XmlUtilDocumentConversionException 
-	 */
-	@Transactional
-	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		int raceResultTotalCount = 0;
-		int pendingCount = 0;
-		int processedCount = 0;
-		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
-		for(RaceDate raceDate: raceDateList){
-			int raceResultCount = resultQueueService.updateResultQueueByRaceDate(raceDate.getRaceDate());
-			raceDate.setRaceCount(raceResultCount);
-			raceDateDao.update(raceDate);
-			raceResultTotalCount += raceResultCount;
-			if(raceResultCount > 1){
-				processedCount++;
-			}else{
-				pendingCount++;
-			}
-		}
-		int totalRaceResultQueueCount = raceResultQueueDao.list().size();
-		log.info("Total Race Result Queue: " + totalRaceResultQueueCount);
-		log.info(raceResultTotalCount + " Reace Results is inserted or updated into the Queue.");
-		log.info("Pending Race Date Count: " + pendingCount);
-		log.info("Processed Race Date Count: " + processedCount);
-		map.put("totalDateQueues", totalRaceResultQueueCount);
-		map.put("pendingDateQueues", pendingCount);
-		map.put("processedDateQueues", totalRaceResultQueueCount);
-		return map;
-	}
+	
 }

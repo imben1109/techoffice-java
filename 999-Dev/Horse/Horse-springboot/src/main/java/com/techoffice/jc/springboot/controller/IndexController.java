@@ -17,13 +17,13 @@ import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 
 @Controller
-public class SampleController {
+public class IndexController {
     
 	@Autowired
 	private CurrentOddService currentOddService;
 	
 	@RequestMapping("/")
-	public String home() {
+	public String index() {
         return "welcome";
     }
 
