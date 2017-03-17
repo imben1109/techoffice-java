@@ -125,4 +125,12 @@ public class RaceDateService {
 		return map;
 	}
 	
+	@Transactional
+	public Map<String, Object> getPendingQueueDateList(){
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
+		map.put("list", raceDateList);
+		map.put("count", raceDateList.size());
+		return map;
+	}
 }

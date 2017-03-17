@@ -1,5 +1,6 @@
 package com.techoffice.jc.springboot.controller;
 
+import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
@@ -35,4 +36,17 @@ public class RaceDateController {
 	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException{
 		return raceDateService.updateRaceDateList();
 	}
+
+	@RequestMapping("pendingQueueDateList")
+	@ResponseBody
+	public Map<String, Object> pendingQueueDateList(){
+		return raceDateService.getPendingQueueDateList();
+	}
+	
+	@RequestMapping("processRaceResultQueueList")
+	@ResponseBody
+	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+		return raceDateService.processRaceResultQueueList();
+	}
+	
 }

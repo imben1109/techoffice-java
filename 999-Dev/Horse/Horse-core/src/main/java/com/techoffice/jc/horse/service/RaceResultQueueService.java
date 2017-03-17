@@ -75,6 +75,10 @@ public class RaceResultQueueService {
 		}
 	}
 	
+	public List<RaceResultQueue> listActiveQueue(){
+		return raceResultQueueDao.listActiveQueue();
+	}
+	
 	/**
 	 * For each race data, there would be a number of race. 
 	 * The number of race would corresponds to a queue for updating the race result.
@@ -120,8 +124,5 @@ public class RaceResultQueueService {
 			}
 		}
 	}
-	
-	
-	
 	
 }

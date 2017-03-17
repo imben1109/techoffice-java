@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.jc.horse.service.CurrentOddService;
-import com.techoffice.jc.horse.service.ResultQueueDateService;
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
 

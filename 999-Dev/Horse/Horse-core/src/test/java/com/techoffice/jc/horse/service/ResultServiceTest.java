@@ -26,7 +26,7 @@ public class ResultServiceTest {
 	private RaceResultService raceResultService;
 	
 	@Autowired
-	private ResultQueueBatchService resultService;
+	private RaceResultQueueBatchService resultService;
 	
 //	@Test
 	public void executeResultQueue() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
