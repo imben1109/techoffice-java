@@ -1,4 +1,4 @@
-package com.ittechoffice.example.springmvc.controller;
+package com.techoffice.example.controller;
 
 import java.io.File;
 import java.io.IOException;
