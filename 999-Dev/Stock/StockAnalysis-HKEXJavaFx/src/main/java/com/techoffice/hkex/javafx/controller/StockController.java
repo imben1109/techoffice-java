@@ -42,7 +42,7 @@ public class StockController {
 	
 	@FXML
 	public void initialize(){
-		stocks = stockService.getStockList();
+		stocks = stockService.list();
 		tableView.getItems().addAll(stocks);
 		stockCount.setText(Integer.toString(stocks.size()));
 	}
@@ -51,7 +51,7 @@ public class StockController {
 	public void refresh(ActionEvent event) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
 		stockService.updateFromInternet();
 		tableView.getItems().clear();
-		stocks = stockService.getStockList();
+		stocks = stockService.list();
 		tableView.getItems().addAll(stocks);
 		stockCount.setText(Integer.toString(stocks.size()));
 	}
