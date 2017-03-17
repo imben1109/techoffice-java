@@ -23,7 +23,7 @@ public class IndexController {
 	
 	@RequestMapping("/")
 	public String index() {
-        return "welcome";
+        return "Welcome";
     }
 
 	@RequestMapping("/currentAnalysis")
