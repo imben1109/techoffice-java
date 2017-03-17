@@ -1,4 +1,4 @@
-package com.techoffice.example.controller;
+package com.techoffice.aastock.springboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

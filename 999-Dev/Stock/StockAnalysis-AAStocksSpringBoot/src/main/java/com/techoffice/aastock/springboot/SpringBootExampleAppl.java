@@ -1,8 +1,8 @@
-package com.techoffice.example;
+package com.techoffice.aastock.springboot;
 
 import org.springframework.boot.SpringApplication;
 
-import com.techoffice.example.config.Config;
+import com.techoffice.aastock.springboot.config.Config;
 
 public class SpringBootExampleAppl {
 	
