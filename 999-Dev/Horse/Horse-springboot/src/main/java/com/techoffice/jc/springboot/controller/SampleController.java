@@ -22,9 +22,6 @@ public class SampleController {
 	@Autowired
 	private CurrentOddService currentOddService;
 	
-	@Autowired
-	private ResultQueueDateService resultQueueDateService;
-	
 	@RequestMapping("/")
 	public String home() {
         return "welcome";
@@ -37,9 +34,5 @@ public class SampleController {
 		return map;
 	}
 	
-	@RequestMapping("/updateRaceDateList")
-	@ResponseBody
-	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException{
-		return resultQueueDateService.updateRaceDateList();
-	}
+
 }

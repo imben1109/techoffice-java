@@ -18,10 +18,14 @@ public class RaceResultService {
 	@Autowired
 	private RaceResultDao raceResultDao;
 	
+	public List<RaceResult> list(){
+		return raceResultDao.list();
+	}
+	
 	public List<String> listVenue(){
 		return raceResultDao.listVenue();
 	}
-	
+
 	@Transactional
 	public void correctRaceDate() throws ParseException{
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");

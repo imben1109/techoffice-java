@@ -43,44 +43,6 @@ public class ResultQueueDateService {
 	private RaceResultQueueDao raceResultQueueDao ;
 	
 	
-	
-	/**
-	 * Update Database Race Date from HKJC web site.
-	 * http://racing.hkjc.com/racing/Info/meeting/Results/English/
-	 * 
-	 * @throws FailingHttpStatusCodeException
-	 * @throws MalformedURLException
-	 * @throws XPathExpressionException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws InterruptedException
-	 * @throws TransformerException
-	 * @throws XmlUtilDocumentConversionException 
-	 */
-	@Transactional
-	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException  {
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		int count = 0; 
-		List<RaceDate> hkjcRaceDateList = raceResultCrawler.retrieveRaceDateList();
-		for (RaceDate newRaceDate: hkjcRaceDateList){
-			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
-			if (raceDate == null){
-				raceDateDao.update(newRaceDate);
-				count++;
-			}
-		}
-		int total = raceDateDao.list().size();
-		log.info("Retrieved Race Date Count: " + hkjcRaceDateList.size());
-		log.info("Inserted Race Date Count: " + count);
-		log.info("Total Race Date in Database: " + total );
-		map.put("retrieved", hkjcRaceDateList.size());
-		map.put("Inserted", count);
-		map.put("total", total);
-		return map;
-	}
-	
-	
 	@Transactional
 	public Map<String, Object> getPendingQueueDateList(){
 		Map<String, Object> map = new HashMap<String, Object>();
