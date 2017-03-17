@@ -18,8 +18,8 @@ public class StatisticsController {
 	private RaceResultService raceResultService;
 	
 	@RequestMapping("/")
-	public ModelAndView home(){
-		ModelAndView model = new ModelAndView("statistics");
+	public ModelAndView index(){
+		ModelAndView model = new ModelAndView("Statistics");
 		return model;
 	}
 	
