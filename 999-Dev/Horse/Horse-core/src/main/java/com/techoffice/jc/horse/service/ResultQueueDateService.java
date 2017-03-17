@@ -62,8 +62,8 @@ public class ResultQueueDateService {
 	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException  {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int count = 0; 
-		List<RaceDate> newRaceDateList = raceResultCrawler.retrieveRaceDateList();
-		for (RaceDate newRaceDate: newRaceDateList){
+		List<RaceDate> hkjcRaceDateList = raceResultCrawler.retrieveRaceDateList();
+		for (RaceDate newRaceDate: hkjcRaceDateList){
 			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
 			if (raceDate == null){
 				raceDateDao.update(newRaceDate);
@@ -71,10 +71,10 @@ public class ResultQueueDateService {
 			}
 		}
 		int total = raceDateDao.list().size();
-		log.info("Retrieved Race Date Count: " + newRaceDateList.size());
+		log.info("Retrieved Race Date Count: " + hkjcRaceDateList.size());
 		log.info("Inserted Race Date Count: " + count);
 		log.info("Total Race Date in Database: " + total );
-		map.put("retrieved", newRaceDateList.size());
+		map.put("retrieved", hkjcRaceDateList.size());
 		map.put("Inserted", count);
 		map.put("total", total);
 		return map;
