@@ -2,7 +2,21 @@ package com.techoffice.aastock.stock.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Industry {
+	
+	@Id
+    @SequenceGenerator(name="industry_seq",sequenceName="industry_seq")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="industry_seq")
+	private int id;
 	private String name;
 	private String industrySymbol;
 	private Date updated;
@@ -11,6 +25,14 @@ public class Industry {
 	private String turn;
 	private String avgTurn5d;
 	private String avgPe;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;

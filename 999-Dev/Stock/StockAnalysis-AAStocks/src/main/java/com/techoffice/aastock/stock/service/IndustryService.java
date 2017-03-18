@@ -21,8 +21,14 @@ public class IndustryService {
 	private IndustryDao industryDao;
 	
 	@Transactional
+	public List<Industry> list(){
+		return industryDao.list();
+	}
+	
+	@Transactional
 	public void updateIndustry() throws WebCrawlerException{
 		List<Industry> industries = industryCrawler.retrieveIndustryList();
+		industryDao.clear();
 		industryDao.add(industries);
 	}
 }

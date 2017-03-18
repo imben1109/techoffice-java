@@ -31,7 +31,7 @@ public class CalendarCrawlerTest {
 	
 	@Test
 	public void retrieveStockListByWebClient() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
-		int pageCount = resultAnnounceCalCrawler.getPageCount();
-		log.info("Page Count: " + pageCount);
+//		int pageCount = resultAnnounceCalCrawler.getPageCount();
+//		log.info("Page Count: " + pageCount);
 	}
 }

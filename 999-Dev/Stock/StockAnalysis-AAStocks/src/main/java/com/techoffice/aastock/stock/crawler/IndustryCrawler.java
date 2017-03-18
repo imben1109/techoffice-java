@@ -69,7 +69,7 @@ public class IndustryCrawler {
 				industries.add(industry);
 			}
 		}catch(Exception e){
-			throw new WebCrawlerException("Failed to Retrieve Performance List", e);
+			throw new WebCrawlerException(e);
 		}
 
 		return industries;

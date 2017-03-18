@@ -24,6 +24,7 @@ public class WebDriverUtil {
 	    document.outputSettings().charset(StandardCharsets.UTF_8);
 	    document.select("script").remove();
 	    document.select("style").remove();
+	    document.select("canvas").remove();
 	    String xml = document.html();
 	    String tiddedXml = XmlUtil.tidyXml(xml);
 	    tiddedXml = SpecialStringUtil.removeIllegalXml(tiddedXml);

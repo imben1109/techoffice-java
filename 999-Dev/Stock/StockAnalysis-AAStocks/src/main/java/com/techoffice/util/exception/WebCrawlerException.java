@@ -4,7 +4,9 @@ public class WebCrawlerException extends Exception{
 
 	private static final long serialVersionUID = -4282814521239167404L;
 
-	public WebCrawlerException(String message, Throwable cause){
-		super(message, cause);
+	private static final String MESSAGE = "Failed to Retrieve Information!";
+	
+	public WebCrawlerException(Throwable cause){
+		super(MESSAGE, cause);
 	}
 }

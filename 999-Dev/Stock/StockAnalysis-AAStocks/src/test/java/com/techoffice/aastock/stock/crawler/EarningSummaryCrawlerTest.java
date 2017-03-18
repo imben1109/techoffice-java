@@ -27,17 +27,17 @@ public class EarningSummaryCrawlerTest {
 	
 //	@Test
 	public void getYearList() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
-		earningSummaryCrawler.getYearList("00010");
+//		earningSummaryCrawler.getYearList("00010");
 	}
 	
 //	@Test
 	public void getEarningPerShare() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
-		earningSummaryCrawler.getEarningPerShare("00010");
+//		earningSummaryCrawler.getEarningPerShare("00010");
 	}
 	
 	@Test
 	public void test() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
-		earningSummaryCrawler.getDividendPerShare("00010");
+//		earningSummaryCrawler.getDividendPerShare("00010");
 	}
 	
 	
