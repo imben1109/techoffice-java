@@ -19,7 +19,7 @@ import com.techoffice.hkex.csvimport.stock.model.Stock;
 import com.techoffice.hkex.csvimport.stock.service.StockService;
 
 @Controller
-@RequestMapping("stock")
+@RequestMapping("Stock")
 public class StockController {
 
 	@Autowired
@@ -27,7 +27,7 @@ public class StockController {
 	
 	@RequestMapping("/")
 	public ModelAndView home(){
-		ModelAndView model = new ModelAndView("stock");
+		ModelAndView model = new ModelAndView("Stock");
 		List<Stock> stocks = stockService.list();
 		model.addObject("stocks", stocks);
 		return model;

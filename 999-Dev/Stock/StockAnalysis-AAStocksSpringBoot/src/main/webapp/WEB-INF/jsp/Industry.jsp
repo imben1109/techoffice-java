@@ -8,7 +8,7 @@
 <body>
 	<h1>Stock Analysis</h1>
 	<ul>
-		<li></li>
+		<li><a href="/Industry/uploadIndustryList">Update Industry List</a></li>
 	</ul>
 </body>
 
