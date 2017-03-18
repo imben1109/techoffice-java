@@ -27,9 +27,9 @@ public class IndustryController {
 		return view;
 	}
 	
-	@RequestMapping("uploadIndustryList")
+	@RequestMapping("updateIndustryList")
 	@ResponseBody
-	public String uploadIndustryList() throws WebCrawlerException{
+	public String updateIndustryList() throws WebCrawlerException{
 		industryService.updateIndustry();
 		return "completed";
 	}

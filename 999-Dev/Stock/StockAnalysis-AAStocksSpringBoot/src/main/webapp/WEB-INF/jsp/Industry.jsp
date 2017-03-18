@@ -18,7 +18,8 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h1>Stock Analysis</h1>
+		<h1>Stock Analysis - Industry</h1>
+		<a href="/Industry/updateIndustryList">Update Industry List</a>
 		<c:if test="${not empty industryList }">
 			<table id="industryTable">
 				<c:forEach var="industry" items="${industryList }">
