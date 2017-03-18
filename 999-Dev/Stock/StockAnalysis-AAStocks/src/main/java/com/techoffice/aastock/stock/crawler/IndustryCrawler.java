@@ -18,7 +18,8 @@ import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.WebCrawlerException;
 
 /**
- * A Web Crawler for http://www.aastocks.com/en/stocks/market/industry/industry-performance.aspx
+ * A Web Crawler for 
+ * http://www.aastocks.com/en/stocks/market/industry/industry-performance.aspx
  * 
  * @author imben1109
  *
@@ -30,14 +31,9 @@ public class IndustryCrawler {
 	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/industry/industry-performance.aspx";
 		
-	public String retrieveXml() {
-		String xml = WebDriverUtil.getXml(URL);
-		return xml;
-	}
-	
 	public List<Industry> retrieveIndustryList() throws WebCrawlerException  {
 		List<Industry> industries = new ArrayList<Industry>();
-		String xml = retrieveXml();
+		String xml = WebDriverUtil.getXml(URL);
 		String xPath = "//*[@id='IndustyMain']/div[3]/div[1]/table/tbody/tr";
 		try{
 			String remarkStatement = XmlUtil.getXpathText(xml, "//*[@id='IndustyMain']/div[3]/div[2]");

@@ -24,13 +24,8 @@ public class EarningSummaryCrawler {
 
 	public static final String URL = "http://www.aastocks.com/en/stocks/analysis/company-fundamental/earnings-summary?symbol=";
 	
-	public String getXml(String symbol){
-		String xml = WebDriverUtil.getXml(URL + symbol);
-		return xml;
-	}
-	
 	public void getYearList(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
-		String xml = getXml(symbol);
+		String xml = WebDriverUtil.getXml(URL + symbol);
 		String xpath = "//*[@id='highcharts-0']/svg/g[6]/text";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=0; i<rowNodeList.getLength(); i++){
@@ -42,7 +37,7 @@ public class EarningSummaryCrawler {
 	}
 	
 	public void getEarningPerShare(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
-		String xml = getXml(symbol);
+		String xml = WebDriverUtil.getXml(URL + symbol);
 		String xpath = "//*[@id='cnhk-list']/tbody/tr[6]/td";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=1; i<rowNodeList.getLength()-1; i++){
@@ -54,7 +49,7 @@ public class EarningSummaryCrawler {
 	}
 	
 	public void getDividendPerShare(String symbol) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
-		String xml = getXml(symbol);
+		String xml = WebDriverUtil.getXml(URL + symbol);
 		String xpath = "//*[@id='cnhk-list']/tbody/tr[10]/td";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=1; i<rowNodeList.getLength()-1; i++){
