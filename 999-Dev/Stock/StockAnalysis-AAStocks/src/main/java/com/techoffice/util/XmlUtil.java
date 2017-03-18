@@ -38,7 +38,7 @@ public class XmlUtil {
 	
 	private static Logger log = LoggerFactory.getLogger(XmlUtil.class);
 	
-	public static String covertNodeToXmlString(Node node) throws TransformerException{
+	public static String toXml(Node node) throws TransformerException{
 		StringWriter writer = new StringWriter();
 		Transformer transformer = TransformerFactory.newInstance().newTransformer();
 		transformer.transform(new DOMSource(node), new StreamResult(writer));

@@ -7,7 +7,9 @@
 
 <body>
 	<h1>Stock Analysis</h1>
-	
+	<ul>
+		<li></li>
+	</ul>
 </body>
 
 </html>
