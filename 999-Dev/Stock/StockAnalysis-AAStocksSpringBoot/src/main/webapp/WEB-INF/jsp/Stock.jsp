@@ -39,30 +39,32 @@
 
 
 <body>
-	<h1>Stock List</h1>
-	<div class="form-inline">
-		<input id="stockCsvUploadFile" type="file" class="filestyle" data-buttonName="btn-primary"/>	
-		<button id="stockCsvUploadBtn" class="btn btn-primary">Upload</button>
+	<div class="container-fluid">
+		<h1>Stock List</h1>
+		<div class="form-inline">
+			<input id="stockCsvUploadFile" type="file" class="filestyle" data-buttonName="btn-primary"/>	
+			<button id="stockCsvUploadBtn" class="btn btn-primary">Upload</button>
+		</div>
+		<br/>
+		<c:if test="${not empty stocks}">
+			<table border="1" id="stockList">
+				<thead>
+					<tr>
+						<th>Code</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				<tbody>
+				<c:forEach var="stock" items="${stocks}">
+					<tr>
+						<td>${stock.stockCode}</td>
+						<td>${stock.name}</td>
+					</tr>
+				</c:forEach>
+				</tbody>
+			</table>
+		</c:if>
 	</div>
-	<br/>
-	<c:if test="${not empty stocks}">
-		<table border="1" id="stockList">
-			<thead>
-				<tr>
-					<th>Code</th>
-					<th>Name</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach var="stock" items="${stocks}">
-				<tr>
-					<td>${stock.stockCode}</td>
-					<td>${stock.name}</td>
-				</tr>
-			</c:forEach>
-			</tbody>
-		</table>
-	</c:if>
 </body>
 
 </html>
