@@ -1,14 +1,17 @@
 package com.techoffice.jc.springboot.controller;
 
 import java.text.ParseException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import javax.xml.xpath.XPathExpressionException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -47,6 +50,15 @@ public class RaceDateController {
 	@ResponseBody
 	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		return raceDateService.processRaceResultQueueList();
+	}
+	
+	@RequestMapping("/RaceDateDetail")
+	public ModelAndView raceDateDetail(
+			@RequestParam("raceDate") 
+			@DateTimeFormat(pattern="ddMMyyyy") 
+			Date raceDate){
+		ModelAndView view = new ModelAndView("RaceDateDetail");
+		return view;
 	}
 	
 }
