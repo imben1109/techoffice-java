@@ -1,3 +1,14 @@
+# Hibernate 5 Example
+
+## Hiberante 
+Hibernate is a Object-Relational Mapping (ORM) Framework. It provide a way to manipulate data from database to java application.
+
+## Example
+This example demonstrate the Hibernate as JPA provider for ORM Mapping in H2 Database 
+
+For standard JPA implementation, the configuration would be in **META-INF/persistenc.xml**.
+
+```
 <persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
@@ -12,7 +23,7 @@
 		<properties>
 	        <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:h2:./test"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:~/test"/>
 			<property name="javax.persistence.jdbc.user" value="sa"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
 			<property name="hibernate.connection.pool_size" value="1"/>
@@ -23,3 +34,27 @@
 		</properties>
 	</persistence-unit>
 </persistence>
+``` 
+
+Hibernate provide a way for EntityManagerFactory. Then, the entityManager would be constructed by the EntityManagerFactory  for the further operation. 
+```
+EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("techoffice.example");
+EntityManager entityManager = entityManagerFactory.createEntityManager();
+```
+
+The Operation would be conducted through entityManager.
+```
+entityManager.getTransaction().begin();
+Student student = new Student();
+student.setStudentName("Test 1");
+
+entityManager.persist(student);
+
+// HQL
+List<Student> results = entityManager.createQuery("From Student", Student.class).getResultList();
+for (Student result: results){
+	System.out.println(result.getStudentName());
+}
+entityManager.getTransaction().commit();
+entityManager.close();
+```

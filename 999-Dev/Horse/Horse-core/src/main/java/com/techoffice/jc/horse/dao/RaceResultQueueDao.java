@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -69,6 +71,11 @@ public class RaceResultQueueDao {
 		TypedQuery<RaceResultQueue> query = em.createQuery("From RaceResultQueue Where id = :id", RaceResultQueue.class);
 		query.setParameter("id", id);
 		return query.getSingleResult();
+	}
+	
+	public List<RaceResultQueue> query(){
+
+		return null;
 	}
 	
 }
