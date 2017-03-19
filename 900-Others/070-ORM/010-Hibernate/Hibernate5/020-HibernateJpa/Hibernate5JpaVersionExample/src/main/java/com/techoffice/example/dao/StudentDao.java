@@ -4,11 +4,11 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import com.techoffice.example.Appl;
+import com.techoffice.example.VersionUpdateExample;
 import com.techoffice.example.model.Student;
 
 public class StudentDao {
-	 private EntityManager entityManager = Appl.entityManager;
+	 private EntityManager entityManager = VersionUpdateExample.entityManager;
 	 
 	 public List<Student> list(){
 		 List<Student> results = entityManager.createQuery("From Student", Student.class).getResultList();
@@ -17,6 +17,7 @@ public class StudentDao {
 	 
 	 public Student get(int id){
 		 Student student = entityManager.find(Student.class, 1);
+		 entityManager.detach(student);
 		 return student;
 	 }
 	 
@@ -29,8 +30,9 @@ public class StudentDao {
 	 
 	 public Student update(Student student){
 		 entityManager.getTransaction().begin();
-		 entityManager.merge(student);
+		 student = entityManager.merge(student);
 		 entityManager.getTransaction().commit();
+		 entityManager.detach(student);
 		 return student;
 	 }
 	 

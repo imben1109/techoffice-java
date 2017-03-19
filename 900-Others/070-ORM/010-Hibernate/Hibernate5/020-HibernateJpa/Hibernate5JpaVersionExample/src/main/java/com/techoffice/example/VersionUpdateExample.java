@@ -7,7 +7,13 @@ import javax.persistence.Persistence;
 import com.techoffice.example.dao.StudentDao;
 import com.techoffice.example.model.Student;
 
-public class Appl {
+/**
+ * This Example demonstrates how to increment the version number
+ * 
+ * @author imben1109
+ *
+ */
+public class VersionUpdateExample {
 	
 	public static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory( "techoffice.example" );
 	public static EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -21,7 +27,7 @@ public class Appl {
 
 		student1.setStudentName(student1.getStudentName() + "+");
 		
-		studentDao.update(student1);
+		student1 = studentDao.update(student1);
 		System.out.println(student1.toString());
 
 		entityManagerFactory.close();	
