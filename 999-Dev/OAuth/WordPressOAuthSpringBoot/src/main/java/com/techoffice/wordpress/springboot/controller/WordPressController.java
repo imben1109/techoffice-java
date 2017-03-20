@@ -53,5 +53,12 @@ public class WordPressController {
 		return posts;
 	}
 	
+	@RequestMapping("react")
+	public ModelAndView react(@RequestParam(name="siteId") String siteId) throws ApiClientException{
+		ModelAndView model = new ModelAndView("react");
+		List<Map<String, Object>> sites = ApiClient.getPosts(siteId);
+		model.addObject("sites", sites);
+		return model;
+	}
 	
 }

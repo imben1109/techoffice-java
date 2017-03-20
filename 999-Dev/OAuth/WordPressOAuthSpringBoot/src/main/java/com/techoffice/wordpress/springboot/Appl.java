@@ -11,4 +11,5 @@ public class Appl {
     public static void main(String[] args) throws Exception {
     	SpringApplication.run(Appl.class, args);
     }
+    
 }
