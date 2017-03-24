@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:amq="http://activemq.apache.org/schema/core"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/cache 
+		http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://activemq.apache.org/schema/core 
+		http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+	<context:component-scan base-package="com.techoffice.example" />
+	
+	<bean class="com.techoffice.example.BrokerServiceFactoryBean">
+		<property name="uri" value="tcp://localhost:61616"/>
+	</bean>
+
+	<bean id="jmsFactory" class="org.apache.activemq.pool.PooledConnectionFactory"
+		destroy-method="stop">
+		<property name="connectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL">
+					<value>tcp://localhost:61616</value>
+				</property>
+				<property name="userName" value="user"/>
+				<property name="password" value="password"/>
+			</bean>
+		</property>
+		<property name="maxConnections" value="8" />
+	</bean>
+	<bean id="myJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="jmsFactory"/>
+	</bean>
+	
+	<bean id="applMessageListener" class="com.techoffice.example.ApplMessageListener" />
+	
+	<bean id="jmsContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+	    <property name="connectionFactory" ref="jmsFactory"/>
+	    <property name="destinationName" value="destination"/>
+	    <property name="messageListener" ref="applMessageListener" />
+	</bean>
+	
+	
+</beans>
