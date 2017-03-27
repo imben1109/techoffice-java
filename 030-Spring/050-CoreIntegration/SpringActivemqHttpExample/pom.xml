@@ -51,6 +51,5 @@
 			<artifactId>activemq-pool</artifactId>
 			<version>5.14.4</version>
 		</dependency>
-	
 	</dependencies>
 </project>

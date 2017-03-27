@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>ServletExample</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param> 
+	    <param-name>org.apache.activemq.brokerURL</param-name> 
+	    <param-value>vm://localhost</param-value> (I also tried tcp://localhost:61616) 
+	    <description>The URL of the Message Broker to connect to</description> 
+	</context-param> 
+
+
+	<servlet>
+		<servlet-name>TechOfficeExampleServlet</servlet-name>
+		<servlet-class>com.techoffice.example.TechOfficeExampleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MessageServlet</servlet-name>
+		<servlet-class>org.apache.activemq.web.MessageServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>topic</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TechOfficeExampleServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MessageServlet</servlet-name>
+		<url-pattern>/message</url-pattern>
+	</servlet-mapping>
+</web-app>
