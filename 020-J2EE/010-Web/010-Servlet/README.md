@@ -14,7 +14,7 @@ HttpServlet is an abstract class of Servlet for Web Site. The subclass of HttpSe
 ## Web Application Deployment Descriptor (web.xml)
 web.xml define the servlet and its url mapping. Web Server would route the URL Request to the specified Servlet for handling.
 
-'''Sample web.xml'''
+**Sample web.xml**
 ```
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
