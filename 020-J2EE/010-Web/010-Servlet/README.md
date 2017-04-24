@@ -44,3 +44,5 @@ web.xml define the servlet and its url mapping. Web Server would route the URL R
 * Tomcat
 * Jetty
 
+# Reference
+* https://techofficejava.wordpress.com/j2ee-servlet/
