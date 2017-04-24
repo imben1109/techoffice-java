@@ -8,6 +8,8 @@ Java Persistence API (JPA) describes the Interface of Functionality. However, it
 
 ## Entity Manager
 Entity Manager is an instance which is used to interact with persistence context and manage the lifecycle of entity. There are two types of Entity Manager. One is Application-Managed Entity Manager while another is Container-Managed Entity Manger.
+* Container-Managed Entity Manager
+* Application-Managed Entity Manager
 
 ### Application-Managed Entity Manager
 The Entity Manager is constructed and managed by Application. It use Application-Managed Transaction (EntityTransaction) rather than Java Transaction API (JTA) to manage transaction.
