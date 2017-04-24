@@ -1,5 +1,6 @@
 # Spring Framework
 
+Spring is a framework for building Java Application. There are many modules in Spring Framework and Spring Project. 
 * Core
 * Web
 * Data Access
@@ -30,5 +31,5 @@
 ## Spring Batch
 - SpringBatchExample - Simple Spring Batch Example
 
-
-
+# Reference
+* https://techofficejava.wordpress.com/spring/
