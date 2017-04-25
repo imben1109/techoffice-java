@@ -7,7 +7,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,8 +24,13 @@ public class StockAppl {
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		StockAppl appl = context.getBean(StockAppl.class);
-		appl.run();
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		try{
+			StockAppl appl = context.getBean(StockAppl.class);
+			appl.run();
+		}finally {
+			context.close();
+		}
+		
 	}
 }

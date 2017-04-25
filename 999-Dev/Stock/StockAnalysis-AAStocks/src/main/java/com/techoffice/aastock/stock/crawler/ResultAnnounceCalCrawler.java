@@ -1,21 +1,16 @@
 package com.techoffice.aastock.stock.crawler;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
