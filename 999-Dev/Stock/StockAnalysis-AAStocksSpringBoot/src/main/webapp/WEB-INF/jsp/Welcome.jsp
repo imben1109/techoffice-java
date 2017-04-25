@@ -15,6 +15,7 @@
 	<h1>Stock Analysis</h1>
 	<ul>
 		<li><a href="/Stock/">Stock List</a></li>
+		<li><a href="/Industry">Industry List</a></li>
 	</ul>
 </body>
 

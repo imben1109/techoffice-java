@@ -24,7 +24,7 @@
 					var formData = new FormData();
 					formData.append('file', file);
 					$.ajax({
-						url: "/stock/fileUpload",
+						url: "/Stock/fileUpload",
 						type: "POST",
 						data: formData,
 			            processData: false,
