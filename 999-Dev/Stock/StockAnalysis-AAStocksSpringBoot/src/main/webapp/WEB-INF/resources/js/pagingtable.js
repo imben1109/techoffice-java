@@ -1,3 +1,8 @@
+/**
+ * JQuery Plugin - Paging Table
+ * 
+ * @author Ben  
+ */
 $.fn.pagingTable = function(config){
 	var me = this;
 	var config = config ? config: {};
