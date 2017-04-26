@@ -1,6 +1,5 @@
 package com.techoffice.example;
 
-import org.apache.activemq.broker.BrokerService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
