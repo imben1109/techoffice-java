@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.techoffice.yahoo.finance.stock.service.HistoryPriceBatchService;
 
 @Controller
-@RequestMapping("HistoryPriceBatch")
-public class HistoryPriceBatchController {
+@RequestMapping("HistoricalPriceBatch")
+public class HistoricalPriceBatchController {
 	
 	@Autowired
 	private HistoryPriceBatchService historyPriceBatchService;
