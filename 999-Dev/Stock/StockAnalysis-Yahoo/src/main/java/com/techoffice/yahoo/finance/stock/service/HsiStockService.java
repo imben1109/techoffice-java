@@ -1,11 +1,7 @@
 package com.techoffice.yahoo.finance.stock.service;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.slf4j.Logger;
@@ -13,9 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 import com.techoffice.yahoo.finance.stock.crawler.HsiStockCrawler;
 import com.techoffice.yahoo.finance.stock.dao.HsiStockDao;

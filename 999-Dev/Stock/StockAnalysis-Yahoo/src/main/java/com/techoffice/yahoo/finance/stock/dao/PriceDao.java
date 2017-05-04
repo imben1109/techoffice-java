@@ -18,7 +18,6 @@ public class PriceDao {
 	@PersistenceContext
 	private EntityManager em;
 	
-	@SuppressWarnings("rawtypes")
 	@Transactional
 	public void deletePrice(String stockNo){
 		Query query = em.createQuery("DELETE From Price Where stockNo = :stockNo");
