@@ -1,4 +1,4 @@
-package com.techoffice.yahoo.finance.springboot.controller;
+package com.techoffice.yahoo.finance.boot.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ import com.techoffice.hkex.csvimport.stock.model.Stock;
 import com.techoffice.hkex.csvimport.stock.service.StockService;
 
 @Controller
-@RequestMapping("stock")
+@RequestMapping("Stock")
 public class StockController {
 
 	@Autowired

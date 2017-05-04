@@ -35,7 +35,7 @@
 		</property>
 		<property name="maxConnections" value="8" />
 	</bean>
-	<bean id="myJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="jmsFactory"/>
 	</bean>
 	

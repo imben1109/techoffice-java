@@ -1,4 +1,4 @@
-package com.techoffice.yahoo.finance.springboot.controller;
+package com.techoffice.yahoo.finance.boot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -7,7 +7,10 @@
 
 <body>
 	<h1>Stock Analysis</h1>
-	
+	<ul>
+		<li><a href="/Stock/">Stock List</a></li>
+		<li><a href="/HistoryPriceBatch/run">Run Batch</a></li>
+	</ul>
 </body>
 
 </html>

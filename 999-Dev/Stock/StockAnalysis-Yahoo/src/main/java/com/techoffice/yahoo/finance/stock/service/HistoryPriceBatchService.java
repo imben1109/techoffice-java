@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 public class HistoryPriceBatchService {
 
 	@Autowired
-	private SimpleJobLauncher simpleJobLauncher;
+	private SimpleJobLauncher simpleAsyncJobLauncher;
 	
 	@Autowired
 	@Qualifier("updateHistoryPriceJob")
@@ -25,11 +25,7 @@ public class HistoryPriceBatchService {
 	public void run() {
 		try{
 			JobParameters paramerter = new JobParametersBuilder().addDate("date", new Date()).toJobParameters();
-			JobExecution execution = simpleJobLauncher.run(updateHistoryPriceJob, paramerter);
-			List<Throwable> exceptionList = execution.getAllFailureExceptions();
-			for (Throwable exception: exceptionList){
-				System.out.println(exception.getMessage());
-			}
+			simpleAsyncJobLauncher.run(updateHistoryPriceJob, paramerter);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
