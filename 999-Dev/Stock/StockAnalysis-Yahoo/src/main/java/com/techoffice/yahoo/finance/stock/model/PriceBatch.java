@@ -1,4 +1,4 @@
-package com.techoffice.yahoo.finance.stock.service;
+package com.techoffice.yahoo.finance.stock.model;
 
 import java.util.Date;
 
@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Table
 @Entity
-public class StockBatchHistory {
+public class PriceBatch {
 	
 	@Id
 	private String stockCode;

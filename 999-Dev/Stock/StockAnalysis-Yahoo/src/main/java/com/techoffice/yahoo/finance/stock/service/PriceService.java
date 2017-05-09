@@ -14,7 +14,7 @@ import com.techoffice.yahoo.finance.stock.dao.PriceDao;
 import com.techoffice.yahoo.finance.stock.model.Price;
 
 @Service
-public class StockHistoryDataService {
+public class PriceService {
 	
 	@Autowired
 	private PriceDao priceDao;

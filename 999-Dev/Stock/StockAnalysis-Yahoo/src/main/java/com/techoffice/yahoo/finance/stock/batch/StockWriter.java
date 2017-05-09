@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.techoffice.hkex.csvimport.stock.model.Stock;
 import com.techoffice.yahoo.finance.stock.dao.PriceDao;
-import com.techoffice.yahoo.finance.stock.dao.StockBatchHistoryDao;
+import com.techoffice.yahoo.finance.stock.dao.PriceBatchDao;
 import com.techoffice.yahoo.finance.stock.model.Price;
-import com.techoffice.yahoo.finance.stock.service.StockBatchHistory;
+import com.techoffice.yahoo.finance.stock.model.PriceBatch;
 
 public class StockWriter implements ItemWriter<Map<String, Object>>{
 	
@@ -19,7 +19,7 @@ public class StockWriter implements ItemWriter<Map<String, Object>>{
 	private PriceDao priceDao;
 	
 	@Autowired
-	private StockBatchHistoryDao stockBatchHistoryDao;
+	private PriceBatchDao stockBatchHistoryDao;
 	
 	@SuppressWarnings("unchecked")
 	@Transactional
@@ -31,7 +31,7 @@ public class StockWriter implements ItemWriter<Map<String, Object>>{
 				priceDao.deletePrice(stock.getStockCode());
 				List<Price> prices = (List<Price>) result.get("prices");
 				priceDao.addPriceList(prices);
-				StockBatchHistory stockBatchHistory = stockBatchHistoryDao.get(stock.getStockCode());
+				PriceBatch stockBatchHistory = stockBatchHistoryDao.get(stock.getStockCode());
 				
 			}
 		}

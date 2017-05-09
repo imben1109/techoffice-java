@@ -10,14 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.techoffice.yahoo.finance.stock.service.HistoryPriceBatchService;
+import com.techoffice.yahoo.finance.stock.service.PriceBatchService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
 public class HistoryPriceBatchServiceTest {
 	
 	@Autowired
-	private HistoryPriceBatchService historyPriceBatchService;
+	private PriceBatchService historyPriceBatchService;
 
 	@Test
 	public void run() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException{
