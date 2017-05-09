@@ -19,4 +19,16 @@ public class StockBatchHistoryDao {
 		StockBatchHistory stockBatchHistory = em.find(StockBatchHistory.class, stockCode);
 		return stockBatchHistory;
 	}
+	
+	@Transactional
+	public StockBatchHistory add(StockBatchHistory stockBatchHistory){
+		em.persist(stockBatchHistory);
+		return stockBatchHistory;
+	}
+	
+	@Transactional
+	public StockBatchHistory update(StockBatchHistory stockBatchHistory){
+		stockBatchHistory = em.merge(stockBatchHistory);
+		return stockBatchHistory;
+	}
 }
