@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.techoffice.hkex.csvimport.stock.dao.StockDao;
 import com.techoffice.hkex.csvimport.stock.model.Stock;
-import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
+import com.techoffice.yahoo.finance.stock.crawler.PriceCrawler;
 import com.techoffice.yahoo.finance.stock.dao.PriceDao;
 import com.techoffice.yahoo.finance.stock.model.Price;
 
@@ -23,7 +23,7 @@ public class PriceService {
 	private StockDao stockDao;
 	
 	@Autowired
-	private StockHistoryDataCrawler stockHistoryDataCrawler;
+	private PriceCrawler stockHistoryDataCrawler;
 	
 	public void updateAllStockPrice() throws IllegalAccessException, InvocationTargetException, IOException {
 		List<Stock> stocks = stockDao.list();

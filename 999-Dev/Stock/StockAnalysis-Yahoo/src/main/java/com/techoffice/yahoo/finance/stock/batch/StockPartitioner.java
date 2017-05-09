@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.partition.support.Partitioner;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,8 @@ import com.techoffice.hkex.csvimport.stock.dao.StockDao;
 import com.techoffice.hkex.csvimport.stock.model.Stock;
 
 public class StockPartitioner implements Partitioner{
+	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private StockDao stockDao;

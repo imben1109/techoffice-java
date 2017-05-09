@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+@Table(name="PRICE_BATCH")
 @Entity
 public class PriceBatch {
 	

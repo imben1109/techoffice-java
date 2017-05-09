@@ -24,6 +24,7 @@
 		<property name="url" value="jdbc:h2:~/StockAnalysisYahoo" />
 		<property name="username" value="sa" />
 		<property name="password" value="" />
+		<property name="maxActive" value="20" />
 	</bean>
 
 	<!-- 

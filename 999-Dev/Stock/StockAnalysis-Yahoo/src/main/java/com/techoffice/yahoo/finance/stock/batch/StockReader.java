@@ -2,21 +2,22 @@ package com.techoffice.yahoo.finance.stock.batch;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.NonTransientResourceException;
-import org.springframework.batch.item.ParseException;
-import org.springframework.batch.item.UnexpectedInputException;
 
 import com.techoffice.hkex.csvimport.stock.model.Stock;
 
 public class StockReader implements ItemReader<Stock>{
 
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	private List<Stock> stockList;
 	
 	public Stock read()  {
 		if (!stockList.isEmpty()){
 			Stock stock = stockList.remove(0);
-			System.out.println("Now Reading: " + stock.getStockCode());
+			log.info("Now Reading: " + stock.getStockCode());
 			return stock;
 		}
 		return null;

@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.techoffice.yahoo.finance.stock.model.PriceBatch;
@@ -30,9 +31,15 @@ public class PriceBatchDao {
 	}
 	
 	@Transactional
-	public PriceBatch update(PriceBatch stockBatchHistory){
-		stockBatchHistory = em.merge(stockBatchHistory);
-		return stockBatchHistory;
+	public PriceBatch update(PriceBatch priceBatch){
+		priceBatch = em.merge(priceBatch);
+		return priceBatch;
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public PriceBatch propagationUpdate(PriceBatch priceBatch){
+		priceBatch = em.merge(priceBatch);
+		return priceBatch;
 	}
 	
 	@Transactional

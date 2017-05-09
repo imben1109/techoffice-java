@@ -13,17 +13,17 @@
 	<script src="/js/bootstrapPagingtable.js"></script>
 	<script>
 		$(function(){
-			$("#stockList").pagingTable({pageLimit: 25, enableSearchHeader: true});	
+			$("#priceBatchList").pagingTable({pageLimit: 25, enableSearchHeader: true});	
 		})
 	</script>
 </head>
 
 
 <body>
-	<h1>Stock List</h1>
+	<h1>Price Batch List</h1>
 
-	<c:if test="${not empty stocks}">
-		<table border="1" id="stockList">
+	<c:if test="${not empty priceBatchList}">
+		<table border="1" id="priceBatchList">
 			<thead>
 				<tr>
 					<th>Code</th>
@@ -31,10 +31,10 @@
 				</tr>
 			</thead>
 			<tbody>
-			<c:forEach var="stock" items="${stocks}">
+			<c:forEach var="priceBatch" items="${priceBatchList}">
 				<tr>
-					<td>${stock.stockCode}</td>
-					<td>${stock.name}</td>
+					<td>${priceBatch.stockCode}</td>
+					<td>${priceBatch.lastExecuted}</td>
 				</tr>
 			</c:forEach>
 			</tbody>

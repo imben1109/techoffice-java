@@ -14,14 +14,14 @@ import com.techoffice.yahoo.finance.stock.service.PriceBatchService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class HistoryPriceBatchServiceTest {
+public class PriceBatchServiceTest {
 	
 	@Autowired
-	private PriceBatchService historyPriceBatchService;
+	private PriceBatchService priceBatchService;
 
 	@Test
 	public void run() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException{
-//		historyPriceBatchService.run();
+//		priceBatchService.run();
 	}
 
 }

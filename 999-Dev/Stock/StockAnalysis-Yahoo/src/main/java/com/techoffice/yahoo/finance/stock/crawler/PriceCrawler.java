@@ -26,7 +26,7 @@ import com.techoffice.yahoo.finance.stock.dto.CsvPrice;
 import com.techoffice.yahoo.finance.stock.model.Price;
 
 @Component
-public class StockHistoryDataCrawler {
+public class PriceCrawler {
 	public static final String URL = "http://real-chart.finance.yahoo.com/table.csv?a=00&b=1&c=1900&d=11&e=31&f=2099&g=d&ignore=.csv&s={0}.HK";
 	
 	public List<Price> retrieveHistoryPriceData(String stockNo) throws IOException, IllegalAccessException, InvocationTargetException  {

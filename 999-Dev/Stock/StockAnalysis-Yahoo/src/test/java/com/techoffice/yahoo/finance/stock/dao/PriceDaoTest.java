@@ -12,7 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
+import com.techoffice.yahoo.finance.stock.crawler.PriceCrawler;
 import com.techoffice.yahoo.finance.stock.model.Price;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -23,7 +23,7 @@ public class PriceDaoTest {
 	private PriceDao priceDao;
 	
 	@Autowired
-	private StockHistoryDataCrawler stockHistoryDataCrawler;
+	private PriceCrawler stockHistoryDataCrawler;
 	
 //	@Test
 //	public void deletePrice() throws FailingHttpStatusCodeException, MalformedURLException, IllegalAccessException, InvocationTargetException, IOException{
