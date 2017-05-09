@@ -10,21 +10,21 @@ import com.techoffice.yahoo.finance.stock.service.PriceBatchService;
 
 @Controller
 @RequestMapping("HistoricalPriceBatch")
-public class HistoricalPriceBatchController {
+public class PriceBatchController {
 	
 	@Autowired
-	private PriceBatchService historyPriceBatchService;
+	private PriceBatchService priceBatchService;
 	
 	@RequestMapping("run")
 	@ResponseBody
 	public String run(){
-		historyPriceBatchService.run();
+		priceBatchService.run();
 		return "run";
 	}
 	
 	@RequestMapping("/")
 	public ModelAndView home(){
-		ModelAndView model = new ModelAndView("historicalPriceBatch");
+		ModelAndView model = new ModelAndView("priceBatch");
 //		List<Stock> stocks = stockService.list();
 //		model.addObject("stocks", stocks);
 		return model;
