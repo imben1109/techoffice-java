@@ -17,4 +17,8 @@ public class BasicDataSourceService {
 	public int getNumIdle(){
 		return basicDataSource.getNumIdle();
 	}
+	
+	public int getMaxActive(){
+		return basicDataSource.getMaxActive();
+	}
 }

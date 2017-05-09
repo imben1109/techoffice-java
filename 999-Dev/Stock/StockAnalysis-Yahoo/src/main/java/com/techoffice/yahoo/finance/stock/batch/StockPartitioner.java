@@ -26,6 +26,9 @@ public class StockPartitioner implements Partitioner{
 		Map<String, ExecutionContext> results = new HashMap<String, ExecutionContext>();
 		
 		List<Stock> list = stockDao.list();
+		
+		log.info("Now partitioning stocks [Totol:" + list.size() + " Grid: " + gridSize +"]");
+		
 		int listPartitionSize = (list.size() / gridSize) + 1;
 		List<List<Stock>> partitionStockList = Lists.partition(list, listPartitionSize);
 		

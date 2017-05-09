@@ -23,8 +23,10 @@ public class BasicDataSourceController {
 		Map<String, String> map = new HashMap<String, String>();
 		int numActive = basicDataSourceService.getNumActive();
 		int numIdle = basicDataSourceService.getNumIdle();
+		int maxActive = basicDataSourceService.getMaxActive();
 		map.put("numActive", Integer.toString(numActive));
 		map.put("numIdle", Integer.toString(numIdle));
+		map.put("maxActive", Integer.toString(maxActive));
 		return map;
 	}
 }

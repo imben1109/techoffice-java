@@ -9,7 +9,7 @@
 	<h1>Stock Analysis</h1>
 	<ul>
 		<li><a href="/Stock/">Stock List</a></li>
-		<li><a href="/PriceBatch/run">Run Batch</a></li>
+		<li><a href="/PriceBatch/">Run Batch</a></li>
 	</ul>
 </body>
 

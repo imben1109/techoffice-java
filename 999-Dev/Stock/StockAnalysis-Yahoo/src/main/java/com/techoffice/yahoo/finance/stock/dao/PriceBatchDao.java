@@ -36,12 +36,6 @@ public class PriceBatchDao {
 		return priceBatch;
 	}
 	
-	@Transactional(propagation = Propagation.REQUIRES_NEW)
-	public PriceBatch propagationUpdate(PriceBatch priceBatch){
-		priceBatch = em.merge(priceBatch);
-		return priceBatch;
-	}
-	
 	@Transactional
 	public List<PriceBatch> list(){
 		TypedQuery<PriceBatch> query = em.createQuery("select b from PriceBatch b", PriceBatch.class);
