@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.techoffice.yahoo.finance.stock.exception.PriceBatchJobException;
 import com.techoffice.yahoo.finance.stock.model.PriceBatch;
 import com.techoffice.yahoo.finance.stock.service.PriceBatchService;
 
@@ -20,7 +21,7 @@ public class PriceBatchController {
 	
 	@RequestMapping("run")
 	@ResponseBody
-	public String run(){
+	public String run() throws PriceBatchJobException{
 		priceBatchService.run();
 		return "run";
 	}

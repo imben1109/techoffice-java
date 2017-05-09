@@ -22,9 +22,4 @@ public class JobExplorerController {
 		return jobExplorerService.getJobs();
 	}
 	
-	@RequestMapping("jobsLastStatus")
-	@ResponseBody
-	public Map<String, String> getJobsLastStatus(){
-		return jobExplorerService.getJobsLastStatus();
-	}
 }

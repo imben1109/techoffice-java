@@ -16,8 +16,10 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.techoffice.hkex.csvimport.stock.model.Stock;
+import com.techoffice.util.service.JobExplorerService;
 import com.techoffice.yahoo.finance.stock.dao.PriceBatchDao;
 import com.techoffice.yahoo.finance.stock.dao.PriceDao;
+import com.techoffice.yahoo.finance.stock.exception.PriceBatchJobException;
 import com.techoffice.yahoo.finance.stock.model.Price;
 import com.techoffice.yahoo.finance.stock.model.PriceBatch;
 
@@ -39,12 +41,16 @@ public class PriceBatchService {
 	@Qualifier("updateHistoryPriceJob")
 	private Job updateHistoryPriceJob;
 
-	public void run() {
+	@Autowired
+	private JobExplorerService jobExplorerService;
+	
+	public void run() throws PriceBatchJobException {
+
 		try{
 			JobParameters paramerter = new JobParametersBuilder().addDate("date", new Date()).toJobParameters();
 			simpleAsyncJobLauncher.run(updateHistoryPriceJob, paramerter);
 		}catch(Exception e){
-			e.printStackTrace();
+			throw new PriceBatchJobException(e);
 		}
 		
 	}
