@@ -45,7 +45,6 @@ public class JobExplorerService {
 	}
 	
 	public boolean isJobRunning(String jobName){
-		
 		int jobCount = 0;
 		try {
 			jobCount = jobExplorer.getJobInstanceCount(jobName);

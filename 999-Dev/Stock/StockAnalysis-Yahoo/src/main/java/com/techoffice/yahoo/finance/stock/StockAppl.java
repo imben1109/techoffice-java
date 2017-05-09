@@ -25,7 +25,7 @@ import com.techoffice.yahoo.finance.stock.model.Price;
 public class StockAppl {
 	
 	@Autowired
-	private PriceCrawler stockHistoryDataCrawler;
+	private PriceCrawler priceCrawler;
 	
 	@Autowired
 	private PriceDao priceDao;

@@ -45,7 +45,9 @@ public class PriceBatchService {
 	private JobExplorerService jobExplorerService;
 	
 	public void run() throws PriceBatchJobException {
-
+		if(jobExplorerService.isJobRunning(updateHistoryPriceJob.getName())){
+			throw new PriceBatchJobException();
+		}
 		try{
 			JobParameters paramerter = new JobParametersBuilder().addDate("date", new Date()).toJobParameters();
 			simpleAsyncJobLauncher.run(updateHistoryPriceJob, paramerter);
