@@ -70,8 +70,8 @@ public class PriceBatchService {
 			priceBatch = new PriceBatch();
 			priceBatch.setStockCode(stock.getStockCode());
 		}
-		priceDao.deletePrice(stock.getStockCode());
-		priceDao.addPriceList(prices);
+		priceDao.delete(stock.getStockCode());
+		priceDao.add(prices);
 		priceBatch.setLastExecuted(new Date());
 		priceBatchDao.update(priceBatch);
 		log.info("Stock [" + stock.getStockCode() + "] - Updated");
