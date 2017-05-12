@@ -27,9 +27,17 @@ import com.techoffice.yahoo.finance.stock.model.Price;
 
 @Component
 public class PriceCrawler {
-	public static final String URL = "http://real-chart.finance.yahoo.com/table.csv?a=00&b=1&c=1900&d=11&e=31&f=2099&g=d&ignore=.csv&s={0}.HK";
+	public static final String URL = "http://real-chart.finance.yahoo.com/table.csv?a=00&b=1&c=1900&d=11&e=31&f=2099&g=d&ignore=.csv&s={0}";
 	
-	public List<Price> retrieveHistoryPriceData(String stockNo) throws IOException, IllegalAccessException, InvocationTargetException  {
+	public List<Price> retrieveStockHistoryPrice(String stockNo) throws IOException, IllegalAccessException, InvocationTargetException  {
+		List<Price> prices = retrieveHistoryPrice(stockNo + ".HK");
+		for (Price price: prices){
+			price.setStockNo(stockNo);
+		}
+		return prices;
+	}
+	
+	public List<Price> retrieveHistoryPrice(String stockNo) throws IOException, IllegalAccessException, InvocationTargetException  {
 		URL website = new URL(MessageFormat.format(URL, stockNo));
 		ReadableByteChannel rbc = Channels.newChannel(website.openStream());
 		File csvFile = File.createTempFile("TECHOFFICE_YAHOO_", ".csv");
@@ -38,9 +46,6 @@ public class PriceCrawler {
 		fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 		fos.close();
 		List<Price> prices = convertFileToPriceList(csvFile);
-		for (Price price: prices){
-			price.setStockNo(stockNo);
-		}
 		return prices;
 	}
 	

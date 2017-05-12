@@ -2,15 +2,13 @@ package com.techoffice.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -28,7 +26,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
-import org.xml.sax.SAXException;
 
 import com.techoffice.util.exception.XmlUtilDocumentConversionException;
 import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
@@ -72,6 +69,9 @@ public class XmlUtil {
 	
 	public static String tidyXml(String xml){
 		Tidy tidy = new Tidy();
+		Properties properties = new Properties();
+		properties.setProperty("new-blocklevel-tags", "section");
+
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
 		tidy.setXHTML(true);
@@ -81,6 +81,8 @@ public class XmlUtil {
 		try {
 			tiddiedXml = out.toString("UTF-8");
 		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (Exception e){
 			e.printStackTrace();
 		}
 		return tiddiedXml;

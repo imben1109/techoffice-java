@@ -1,0 +1,21 @@
+{
+  "name": "stock-analysis-yahoo-boot",
+  "homepage": "https://github.com/TechOffice/TechOffice-Java",
+  "authors": [
+    "imben1109 <imben1109@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chart.js": "^2.5.0"
+  }
+}

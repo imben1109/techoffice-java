@@ -5,9 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
 
 /**
  * This model represents Stock in Hong Kong Hang Seng Index (HSI).
@@ -18,10 +17,11 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name="HSI_STOCK")
+@SequenceGenerator(name="HSI_STOCK_SEQ")
 public class HsiStock {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="HSI_STOCK_SEQ")
 	private int id;
 	
 	@Column(name="STOCK_NO")

@@ -27,7 +27,7 @@ public class StockProcessor implements ItemProcessor<Stock, Map<String, Object>>
 		result.put("stock", stock);
 		List<Price> prices = new ArrayList<Price>();;
 		try {
-			prices = priceCrawler.retrieveHistoryPriceData(stock.getStockCode().substring(1));
+			prices = priceCrawler.retrieveStockHistoryPrice(stock.getStockCode().substring(1));
 			result.put("result", "success");
 		} catch (Exception e) {
 			result.put("result", "fail");

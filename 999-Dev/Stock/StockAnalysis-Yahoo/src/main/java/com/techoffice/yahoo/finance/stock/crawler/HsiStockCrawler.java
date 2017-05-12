@@ -30,7 +30,7 @@ public class HsiStockCrawler {
 	
 	public List<HsiStock> retrieveStockList() throws XPathExpressionException, XmlUtilInvalidDocumentException {
 		List<HsiStock> hsiStockList = new ArrayList<HsiStock>();
-		String xPath = "//*[@id='yfncsumtab']/tbody/tr[2]/td[1]/table[2]/tbody/tr/td/table/tbody/tr";
+		String xPath = "//*[@id='quote-leaf-comp']/section/section/table/tbody/tr";
 		String xml = retrieveXml();
 		NodeList stockNodeList = XmlUtil.evaluateXpath(xml, xPath);
 		for (int i=1; i<stockNodeList.getLength(); i++){

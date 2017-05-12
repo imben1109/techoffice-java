@@ -35,7 +35,7 @@ public class PriceService {
 		for (Stock stock: stocks){
 			log.info("Updating Price of Stock [" + stock.getName() + "]");
 			String stockCode = stock.getStockCode().substring(1);
-			List<Price> prices = stockHistoryDataCrawler.retrieveHistoryPriceData(stockCode);
+			List<Price> prices = stockHistoryDataCrawler.retrieveStockHistoryPrice(stockCode);
 			priceDao.add(prices);
 		}
 	}
