@@ -44,4 +44,6 @@ public class PriceDao {
 		query.setParameter("stockNo", stockNo);
 		return query.getResultList();
 	}
+	
+
 }
