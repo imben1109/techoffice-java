@@ -34,7 +34,9 @@ public class PriceBatchStartupListener {
 	private JobOperator jobOperator;
 	
 	/**
-	 * Run the 
+	 * Run the Spring Batch Job Operation to stop all job of Update History Price Job 
+	 * when the Spring Context is refreshed. 
+	 * 
 	 * @throws NoSuchJobException 
 	 * @throws JobExecutionNotRunningException 
 	 * @throws NoSuchJobExecutionException 
