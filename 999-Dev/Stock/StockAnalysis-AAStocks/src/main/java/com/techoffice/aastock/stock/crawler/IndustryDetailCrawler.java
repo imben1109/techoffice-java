@@ -30,11 +30,13 @@ public class IndustryDetailCrawler {
 		List<IndustryDetail> industryDetails = new ArrayList<IndustryDetail>();
 		String xml = WebDriverUtil.getXml(URL + industrySymbol); 
 		try {
-			IndustryDetail industryDetail = new IndustryDetail();
 			String remark = XmlUtil.getXpathText(xml, "//*[@id='IndustyMain']/div[5]/div[3]");
 			String lastUpdatedStatement = remark.replace("(1) Information delayed at least 15 minutes Last Update: ", "");
-			NodeList rowList = XmlUtil.evaluateXpath(xml, "//*[@id='tbTS']/tbody/tr[1]");
+			NodeList rowList = XmlUtil.evaluateXpath(xml, "//*[@id='tbTS']/tbody/tr");
+			log.info("Number of stock in this industry: " + rowList.getLength());
 			for (int i=0; i < rowList.getLength(); i++){
+				IndustryDetail industryDetail = new IndustryDetail();
+				industryDetail.setIndustrySymbol(industrySymbol);
 				Node rowNode = rowList.item(i);
 				String rowXml = XmlUtil.toXml(rowNode);
 				String name = XmlUtil.getXpathText(rowXml, "//tr/td[1]/div[1]");
@@ -42,13 +44,23 @@ public class IndustryDetailCrawler {
 				String last = XmlUtil.getXpathText(rowXml, "tr/td[3]");
 				String chg= XmlUtil.getXpathText(rowXml, "tr/td[4]");
 				String pctChg= XmlUtil.getXpathText(rowXml, "tr/td[5]");
-				String volumn = XmlUtil.getXpathText(rowXml, "tr/td[6]");
-				String turnOver = XmlUtil.getXpathText(rowXml, "tr/td[7]");
+				String volume = XmlUtil.getXpathText(rowXml, "tr/td[6]");
+				String turnover = XmlUtil.getXpathText(rowXml, "tr/td[7]");
 				String pe= XmlUtil.getXpathText(rowXml, "tr/td[8]");
 				String pb = XmlUtil.getXpathText(rowXml, "tr/td[9]");
-				String yield = XmlUtil.getXpathText(rowXml, "tr/td[10]");
+				String yeild = XmlUtil.getXpathText(rowXml, "tr/td[10]");
 				String marketCap = XmlUtil.getXpathText(rowXml, "tr/td[11]");
-				
+				industryDetail.setName(name);
+				industryDetail.setSymbol(symbol);
+				industryDetail.setLast(Double.parseDouble(last));
+				industryDetail.setChg(chg);
+				industryDetail.setPctChg(pctChg);
+				industryDetail.setVolume(volume);
+				industryDetail.setTurnover(turnover);
+				industryDetail.setPe(pe);
+				industryDetail.setPb(pb);
+				industryDetail.setYeild(yeild);
+				industryDetail.setMarketCap(marketCap);
 				industryDetails.add(industryDetail);
 			}
 		} catch (Exception e) {

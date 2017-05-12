@@ -20,16 +20,19 @@
 	<div class="container-fluid">
 		<h1>Stock Analysis - Industry</h1>
 		<a href="/Industry/updateIndustryList">Update Industry List</a>
+		<a href="/Industry/updateIndustryDetails">Update Industry Details</a>
 		<br/><br/>
 		<c:if test="${not empty industryList }">
 			<table id="industryTable">
 				<thead>
 					<tr>
-						<th>Industry Name</th>
+						<th>Symbol</th>
+						<th>Name</th>
 					</tr>
 				</thead>
 				<c:forEach var="industry" items="${industryList }">
 					<tr>
+						<td><a href="/IndustryDetail/${industry.industrySymbol}">${industry.industrySymbol}</a></td>
 						<td>${industry.name }</td>
 					</tr>
 				</c:forEach>

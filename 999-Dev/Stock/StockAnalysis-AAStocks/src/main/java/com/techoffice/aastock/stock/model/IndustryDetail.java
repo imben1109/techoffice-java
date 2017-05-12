@@ -17,7 +17,7 @@ public class IndustryDetail {
 	@SequenceGenerator(name="INDUSTRY_DETAIL_SEQ", sequenceName="INDUSTRY_DETAIL_SEQ")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="INDUSTRY_DETAIL_SEQ")
 	private int id;
-	
+	private String industrySymbol;
 	private String name;
 	private String symbol;
 	private Date lastUpdated;
@@ -107,6 +107,12 @@ public class IndustryDetail {
 	}
 	public void setMarketCap(String marketCap) {
 		this.marketCap = marketCap;
+	}
+	public String getIndustrySymbol() {
+		return industrySymbol;
+	}
+	public void setIndustrySymbol(String industrySymbol) {
+		this.industrySymbol = industrySymbol;
 	}
 	
 	

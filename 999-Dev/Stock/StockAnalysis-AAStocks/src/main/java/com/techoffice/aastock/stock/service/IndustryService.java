@@ -20,6 +20,9 @@ public class IndustryService {
 	@Autowired
 	private IndustryDao industryDao;
 	
+	@Autowired
+	private IndustryDetailService industryDetailService;
+	
 	@Transactional
 	public List<Industry> list(){
 		return industryDao.list();
@@ -30,5 +33,13 @@ public class IndustryService {
 		List<Industry> industries = industryCrawler.retrieveIndustryList();
 		industryDao.clear();
 		industryDao.add(industries);
+	}
+	
+	@Transactional
+	public void updateIndustryDetails() throws WebCrawlerException{
+		List<Industry> list = industryDao.list();
+		for (Industry industry: list){
+			industryDetailService.updateIndustryDetail(industry.getIndustrySymbol());
+		}
 	}
 }

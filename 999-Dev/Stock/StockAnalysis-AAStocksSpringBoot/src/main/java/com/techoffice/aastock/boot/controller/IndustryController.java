@@ -34,5 +34,10 @@ public class IndustryController {
 		return "completed";
 	}
 	
-	
+	@RequestMapping("updateIndustryDetails")
+	@ResponseBody
+	public String updateIndustryDetails() throws WebCrawlerException{
+		industryService.updateIndustryDetails();
+		return "completed";
+	}
 }
