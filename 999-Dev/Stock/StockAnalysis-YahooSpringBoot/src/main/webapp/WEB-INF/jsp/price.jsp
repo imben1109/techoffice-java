@@ -13,28 +13,28 @@
 	<script src="/js/bootstrapPagingtable.js"></script>
 	<script>
 		$(function(){
-			$("#stockList").pagingTable({pageLimit: 25, enableSearchHeader: true});	
+			$("#historicalPrice").pagingTable({pageLimit: 25, enableSearchHeader: true});	
 		})
 	</script>
 </head>
 
 
 <body>
-	<h1>Stock List</h1>
+	<h1>Historical Price - ${stockNo}</h1>
 
-	<c:if test="${not empty stocks}">
-		<table border="1" id="stockList">
+	<c:if test="${not empty prices}">
+		<table border="1" id="historicalPrice">
 			<thead>
 				<tr>
-					<th>Code</th>
-					<th>Name</th>
+					<th>Date</th>
+					<th>Adj. Close</th>
 				</tr>
 			</thead>
 			<tbody>
-			<c:forEach var="stock" items="${stocks}">
+			<c:forEach var="price" items="${prices}">
 				<tr>
-					<td><a href="/Price/list/${stock.stockCode}">${stock.stockCode}</a></td>
-					<td>${stock.name}</td>
+					<td>${price.priceDate}</td>
+					<td>${price.adjClose}</td>
 				</tr>
 			</c:forEach>
 			</tbody>
