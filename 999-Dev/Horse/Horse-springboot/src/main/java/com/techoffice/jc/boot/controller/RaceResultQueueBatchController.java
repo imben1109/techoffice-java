@@ -1,4 +1,4 @@
-package com.techoffice.jc.springboot.controller;
+package com.techoffice.jc.boot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

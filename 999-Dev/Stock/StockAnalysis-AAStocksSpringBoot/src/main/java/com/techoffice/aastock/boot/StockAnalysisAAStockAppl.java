@@ -1,8 +1,8 @@
-package com.techoffice.aastock.springboot;
+package com.techoffice.aastock.boot;
 
 import org.springframework.boot.SpringApplication;
 
-import com.techoffice.aastock.springboot.config.Config;
+import com.techoffice.aastock.boot.config.Config;
 
 public class StockAnalysisAAStockAppl {
 	

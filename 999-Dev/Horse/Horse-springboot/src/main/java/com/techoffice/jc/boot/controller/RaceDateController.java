@@ -1,4 +1,4 @@
-package com.techoffice.jc.springboot.controller;
+package com.techoffice.jc.boot.controller;
 
 import java.text.ParseException;
 import java.util.Date;

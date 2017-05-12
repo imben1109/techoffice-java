@@ -1,4 +1,4 @@
-package com.techoffice.aastock.springboot.controller;
+package com.techoffice.aastock.boot.controller;
 
 import java.util.List;
 

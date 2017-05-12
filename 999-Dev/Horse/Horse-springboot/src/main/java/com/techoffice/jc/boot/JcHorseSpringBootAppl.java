@@ -1,8 +1,8 @@
-package com.techoffice.jc.springboot;
+package com.techoffice.jc.boot;
 
 import org.springframework.boot.SpringApplication;
 
-import com.techoffice.jc.springboot.config.Config;
+import com.techoffice.jc.boot.config.Config;
 
 public class JcHorseSpringBootAppl {
 	

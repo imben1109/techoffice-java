@@ -1,4 +1,4 @@
-package com.techoffice.jc.springboot.controller;
+package com.techoffice.jc.boot.controller;
 
 import java.util.Date;
 import java.util.List;
