@@ -2,6 +2,8 @@ package com.techoffice.aastock.stock.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +15,8 @@ import com.techoffice.util.exception.WebCrawlerException;
 
 @Service
 public class IndustryService {
+	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private IndustryCrawler industryCrawler;
@@ -37,9 +41,11 @@ public class IndustryService {
 	
 	@Transactional
 	public void updateIndustryDetails() throws WebCrawlerException{
+		log.info("Update all industry detail - Start");
 		List<Industry> list = industryDao.list();
 		for (Industry industry: list){
 			industryDetailService.updateIndustryDetail(industry.getIndustrySymbol());
 		}
+		log.info("Update all industry detail - Completed");
 	}
 }

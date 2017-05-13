@@ -3,6 +3,7 @@ package com.techoffice.aastock.stock.crawler;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -33,10 +34,8 @@ public class IndustryDetailCrawler {
 			String remark = XmlUtil.getXpathText(xml, "//*[@id='IndustyMain']/div[5]/div[3]");
 			String lastUpdatedStatement = remark.replace("(1) Information delayed at least 15 minutes Last Update: ", "");
 			NodeList rowList = XmlUtil.evaluateXpath(xml, "//*[@id='tbTS']/tbody/tr");
-			log.info("Number of stock in this industry: " + rowList.getLength());
+			log.info("Number of stock found in this industry [" + industrySymbol +"]: " + rowList.getLength());
 			for (int i=0; i < rowList.getLength(); i++){
-				IndustryDetail industryDetail = new IndustryDetail();
-				industryDetail.setIndustrySymbol(industrySymbol);
 				Node rowNode = rowList.item(i);
 				String rowXml = XmlUtil.toXml(rowNode);
 				String name = XmlUtil.getXpathText(rowXml, "//tr/td[1]/div[1]");
@@ -50,22 +49,26 @@ public class IndustryDetailCrawler {
 				String pb = XmlUtil.getXpathText(rowXml, "tr/td[9]");
 				String yeild = XmlUtil.getXpathText(rowXml, "tr/td[10]");
 				String marketCap = XmlUtil.getXpathText(rowXml, "tr/td[11]");
-				industryDetail.setName(name);
-				industryDetail.setSymbol(symbol);
-				industryDetail.setLast(Double.parseDouble(last));
-				industryDetail.setChg(chg);
-				industryDetail.setPctChg(pctChg);
-				industryDetail.setVolume(volume);
-				industryDetail.setTurnover(turnover);
-				industryDetail.setPe(pe);
-				industryDetail.setPb(pb);
-				industryDetail.setYeild(yeild);
-				industryDetail.setMarketCap(marketCap);
-				industryDetails.add(industryDetail);
+				if (NumberUtils.isNumber(last)){
+					IndustryDetail industryDetail = new IndustryDetail();
+					industryDetail.setIndustrySymbol(industrySymbol);
+					industryDetail.setName(name);
+					industryDetail.setSymbol(symbol);
+					industryDetail.setLast(Double.parseDouble(last));
+					industryDetail.setChg(chg);
+					industryDetail.setPctChg(pctChg);
+					industryDetail.setVolume(volume);
+					industryDetail.setTurnover(turnover);
+					industryDetail.setPe(pe);
+					industryDetail.setPb(pb);
+					industryDetail.setYeild(yeild);
+					industryDetail.setMarketCap(marketCap);
+					industryDetails.add(industryDetail);
+				}
 			}
 		} catch (Exception e) {
 			log.error(xml);
-			throw new WebCrawlerException(e);
+			throw new WebCrawlerException("Industry Symbol: " + industrySymbol, e);
 		}
 		return industryDetails;
 	}

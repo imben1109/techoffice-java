@@ -9,4 +9,8 @@ public class WebCrawlerException extends Exception{
 	public WebCrawlerException(Throwable cause){
 		super(MESSAGE, cause);
 	}
+	
+	public WebCrawlerException(String info, Throwable cause){
+		super(MESSAGE + " " + info, cause);
+	}
 }
