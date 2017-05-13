@@ -56,14 +56,15 @@ public class RaceDateService {
 	 * @throws InterruptedException
 	 * @throws TransformerException
 	 * @throws XmlUtilDocumentConversionException 
+	 * @throws ParseException 
 	 */
 	@Transactional
-	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException  {
+	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException  {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int count = 0; 
 		List<RaceDate> hkjcRaceDateList = raceResultCrawler.retrieveRaceDateList();
 		for (RaceDate newRaceDate: hkjcRaceDateList){
-			RaceDate raceDate = raceDateDao.getByRaceDate(newRaceDate.getRaceDate());
+			RaceDate raceDate = raceDateDao.getUrl(newRaceDate.getUrl());
 			if (raceDate == null){
 				raceDateDao.update(newRaceDate);
 				count++;
@@ -104,7 +105,7 @@ public class RaceDateService {
 		int processedCount = 0;
 		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
 		for(RaceDate raceDate: raceDateList){
-			int raceResultCount = resultQueueService.updateResultQueueByRaceDate(raceDate.getRaceDate());
+			int raceResultCount = resultQueueService.updateResultQueueByRaceDate(raceDate.getUrl());
 			raceDate.setRaceCount(raceResultCount);
 			raceDateDao.update(raceDate);
 			raceResultTotalCount += raceResultCount;

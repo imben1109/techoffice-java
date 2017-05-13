@@ -45,10 +45,10 @@ public class RaceResultCrawlerTest {
 	}
 	
 	@Test
-	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException, ParseException{
 		List<RaceDate> raceDateList = raceResultCrawler.retrieveRaceDateList();
 		for(RaceDate raceDate: raceDateList){
-			log.info(raceDate.getRaceDate());
+			log.info(raceDate.getUrl());
 		}
 	}
 	

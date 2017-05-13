@@ -56,7 +56,7 @@ public class WebDriverUtil {
 	    WebDriverWait wait = new WebDriverWait(webDriver, 3);
 	    String sourceStr = "";
 	    try{
-	    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']/div[5]/div[2]/table"))));
+	    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']"))));
 			sourceStr = webDriver.getPageSource();
 	    }catch(NoSuchElementException e){
 	    	e.printStackTrace();

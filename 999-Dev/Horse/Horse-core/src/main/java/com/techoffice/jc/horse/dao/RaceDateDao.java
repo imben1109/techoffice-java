@@ -35,9 +35,9 @@ public class RaceDateDao {
 	}
 	
 	@Transactional
-	public RaceDate getByRaceDate(String raceDate){
-		TypedQuery<RaceDate> query = em.createQuery("from RaceDate where raceDate = :RACEDATE", RaceDate.class);
-		query.setParameter("RACEDATE", raceDate);
+	public RaceDate getUrl(String url){
+		TypedQuery<RaceDate> query = em.createQuery("from RaceDate where url = :URL", RaceDate.class);
+		query.setParameter("URL", url);
 		List<RaceDate> list = query.getResultList();
 		if (list.size() == 1){
 			return list.get(0);

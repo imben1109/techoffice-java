@@ -36,7 +36,7 @@ public class RaceDateController {
 	
 	@RequestMapping("/updateRaceDateList")
 	@ResponseBody
-	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException{
+	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		return raceDateService.updateRaceDateList();
 	}
 
