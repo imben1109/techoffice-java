@@ -98,7 +98,7 @@ public class RaceDateService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
+	public Map<String, Integer> updateRaceResultQueues() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;
@@ -106,7 +106,7 @@ public class RaceDateService {
 		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
 		log.info("Number of Pending Race Date: " + raceDateList.size());
 		for(RaceDate raceDate: raceDateList){
-			int raceResultCount = resultQueueService.updateResultQueueByUrl(raceDate.getUrl());
+			int raceResultCount = resultQueueService.updateResultQueuesByUrl(raceDate.getUrl());
 			raceDate.setRaceCount(raceResultCount);
 			raceDateDao.update(raceDate);
 			raceResultTotalCount += raceResultCount;
@@ -128,7 +128,7 @@ public class RaceDateService {
 	}
 	
 	@Transactional
-	public Map<String, Object> getPendingQueueDateList(){
+	public Map<String, Object> getPendingRaceDateList(){
 		Map<String, Object> map = new HashMap<String, Object>();
 		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
 		map.put("list", raceDateList);

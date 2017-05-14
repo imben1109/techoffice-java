@@ -34,22 +34,22 @@ public class RaceDateController {
 		return view;
 	}
 	
-	@RequestMapping("/updateRaceDateList")
+	@RequestMapping("updateRaceDateList")
 	@ResponseBody
 	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		return raceDateService.updateRaceDateList();
 	}
 
-	@RequestMapping("pendingQueueDateList")
+	@RequestMapping("pendingRaceDateList")
 	@ResponseBody
 	public Map<String, Object> pendingQueueDateList(){
-		return raceDateService.getPendingQueueDateList();
+		return raceDateService.getPendingRaceDateList();
 	}
 	
 	@RequestMapping("processRaceResultQueueList")
 	@ResponseBody
 	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
-		return raceDateService.processRaceResultQueueList();
+		return raceDateService.updateRaceResultQueues();
 	}
 	
 	@RequestMapping("/RaceDateDetail")
@@ -58,6 +58,7 @@ public class RaceDateController {
 			@DateTimeFormat(pattern="ddMMyyyy") 
 			Date raceDate){
 		ModelAndView view = new ModelAndView("RaceDateDetail");
+		
 		return view;
 	}
 	

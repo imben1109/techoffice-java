@@ -103,10 +103,10 @@ public class RaceResultQueueService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public int updateResultQueueByUrl(String url) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public int updateResultQueuesByUrl(String url) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		int raceResultCount = 0;
 		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(url);
-		log.info("Number of Race Result Queue of " + url + ": " + raceResultQueueList.size());
+		log.info("Number of Race Result Queues of " + url + ": " + raceResultQueueList.size());
 		for(RaceResultQueue queue: raceResultQueueList){
 			updateResultQueue(queue);
 			raceResultCount++;
@@ -129,5 +129,7 @@ public class RaceResultQueueService {
 			}
 		}
 	}
+	
+	
 	
 }
