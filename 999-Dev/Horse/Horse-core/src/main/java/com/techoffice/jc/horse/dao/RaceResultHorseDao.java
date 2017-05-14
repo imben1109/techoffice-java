@@ -9,6 +9,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 
 @Repository
@@ -28,5 +29,19 @@ public class RaceResultHorseDao {
 	public List<RaceResultHorse> list(){
 		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse", RaceResultHorse.class);
 		return query.getResultList();
+	}
+	
+	@Transactional
+	public List<RaceResultHorse> listByRaceResult(RaceResult raceResult){
+		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse Where raceResult = :RaceResult ", RaceResultHorse.class);
+		query.setParameter("RaceResult", raceResult);
+		return query.getResultList();	
+	}
+	
+	@Transactional
+	public List<RaceResultHorse> listByRaceResult(int raceResultId){
+		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse Where raceResult.id = :RaceResultId", RaceResultHorse.class);
+		query.setParameter("RaceResultId", raceResultId);
+		return query.getResultList();	
 	}
 }

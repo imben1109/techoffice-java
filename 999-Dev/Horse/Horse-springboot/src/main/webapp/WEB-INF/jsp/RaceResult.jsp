@@ -39,7 +39,7 @@
 			<tbody>
 				<c:forEach var="raceResult" items="${raceResults}">
 				<tr>
-					<td>${raceResult.id}</td>
+					<td><a href="/RaceResultHorse/${raceResult.id}" >${raceResult.id}</a></td>
 					<td><fmt:formatDate value="${raceResult.raceDate }" pattern="yyyy-MM-dd" /></td>
 					<td>${raceResult.venue }</td>
 					<td>${raceResult.raceNum }</td>
