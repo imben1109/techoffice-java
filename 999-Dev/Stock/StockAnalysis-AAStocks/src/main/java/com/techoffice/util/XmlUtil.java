@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -27,8 +28,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
 
-import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.InvalidDocumentException;
+import com.techoffice.util.exception.XpathException;
 
 public class XmlUtil {
 	
@@ -46,9 +47,9 @@ public class XmlUtil {
 	 * 
 	 * @param xml
 	 * @return
-	 * @throws XmlUtilInvalidDocumentException
+	 * @throws InvalidDocumentException
 	 */
-	public static Document convertXmlStrToDocument(String xml) throws XmlUtilInvalidDocumentException{
+	public static Document convertXmlStrToDocument(String xml) throws InvalidDocumentException{
 		Document document = null;
 		try{
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -63,7 +64,7 @@ public class XmlUtil {
 			document = documentBuilder.parse(IOUtils.toInputStream(xml, StandardCharsets.UTF_8));	
 		}catch(Exception e){
 			log.error("Try to convert xml: " + xml);
-			throw new XmlUtilInvalidDocumentException("Cannot xml to Document: " + e.getMessage());
+			throw new InvalidDocumentException("Cannot xml to Document: " + e.getMessage());
 		}
 		return document;
 	}
@@ -90,16 +91,22 @@ public class XmlUtil {
 	 * @param xml
 	 * @param xPath
 	 * @return
-	 * @throws XmlUtilInvalidDocumentException
-	 * @throws XPathExpressionException
+	 * @throws XpathException 
 	 */
-	public static NodeList evaluateXpath(String xml, String xPath) throws XmlUtilInvalidDocumentException, XPathExpressionException{
+	public static NodeList evaluateXpath(String xml, String xPath) throws XpathException {
 		NodeList nodeList = null;
-		Document doc = convertXmlStrToDocument(xml);
-		XPathFactory xPathfactory = XPathFactory.newInstance();
-		XPath xpath = xPathfactory.newXPath();
-		XPathExpression expr = xpath.compile(xPath);
-		nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		Document doc = null;
+		try {
+			doc = convertXmlStrToDocument(xml);
+			XPathFactory xPathfactory = XPathFactory.newInstance();
+			XPath xpath = xPathfactory.newXPath();
+			XPathExpression expr = xpath.compile(xPath);
+			nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		} catch (InvalidDocumentException e) {
+			throw new XpathException(e);
+		} catch (XPathExpressionException e) {
+			throw new XpathException(MessageFormat.format(XpathException.INVALID_XPATH_PATTERN, xPath), e);
+		}
 		return nodeList;	
 	}
 	
@@ -109,17 +116,17 @@ public class XmlUtil {
 	 * @param xPath
 	 * @return
 	 * @throws XPathExpressionException
-	 * @throws XmlUtilInvalidDocumentException
-	 * @throws XmlUtilXpathNotUniqueException
+	 * @throws InvalidDocumentException
+	 * @throws XpathException
 	 */
-	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, XmlUtilInvalidDocumentException, XmlUtilXpathNotUniqueException {
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, InvalidDocumentException, XpathException {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){
-			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
+			throw new XpathException(xPath + " contains two node positions. " );
 		}else if (nodeList.getLength() == 0 ){
 			log.error(xml);
-			throw new XmlUtilXpathNotUniqueException(xPath + " cannot be found. ");
+			throw new XpathException(xPath + " cannot be found. ");
 		}else {
 			Node node = nodeList.item(0);
 			nodeText = getNodeText(node);

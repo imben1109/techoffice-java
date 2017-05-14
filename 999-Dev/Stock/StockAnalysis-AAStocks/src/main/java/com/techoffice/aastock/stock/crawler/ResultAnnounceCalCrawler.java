@@ -13,7 +13,8 @@ import org.xml.sax.SAXException;
 
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
+import com.techoffice.util.exception.InvalidDocumentException;
+import com.techoffice.util.exception.XpathException;
 
 /**
  * Web Crawler for http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1
@@ -27,11 +28,13 @@ public class ResultAnnounceCalCrawler {
 	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1";
 	
-	public int getPageCount() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilInvalidDocumentException{
+	public int getPageCount() throws XpathException {
 		String xml = WebDriverUtil.getXml(URL);
 		String xPath = "/html/body/form/div[2]/div[6]/div[8]/table/tbody/tr/td[2]/a";
 		NodeList tableNodeList = XmlUtil.evaluateXpath(xml, xPath);
 		int pageCount = tableNodeList.getLength() + 1;
 		return pageCount;
 	}
+	
+	
 }
