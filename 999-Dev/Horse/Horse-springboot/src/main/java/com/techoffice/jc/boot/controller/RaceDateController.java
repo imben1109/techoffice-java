@@ -2,6 +2,7 @@ package com.techoffice.jc.boot.controller;
 
 import java.text.ParseException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +18,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.service.RaceDateService;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Controller
 @RequestMapping("RaceDate")
@@ -36,19 +38,23 @@ public class RaceDateController {
 	
 	@RequestMapping("updateRaceDateList")
 	@ResponseBody
-	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public Map<String, Integer> updateRaceDateList() throws XpathException, ParseException {
 		return raceDateService.updateRaceDateList();
 	}
 
 	@RequestMapping("pendingRaceDateList")
 	@ResponseBody
 	public Map<String, Object> pendingQueueDateList(){
-		return raceDateService.getPendingRaceDateList();
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<RaceDate> raceDateList = raceDateService.getPendingRaceDateList();
+		map.put("list", raceDateList);
+		map.put("count", raceDateList.size());
+		return map;
 	}
 	
 	@RequestMapping("processRaceResultQueueList")
 	@ResponseBody
-	public Map<String, Integer> processRaceResultQueueList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public Map<String, Integer> processRaceResultQueueList() throws XpathException, ParseException {
 		return raceDateService.updateRaceResultQueues();
 	}
 	

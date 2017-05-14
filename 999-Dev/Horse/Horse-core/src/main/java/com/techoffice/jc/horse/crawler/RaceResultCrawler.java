@@ -28,8 +28,8 @@ import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Component
 public class RaceResultCrawler {
@@ -48,7 +48,7 @@ public class RaceResultCrawler {
         return xml;
 	}
 	
-	public List<RaceDate> retrieveRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException {
+	public List<RaceDate> retrieveRaceDateList() throws XpathException, ParseException {
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "//*[@id='raceDateSelect']");
@@ -75,7 +75,7 @@ public class RaceResultCrawler {
 		return raceDateList;
 	}
 	
-	public List<RaceResultQueue> getRaceResultQueueList(String location) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public List<RaceResultQueue> getRaceResultQueueList(String location) throws XpathException, ParseException {
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);
@@ -106,7 +106,7 @@ public class RaceResultCrawler {
 		return raceNumList;
 	}
 	
-	public RaceResult getRaceResult(String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException {
+	public RaceResult getRaceResult(String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XpathException, ParseException, DocumentConversionException {
 		String xml = retrieveXml(location);
 		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);

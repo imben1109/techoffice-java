@@ -16,8 +16,8 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -30,17 +30,17 @@ public class CurrentOddCrawlerTest {
 	private HorseAdjTimeDao horseAdjTimeDao;
 	
 //	@Test
-	public void getRaceNums() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public void getRaceNums() throws XpathException {
 		currentOddCrawler.getRaceNums();		
 	}
 	
 //	@Test
-	public void getHorse() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public void getHorse() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, DocumentConversionException, XpathException{
 		currentOddCrawler.getCurrentOdd();
 	}
 	
 	@Test
-	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public void run() throws XPathExpressionException, DocumentConversionException, XpathException{
 		currentOddCrawler.run();
 	}
 }

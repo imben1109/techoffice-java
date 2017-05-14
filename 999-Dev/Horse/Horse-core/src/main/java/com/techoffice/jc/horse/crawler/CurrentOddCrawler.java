@@ -23,8 +23,8 @@ import com.techoffice.jc.horse.helper.CurrentOddHelper;
 import com.techoffice.util.UrlUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Component
 public class CurrentOddCrawler {
@@ -52,7 +52,7 @@ public class CurrentOddCrawler {
 		return xml;
 	}
 
-	public List<String> getRaceNums() throws XPathExpressionException, XmlUtilDocumentConversionException {
+	public List<String> getRaceNums() throws XpathException {
 		List<String> raceNums = new ArrayList<String>();
 		String xml = retrieveXml();
 		String xPath = "//*[@id='info_bar']/tbody/tr[2]/td/div/table/tbody/tr/td/a/img";
@@ -65,17 +65,17 @@ public class CurrentOddCrawler {
 		return raceNums;
 	}
 	
-	public List<CurrentOdd> getCurrentOdd() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public List<CurrentOdd> getCurrentOdd() throws XPathExpressionException, DocumentConversionException, XpathException{
 		String xml = retrieveXml();
 		return getOddsList(xml);
 	}
 	
-	public List<CurrentOdd> getCurrentOddByRaceNum(String raceNum) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public List<CurrentOdd> getCurrentOddByRaceNum(String raceNum) throws XPathExpressionException, DocumentConversionException, XpathException{
 		String xml = retrieveXmlByRaceNum(raceNum);
 		return getOddsList(xml);
 	}
 	
-	public void run() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public void run() throws XPathExpressionException, DocumentConversionException, XpathException{
 		List<String> raceNums = this.getRaceNums();
 		for (String raceNum: raceNums){
 			log.info("raceNum" + raceNum);
@@ -83,7 +83,7 @@ public class CurrentOddCrawler {
 		}
 	}
 	
-	public List<CurrentOdd> getOddsList(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
+	public List<CurrentOdd> getOddsList(String xml) throws XPathExpressionException, DocumentConversionException, XpathException {
 		String xPath = "//*[@id='detailWPTable']/table/tbody/tr";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
 		List<CurrentOdd> oddsList = new ArrayList<CurrentOdd>();

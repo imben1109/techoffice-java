@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.jc.horse.service.CurrentOddService;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Controller
 public class IndexController {
@@ -28,7 +28,7 @@ public class IndexController {
 
 	@RequestMapping("/currentAnalysis")
 	@ResponseBody
-	public Map<String, List<CurrentOdd>> test() throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public Map<String, List<CurrentOdd>> test() throws XPathExpressionException, DocumentConversionException, XpathException{
 		Map<String, List<CurrentOdd>> map = currentOddService.getCurrentOddMap();
 		return map;
 	}

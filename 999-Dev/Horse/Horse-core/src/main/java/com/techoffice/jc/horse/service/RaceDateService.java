@@ -23,7 +23,8 @@ import com.techoffice.jc.horse.crawler.RaceResultCrawler;
 import com.techoffice.jc.horse.dao.RaceDateDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Service
 public class RaceDateService {
@@ -46,6 +47,7 @@ public class RaceDateService {
 	/**
 	 * Update Database Race Date from HKJC web site.
 	 * http://racing.hkjc.com/racing/Info/meeting/Results/English/
+	 * @throws XpathException 
 	 * 
 	 * @throws FailingHttpStatusCodeException
 	 * @throws MalformedURLException
@@ -55,11 +57,11 @@ public class RaceDateService {
 	 * @throws SAXException
 	 * @throws InterruptedException
 	 * @throws TransformerException
-	 * @throws XmlUtilDocumentConversionException 
+	 * @throws DocumentConversionException 
 	 * @throws ParseException 
 	 */
 	@Transactional
-	public Map<String, Integer> updateRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException  {
+	public Map<String, Integer> updateRaceDateList() throws XpathException, ParseException  {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int count = 0; 
 		List<RaceDate> hkjcRaceDateList = raceResultCrawler.retrieveRaceDateList();
@@ -85,20 +87,12 @@ public class RaceDateService {
 	 * The races would be corresponded to a race queue for updating race result.
 	 *
 	 * This method would create race queue for race date.
-	 * 
-	 * @throws FailingHttpStatusCodeException
-	 * @throws MalformedURLException
-	 * @throws XPathExpressionException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws InterruptedException
-	 * @throws TransformerException
+
+	 * @throws XpathException 
 	 * @throws ParseException
-	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public Map<String, Integer> updateRaceResultQueues() throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException    {
+	public Map<String, Integer> updateRaceResultQueues() throws XpathException, ParseException   {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int raceResultTotalCount = 0;
 		int pendingCount = 0;
@@ -128,11 +122,9 @@ public class RaceDateService {
 	}
 	
 	@Transactional
-	public Map<String, Object> getPendingRaceDateList(){
+	public List<RaceDate> getPendingRaceDateList(){
 		Map<String, Object> map = new HashMap<String, Object>();
 		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
-		map.put("list", raceDateList);
-		map.put("count", raceDateList.size());
-		return map;
+		return raceDateList;
 	}
 }

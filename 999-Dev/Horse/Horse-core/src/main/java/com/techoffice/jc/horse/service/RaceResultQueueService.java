@@ -26,8 +26,8 @@ import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.helper.RaceResultHelper;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultQueue;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Service
 public class RaceResultQueueService {
@@ -51,7 +51,7 @@ public class RaceResultQueueService {
 	}
 	
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
-	public void executeResultQueue(RaceResultQueue queue) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException {
+	public void executeResultQueue(RaceResultQueue queue) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XpathException, ParseException, DocumentConversionException {
 		log.info("It is executing " + queue.getLocation());
 		RaceResult raceResult = raceResultCrawler.getRaceResult(queue.getLocation());
 		raceResultDao.update(raceResult);
@@ -91,19 +91,11 @@ public class RaceResultQueueService {
 	 * 
 	 * @param url
 	 * @return
-	 * @throws FailingHttpStatusCodeException
-	 * @throws MalformedURLException
-	 * @throws XPathExpressionException
-	 * @throws IOException
-	 * @throws ParserConfigurationException
-	 * @throws SAXException
-	 * @throws InterruptedException
-	 * @throws TransformerException
+	 * @throws XpathException 
 	 * @throws ParseException
-	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public int updateResultQueuesByUrl(String url) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public int updateResultQueuesByUrl(String url) throws XpathException, ParseException {
 		int raceResultCount = 0;
 		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(url);
 		log.info("Number of Race Result Queues of " + url + ": " + raceResultQueueList.size());

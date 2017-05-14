@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.service.RaceResultService;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.DocumentConversionException;
 
 @RequestMapping("RaceResult")
 @Controller

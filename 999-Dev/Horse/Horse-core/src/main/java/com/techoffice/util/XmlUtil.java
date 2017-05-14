@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
 import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -27,8 +28,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
 
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 public class XmlUtil {
 	
@@ -46,9 +47,9 @@ public class XmlUtil {
 	 * 
 	 * @param xml
 	 * @return
-	 * @throws XmlUtilDocumentConversionException
+	 * @throws DocumentConversionException
 	 */
-	public static Document convertXmlStrToDocument(String xml) throws XmlUtilDocumentConversionException{
+	public static Document convertXmlStrToDocument(String xml) throws DocumentConversionException{
 		Document document = null;
 		try{
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -62,7 +63,7 @@ public class XmlUtil {
 			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)));	
 		}catch(Exception e){
 			log.error("Try to convert xml: " + xml);
-			throw new XmlUtilDocumentConversionException("Cannot xml to Document: " + e.getMessage());
+			throw new DocumentConversionException("Cannot xml to Document: " + e.getMessage(), e);
 		}
 		return document;
 	}
@@ -93,16 +94,25 @@ public class XmlUtil {
 	 * @param xml
 	 * @param xPath
 	 * @return
-	 * @throws XmlUtilDocumentConversionException
+	 * @throws DocumentConversionException
+	 * @throws XpathException 
 	 * @throws XPathExpressionException
 	 */
-	public static NodeList evaluateXpath(String xml, String xPath) throws XmlUtilDocumentConversionException, XPathExpressionException{
+	public static NodeList evaluateXpath(String xml, String xPath)throws XpathException{
 		NodeList nodeList = null;
-		Document doc = convertXmlStrToDocument(xml);
-		XPathFactory xPathfactory = XPathFactory.newInstance();
-		XPath xpath = xPathfactory.newXPath();
-		XPathExpression expr = xpath.compile(xPath);
-		nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		Document doc = null;
+		try {
+			doc = convertXmlStrToDocument(xml);
+			XPathFactory xPathfactory = XPathFactory.newInstance();
+			XPath xpath = xPathfactory.newXPath();
+			XPathExpression expr;
+			expr = xpath.compile(xPath);
+			nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		} catch (DocumentConversionException e) {
+			throw new XpathException(e);
+		} catch (XPathExpressionException e) {
+			throw new XpathException(MessageFormat.format(XpathException.INVALID_XPATH_PATTERN, xPath), e);
+		}
 		return nodeList;	
 	}
 	
@@ -112,17 +122,17 @@ public class XmlUtil {
 	 * @param xPath
 	 * @return
 	 * @throws XPathExpressionException
-	 * @throws XmlUtilDocumentConversionException
-	 * @throws XmlUtilXpathNotUniqueException
+	 * @throws DocumentConversionException
+	 * @throws XpathException
 	 */
-	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException {
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, DocumentConversionException, XpathException {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){
-			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
+			throw new XpathException(MessageFormat.format(XpathException.NOT_UNIQUE_PATTERN, xPath));
 		}else if (nodeList.getLength() == 0 ){
 			log.error(xml);
-			throw new XmlUtilXpathNotUniqueException(xPath + " cannot be found. ");
+			throw new XpathException(MessageFormat.format(XpathException.NOT_FOUND_PATTERN, xPath));
 		}else {
 			Node node = nodeList.item(0);
 			nodeText = getNodeText(node);
