@@ -22,6 +22,10 @@ public class RaceResultService {
 		return raceResultDao.list();
 	}
 	
+	public List<RaceResult> listByRaceDate(Date raceDate){
+		return raceResultDao.listByRaceDate(raceDate);
+	}
+	
 	public List<String> listVenue(){
 		return raceResultDao.listVenue();
 	}

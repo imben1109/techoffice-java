@@ -1,6 +1,7 @@
 package com.techoffice.jc.horse.dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -27,6 +28,13 @@ public class RaceResultDao {
 	@Transactional
 	public List<RaceResult> list(){
 		TypedQuery<RaceResult> query = em.createQuery("From RaceResult", RaceResult.class);
+		return query.getResultList();
+	}
+	
+	@Transactional
+	public List<RaceResult> listByRaceDate(Date raceDate){
+		TypedQuery<RaceResult> query = em.createQuery("From RaceResult Where raceDate = :RACE_DATE ", RaceResult.class);
+		query.setParameter("RACE_DATE", raceDate);
 		return query.getResultList();
 	}
 

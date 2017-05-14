@@ -79,7 +79,7 @@ public class RaceResultQueueService {
 		return raceResultQueueDao.listActiveQueue();
 	}
 	
-	public List<RaceResultQueue> listQueueByRaceDate(Date raceDate){
+	public List<RaceResultQueue> listByRaceDate(Date raceDate){
 		return raceResultQueueDao.listByRaceDate(raceDate);
 	}
 	

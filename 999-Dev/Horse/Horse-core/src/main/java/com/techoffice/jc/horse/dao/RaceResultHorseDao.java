@@ -4,10 +4,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,5 +22,11 @@ public class RaceResultHorseDao {
 		for (RaceResultHorse raceResultHorse: list){
 			em.persist(raceResultHorse);
 		}
+	}
+	
+	@Transactional
+	public List<RaceResultHorse> list(){
+		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse", RaceResultHorse.class);
+		return query.getResultList();
 	}
 }

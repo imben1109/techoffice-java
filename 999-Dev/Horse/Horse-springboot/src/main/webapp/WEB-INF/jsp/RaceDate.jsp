@@ -33,7 +33,10 @@
 				<tbody>
 					<c:forEach var="raceDate" items="${raceDates}">
 					<tr>
-						<td><fmt:formatDate value="${raceDate.raceDate }" pattern="yyyy-MM-dd"/></td>
+						<fmt:formatDate value="${raceDate.raceDate }" var="formattedRaceDate" pattern="yyyy-MM-dd"/>
+						<td>
+							<a href="/RaceResult/${formattedRaceDate }">${formattedRaceDate }</a>
+						</td>
 						<td>${raceDate.raceType }</td>
 						<td>${raceDate.raceCount }</td>
 					</tr>

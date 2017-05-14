@@ -50,7 +50,7 @@ public class RaceResultQueueDao {
 	
 	@Transactional
 	public List<RaceResultQueue> listByRaceDate(Date raceDate){
-		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue where raceDate = :RACEDATE", RaceResultQueue.class);
+		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue where raceDate = :RACE_DATE", RaceResultQueue.class);
 		query.setParameter("RACE_DATE", raceDate);
 		return query.getResultList();
 	}
