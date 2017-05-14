@@ -1,19 +1,12 @@
 package com.techoffice.aastock.stock.crawler;
 
-import java.io.IOException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.InvalidDocumentException;
 import com.techoffice.util.exception.XpathException;
 
 /**
@@ -21,7 +14,7 @@ import com.techoffice.util.exception.XpathException;
  * @author imben1109
  *
  */
-@Service
+@Component
 public class ResultAnnounceCalCrawler {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());

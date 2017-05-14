@@ -6,6 +6,7 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
+import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -71,16 +72,21 @@ public class XmlUtil {
 	
 	public static String tidyXml(String xml){
 		Tidy tidy = new Tidy();
+		Properties properties = new Properties();
+		properties.setProperty("new-blocklevel-tags", "section research result");
+		tidy.setConfigurationFromProps(properties);
+		
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
 		tidy.setXHTML(true);
-		tidy.setHideComments(true);
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		tidy.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)), out);
 		String tiddiedXml = "";
 		try {
 			tiddiedXml = out.toString("UTF-8");
 		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (Exception e){
 			e.printStackTrace();
 		}
 		return tiddiedXml;

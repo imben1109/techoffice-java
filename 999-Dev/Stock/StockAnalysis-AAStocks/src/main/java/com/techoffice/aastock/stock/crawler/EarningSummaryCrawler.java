@@ -2,7 +2,7 @@ package com.techoffice.aastock.stock.crawler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -11,7 +11,7 @@ import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XpathException;
 
-@Service
+@Component
 public class EarningSummaryCrawler {
 
 	private Logger log = LoggerFactory.getLogger(this.getClass());
