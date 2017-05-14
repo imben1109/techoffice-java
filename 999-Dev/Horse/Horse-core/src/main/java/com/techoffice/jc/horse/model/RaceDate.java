@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
-
 @Entity
 @Table(name="RACE_DATE")
 public class RaceDate {

@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.techoffice.jc.horse.model.RaceResultQueue;
@@ -26,6 +25,13 @@ public class RaceResultQueueController {
 		List<RaceResultQueue> raceResultQueues = RaceResultQueueService.list();
 		view.addObject("raceResultQueues", raceResultQueues);
 		return view;
+	}
+	
+	
+	public ModelAndView raceDate(@DateTimeFormat(pattern="yyyyMMdd") Date raceDate){
+		ModelAndView view = new ModelAndView("RaceResultQueue");
+		return view;
+
 	}
 	
 }

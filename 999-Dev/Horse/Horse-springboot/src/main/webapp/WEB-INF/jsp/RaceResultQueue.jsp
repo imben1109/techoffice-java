@@ -28,7 +28,7 @@
 					<td>${raceResultQueue.location }</td>
 					<td>${raceResultQueue.raceType }</td>
 					<td>${raceResultQueue.venue }</td>
-					<td>${raceResultQueue.runInd }</td>
+					<td>${raceResultQueue.runInd == null ? "N" : raceResultQueue.runInd }</td>
 				</tr>
 				</c:forEach>
 			</tbody>

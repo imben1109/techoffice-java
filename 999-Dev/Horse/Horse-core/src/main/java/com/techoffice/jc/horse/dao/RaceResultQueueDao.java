@@ -1,12 +1,11 @@
 package com.techoffice.jc.horse.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -50,8 +49,15 @@ public class RaceResultQueueDao {
 	}
 	
 	@Transactional
+	public List<RaceResultQueue> listByRaceDate(Date raceDate){
+		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue where raceDate = :RACEDATE", RaceResultQueue.class);
+		query.setParameter("RACE_DATE", raceDate);
+		return query.getResultList();
+	}
+	
+	@Transactional
 	public List<RaceResultQueue> list(){
-		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue", RaceResultQueue.class);
+		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue Order by raceDate desc", RaceResultQueue.class);
 		return query.getResultList();
 	}
 	

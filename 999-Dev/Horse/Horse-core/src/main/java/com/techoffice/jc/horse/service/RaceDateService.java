@@ -104,8 +104,9 @@ public class RaceDateService {
 		int pendingCount = 0;
 		int processedCount = 0;
 		List<RaceDate> raceDateList = raceDateDao.getPendingRaceDateList();
+		log.info("Number of Pending Race Date: " + raceDateList.size());
 		for(RaceDate raceDate: raceDateList){
-			int raceResultCount = resultQueueService.updateResultQueueByRaceDate(raceDate.getUrl());
+			int raceResultCount = resultQueueService.updateResultQueueByUrl(raceDate.getUrl());
 			raceDate.setRaceCount(raceResultCount);
 			raceDateDao.update(raceDate);
 			raceResultTotalCount += raceResultCount;

@@ -24,7 +24,7 @@ public class RaceDateDao {
 	
 	@Transactional
 	public List<RaceDate> list(){
-		TypedQuery<RaceDate> query = em.createQuery("Select r from RaceDate r", RaceDate.class);
+		TypedQuery<RaceDate> query = em.createQuery("Select r from RaceDate r Order By r.raceDate Desc", RaceDate.class);
 		return query.getResultList();
 	}
 	

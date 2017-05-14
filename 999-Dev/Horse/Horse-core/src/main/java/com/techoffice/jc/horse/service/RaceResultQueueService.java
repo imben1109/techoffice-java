@@ -79,13 +79,17 @@ public class RaceResultQueueService {
 		return raceResultQueueDao.listActiveQueue();
 	}
 	
+	public List<RaceResultQueue> listQueueByRaceDate(Date raceDate){
+		return raceResultQueueDao.listByRaceDate(raceDate);
+	}
+	
 	/**
 	 * For each race data, there would be a number of race. 
 	 * The number of race would corresponds to a queue for updating the race result.
 	 * 
 	 * The methods is to update/insert race result queue for a specified race date.
 	 * 
-	 * @param raceDate
+	 * @param url
 	 * @return
 	 * @throws FailingHttpStatusCodeException
 	 * @throws MalformedURLException
@@ -99,9 +103,10 @@ public class RaceResultQueueService {
 	 * @throws XmlUtilDocumentConversionException 
 	 */
 	@Transactional
-	public int updateResultQueueByRaceDate(String raceDate) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public int updateResultQueueByUrl(String url) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
 		int raceResultCount = 0;
-		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(raceDate);
+		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(url);
+		log.info("Number of Race Result Queue of " + url + ": " + raceResultQueueList.size());
 		for(RaceResultQueue queue: raceResultQueueList){
 			updateResultQueue(queue);
 			raceResultCount++;
