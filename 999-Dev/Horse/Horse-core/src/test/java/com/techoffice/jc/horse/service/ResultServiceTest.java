@@ -31,7 +31,7 @@ public class ResultServiceTest {
 //	@Test
 	public void executeResultQueue() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException{
 		for (int i=0; i<50; i++){
-			resultService.executeResultQueueList();	
+			resultService.executeResultQueues();	
 		}
 	}
 	

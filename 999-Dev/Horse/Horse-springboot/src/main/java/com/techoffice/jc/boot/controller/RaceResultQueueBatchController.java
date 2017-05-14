@@ -17,7 +17,7 @@ public class RaceResultQueueBatchController {
 	@RequestMapping("executeResultQueueList")
 	@ResponseBody
 	public String executeResultQueueList(){
-		raceResultQueueBatchService.executeResultQueueList();
+		raceResultQueueBatchService.executeResultQueues();
 		return "completed";
 	}
 	

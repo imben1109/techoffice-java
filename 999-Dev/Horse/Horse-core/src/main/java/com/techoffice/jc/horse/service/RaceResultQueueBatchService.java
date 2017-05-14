@@ -21,7 +21,7 @@ public class RaceResultQueueBatchService {
 	@Autowired
 	private RaceResultQueueService resultQueueService;
 	
-	public void executeResultQueueList() {
+	public void executeResultQueues() {
 		int successCount = 0;
 		int failCount = 0;
 		List<RaceResultQueue> raceResultQueueList = resultQueueService.listActiveQueue();	
