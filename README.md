@@ -5,7 +5,11 @@ It is Java Example Project of Tech Office. It provide various example for buildi
 * J2SE
 * J2EE
 * Spring 
+* Web API
+* Design Pattern
+* Tools
 * Others
+* Development
 
 Blog: https://techofficejava.wordpress.com/
 
