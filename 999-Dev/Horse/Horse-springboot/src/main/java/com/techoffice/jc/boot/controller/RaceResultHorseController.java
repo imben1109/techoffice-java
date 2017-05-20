@@ -33,4 +33,11 @@ public class RaceResultHorseController {
 		mv.addObject("raceResultHorses", raceResultHorselist);
 		return mv;
 	}
-}
+	
+	@RequestMapping("/horseName/{horseName}")
+	public ModelAndView horseName(@PathVariable("horseName") String horseName){
+		ModelAndView mv = new ModelAndView("RaceResultHorseHistory");
+		List<RaceResultHorse> raceResultHorselist = raceResultHorseService.listByHorseName(horseName);
+		mv.addObject("raceResultHorses", raceResultHorselist);
+		return mv;
+	}}

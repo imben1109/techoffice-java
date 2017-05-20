@@ -114,6 +114,13 @@ public class RaceResultHelper {
 		raceResultHorse.setPlace(tdValueList.get(0));
 		raceResultHorse.setHorseNo(tdValueList.get(1));
 		raceResultHorse.setHorseName(tdValueList.get(2));
+		if (raceResultHorse.getHorseName() != null){
+			String horseName = raceResultHorse.getHorseName();
+			if (horseName.split("(").length > 1){
+				String horseId = horseName.split("(")[1].replace(")", "");
+				raceResultHorse.setHorseId(horseId);
+			}
+		}
 		raceResultHorse.setJockey(tdValueList.get(3));
 		raceResultHorse.setTrainer(tdValueList.get(4));
 		raceResultHorse.setActualWt(tdValueList.get(5));

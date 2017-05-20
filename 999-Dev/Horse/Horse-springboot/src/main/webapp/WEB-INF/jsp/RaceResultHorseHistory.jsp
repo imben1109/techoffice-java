@@ -24,24 +24,19 @@
 		<c:if test="${not empty raceResultHorses }">
 			<table id="raceResultHorseTable">
 				<thead>
-					<tr>	
-						<th>Name</th>
+					<tr>
+						<th>ID</th>	
+						<th>Date</th>
 						<th>Place</th>
-						<th>Jockey</th>
-						<th>Trainer</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="raceResultHorse" items="${raceResultHorses}">
 					<tr>
-						<td>
-							<a href="/RaceResultHorse/horseName/${raceResultHorse.horseName}">
-								${raceResultHorse.horseName}
-							</a>	
-						</td>
+						<td><a href="/RaceResultHorse/${raceResultHorse.raceResult.id}" >${raceResultHorse.raceResult.id}</a></td>
+						<fmt:formatDate value="${raceResultHorse.raceResult.raceDate}" var="formattedRaceDate" pattern="yyyy-MM-dd"/>
+						<td>${formattedRaceDate}</td>
 						<td>${raceResultHorse.place }</td>
-						<td>${raceResultHorse.jockey }</td>
-						<td>${raceResultHorse.trainer }</td>
 					</tr>
 					</c:forEach>
 				</tbody>

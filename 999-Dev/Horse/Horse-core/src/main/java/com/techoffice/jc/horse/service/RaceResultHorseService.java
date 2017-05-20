@@ -26,4 +26,8 @@ public class RaceResultHorseService {
 	public List<RaceResultHorse> listByRaceResult(int raceResultId){
 		return raceResultHorseDao.listByRaceResult(raceResultId);
 	}
+	
+	public List<RaceResultHorse> listByHorseName(String horseName){
+		return raceResultHorseDao.listByHorseName(horseName);
+	}
 }

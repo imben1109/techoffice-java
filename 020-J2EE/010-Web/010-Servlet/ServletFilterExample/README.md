@@ -1,41 +1,49 @@
-# Servlet Example
+# Servlet Filter Example
 
-## Servlet 
-Servlet is a Java Program that extends the abilities of a serever
-
-## HttpServlet
-HttpServlet is subclass of Servlet. It provide to Http Sevice to Http Request.
-* doGet    - HTTP GET requests
-* doPost   - HTTP POST requests
-* doPut    - HTTP PUT requests
-* doDelete - HTTP DELETE requests
-
-Servlet Class
-```
-public class ItTechOfficeTestServlet extends HttpServlet{
-	
-	@Override
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<h1>Tech Office Test Servlet Example Update</h1>");
-		
-	}
-}
-```
-
-The servlet configuration is requireed to define in web.xml in order to make the server to use the servlet for specified request. 
-
-web.xml
 ```
 <servlet>
-	<servlet-name>ItTechOfficeTestServlet</servlet-name>
-	<servlet-class>com.ittechoffice.testservlet.ItTechOfficeTestServlet</servlet-class>
+<servlet-name>TechOfficeExampleServlet</servlet-name>
+<servlet-class>com.techoffice.example.servlet.TechOfficeExampleServlet</servlet-class>
 </servlet>
 
+<filter>
+<filter-name>TechOfficeExampleFilter</filter-name>
+<filter-class>com.techoffice.example.filter.TechOfficeExampleFilter</filter-class>
+</filter>
+
 <servlet-mapping>
-	<servlet-name>ItTechOfficeTestServlet</servlet-name>
-	<url-pattern>/</url-pattern>
+<servlet-name>TechOfficeExampleServlet</servlet-name>
+<url-pattern>/*</url-pattern>
 </servlet-mapping>
+
+<filter-mapping>
+<filter-name>TechOfficeExampleFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
 ```
 
+TechofficeExampleFilter
+```
+public class TechOfficeExampleFilter implements Filter{
+	
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+		// Do Nothing
+	}
+	
+	@Override
+	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
+			throws IOException, ServletException {
+		String ipAddress = servletRequest.getRemoteAddr();
+		System.out.println("IP:" + ipAddress + " Time:" +(new Date()).toString());
+		//Pass request back down the filter chain
+		filterChain.doFilter(servletRequest,servletResponse);
+	}
+
+	@Override
+	public void destroy() {
+		// Do Nothing
+	}
+
+}
+```

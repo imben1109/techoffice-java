@@ -44,4 +44,12 @@ public class RaceResultHorseDao {
 		query.setParameter("RaceResultId", raceResultId);
 		return query.getResultList();	
 	}
+	
+	@Transactional
+	public List<RaceResultHorse> listByHorseName(String horseName){
+		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse Where horseName = :horseName order by raceResult.raceDate desc", RaceResultHorse.class);
+		query.setParameter("horseName", horseName);
+		return query.getResultList();	
+		
+	}
 }
