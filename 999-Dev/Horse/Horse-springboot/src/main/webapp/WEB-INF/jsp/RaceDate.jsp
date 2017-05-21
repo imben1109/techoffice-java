@@ -23,7 +23,7 @@
 		<ul>
 			<li><a href="/RaceDate/updateRaceDateList">Update Race Date</a></li>
 			<li><a href="/RaceDate/updateRaceResultQueues">Update Race Result Queue</a></li>
-			<li><a href="/RaceResultQueueBatch/executeResultQueueList">executeResultQueueList</a></li>
+			<li><a href="/RaceResultQueueBatch/executeResultQueueList">Execute Race Result Queue</a></li>
 		</ul>
 		<br/>
 		<c:if test="${not empty raceDates }">
