@@ -95,7 +95,12 @@ public class RaceResultHelper {
 				if ("td".equals(raceHourseTdNode.getNodeName())){
 					String tdValue = "";
 					if (raceHourseTdNode.getChildNodes().getLength() == 1){
-						tdValue = raceHourseTdNode.getFirstChild().getNodeValue();
+						if (raceHourseTdNode.getFirstChild().getChildNodes() != null &&
+								raceHourseTdNode.getFirstChild().getChildNodes().getLength() == 1){
+							tdValue = XmlUtil.getNodeText(raceHourseTdNode);
+						}else{
+							tdValue = raceHourseTdNode.getFirstChild().getNodeValue();
+						}
 					}else {
 						tdValue = XmlUtil.getNodeText(raceHourseTdNode);
 					}
@@ -116,8 +121,8 @@ public class RaceResultHelper {
 		raceResultHorse.setHorseName(tdValueList.get(2));
 		if (raceResultHorse.getHorseName() != null){
 			String horseName = raceResultHorse.getHorseName();
-			if (horseName.split("(").length > 1){
-				String horseId = horseName.split("(")[1].replace(")", "");
+			if (horseName.split("\\(").length > 1){
+				String horseId = horseName.split("\\(")[1].replace(")", "");
 				raceResultHorse.setHorseId(horseId);
 			}
 		}

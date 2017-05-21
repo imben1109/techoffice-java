@@ -52,9 +52,9 @@ public class RaceDateController {
 		return map;
 	}
 	
-	@RequestMapping("processRaceResultQueueList")
+	@RequestMapping("updateRaceResultQueues")
 	@ResponseBody
-	public Map<String, Integer> processRaceResultQueueList() throws XpathException, ParseException {
+	public Map<String, Integer> updateRaceResultQueues() throws XpathException, ParseException {
 		return raceDateService.updateRaceResultQueues();
 	}
 	

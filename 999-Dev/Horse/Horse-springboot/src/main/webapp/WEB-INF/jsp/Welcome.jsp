@@ -14,9 +14,6 @@
 <body>
 	<h1>Horse Analysis</h1>
 	<ul>
-		<li><a href="/RaceDate/updateRaceDateList">Update Race Date</a></li>
-		<li><a href="/RaceDate/processRaceResultQueueList">Process Race Result Queue</a></li>
-		<li><a href="/RaceResultQueueBatch/executeResultQueueList">executeResultQueueList</a></li>
 		<li><a href="/RaceDate/">Race Date</a></li>
 	</ul>
 </body>
