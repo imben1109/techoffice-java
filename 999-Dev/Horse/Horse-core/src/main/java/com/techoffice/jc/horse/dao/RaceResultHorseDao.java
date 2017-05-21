@@ -26,6 +26,11 @@ public class RaceResultHorseDao {
 	}
 	
 	@Transactional
+	public void update(RaceResultHorse raceResultHorse){
+		em.persist(raceResultHorse);
+	}
+	
+	@Transactional
 	public List<RaceResultHorse> list(){
 		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse", RaceResultHorse.class);
 		return query.getResultList();

@@ -106,7 +106,7 @@ public class RaceResultCrawler {
 		return raceNumList;
 	}
 	
-	public RaceResult getRaceResult(String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XpathException, ParseException, DocumentConversionException {
+	public RaceResult getRaceResult(String location) throws XpathException, ParseException {
 		String xml = retrieveXml(location);
 		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);

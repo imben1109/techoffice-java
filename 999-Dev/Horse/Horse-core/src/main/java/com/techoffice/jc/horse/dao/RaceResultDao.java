@@ -37,6 +37,12 @@ public class RaceResultDao {
 		query.setParameter("RACE_DATE", raceDate);
 		return query.getResultList();
 	}
+	
+	@Transactional
+	public RaceResult get(int id){
+		RaceResult raceResult = em.find(RaceResult.class, id);
+		return raceResult;
+	}
 
 	@Transactional
 	public List<String> listVenue(){

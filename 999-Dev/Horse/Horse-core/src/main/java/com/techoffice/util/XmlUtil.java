@@ -125,7 +125,7 @@ public class XmlUtil {
 	 * @throws DocumentConversionException
 	 * @throws XpathException
 	 */
-	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, DocumentConversionException, XpathException {
+	public static String getXpathText(String xml, String xPath) throws XpathException {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){

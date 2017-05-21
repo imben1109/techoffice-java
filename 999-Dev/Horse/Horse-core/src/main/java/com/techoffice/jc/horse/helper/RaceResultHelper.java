@@ -24,7 +24,7 @@ import com.techoffice.util.exception.XpathException;
 
 public class RaceResultHelper {
 	
-	public static RaceResult getRaceResult(String xml, String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XpathException, ParseException, DocumentConversionException{
+	public static RaceResult getRaceResult(String xml, String location) throws XpathException, ParseException{
 		RaceResult raceResult = new RaceResult();
 		raceResult.setLocation(location);
 		if (location.split("/").length > 9 ){
