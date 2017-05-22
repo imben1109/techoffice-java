@@ -1,8 +1,5 @@
 package com.techoffice.example;
 
-import java.util.List;
-
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,6 +15,10 @@ public class Appl {
 	@Autowired
 	private StudentDao studentDao;
 	
+	// INSERT INTO STUDENT
+	// COMMIT
+	// SELECT STUDENT FROM STUDENT 
+	// UPDATE STUDENT
 	public void run(){
 		Student student = new Student();
 		student.setName("Test 1");
@@ -38,6 +39,8 @@ public class Appl {
 		}
 	}
 	
+	// Select student form Student
+	// Update Student
 	public void run2(){
 		Student student = new Student();
 		student.setId(1);
@@ -46,10 +49,26 @@ public class Appl {
 		studentDao.update2(student);
 	}
 	
+	// SELECT STUDENT FROM STUDENT
+	// UPDATE STUDENT
+	// COMMIT
+	@Transactional
+	public void run3(){
+		Student student = new Student();
+		student.setId(1);
+		student.setName("Test 3");
+		student.setDesc("TEST3");
+		studentDao.update2(student);
+		student.setDesc("TEST4");
+		studentDao.update2(student);
+	}
+	
 	public static void main(String[] args){
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Appl appl = context.getBean(Appl.class);
 		appl.run();
 		appl.run2();
+		appl.run3();
+
 	}
 }
