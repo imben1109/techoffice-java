@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.oracle.sqlmap.intf;
+package com.techoffice.mybatis.oracle.Dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ import java.util.List;
 import com.techoffice.mybatis.oracle.config.Config;
 import com.techoffice.mybatis.oracle.model.TableColumn;
 
-public class TableHelper {
+public class TableColumnDao {
 	
 	public static List<TableColumn> getTableColumnList(String tableName){
 		List<TableColumn> tableColumnList = new ArrayList<TableColumn>();
@@ -27,7 +27,7 @@ public class TableHelper {
 			while(resultSet.next()){
 				String columnName = resultSet.getString("column_name");
 				String dataType = resultSet.getString("data_type");
-				System.out.println(columnName + " " + dataType);
+//				System.out.println(columnName + " " + dataType);
 				TableColumn tableColumn = new TableColumn();
 				tableColumn.setColumnName(columnName);
 				tableColumn.setDataType(dataType);

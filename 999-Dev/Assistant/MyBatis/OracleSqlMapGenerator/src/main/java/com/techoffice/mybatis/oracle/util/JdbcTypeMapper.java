@@ -8,9 +8,12 @@ public class JdbcTypeMapper {
 	private static final Map<String, String> map;
 	static{
 		map = new HashMap<String, String>();
-		map.put("VARCHAR2", "String");
-		map.put("NUMERIC", "int");
+		map.put("VARCHAR2", "VARCHAR");
+		map.put("NUMBER", "NUMERIC");
 	}
 	
+	public static String get(String dataType){
+		return map.get(dataType);
+	}
 
 }

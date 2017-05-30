@@ -7,24 +7,25 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.base.CaseFormat;
+import com.techoffice.mybatis.oracle.Dao.TableColumnDao;
 import com.techoffice.mybatis.oracle.model.TableColumn;
 import com.techoffice.mybatis.oracle.sqlmap.intf.SqlMapGenerator;
-import com.techoffice.mybatis.oracle.sqlmap.intf.TableHelper;
+import com.techoffice.mybatis.oracle.util.JdbcTypeMapper;
 
 public class InsertSqlMapGenerator implements SqlMapGenerator{
 
-	public void generate() {
+	public void generate(String tableName) {
 		String insertSql = "INSERT INTO {0} (\r\n{1}\r\n) VALUES (\r\n{2}\r\n);";
 		String columnStr = "";
 		String valueStr = "";
-		String tableName = "help";
-		List<TableColumn> tableColumnList = TableHelper.getTableColumnList(tableName);
+		tableName = tableName.toUpperCase();
+		List<TableColumn> tableColumnList = TableColumnDao.getTableColumnList(tableName);
 		List<String> columnNames = new ArrayList<String>();
 		List<String> valueList = new ArrayList<String>();
 		for(TableColumn tableColumn: tableColumnList){
 			columnNames.add("\t" + tableColumn.getColumnName());
 			String javaVariable = CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, tableColumn.getColumnName());
-			String value = "\t#{" +javaVariable +", jdbcType=" + tableColumn.getDataType() + "}";
+			String value = "\t#{" +javaVariable +", jdbcType=" + JdbcTypeMapper.get(tableColumn.getDataType()) + "}";
 			valueList.add(value);
 		}
 		columnStr = StringUtils.join(columnNames, ",\r\n");
@@ -35,7 +36,7 @@ public class InsertSqlMapGenerator implements SqlMapGenerator{
 	
 	public static void main(String[] args){
 		InsertSqlMapGenerator insertSqlMapGenerator = new InsertSqlMapGenerator();
-		insertSqlMapGenerator.generate();
+		insertSqlMapGenerator.generate("help");
 	}
 
 }
