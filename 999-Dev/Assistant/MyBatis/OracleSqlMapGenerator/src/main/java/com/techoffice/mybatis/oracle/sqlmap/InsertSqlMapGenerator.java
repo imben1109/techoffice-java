@@ -7,7 +7,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.base.CaseFormat;
-import com.techoffice.mybatis.oracle.Dao.TableColumnDao;
+import com.techoffice.mybatis.oracle.dao.TableColumnDao;
 import com.techoffice.mybatis.oracle.model.TableColumn;
 import com.techoffice.mybatis.oracle.sqlmap.intf.SqlMapGenerator;
 import com.techoffice.mybatis.oracle.util.JdbcTypeMapper;
