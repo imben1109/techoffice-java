@@ -27,7 +27,6 @@ public class TableColumnDao {
 			while(resultSet.next()){
 				String columnName = resultSet.getString("column_name");
 				String dataType = resultSet.getString("data_type");
-//				System.out.println(columnName + " " + dataType);
 				TableColumn tableColumn = new TableColumn();
 				tableColumn.setColumnName(columnName);
 				tableColumn.setDataType(dataType);

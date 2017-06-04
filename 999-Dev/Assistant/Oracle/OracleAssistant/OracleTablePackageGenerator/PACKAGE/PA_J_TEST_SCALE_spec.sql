@@ -1,0 +1,25 @@
+CREATE OR REPLACE PACKAGE PA_J_TEST_SCALE AS 
+
+  PROCEDURE P_INS_TEST_SCALE (
+    P_IN_ID         NUMBER    
+  ) ; 
+
+
+  PROCEDURE P_SEA_TEST_SCALE ( 
+    P_IN_ID               IN  NUMBER    ,
+    P_IN_CURRENT_PAGE     IN  NUMBER    ,
+    P_IN_PAGE_SIZE        IN  NUMBER    ,
+    P_OUT_RESULT_CUR      OUT SYS_REFCURSOR
+  ) ;
+
+  PROCEDURE P_UPD_TEST_SCALE ( 
+    P_IN_ID         NUMBER    
+  ) ;
+
+  PROCEDURE P_DEL_TEST_SCALE ( 
+    P_IN_ID         NUMBER    
+  ) ;
+  
+
+END PA_J_TEST_SCALE;
+
