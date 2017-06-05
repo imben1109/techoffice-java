@@ -1,5 +1,5 @@
 
-package com.techoffice.test;
+package com.techoffice.entity;
 
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
@@ -18,7 +18,7 @@ public class Test {
         return id;
     }
 
-    public int setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -26,7 +26,7 @@ public class Test {
         return age;
     }
 
-    public int setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -34,7 +34,7 @@ public class Test {
         return address;
     }
 
-    public String setAddress(String address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
@@ -42,7 +42,7 @@ public class Test {
         return phone;
     }
 
-    public String setPhone(String phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

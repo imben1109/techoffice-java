@@ -1,4 +1,4 @@
-package com.techoffice.oracke.js.service;
+package com.techoffice.oracle.js.service;
 
 import org.springframework.stereotype.Service;
 

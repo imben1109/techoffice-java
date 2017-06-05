@@ -10,9 +10,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sun.codemodel.JClassAlreadyExistsException;
+import com.sun.codemodel.JDefinedClass;
+import com.sun.codemodel.JType;
 import com.techoffice.oracle.config.OracleConfig;
+import com.techoffice.oracle.daogen.service.DaoGenService;
 import com.techoffice.oracle.pojo.service.PojoService;
 import com.techoffice.oracle.ppackage.service.PackageService;
+import com.techoffice.oracle.servicegen.service.ServiceGenService;
 import com.techoffice.oracle.sqlmap.service.SqlMapService;
 
 
@@ -30,13 +34,21 @@ public class Appl {
 	@Autowired
 	private SqlMapService sqlMapService;
 	
+	@Autowired
+	private DaoGenService daoGenService;
+	
+	@Autowired
+	private ServiceGenService serviceGenService;
+	
 	@Transactional()
 	public void run() throws JClassAlreadyExistsException, IOException{
 		String tableName = OracleConfig.getGeneratorTable();
 		String packageName = OracleConfig.getGeneratorPackage();
-//		pojoService.generateJavaCode(packageName, tableName);
-//		packageService.generatePackage(tableName);
+		JDefinedClass pojoType = pojoService.generateJavaCode(packageName + ".entity", tableName);
+		packageService.generatePackage(tableName);
 		sqlMapService.generateSqlMap(tableName);
+		JDefinedClass daoType = daoGenService.genDao(packageName + ".dao", tableName);
+		JDefinedClass serviceType = serviceGenService.generate(packageName+".service", tableName, daoType, pojoType);
 	}
 	
 	public static void main(String[] args) throws IOException, JClassAlreadyExistsException{

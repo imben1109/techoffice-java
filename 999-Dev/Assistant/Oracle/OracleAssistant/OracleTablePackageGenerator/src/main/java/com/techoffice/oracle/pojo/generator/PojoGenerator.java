@@ -42,14 +42,15 @@ public class PojoGenerator {
 		 JBlock getterBody = getter.body();
 		 getterBody._return(field);
 		 String setterMethodName = "set" + convertFirstCharToUpperCase(name);
-		 JMethod setter = jClass.method(JMod.PUBLIC, type, setterMethodName);
+		 JMethod setter = jClass.method(JMod.PUBLIC, codeModel.VOID, setterMethodName);
 		 JVar param = setter.param(type, name);
 		 JBlock setterBody = setter.body();
 		 setterBody.assign(JExpr._this().ref(field), param);
 	 }
 	 
-	 public void generateCode(File file) throws IOException{
+	 public JDefinedClass generateCode(File file) throws IOException{
 		 codeModel.build(file);
+		 return jClass;
 	 }
 
 	 private String convertFirstCharToUpperCase(String str){
