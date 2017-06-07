@@ -3,6 +3,7 @@ package com.techoffice.oracle.servicegen.generator;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ import com.sun.codemodel.JMod;
 import com.sun.codemodel.JPackage;
 import com.sun.codemodel.JVar;
 import com.techoffice.oracle.util.PojoUtil;
+import com.techoffice.util.BeanUtil;
 
-import antlr.collections.List;
 
 public class ServiceGenGenerator {
 
@@ -34,38 +35,44 @@ public class ServiceGenGenerator {
 		JPackage jPackage = codeModel._package(packageName);
 		jClass = jPackage._class(PojoUtil.getClassName(tableName) + "Serive");
 		jClass.annotate(Service.class);
-		
+		codeModel.ref("");
 		dao = jClass.field(JMod.PRIVATE, daoTyle, convertFirstCharToLowerCase(daoTyle.name()));
 		dao.annotate(Autowired.class);
 		
-		addInsertMethod();
-		addUpdateMethod();
-		addDeleteMethod();
+		addInsertMethod(pojoType);
+		addUpdateMethod(pojoType);
+		addDeleteMethod(pojoType);
 		addSearchMethod(pojoType);
 	}
 	
-	private void addInsertMethod(){
+	private void addInsertMethod(JDefinedClass pojoType){
 		JMethod insert = jClass.method(JMod.PUBLIC, codeModel.VOID, "insert");
 		insert.annotate(Transactional.class);
+		insert.param(pojoType, pojoType.name());
 		JBlock body = insert.body();
-		JVar var1 = body.decl(codeModel.ref(Map.class).narrow(String.class, Object.class), "map");
-		body.assign(var1, JExpr._new(codeModel.ref(HashMap.class)));
+		codeModel.ref(pojoType.fullName());
+		codeModel.ref("ac");
+		JVar var1 = body.decl(codeModel.ref(Map.class).narrow(String.class, Object.class), "map", JExpr._new(codeModel.ref(HashMap.class).narrow(String.class, Object.class)));
+		codeModel.ref(BeanUtil.class);
+		body.directStatement("map.putAll(BeanUtil.getMap("+pojoType.name()+"))");
 		body.directStatement(dao.name()+".insert(map);");
 	}
 	
-	private void addUpdateMethod(){
+	private void addUpdateMethod(JDefinedClass pojoType){
 		JMethod update = jClass.method(JMod.PUBLIC, codeModel.VOID, "update");
 		update.annotate(Transactional.class);
 		JBlock body = update.body();
+		update.param(pojoType, "test");
 		JVar var1 = body.decl(codeModel.ref(Map.class).narrow(String.class, Object.class), "map");
 		body.assign(var1, JExpr._new(codeModel.ref(HashMap.class)));
 		body.directStatement(dao.name()+".insert(map);");
 	}
 	
-	private void addDeleteMethod(){
-		JMethod update = jClass.method(JMod.PUBLIC, codeModel.VOID, "delete");
-		update.annotate(Transactional.class);
-		JBlock body = update.body();
+	private void addDeleteMethod(JDefinedClass pojoType){
+		JMethod delete = jClass.method(JMod.PUBLIC, codeModel.VOID, "delete");
+		delete.annotate(Transactional.class);
+		delete.param(pojoType, "test");
+		JBlock body = delete.body();
 		JVar var1 = body.decl(codeModel.ref(Map.class).narrow(String.class, Object.class), "map");
 		body.assign(var1, JExpr._new(codeModel.ref(HashMap.class)));
 		body.directStatement(dao.name()+".insert(map);");
@@ -75,6 +82,7 @@ public class ServiceGenGenerator {
 		JMethod search = jClass.method(JMod.PUBLIC, codeModel.ref(List.class).narrow(pojoType), "search");
 		search.annotate(Transactional.class);
 		JBlock body = search.body();
+		search.param(pojoType, "test");
 		JVar list = body.decl(codeModel.ref(List.class).narrow(pojoType), "list");
 		JVar map = body.decl(codeModel.ref(Map.class).narrow(String.class, Object.class), "map");
 		body.assign(map, JExpr._new(codeModel.ref(HashMap.class)));
