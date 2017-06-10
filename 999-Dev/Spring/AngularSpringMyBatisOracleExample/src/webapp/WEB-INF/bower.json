@@ -1,0 +1,23 @@
+{
+  "name": "AngularSpringMyBatisOracleExample",
+  "homepage": "https://github.com/TechOffice/TechOffice-Java",
+  "authors": [
+    "imben1109 <imben1109@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.4",
+    "angular-ui-router": "^1.0.4",
+    "oclazyload": "^1.1.0",
+    "angular-route": "^1.6.4"
+  }
+}

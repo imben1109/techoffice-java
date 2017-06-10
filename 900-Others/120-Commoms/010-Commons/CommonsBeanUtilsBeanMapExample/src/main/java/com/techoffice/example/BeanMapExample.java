@@ -24,7 +24,6 @@ public class BeanMapExample {
 		System.out.println(map.get("dob") + "   " + map.get("dob").getClass().toString());
 		System.out.println(map.get("income") + "   " + map.get("income").getClass().toString());
 		System.out.println(map.get("deposit") + "   " + map.get("deposit").getClass().toString());
-
 	}
 
 }
