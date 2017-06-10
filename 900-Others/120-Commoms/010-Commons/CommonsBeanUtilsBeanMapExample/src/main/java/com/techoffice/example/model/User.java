@@ -1,5 +1,6 @@
 package com.techoffice.example.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class User {
@@ -7,6 +8,14 @@ public class User {
 	private int age;
 	private Date dob;
 	private double income;
+	
+	private BigDecimal deposit;
+	public BigDecimal getDeposit() {
+		return deposit;
+	}
+	public void setDeposit(BigDecimal deposit) {
+		this.deposit = deposit;
+	}
 	public String getName() {
 		return name;
 	}
