@@ -10,7 +10,6 @@
    http://www.springframework.org/schema/context 
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	
-	<import resource="mybatis.xml"/>
 	   
    	<mvc:resources mapping="/resources/**" location="/WEB-INF/bower_components/" />
    	<mvc:resources mapping="/**" location="/WEB-INF/app/" />
@@ -36,5 +35,6 @@
 	    </bean>
 	</mvc:interceptors>
 		
+	<import resource="mybatis.xml"/>
 
 </beans>

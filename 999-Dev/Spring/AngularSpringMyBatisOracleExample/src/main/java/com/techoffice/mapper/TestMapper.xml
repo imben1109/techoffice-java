@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.techoffice.dao.TestDao">
+
+  <resultMap id="testResultMap" type="com.techoffice.model.Test">
+    <result property="id" column="ID"/>
+    <result property="age" column="AGE"/>
+    <result property="address" column="ADDRESS"/>
+    <result property="phone" column="PHONE"/>
+  </resultMap>
+
+  <select id="search" statementType="CALLABLE" parameterType="java.util.Map">
+    { call PA_J_TEST.P_SEA_TEST(
+        #{id, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{age, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{address, jdbcType=VARCHAR, javaType=string, mode=IN},
+        #{phone, jdbcType=VARCHAR, javaType=string, mode=IN},
+        #{currentPage, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{pageSize, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=testResultMap}
+    )}
+  </select>
+
+
+
+  <select id="insert" statementType="CALLABLE" parameterType="java.util.Map">
+    { call PA_J_TEST.P_INS_TEST(
+        #{id, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{age, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{address, jdbcType=VARCHAR, javaType=string, mode=IN},
+        #{phone, jdbcType=VARCHAR, javaType=string, mode=IN}
+    )}
+  </select>
+
+
+
+  <select id="update" statementType="CALLABLE" parameterType="java.util.Map">
+    { call PA_J_TEST.P_UPD_TEST(
+        #{id, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{age, jdbcType=NUMERIC, javaType=int, mode=IN},
+        #{address, jdbcType=VARCHAR, javaType=string, mode=IN},
+        #{phone, jdbcType=VARCHAR, javaType=string, mode=IN}
+    )}
+  </select>
+
+
+
+  <select id="delete" statementType="CALLABLE" parameterType="java.util.Map">
+    { call PA_J_TEST.P_INS_TEST(
+        #{id, jdbcType=NUMERIC, javaType=int, mode=IN}
+    )}
+  </select>
+
+
+
+</mapper>
