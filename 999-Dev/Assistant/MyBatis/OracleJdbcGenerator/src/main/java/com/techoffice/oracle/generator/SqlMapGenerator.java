@@ -8,6 +8,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 import com.techoffice.oracle.model.Column;
+import com.techoffice.oracle.util.MyBatisUtil;
 import com.techoffice.oracle.util.PackageUtil;
 import com.techoffice.oracle.util.PojoUtil;
 
@@ -67,7 +68,7 @@ public class SqlMapGenerator {
 		List<String> paramList = new ArrayList<String>();
 		for (Column column: columns){
 			String javaField = PojoUtil.getFieldName(column.getColumnName());
-			String jdbcType = column.getDataType();
+			String jdbcType = MyBatisUtil.getJdbcType(column);
 			String javaType = PojoUtil.getMapperJavaType(column);
 			paramList.add(String.format("        #{%s, jdbcType=%s, javaType=%s, mode=IN}", javaField, jdbcType, javaType));
 		}
@@ -89,7 +90,7 @@ public class SqlMapGenerator {
 		List<String> paramList = new ArrayList<String>();
 		for (Column column: columns){
 			String javaField = PojoUtil.getFieldName(column.getColumnName());
-			String jdbcType = column.getDataType();
+			String jdbcType = MyBatisUtil.getJdbcType(column);
 			String javaType = PojoUtil.getMapperJavaType(column);
 			paramList.add(String.format("        #{%s, jdbcType=%s, javaType=%s, mode=IN}", javaField, jdbcType, javaType));
 		}
@@ -114,7 +115,7 @@ public class SqlMapGenerator {
 		List<String> paramList = new ArrayList<String>();
 		for (Column column: columns){
 			String javaField = PojoUtil.getFieldName(column.getColumnName());
-			String jdbcType = column.getDataType();
+			String jdbcType = MyBatisUtil.getJdbcType(column);
 			String javaType = PojoUtil.getMapperJavaType(column);
 			paramList.add(String.format("        #{%s, jdbcType=%s, javaType=%s, mode=IN}", javaField, jdbcType, javaType));
 		}
@@ -137,7 +138,7 @@ public class SqlMapGenerator {
 		for (Column column: columns){
 			if (column.isIndexColumn()){
 				String javaField = PojoUtil.getFieldName(column.getColumnName());
-				String jdbcType = column.getDataType();
+				String jdbcType = MyBatisUtil.getJdbcType(column);
 				String javaType = PojoUtil.getMapperJavaType(column);
 				paramList.add(String.format("        #{%s, jdbcType=%s, javaType=%s, mode=IN}", javaField, jdbcType, javaType));
 			}
