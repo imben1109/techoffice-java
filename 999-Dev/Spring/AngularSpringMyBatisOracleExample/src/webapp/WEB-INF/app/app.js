@@ -22,4 +22,18 @@ app.config(function($stateProvider, $locationProvider, $routeProvider, $ocLazyLo
 		template: "<div>test 2</div>"
 	});
 	
+	$stateProvider.state({
+		name: "test",
+		url: "/test",
+		templateUrl: "template/test.html",
+		controller: "TestController",
+		resolve: {
+			load: function($ocLazyLoad){
+				$ocLazyLoad.load({
+					files: ['controller/testController.js']
+				});
+			}
+		}
+	});
+	
 });

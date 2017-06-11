@@ -17,7 +17,16 @@
 	<context:component-scan base-package="com.techoffice" />
 	
 	<!-- This is required to declare in order for converting java object into json object -->
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+            	<property name="objectMapper" ref="objectMapper"/>
+        	</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	<bean id="objectMapper" class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean"/>
+	
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

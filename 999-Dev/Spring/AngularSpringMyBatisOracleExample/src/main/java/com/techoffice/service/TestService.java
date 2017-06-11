@@ -18,6 +18,9 @@ public class TestService {
 	
 	public List<Test> search(){
 		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("currentPage",1);
+		map.put("pageSize",15);
+		
 		testDao.search(map);
 		List<Test> list = (List<Test>) map.get("result");
 		return list;

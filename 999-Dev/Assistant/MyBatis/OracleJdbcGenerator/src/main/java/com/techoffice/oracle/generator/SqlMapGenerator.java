@@ -11,6 +11,7 @@ import com.techoffice.oracle.model.Column;
 import com.techoffice.oracle.util.MyBatisUtil;
 import com.techoffice.oracle.util.PackageUtil;
 import com.techoffice.oracle.util.PojoUtil;
+import com.techoffice.oracle.util.StringUtil;
 
 public class SqlMapGenerator {
 	public static String generate(String tableName, List<Column> columns){
@@ -154,13 +155,9 @@ public class SqlMapGenerator {
 	}
 	
 	private static  String getResultMapId(String tableName){
-		String resultMapId = convertFirstCharToLowerCase(PojoUtil.getClassName(tableName)) + "ResultMap";
+		String resultMapId = StringUtil.convertFirstCharToLowerCase(PojoUtil.getClassName(tableName)) + "ResultMap";
 		return resultMapId;
 	}
 	
-	private static String convertFirstCharToLowerCase(String str){
-		String firstChar = str.substring(0, 1);
-		String convertedStr = firstChar.toLowerCase() + str.substring(1);
-		return convertedStr;
-	}
+
 }

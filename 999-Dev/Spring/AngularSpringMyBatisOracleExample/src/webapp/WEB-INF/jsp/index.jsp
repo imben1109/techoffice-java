@@ -17,8 +17,10 @@
 	<body ng-app="app">
 		 
 		<h1>Angular Spring MyBatis Oracle Example</h1>
+		
 		<a ui-sref="test1">test 1</a>
 		<a ui-sref="test2">test 2</a>
+		<a ui-sref="test">test</a>
 		
 		<ui-view></ui-view>
 		 

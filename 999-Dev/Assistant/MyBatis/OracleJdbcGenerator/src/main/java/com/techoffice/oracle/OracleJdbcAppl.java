@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.techoffice.oracle.dao.ColumnDao;
+import com.techoffice.oracle.generator.HtmlFormGenerator;
 import com.techoffice.oracle.generator.PackageBodyGenerator;
 import com.techoffice.oracle.generator.PackageSpecGenerator;
 import com.techoffice.oracle.generator.PojoGenerator;
@@ -36,9 +37,11 @@ public class OracleJdbcAppl {
 		String packageSpec = PackageSpecGenerator.generatePackageSpec(tableName, columns);
 		String packageBody = PackageBodyGenerator.generate(tableName, columns);
 		String sqlMap = SqlMapGenerator.generate(tableName, columns);
+		String htmlForm = HtmlFormGenerator.generate(tableName, columns);
 		System.out.println(pojo);
 		System.out.println(packageSpec);
 		System.out.println(packageBody);
 		System.out.println(sqlMap);
+		System.out.println(htmlForm);
 	}
 }
