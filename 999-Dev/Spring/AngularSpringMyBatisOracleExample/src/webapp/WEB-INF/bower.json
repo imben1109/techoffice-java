@@ -18,6 +18,11 @@
     "angular": "angularjs#^1.6.4",
     "angular-ui-router": "^1.0.4",
     "oclazyload": "^1.1.0",
-    "angular-route": "^1.6.4"
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "angular-ui-grid": "ui-grid#^4.0.6",
+    "angular-animate": "^1.6.4",
+    "angular-sanitize": "^1.6.4",
+    "angular-bootstrap": "^2.5.0"
   }
 }
