@@ -4,6 +4,8 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<title>Angular Spring MyBatis Oracle Example</title>
 		
 		<script src="resources/angular/angular.min.js"></script>
@@ -20,16 +22,18 @@
 		<link ref="stylesheet" type="text/css" href="css/app.css"/>
 		
 		<script src="app.js"></script>
+	
 	</head>
 	
 	<body ng-app="app">
-		 
-		<h1>Angular Spring MyBatis Oracle Example</h1>
+		<div class="container-fluid">
 		
-		<a ui-sref="main.test1">test 1</a>
-		<a ui-sref="main.test2">test 2</a>
-		<a ui-sref="main.test">test</a>
-		<ui-view></ui-view>
-		
+			<h1>Angular Spring MyBatis Oracle Example</h1>	
+			<a ui-sref="main.test1">test 1</a>
+			<a ui-sref="main.test2">test 2</a>
+			<a ui-sref="main.test">test</a>
+			<ui-view></ui-view>
+			
+		</div>
 	</body>
 </html>
