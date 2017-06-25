@@ -13,8 +13,11 @@
 		<script src="resources/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script src="resources/oclazyload/dist/ocLazyLoad.min.js"></script>
 		<script src="resources/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="resources/angular-ui-grid/ui-grid.min.js"></script>
 	
-		<link rel="stylesheet" type="text/css" href="resources/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/bootstrap/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="resources/angular-ui-grid/ui-grid.min.css"/>
+		<link ref="stylesheet" type="text/css" href="css/app.css"/>
 		
 		<script src="app.js"></script>
 	</head>
@@ -26,8 +29,7 @@
 		<a ui-sref="main.test1">test 1</a>
 		<a ui-sref="main.test2">test 2</a>
 		<a ui-sref="main.test">test</a>
-		
 		<ui-view></ui-view>
-		 
+		
 	</body>
 </html>

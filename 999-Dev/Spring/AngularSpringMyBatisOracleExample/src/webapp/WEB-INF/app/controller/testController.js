@@ -10,5 +10,14 @@ app.controller("TestController", function($scope, $http){
 			
 		});
 		
-	}
+	};
+
+	$scope.testing = "test";
+	
+	$scope.gridOption = {
+		data: [{
+            "firstName": "Cox",
+            "lastName": "Carney"
+		}]
+	};
 });
