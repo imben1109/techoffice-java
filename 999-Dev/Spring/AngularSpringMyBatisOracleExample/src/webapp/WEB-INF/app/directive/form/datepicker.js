@@ -5,7 +5,7 @@ app.directive("datepicker", function($templateCache){
 		scope: {
 			dt: "=ngModel",
 		},
-		template: $templateCache.get('datepicker.html'),
+		templateUrl: "directive/form/datepicker.html",
 		controller: function($scope, uibDateParser){
 			$scope.popup = {
 				opened: false

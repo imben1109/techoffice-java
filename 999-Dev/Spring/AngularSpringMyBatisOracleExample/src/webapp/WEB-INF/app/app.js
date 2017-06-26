@@ -13,7 +13,15 @@ app.config(function($stateProvider, $locationProvider, $routeProvider, $ocLazyLo
 	
 	$stateProvider.state({
 		name: "main",
-		url: "/"
+		url: "/",
+		resolve: {
+			load: function($ocLazyLoad){
+				return $ocLazyLoad.load({
+					files : ['directive/form/datepicker.js', 
+					         'directive/common/viewMode.js']
+				});
+			}
+		}
 	});
 
 
