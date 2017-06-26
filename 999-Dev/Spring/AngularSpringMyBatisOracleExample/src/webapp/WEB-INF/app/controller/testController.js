@@ -7,7 +7,7 @@ app.controller("TestController", function($scope, $http){
 			headers: {'Content-Type': 'application/json'},
 	        data: $scope.testForm
 		}).then(function(response){
-			
+			$scope.gridOption.data = response.data;
 		});
 		
 	};
@@ -15,9 +15,22 @@ app.controller("TestController", function($scope, $http){
 	$scope.testing = "test";
 	
 	$scope.gridOption = {
-		data: [{
-            "firstName": "Cox",
-            "lastName": "Carney"
-		}]
+		columnDefs: [{
+			  name: 'id',
+			  field: 'id'
+			}
+			,{
+			  name: 'age',
+			  field: 'age'
+			}
+			,{
+			  name: 'address',
+			  field: 'address'
+			}
+			,{
+			  name: 'phone',
+			  field: 'phone'
+			}]
 	};
+	
 });
