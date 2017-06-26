@@ -7,7 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>Angular Spring MyBatis Oracle Example</title>
-		
+	
+		<script src="resources/jquery/dist/jquery.min.js"></script>	
 		<script src="resources/angular/angular.min.js"></script>
 		<script src="resources/angular-animate/angular-animate.min.js"></script>
 		<script src="resources/angular-sanitize/angular-sanitize.min.js"></script>
