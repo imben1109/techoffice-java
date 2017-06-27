@@ -1,19 +1,46 @@
 <div view-mode>
 	<h1>Test</h1>
-
-	<datepicker ng-model="testDt"></datepicker>
 	
-	<div>
-		<input ng-model="testForm.id">
-		<input ng-model="testForm.age">
-		<input ng-model="testForm.address">
-		<input ng-model="testForm.phone">
-	</div>
+	<form>
 	
-	<div>
-		<button ng-click="search()">Search</button>
-	</div>
+		<div class="row">
+			<div class="col-md-3">
+				<datepicker ng-model="form.testDt"></datepicker>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<input class="form-control" ng-model="testForm.id">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<input class="form-control" ng-model="testForm.age">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<input class="form-control" ng-model="testForm.address">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<input class="form-control" ng-model="testForm.phone">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<button class="btn btn-default" ng-click="search()">Search</button>
+			</div>
+		</div>
 
+	</form>
+	
 	<br/>
  	<div ui-grid="gridOption" class="appGrid"></div>
  	
