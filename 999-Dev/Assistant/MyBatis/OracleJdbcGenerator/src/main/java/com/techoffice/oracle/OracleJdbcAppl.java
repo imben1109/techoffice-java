@@ -11,6 +11,7 @@ import com.techoffice.oracle.generator.PackageBodyGenerator;
 import com.techoffice.oracle.generator.PackageSpecGenerator;
 import com.techoffice.oracle.generator.PojoGenerator;
 import com.techoffice.oracle.generator.SqlMapGenerator;
+import com.techoffice.oracle.generator.UiGridColumnGenerator;
 import com.techoffice.oracle.model.Column;
 import com.techoffice.oracle.util.PojoUtil;
 
@@ -38,10 +39,12 @@ public class OracleJdbcAppl {
 		String packageBody = PackageBodyGenerator.generate(tableName, columns);
 		String sqlMap = SqlMapGenerator.generate(tableName, columns);
 		String htmlForm = HtmlFormGenerator.generate(tableName, columns);
+		String uiGridCol = UiGridColumnGenerator.generate(tableName, columns);
 		System.out.println(pojo);
 		System.out.println(packageSpec);
 		System.out.println(packageBody);
 		System.out.println(sqlMap);
 		System.out.println(htmlForm);
+		System.out.println(uiGridCol);
 	}
 }
