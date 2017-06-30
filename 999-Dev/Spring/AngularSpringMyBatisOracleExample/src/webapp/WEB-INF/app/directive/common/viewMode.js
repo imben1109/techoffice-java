@@ -13,16 +13,16 @@ app.directive("viewMode", function($compile, viewModeService){
 		controller: function($scope, $element, $compile, viewModeService, $timeout){
 			$scope.domNodeInsertedFn = function(event){
 				if ($scope.isViewMode){
-					var target = angular.element(event.target);
 					$timeout(function(){
+						var target = angular.element(event.target);
 						var inputs = target.find("input");
 						inputs.attr("disabled", "true")
 						inputs.addClass("viewModeDisabled");
+						var buttons = target.find("button");
+						buttons.hide();
+						buttons.addClass("viewModeDisabled");
+						console.log(target);
 					}, 0);
-					var buttons = target.find("button");
-					buttons.hide();
-					buttons.addClass("viewModeDisabled");
-					console.log(target);
 				}
 			};
 			

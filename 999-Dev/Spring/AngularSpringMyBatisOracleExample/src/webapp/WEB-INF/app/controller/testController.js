@@ -1,5 +1,6 @@
 var app = angular.module("app");
-app.controller("TestController", function($scope, $http){
+
+app.controller("TestController", function($scope, $http, uiGridService){
 	$scope.search = function(){
 		$http({
 			url: "./Test/search",
@@ -14,8 +15,13 @@ app.controller("TestController", function($scope, $http){
 
 	$scope.testing = "test";
 	
+	$scope.gridRowDbClick = function(row){
+		debugger;
+	};
+	
 	$scope.gridOption = {
-		columnDefs: [{
+		columnDefs: [
+		    {
 			  name: 'id',
 			  field: 'id'
 			}
@@ -30,7 +36,9 @@ app.controller("TestController", function($scope, $http){
 			,{
 			  name: 'phone',
 			  field: 'phone'
-			}]
+			}
+		],
+		rowTemplate: uiGridService.getDbClickRowTemplate("gridRowDbClick") 
 	};
 	
 });

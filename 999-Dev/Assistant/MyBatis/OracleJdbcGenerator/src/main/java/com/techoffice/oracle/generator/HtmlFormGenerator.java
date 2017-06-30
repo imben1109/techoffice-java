@@ -15,7 +15,16 @@ public class HtmlFormGenerator {
 		StringWriter formContent = new StringWriter();
 		PrintWriter printWriter = new PrintWriter(formContent);
 		for (Column column: columns){
-			printWriter.println(String.format("<input ng-model=\"%s.%s\">", formName, PojoUtil.getFieldName(column.getColumnName())));
+			printWriter.println("<div class=\"row\">");
+			printWriter.println("\t<div class=\"col-md-3\">");
+			printWriter.println("\t\t<label>");
+			printWriter.println(String.format("\t\t\t%s", column.getColumnName()));
+			printWriter.println(String.format("\t\t\t<input ng-model=\"%s.%s\" class=\"form-control\">", 
+					formName, 
+					PojoUtil.getFieldName(column.getColumnName())));
+			printWriter.println("\t\t<label>");
+			printWriter.println("\t</div>");
+			printWriter.println("</div>");
 		}
 		printWriter.flush();
 		printWriter.close();
