@@ -19,7 +19,7 @@ app.config(function($stateProvider, $locationProvider, $routeProvider, $ocLazyLo
 				return $ocLazyLoad.load({
 					files : ['directive/form/datepicker.js', 
 					         'directive/common/viewMode.js',
-					         'service/uiGridService.js']
+					         'service/gridService.js']
 				});
 			}
 		}

@@ -1,6 +1,6 @@
 var app = angular.module("app");
 
-app.controller("TestController", function($scope, $http, uiGridService){
+app.controller("TestController", function($scope, $http, gridService){
 	$scope.search = function(){
 		$http({
 			url: "./Test/search",
@@ -38,7 +38,7 @@ app.controller("TestController", function($scope, $http, uiGridService){
 			  field: 'phone'
 			}
 		],
-		rowTemplate: uiGridService.getDbClickRowTemplate("gridRowDbClick") 
+		rowTemplate: gridService.getDbClickRowTemplate("gridRowDbClick") 
 	};
 	
 });
