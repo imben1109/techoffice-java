@@ -20,7 +20,7 @@
 	
 		<link rel="stylesheet" type="text/css" href="resources/bootstrap/dist/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="resources/angular-ui-grid/ui-grid.min.css"/>
-		<link ref="stylesheet" type="text/css" href="css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
 		
 		<script src="app.js"></script>
 	

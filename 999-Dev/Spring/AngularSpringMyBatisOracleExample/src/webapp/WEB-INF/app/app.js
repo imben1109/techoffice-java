@@ -2,15 +2,12 @@ var app = angular.module("app", [ 'ui.router', 'ngRoute', 'oc.lazyLoad',
                                   'ngAnimate', 'ngSanitize', 'ui.bootstrap',
                                   'ui.grid']);
 
-app.config(function($stateProvider, $locationProvider, $routeProvider, $ocLazyLoadProvider, $urlRouterProvider) {
+app.config(function($provide, $stateProvider, $locationProvider, $routeProvider, $ocLazyLoadProvider, $urlRouterProvider) {
 	
 	$urlRouterProvider.otherwise('/');
-
-	$ocLazyLoadProvider.config({
-		  events: true,
-		  debug: true
-	});
 	
+
+	// 
 	$stateProvider.state({
 		name: "main",
 		url: "/",
