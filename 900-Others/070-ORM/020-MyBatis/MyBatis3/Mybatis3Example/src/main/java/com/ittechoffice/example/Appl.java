@@ -21,12 +21,13 @@ public class Appl {
 			Table1 table1 = new Table1();
 			table1.setCol1("Col1");
 			table1.setCol2("Col2");
+			table1.setCol3(4.50123);
 			session.insert("Table1.insert", table1);
 			session.commit();
 			// QUERY DATA
 			List<Table1> list = session.selectList("Table1.select", Table1.class);
 			for (Table1 row: list){
-				System.out.println(row.getCol1() + " " + row.getCol2());
+				System.out.println(row.getCol1() + " " + row.getCol2() + " " + row.getCol3());
 			}
 		} finally {
 		  session.close();
