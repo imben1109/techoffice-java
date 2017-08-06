@@ -23,4 +23,5 @@ public class SimpleController {
 		return user;	
 	}
 	
+	
 }
