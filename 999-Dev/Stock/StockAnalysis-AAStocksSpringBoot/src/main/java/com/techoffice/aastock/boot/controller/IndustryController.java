@@ -3,6 +3,7 @@ package com.techoffice.aastock.boot.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +16,9 @@ import com.techoffice.util.exception.WebCrawlerException;
 @Controller
 @RequestMapping("Industry")
 public class IndustryController {
+	
+	@Autowired
+	private TaskExecutor taskExecutor; 
 	
 	@Autowired
 	private IndustryService industryService;
@@ -37,7 +41,16 @@ public class IndustryController {
 	@RequestMapping("updateIndustryDetails")
 	@ResponseBody
 	public String updateIndustryDetails() throws WebCrawlerException{
-		industryService.updateIndustryDetails();
+		taskExecutor.execute(new Runnable(){
+			@Override
+			public void run() {
+				try {
+					industryService.updateIndustryDetails();
+				} catch (WebCrawlerException e) {
+					e.printStackTrace();
+				}		
+			}
+		});
 		return "completed";
 	}
 }
