@@ -9,24 +9,31 @@ import javax.persistence.SequenceGenerator;
 @Entity
 public class Job {
 	
+	public enum Status {PENDING, COMPLETED, FAIL}
+	
 	@Id
 	@SequenceGenerator(name="JOB_SEQ", sequenceName="JOB_SEQ")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="JOB_SEQ")
 	private int id;
-	private String tableName;
+	private String className;
+	private Status status;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getTableName() {
-		return tableName;
+	public String getClassName() {
+		return className;
 	}
-	public void setTableName(String tableName) {
-		this.tableName = tableName;
+	public void setClassName(String className) {
+		this.className = className;
 	}
-	
-	
+	public Status getStatus(){
+		return status;
+	}
+	public void setStatus(Status status){
+		this.status = status;
+	}
 	
 }
