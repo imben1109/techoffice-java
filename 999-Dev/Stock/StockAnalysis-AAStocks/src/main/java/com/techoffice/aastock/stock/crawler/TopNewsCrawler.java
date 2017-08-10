@@ -6,6 +6,13 @@ import org.springframework.stereotype.Component;
 
 import com.techoffice.util.WebDriverUtil;
 
+/**
+ * A Web Crawler for 
+ * http://www.aastocks.com/en/stocks/news/aafn/top-news
+ * 
+ * @author imben1109
+ *
+ */
 @Component
 public class TopNewsCrawler {
 	

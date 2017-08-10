@@ -16,7 +16,9 @@ import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.WebCrawlerException;
 
 /**
- * Crawler for http://www.aastocks.com/en/stocks/market/industry/sector-industry-details.aspx
+ * A Web Crawler for 
+ * http://www.aastocks.com/en/stocks/market/industry/sector-industry-details.aspx
+ * 
  * @author imben1109
  *
  */

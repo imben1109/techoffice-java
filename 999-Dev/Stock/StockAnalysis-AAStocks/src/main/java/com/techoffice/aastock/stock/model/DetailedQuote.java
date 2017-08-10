@@ -25,6 +25,13 @@ public class DetailedQuote {
 	private Double nav;
 	private String mktCap;
 	private Double lots;
+	private String shortSellTurn;
+	private Double shortSellTurnPct;
+	private Double eps;
+	private Double dividendPayout;
+	private String moneyFlow;
+	private Double turnoverRate;
+	private String exchange;
 	
 	
 }

@@ -11,6 +11,13 @@ import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XpathException;
 
+/**
+ * A Web Crawler for 
+ * http://www.aastocks.com/en/stocks/analysis/company-fundamental/earnings-summary?symbol=
+ * 
+ * @author imben1109
+ *
+ */
 @Component
 public class EarningSummaryCrawler {
 
@@ -20,7 +27,7 @@ public class EarningSummaryCrawler {
 	
 	public void getYearList(String symbol) throws XpathException {
 		String xml = WebDriverUtil.getXml(URL + symbol);
-		String xpath = "//*[@id='highcharts-0']/svg/g[6]/text";
+		String xpath = "//*[@id='hig'hcharts-0']/svg/g[6]/text";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=0; i<rowNodeList.getLength(); i++){
 			Node yearNode = rowNodeList.item(i);

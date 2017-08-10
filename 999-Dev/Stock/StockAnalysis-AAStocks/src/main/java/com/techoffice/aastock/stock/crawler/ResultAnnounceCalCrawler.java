@@ -10,7 +10,9 @@ import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XpathException;
 
 /**
- * Web Crawler for http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1
+ * A Web Crawler for 
+ * http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1
+ * 
  * @author imben1109
  *
  */
