@@ -32,6 +32,7 @@ public class JobService {
 					JobTask jobTask = new JobTask();
 					jobTask.setTaskName(taskName);
 					jobTask.setJobId(job.getId());
+					
 				} catch (Exception e) {
 					throw new JobException("Fail to extract " + taskField + " from " +  firstObj.getClass().getName(), e);
 				}
