@@ -7,7 +7,8 @@ $.fn.pagingTable = function(config){
 	me.originalRows = [];
 	me.rows = [];
 	me.pagingRows = [];
-	me.pageNum = 0;
+	me.pageNums = 0;
+	me.currentPage = 1;
 	me.pageBar = null;
 	me.searchFields = [];
 	me.searchHeader = null;
@@ -58,7 +59,7 @@ $.fn.pagingTable = function(config){
 	me.paging = function(){
 		var rows = me.rows.slice(0);
 		var pageNum = Math.ceil(rows.length / me.pageLimit);
-		me.pageNum = pageNum;
+		me.pageNums = pageNum;
 		me.pagingRows = [];
 		var remainders = rows.splice(me.pageLimit);
 		if (rows.toArray){
@@ -94,7 +95,8 @@ $.fn.pagingTable = function(config){
 		var pageBar = $("<nav aria-label='Page navigation'></nav>");
 		var pageList = $("<ul class='pagination'></ul>");
 		pageBar.append(pageList);
-		for (var i=0; i<me.pageNum; i++){
+		pageList.append($("<li><span>&laquo;</span></li>"));
+		for (var i=0; i<me.pageNums; i++){
 			var pageItem = $("<li></li>");
 			var pageNumSpan = $("<span>" + (i+1) + "</span>");
 			pageNumSpan.click(function(){
@@ -103,11 +105,13 @@ $.fn.pagingTable = function(config){
 					var rows = me.pagingRows[pageNum - 1];
 					var tbody = me.find("tbody");
 					tbody.html(rows);
+					me.currentPage = pageNum;
 				}
 			});
 			pageItem.append(pageNumSpan);
 			pageList.append(pageItem);
 		}
+		pageList.append($("<li><span>&raquo;</span></li>"));
 		me.pageBar = pageBar;
 		pageBar.insertAfter(me);
 	}
