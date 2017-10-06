@@ -5,14 +5,14 @@ J2EE is a Enterprise Application Development Platform. Enterprise Application is
 
 This is a project in **Tech Office** providing different examples for J2EE and covering following topics. 
 
-- Web
-- Web Service
-- Bean Validation
-- Enterprise Beans
-- Context and Dependency Injection
-- Persistence
-- Security
-- Messaging 
+* [010-Web](010-Web/)                      
+* [020-WebService](020-WebService/)        
+* [030-BeanValidation](030-BeanValidation/)
+* [040-Ejb](040-Ejb/)                      
+* [050-Cdi](050-Cdi/)                      
+* [060-Persistance](060-Persistance/)      
+* [070-Security](070-Security/)            
+* [080-Messaging](080-Messaging/)      
  
 ## Prerequisite
 
@@ -23,23 +23,4 @@ JBoss is used for J2EE Container while tomcat is used for servlet container for 
 - Maven 3
 - Tomcat 7
 
-# Example List
 
-## Web
-- TomcatServlet Example - A Simple Servelt Example
-- TomcatJsfExample -A Simple JSF Example
-- TomcatIcefaceExample - A Simple Iceface Example
-
-## Web Service
-
-## Enterprise Beans
-- JBossStatelessBeanExample - A Simple EJB Example
-
-## Context and Dependency Injection
-- JBossCdiExample - A Simple Context and Dependency Injection Example
-
-## Persistence
-
-## Security
-
-## Messaging 
