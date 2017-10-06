@@ -19,3 +19,5 @@ The Core Container of Spring include:
 * [SpringSeparateXmlConfigExample](SpringSeparateXmlConfigExample/)    
 
 
+## Reference
+* https://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-scopes-session

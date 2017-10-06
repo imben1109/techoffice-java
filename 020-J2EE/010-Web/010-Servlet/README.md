@@ -51,3 +51,4 @@ web.xml define the servlet and its url mapping. Web Server would route the URL R
 
 # Reference
 * https://techofficejava.wordpress.com/j2ee-servlet/
+* http://download.oracle.com/otn-pub/jcp/servlet-3.0-fr-eval-oth-JSpec/servlet-3_0-final-spec.pdf

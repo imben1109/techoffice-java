@@ -1,15 +1,16 @@
 # Spring Web 
 
-## Example List           
+## Example List
+* [SpringMvcExample](SpringMvcExample/)                                                     
 * [SpringJsfExample](SpringJsfExample/)                                          
 * [SpringMvcContextLoaderListenerExample](SpringMvcContextLoaderListenerExample/)
 * [SpringMvcErrorHandlingExample](SpringMvcErrorHandlingExample/)                
-* [SpringMvcExample](SpringMvcExample/)                                          
 * [SpringMvcFileDownloadExample](SpringMvcFileDownloadExample/)                  
 * [SpringMvcFileUploadExample](SpringMvcFileUploadExample/)                      
 * [SpringMvcJacksonExample](SpringMvcJacksonExample/)                            
 * [SpringMvcSseExample](SpringMvcSseExample/)                                    
 * [SpringWebflowExample](SpringWebflowExample/)                                  
-* [SpringWebsocketExample](SpringWebsocketExample/)                              
+* [SpringWebsocketExample](SpringWebsocketExample/)        
+* [SpringMvcSessionScopedBeanExample] (SpringMvcSessionScopedBeanExample/)                      
 
 [Misc](Misc/)   
