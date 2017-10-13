@@ -1,41 +1,49 @@
-# Servlet Example
+# Servlet 
 
-## Servlet 
-Servlet is a Java Program that extends the abilities of a serever
+Servlet is a java program that extends server capacities. In J2EE, it is an interface that Java Class implements it and provides functionality. Also, J2EE specification also provides an abstract class called HttpServlet so that Java Program could extends it to handle HTTP request.
 
 ## HttpServlet
-HttpServlet is subclass of Servlet. It provide to Http Sevice to Http Request.
-* doGet    - HTTP GET requests
-* doPost   - HTTP POST requests
-* doPut    - HTTP PUT requests
-* doDelete - HTTP DELETE requests
+HttpServlet is an abstract class of Servlet for Web Site. The subclass of HttpServlet must implement at least one of following methods.
+* doGet
+* doPost
+* doPut
+* doDelete
+* init, destory 
+* getServletInfo
 
-Servlet Class
+## Web Application Deployment Descriptor (web.xml)
+web.xml define the servlet and its url mapping. Web Server would route the URL Request to the specified Servlet for handling.
+
+**Sample web.xml**
 ```
-public class ItTechOfficeTestServlet extends HttpServlet{
-	
-	@Override
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<h1>Tech Office Test Servlet Example Update</h1>");
-		
-	}
-}
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>Tech Office Application</display-name>
+    <description>
+        It is a example appplication in Tech Office.
+    </description>
+
+    <servlet>
+        <servlet-name>TechOfficeServlet</servlet-name>
+        <servlet-class>com.techoffice.example.TechOfficeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TechOfficeServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+</web-app>     
 ```
 
-The servlet configuration is requireed to define in web.xml in order to make the server to use the servlet for specified request. 
+## Implementation
+* Tomcat
+* Jetty
 
-web.xml
-```
-<servlet>
-	<servlet-name>ItTechOfficeTestServlet</servlet-name>
-	<servlet-class>com.ittechoffice.testservlet.ItTechOfficeTestServlet</servlet-class>
-</servlet>
-
-<servlet-mapping>
-	<servlet-name>ItTechOfficeTestServlet</servlet-name>
-	<url-pattern>/</url-pattern>
-</servlet-mapping>
-```
-
+# Reference
+* https://techofficejava.wordpress.com/j2ee-servlet/
+* http://download.oracle.com/otn-pub/jcp/servlet-3.0-fr-eval-oth-JSpec/servlet-3_0-final-spec.pdf
