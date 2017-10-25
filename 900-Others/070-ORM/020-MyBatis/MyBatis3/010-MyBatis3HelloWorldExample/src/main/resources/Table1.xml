@@ -3,12 +3,12 @@
   'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
   
 <mapper namespace="Table1">
-	<resultMap id="table1" type="com.ittechoffice.example.Table1">
+	<resultMap id="table1" type="com.techoffice.example.Table1">
 		<result property="col1" column="col1"/>
 		<result property="col2" column="col2"/>
 	</resultMap>
 
-	<insert id="insert" parameterType="com.ittechoffice.example.Table1">
+	<insert id="insert" parameterType="com.techoffice.example.Table1">
 		INSERT INTO TABLE1(COL1, COL2, COL3) VALUES (#{col1}, #{col2}, #{col3});
 	</insert>
 	
