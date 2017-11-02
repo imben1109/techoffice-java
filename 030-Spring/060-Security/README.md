@@ -18,3 +18,6 @@ Spring Security is a framework for authentication and authorization of Java Appl
 * [SpringSecuritySessionRegistryExample](SpringSecuritySessionRegistryExample/)          
 * [SpringSecuritySimpleAuthenticationExample](SpringSecuritySimpleAuthenticationExample/)
 * [SpringSecurityWebExample](SpringSecurityWebExample/)                                  
+
+## Reference
+* https://github.com/spring-projects/spring-security
