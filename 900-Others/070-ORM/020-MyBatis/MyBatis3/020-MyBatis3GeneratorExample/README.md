@@ -86,3 +86,6 @@ Command Line to execute MyBatis Generate
 ```
 mvn mybatis-generator:generate
 ```
+
+# Reference
+* http://www.mybatis.org/generator/
