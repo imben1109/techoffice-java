@@ -18,31 +18,32 @@ public class PriceDao {
 	@PersistenceContext
 	private EntityManager em;
 	
-	@SuppressWarnings("rawtypes")
 	@Transactional
-	public void deletePrice(String stockNo){
+	public void delete(String stockNo){
 		Query query = em.createQuery("DELETE From Price Where stockNo = :stockNo");
 		query.setParameter("stockNo", stockNo);
 		query.executeUpdate();
 	}
 	
 	@Transactional
-	public void addPriceList(List<Price> priceList){
+	public void add(List<Price> priceList){
 		for(Price price: priceList){
 			em.persist(price);
 		}
 	}
 	
 	@Transactional
-	public List<Price> getPriceList(){
+	public List<Price> list(){
 		TypedQuery<Price> query = em.createQuery("from Price", Price.class);
 		return query.getResultList();
 	}
 	
 	@Transactional
-	public List<Price> getPriceList(String stockNo){
+	public List<Price> list(String stockNo){
 		TypedQuery<Price> query = em.createQuery("from Price where stockNo = :stockNo ", Price.class);
 		query.setParameter("stockNo", stockNo);
 		return query.getResultList();
 	}
+	
+
 }

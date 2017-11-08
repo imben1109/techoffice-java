@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.yahoo.finance.stock.crawler.StockHistoryDataCrawler;
+import com.techoffice.yahoo.finance.stock.crawler.PriceCrawler;
 import com.techoffice.yahoo.finance.stock.dao.PriceDao;
 import com.techoffice.yahoo.finance.stock.model.Price;
 
@@ -25,7 +25,7 @@ import com.techoffice.yahoo.finance.stock.model.Price;
 public class StockAppl {
 	
 	@Autowired
-	private StockHistoryDataCrawler stockHistoryDataCrawler;
+	private PriceCrawler priceCrawler;
 	
 	@Autowired
 	private PriceDao priceDao;

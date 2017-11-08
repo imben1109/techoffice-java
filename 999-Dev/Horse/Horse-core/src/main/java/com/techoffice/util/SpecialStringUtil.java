@@ -19,11 +19,17 @@ public class SpecialStringUtil {
 		String newStr = removeQuestionMark(str);
 		newStr = replaceNewLineToSpace(newStr);
 		newStr = doubleSpaceToSingle(newStr);
+		newStr = replaceQuotationMark(newStr);
 		return newStr;
 	}
 	
 	public static String removeQuestionMark(String str){
 		String newStr = str.replace("?", " ");
+		return newStr;
+	}
+	
+	public static String replaceQuotationMark(String str){
+		String newStr = str.replace("’", " ");
 		return newStr;
 	}
 	

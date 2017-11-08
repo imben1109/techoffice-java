@@ -1,0 +1,48 @@
+<div view-mode>
+	<h1>Test</h1>
+	
+	<form>
+		<fieldset ng-disabled="isViewMode">
+			<div class="row">
+				<div class="col-md-3">
+					<datepicker ng-model="form.testDt"></datepicker>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<input class="form-control" ng-model="testForm.id">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<input class="form-control" ng-model="testForm.age" ng-disabled="false">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<input class="form-control" ng-model="testForm.address">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<input class="form-control" ng-model="testForm.phone">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<button class="btn btn-default" ng-click="search()">Search</button>
+				</div>
+			</div>
+				
+		</fieldset>
+	</form>
+	
+	<br/>
+ 	<div ui-grid="gridOption" ui-grid-selection class="appGrid"></div>
+ 	
+</div>

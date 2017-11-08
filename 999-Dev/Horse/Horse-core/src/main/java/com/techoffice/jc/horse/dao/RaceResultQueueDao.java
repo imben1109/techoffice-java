@@ -1,5 +1,6 @@
 package com.techoffice.jc.horse.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -48,8 +49,15 @@ public class RaceResultQueueDao {
 	}
 	
 	@Transactional
+	public List<RaceResultQueue> listByRaceDate(Date raceDate){
+		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue where raceDate = :RACE_DATE", RaceResultQueue.class);
+		query.setParameter("RACE_DATE", raceDate);
+		return query.getResultList();
+	}
+	
+	@Transactional
 	public List<RaceResultQueue> list(){
-		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue", RaceResultQueue.class);
+		TypedQuery<RaceResultQueue> query = em.createQuery("from RaceResultQueue Order by raceDate desc", RaceResultQueue.class);
 		return query.getResultList();
 	}
 	
@@ -63,4 +71,17 @@ public class RaceResultQueueDao {
 	public void update(RaceResultQueue raceResultQueue){
 		em.persist(raceResultQueue);
 	}
+	
+	@Transactional
+	public RaceResultQueue get(int id){
+		TypedQuery<RaceResultQueue> query = em.createQuery("From RaceResultQueue Where id = :id", RaceResultQueue.class);
+		query.setParameter("id", id);
+		return query.getSingleResult();
+	}
+	
+	public List<RaceResultQueue> query(){
+
+		return null;
+	}
+	
 }

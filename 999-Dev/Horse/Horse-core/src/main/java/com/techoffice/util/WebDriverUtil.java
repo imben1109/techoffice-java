@@ -54,21 +54,23 @@ public class WebDriverUtil {
 		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
 		webDriver.get(url);
 	    WebDriverWait wait = new WebDriverWait(webDriver, 3);
+	    String sourceStr = "";
 	    try{
-	    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']/div[5]/div[2]/table"))));
-			String sourceStr = webDriver.getPageSource();
-			webDriver.quit();
-			org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
-		    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
-		    document.select("script").remove();
-		    String xml = document.html();
-		    String tiddedXml = XmlUtil.tidyXml(xml);
-			return tiddedXml;
+	    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']"))));
+			sourceStr = webDriver.getPageSource();
 	    }catch(NoSuchElementException e){
 	    	e.printStackTrace();
 	    }catch(TimeoutException e){
 	    	e.printStackTrace();
+	    }finally{
+	    	webDriver.quit();
 	    }
-	    return null;
+		org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
+	    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
+	    document.select("script").remove();
+	    String xml = document.html();
+	    String tiddedXml = XmlUtil.tidyXml(xml);
+		return tiddedXml;
+
 	}
 }

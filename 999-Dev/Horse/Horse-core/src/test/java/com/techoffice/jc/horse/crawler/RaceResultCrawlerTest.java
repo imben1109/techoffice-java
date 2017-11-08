@@ -25,9 +25,10 @@ import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultHorseDao;
 import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
-import com.techoffice.jc.horse.service.ResultQueueService;
-import com.techoffice.jc.horse.service.ResultQueueBatchService;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.jc.horse.service.RaceResultQueueService;
+import com.techoffice.jc.horse.service.RaceResultQueueBatchService;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -45,10 +46,10 @@ public class RaceResultCrawlerTest {
 	}
 	
 	@Test
-	public void retrieveRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
+	public void retrieveRaceDateList() throws XpathException, ParseException {
 		List<RaceDate> raceDateList = raceResultCrawler.retrieveRaceDateList();
 		for(RaceDate raceDate: raceDateList){
-			log.info(raceDate.getRaceDate());
+			log.info(raceDate.getUrl());
 		}
 	}
 	

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.partition.support.Partitioner;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ import com.techoffice.hkex.csvimport.stock.model.Stock;
 
 public class StockPartitioner implements Partitioner{
 	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private StockDao stockDao;
 	
@@ -22,13 +26,21 @@ public class StockPartitioner implements Partitioner{
 		Map<String, ExecutionContext> results = new HashMap<String, ExecutionContext>();
 		
 		List<Stock> list = stockDao.list();
+		
+		log.info("Now partitioning stocks [Totol:" + list.size() + " Grid: " + gridSize +"]");
+		
 		int listPartitionSize = (list.size() / gridSize) + 1;
 		List<List<Stock>> partitionStockList = Lists.partition(list, listPartitionSize);
 		
 		for(int i=0; i<gridSize; i++){
 			ExecutionContext context = new ExecutionContext();
-			context.put("stockList", new ArrayList<Stock>(partitionStockList.get(i)));
-			results.put("partition-" + i, context);
+			if (partitionStockList.size() > 0){
+				context.put("stockList", new ArrayList<Stock>(partitionStockList.get(i)));
+				results.put("partition-" + i, context);
+			}else{
+				context.put("stockList", new ArrayList<Stock>());
+				results.put("partition-" + i, context);
+			}
 		}
 		
 		return results;

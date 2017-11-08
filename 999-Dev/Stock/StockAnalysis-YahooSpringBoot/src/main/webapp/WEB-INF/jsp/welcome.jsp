@@ -6,8 +6,15 @@
 <html lang="en">
 
 <body>
-	<h1>Horse Analysis</h1>
-	
+	<h1>Stock Analysis</h1>
+	<ul>
+		<li><a href="/Stock/">Stock List</a></li>
+		<li><a href="/PriceBatch/">Price Batch</a></li>
+		<li><a href="/PriceBatch/run">Run Price Batch</a></li>
+		<li><a href="/HsiStock/">HSI Stock List</a></li>
+		<li><a href="/HsiStock/updateHsiStockList">Update HSI Stock List</a></li>
+		<li><a href="/HsiStock/updateHsi">Update HSI</a></li>
+	</ul>
 </body>
 
 </html>

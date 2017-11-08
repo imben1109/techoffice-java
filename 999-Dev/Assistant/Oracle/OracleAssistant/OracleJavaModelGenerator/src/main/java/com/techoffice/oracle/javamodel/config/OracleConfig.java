@@ -22,24 +22,17 @@ public class OracleConfig {
 	public static final String ORACLE_CONNECTION_URL = "oracle.connection.url";
 	public static final String ORACLE_CONNECTION_USER = "oracle.connection.user";
 	public static final String ORACLE_CONNECTION_PASSWORD = "oracle.connection.password";
+	public static final String ORACLE_GENERATOR_TABLE = "oracle.generator.table";
+	public static final String ORACLE_GENERATOR_PACKAGE = "oracle.generator.package";
 	
 	public static Configuration config = null ;
     
 	static {
 		try {
-			String homePath = System.getProperty("user.home");
-			System.out.println("User Home: " + homePath);
-			String configFolderPath = homePath + "/" + CONFIG_FOLDER_NAME;
-			File configFolder = new File(configFolderPath);
-			File propertyFile = new File(configFolderPath, APP_PROPERTIES_FILE);
-			if (!configFolder.exists()){
-				configFolder.mkdirs();
-				propertyFile.createNewFile();
-			}
+			File propertyFile = new File(OracleConfig.class.getClassLoader().getResource(APP_PROPERTIES_FILE).getFile());			
+			System.out.println(propertyFile.getAbsolutePath());
 			Configurations configs = new Configurations();
 		    config = configs.properties(propertyFile);
-		} catch (IOException e) {
-			e.printStackTrace();
 		} catch (ConfigurationException e) {
 			e.printStackTrace();
 		}
@@ -81,5 +74,11 @@ public class OracleConfig {
 		return config.getString(ORACLE_CONNECTION_PASSWORD);
 	}
 	
+	public static String getGeneratorTable(){
+		return config.getString(ORACLE_GENERATOR_TABLE);
+	}
 	
+	public static String getGeneratorPackage(){
+		return config.getString(ORACLE_GENERATOR_PACKAGE);
+	}
 }

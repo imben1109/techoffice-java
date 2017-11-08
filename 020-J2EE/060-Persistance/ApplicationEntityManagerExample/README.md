@@ -1,4 +1,4 @@
-#Simple Persistence Example
+# Simple Persistence Example
 - Entity Manager
 	- Container-Managed Entity Manager
 	- Application-Managed Entity Manager
@@ -6,7 +6,7 @@
 
 In this example, it would demonstrate the Application-Managed Entity Manager using Hibernate as Java Persistence API Provider.
 
-##Entity Manager
+## Entity Manager
 Entities are managed in Entity Manager. 
 Container-Managed Entity Manager would automatically propagated to all application components while Application-Managed Entity Manager do not. 
 Therefore, application components that use Container-Managed Entity Manager would use a single Java Transaction API (JTA) transaction. 

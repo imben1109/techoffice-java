@@ -21,11 +21,11 @@ public class PojoService {
 	@Autowired
 	private TableDao tableDao;
 	
-	public void generate(String tableName) throws JClassAlreadyExistsException, IOException{
+	public void generate(String packageName, String tableName) throws JClassAlreadyExistsException, IOException{
 		List<Column> columns = tableDao.getTableColumnList(tableName);
 		String modelClassName = CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, tableName);
 		System.out.println(modelClassName);
-		PojoGenerator pojoGenerator = new PojoGenerator("", modelClassName);
+		PojoGenerator pojoGenerator = new PojoGenerator(packageName, modelClassName);
 		for (Column column: columns){
 			String modelFieldName = CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, column.getColumnName());
 			if (ColumnConstant.VARCHAR2.equals(column.getDataType())){
@@ -36,6 +36,10 @@ public class PojoService {
 				pojoGenerator.addField(Date.class, modelFieldName);
 			}
 		}
-		pojoGenerator.generateCode(new File("Output"));
+		File output = new File("Output");
+		if (!output.exists()){
+			output.mkdir();
+		}
+		pojoGenerator.generateCode(output);
 	}
 }

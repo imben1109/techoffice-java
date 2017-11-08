@@ -16,27 +16,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
+import com.techoffice.util.exception.DocumentConversionException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
 public class ResultQueueServiceTest {
 	
 	@Autowired
-	private ResultQueueService resultQueueService;
+	private RaceDateService resultQueueDateService;
 	
-	private ResultQueueDateService resultQueueDateService;
-
-//	@Test
-	public void updateRaceDateList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilDocumentConversionException{
-		resultQueueDateService.updateRaceDateList();
-	}
+	@Autowired
+	private RaceResultQueueService resultQueueService;
 	
 	@Test
-	public void updateRaceResultQueueList() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, ParseException, XmlUtilDocumentConversionException{
-		for (int i=0; i<50; i++){
-			resultQueueDateService.updateRaceResultQueueList();	
-		}
+	public void correctQueueRaceDate() throws ParseException{
+//		resultQueueService.correctQueueRaceDate();
 	}
 	
 }

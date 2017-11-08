@@ -1,0 +1,6 @@
+projectKey=SpringMvcJacksonExample
+serverUrl=http://localhost:9000
+serverVersion=6.6.0.32724
+dashboardUrl=http://localhost:9000/dashboard/index/SpringMvcJacksonExample
+ceTaskId=AV-CucO-Psck5XN71WZ6
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV-CucO-Psck5XN71WZ6

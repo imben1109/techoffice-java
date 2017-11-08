@@ -7,12 +7,12 @@ import org.w3c.dom.NodeList;
 
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 public class CurrentOddHelper {
 	
-	public static String getVenue(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public static String getVenue(String xml) throws XPathExpressionException, DocumentConversionException, XpathException{
 		String venueXpath = "//*[@id='trMeetingInfo']/td[2]/table/tbody/tr/td[4]/nobr[2]";
 		String venueStr = XmlUtil.getXpathText(xml, venueXpath);
 		if (venueStr.equals("Sha Tin")){
@@ -21,7 +21,7 @@ public class CurrentOddHelper {
 		return "";
 	}
 	
-	public static String getCourse(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public static String getCourse(String xml) throws XPathExpressionException, DocumentConversionException, XpathException{
 		String trackXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[4]";
 		String courseXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[3]";
 		String courseStr = XmlUtil.getXpathText(xml, courseXpath);
@@ -32,7 +32,7 @@ public class CurrentOddHelper {
 		return course;
 	}
 	
-	public static String getDistance(String xml) throws XPathExpressionException, XmlUtilDocumentConversionException, XmlUtilXpathNotUniqueException{
+	public static String getDistance(String xml) throws XPathExpressionException, DocumentConversionException, XpathException{
 		String distanceXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[3]/nobr[5]";
 		String distanceStr = XmlUtil.getXpathText(xml, distanceXpath);
 		distanceStr = distanceStr.toUpperCase();
@@ -60,6 +60,26 @@ public class CurrentOddHelper {
 				if (tdNodeSeq == 4){
 					String draw = tdNode.getTextContent();
 					currentOdd.setDraw(draw);
+				}
+				if(tdNodeSeq == 5){
+					String weight = tdNode.getTextContent();
+					currentOdd.setWeight(weight);
+				}
+				if(tdNodeSeq == 6){
+					String jockey = tdNode.getTextContent();
+					currentOdd.setJockey(jockey);	
+				}
+				if(tdNodeSeq == 7){
+					String trainer = tdNode.getTextContent();
+					currentOdd.setTrainer(trainer );		
+				}
+				if(tdNodeSeq == 8){
+					String win = tdNode.getTextContent();
+					currentOdd.setWin(win);
+				}
+				if(tdNodeSeq == 9){
+					String place = tdNode.getTextContent();
+					currentOdd.setPlace(place);
 				}
 			}
 		}

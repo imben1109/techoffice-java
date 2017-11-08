@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class StockHistoryDataServiceTest {
 	
 	@Autowired
-	private StockHistoryDataService stockHistoryDataService;
+	private PriceService stockHistoryDataService;
 	
 //	@Test
 //	public void updateAllStockPrice() throws FailingHttpStatusCodeException, MalformedURLException, IllegalAccessException, InvocationTargetException, IOException{

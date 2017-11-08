@@ -29,7 +29,7 @@ public class StockService {
 	private StockCrawler stockWebClientService;
 	
 	
-	public List<Stock> getStockList(){
+	public List<Stock> list(){
 		return stockDao.list();
 	}
 	

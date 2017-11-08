@@ -2,15 +2,14 @@ package com.techoffice.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.text.MessageFormat;
+import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -22,22 +21,22 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.tidy.Tidy;
-import org.xml.sax.SAXException;
 
-import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.InvalidDocumentException;
+import com.techoffice.util.exception.XpathException;
 
 public class XmlUtil {
 	
 	private static Logger log = LoggerFactory.getLogger(XmlUtil.class);
 	
-	public static String covertNodeToXmlString(Node node) throws TransformerException{
+	public static String toXml(Node node) throws TransformerException{
 		StringWriter writer = new StringWriter();
 		Transformer transformer = TransformerFactory.newInstance().newTransformer();
 		transformer.transform(new DOMSource(node), new StreamResult(writer));
@@ -49,29 +48,34 @@ public class XmlUtil {
 	 * 
 	 * @param xml
 	 * @return
-	 * @throws XmlUtilInvalidDocumentException
+	 * @throws InvalidDocumentException
 	 */
-	public static Document convertXmlStrToDocument(String xml) throws XmlUtilInvalidDocumentException{
+	public static Document convertXmlStrToDocument(String xml) throws InvalidDocumentException{
 		Document document = null;
 		try{
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			documentBuilderFactory.setNamespaceAware(false);
 			documentBuilderFactory.setValidating(false);
+			documentBuilderFactory.setIgnoringComments(true);
 			documentBuilderFactory.setFeature("http://xml.org/sax/features/namespaces", false);
 			documentBuilderFactory.setFeature("http://xml.org/sax/features/validation", false);
 			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
 			documentBuilderFactory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			document = documentBuilder.parse(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)));	
+			document = documentBuilder.parse(IOUtils.toInputStream(xml, StandardCharsets.UTF_8));	
 		}catch(Exception e){
 			log.error("Try to convert xml: " + xml);
-			throw new XmlUtilInvalidDocumentException("Cannot xml to Document: " + e.getMessage());
+			throw new InvalidDocumentException("Cannot xml to Document: " + e.getMessage());
 		}
 		return document;
 	}
 	
 	public static String tidyXml(String xml){
 		Tidy tidy = new Tidy();
+		Properties properties = new Properties();
+		properties.setProperty("new-blocklevel-tags", "section research result");
+		tidy.setConfigurationFromProps(properties);
+		
 		tidy.setInputEncoding("UTF-8");
 		tidy.setOutputEncoding("UTF-8");
 		tidy.setXHTML(true);
@@ -82,6 +86,8 @@ public class XmlUtil {
 			tiddiedXml = out.toString("UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
+		} catch (Exception e){
+			e.printStackTrace();
 		}
 		return tiddiedXml;
 	}
@@ -91,16 +97,22 @@ public class XmlUtil {
 	 * @param xml
 	 * @param xPath
 	 * @return
-	 * @throws XmlUtilInvalidDocumentException
-	 * @throws XPathExpressionException
+	 * @throws XpathException 
 	 */
-	public static NodeList evaluateXpath(String xml, String xPath) throws XmlUtilInvalidDocumentException, XPathExpressionException{
+	public static NodeList evaluateXpath(String xml, String xPath) throws XpathException {
 		NodeList nodeList = null;
-		Document doc = convertXmlStrToDocument(xml);
-		XPathFactory xPathfactory = XPathFactory.newInstance();
-		XPath xpath = xPathfactory.newXPath();
-		XPathExpression expr = xpath.compile(xPath);
-		nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		Document doc = null;
+		try {
+			doc = convertXmlStrToDocument(xml);
+			XPathFactory xPathfactory = XPathFactory.newInstance();
+			XPath xpath = xPathfactory.newXPath();
+			XPathExpression expr = xpath.compile(xPath);
+			nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		} catch (InvalidDocumentException e) {
+			throw new XpathException(e);
+		} catch (XPathExpressionException e) {
+			throw new XpathException(MessageFormat.format(XpathException.INVALID_XPATH_PATTERN, xPath), e);
+		}
 		return nodeList;	
 	}
 	
@@ -110,17 +122,17 @@ public class XmlUtil {
 	 * @param xPath
 	 * @return
 	 * @throws XPathExpressionException
-	 * @throws XmlUtilInvalidDocumentException
-	 * @throws XmlUtilXpathNotUniqueException
+	 * @throws InvalidDocumentException
+	 * @throws XpathException
 	 */
-	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, XmlUtilInvalidDocumentException, XmlUtilXpathNotUniqueException {
+	public static String getXpathText(String xml, String xPath) throws XPathExpressionException, InvalidDocumentException, XpathException {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){
-			throw new XmlUtilXpathNotUniqueException(xPath + " contains two node positions. " );
+			throw new XpathException(xPath + " contains two node positions. " );
 		}else if (nodeList.getLength() == 0 ){
 			log.error(xml);
-			throw new XmlUtilXpathNotUniqueException(xPath + " cannot be found. ");
+			throw new XpathException(xPath + " cannot be found. ");
 		}else {
 			Node node = nodeList.item(0);
 			nodeText = getNodeText(node);

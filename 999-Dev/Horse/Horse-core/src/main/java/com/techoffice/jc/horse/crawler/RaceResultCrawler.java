@@ -28,8 +28,8 @@ import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 @Component
 public class RaceResultCrawler {
@@ -48,41 +48,46 @@ public class RaceResultCrawler {
         return xml;
 	}
 	
-	public List<RaceDate> retrieveRaceDateList() throws XPathExpressionException, XmlUtilDocumentConversionException {
+	public List<RaceDate> retrieveRaceDateList() throws XpathException, ParseException {
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "//*[@id='raceDateSelect']");
-		
 		Node dateSelect = dateSelectList.item(0);
-		NodeList raceDatesNodeList = dateSelect.getChildNodes();
-		for (int i=0; i<raceDatesNodeList.getLength(); i++){
-			Node raceDateNode = raceDatesNodeList.item(i);
-			if("option".equals(raceDateNode.getNodeName())){
-				RaceDate raceDate = new RaceDate();
-				String raceDateValue = LOCATION + raceDateNode.getAttributes().getNamedItem("value").getNodeValue();
-				String raceType = raceDateValue.split("/")[6];
-				raceDate.setRaceDate(raceDateValue);
-				raceDate.setRaceType(raceType);
-				raceDateList.add(raceDate);
+		if (dateSelect != null){
+			NodeList raceDatesNodeList = dateSelect.getChildNodes();
+			for (int i=0; i<raceDatesNodeList.getLength(); i++){
+				Node raceDateNode = raceDatesNodeList.item(i);
+				if("option".equals(raceDateNode.getNodeName())){
+					RaceDate raceDate = new RaceDate();
+					String raceDateUrl = LOCATION + raceDateNode.getAttributes().getNamedItem("value").getNodeValue();
+					String raceType = raceDateUrl.split("/")[6];
+					String raceDateStr = raceDateUrl.split("/")[7];
+					Date raceDateValue = RaceResultHelper.getRaceDate(raceDateStr);
+					String venue = raceDateUrl.split("/")[8];
+					raceDate.setUrl(raceDateUrl);
+					raceDate.setRaceType(raceType);
+					raceDate.setRaceDate(raceDateValue);
+					raceDate.setVenue(venue);
+					raceDateList.add(raceDate);
+				}
 			}
 		}
 		return raceDateList;
 	}
 	
-	public List<RaceResultQueue> getRaceResultQueueList(String location) throws XPathExpressionException, XmlUtilDocumentConversionException, ParseException{
+	public List<RaceResultQueue> getRaceResultQueueList(String location) throws XpathException, ParseException {
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);
-		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[1]/td");
+		NodeList raceNumNodeList = XmlUtil.evaluateXpath(xml, "//*[@id='results']/div[2]/table/tbody/tr[1]/td");
 		for (int i =0; i<raceNumNodeList.getLength() - 1; i++){
 			Node raceNumTdNode = raceNumNodeList.item(i);
-			if (raceNumTdNode.getChildNodes().getLength() > 1){
+			if (raceNumTdNode.getChildNodes().getLength() >= 1){
 				// The first node is #Text
-				Node raceNumNode = raceNumTdNode.getChildNodes().item(1);
+				Node raceNumNode = raceNumTdNode.getChildNodes().item(0);
 				if ("a".equals(raceNumNode.getNodeName())){
 					String queueLocation = raceNumNode.getAttributes().getNamedItem("href").getNodeValue();
 					log.info(queueLocation);
-
 					String[] locationArr = queueLocation.split("/");
 					Date raceDate = RaceResultHelper.getRaceDate(locationArr[7]);
 					String raceType = locationArr[6];
@@ -101,7 +106,7 @@ public class RaceResultCrawler {
 		return raceNumList;
 	}
 	
-	public RaceResult getRaceResult(String location) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
+	public RaceResult getRaceResult(String location) throws XpathException, ParseException {
 		String xml = retrieveXml(location);
 		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);

@@ -19,6 +19,7 @@ public class SpecialStringUtil {
 		String newStr = removeQuestionMark(str);
 		newStr = replaceNewLineToSpace(newStr);
 		newStr = doubleSpaceToSingle(newStr);
+		newStr = newStr.trim();
 		return newStr;
 	}
 	
@@ -27,4 +28,14 @@ public class SpecialStringUtil {
 		return newStr;
 	}
 	
+	public static String removeIllegalXml(String xml){
+		String xml10pattern = "[^"
+                + "\u0009\r\n"
+                + "\u0020-\uD7FF"
+                + "\uE000-\uFFFD"
+                + "\ud800\udc00-\udbff\udfff"
+                + "]";
+		xml = xml.replaceAll(xml10pattern, "");
+		return xml;
+	}
 }

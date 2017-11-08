@@ -12,8 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.Version;
 
 @Entity
 @Table(name="RACE_RESULT")
@@ -22,6 +21,9 @@ public class RaceResult {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
+	@Version
+	private int version;
 	
 	@Column(name="LOCATION")
 	private String location;

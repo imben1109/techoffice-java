@@ -19,6 +19,6 @@ public class PojoServiceTest {
 	
 	@Test
 	public void generate() throws JClassAlreadyExistsException, IOException{
-		pojoService.generate("TEST");
+		pojoService.generate("", "TEST");
 	}
 }

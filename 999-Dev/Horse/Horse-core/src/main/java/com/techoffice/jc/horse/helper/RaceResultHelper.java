@@ -19,12 +19,12 @@ import org.xml.sax.SAXException;
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilDocumentConversionException;
-import com.techoffice.util.exception.XmlUtilXpathNotUniqueException;
+import com.techoffice.util.exception.DocumentConversionException;
+import com.techoffice.util.exception.XpathException;
 
 public class RaceResultHelper {
 	
-	public static RaceResult getRaceResult(String xml, String location) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilXpathNotUniqueException, ParseException, XmlUtilDocumentConversionException{
+	public static RaceResult getRaceResult(String xml, String location) throws XpathException, ParseException{
 		RaceResult raceResult = new RaceResult();
 		raceResult.setLocation(location);
 		if (location.split("/").length > 9 ){
@@ -34,18 +34,18 @@ public class RaceResultHelper {
 			raceResult.setRaceNum("1");
 		}
 		
-		String raceMeetingStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody/tr/td[1]");
+		String raceMeetingStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[3]/table/tbody/tr/td[1]");
 		raceMeetingStr = raceMeetingStr.replace("Race Meeting: ", "");
 		
 		String[] raceMeetingStrArr = raceMeetingStr.split(" ");
-		SimpleDateFormat raceDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat raceDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date raceDate = raceDateFormat.parse(raceMeetingStrArr[0]);
 		raceResult.setRaceDate(raceDate);
 		
 		String venue = raceMeetingStrArr[1];
 		raceResult.setVenue(venue);
 		
-		String raceClassStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[1]/td[1]");
+		String raceClassStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[1]/td[1]");
 		
 		String[] raceClassStrArr = raceClassStr.split(" - ");
 		
@@ -60,32 +60,32 @@ public class RaceResultHelper {
 		}
 
 		
-		String goingStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[1]/td[3]");
+		String goingStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[1]/td[3]");
 		raceResult.setGoing(goingStr);
 		
-		String raceNameStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[2]/td[1]");
+		String raceNameStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[2]/td[1]");
 		raceResult.setRaceName(raceNameStr);
 		
-		String courseStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[2]/td[3]");
+		String courseStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[2]/td[3]");
 		raceResult.setCourse(courseStr);
 		
-		String rewardAndTimeStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[3]");
+		String rewardAndTimeStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[3]");
 		String[] rewardAndTimeStrArr = rewardAndTimeStr.split("Time : ");
 		String reward = rewardAndTimeStrArr[0];
 		raceResult.setReward(reward);
 		String raceTime = rewardAndTimeStrArr[1];
 		raceResult.setRaceTime(raceTime);
 		
-		String sectionalTimeStr = XmlUtil.getXpathText(xml, "/html/body/div[2]/div[2]/div[2]/div[5]/div[2]/table/tbody/tr[4]");
+		String sectionalTimeStr = XmlUtil.getXpathText(xml, "//*[@id='results']/div[5]/div[2]/table/tbody/tr[4]");
 		sectionalTimeStr = sectionalTimeStr.replace("Sectional Time : ", "");
 		raceResult.setSectionalTime(sectionalTimeStr);
 		
 		return raceResult;
 	}
 	
-	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, XmlUtilDocumentConversionException{
+	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XpathException {
 		List<RaceResultHorse> raceResultHorseList = new ArrayList<RaceResultHorse>();
-		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "/html/body/div[2]/div[2]/div[2]/div[6]/table/tbody/tr");
+		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "//*[@id='results']/div[6]/table/tbody/tr");
 		for (int i=0; i<raceHorseNodeList.getLength(); i++){
 			Node raceHorseTrNode = raceHorseNodeList.item(i);
 			NodeList raceHorseTdNodeList = raceHorseTrNode.getChildNodes();
@@ -95,7 +95,12 @@ public class RaceResultHelper {
 				if ("td".equals(raceHourseTdNode.getNodeName())){
 					String tdValue = "";
 					if (raceHourseTdNode.getChildNodes().getLength() == 1){
-						tdValue = raceHourseTdNode.getFirstChild().getNodeValue();
+						if (raceHourseTdNode.getFirstChild().getChildNodes() != null &&
+								raceHourseTdNode.getFirstChild().getChildNodes().getLength() == 1){
+							tdValue = XmlUtil.getNodeText(raceHourseTdNode);
+						}else{
+							tdValue = raceHourseTdNode.getFirstChild().getNodeValue();
+						}
 					}else {
 						tdValue = XmlUtil.getNodeText(raceHourseTdNode);
 					}
@@ -114,6 +119,13 @@ public class RaceResultHelper {
 		raceResultHorse.setPlace(tdValueList.get(0));
 		raceResultHorse.setHorseNo(tdValueList.get(1));
 		raceResultHorse.setHorseName(tdValueList.get(2));
+		if (raceResultHorse.getHorseName() != null){
+			String horseName = raceResultHorse.getHorseName();
+			if (horseName.split("\\(").length > 1){
+				String horseId = horseName.split("\\(")[1].replace(")", "");
+				raceResultHorse.setHorseId(horseId);
+			}
+		}
 		raceResultHorse.setJockey(tdValueList.get(3));
 		raceResultHorse.setTrainer(tdValueList.get(4));
 		raceResultHorse.setActualWt(tdValueList.get(5));
@@ -127,7 +139,7 @@ public class RaceResultHelper {
 	}
 	
 	public static Date getRaceDate(String raceDateStr) throws ParseException{
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyymmdd");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
 		Date raceDate = simpleDateFormat.parse(raceDateStr);
 		raceDate = DateUtils.truncate(raceDate, Calendar.DATE);
 		return raceDate;
