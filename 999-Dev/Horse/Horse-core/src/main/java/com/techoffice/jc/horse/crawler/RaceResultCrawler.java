@@ -48,7 +48,7 @@ public class RaceResultCrawler {
         return xml;
 	}
 	
-	public List<RaceDate> retrieveRaceDateList() throws XpathException, ParseException {
+	public List<RaceDate> retrieveRaceDateList() {
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "//*[@id='raceDateSelect']");

@@ -49,7 +49,7 @@ public class XmlUtil {
 	 * @return
 	 * @throws DocumentConversionException
 	 */
-	public static Document convertXmlStrToDocument(String xml) throws DocumentConversionException{
+	public static Document convertXmlStrToDocument(String xml) {
 		Document document = null;
 		try{
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -98,7 +98,7 @@ public class XmlUtil {
 	 * @throws XpathException 
 	 * @throws XPathExpressionException
 	 */
-	public static NodeList evaluateXpath(String xml, String xPath)throws XpathException{
+	public static NodeList evaluateXpath(String xml, String xPath){
 		NodeList nodeList = null;
 		Document doc = null;
 		try {
@@ -125,7 +125,7 @@ public class XmlUtil {
 	 * @throws DocumentConversionException
 	 * @throws XpathException
 	 */
-	public static String getXpathText(String xml, String xPath) throws XpathException {
+	public static String getXpathText(String xml, String xPath) {
 		String nodeText = "";
 		NodeList nodeList = evaluateXpath(xml, xPath);
 		if (nodeList.getLength() > 1){

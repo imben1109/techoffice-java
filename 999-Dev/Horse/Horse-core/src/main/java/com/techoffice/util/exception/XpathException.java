@@ -1,6 +1,6 @@
 package com.techoffice.util.exception;
 
-public class XpathException extends Exception{
+public class XpathException extends RuntimeException{
 
 	private static final long serialVersionUID = 7329008795716981701L;
 

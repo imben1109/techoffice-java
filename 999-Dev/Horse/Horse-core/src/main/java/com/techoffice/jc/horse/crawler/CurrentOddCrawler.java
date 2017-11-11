@@ -26,6 +26,15 @@ import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.DocumentConversionException;
 import com.techoffice.util.exception.XpathException;
 
+/**
+ * Current Odd Crawler 
+ * 
+ * It crawls http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en
+ * 	and retrieve current odd data 
+ * 
+ * @author imben1109
+ *
+ */
 @Component
 public class CurrentOddCrawler {
 	
@@ -33,16 +42,25 @@ public class CurrentOddCrawler {
 
 	public static final String HOST = "http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en";
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public String retrieveXml() {
         return retrieveXml("");
 	}
 	
+	/**
+	 * 
+	 * @param location
+	 * @return
+	 */
 	public String retrieveXml(String location) {
 		String currentUrl = WebDriverUtil.getCurrentUrl(HOST);
 		Map<String, String> params = UrlUtil.getParam(currentUrl);
-		System.out.println(params.get("venue"));
-		System.out.println(params.get("date"));
-		log.info(currentUrl + location);
+		log.info("venue: " + params.get("venue"));
+		log.info("date: " + params.get("date"));
+		log.info("url: " + currentUrl + location);
         String xml = WebDriverUtil.getXml(currentUrl + location);
         return xml;
 	}
@@ -52,7 +70,7 @@ public class CurrentOddCrawler {
 		return xml;
 	}
 
-	public List<String> getRaceNums() throws XpathException {
+	public List<String> getRaceNums() {
 		List<String> raceNums = new ArrayList<String>();
 		String xml = retrieveXml();
 		String xPath = "//*[@id='info_bar']/tbody/tr[2]/td/div/table/tbody/tr/td/a/img";

@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.crawler;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -16,6 +17,8 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
+import com.techoffice.jc.horse.dto.CurrentOdd;
+import com.techoffice.util.BeanUtil;
 import com.techoffice.util.exception.DocumentConversionException;
 import com.techoffice.util.exception.XpathException;
 
@@ -34,12 +37,15 @@ public class CurrentOddCrawlerTest {
 		currentOddCrawler.getRaceNums();		
 	}
 	
-//	@Test
+	@Test
 	public void getHorse() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, DocumentConversionException, XpathException{
-		currentOddCrawler.getCurrentOdd();
+		List<CurrentOdd> currentOddList = currentOddCrawler.getCurrentOdd();
+		for(CurrentOdd currentOdd: currentOddList){
+			System.out.println(BeanUtil.toString(currentOdd));
+		}
 	}
 	
-	@Test
+//	@Test
 	public void run() throws XPathExpressionException, DocumentConversionException, XpathException{
 		currentOddCrawler.run();
 	}

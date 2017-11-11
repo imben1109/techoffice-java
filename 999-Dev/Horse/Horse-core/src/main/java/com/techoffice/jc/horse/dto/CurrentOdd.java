@@ -1,6 +1,7 @@
 package com.techoffice.jc.horse.dto;
 
 public class CurrentOdd {
+	
 	private String horseName;
 	private String draw;
 	private String weight;
@@ -8,6 +9,7 @@ public class CurrentOdd {
 	private String trainer;
 	private String win;
 	private String place;
+	
 	public String getHorseName() {
 		return horseName;
 	}
@@ -51,5 +53,6 @@ public class CurrentOdd {
 		this.place = place;
 	}
 	
+
 	
 }

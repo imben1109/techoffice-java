@@ -1,6 +1,6 @@
 package com.techoffice.util.exception;
 
-public class DocumentConversionException extends Exception{
+public class DocumentConversionException extends RuntimeException{
 	
 	private static final long serialVersionUID = -4228513797924838988L;
 
