@@ -50,8 +50,8 @@ public class CurrentOddHelper {
 					String hrefString = aNode.getAttributes().getNamedItem("href").getNodeValue();
 					String horseId = hrefString.replace("javascript:WACommonTagging('horse');goHorseRecord2('http://www.hkjc.com/english',%20'", "").replace("');", "");
 					String horseNmae= aNode.getChildNodes().item(0).getTextContent();
-					horseFullName = horseNmae + " (" + horseId + ")";
-					currentOdd.setHorseName(horseFullName);
+					currentOdd.setHorseName(horseNmae);
+					currentOdd.setHorseId(horseId);
 				}
 				if (tdNodeSeq == 4){
 					String draw = tdNode.getTextContent();

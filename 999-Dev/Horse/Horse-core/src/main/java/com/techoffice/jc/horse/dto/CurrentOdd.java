@@ -2,6 +2,7 @@ package com.techoffice.jc.horse.dto;
 
 public class CurrentOdd {
 	
+	private String horseId;
 	private String horseName;
 	private String draw;
 	private String weight;
@@ -10,6 +11,12 @@ public class CurrentOdd {
 	private String win;
 	private String place;
 	
+	public String getHorseId(){
+		return horseId;
+	}
+	public void setHorseId(String horseId){
+		this.horseId = horseId;
+	}
 	public String getHorseName() {
 		return horseName;
 	}

@@ -25,7 +25,7 @@ public class CurrentOddCrawlerTest {
 	private HorseAdjTimeDao horseAdjTimeDao;
 	
 //	@Test
-	public void getRaceNums() throws XpathException {
+	public void getRaceNums() {
 		currentOddCrawler.getRaceNums();		
 	}
 	
