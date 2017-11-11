@@ -12,7 +12,6 @@ import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.jc.horse.test.util.JunitAssertUtil;
 import com.techoffice.util.BeanUtil;
-import com.techoffice.util.exception.XpathException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -24,7 +23,7 @@ public class CurrentOddCrawlerTest {
 	@Autowired
 	private HorseAdjTimeDao horseAdjTimeDao;
 	
-//	@Test
+	@Test
 	public void getRaceNums() {
 		currentOddCrawler.getRaceNums();		
 	}
@@ -38,7 +37,7 @@ public class CurrentOddCrawlerTest {
 		}
 	}
 	
-//	@Test
+	@Test
 	public void run() {
 		currentOddCrawler.run();
 	}
