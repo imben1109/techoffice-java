@@ -1,30 +1,20 @@
 package com.techoffice.jc.horse.crawler;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.xpath.XPathExpressionException;
-
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.techoffice.factory.WebDriverFactory;
-import com.techoffice.jc.horse.dao.DrawAccelerateTimeDao;
-import com.techoffice.jc.horse.dao.HorseAdjTimeDao;
 import com.techoffice.jc.horse.dto.CurrentOdd;
 import com.techoffice.jc.horse.helper.CurrentOddHelper;
 import com.techoffice.util.UrlUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.DocumentConversionException;
-import com.techoffice.util.exception.XpathException;
 
 /**
  * Current Odd Crawler 
@@ -83,17 +73,17 @@ public class CurrentOddCrawler {
 		return raceNums;
 	}
 	
-	public List<CurrentOdd> getCurrentOdd() throws XPathExpressionException, DocumentConversionException, XpathException{
+	public List<CurrentOdd> getCurrentOdd() {
 		String xml = retrieveXml();
 		return getOddsList(xml);
 	}
 	
-	public List<CurrentOdd> getCurrentOddByRaceNum(String raceNum) throws XPathExpressionException, DocumentConversionException, XpathException{
+	public List<CurrentOdd> getCurrentOddByRaceNum(String raceNum) {
 		String xml = retrieveXmlByRaceNum(raceNum);
 		return getOddsList(xml);
 	}
 	
-	public void run() throws XPathExpressionException, DocumentConversionException, XpathException{
+	public void run() {
 		List<String> raceNums = this.getRaceNums();
 		for (String raceNum: raceNums){
 			log.info("raceNum" + raceNum);
@@ -101,7 +91,7 @@ public class CurrentOddCrawler {
 		}
 	}
 	
-	public List<CurrentOdd> getOddsList(String xml) throws XPathExpressionException, DocumentConversionException, XpathException {
+	public List<CurrentOdd> getOddsList(String xml) {
 		String xPath = "//*[@id='detailWPTable']/table/tbody/tr";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
 		List<CurrentOdd> oddsList = new ArrayList<CurrentOdd>();
