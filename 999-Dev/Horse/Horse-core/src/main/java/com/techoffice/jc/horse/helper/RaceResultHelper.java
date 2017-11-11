@@ -13,6 +13,7 @@ import org.w3c.dom.NodeList;
 
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.util.DateUtil;
 import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.DateParseException;
 
@@ -32,8 +33,7 @@ public class RaceResultHelper {
 		raceMeetingStr = raceMeetingStr.replace("Race Meeting: ", "");
 		
 		String[] raceMeetingStrArr = raceMeetingStr.split(" ");
-		SimpleDateFormat raceDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		Date raceDate = raceDateFormat.parse(raceMeetingStrArr[0]);
+		Date raceDate = DateUtil.parseTruncateDate(raceMeetingStrArr[0], "dd/MM/yyyy");
 		raceResult.setRaceDate(raceDate);
 		
 		String venue = raceMeetingStrArr[1];
