@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.techoffice.factory.WebDriverFactory;
+import com.techoffice.util.cache.WebDriverUtilRaceResultXmlCache;
+import com.techoffice.util.cache.WebDriverUtilXmlCache;
 
 public class WebDriverUtil {
 	
@@ -18,17 +20,22 @@ public class WebDriverUtil {
 	 * @return xml 
 	 */
 	public static String getXml(String url){
-		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
-		webDriver.get(url);
-		String sourceStr = webDriver.getPageSource();
-		webDriver.quit();
-		org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
-	    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
-	    document.select("script").remove();
-	    document.select("head").remove();
-		String xml = document.html();
-	    String tiddedXml = XmlUtil.tidyXml(xml);
-		return tiddedXml;
+		if (WebDriverUtilXmlCache.get(url) == null){
+			WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
+			webDriver.get(url);
+			String sourceStr = webDriver.getPageSource();
+			webDriver.quit();
+			org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
+		    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
+		    document.select("script").remove();
+		    document.select("head").remove();
+			String xml = document.html();
+		    String tiddedXml = XmlUtil.tidyXml(xml);
+		    WebDriverUtilXmlCache.put(url, tiddedXml);
+		    return tiddedXml;
+		}else {
+			return WebDriverUtilXmlCache.get(url);
+		}
 	}
 	
 	/**
@@ -51,26 +58,30 @@ public class WebDriverUtil {
 	 * @return
 	 */
 	public static String getRaceResultXml(String url) {
-		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
-		webDriver.get(url);
-	    WebDriverWait wait = new WebDriverWait(webDriver, 3);
-	    String sourceStr = "";
-	    try{
-	    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']"))));
-			sourceStr = webDriver.getPageSource();
-	    }catch(NoSuchElementException e){
-	    	e.printStackTrace();
-	    }catch(TimeoutException e){
-	    	e.printStackTrace();
-	    }finally{
-	    	webDriver.quit();
-	    }
-		org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
-	    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
-	    document.select("script").remove();
-	    String xml = document.html();
-	    String tiddedXml = XmlUtil.tidyXml(xml);
-		return tiddedXml;
-
+		if (WebDriverUtilRaceResultXmlCache.get(url) == null){
+			WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
+			webDriver.get(url);
+		    WebDriverWait wait = new WebDriverWait(webDriver, 3);
+		    String sourceStr = "";
+		    try{
+		    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']"))));
+				sourceStr = webDriver.getPageSource();
+		    }catch(NoSuchElementException e){
+		    	e.printStackTrace();
+		    }catch(TimeoutException e){
+		    	e.printStackTrace();
+		    }finally{
+		    	webDriver.quit();
+		    }
+			org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
+		    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
+		    document.select("script").remove();
+		    String xml = document.html();
+		    String tiddedXml = XmlUtil.tidyXml(xml);
+		    WebDriverUtilRaceResultXmlCache.put(url, tiddedXml);
+			return tiddedXml;
+		}else {
+			return WebDriverUtilRaceResultXmlCache.get(url);
+		}
 	}
 }
