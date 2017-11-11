@@ -92,21 +92,20 @@ public class CurrentOddCrawler {
 	}
 	
 	public List<CurrentOdd> getOddsList(String xml) {
-		String xPath = "//*[@id='detailWPTable']/table/tbody/tr";
-		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
-		List<CurrentOdd> oddsList = new ArrayList<CurrentOdd>();
-		for (int i=1; i<nodeList.getLength()-1; i++){
-			Node trNode = nodeList.item(i);
-			CurrentOdd currentOdd = CurrentOddHelper.getNodeInfo(trNode);
-			oddsList.add(currentOdd);
-		}
+		List<CurrentOdd> currentOddList = CurrentOddHelper.getCurrentOddList(xml);
 		String course = CurrentOddHelper.getCourse(xml);
 		String distance = CurrentOddHelper.getDistance(xml);
 		String venue = CurrentOddHelper.getVenue(xml);
-		log.info(venue + " " + distance + " " + course) ;
-		return oddsList;
+		String raceNum = CurrentOddHelper.getRaceNum(xml);
+		String raceDateStr = CurrentOddHelper.getRaceDateStr(xml);
+		for (CurrentOdd currentOdd: currentOddList){
+			currentOdd.setCourse(course);
+			currentOdd.setDistance(distance);
+			currentOdd.setVenue(venue);
+			currentOdd.setRaceNum(raceNum);
+			currentOdd.setRaceDateStr(raceDateStr);
+		}
+		return currentOddList;
 	}
 	
-	
-
 }

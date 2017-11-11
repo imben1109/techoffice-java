@@ -23,7 +23,7 @@ public class CurrentOddCrawlerTest {
 	@Autowired
 	private HorseAdjTimeDao horseAdjTimeDao;
 	
-	@Test
+//	@Test
 	public void getRaceNums() {
 		currentOddCrawler.getRaceNums();		
 	}
@@ -37,7 +37,7 @@ public class CurrentOddCrawlerTest {
 		}
 	}
 	
-	@Test
+//	@Test
 	public void run() {
 		currentOddCrawler.run();
 	}

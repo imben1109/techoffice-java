@@ -1,5 +1,8 @@
 package com.techoffice.jc.horse.helper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -8,13 +11,22 @@ import com.techoffice.util.XmlUtil;
 
 public class CurrentOddHelper {
 	
+	public static String getRaceNum(String xml){
+		String raceNumXpath = "//*[@id='info_bar']/tbody/tr[3]/td/table/tbody/tr/td[1]/strong";
+		String raceNum = XmlUtil.getXpathText(xml, raceNumXpath);
+		return raceNum;
+	}
+	
+	public static String getRaceDateStr(String xml){
+		String raceDateXpath = "//*[@id='trMeetingInfo']/td[2]/table/tbody/tr/td[4]/nobr[1]";
+		String raceDateStr = XmlUtil.getXpathText(xml, raceDateXpath);
+		return raceDateStr;
+	}
+	
 	public static String getVenue(String xml) {
 		String venueXpath = "//*[@id='trMeetingInfo']/td[2]/table/tbody/tr/td[4]/nobr[2]";
 		String venueStr = XmlUtil.getXpathText(xml, venueXpath);
-		if (venueStr.equals("Sha Tin")){
-			return "Tin";
-		}
-		return "";
+		return venueStr;
 	}
 	
 	public static String getCourse(String xml) {
@@ -35,9 +47,20 @@ public class CurrentOddHelper {
 		return distanceStr;
 	}
 	
-	public static CurrentOdd getNodeInfo(Node node){
+	public static List<CurrentOdd> getCurrentOddList(String xml){
+		String horseNodeXpath = "//*[@id='detailWPTable']/table/tbody/tr";
+		NodeList hosreNodeList = XmlUtil.evaluateXpath(xml, horseNodeXpath);
+		List<CurrentOdd> currentOddList = new ArrayList<CurrentOdd>();
+		for (int i=1; i<hosreNodeList.getLength()-1; i++){
+			Node trNode = hosreNodeList.item(i);
+			CurrentOdd currentOdd = CurrentOddHelper.getCurrentOdd(trNode);
+			currentOddList.add(currentOdd);
+		}
+		return currentOddList;
+	}
+	
+	public static CurrentOdd getCurrentOdd(Node node){
 		CurrentOdd currentOdd = new CurrentOdd();
-		String horseFullName = "";
 		int tdNodeSeq = 0;
 		NodeList nodeList = node.getChildNodes();
 		for (int i=0; i<nodeList.getLength(); i++){
