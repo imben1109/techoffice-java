@@ -4,7 +4,7 @@
     <groupId>com.techoffice.example</groupId>
     <artifactId>ServletFilterExample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>TechOfficeTestServletExample</name>
+    <name>ServletFilterRequestInformationExample</name>
     
 	<dependencies>
     	<dependency>
