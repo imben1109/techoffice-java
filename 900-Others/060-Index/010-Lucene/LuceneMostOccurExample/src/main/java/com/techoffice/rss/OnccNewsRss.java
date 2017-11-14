@@ -6,7 +6,9 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,6 +21,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import com.techoffice.util.ChineseUtil;
+import com.techoffice.util.StatisticsMapUtil;
 
 
 public class OnccNewsRss {
@@ -59,9 +62,17 @@ public class OnccNewsRss {
 	}
 	
 	public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException{
+		Map<String, Integer> statisticsMap = new HashMap<String, Integer>();
 		List<String> chineseContentList = getChineseContentList();
 		for (String chineseContent: chineseContentList){
-			System.out.println(chineseContent);
+			List<String> substrList = ChineseUtil.getSubstrList(chineseContent, 2);
+			for (String substr: substrList){
+				StatisticsMapUtil.addCount(statisticsMap, substr);
+			}
 		}
+		
+		String maxKey = StatisticsMapUtil.getMaxCount(statisticsMap);
+		System.out.println(maxKey);
+		System.out.println(statisticsMap.get(maxKey));
 	}
 }
