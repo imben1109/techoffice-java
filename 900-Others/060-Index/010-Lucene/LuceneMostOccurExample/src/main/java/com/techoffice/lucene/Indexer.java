@@ -1,4 +1,4 @@
-package com.techoffice.example;
+package com.techoffice.lucene;
 
 import java.io.BufferedReader;
 import java.io.File;
