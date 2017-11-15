@@ -21,7 +21,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import com.techoffice.util.ChineseUtil;
-import com.techoffice.util.StatisticsMapUtil;
+import com.techoffice.util.MapUtil;
 
 
 public class OnccNewsRss {
@@ -67,12 +67,13 @@ public class OnccNewsRss {
 		for (String chineseContent: chineseContentList){
 			List<String> substrList = ChineseUtil.getSubstrList(chineseContent, 2);
 			for (String substr: substrList){
-				StatisticsMapUtil.addCount(statisticsMap, substr);
+				MapUtil.addCount(statisticsMap, substr);
 			}
 		}
-		
-		String maxKey = StatisticsMapUtil.getMaxCount(statisticsMap);
-		System.out.println(maxKey);
-		System.out.println(statisticsMap.get(maxKey));
+		Map<String, Integer> sortedStatisticsMap = MapUtil.sortByValue(statisticsMap);
+		Map<String, Integer> topStatisticMap = MapUtil.getTop(sortedStatisticsMap, 10);
+		for (Map.Entry<String, Integer> entry: topStatisticMap.entrySet()){
+			System.out.println(entry.getKey() + " " + entry.getValue() );
+		}
 	}
 }
