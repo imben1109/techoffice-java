@@ -61,4 +61,9 @@ public class MapUtil {
         }
         return topMap;
     }
+    
+    public static Map<String, Integer> getTopSortedMap(Map<String, Integer> map, int n ){
+    	Map<String, Integer> sortedMap = sortByValue(map);
+    	return getTop(sortedMap, n);
+    }
 }
