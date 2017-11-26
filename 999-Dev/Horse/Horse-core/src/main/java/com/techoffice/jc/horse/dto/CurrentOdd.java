@@ -1,6 +1,8 @@
 package com.techoffice.jc.horse.dto;
 
 public class CurrentOdd {
+	
+	private String horseId;
 	private String horseName;
 	private String draw;
 	private String weight;
@@ -8,6 +10,18 @@ public class CurrentOdd {
 	private String trainer;
 	private String win;
 	private String place;
+	private String course;
+	private String distance;
+	private String venue;
+	private String raceNum;
+	private String raceDateStr;
+	
+	public String getHorseId(){
+		return horseId;
+	}
+	public void setHorseId(String horseId){
+		this.horseId = horseId;
+	}
 	public String getHorseName() {
 		return horseName;
 	}
@@ -50,6 +64,37 @@ public class CurrentOdd {
 	public void setPlace(String place) {
 		this.place = place;
 	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public String getDistance() {
+		return distance;
+	}
+	public void setDistance(String distance) {
+		this.distance = distance;
+	}
+	public String getVenue() {
+		return venue;
+	}
+	public void setVenue(String venue) {
+		this.venue = venue;
+	}
+	public String getRaceNum() {
+		return raceNum;
+	}
+	public void setRaceNum(String raceNum) {
+		this.raceNum = raceNum;
+	}
+	public String getRaceDateStr() {
+		return raceDateStr;
+	}
+	public void setRaceDateStr(String raceDateStr) {
+		this.raceDateStr = raceDateStr;
+	}
 	
+
 	
 }

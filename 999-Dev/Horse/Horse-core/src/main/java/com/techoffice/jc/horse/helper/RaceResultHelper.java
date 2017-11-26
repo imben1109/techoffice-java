@@ -1,6 +1,5 @@
 package com.techoffice.jc.horse.helper;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -8,23 +7,19 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
 import org.apache.commons.lang3.time.DateUtils;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 import com.techoffice.jc.horse.model.RaceResult;
 import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.util.DateUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.DocumentConversionException;
-import com.techoffice.util.exception.XpathException;
+import com.techoffice.util.exception.DateParseException;
 
 public class RaceResultHelper {
 	
-	public static RaceResult getRaceResult(String xml, String location) throws XpathException, ParseException{
+	public static RaceResult getRaceResult(String xml, String location){
 		RaceResult raceResult = new RaceResult();
 		raceResult.setLocation(location);
 		if (location.split("/").length > 9 ){
@@ -38,8 +33,7 @@ public class RaceResultHelper {
 		raceMeetingStr = raceMeetingStr.replace("Race Meeting: ", "");
 		
 		String[] raceMeetingStrArr = raceMeetingStr.split(" ");
-		SimpleDateFormat raceDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		Date raceDate = raceDateFormat.parse(raceMeetingStrArr[0]);
+		Date raceDate = DateUtil.parseTruncateDate(raceMeetingStrArr[0], "dd/MM/yyyy");
 		raceResult.setRaceDate(raceDate);
 		
 		String venue = raceMeetingStrArr[1];
@@ -83,7 +77,7 @@ public class RaceResultHelper {
 		return raceResult;
 	}
 	
-	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) throws XpathException {
+	public static List<RaceResultHorse> getRaceResultHorseList(String xml, RaceResult raceResult) {
 		List<RaceResultHorse> raceResultHorseList = new ArrayList<RaceResultHorse>();
 		NodeList raceHorseNodeList = XmlUtil.evaluateXpath(xml, "//*[@id='results']/div[6]/table/tbody/tr");
 		for (int i=0; i<raceHorseNodeList.getLength(); i++){
@@ -138,10 +132,16 @@ public class RaceResultHelper {
 		return raceResultHorse;
 	}
 	
-	public static Date getRaceDate(String raceDateStr) throws ParseException{
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-		Date raceDate = simpleDateFormat.parse(raceDateStr);
-		raceDate = DateUtils.truncate(raceDate, Calendar.DATE);
-		return raceDate;
+	public static Date getRaceDate(String raceDateStr) {
+		String pattern = "yyyyMMdd";
+		try {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+			Date raceDate = simpleDateFormat.parse(raceDateStr);
+			raceDate = DateUtils.truncate(raceDate, Calendar.DATE);
+			return raceDate;
+
+		} catch (ParseException e) {
+			throw new DateParseException("Fails to pase date: " + raceDateStr + " by pattern: " + pattern , e);
+		}
 	}
 }

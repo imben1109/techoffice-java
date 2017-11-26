@@ -61,7 +61,7 @@ public class RaceDateService {
 	 * @throws ParseException 
 	 */
 	@Transactional
-	public Map<String, Integer> updateRaceDateList() throws XpathException, ParseException  {
+	public Map<String, Integer> updateRaceDateList()   {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int count = 0; 
 		List<RaceDate> hkjcRaceDateList = raceResultCrawler.retrieveRaceDateList();
