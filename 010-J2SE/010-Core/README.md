@@ -21,3 +21,4 @@ It would cover Java Base Library Example
 
 # Reference
 * http://docs.oracle.com/javase/8/docs/index.html
+* https://docs.oracle.com/javase/tutorial/
