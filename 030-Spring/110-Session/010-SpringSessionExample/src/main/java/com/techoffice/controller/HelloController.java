@@ -1,4 +1,4 @@
-package com.ittechoffice.example.springmvc.controller;
+package com.techoffice.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
