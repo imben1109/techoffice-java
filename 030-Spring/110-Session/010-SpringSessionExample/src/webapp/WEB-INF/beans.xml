@@ -1,0 +1,61 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+   http://www.springframework.org/schema/mvc
+   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+   http://www.springframework.org/schema/jdbc 
+   http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.ittechoffice.example.springmvc.controller" />
+
+	<mvc:annotation-driven />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean class="org.springframework.session.jdbc.config.annotation.web.http.JdbcHttpSessionConfiguration"/>
+
+	<!--  
+	<jdbc:embedded-database id="dataSource" database-name="testdb" type="H2">
+		<jdbc:script location="classpath:org/springframework/session/jdbc/schema-h2.sql"/>
+	</jdbc:embedded-database>
+	-->
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:~/test"/>
+        <property name="username" value="sa"/>
+        <property name="password" value=""/>
+    </bean>
+	
+	<bean id="dbInit" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+		<property name="scripts">
+			<list>
+				<value>classpath:org/springframework/session/jdbc/schema-h2.sql</value>
+			</list>
+		</property>
+		<property name="continueOnError" value="true"/>
+	</bean>
+	
+	
+	<bean id="startupScripts" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="databasePopulator"><ref bean="dbInit"/></property>
+	</bean>
+
+	<bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+
+</beans>
