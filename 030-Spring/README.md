@@ -14,6 +14,8 @@ Besides Spring Framework, there are modules developed on top of spring framework
 * Batch
 * Data
 * Shell
+* Session
+* Cloud
 
 # Example
 
