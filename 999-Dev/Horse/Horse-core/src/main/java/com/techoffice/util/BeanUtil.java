@@ -25,7 +25,6 @@ public class BeanUtil {
 	 */
 	public static String toString(Object bean){
 		String toStringResult = "";
-		toStringResult = "Class:" + bean.getClass().toGenericString() + " ";
 		PropertyDescriptor[] propertyDescriptors = PropertyUtils.getPropertyDescriptors(bean);
 		for (int i=0; i<propertyDescriptors.length; i++){
 			PropertyDescriptor propertyDescriptor = propertyDescriptors[i];

@@ -65,12 +65,28 @@ public class RaceResultHorseDao {
 		return query.getResultList();
 	}
 	
+	/**
+	 * List By Large Distance 
+	 * 
+	 * Large Distance means the distance more than or equal to 2 horse distance.
+	 * 
+	 * @return List of Race Result Horse
+	 */
 	@SuppressWarnings("unchecked")
 	@Transactional
-	public List<RaceResultHorse> listWithLargeDistance(){
+	public List<RaceResultHorse> listByLargeDistance(){
 		Query query = em.createNativeQuery("select * from RACE_RESULT_HORSE where place = '1' and race_result_id in (select race_result_id from RACE_RESULT_HORSE where place = '2' and lbw not in ('N', 'SH', 'NOSE', 'HD', '1', '1/2', '3/4', '1-1/2', '1-1/4', '1-3/4'))", 
 				RaceResultHorse.class);
 		return query.getResultList();
-
+	}
+	
+	public List<RaceResultHorse> listByPlaceOne(){
+		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse Where place = '1' order by raceResult.raceDate desc", RaceResultHorse.class);
+		return query.getResultList();
+	}
+	
+	public List<RaceResultHorse> listByPlaceOneTwoThree(){
+		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse Where place in ('1', '2', '3') order by raceResult.raceDate desc", RaceResultHorse.class);
+		return query.getResultList();
 	}
 }

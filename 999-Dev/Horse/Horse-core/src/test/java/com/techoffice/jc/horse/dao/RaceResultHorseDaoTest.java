@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.jc.horse.model.helper.RaceResultHorseHelper;
 import com.techoffice.util.BeanUtil;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,10 +45,30 @@ public class RaceResultHorseDaoTest {
 	@Test
 	@Transactional
 	public void test(){
-		List<RaceResultHorse> horseWithLargeDistanceList = raceResultHorseDao.listWithLargeDistance();
+		int count = 0;
+		int win = 0;
+		int loss = 0;
+		int place = 0;
+		List<RaceResultHorse> horseWithLargeDistanceList = raceResultHorseDao.listByPlaceOneTwoThree();
 		for (RaceResultHorse horseWithLargeDistance: horseWithLargeDistanceList){
 			List<RaceResultHorse> raceResultHorseList = raceResultHorseDao.listByHorseName(horseWithLargeDistance.getHorseName());
-			
+			RaceResultHorse nextRaceHorse = RaceResultHorseHelper.getNextRaceResultHorse(horseWithLargeDistance, raceResultHorseList);
+			if (nextRaceHorse != null){
+				count++;
+				if (nextRaceHorse.getPlace().equals("1")){
+					win++;
+				}
+				if (nextRaceHorse.getPlace().equals("1") ||
+						nextRaceHorse.getPlace().equals("2") ||
+						nextRaceHorse.getPlace().equals("3")){
+					place ++;
+				}else {
+					loss++;
+				}
+			}else {
+//				log.info("No Next Race Horse for " + BeanUtil.toString(horseWithLargeDistance));
+			}
 		}
+		log.info("Total: " + count + " Win:" + win + "Place: " + place + " Loss: " + loss);
 	}
 }

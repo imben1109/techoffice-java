@@ -95,7 +95,7 @@ public class RaceResultQueueService {
 	 * @throws ParseException
 	 */
 	@Transactional
-	public int updateResultQueuesByUrl(String url) throws XpathException, ParseException {
+	public int updateResultQueuesByUrl(String url)  {
 		int raceResultCount = 0;
 		List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(url);
 		log.info("Number of Race Result Queues of " + url + ": " + raceResultQueueList.size());

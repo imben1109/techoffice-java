@@ -157,4 +157,12 @@ public class RaceResultHorse {
 		this.raceResult = raceResult;
 	}
 	
+	public boolean equal(RaceResultHorse toCompare){
+		if (toCompare != null){
+			if (toCompare.getId() == this.getId()){
+				return true;
+			}
+		}
+		return false;
+	}
 }
