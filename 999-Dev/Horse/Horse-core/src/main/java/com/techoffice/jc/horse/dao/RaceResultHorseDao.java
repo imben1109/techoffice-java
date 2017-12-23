@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
@@ -55,6 +56,21 @@ public class RaceResultHorseDao {
 		TypedQuery<RaceResultHorse> query = em.createQuery("From RaceResultHorse Where horseName = :horseName order by raceResult.raceDate desc", RaceResultHorse.class);
 		query.setParameter("horseName", horseName);
 		return query.getResultList();	
-		
+	}
+	
+	@Transactional
+	public List<String> getHorseNameList(){
+		TypedQuery<String> query = em.createQuery("SELECT DISTINCT horseName FROM RaceResultHorse", 
+				String.class);
+		return query.getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<RaceResultHorse> listWithLargeDistance(){
+		Query query = em.createNativeQuery("select * from RACE_RESULT_HORSE where place = '1' and race_result_id in (select race_result_id from RACE_RESULT_HORSE where place = '2' and lbw not in ('N', 'SH', 'NOSE', 'HD', '1', '1/2', '3/4', '1-1/2', '1-1/4', '1-3/4'))", 
+				RaceResultHorse.class);
+		return query.getResultList();
+
 	}
 }
