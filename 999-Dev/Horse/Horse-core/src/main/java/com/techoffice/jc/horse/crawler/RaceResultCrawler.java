@@ -20,8 +20,15 @@ import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
+import com.techoffice.util.cache.WebDriverUtilRedirectUrlCache;
 import com.techoffice.util.exception.XpathException;
 
+/**
+ * Race Result Crawler
+ * 
+ * @author TechOffice
+ *
+ */
 @Component
 public class RaceResultCrawler {
 	
@@ -29,6 +36,7 @@ public class RaceResultCrawler {
 
 	public static final String HOST = "http://racing.hkjc.com";
 	public static final String LOCATION = "/racing/Info/meeting/Results/English/";	
+	
 	
 	public String retrieveXml() {
         return retrieveXml(LOCATION);
@@ -39,7 +47,12 @@ public class RaceResultCrawler {
         return xml;
 	}
 	
-	public List<RaceDate> retrieveRaceDateList() {
+	/**
+	 * Get Race Date List
+	 * 
+	 * @return List of Race Date
+	 */
+	public List<RaceDate> getRaceDateList() {
 		List<RaceDate> raceDateList = new ArrayList<RaceDate>();		
 		String xml = retrieveXml();
 		NodeList dateSelectList = XmlUtil.evaluateXpath(xml, "//*[@id='raceDateSelect']");
@@ -66,7 +79,13 @@ public class RaceResultCrawler {
 		return raceDateList;
 	}
 	
-	public List<RaceResultQueue> getRaceResultQueueList(String location) throws XpathException, ParseException {
+	/**
+	 * Get Basic Race Information of Specified URL which would used to retrieve detail race result information.
+	 * 
+	 * @param location
+	 * @return List of Race Result Queue for retrieve detail race information later.
+	 */
+	public List<RaceResultQueue> getRaceResultQueueList(String location) {
 		List<RaceResultQueue> raceNumList = new ArrayList<RaceResultQueue>();
 		log.info("Retrieving XML from {}", location);
 		String xml = retrieveXml(location);
@@ -97,7 +116,13 @@ public class RaceResultCrawler {
 		return raceNumList;
 	}
 	
-	public RaceResult getRaceResult(String location) throws XpathException, ParseException {
+	/**
+	 * Get Race Result with Race Result Horse List 
+	 * 
+	 * @param location
+	 * @return Race Result with Race Result Horse List 
+	 */
+	public RaceResult getRaceResult(String location) {
 		String xml = retrieveXml(location);
 		RaceResult raceResult = RaceResultHelper.getRaceResult(xml, location);
 		List<RaceResultHorse> raceResultHorseList = RaceResultHelper.getRaceResultHorseList(xml, raceResult);

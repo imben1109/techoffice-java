@@ -1,13 +1,6 @@
 package com.techoffice.jc.horse.crawler;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.text.ParseException;
 import java.util.List;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,19 +9,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.techoffice.jc.horse.crawler.RaceResultCrawler;
-import com.techoffice.jc.horse.dao.RaceDateDao;
-import com.techoffice.jc.horse.dao.RaceResultDao;
-import com.techoffice.jc.horse.dao.RaceResultHorseDao;
-import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceDate;
-import com.techoffice.jc.horse.service.RaceResultQueueService;
-import com.techoffice.jc.horse.service.RaceResultQueueBatchService;
-import com.techoffice.util.exception.DocumentConversionException;
-import com.techoffice.util.exception.XpathException;
+import com.techoffice.jc.horse.model.RaceResult;
+import com.techoffice.jc.horse.model.RaceResultHorse;
+import com.techoffice.jc.horse.model.RaceResultQueue;
+import com.techoffice.util.BeanUtil;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -40,16 +26,46 @@ public class RaceResultCrawlerTest {
 	private RaceResultCrawler raceResultCrawler;
 	
 //	@Test
-	public void retrieveXml() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
+	public void retrieveXml() {
 		String xml = raceResultCrawler.retrieveXml();
 		log.info(xml);
 	}
 	
-	@Test
-	public void retrieveRaceDateList() throws XpathException, ParseException {
-		List<RaceDate> raceDateList = raceResultCrawler.retrieveRaceDateList();
+//	@Test
+	public void retrieveRaceDateList() {
+		List<RaceDate> raceDateList = raceResultCrawler.getRaceDateList();
 		for(RaceDate raceDate: raceDateList){
 			log.info(raceDate.getUrl());
+		}
+	}
+	
+//	@Test
+	public void getRaceResultQueueList() {
+		List<RaceDate> raceDateList = raceResultCrawler.getRaceDateList();
+		if (raceDateList.size() > 0){
+			RaceDate raceDate = raceDateList.get(0);
+			List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(raceDate.getUrl());
+			for (RaceResultQueue raceResultQueue: raceResultQueueList){
+				log.info(BeanUtil.toString(raceResultQueue));
+			}
+		}
+	} 
+	
+	@Test
+	public void getRaceResult(){
+		List<RaceDate> raceDateList = raceResultCrawler.getRaceDateList();
+		if (raceDateList.size() > 0){
+			RaceDate raceDate = raceDateList.get(0);
+			List<RaceResultQueue> raceResultQueueList = raceResultCrawler.getRaceResultQueueList(raceDate.getUrl());
+			if (raceResultQueueList.size() > 0){
+				RaceResultQueue raceResultQueue = raceResultQueueList.get(0);
+				RaceResult raceResult = raceResultCrawler.getRaceResult(raceResultQueue.getLocation());
+				log.info(BeanUtil.toString(raceResult));
+				List<RaceResultHorse> raceResultHorseList = raceResult.getRaceResultHorseList();
+				for (RaceResultHorse raceResultHorse: raceResultHorseList){
+					log.info(BeanUtil.toString(raceResultHorse));
+				}
+			}
 		}
 	}
 	

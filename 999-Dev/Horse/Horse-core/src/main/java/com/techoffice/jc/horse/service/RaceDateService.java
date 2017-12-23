@@ -64,7 +64,7 @@ public class RaceDateService {
 	public Map<String, Integer> updateRaceDateList()   {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		int count = 0; 
-		List<RaceDate> hkjcRaceDateList = raceResultCrawler.retrieveRaceDateList();
+		List<RaceDate> hkjcRaceDateList = raceResultCrawler.getRaceDateList();
 		for (RaceDate newRaceDate: hkjcRaceDateList){
 			RaceDate raceDate = raceDateDao.getUrl(newRaceDate.getUrl());
 			if (raceDate == null){

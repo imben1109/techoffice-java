@@ -46,12 +46,12 @@ public class CurrentOddCrawler {
 	 * @return
 	 */
 	public String retrieveXml(String location) {
-		String currentUrl = WebDriverUtil.getCurrentUrl(HOST);
-		Map<String, String> params = UrlUtil.getGetParamMap(currentUrl);
+		String redirectUrl = WebDriverUtil.getRedirectUrl(HOST);
+		Map<String, String> params = UrlUtil.getGetParamMap(redirectUrl);
 		log.info("venue: " + params.get("venue"));
 		log.info("date: " + params.get("date"));
-		log.info("url: " + currentUrl + location);
-        String xml = WebDriverUtil.getXml(currentUrl + location);
+		log.info("url: " + redirectUrl + location);
+        String xml = WebDriverUtil.getXml(redirectUrl + location);
         return xml;
 	}
 	

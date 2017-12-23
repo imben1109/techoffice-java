@@ -7,13 +7,17 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.techoffice.factory.WebDriverFactory;
+import com.techoffice.util.cache.WebDriverUtilRedirectUrlCache;
 import com.techoffice.util.cache.WebDriverUtilXmlCache;
 import com.techoffice.util.exception.WebDriverUtilException;
 
 /**
  * Web Driver Utility
  * 
- * It support cache (WebDriverUtilXmlCache) for improving performance. 
+ * It support cache for improving performance. 
+ * 
+ * WebDriverUtilXmlCache would be used for cache of XML content of specified url
+ * WebDriverUtilRedirectUrlCache  would be used for cache of redirected url of specified url.
  * 
  * @author TechOffice
  *
@@ -79,17 +83,22 @@ public class WebDriverUtil {
 	/**
 	 * Get the redirect url
 	 * 
+	 * It support cache (WebDriverUtilRedirectUrlCache)for improving performance 
+	 * 
 	 * @param url
 	 * @return redirected url
 	 */
-	public static String getCurrentUrl(String url){
-		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
-		webDriver.get(url);
-		String currentUrl = webDriver.getCurrentUrl();
-		webDriver.close();
-		webDriver.quit();
-		return currentUrl;
+	public static String getRedirectUrl(String url){
+		if (WebDriverUtilRedirectUrlCache.get(url) == null){
+			WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
+			webDriver.get(url);
+			String redirectUrl = webDriver.getCurrentUrl();
+			webDriver.close();
+			webDriver.quit();
+			return redirectUrl;
+		}else {
+			return WebDriverUtilRedirectUrlCache.get(url);
+		}
 	}
-	
 	
 }
