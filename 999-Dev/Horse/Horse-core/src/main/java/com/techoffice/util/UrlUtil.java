@@ -4,9 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+/**
+ * URL Utility
+ * 
+ * @author TechOffice
+ *
+ */
 public class UrlUtil {
 	
-	public static Map<String, String> getParam(String url){
+	/**
+	 * Get Param Map from URL
+	 * 
+	 * The Get Param following Url by "?"
+	 * 
+	 * @param url
+	 * @return Map of Get Param 
+	 */
+	public static Map<String, String> getGetParamMap(String url){
 		Map<String, String> param = new HashMap<String, String>();
 		if (containParam(url)){
 			String[] urlArr = url.split(Pattern.quote("?"));

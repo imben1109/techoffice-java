@@ -1,5 +1,6 @@
 package com.techoffice.jc.horse.dto;
 
+
 public class CurrentOdd {
 	
 	private String horseId;

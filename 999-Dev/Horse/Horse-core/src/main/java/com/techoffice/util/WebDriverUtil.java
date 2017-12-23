@@ -1,38 +1,76 @@
 package com.techoffice.util;
 
 import org.jsoup.Jsoup;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.techoffice.factory.WebDriverFactory;
-import com.techoffice.util.cache.WebDriverUtilRaceResultXmlCache;
 import com.techoffice.util.cache.WebDriverUtilXmlCache;
+import com.techoffice.util.exception.WebDriverUtilException;
 
+/**
+ * Web Driver Utility
+ * 
+ * It support cache (WebDriverUtilXmlCache) for improving performance. 
+ * 
+ * @author TechOffice
+ *
+ */
 public class WebDriverUtil {
 	
 	/**
-	 * Get XML
-	 * @param url
-	 * @return xml 
+	 * Get XML Content 
+	 * 
+	 * It support cache for improving performance.
+	 * The XML content would be cached in WebDriverUtilXmlCache.
+	 * 
+	 * @param url for retrieving xml content
+	 * @return Xml content of url
 	 */
 	public static String getXml(String url){
+		return getXml(url, null);
+	}
+	
+	/**
+	 * Get XML Content 
+	 * 
+	 * It support cache for improving performance.
+	 * The XML content would be cached in WebDriverUtilXmlCache.
+	 * 
+	 * @param url for retrieving xml content
+	 * @param expectedCondition Expected Condition for Web Client to wait.
+	 * 
+	 * @return Xml content of url
+	 */
+	public static String getXml(String url, ExpectedCondition<WebElement> expectedCondition) {
 		if (WebDriverUtilXmlCache.get(url) == null){
 			WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
 			webDriver.get(url);
-			String sourceStr = webDriver.getPageSource();
-			webDriver.quit();
+		    WebDriverWait wait = new WebDriverWait(webDriver, 3);
+		    String sourceStr = "";
+		    if (expectedCondition != null){
+		    	try{
+		    		wait.until(expectedCondition);
+		    		sourceStr = webDriver.getPageSource();
+		    	}catch(Exception e){
+		    		throw new WebDriverUtilException(e);
+		    	}finally{
+		    		webDriver.quit();
+		    	}
+		    }else {
+		    	sourceStr = webDriver.getPageSource();
+				webDriver.quit();
+		    }
 			org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
 		    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
 		    document.select("script").remove();
 		    document.select("head").remove();
-			String xml = document.html();
+		    String xml = document.html();
 		    String tiddedXml = XmlUtil.tidyXml(xml);
 		    WebDriverUtilXmlCache.put(url, tiddedXml);
-		    return tiddedXml;
+			return tiddedXml;
 		}else {
 			return WebDriverUtilXmlCache.get(url);
 		}
@@ -40,8 +78,9 @@ public class WebDriverUtil {
 	
 	/**
 	 * Get the redirect url
+	 * 
 	 * @param url
-	 * @return url
+	 * @return redirected url
 	 */
 	public static String getCurrentUrl(String url){
 		WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
@@ -52,36 +91,5 @@ public class WebDriverUtil {
 		return currentUrl;
 	}
 	
-	/**
-	 * Get Source Code by Web Driver (PhantomJS) and convert into xhtml
-	 * @param url
-	 * @return
-	 */
-	public static String getRaceResultXml(String url) {
-		if (WebDriverUtilRaceResultXmlCache.get(url) == null){
-			WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
-			webDriver.get(url);
-		    WebDriverWait wait = new WebDriverWait(webDriver, 3);
-		    String sourceStr = "";
-		    try{
-		    	wait.until((ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']"))));
-				sourceStr = webDriver.getPageSource();
-		    }catch(NoSuchElementException e){
-		    	e.printStackTrace();
-		    }catch(TimeoutException e){
-		    	e.printStackTrace();
-		    }finally{
-		    	webDriver.quit();
-		    }
-			org.jsoup.nodes.Document document = Jsoup.parse(sourceStr);
-		    document.outputSettings().syntax(org.jsoup.nodes.Document.OutputSettings.Syntax.xml);
-		    document.select("script").remove();
-		    String xml = document.html();
-		    String tiddedXml = XmlUtil.tidyXml(xml);
-		    WebDriverUtilRaceResultXmlCache.put(url, tiddedXml);
-			return tiddedXml;
-		}else {
-			return WebDriverUtilRaceResultXmlCache.get(url);
-		}
-	}
+	
 }

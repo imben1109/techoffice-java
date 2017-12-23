@@ -1,26 +1,18 @@
 package com.techoffice.jc.horse.crawler;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.xpath.XPathExpressionException;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.gargoylesoftware.htmlunit.WebClient;
 import com.techoffice.jc.horse.helper.RaceResultHelper;
 import com.techoffice.jc.horse.model.RaceDate;
 import com.techoffice.jc.horse.model.RaceResult;
@@ -28,7 +20,6 @@ import com.techoffice.jc.horse.model.RaceResultHorse;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.DocumentConversionException;
 import com.techoffice.util.exception.XpathException;
 
 @Component
@@ -44,7 +35,7 @@ public class RaceResultCrawler {
 	}
 	
 	public String retrieveXml(String location) {
-        String xml = WebDriverUtil.getRaceResultXml(HOST + location);
+        String xml = WebDriverUtil.getXml(HOST + location, ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='results']")));
         return xml;
 	}
 	

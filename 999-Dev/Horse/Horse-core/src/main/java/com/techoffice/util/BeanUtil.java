@@ -7,10 +7,22 @@ import org.apache.commons.beanutils.PropertyUtils;
 
 import com.techoffice.jc.horse.dto.CurrentOdd;
 
+/**
+ * Bean Utility
+ * 
+ * @author TechOffice
+ *
+ */
 public class BeanUtil {
 
 	private BeanUtil(){}
 
+	/**
+	 * Convert Bean to String for display
+	 * 
+	 * @param bean
+	 * @return string in format of property name + ":" + property value 
+	 */
 	public static String toString(Object bean){
 		String toStringResult = "";
 		PropertyDescriptor[] propertyDescriptors = PropertyUtils.getPropertyDescriptors(bean);

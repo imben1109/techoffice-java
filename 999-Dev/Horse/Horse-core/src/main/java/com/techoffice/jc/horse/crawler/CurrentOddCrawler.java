@@ -20,8 +20,8 @@ import com.techoffice.util.XmlUtil;
  * Current Odd Crawler 
  * 
  * It crawls http://bet.hkjc.com/racing/pages/odds_wp.aspx?lang=en
- * 	and retrieve current odd data 
- * 
+ * 	and retrieve CurrentOdd data 
+ *  * 
  * @author imben1109
  *
  */
@@ -47,7 +47,7 @@ public class CurrentOddCrawler {
 	 */
 	public String retrieveXml(String location) {
 		String currentUrl = WebDriverUtil.getCurrentUrl(HOST);
-		Map<String, String> params = UrlUtil.getParam(currentUrl);
+		Map<String, String> params = UrlUtil.getGetParamMap(currentUrl);
 		log.info("venue: " + params.get("venue"));
 		log.info("date: " + params.get("date"));
 		log.info("url: " + currentUrl + location);

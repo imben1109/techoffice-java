@@ -9,12 +9,26 @@ import org.apache.commons.lang3.time.DateUtils;
 
 import com.techoffice.util.exception.DateParseException;
 
+/**
+ * Date Utility 
+ * 
+ * @author TechOffice
+ *
+ */
 public class DateUtil {
 
 	private DateUtil(){
 		
 	}
 	
+	/**
+	 * Parse Date and Truncate Time by specified Date String and Pattern
+	 * 
+	 * @param dateStr Date String to Parse
+	 * @param pattern Date Pattern for Date Parsing
+	 * 
+	 * @return Parsed Date
+	 */
 	public static Date parseTruncateDate(String dateStr, String pattern){
 		try {
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
