@@ -21,7 +21,7 @@ public class TopNewsCrawler {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	public void retrieve(){
-		String xml = WebDriverUtil.getXmlScrollDown(URL);
+		String xml = WebDriverUtil.getXml(URL, true);
 		log.info(xml);
 	}
 }

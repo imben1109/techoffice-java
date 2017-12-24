@@ -25,13 +25,13 @@ public class RaceResultCrawlerTest {
 	@Autowired
 	private RaceResultCrawler raceResultCrawler;
 	
-//	@Test
+	@Test
 	public void retrieveXml() {
 		String xml = raceResultCrawler.retrieveXml();
 		log.info(xml);
 	}
 	
-//	@Test
+	@Test
 	public void retrieveRaceDateList() {
 		List<RaceDate> raceDateList = raceResultCrawler.getRaceDateList();
 		for(RaceDate raceDate: raceDateList){
@@ -39,7 +39,7 @@ public class RaceResultCrawlerTest {
 		}
 	}
 	
-//	@Test
+	@Test
 	public void getRaceResultQueueList() {
 		List<RaceDate> raceDateList = raceResultCrawler.getRaceDateList();
 		if (raceDateList.size() > 0){

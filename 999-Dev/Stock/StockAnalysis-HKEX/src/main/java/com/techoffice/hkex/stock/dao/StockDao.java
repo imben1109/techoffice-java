@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,10 +23,9 @@ public class StockDao {
 		return results;
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Transactional
 	public int clear(){
-		Query query = em.createQuery("DELETE FROM Stock");
+		TypedQuery<Integer> query = em.createQuery("DELETE FROM Stock", Integer.class);
 		return query.executeUpdate();
 	}
 	
