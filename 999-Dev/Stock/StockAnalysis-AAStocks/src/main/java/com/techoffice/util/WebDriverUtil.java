@@ -30,6 +30,8 @@ import com.techoffice.util.exception.WebDriverUtilException;
  */
 public class WebDriverUtil {
 	
+	
+	
 	/**
 	 * Get XML Content 
 	 * 
@@ -85,6 +87,9 @@ public class WebDriverUtil {
 		    if (expectedCondition != null){
 		    	try{
 		    		wait.until(expectedCondition);
+		    		if (scrollDown){
+			    		scrollToBottom(webDriver);
+			    	}
 		    		sourceStr = webDriver.getPageSource();
 		    	}catch(Exception e){
 		    		throw new WebDriverUtilException(e);
@@ -92,6 +97,9 @@ public class WebDriverUtil {
 		    		webDriver.quit();
 		    	}
 		    }else {
+		    	if (scrollDown){
+		    		scrollToBottom(webDriver);
+		    	}
 		    	sourceStr = webDriver.getPageSource();
 				webDriver.quit();
 		    }
@@ -108,7 +116,7 @@ public class WebDriverUtil {
 	 * 
 	 * @param webDriver
 	 */
-	public void scrollToBottom(WebDriver webDriver){
+	public static void scrollToBottom(WebDriver webDriver){
 		if (webDriver instanceof JavascriptExecutor){
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) webDriver;
 			Object newscrollTop = jsExecutor.executeScript("return document.body.scrollHeight", "");
@@ -117,7 +125,7 @@ public class WebDriverUtil {
 				scrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
 				jsExecutor.executeScript("window.scrollTo(0,document.body.scrollHeight);", "");
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}			
@@ -126,6 +134,9 @@ public class WebDriverUtil {
 			}
 		}
 	}
+	
+	public static String[] DEFAULT_TAG_TO_REMOVE = new String[] {"script", "style", "head", 
+			"canvas", "svg", "path", "nav", "head", "canvas", "svg", "commodity"};
 	
 	/**
 	 * Get Xml from Source String 
@@ -137,20 +148,10 @@ public class WebDriverUtil {
 		Document document = Jsoup.parse(sourceStr);
 	    document.outputSettings().syntax(Syntax.xml);
 	    document.outputSettings().charset(StandardCharsets.UTF_8);
-	    document.select("script").remove();
-	    document.select("style").remove();
-	    document.select("head").remove();
-	    document.select("canvas").remove();
-	    document.select("svg").remove();
-	    document.select("path").remove();
-	    document.select("nav").remove();
-	    document.select("script").remove();
-	    document.select("style").remove();
-	    document.select("head").remove();
-	    document.select("canvas").remove();
-	    document.select("svg").remove();
-	    document.select("path").remove();
-	    document.select("nav").remove();
+	    for (int i=0; i<DEFAULT_TAG_TO_REMOVE.length; i++){
+	    	String specialTag = DEFAULT_TAG_TO_REMOVE[i];
+	    	document.select(specialTag).remove();
+	    }
 	    String xml = document.html();
 	    String tiddedXml = XmlUtil.tidyXml(xml);
 		return tiddedXml;

@@ -1,6 +1,7 @@
 package com.techoffice.factory;
 
 import java.io.File;
+import java.util.logging.Level;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,7 @@ public class WebDriverFactory {
 	}
 	
 	public static WebDriver getPhantomJSDriver(){
-		WebDriver webDriver = new PhantomJSDriver();
+		PhantomJSDriver webDriver = new PhantomJSDriver();
 		return webDriver;
 	}
 	

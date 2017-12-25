@@ -12,6 +12,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.techoffice.aastock.stock.model.Industry;
+import com.techoffice.util.DateUtil;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
@@ -31,19 +32,18 @@ public class IndustryCrawler {
 	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/industry/industry-performance.aspx";
 		
-	public List<Industry> retrieveIndustryList() throws WebCrawlerException  {
+	public List<Industry> retrieveIndustryList() {
 		List<Industry> industries = new ArrayList<Industry>();
 		String xml = WebDriverUtil.getXml(URL);
 		String xPath = "//*[@id='IndustyMain']/div[3]/div[1]/table/tbody/tr";
-		try{
+		
 			String remarkStatement = XmlUtil.getXpathText(xml, "//*[@id='IndustyMain']/div[3]/div[2]");
 			String updatedDateStatement = remarkStatement.replace("(1) Chg.% is calculated as the average percentage change of stocks in corresponding industries. Information delayed at least 15 minutes. Last Update: ", "");
-			SimpleDateFormat updatedDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm");
-			Date updatedDate = updatedDateFormat.parse(updatedDateStatement);
+			Date updatedDate = DateUtil.parseDate(updatedDateStatement, "yyyy/MM/dd HH:mm");
 			NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xPath);
 			for (int i=1; i<rowNodeList.getLength(); i++){
 				Node rowNode = rowNodeList.item(i);
-				String rowNodeXml = XmlUtil.toXml(rowNode);
+				String rowNodeXml = XmlUtil.covertNodeToXmlString(rowNode);
 				NodeList industryNodeList = XmlUtil.evaluateXpath(rowNodeXml, "//td[1]/table[1]/tbody/tr/td[2]/a");
 				Node industryNode = industryNodeList.item(0);
 				
@@ -68,9 +68,7 @@ public class IndustryCrawler {
 				industry.setAvgPe(avgPe);
 				industries.add(industry);
 			}
-		}catch(Exception e){
-			throw new WebCrawlerException(e);
-		}
+	
 
 		return industries;
 	}

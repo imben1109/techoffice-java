@@ -20,8 +20,8 @@ public class TopNewsCrawler {
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 
-	public void retrieve(){
+	public String retrieve(){
 		String xml = WebDriverUtil.getXml(URL, true);
-		log.info(xml);
+		return xml;
 	}
 }

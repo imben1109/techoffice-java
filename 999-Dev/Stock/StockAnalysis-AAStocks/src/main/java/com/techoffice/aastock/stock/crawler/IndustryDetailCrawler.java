@@ -39,7 +39,7 @@ public class IndustryDetailCrawler {
 			log.info("Number of stock found in this industry [" + industrySymbol +"]: " + rowList.getLength());
 			for (int i=0; i < rowList.getLength(); i++){
 				Node rowNode = rowList.item(i);
-				String rowXml = XmlUtil.toXml(rowNode);
+				String rowXml = XmlUtil.covertNodeToXmlString(rowNode);
 				String name = XmlUtil.getXpathText(rowXml, "//tr/td[1]/div[1]");
 				String symbol = XmlUtil.getXpathText(rowXml, "tr/td[1]/div[2]/div/span[1]");
 				String last = XmlUtil.getXpathText(rowXml, "tr/td[3]");

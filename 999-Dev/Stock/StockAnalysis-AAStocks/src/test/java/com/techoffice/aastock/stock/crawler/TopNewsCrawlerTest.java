@@ -19,6 +19,7 @@ public class TopNewsCrawlerTest {
 
 	@Test
 	public void retrieve(){
-		topNewsCrawler.retrieve();
+		String xml = topNewsCrawler.retrieve();
+		log.info(xml);
 	}
 }
