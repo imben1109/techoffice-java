@@ -16,6 +16,14 @@ import com.techoffice.util.XmlUtil;
 import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 import com.techoffice.yahoo.finance.stock.model.HsiStock;
 
+/**
+ * Yahoo HSI Stock List Crawler 
+ * 
+ * https://hk.finance.yahoo.com/q/cp?s=%5EHSI
+ * 
+ * @author TechOffice
+ *
+ */
 @Component
 public class HsiStockCrawler {
 	

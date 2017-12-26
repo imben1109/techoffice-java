@@ -32,6 +32,11 @@ public class UrlUtil {
 		return param;
 	}
 	
+	/**
+	 * Convert String in "<key1>=<value1>&<key2>=<value2>" into Key Value Map 
+	 * @param str in "<key1>=<value1>&<key2>=<value2>" format 
+	 * @return Map of Key Value Pair
+	 */
 	public static Map<String, String> convertTokenMap(String str){
 		Map<String, String> map = new HashMap<String, String>();
 		String[] tokenPairs= str.split("&");
@@ -49,6 +54,13 @@ public class UrlUtil {
 	}
 	
 
+	
+	/**
+	 * Check if url contain Get Parameter
+	 * 
+	 * @param url
+	 * @return true if contain Get Parameter. Otherwise false.
+	 */
 	public static boolean containParam(String url){
 		if (url.contains("?")){
 			return true;

@@ -39,12 +39,12 @@ public class PriceCrawler {
 	
 	public List<Price> retrieveHistoryPrice(String stockNo) throws IOException, IllegalAccessException, InvocationTargetException  {
 		URL website = new URL(MessageFormat.format(URL, stockNo));
-		ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+		ReadableByteChannel readableByteChannel = Channels.newChannel(website.openStream());
 		File csvFile = File.createTempFile("TECHOFFICE_YAHOO_", ".csv");
 		csvFile.deleteOnExit();
-		FileOutputStream fos = new FileOutputStream(csvFile);
-		fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
-		fos.close();
+		FileOutputStream fileOutputStream = new FileOutputStream(csvFile);
+		fileOutputStream.getChannel().transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
+		fileOutputStream.close();
 		List<Price> prices = convertFileToPriceList(csvFile);
 		return prices;
 	}

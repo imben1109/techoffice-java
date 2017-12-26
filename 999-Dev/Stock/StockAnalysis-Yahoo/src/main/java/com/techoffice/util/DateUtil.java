@@ -57,4 +57,25 @@ public class DateUtil {
 			throw new DateParseException("Fails to parse date: " + dateStr + " by pattern: " + pattern, e); 
 		}
 	}
+	
+	/**
+	 * Format Date to String by specified date pattern
+	 * 
+	 * @param date Date to format
+	 * @param pattern 
+	 * @return Formatted Date
+	 */
+	public static String format(Date date, String pattern){
+		SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+		return dateFormat.format(date);
+	}
+	
+	/**
+	 * Check if date is Today
+	 * @param date to check
+	 * @return true if today, otherwise false
+	 */
+	public static boolean isToday(Date date){
+		return DateUtils.isSameDay(date, new Date());
+	}
 }

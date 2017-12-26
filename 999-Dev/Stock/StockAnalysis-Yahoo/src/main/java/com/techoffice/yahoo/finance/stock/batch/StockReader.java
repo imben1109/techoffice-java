@@ -8,7 +8,7 @@ import org.springframework.batch.item.ItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.techoffice.hkex.csvimport.stock.model.Stock;
-import com.techoffice.util.DateUtils;
+import com.techoffice.util.DateUtil;
 import com.techoffice.yahoo.finance.stock.dao.PriceBatchDao;
 import com.techoffice.yahoo.finance.stock.model.PriceBatch;
 
@@ -35,8 +35,8 @@ public class StockReader implements ItemReader<Stock>{
 			Stock stock = stockList.remove(0);
 			
 			PriceBatch priceBatch = priceBatchDao.get(stock.getStockCode());
-			if (priceBatch != null && priceBatch.getLastExecuted() != null && DateUtils.isToday(priceBatch.getLastExecuted())){
-				log.info("Stock [" + priceBatch.getStockCode() + "] has already updated on " + DateUtils.format(priceBatch.getLastExecuted()));
+			if (priceBatch != null && priceBatch.getLastExecuted() != null && DateUtil.isToday(priceBatch.getLastExecuted())){
+				log.info("Stock [" + priceBatch.getStockCode() + "] has already updated on " + DateUtil.format(priceBatch.getLastExecuted(), "yyyy-MM-dd hh:mm:ss"));
 				return read();
 			}
 			
