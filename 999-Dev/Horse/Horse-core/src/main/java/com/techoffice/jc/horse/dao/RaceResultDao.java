@@ -44,6 +44,7 @@ public class RaceResultDao {
 		return raceResult;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Transactional
 	public List<String> listVenue(){
 		List<String> resultList = new ArrayList<String>();

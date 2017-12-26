@@ -7,10 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.techoffice.jc.horse.crawler.RaceResultCrawler;
-import com.techoffice.jc.horse.dao.RaceResultDao;
-import com.techoffice.jc.horse.dao.RaceResultHorseDao;
-import com.techoffice.jc.horse.dao.RaceResultQueueDao;
 import com.techoffice.jc.horse.model.RaceResultQueue;
 
 @Service

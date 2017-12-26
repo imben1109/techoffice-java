@@ -1,13 +1,11 @@
 package com.techoffice.jc.horse.service;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.slf4j.Logger;
@@ -18,7 +16,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.xml.sax.SAXException;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.jc.horse.crawler.RaceResultCrawler;
 import com.techoffice.jc.horse.dao.RaceResultDao;
 import com.techoffice.jc.horse.dao.RaceResultHorseDao;

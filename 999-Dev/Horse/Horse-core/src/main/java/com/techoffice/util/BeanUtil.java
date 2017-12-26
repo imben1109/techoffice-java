@@ -1,11 +1,8 @@
 package com.techoffice.util;
 
 import java.beans.PropertyDescriptor;
-import java.lang.reflect.InvocationTargetException;
 
 import org.apache.commons.beanutils.PropertyUtils;
-
-import com.techoffice.jc.horse.dto.CurrentOdd;
 
 /**
  * Bean Utility

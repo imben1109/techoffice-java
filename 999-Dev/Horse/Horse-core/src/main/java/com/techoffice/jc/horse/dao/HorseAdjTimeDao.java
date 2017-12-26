@@ -19,6 +19,7 @@ public class HorseAdjTimeDao {
 	@PersistenceContext
 	private EntityManager em;
 	
+	@SuppressWarnings("unchecked")
 	@Transactional
 	public List<CurrentOdd>  getAdjTime(List<CurrentOdd> horseList){
 		String horseQuery = "(";
