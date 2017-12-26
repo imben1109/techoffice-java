@@ -38,24 +38,7 @@ public class PriceBatchService {
 	private PriceDao priceDao;
 	
 	@Autowired
-	@Qualifier("updateHistoryPriceJob")
-	private Job updateHistoryPriceJob;
-
-	@Autowired
 	private JobExplorerService jobExplorerService;
-	
-	public void run() throws PriceBatchJobException {
-		if(jobExplorerService.isJobRunning(updateHistoryPriceJob.getName())){
-			throw new PriceBatchJobException();
-		}
-		try{
-			JobParameters paramerter = new JobParametersBuilder().addDate("date", new Date()).toJobParameters();
-			simpleAsyncJobLauncher.run(updateHistoryPriceJob, paramerter);
-		}catch(Exception e){
-			throw new PriceBatchJobException(e);
-		}
-		
-	}
 	
 	@Transactional
 	public List<PriceBatch> list(){

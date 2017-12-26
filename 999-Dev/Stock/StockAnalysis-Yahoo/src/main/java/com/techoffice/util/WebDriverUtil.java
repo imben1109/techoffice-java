@@ -151,6 +151,7 @@ public class WebDriverUtil {
 	    document.select("svg").remove();
 	    document.select("path").remove();
 	    document.select("nav").remove();
+	    document.select("section").remove();
 	    String xml = document.html();
 	    String tiddedXml = XmlUtil.tidyXml(xml);
 		return tiddedXml;

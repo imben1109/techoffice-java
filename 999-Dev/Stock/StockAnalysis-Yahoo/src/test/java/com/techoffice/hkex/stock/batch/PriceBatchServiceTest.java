@@ -16,9 +16,6 @@ public class PriceBatchServiceTest {
 	@Autowired
 	private PriceBatchService priceBatchService;
 
-	@Test
-	public void run() throws PriceBatchJobException{
-		priceBatchService.run();
-	}
+	
 
 }

@@ -3,8 +3,6 @@ package com.techoffice.yahoo.finance.stock.crawler;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.xpath.XPathExpressionException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -13,7 +11,6 @@ import org.w3c.dom.NodeList;
 
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
 import com.techoffice.yahoo.finance.stock.model.HsiStock;
 
 /**
@@ -36,9 +33,9 @@ public class HsiStockCrawler {
         return xml;
 	}
 	
-	public List<HsiStock> retrieveStockList() throws XPathExpressionException, XmlUtilInvalidDocumentException {
+	public List<HsiStock> retrieveStockList() {
 		List<HsiStock> hsiStockList = new ArrayList<HsiStock>();
-		String xPath = "//*[@id='quote-leaf-comp']/section/section/table/tbody/tr";
+		String xPath = "//*[@id='Col1-0-Components-Proxy']/section/section/div/table/tbody/tr";
 		String xml = retrieveXml();
 		NodeList stockNodeList = XmlUtil.evaluateXpath(xml, xPath);
 		for (int i=1; i<stockNodeList.getLength(); i++){
