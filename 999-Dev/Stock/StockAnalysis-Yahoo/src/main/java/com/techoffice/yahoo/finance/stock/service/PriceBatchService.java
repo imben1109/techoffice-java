@@ -5,12 +5,8 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
-import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.support.SimpleJobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +15,6 @@ import com.techoffice.hkex.csvimport.stock.model.Stock;
 import com.techoffice.util.service.JobExplorerService;
 import com.techoffice.yahoo.finance.stock.dao.PriceBatchDao;
 import com.techoffice.yahoo.finance.stock.dao.PriceDao;
-import com.techoffice.yahoo.finance.stock.exception.PriceBatchJobException;
 import com.techoffice.yahoo.finance.stock.model.Price;
 import com.techoffice.yahoo.finance.stock.model.PriceBatch;
 

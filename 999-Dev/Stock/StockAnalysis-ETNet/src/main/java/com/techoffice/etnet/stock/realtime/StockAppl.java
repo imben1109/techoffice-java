@@ -20,6 +20,8 @@ import com.techoffice.etnet.stock.realtime.crawler.RealTimeStockCrawler;
 @Component
 public class StockAppl {
 	
+	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+	
 	@Autowired
 	private RealTimeStockCrawler realTimeStockWebService;
 	
@@ -30,7 +32,6 @@ public class StockAppl {
 	}
 	
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException{
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		StockAppl appl = context.getBean(StockAppl.class);
 		appl.run();
 	}

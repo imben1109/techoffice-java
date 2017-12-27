@@ -1,6 +1,5 @@
 package com.techoffice.aastock.stock.crawler;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,7 +15,6 @@ import com.techoffice.util.DateUtil;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.WebCrawlerException;
 
 /**
  * A Web Crawler for 

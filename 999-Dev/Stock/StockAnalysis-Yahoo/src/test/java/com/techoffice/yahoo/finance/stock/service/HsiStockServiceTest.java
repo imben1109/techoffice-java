@@ -2,7 +2,6 @@ package com.techoffice.yahoo.finance.stock.service;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -17,7 +16,6 @@ import org.xml.sax.SAXException;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.techoffice.util.exception.XmlUtilInvalidDocumentException;
-import com.techoffice.yahoo.finance.stock.model.HsiStock;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")

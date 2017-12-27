@@ -22,7 +22,7 @@ public class PriceBatchController {
 	@RequestMapping("run")
 	@ResponseBody
 	public String run() throws PriceBatchJobException{
-		priceBatchService.run();
+//		priceBatchService.run();
 		return "run";
 	}
 	
