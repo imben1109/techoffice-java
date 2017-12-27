@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-
+import com.techoffice.example.SimpleSpringService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/test-beans.xml")
