@@ -31,7 +31,7 @@ public class EarningSummaryCrawler {
 	public List<String> getYearList(String symbol) {
 		List<String> yearList = new ArrayList<String>();
 		String xml = WebDriverUtil.getXml(URL + symbol);
-		String xpath = "//*[@id='hig'hcharts-0']/svg/g[6]/text";
+		String xpath = "//*[@id='highcharts-0']/svg/g[6]/text";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=0; i<rowNodeList.getLength(); i++){
 			Node yearNode = rowNodeList.item(i);

@@ -116,8 +116,6 @@ public class XmlUtil {
 			XPathExpression expr;
 			expr = xpath.compile(xPath);
 			nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
-		} catch (DocumentConversionException e) {
-			throw new XpathException(e);
 		} catch (XPathExpressionException e) {
 			throw new XpathException(MessageFormat.format(XpathException.INVALID_XPATH_PATTERN, xPath), e);
 		}

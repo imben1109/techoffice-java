@@ -1,6 +1,10 @@
 package com.techoffice.util;
 
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,6 +14,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.cache.WebDriverUtilRedirectUrlCache;
@@ -30,7 +36,22 @@ import com.techoffice.util.exception.WebDriverUtilException;
  */
 public class WebDriverUtil {
 	
+	private static Logger log = LoggerFactory.getLogger(WebDriverUtil.class);
 	
+	private WebDriverUtil(){}
+	
+	private static Properties PROPERTIES = new Properties();
+	
+	static{
+		try {
+			URL url = WebDriverUtil.class.getClassLoader().getResource("WebDriverUtil.properties");
+			if (url != null){
+				PROPERTIES.load(WebDriverUtil.class.getClassLoader().getResourceAsStream("WebDriverUtil.properties"));
+			}
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+		}
+	}
 	
 	/**
 	 * Get XML Content 
@@ -135,9 +156,7 @@ public class WebDriverUtil {
 		}
 	}
 	
-	public static String[] DEFAULT_TAG_TO_REMOVE = new String[] {"script", "style", "head", 
-			"canvas", "svg", "path", "nav", "head", "canvas", "svg", "commodity"};
-	
+
 	/**
 	 * Get Xml from Source String 
 	 * 
@@ -148,14 +167,16 @@ public class WebDriverUtil {
 		Document document = Jsoup.parse(sourceStr);
 	    document.outputSettings().syntax(Syntax.xml);
 	    document.outputSettings().charset(StandardCharsets.UTF_8);
-	    for (int i=0; i<DEFAULT_TAG_TO_REMOVE.length; i++){
-	    	String specialTag = DEFAULT_TAG_TO_REMOVE[i];
-	    	document.select(specialTag).remove();
-	    }
+	    document.outputSettings().prettyPrint(true);
+	    document.select("head").remove();
+	    document.select("script").remove();
+	    document.select("style").remove();
 	    String xml = document.html();
-	    String tiddedXml = XmlUtil.tidyXml(xml);
-	    
-		return tiddedXml;
+	    List<String> specialTokenList = getSpecialTokenListToRemove();
+	    for (String specialToken: specialTokenList ){
+	    	xml = xml.replace(specialToken, "");
+	    }
+		return xml;
 	}
 
 	
@@ -178,6 +199,17 @@ public class WebDriverUtil {
 		}else {
 			return WebDriverUtilRedirectUrlCache.get(url);
 		}
+	}
+	
+	public static List<String> getSpecialTokenListToRemove(){
+		List<String> specialTokenList = new ArrayList<String>();
+		String specialTokens = PROPERTIES.getProperty("special_tokens", "");
+		String[] specialTokenArr = specialTokens.split(",");
+		for (int i=0; i<specialTokenArr.length; i++){
+			String specialToken = specialTokenArr[i];
+			specialTokenList.add(specialToken.trim());
+		}
+		return specialTokenList;
 	}
 	
 }
