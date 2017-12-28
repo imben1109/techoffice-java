@@ -7,7 +7,6 @@ import org.w3c.dom.NodeList;
 
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XpathException;
 
 /**
  * A Web Crawler for 
@@ -23,11 +22,16 @@ public class ResultAnnounceCalCrawler {
 	
 	public static final String URL = "http://www.aastocks.com/en/stocks/market/calendar.aspx?type=1";
 	
-	public int getPageCount() throws XpathException {
+	public int getPageCount() {
 		String xml = WebDriverUtil.getXml(URL);
 		String xPath = "/html/body/form/div[2]/div[6]/div[8]/table/tbody/tr/td[2]/a";
-		NodeList tableNodeList = XmlUtil.evaluateXpath(xml, xPath);
-		int pageCount = tableNodeList.getLength() + 1;
+		int pageCount = 1;
+		try{
+			NodeList tableNodeList = XmlUtil.evaluateXpath(xml, xPath);
+			pageCount = tableNodeList.getLength() + 1;
+		} catch(Exception e){
+			// do nothing
+		}
 		return pageCount;
 	}
 	

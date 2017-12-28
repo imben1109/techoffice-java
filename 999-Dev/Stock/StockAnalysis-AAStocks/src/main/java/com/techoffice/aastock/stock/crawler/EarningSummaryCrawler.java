@@ -1,5 +1,8 @@
 package com.techoffice.aastock.stock.crawler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -9,7 +12,7 @@ import org.w3c.dom.NodeList;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
-import com.techoffice.util.exception.XpathException;
+
 
 /**
  * A Web Crawler for 
@@ -25,7 +28,8 @@ public class EarningSummaryCrawler {
 
 	public static final String URL = "http://www.aastocks.com/en/stocks/analysis/company-fundamental/earnings-summary?symbol=";
 	
-	public void getYearList(String symbol) throws XpathException {
+	public List<String> getYearList(String symbol) {
+		List<String> yearList = new ArrayList<String>();
 		String xml = WebDriverUtil.getXml(URL + symbol);
 		String xpath = "//*[@id='hig'hcharts-0']/svg/g[6]/text";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
@@ -33,31 +37,36 @@ public class EarningSummaryCrawler {
 			Node yearNode = rowNodeList.item(i);
 			String yearValue = yearNode.getTextContent();
 			yearValue = SpecialStringUtil.removeSpecialCharacter(yearValue);
-			System.out.println(yearValue);
+			yearList.add(yearValue);
 		}
+		return yearList;
 	}
 	
-	public void getEarningPerShare(String symbol) throws XpathException {
+	public List<String> getEarningPerShare(String symbol) {
+		List<String> earningPerShareList = new ArrayList<String>();
 		String xml = WebDriverUtil.getXml(URL + symbol);
 		String xpath = "//*[@id='cnhk-list']/tbody/tr[6]/td";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=1; i<rowNodeList.getLength()-1; i++){
 			Node yearNode = rowNodeList.item(i);
-			String yearValue = yearNode.getTextContent();
-			yearValue = SpecialStringUtil.removeSpecialCharacter(yearValue);
-			System.out.println(yearValue);
+			String earningPerShare = yearNode.getTextContent();
+			earningPerShare = SpecialStringUtil.removeSpecialCharacter(earningPerShare);
+			earningPerShareList.add(earningPerShare);
 		}
+		return earningPerShareList;
 	}
 	
-	public void getDividendPerShare(String symbol) throws XpathException {
+	public List<String> getDividendPerShare(String symbol) {
+		List<String> dividendPerShareList = new ArrayList<String>();
 		String xml = WebDriverUtil.getXml(URL + symbol);
 		String xpath = "//*[@id='cnhk-list']/tbody/tr[10]/td";
 		NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xpath);
 		for (int i=1; i<rowNodeList.getLength()-1; i++){
 			Node yearNode = rowNodeList.item(i);
-			String yearValue = yearNode.getTextContent();
-			yearValue = SpecialStringUtil.removeSpecialCharacter(yearValue);
-			System.out.println(yearValue);
+			String dividendPerShare = yearNode.getTextContent();
+			dividendPerShare = SpecialStringUtil.removeSpecialCharacter(dividendPerShare);
+			dividendPerShareList.add(dividendPerShare);
 		}
+		return dividendPerShareList;
 	}
 }

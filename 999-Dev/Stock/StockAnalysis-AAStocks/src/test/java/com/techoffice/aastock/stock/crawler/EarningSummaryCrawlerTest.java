@@ -1,9 +1,6 @@
 package com.techoffice.aastock.stock.crawler;
 
-import java.io.IOException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.xml.sax.SAXException;
-
-import com.techoffice.util.exception.InvalidDocumentException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -25,19 +19,28 @@ public class EarningSummaryCrawlerTest {
 	@Autowired
 	private EarningSummaryCrawler earningSummaryCrawler;
 	
-//	@Test
-	public void getYearList() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, InvalidDocumentException{
-//		earningSummaryCrawler.getYearList("00010");
-	}
-	
-//	@Test
-	public void getEarningPerShare() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, InvalidDocumentException{
-//		earningSummaryCrawler.getEarningPerShare("00010");
+	@Test
+	public void getYearList() {
+		 List<String> yearList = earningSummaryCrawler.getYearList("00010");
+		 for (String year: yearList){
+			 log.info(year);
+		 }
 	}
 	
 	@Test
-	public void test() throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, InvalidDocumentException{
-//		earningSummaryCrawler.getDividendPerShare("00010");
+	public void getEarningPerShare() {
+		List<String> earningPerShareList = earningSummaryCrawler.getEarningPerShare("00010");
+		for (String earningPerShare: earningPerShareList){
+			log.info(earningPerShare);
+		}
+	}
+	
+	@Test
+	public void getDividendPerShare() {
+		List<String> dividendPerShareList = earningSummaryCrawler.getDividendPerShare("00010");
+		for (String dividendPerShare: dividendPerShareList){
+			log.info(dividendPerShare);
+		}
 	}
 	
 	

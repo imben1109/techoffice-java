@@ -154,6 +154,7 @@ public class WebDriverUtil {
 	    }
 	    String xml = document.html();
 	    String tiddedXml = XmlUtil.tidyXml(xml);
+	    
 		return tiddedXml;
 	}
 

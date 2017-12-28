@@ -19,6 +19,7 @@ public class SpecialStringUtil {
 		String newStr = removeQuestionMark(str);
 		newStr = replaceNewLineToSpace(newStr);
 		newStr = doubleSpaceToSingle(newStr);
+		newStr = replaceSpecialAuotationMark(newStr);
 		newStr = newStr.trim();
 		return newStr;
 	}
@@ -27,6 +28,11 @@ public class SpecialStringUtil {
 		String newStr = str.replace("?", " ");
 		return newStr;
 	}
+	
+	public static String replaceSpecialAuotationMark(String str){
+		String newStr = str.replace("’", "'");
+		return newStr;
+	} 
 	
 	public static String removeIllegalXml(String xml){
 		String xml10pattern = "[^"
