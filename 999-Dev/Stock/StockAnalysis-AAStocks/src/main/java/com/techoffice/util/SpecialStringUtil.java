@@ -1,5 +1,8 @@
 package com.techoffice.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SpecialStringUtil {
 	
 	public static String replaceNewLineToSpace(String str){
@@ -43,5 +46,18 @@ public class SpecialStringUtil {
                 + "]";
 		xml = xml.replaceAll(xml10pattern, "");
 		return xml;
+	}
+	
+	public static String replaceNonWordCharacter(String str){
+		return str.replaceAll("\\W", " ");
+	}
+	
+	public static List<String> replaceNonWordCharacter(List<String> strList){
+		List<String> list = new ArrayList<String>();
+		for (String str: strList){
+			String wordStr = replaceNonWordCharacter(str);
+			list.add(wordStr);	
+		}
+		return list;
 	}
 }
