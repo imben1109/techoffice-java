@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
@@ -22,6 +23,7 @@ public class EarningSummaryCrawlerTest {
 	@Test
 	public void getYearList() {
 		 List<String> yearList = earningSummaryCrawler.getYearList("00010");
+		 Assert.notEmpty(yearList);
 		 for (String year: yearList){
 			 log.info(year);
 		 }
@@ -30,6 +32,7 @@ public class EarningSummaryCrawlerTest {
 	@Test
 	public void getEarningPerShare() {
 		List<String> earningPerShareList = earningSummaryCrawler.getEarningPerShare("00010");
+		Assert.notEmpty(earningPerShareList);
 		for (String earningPerShare: earningPerShareList){
 			log.info(earningPerShare);
 		}
@@ -38,6 +41,7 @@ public class EarningSummaryCrawlerTest {
 	@Test
 	public void getDividendPerShare() {
 		List<String> dividendPerShareList = earningSummaryCrawler.getDividendPerShare("00010");
+		Assert.notEmpty(dividendPerShareList);
 		for (String dividendPerShare: dividendPerShareList){
 			log.info(dividendPerShare);
 		}
