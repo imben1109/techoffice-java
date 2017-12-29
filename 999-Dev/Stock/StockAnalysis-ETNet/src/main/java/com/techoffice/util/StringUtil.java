@@ -42,8 +42,8 @@ public class StringUtil {
 	public static List<String> getSubWordList(String str, int charNum){
 		List<String> list = new ArrayList<String>();
 		for (int i=0; i<str.length(); i++){
-			if (i+ charNum < str.length()){
-				
+			if (i + charNum < str.length()){
+				str.substring(i, i+charNum);
 			}
 		}
 		return list;
