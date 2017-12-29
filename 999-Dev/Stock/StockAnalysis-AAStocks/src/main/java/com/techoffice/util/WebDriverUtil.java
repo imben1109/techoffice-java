@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Document.OutputSettings.Syntax;
@@ -230,7 +231,9 @@ public class WebDriverUtil {
 		String[] specialTokenArr = specialTokens.split(",");
 		for (int i=0; i<specialTokenArr.length; i++){
 			String specialToken = specialTokenArr[i];
-			specialTokenList.add(specialToken.trim());
+			if (!StringUtils.isEmpty(specialToken.trim())){
+				specialTokenList.add(specialToken.trim());	
+			}
 		}
 		return specialTokenList;
 	}

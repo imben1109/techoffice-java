@@ -1,7 +1,12 @@
 package com.techoffice.util;
 
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Document.OutputSettings.Syntax;
@@ -10,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.techoffice.factory.WebDriverFactory;
 import com.techoffice.util.cache.WebDriverUtilRedirectUrlCache;
@@ -19,16 +26,37 @@ import com.techoffice.util.exception.WebDriverUtilException;
 /**
  * Web Driver Utility
  * 
- * It support cache for improving performance. 
+ * It supports cache for improving performance. 
  * 
- * WebDriverUtilXmlCache would be used for cache of XML content of specified url
- * WebDriverUtilRedirectUrlCache  would be used for cache of redirected url of specified url.
+ * 		WebDriverUtilXmlCache would be used for cache of XML content of specified url
+ * 		WebDriverUtilRedirectUrlCache  would be used for cache of redirected url of specified url.
+ * 
+ * It supports property for configuration. (WebDriverUtil.property)
+ * 
+ *  	
  * 
  * @author TechOffice
  *
  * 
  */
 public class WebDriverUtil {
+	
+	private static Logger log = LoggerFactory.getLogger(WebDriverUtil.class);
+	
+	private WebDriverUtil(){}
+	
+	private static Properties PROPERTIES = new Properties();
+	
+	static{
+		try {
+			URL url = WebDriverUtil.class.getClassLoader().getResource("WebDriverUtil.properties");
+			if (url != null){
+				PROPERTIES.load(WebDriverUtil.class.getClassLoader().getResourceAsStream("WebDriverUtil.properties"));
+			}
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+		}
+	}
 	
 	/**
 	 * Get XML Content 
@@ -85,6 +113,9 @@ public class WebDriverUtil {
 		    if (expectedCondition != null){
 		    	try{
 		    		wait.until(expectedCondition);
+		    		if (scrollDown){
+			    		scrollToBottom(webDriver);
+			    	}
 		    		sourceStr = webDriver.getPageSource();
 		    	}catch(Exception e){
 		    		throw new WebDriverUtilException(e);
@@ -92,6 +123,9 @@ public class WebDriverUtil {
 		    		webDriver.quit();
 		    	}
 		    }else {
+		    	if (scrollDown){
+		    		scrollToBottom(webDriver);
+		    	}
 		    	sourceStr = webDriver.getPageSource();
 				webDriver.quit();
 		    }
@@ -108,27 +142,33 @@ public class WebDriverUtil {
 	 * 
 	 * @param webDriver
 	 */
-	public void scrollToBottom(WebDriver webDriver){
+	public static void scrollToBottom(WebDriver webDriver){
 		if (webDriver instanceof JavascriptExecutor){
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) webDriver;
-			Object newscrollTop = jsExecutor.executeScript("return document.body.scrollHeight", "");
-			Object scrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
-			while(!newscrollTop.equals(scrollTop)){
-				scrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
+			Object windowScrollHeight = jsExecutor.executeScript("return document.body.scrollHeight", "");
+			Object currentScrollPosition = jsExecutor.executeScript("return document.body.scrollTop", "");
+			while(!windowScrollHeight.equals(currentScrollPosition)){
+				currentScrollPosition = jsExecutor.executeScript("return document.body.scrollTop", "");
 				jsExecutor.executeScript("window.scrollTo(0,document.body.scrollHeight);", "");
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}			
-				newscrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
-				System.out.println(newscrollTop + " " + scrollTop);
+				windowScrollHeight = jsExecutor.executeScript("return document.body.scrollTop", "");
+				log.info("Window Scroll Height: " + windowScrollHeight + " Current Scroll Position: " + currentScrollPosition);
 			}
 		}
 	}
 	
+
 	/**
 	 * Get Xml from Source String 
+	 * 
+	 * 	Based on the Property,  
+	 * 		Replace special character 
+	 * 		Remove special attribute
+	 * 
 	 * 
 	 * @param sourceStr Source String
 	 * @return Xml 
@@ -137,23 +177,22 @@ public class WebDriverUtil {
 		Document document = Jsoup.parse(sourceStr);
 	    document.outputSettings().syntax(Syntax.xml);
 	    document.outputSettings().charset(StandardCharsets.UTF_8);
+	    document.outputSettings().prettyPrint(true);
+	    document.select("head").remove();
 	    document.select("script").remove();
 	    document.select("style").remove();
-	    document.select("head").remove();
-	    document.select("canvas").remove();
-	    document.select("svg").remove();
-	    document.select("path").remove();
-	    document.select("nav").remove();
-	    document.select("script").remove();
-	    document.select("style").remove();
-	    document.select("head").remove();
-	    document.select("canvas").remove();
-	    document.select("svg").remove();
-	    document.select("path").remove();
-	    document.select("nav").remove();
+	    final String specialAttributesToRemoveKey = "special_attributes_to_remove";
+	    List<String> specialAttributeToRemoveList = getPropertyStringList(specialAttributesToRemoveKey);
+	    for (String specialAttributeToRemove: specialAttributeToRemoveList){
+	    	document.select("["+ specialAttributeToRemove +"]").removeAttr(specialAttributeToRemove);	
+	    }
 	    String xml = document.html();
-	    String tiddedXml = XmlUtil.tidyXml(xml);
-		return tiddedXml;
+	    final String specialTokensToRemove = "special_tokens_to_remove";
+	    List<String> specialTokenToRemoveList = getPropertyStringList(specialTokensToRemove);
+	    for (String specialTokenToRemove: specialTokenToRemoveList ){
+	    	xml = xml.replace(specialTokenToRemove, "");
+	    }
+		return xml;
 	}
 
 	
@@ -176,6 +215,27 @@ public class WebDriverUtil {
 		}else {
 			return WebDriverUtilRedirectUrlCache.get(url);
 		}
+	}
+	
+	/**
+	 * Get List of String from property file by key
+	 * 
+	 * It would convert to List by special token ",".
+	 * 
+	 * @param key
+	 * @return List 
+	 */
+	public static List<String> getPropertyStringList(String key){
+		List<String> specialTokenList = new ArrayList<String>();
+		String specialTokens = PROPERTIES.getProperty(key, "");
+		String[] specialTokenArr = specialTokens.split(",");
+		for (int i=0; i<specialTokenArr.length; i++){
+			String specialToken = specialTokenArr[i];
+			if (!StringUtils.isEmpty(specialToken.trim())){
+				specialTokenList.add(specialToken.trim());	
+			}
+		}
+		return specialTokenList;
 	}
 	
 }
