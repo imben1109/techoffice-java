@@ -33,9 +33,9 @@ public class IndustryCrawler {
 	public List<Industry> retrieveIndustryList() {
 		List<Industry> industries = new ArrayList<Industry>();
 		String xml = WebDriverUtil.getXml(URL);
-		String xPath = "//*[@id='IndustyMain']/div[3]/div[1]/table/tbody/tr";
+		String xPath = "//*[@id='IndustyMain']/div[6]/div[1]/table/tbody/tr";
 		
-			String remarkStatement = XmlUtil.getXpathText(xml, "//*[@id='IndustyMain']/div[3]/div[2]");
+			String remarkStatement = XmlUtil.getXpathText(xml, "//*[@id='IndustyMain']/div[6]/div[3]");
 			String updatedDateStatement = remarkStatement.replace("(1) Chg.% is calculated as the average percentage change of stocks in corresponding industries. Information delayed at least 15 minutes. Last Update: ", "");
 			Date updatedDate = DateUtil.parseDate(updatedDateStatement, "yyyy/MM/dd HH:mm");
 			NodeList rowNodeList = XmlUtil.evaluateXpath(xml, xPath);

@@ -19,7 +19,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.eclipse.jetty.util.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -56,7 +56,7 @@ public class XmlUtil {
 	 */
 	public static Document convertXmlStrToDocument(String xml) {
 		Document document = null;
-		if (StringUtil.isNotBlank(xml)){
+		if (StringUtils.isNotBlank(xml)){
 			try{
 				DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 				documentBuilderFactory.setNamespaceAware(false);
@@ -116,6 +116,8 @@ public class XmlUtil {
 			XPathExpression expr;
 			expr = xpath.compile(xPath);
 			nodeList = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+		} catch (DocumentConversionException e) {
+			throw new XpathException(e);
 		} catch (XPathExpressionException e) {
 			throw new XpathException(MessageFormat.format(XpathException.INVALID_XPATH_PATTERN, xPath), e);
 		}
