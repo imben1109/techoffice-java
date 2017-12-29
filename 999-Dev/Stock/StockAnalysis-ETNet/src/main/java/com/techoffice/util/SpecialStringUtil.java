@@ -33,7 +33,7 @@ public class SpecialStringUtil {
 	}
 	
 	public static String replaceSpecialAuotationMark(String str){
-		String newStr = str.replace("’", "'");
+		String newStr = str.replace("ï¿½", "'");
 		return newStr;
 	} 
 	
@@ -59,5 +59,30 @@ public class SpecialStringUtil {
 			list.add(wordStr);	
 		}
 		return list;
+	}
+	
+	public static List<String> getChineseStringList(List<String> contentList) {
+		List<String> chineseContentList = new ArrayList<String>();
+		for (String content: contentList){
+			StringBuilder stringBuilder = new StringBuilder();
+			for (int i=0 ; i<content.length(); i++){
+				String str = content.substring(i, i+1);
+				if (isChineseString(str)){
+					stringBuilder.append(str);
+				}
+			}
+			chineseContentList.add(stringBuilder.toString());
+		}
+		return chineseContentList;
+	}
+	
+	public static boolean isChineseString(String str){
+		int chineseStart = Integer.parseInt(String.valueOf(0x4E00));
+		int chineseEnd = Integer.parseInt(String.valueOf(0x9FA5));
+		int strInt = Integer.parseInt(String.valueOf(Character.codePointAt(str, 0)));
+		if(strInt >= chineseStart && strInt <= chineseEnd ){
+			return true;
+		}
+		return false;
 	}
 }

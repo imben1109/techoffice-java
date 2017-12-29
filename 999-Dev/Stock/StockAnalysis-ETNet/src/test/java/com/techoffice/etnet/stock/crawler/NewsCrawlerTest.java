@@ -12,6 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
 
+import com.techoffice.etnet.news.crawler.ImmediateNewsCrawler;
+import com.techoffice.etnet.news.model.AvailableNewsDate;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.StringUtil;
 
@@ -20,7 +22,7 @@ import com.techoffice.util.StringUtil;
 public class NewsCrawlerTest {
 
 	@Autowired
-	private NewsCrawler newsCrawler;
+	private ImmediateNewsCrawler newsCrawler;
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
@@ -44,4 +46,12 @@ public class NewsCrawlerTest {
 		}
 	}
 	
+	@Test
+	public void getAvailableDateList(){
+		List<AvailableNewsDate> availableDateList = newsCrawler.getAvailableDateList();
+		Assert.notEmpty(availableDateList);
+		for (AvailableNewsDate availableDate: availableDateList){
+			log.info(availableDate.getUrl());
+		}
+	}
 }
