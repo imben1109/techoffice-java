@@ -34,7 +34,7 @@ public class TopNewsCrawler {
 	public List<String> getNewsList(){
 		String xml = retrieve();
 		List<String> newsList = new ArrayList<String>();
-		String xPath = "//*[@id='aafn-search-c1']/div";
+		String xPath = "//*[@id='aafn-search-c1']/div/div/div[1]/a";
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, xPath);
 		for (int i=0; i<nodeList.getLength(); i++){
 			Node node = nodeList.item(i);

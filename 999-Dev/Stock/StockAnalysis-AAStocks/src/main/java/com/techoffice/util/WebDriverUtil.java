@@ -140,18 +140,18 @@ public class WebDriverUtil {
 	public static void scrollToBottom(WebDriver webDriver){
 		if (webDriver instanceof JavascriptExecutor){
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) webDriver;
-			Object newscrollTop = jsExecutor.executeScript("return document.body.scrollHeight", "");
-			Object scrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
-			while(!newscrollTop.equals(scrollTop)){
-				scrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
+			Object windowScrollHeight = jsExecutor.executeScript("return document.body.scrollHeight", "");
+			Object currentScrollPosition = jsExecutor.executeScript("return document.body.scrollTop", "");
+			while(!windowScrollHeight.equals(currentScrollPosition)){
+				currentScrollPosition = jsExecutor.executeScript("return document.body.scrollTop", "");
 				jsExecutor.executeScript("window.scrollTo(0,document.body.scrollHeight);", "");
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}			
-				newscrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
-				log.info(newscrollTop + " " + scrollTop);
+				windowScrollHeight = jsExecutor.executeScript("return document.body.scrollTop", "");
+				log.info("Window Scroll Height: " + windowScrollHeight + " Current Scroll Position: " + currentScrollPosition);
 			}
 		}
 	}
@@ -159,6 +159,11 @@ public class WebDriverUtil {
 
 	/**
 	 * Get Xml from Source String 
+	 * 
+	 * 	Based on the Property,  
+	 * 		Replace special character 
+	 * 		Remove special attribute
+	 * 
 	 * 
 	 * @param sourceStr Source String
 	 * @return Xml 
