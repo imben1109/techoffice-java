@@ -151,7 +151,7 @@ public class WebDriverUtil {
 					e.printStackTrace();
 				}			
 				newscrollTop = jsExecutor.executeScript("return document.body.scrollTop", "");
-				System.out.println(newscrollTop + " " + scrollTop);
+				log.info(newscrollTop + " " + scrollTop);
 			}
 		}
 	}
@@ -171,10 +171,16 @@ public class WebDriverUtil {
 	    document.select("head").remove();
 	    document.select("script").remove();
 	    document.select("style").remove();
+	    final String specialAttributesToRemoveKey = "special_attributes_to_remove";
+	    List<String> specialAttributeToRemoveList = getPropertyStringList(specialAttributesToRemoveKey);
+	    for (String specialAttributeToRemove: specialAttributeToRemoveList){
+	    	document.select("["+ specialAttributeToRemove +"]").removeAttr(specialAttributeToRemove);	
+	    }
 	    String xml = document.html();
-	    List<String> specialTokenList = getSpecialTokenListToRemove();
-	    for (String specialToken: specialTokenList ){
-	    	xml = xml.replace(specialToken, "");
+	    final String specialTokensToRemove = "special_tokens_to_remove";
+	    List<String> specialTokenToRemoveList = getPropertyStringList(specialTokensToRemove);
+	    for (String specialTokenToRemove: specialTokenToRemoveList ){
+	    	xml = xml.replace(specialTokenToRemove, "");
 	    }
 		return xml;
 	}
@@ -201,9 +207,9 @@ public class WebDriverUtil {
 		}
 	}
 	
-	public static List<String> getSpecialTokenListToRemove(){
+	public static List<String> getPropertyStringList(String key){
 		List<String> specialTokenList = new ArrayList<String>();
-		String specialTokens = PROPERTIES.getProperty("special_tokens", "");
+		String specialTokens = PROPERTIES.getProperty(key, "");
 		String[] specialTokenArr = specialTokens.split(",");
 		for (int i=0; i<specialTokenArr.length; i++){
 			String specialToken = specialTokenArr[i];
