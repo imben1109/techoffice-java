@@ -25,10 +25,14 @@ import com.techoffice.util.exception.WebDriverUtilException;
 /**
  * Web Driver Utility
  * 
- * It support cache for improving performance. 
+ * It supports cache for improving performance. 
  * 
- * WebDriverUtilXmlCache would be used for cache of XML content of specified url
- * WebDriverUtilRedirectUrlCache  would be used for cache of redirected url of specified url.
+ * 		WebDriverUtilXmlCache would be used for cache of XML content of specified url
+ * 		WebDriverUtilRedirectUrlCache  would be used for cache of redirected url of specified url.
+ * 
+ * It supports property for configuration. (WebDriverUtil.property)
+ * 
+ *  	
  * 
  * @author TechOffice
  *
@@ -212,6 +216,14 @@ public class WebDriverUtil {
 		}
 	}
 	
+	/**
+	 * Get List of String from property file by key
+	 * 
+	 * It would convert to List by special token ",".
+	 * 
+	 * @param key
+	 * @return List 
+	 */
 	public static List<String> getPropertyStringList(String key){
 		List<String> specialTokenList = new ArrayList<String>();
 		String specialTokens = PROPERTIES.getProperty(key, "");
