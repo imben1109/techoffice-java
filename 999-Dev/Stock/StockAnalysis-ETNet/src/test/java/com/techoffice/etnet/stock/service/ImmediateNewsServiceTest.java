@@ -1,6 +1,7 @@
 package com.techoffice.etnet.stock.service;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +27,18 @@ public class ImmediateNewsServiceTest {
 		Map<String, Integer> map = immediateNewsService.getNewsKeyWordOccurrenceMap();
 		for(Map.Entry<String, Integer> entry: map.entrySet()){
 			log.info(entry.getKey() + " " + entry.getValue());
+		}
+	}
+	
+	@Test
+	public void getAllWordOccurrenceMap(){
+		Map<String, Map<String, Integer>> map = immediateNewsService.getAllNewsKeyWordOccurrenceMap();
+		for(Entry<String, Map<String, Integer>> yearMap: map.entrySet()){
+			log.info(yearMap.getKey());
+			log.info("===");
+			for(Map.Entry<String, Integer> entry: yearMap.getValue().entrySet()){
+				log.info(entry.getKey() + " " + entry.getValue());
+			}
 		}
 	}
 }

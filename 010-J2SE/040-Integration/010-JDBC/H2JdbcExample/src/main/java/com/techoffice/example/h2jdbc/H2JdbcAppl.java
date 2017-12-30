@@ -2,6 +2,7 @@ package com.techoffice.example.h2jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,7 +16,7 @@ public class H2JdbcAppl {
 	public void createTableIfNotExist() throws SQLException{
 		Connection conn = DriverManager.getConnection(url, userName, password);
 		Statement stmt = conn.createStatement();
-		stmt.executeUpdate("create table if not exists temp_table (name varchar2, value varchar2) "); // stmt.executeQuery(sql);
+		stmt.executeUpdate("create table if not exists temp_table (name varchar2, value varchar2) "); 
 		stmt.close();
 		conn.close();
 	}

@@ -26,15 +26,28 @@ public class ImmediateNewsCrawler {
 		return WebDriverUtil.getXml("http://inews.hket.com/sran001");
 	}
 	
+	public String getXml(String url){
+		return WebDriverUtil.getXml(url);		
+	}
+	
 	public List<String> getNewsList(){
-		String xml = getXml();
+		return getNewsList(null);
+	}
+	
+	public List<String> getNewsList(String url){
+		String xml = null;
+		if (url == null){
+			xml = getXml();
+		}else {
+			xml = getXml(url);
+		}
 		List<String> newsList = XmlUtil.getNodeListText(xml, "//*[@id='eti-inews-list']/tbody/tr/td/a");
 		return newsList;
 	}
 	
 	public List<AvailableNewsDate> getAvailableDateList(){
-		List<AvailableNewsDate> availNewsDateList = new ArrayList<AvailableNewsDate>();
 		String xml = getXml();
+		List<AvailableNewsDate> availNewsDateList = new ArrayList<AvailableNewsDate>();
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, "/html/body/div/div[4]/div[1]/div[2]/select/option");
 		for (int i=0; i<nodeList.getLength(); i++){
 			Node node = nodeList.item(i);
