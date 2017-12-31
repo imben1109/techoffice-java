@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.techoffice.etnet.news.service.ImmediateNewsService;
+import com.techoffice.etnet.news.service.ImmediateNewsOccurrenceMapService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
 public class ImmediateNewsServiceTest {
 	
 	@Autowired
-	private ImmediateNewsService immediateNewsService;
+	private ImmediateNewsOccurrenceMapService immediateNewsService;
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	

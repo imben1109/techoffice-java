@@ -1,5 +1,6 @@
 package com.techoffice.etnet.stock.crawler;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -14,6 +15,8 @@ import org.springframework.util.Assert;
 
 import com.techoffice.etnet.news.crawler.ImmediateNewsCrawler;
 import com.techoffice.etnet.news.model.AvailableNewsDate;
+import com.techoffice.etnet.news.model.CrawledNews;
+import com.techoffice.util.ListUtil;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.StringUtil;
 
@@ -28,16 +31,17 @@ public class NewsCrawlerTest {
 	
 	@Test
 	public void getNewsList(){
-		List<String> newsList = newsCrawler.getNewsList();
+		List<CrawledNews> newsList = newsCrawler.getNewsList();
 		Assert.notEmpty(newsList);
-		for (String news: newsList){
-			log.info(news);
+		for (CrawledNews news: newsList){
+			log.info(news.getContents());
 		}
 	}
 	
 	@Test
 	public void getNewsListStatic(){
-		List<String> newsList = newsCrawler.getNewsList();
+		List<CrawledNews> crawledNewsList = newsCrawler.getNewsList();
+		List<String> newsList = ListUtil.getAttributeList(crawledNewsList, "content");
 		newsList = SpecialStringUtil.replaceNonWordCharacter(newsList);
 		Assert.notEmpty(newsList);
 		Map<String, Integer> occurrenceMap = StringUtil.getOccurrenceMap(newsList);
@@ -53,5 +57,11 @@ public class NewsCrawlerTest {
 		for (AvailableNewsDate availableDate: availableDateList){
 			log.info(availableDate.getUrl());
 		}
+	}
+	
+	@Test
+	public void getPostDate(){
+		Date postDate = newsCrawler.getPostDate(newsCrawler.getXml());
+		log.info(postDate.toString());
 	}
 }

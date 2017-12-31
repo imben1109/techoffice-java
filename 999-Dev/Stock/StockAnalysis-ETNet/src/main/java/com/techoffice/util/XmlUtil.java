@@ -24,6 +24,7 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -126,6 +127,21 @@ public class XmlUtil {
 		return nodeList;	
 	}
 	
+	public static Node evaluateXpath(String xml, String xPath, String attibute, String value){
+		Node nodeFound = null;
+		NodeList nodeList = evaluateXpath(xml, xPath);
+		for (int i=0; i<nodeList.getLength(); i++){
+			Node node = nodeList.item(i);
+			if (node.getAttributes().getNamedItem(attibute) != null){
+				if (getNodeText(node.getAttributes().getNamedItem(attibute)).equals(value)){
+					nodeFound = node;
+					return nodeFound;
+				}
+			}
+		}
+		return nodeFound;
+	}
+	
 	public static List<String> getNodeListText(NodeList nodeList){
 		List<String> list = new ArrayList<String>();
 		for (int i=0; i<nodeList.getLength(); i++){
@@ -164,6 +180,7 @@ public class XmlUtil {
 	}
 	
 	public static String getNodeText(Node node){
+		Assert.notNull(node);
 		String nodeText = "";
 		NodeList nodeList = node.getChildNodes();
 		if (nodeList.getLength() > 0){

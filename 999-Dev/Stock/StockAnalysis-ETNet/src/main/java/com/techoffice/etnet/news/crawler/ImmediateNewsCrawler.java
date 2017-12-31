@@ -1,6 +1,7 @@
 package com.techoffice.etnet.news.crawler;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -8,6 +9,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.techoffice.etnet.news.model.AvailableNewsDate;
+import com.techoffice.etnet.news.model.CrawledNews;
+import com.techoffice.util.DateUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
 
@@ -30,19 +33,27 @@ public class ImmediateNewsCrawler {
 		return WebDriverUtil.getXml(url);		
 	}
 	
-	public List<String> getNewsList(){
+	public List<CrawledNews> getNewsList(){
 		return getNewsList(null);
 	}
 	
-	public List<String> getNewsList(String url){
+	public List<CrawledNews> getNewsList(String url){
+		List<CrawledNews> crawledNewsList = new ArrayList<CrawledNews>();
 		String xml = null;
 		if (url == null){
 			xml = getXml();
 		}else {
 			xml = getXml(url);
 		}
+		Date postDate = getPostDate(xml);
 		List<String> newsList = XmlUtil.getNodeListText(xml, "//*[@id='eti-inews-list']/tbody/tr/td/a");
-		return newsList;
+		for (String news: newsList){
+			CrawledNews crawledNews = new CrawledNews();
+			crawledNews.setContents(news);
+			crawledNews.setPostDate(postDate);
+			crawledNewsList.add(crawledNews);
+		}
+		return crawledNewsList;
 	}
 	
 	public List<AvailableNewsDate> getAvailableDateList(){
@@ -60,4 +71,12 @@ public class ImmediateNewsCrawler {
 		}
 		return availNewsDateList;
 	}
+	
+	public Date getPostDate(String xml){
+		Node node = XmlUtil.evaluateXpath(xml, "/html/body/div/div[4]/div[1]/div[2]/select/option", "selected", "selected");
+		String nodeStr =  XmlUtil.getNodeText(node);
+		return DateUtil.parseTruncateDate(nodeStr, "yyyy/MM/dd");
+	}
+	
+	
 }
