@@ -15,16 +15,16 @@ import com.techoffice.etnet.news.service.ImmediateNewsOccurrenceMapService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class ImmediateNewsServiceTest {
+public class ImmediateNewsOccurrenceMapServiceTest {
 	
 	@Autowired
-	private ImmediateNewsOccurrenceMapService immediateNewsService;
+	private ImmediateNewsOccurrenceMapService immediateNewsOccurrenceMapService;
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Test
 	public void getWordOccurrenceMap(){
-		Map<String, Integer> map = immediateNewsService.getNewsKeyWordOccurrenceMap();
+		Map<String, Integer> map = immediateNewsOccurrenceMapService.getNewsKeyWordOccurrenceMap();
 		for(Map.Entry<String, Integer> entry: map.entrySet()){
 			log.info(entry.getKey() + " " + entry.getValue());
 		}
@@ -32,7 +32,7 @@ public class ImmediateNewsServiceTest {
 	
 	@Test
 	public void getAllWordOccurrenceMap(){
-		Map<String, Map<String, Integer>> map = immediateNewsService.getAllNewsKeyWordOccurrenceMap();
+		Map<String, Map<String, Integer>> map = immediateNewsOccurrenceMapService.getAllNewsKeyWordOccurrenceMap();
 		for(Entry<String, Map<String, Integer>> yearMap: map.entrySet()){
 			log.info(yearMap.getKey());
 			log.info("===");
