@@ -105,6 +105,9 @@ public class WebDriverUtil {
 	 * @return Xml content of url
 	 */
 	public static String getXml(String url, ExpectedCondition<WebElement> expectedCondition, boolean scrollDown) {
+		
+		url = getAsciiUrl(url);
+		
 		if (WebDriverUtilXmlCache.get(url) == null){
 			WebDriver webDriver = WebDriverFactory.getPhantomJSDriver();
 			webDriver.get(url);
@@ -135,6 +138,23 @@ public class WebDriverUtil {
 		}else {
 			return WebDriverUtilXmlCache.get(url);
 		}
+	}
+	
+	/**
+	 * URLs can only sent over Internet using ASCII character-set 
+	 * 
+	 * This method is used to convert url to url in ASCII format.
+	 * 
+	 * @param url
+	 * @return url in ASCII format
+	 */
+	public static String getAsciiUrl(String url){
+		try {
+			url = new URL(url).toURI().toASCIIString();
+		} catch (Exception e) {
+			throw new WebDriverUtilException(e);
+		}
+		return url;
 	}
 	
 	/**

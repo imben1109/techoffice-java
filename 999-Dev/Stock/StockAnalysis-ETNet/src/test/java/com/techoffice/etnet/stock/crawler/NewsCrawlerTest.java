@@ -41,7 +41,7 @@ public class NewsCrawlerTest {
 	@Test
 	public void getNewsListStatic(){
 		List<News> crawledNewsList = newsCrawler.getNewsList();
-		List<String> newsList = ListUtil.getAttributeList(crawledNewsList, "content");
+		List<String> newsList = ListUtil.getAttributeList(crawledNewsList, "contents");
 		newsList = SpecialStringUtil.replaceNonWordCharacter(newsList);
 		Assert.notEmpty(newsList);
 		Map<String, Integer> occurrenceMap = StringUtil.getOccurrenceMap(newsList);
@@ -61,7 +61,8 @@ public class NewsCrawlerTest {
 	
 	@Test
 	public void getPostDate(){
-		Date postDate = newsCrawler.getPostDate(newsCrawler.getXml());
+		Date postDate = newsCrawler.getPostDate(newsCrawler.getXml("http://inews.hket.com/sran001/全部?dis=20171229"));
 		log.info(postDate.toString());
 	}
+	
 }

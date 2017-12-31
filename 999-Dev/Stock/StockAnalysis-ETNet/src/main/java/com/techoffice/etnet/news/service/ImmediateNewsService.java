@@ -2,6 +2,8 @@ package com.techoffice.etnet.news.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,8 @@ public class ImmediateNewsService {
 	@Autowired
 	private NewsDao newsDao;
 	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private ImmediateNewsCrawler immediateNewsCrawler;
 	
@@ -23,6 +27,7 @@ public class ImmediateNewsService {
 		List<AvailableNewsDate> availableNewsDateList = immediateNewsCrawler.getAvailableDateList();
 		for (AvailableNewsDate availableNewsDate: availableNewsDateList){
 			List<News> newsList = immediateNewsCrawler.getNewsList(availableNewsDate.getUrl());
+			log.info(availableNewsDate.getUrl() + " Total News Number: " + newsList.size());
 			newsDao.add(newsList);
 		}
 	}

@@ -15,13 +15,13 @@ import com.techoffice.etnet.news.service.ImmediateNewsService;
 public class ImmediateNewsServiceTest {
 
 	@Autowired
-	private ImmediateNewsService ImmediateNewsService;
+	private ImmediateNewsService immediateNewsService;
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Test
 	public void addCrawledImmediateNewsList(){
-		ImmediateNewsService.addCrawledImmediateNewsList();
+		immediateNewsService.addCrawledImmediateNewsList();
 	}
 	
 	

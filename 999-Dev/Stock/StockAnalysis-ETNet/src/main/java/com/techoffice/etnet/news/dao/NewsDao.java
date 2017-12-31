@@ -35,7 +35,10 @@ public class NewsDao {
 		return typedQuery.getResultList();
 	}
 	
-	
+	@Transactional
+	public int delete(){
+		return em.createQuery("Delete From News").executeUpdate();
+	}
 	
 	
 }
