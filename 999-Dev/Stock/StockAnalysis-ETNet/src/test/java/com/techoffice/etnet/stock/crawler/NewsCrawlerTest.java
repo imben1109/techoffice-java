@@ -14,8 +14,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
 
 import com.techoffice.etnet.news.crawler.ImmediateNewsCrawler;
+import com.techoffice.etnet.news.entity.News;
 import com.techoffice.etnet.news.model.AvailableNewsDate;
-import com.techoffice.etnet.news.model.CrawledNews;
 import com.techoffice.util.ListUtil;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.StringUtil;
@@ -31,16 +31,16 @@ public class NewsCrawlerTest {
 	
 	@Test
 	public void getNewsList(){
-		List<CrawledNews> newsList = newsCrawler.getNewsList();
+		List<News> newsList = newsCrawler.getNewsList();
 		Assert.notEmpty(newsList);
-		for (CrawledNews news: newsList){
+		for (News news: newsList){
 			log.info(news.getContents());
 		}
 	}
 	
 	@Test
 	public void getNewsListStatic(){
-		List<CrawledNews> crawledNewsList = newsCrawler.getNewsList();
+		List<News> crawledNewsList = newsCrawler.getNewsList();
 		List<String> newsList = ListUtil.getAttributeList(crawledNewsList, "content");
 		newsList = SpecialStringUtil.replaceNonWordCharacter(newsList);
 		Assert.notEmpty(newsList);

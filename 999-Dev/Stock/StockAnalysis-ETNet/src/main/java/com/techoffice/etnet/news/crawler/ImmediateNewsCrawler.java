@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.techoffice.etnet.news.entity.News;
 import com.techoffice.etnet.news.model.AvailableNewsDate;
-import com.techoffice.etnet.news.model.CrawledNews;
 import com.techoffice.util.DateUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
@@ -25,6 +27,10 @@ import com.techoffice.util.XmlUtil;
 @Component
 public class ImmediateNewsCrawler {
 
+	public static final String TYPE = "IMMEDIATE";
+	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	public String getXml(){
 		return WebDriverUtil.getXml("http://inews.hket.com/sran001");
 	}
@@ -33,27 +39,29 @@ public class ImmediateNewsCrawler {
 		return WebDriverUtil.getXml(url);		
 	}
 	
-	public List<CrawledNews> getNewsList(){
+	public List<News> getNewsList(){
 		return getNewsList(null);
 	}
 	
-	public List<CrawledNews> getNewsList(String url){
-		List<CrawledNews> crawledNewsList = new ArrayList<CrawledNews>();
+	public List<News> getNewsList(String url){
+		List<News> newList = new ArrayList<News>();
 		String xml = null;
 		if (url == null){
 			xml = getXml();
 		}else {
+			log.info("Get News List: " + url);
 			xml = getXml(url);
 		}
 		Date postDate = getPostDate(xml);
 		List<String> newsList = XmlUtil.getNodeListText(xml, "//*[@id='eti-inews-list']/tbody/tr/td/a");
 		for (String news: newsList){
-			CrawledNews crawledNews = new CrawledNews();
+			News crawledNews = new News();
 			crawledNews.setContents(news);
 			crawledNews.setPostDate(postDate);
-			crawledNewsList.add(crawledNews);
+			crawledNews.setType(TYPE);
+			newList.add(crawledNews);
 		}
-		return crawledNewsList;
+		return newList;
 	}
 	
 	public List<AvailableNewsDate> getAvailableDateList(){

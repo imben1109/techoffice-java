@@ -1,5 +1,6 @@
 package com.techoffice.util;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +24,17 @@ public class ListUtil {
 			}
 		}
 		return attributeList;	
+	}
+	
+	public static List<?> setProperty(List<?> list, String attribute, Object value){
+		for (Object obj: list){
+			try {
+				BeanUtils.setProperty(obj, attribute, value);
+			} catch (Exception e) {
+				throw new ListUtilAttributeException(e);
+			}
+		}
+		return list;
 	}
 	
 	public static <Orig, Dest> List<Dest> copy(List<Orig> origlist, Class<Dest> clz){
