@@ -21,7 +21,6 @@ public class ImmediateNewsServiceTest {
 	
 	@Test
 	public void addCrawledImmediateNewsList(){
-		immediateNewsService.saveCrawledImmediateNewsList();
 	}
 	
 	

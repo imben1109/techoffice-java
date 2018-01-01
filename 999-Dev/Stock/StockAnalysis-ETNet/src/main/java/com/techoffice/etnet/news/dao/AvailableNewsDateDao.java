@@ -19,11 +19,10 @@ public class AvailableNewsDateDao extends BaseDao<AvailableNewsDate>{
 	}
 
 	@Transactional
-	public List<AvailableNewsDate> listByRunInd(String runInd){
+	public List<AvailableNewsDate> listNotRun(){
 		TypedQuery<AvailableNewsDate> query = this.getEntityManager().createQuery(
-				"FROM AvailableNewsDate WHERE runInd = :runInd", 
+				"FROM AvailableNewsDate WHERE runInd = 'N' or runInd is null", 
 				AvailableNewsDate.class);
-		query.setParameter("runInd", runInd);
 		return query.getResultList();
 	}
 	

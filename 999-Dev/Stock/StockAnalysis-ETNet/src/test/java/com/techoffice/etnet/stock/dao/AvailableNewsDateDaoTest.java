@@ -91,4 +91,11 @@ public class AvailableNewsDateDaoTest {
 		availableNewsDateDao.delete(testData);
 		log.info("List Size: " + availableNewsDateDao.count());
 	}
+	
+	@Test
+	@Transactional
+	public void listNotRun(){
+		List<AvailableNewsDate> list = availableNewsDateDao.listNotRun();
+		log.info("count: " + list.size());
+	}
 }
