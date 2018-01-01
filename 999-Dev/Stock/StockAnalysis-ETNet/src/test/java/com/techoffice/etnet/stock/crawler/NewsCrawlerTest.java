@@ -14,8 +14,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
 
 import com.techoffice.etnet.news.crawler.ImmediateNewsCrawler;
+import com.techoffice.etnet.news.entity.AvailableNewsDate;
 import com.techoffice.etnet.news.entity.News;
-import com.techoffice.etnet.news.model.AvailableNewsDate;
 import com.techoffice.util.ListUtil;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.StringUtil;
@@ -55,7 +55,7 @@ public class NewsCrawlerTest {
 		List<AvailableNewsDate> availableDateList = newsCrawler.getAvailableDateList();
 		Assert.notEmpty(availableDateList);
 		for (AvailableNewsDate availableDate: availableDateList){
-			log.info(availableDate.getUrl());
+			log.info(availableDate.getPostDate().toString());
 		}
 	}
 	

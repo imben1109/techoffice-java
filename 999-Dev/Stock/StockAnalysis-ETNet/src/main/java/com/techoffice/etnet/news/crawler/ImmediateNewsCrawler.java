@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.techoffice.etnet.news.entity.AvailableNewsDate;
 import com.techoffice.etnet.news.entity.News;
-import com.techoffice.etnet.news.model.AvailableNewsDate;
 import com.techoffice.util.DateUtil;
 import com.techoffice.util.WebDriverUtil;
 import com.techoffice.util.XmlUtil;
@@ -70,10 +70,12 @@ public class ImmediateNewsCrawler {
 		NodeList nodeList = XmlUtil.evaluateXpath(xml, "/html/body/div/div[4]/div[1]/div[2]/select/option");
 		for (int i=0; i<nodeList.getLength(); i++){
 			Node node = nodeList.item(i);
-			String desc = XmlUtil.getNodeText(node);
+			String dateStr = XmlUtil.getNodeText(node);
 			String url = XmlUtil.getNodeText(node.getAttributes().getNamedItem("value"));
 			AvailableNewsDate availableNewsDate = new AvailableNewsDate();
-			availableNewsDate.setDesc(desc);
+			availableNewsDate.setDateStr(dateStr);
+			Date postDate = DateUtil.parseTruncateDate(dateStr, "yyyy/MM/dd");
+			availableNewsDate.setPostDate(postDate);
 			availableNewsDate.setUrl(url);
 			availNewsDateList.add(availableNewsDate);
 		}

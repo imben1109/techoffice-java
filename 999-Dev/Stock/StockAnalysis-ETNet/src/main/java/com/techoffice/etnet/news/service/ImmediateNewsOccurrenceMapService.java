@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.techoffice.etnet.news.crawler.ImmediateNewsCrawler;
+import com.techoffice.etnet.news.entity.AvailableNewsDate;
 import com.techoffice.etnet.news.entity.News;
-import com.techoffice.etnet.news.model.AvailableNewsDate;
 import com.techoffice.util.ListUtil;
 import com.techoffice.util.SpecialStringUtil;
 import com.techoffice.util.StringUtil;
@@ -48,7 +48,7 @@ public class ImmediateNewsOccurrenceMapService {
 		List<AvailableNewsDate> availNewsDateList = immediateNewsCrawler.getAvailableDateList();
 		for (AvailableNewsDate availableNewsDate: availNewsDateList){
 			Map<String, Integer> newsKeyWordOccurrenceMap = getNewsKeyWordOccurrenceMap(availableNewsDate.getUrl());
-			map.put(availableNewsDate.getDesc(), newsKeyWordOccurrenceMap);
+			map.put(availableNewsDate.getDateStr(), newsKeyWordOccurrenceMap);
 		}
 		return map; 
 	}

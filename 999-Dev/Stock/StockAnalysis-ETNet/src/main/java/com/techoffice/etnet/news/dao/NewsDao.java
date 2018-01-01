@@ -1,44 +1,19 @@
 package com.techoffice.etnet.news.dao;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
+import com.techoffice.dao.BaseDao;
 import com.techoffice.etnet.news.entity.News;
 
 @Repository
-public class NewsDao {
+public class NewsDao extends BaseDao<News>{
 
-	@PersistenceContext
-	private EntityManager em;
-	
-	@Transactional
-	public void add(News news){
-		em.persist(news);
+	@Override
+	public Class<News> getEntityClass() {
+		return News.class;
 	}
+
 	
-	@Transactional
-	public void add(List<News> newsList){
-		for (News news: newsList){
-			em.persist(news);
-		}
-	}
-	
-	@Transactional
-	public List<News> list(){
-		TypedQuery<News> typedQuery  = em.createQuery("From News", News.class);
-		return typedQuery.getResultList();
-	}
-	
-	@Transactional
-	public int delete(){
-		return em.createQuery("Delete From News").executeUpdate();
-	}
 	
 	
 }
