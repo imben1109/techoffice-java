@@ -22,6 +22,14 @@ public class AvailableNewsDateService {
 	@Transactional
 	public void saveCrawledAvailableDateList(){
 		 List<AvailableNewsDate> availableNewsDateList =  immediateNewsCrawler.getAvailableDateList();
-		 availableNewsDateDao.save(availableNewsDateList);
+		 for (AvailableNewsDate availableNewsDate: availableNewsDateList){
+			 if (availableNewsDateDao.find(availableNewsDate.getPostDate()) == null){
+				 availableNewsDateDao.add(availableNewsDate);
+			 }
+		 }
+	}
+	
+	public void saveCrawledImmediateNewsListWithAvailableDate(){
+		
 	}
 }

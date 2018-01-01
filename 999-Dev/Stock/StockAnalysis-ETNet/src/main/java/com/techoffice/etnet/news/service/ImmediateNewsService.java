@@ -24,7 +24,7 @@ public class ImmediateNewsService {
 	@Autowired
 	private ImmediateNewsCrawler immediateNewsCrawler;
 	
-	public void addCrawledImmediateNewsList(){
+	public void saveCrawledImmediateNewsList(){
 		List<AvailableNewsDate> availableNewsDateList = immediateNewsCrawler.getAvailableDateList();
 		log.info("No. of Available Date List: " + availableNewsDateList.size());
 		Assert.isTrue(availableNewsDateList.size() > 0);
