@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.techoffice.example</groupId>
-    <artifactId>MyBatis3SpringExample</artifactId>
+    <artifactId>MyBatis3SpringBaseDaoExample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
     	<dependency>
@@ -30,16 +30,6 @@
 			<artifactId>spring-expression</artifactId>
 			<version>4.3.0.RELEASE</version>
 		</dependency>
-		 <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>4.3.0.RELEASE</version>
-        </dependency>
-		<dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>4.3.0.RELEASE</version>
-        </dependency>
     	<dependency>
   			<groupId>org.mybatis</groupId>
   			<artifactId>mybatis-spring</artifactId>
