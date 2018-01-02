@@ -1,5 +1,6 @@
 package com.techoffice.etnet.news.service;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,7 +8,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.techoffice.etnet.news.crawler.ImmediateNewsCrawler;
+import com.techoffice.etnet.news.dao.AvailableNewsDateDao;
+import com.techoffice.etnet.news.dao.NewsDao;
 import com.techoffice.etnet.news.entity.AvailableNewsDate;
 import com.techoffice.etnet.news.entity.News;
 import com.techoffice.util.ListUtil;
@@ -24,30 +26,33 @@ import com.techoffice.util.StringUtil;
 public class ImmediateNewsOccurrenceMapService {
 
 	@Autowired
-	private ImmediateNewsCrawler immediateNewsCrawler; 
+	private NewsDao newsDao;
+	
+	@Autowired
+	private AvailableNewsDateDao availableNewsDateDao;
 	
 	public Map<String, Integer> getNewsKeyWordOccurrenceMap(){
 		return getNewsKeyWordOccurrenceMap(null);
 	}
 	
-	public Map<String, Integer> getNewsKeyWordOccurrenceMap(String url){
-		List<News> crawledNewsList = null;
-		if (url == null){
-			crawledNewsList = immediateNewsCrawler.getNewsList();
+	public Map<String, Integer> getNewsKeyWordOccurrenceMap(Date postDate){
+		List<News> newsList = null;
+		if (postDate == null){
+			newsList = newsDao.list();
 		}else {
-			crawledNewsList = immediateNewsCrawler.getNewsList(url);
+			newsList = newsDao.listByPostDate(postDate);
 		}
-		List<String> newsList = ListUtil.getAttributeList(crawledNewsList, "contents");
-		newsList = SpecialStringUtil.getChineseStringList(newsList);
-		Map<String, Integer> occurrenceMap = StringUtil.getOccurrenceMap(newsList, 2);
+		List<String> newsContentsList = ListUtil.getAttributeList(newsList, "contents");
+		newsContentsList = SpecialStringUtil.getChineseStringList(newsContentsList);
+		Map<String, Integer> occurrenceMap = StringUtil.getOccurrenceMap(newsContentsList, 2);
 		return occurrenceMap;
 	}
 	
 	public Map<String, Map<String, Integer>> getAllNewsKeyWordOccurrenceMap(){
 		Map<String, Map<String, Integer>> map = new HashMap<String, Map<String, Integer>>();
-		List<AvailableNewsDate> availNewsDateList = immediateNewsCrawler.getAvailableDateList();
+		List<AvailableNewsDate> availNewsDateList = availableNewsDateDao.listRun();
 		for (AvailableNewsDate availableNewsDate: availNewsDateList){
-			Map<String, Integer> newsKeyWordOccurrenceMap = getNewsKeyWordOccurrenceMap(availableNewsDate.getUrl());
+			Map<String, Integer> newsKeyWordOccurrenceMap = getNewsKeyWordOccurrenceMap(availableNewsDate.getPostDate());
 			map.put(availableNewsDate.getDateStr(), newsKeyWordOccurrenceMap);
 		}
 		return map; 

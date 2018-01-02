@@ -26,4 +26,8 @@ public class AvailableNewsDateDao extends BaseDao<AvailableNewsDate>{
 		return query.getResultList();
 	}
 	
+	@Transactional
+	public List<AvailableNewsDate> listRun(){
+		return super.listByProperty("runInd", "Y");
+	}
 }

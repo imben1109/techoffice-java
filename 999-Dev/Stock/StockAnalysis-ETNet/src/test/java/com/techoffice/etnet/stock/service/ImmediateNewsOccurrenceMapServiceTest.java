@@ -23,7 +23,7 @@ public class ImmediateNewsOccurrenceMapServiceTest {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Test
-	public void getWordOccurrenceMap(){
+	public void getNewsKeyWordOccurrenceMap(){
 		Map<String, Integer> map = immediateNewsOccurrenceMapService.getNewsKeyWordOccurrenceMap();
 		for(Map.Entry<String, Integer> entry: map.entrySet()){
 			log.info(entry.getKey() + " " + entry.getValue());
@@ -31,7 +31,7 @@ public class ImmediateNewsOccurrenceMapServiceTest {
 	}
 	
 	@Test
-	public void getAllWordOccurrenceMap(){
+	public void getAllNewsKeyWordOccurrenceMap(){
 		Map<String, Map<String, Integer>> map = immediateNewsOccurrenceMapService.getAllNewsKeyWordOccurrenceMap();
 		for(Entry<String, Map<String, Integer>> yearMap: map.entrySet()){
 			log.info(yearMap.getKey());

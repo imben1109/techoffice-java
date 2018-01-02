@@ -77,6 +77,15 @@ public abstract class BaseDao<T> {
 	}
 	
 	@Transactional
+	protected List<T> listByProperty(String propertyName, Object value){
+		TypedQuery<T> typedQuery  = em.createQuery(
+				"FROM " + this.getSimpleName() + " WHERE " + propertyName + "= :" + propertyName, 
+				this.getEntityClass());
+		typedQuery.setParameter(propertyName, value);
+		return typedQuery.getResultList();
+	}
+	
+	@Transactional
 	public void delete(T entity){
 		em.remove(entity);
 	}

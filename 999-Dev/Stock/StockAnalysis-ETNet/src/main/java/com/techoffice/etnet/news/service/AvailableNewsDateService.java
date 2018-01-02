@@ -49,7 +49,7 @@ public class AvailableNewsDateService {
 	@Transactional
 	public void saveCrawledImmediateNewsListWithNotRunAvailableDate(){
 		List<Future<String>> futureList = new ArrayList<Future<String>>();
-		ExecutorService executorService = Executors.newFixedThreadPool(3);
+		ExecutorService executorService = Executors.newFixedThreadPool(1);
 		List<AvailableNewsDate> availableNewsDateList = availableNewsDateDao.listNotRun();
 		log.info("Count: " + availableNewsDateList.size());
 		for (final AvailableNewsDate availableNewsDate: availableNewsDateList){
