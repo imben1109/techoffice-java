@@ -41,7 +41,7 @@ public class DateUtil {
 	}
 	
 	/**
-	 * Parse Date by Rspecified Date String and Pattern
+	 * Parse Date by specified Date String and Pattern
 	 * 
 	 * @param dateStr Date String to Parse
 	 * @param pattern Date Pattern for Date Parsing
@@ -57,4 +57,18 @@ public class DateUtil {
 			throw new DateParseException("Fails to parse date: " + dateStr + " by pattern: " + pattern, e); 
 		}
 	}
+	
+	/**
+	 * Format Date to String by specified pattern
+	 * 
+	 * @param date
+	 * @param pattern
+	 * @return
+	 */
+	public static String format(Date date, String pattern){
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		String dateStr = simpleDateFormat.format(date);
+		return dateStr;
+	}
+	
 }

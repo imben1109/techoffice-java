@@ -1,8 +1,15 @@
 package com.techoffice.util;
 
+import java.io.File;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
+
+import org.apache.commons.io.FileUtils;
+
+import com.techoffice.util.exception.UrlUtilException;
+import com.techoffice.util.exception.WebDriverUtilException;
 
 /**
  * URL Utility
@@ -48,11 +55,39 @@ public class UrlUtil {
 		return map;
 	}
 	
-
 	public static boolean containParam(String url){
 		if (url.contains("?")){
 			return true;
 		}
 		return false;
+	}
+	
+	public static String getDomainUrl(String str){
+		try{
+			URL url = new URL(str);
+			return url.getProtocol()+ "://" + url.getHost();
+		} catch(Exception e){
+			throw new WebDriverUtilException(e);
+		}
+	}
+	
+	public static String getUrl(String urlStr, String path){
+		try {
+			URL context = new URL(urlStr);
+			URL url = new URL(context, path);
+			return url.toString();
+		} catch (Exception e) {
+			throw new UrlUtilException(e);
+		}
+	}
+	
+	public static File downloadToFile(String urlStr, File file){
+		try {
+			URL url = new URL(urlStr);
+			FileUtils.copyURLToFile(url, file);
+			return file;
+		} catch (Exception e) {
+			throw new UrlUtilException(e);
+		}
 	}
 }

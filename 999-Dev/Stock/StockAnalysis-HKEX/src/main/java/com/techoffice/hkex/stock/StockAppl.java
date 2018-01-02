@@ -32,19 +32,19 @@ public class StockAppl {
 	
 	@Transactional
 	public void run() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
-		List<Stock> stocks = stockCrawler.retrieveStockList();
-		for (Stock stock: stocks){
-			if (stock.getStockCode() != null){
-				System.out.println(stock.getStockCode() + " " + stock.getName());
-				stockDao.save(stock);	
-			}
-		}
+//		List<Stock> stocks = stockCrawler.retrieveStockList();
+//		for (Stock stock: stocks){
+//			if (stock.getStockCode() != null){
+//				System.out.println(stock.getStockCode() + " " + stock.getName());
+//				stockDao.save(stock);	
+//			}
+//		}
 	}
 	
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		StockAppl appl = context.getBean(StockAppl.class);
-		appl.run();
+//		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//		StockAppl appl = context.getBean(StockAppl.class);
+//		appl.run();
 	}
 }

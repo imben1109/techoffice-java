@@ -39,12 +39,12 @@ public class StockService {
 	
 	@Transactional
 	public void updateFromInternet() throws FailingHttpStatusCodeException, MalformedURLException, XPathExpressionException, IOException, ParserConfigurationException, SAXException, InterruptedException, TransformerException, XmlUtilInvalidDocumentException{
-		stockDao.clear();
-		List<Stock> stockList = stockWebClientService.retrieveStockList();
-		for(Stock stock: stockList){
-			if (stock.getStockCode() != null){
-				stockDao.save(stock);	
-			}
-		}
+		//stockDao.clear();
+		//List<Stock> stockList = stockWebClientService.retrieveStockList();
+		//for(Stock stock: stockList){
+		//	if (stock.getStockCode() != null){
+		//		stockDao.save(stock);	
+		//	}
+		//}
 	}
 }
