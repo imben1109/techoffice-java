@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<workbook>
+    <worksheet idx="0">
+        <loop startRow="7" endRow="7" items="employees" var="employee" varType="com.techoffice.example.Employee">
+            <section startRow="7" endRow="7">
+            <mapping row="7" col="0">employee.name</mapping>
+            <mapping row="7" col="1">employee.age</mapping>
+            <mapping row="7" col="3">employee.payment</mapping>
+            <mapping row="7" col="4">employee.bonus</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0">Employee Payment Totals:</cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>
