@@ -1,6 +1,10 @@
 package com.techoffice.example;
 
+import com.techoffice.dao.base.Key;
+
 public class Table1 {
+	
+	@Key
 	private String col1;
 	private String col2;
 	private Double col3;
