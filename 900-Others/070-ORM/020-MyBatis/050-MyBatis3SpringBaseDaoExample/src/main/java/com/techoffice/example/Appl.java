@@ -13,7 +13,7 @@ public class Appl {
 	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 	@Autowired
-	private Dao table1Dao;
+	private Table1Dao table1Dao;
 	
 	public void test(){
 		List<Table1> temp3List = table1Dao.select();
