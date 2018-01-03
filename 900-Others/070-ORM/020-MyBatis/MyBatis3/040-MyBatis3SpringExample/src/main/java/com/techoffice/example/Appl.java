@@ -10,6 +10,7 @@ public class Appl {
 	
 	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
+	
 	@Autowired
 	private Table1Dao table1Dao;
 	

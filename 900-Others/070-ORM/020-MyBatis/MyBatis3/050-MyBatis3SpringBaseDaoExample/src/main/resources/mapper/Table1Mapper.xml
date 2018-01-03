@@ -15,4 +15,13 @@
 	<select id="select" resultMap="table1">
 		SELECT * FROM TABLE1;
 	</select>
+	
+	<select id="createTable1">
+		CREATE TABLE IF NOT EXISTS TABLE1 (
+			COL1 VARCHAR2(100), 
+			COL2 VARCHAR2(100),
+			COL3 NUMBER(7,5)
+		);
+	</select>
+	
 </mapper>
