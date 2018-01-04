@@ -1,8 +1,11 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.io.Serializable;
 
 public class Message implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private String content;
 
 	public String getContent() {
@@ -12,7 +15,7 @@ public class Message implements Serializable {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
-	
+
+
 	
 }

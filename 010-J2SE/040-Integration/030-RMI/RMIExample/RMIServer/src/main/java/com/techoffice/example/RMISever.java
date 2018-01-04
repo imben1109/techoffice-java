@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;

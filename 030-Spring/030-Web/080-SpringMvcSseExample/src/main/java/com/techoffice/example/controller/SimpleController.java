@@ -1,4 +1,4 @@
-package com.ittechoffice.example.controller;
+package com.techoffice.example.controller;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import com.ittechoffice.example.sse.SseEmitterManager;
+import com.techoffice.example.sse.SseEmitterManager;
 
 @Controller
 public class SimpleController {

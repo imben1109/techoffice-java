@@ -9,6 +9,6 @@ public class StaticExample {
 	public static void main(String[] args) throws ClassNotFoundException{
 		System.out.println("Hello Main");
 		// Force VM load the name named "AnotherClass"
-		Class.forName("com.ittechoffice.example.AnotherClass");
+		Class.forName("com.techoffice.example.AnotherClass");
 	}
 }

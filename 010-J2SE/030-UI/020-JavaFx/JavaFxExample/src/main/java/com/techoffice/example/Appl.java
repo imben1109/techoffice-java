@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

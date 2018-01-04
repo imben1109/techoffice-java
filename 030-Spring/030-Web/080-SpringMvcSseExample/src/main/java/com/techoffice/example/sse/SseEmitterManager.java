@@ -1,4 +1,4 @@
-package com.ittechoffice.example.sse;
+package com.techoffice.example.sse;
 
 import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
