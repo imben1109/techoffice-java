@@ -1,8 +1,8 @@
-package com.techoffice.hkex.stock.crawler;
+package com.techoffice.hkex.stock.reader;
 
 import java.io.File;
+import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -10,21 +10,25 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Assert;
+
+import com.techoffice.hkex.stock.model.Stock;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/beans.xml")
-public class StockCrawlerTest {
+public class StockExcelReaderTest {
 
 	@Autowired
-	private StockCrawler stockCrawler;
+	private StockExcelReader stockExcelReader;
 	
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Test
-	public void downloadStockListXmlFile(){
-		File file = stockCrawler.downloadStockListXmlFile();
-		log.info(file.getAbsolutePath());
+	public void read(){
+		List<Stock> list = stockExcelReader.read(new File("ListOfSecurities.xlsx"));
+		log.info("count: " + list.size());
+		for (Stock stock: list){
+			log.info(stock.getStockCode() + " " + stock.getName());
+		}
 	}
 	
 }

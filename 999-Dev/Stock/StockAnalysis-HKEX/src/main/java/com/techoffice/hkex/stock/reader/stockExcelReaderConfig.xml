@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbook>
+    <worksheet idx="0">
+        <section startRow="0" endRow="2">
+        </section>
+        <loop startRow="3" endRow="3" items="bean" var="stock" varType="com.techoffice.hkex.stock.model.Stock">
+            <section startRow="3" endRow="3">
+	            <mapping row="3" col="0">stock.stockCode</mapping>
+	            <mapping row="3" col="1">stock.name</mapping>
+	            <mapping row="3" col="2">stock.category</mapping>
+	            <mapping row="3" col="3">stock.subCategory</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0"></cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>

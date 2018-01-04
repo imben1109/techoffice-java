@@ -13,6 +13,8 @@ public class Stock {
 	private String stockCode;
 	private String name;
 	private String chiName;
+	private String category;
+	private String subCategory;
 	
 	public String getStockCode() {
 		return stockCode;
@@ -32,4 +34,17 @@ public class Stock {
 	public void setChiName(String chiName){
 		this.chiName = chiName;
 	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getSubCategory() {
+		return subCategory;
+	}
+	public void setSubCategory(String subCategory) {
+		this.subCategory = subCategory;
+	}
+	
 }

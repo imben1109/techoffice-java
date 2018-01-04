@@ -17,19 +17,7 @@ public class StockCrawler {
 	
 	final Logger log = LoggerFactory.getLogger(this.getClass());		
 
-	public static final String URL = "http://www.hkex.com.hk/Products/Securities/Equities/Equity-Warrants?sc_lang=en";
-	
-	public String getXml() {
-		return WebDriverUtil.getXml(URL);
-	}
-	
-	public String getStockListXlsFileUrl(){
-		String xPath = "/html/body/form/div[8]/main/section/div[2]/div[1]/p[2]/a";
-		String xml = getXml();
-		Node node = XmlUtil.evaluateXpathNode(xml, xPath);
-		String url = node.getAttributes().getNamedItem("href").getNodeValue();
-		return url;
-	}
+	public static final String URL = "http://www.hkex.com.hk/eng/services/trading/securities/securitieslists/ListOfSecurities.xlsx";
 	
 	public File downloadStockListXmlFile() {
 		try {

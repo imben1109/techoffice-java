@@ -1,24 +1,25 @@
 package com.techoffice.hkex.stock.reader;
 
-import java.io.File;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Component;
 
 import com.techoffice.hkex.stock.model.Stock;
 import com.techoffice.reader.base.BaseExcelReader;
 
-public class StockReader extends BaseExcelReader<List<Stock>> {
+@Component
+public class StockExcelReader extends BaseExcelReader<List<Stock>> {
 
 	@Override
 	public InputStream getConfig() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.getClass().getResourceAsStream("stockExcelReaderConfig.xml");
 	}
 
 	@Override
 	public List<Stock> getBean() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<Stock>();
 	}
 
 }
