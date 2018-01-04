@@ -1,19 +1,23 @@
 package com.techoffice.hkex.stock.crawler;
 
 import java.io.File;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.w3c.dom.Node;
 
 import com.techoffice.hkex.stock.crawler.exception.StockCrawlerException;
+import com.techoffice.hkex.stock.model.Stock;
+import com.techoffice.hkex.stock.reader.StockExcelReader;
 import com.techoffice.util.UrlUtil;
-import com.techoffice.util.WebDriverUtil;
-import com.techoffice.util.XmlUtil;
 
 @Component
 public class StockCrawler {
+	
+	@Autowired
+	private StockExcelReader stockExcelReader;
 	
 	final Logger log = LoggerFactory.getLogger(this.getClass());		
 
@@ -30,6 +34,10 @@ public class StockCrawler {
 		}
 	}
 
+	public List<Stock> getStockList(){
+		File file = downloadStockListXmlFile();
+		return stockExcelReader.read(file);
+	}
 
 	
 }
