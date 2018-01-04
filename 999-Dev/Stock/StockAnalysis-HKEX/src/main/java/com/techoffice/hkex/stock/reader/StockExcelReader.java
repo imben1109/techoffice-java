@@ -13,7 +13,7 @@ import com.techoffice.reader.base.BaseExcelReader;
 public class StockExcelReader extends BaseExcelReader<List<Stock>> {
 
 	@Override
-	public InputStream getConfig() {
+	public InputStream getConfigInputStream() {
 		return this.getClass().getResourceAsStream("stockExcelReaderConfig.xml");
 	}
 
