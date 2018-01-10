@@ -1,1 +1,1 @@
-# Spring Splitted Xml Configuration Example
+# Spring Splitted Configuration Example
