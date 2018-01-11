@@ -1,4 +1,4 @@
-# Spring Example 
+# Spring Configuration Example 
 
 ## Prerequisite
 * Maven 3
@@ -15,13 +15,13 @@ Spring is inversion of control framework for Java.
 This Example demonstrates the Hello World Example of Spring.
 
 * **SimpleSpringAppl**
- * Simple Spring Example Using XML Configuration
+	* Simple Spring Example Using XML Configuration
 * **SimpleSpringApplJavaBasedConfig**
- * Simple Spring Example Using Java Based Configuration
+	* Simple Spring Example Using Java Based Configuration
 * **SimpleSpringApplWithAnnotation**
- * Simple Spring Example With Annotation Configuration
+	* Simple Spring Example With Annotation Configuration
 * **SimpleSpringApplWithComponentScan**
- * Simple Spring Example With Auto-Scan Configuration
+	* Simple Spring Example With Auto-Scan Configuration
 
 ## Spring 
 

@@ -1,4 +1,4 @@
-package com.ittechoffice.example.controller;
+package com.techoffice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;

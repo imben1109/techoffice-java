@@ -13,7 +13,7 @@
    http://www.springframework.org/schema/websocket/spring-websocket.xsd">
 
 	<!-- Enable Annotation -->
-	<context:component-scan base-package="com.ittechoffice.example" />
+	<context:component-scan base-package="com.techoffice" />
 	<mvc:annotation-driven />
 
 	<!-- Enable JSP for view -->
