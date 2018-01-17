@@ -18,9 +18,9 @@ public class Appl {
 	
 	@SuppressWarnings("serial")
 	public static void main(String[] args) throws LifecycleException, IOException{		
-
+		int port = 8888;
 	    Tomcat tomcat = new Tomcat();
-	    tomcat.setPort(8080);
+	    tomcat.setPort(port);
 	    
 	    //  
 		File tempFolder = Files.createTempDirectory(null).toFile();
@@ -43,7 +43,7 @@ public class Appl {
         ctx.addServletMapping("/*", "Embedded");        
 	    tomcat.start();
 	    
-	    System.out.println("Server is starting at localhost:8080");
+	    System.out.println("Server is starting at localhost:" + port);
 	    System.out.println("Server Temporay Directory: " + tempFolder.getAbsolutePath());
 	    
 	    tomcat.getServer().await();
