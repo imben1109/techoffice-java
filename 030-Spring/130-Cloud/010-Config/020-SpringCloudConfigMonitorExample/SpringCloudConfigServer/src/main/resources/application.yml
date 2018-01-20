@@ -1,8 +1,13 @@
 server:
   port: 8888
+  
+management:
+  context-path: /admin
+  
 spring:
   cloud:
     config:
       server:
         git:
           uri: file://${user.home}/config-repo
+  
