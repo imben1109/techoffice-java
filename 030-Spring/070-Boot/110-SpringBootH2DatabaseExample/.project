@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SpringBootDatabaseExample</name>
+	<name>SpringBootH2DatabaseExample</name>
 	<comment></comment>
 	<projects>
 	</projects>
