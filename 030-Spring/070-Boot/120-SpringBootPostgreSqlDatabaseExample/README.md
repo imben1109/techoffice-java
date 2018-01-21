@@ -1,15 +1,17 @@
-# Spring Boot Example
-
-<version>4.3.0.RELEASE</version>
+# Spring Boot PostgreSQL Example
 
 ## Prerequisite
-* Maven 3
-* Eclipse Mars 4.5
+* PostgreSQL
 
-## Dependencies
-* Spring Boot 1.4
+## Configuration
+**application.properties**
+```
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 
-## Example
 
-## Spring Boot
-It provide static function **SpringApplication.run** to bootstrap Spring Boot Application 
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
