@@ -15,7 +15,9 @@
 							return config;
 						},
 						responseError: function(rejection){
-							alert("error");
+							if (rejection && rejection.data && rejection.data.errorMessage){
+								alert(rejection.data.errorMessage);	
+							}
 							return $q.reject(rejection);
 						}
 					};
@@ -34,7 +36,8 @@
 				
 				$scope.getStringWithError = function(){
 					$http({
-						url: "./getStringWithError"
+						url: "./getStringWithError",
+						method : "GET"
 					}).success(function(data){
 						alert(data);
 					})

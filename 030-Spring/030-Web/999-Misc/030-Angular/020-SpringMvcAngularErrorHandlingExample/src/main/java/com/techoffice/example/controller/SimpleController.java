@@ -17,12 +17,12 @@ import com.techoffice.example.exception.ExampleException;
 @Controller
 public class SimpleController {
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
 	public String hello(ModelMap model){
 		return "home";
 	}
 	
-	@RequestMapping(value = "/getString", method = RequestMethod.GET,
+	@RequestMapping(value = "/getString", method = {RequestMethod.GET, RequestMethod.POST},
 			produces= {MediaType.TEXT_PLAIN_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
 	@ResponseBody
 	public HttpEntity<String> getString(){
@@ -31,7 +31,7 @@ public class SimpleController {
 		return new HttpEntity<String>("Test", headers);
 	}
 	
-	@RequestMapping(value = "/getStringWithError", method = RequestMethod.GET,
+	@RequestMapping(value = "/getStringWithError", method = {RequestMethod.GET, RequestMethod.POST},
 			produces= {MediaType.TEXT_PLAIN_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
 	@ResponseBody
 	public HttpEntity<String>  getStringWithError(){
@@ -43,7 +43,7 @@ public class SimpleController {
 		return new HttpEntity<String>("Test", headers);
 	}
 	
-	@RequestMapping(value = "/getMap", method = RequestMethod.GET,
+	@RequestMapping(value = "/getMap", method = {RequestMethod.GET, RequestMethod.POST},
 			produces= {MediaType.APPLICATION_JSON_UTF8_VALUE})
 	@ResponseBody
 	public Map<String, String> getMap(){
@@ -52,7 +52,7 @@ public class SimpleController {
 		return map;
 	}
 	
-	@RequestMapping(value = "/getMapWithError", method = RequestMethod.GET,
+	@RequestMapping(value = "/getMapWithError", method = {RequestMethod.GET, RequestMethod.POST},
 			produces= {MediaType.APPLICATION_JSON_UTF8_VALUE})
 	@ResponseBody
 	public Map<String, String> getMapWithError(){
