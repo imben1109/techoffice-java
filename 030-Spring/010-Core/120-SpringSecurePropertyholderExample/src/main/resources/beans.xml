@@ -5,13 +5,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.techoffice.example.ExamplePropertyPlaceholderConfigurer">
+	<bean class="com.techoffice.spring.EncryptPropertyPlaceholderConfigurer">
 		<property name="location">
 			<value>classpath:application.properties</value>
 		</property>
 	</bean>
 
-	<bean class="com.techoffice.example.HelloWorldExample">
+	<bean class="com.techoffice.HelloWorldExample">
 		<property name="message" value="${message}" />
 	</bean>
 

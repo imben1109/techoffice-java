@@ -1,8 +1,10 @@
-package com.techoffice.example;
+package com.techoffice.spring;
 
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 
-public class ExamplePropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer{
+import com.techoffice.security.CipherUtil;
+
+public class EncryptPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer{
 	
 	private static final String ENCRYPTED_VALUE_PREFIX = "ENC(";
 	private static final String ENCRYPTED_VALUE_SUFFIX = ")";
@@ -10,7 +12,7 @@ public class ExamplePropertyPlaceholderConfigurer extends PropertyPlaceholderCon
 	@Override
 	public String convertPropertyValue(String originalValue){
 		if (isEncryptedValue(originalValue)){
-			return "Encrypted Content";
+			return CipherUtil.decrypt(getInnerEncyptedValue(originalValue));
 		}
 		return originalValue;
 	}
@@ -22,4 +24,7 @@ public class ExamplePropertyPlaceholderConfigurer extends PropertyPlaceholderCon
 		return false;
 	}
 	
+	private String getInnerEncyptedValue(String value){
+		return value.substring(ENCRYPTED_VALUE_PREFIX.length(), value.length() - ENCRYPTED_VALUE_SUFFIX.length());
+	}
 }

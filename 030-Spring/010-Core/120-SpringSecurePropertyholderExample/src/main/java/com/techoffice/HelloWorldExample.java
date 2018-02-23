@@ -1,4 +1,4 @@
-package com.techoffice.example;
+package com.techoffice;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
