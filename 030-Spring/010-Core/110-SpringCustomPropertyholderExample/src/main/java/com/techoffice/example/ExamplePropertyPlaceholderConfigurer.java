@@ -10,7 +10,7 @@ public class ExamplePropertyPlaceholderConfigurer extends PropertyPlaceholderCon
 	@Override
 	public String convertPropertyValue(String originalValue){
 		if (isEncryptedValue(originalValue)){
-			
+			return "Encrypted Content";
 		}
 		return originalValue;
 	}
