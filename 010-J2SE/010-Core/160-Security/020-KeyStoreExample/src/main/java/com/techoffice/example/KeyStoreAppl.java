@@ -30,7 +30,7 @@ public class KeyStoreAppl {
 		}
 		FileInputStream fileInputStream = new FileInputStream(defaultKeystoreFile);
 		keystore.load(fileInputStream, keystorePassword);
-		fileInputStream.close();	
+		fileInputStream.close();
 		if (keystore.containsAlias(aliasName)){
 			System.out.println(aliasName + " already exists in the keystore." );
 		}else {

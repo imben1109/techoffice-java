@@ -11,6 +11,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  */
 public class Appl {
+	
+	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
 	private String message;
 	
 	public void setMessage(String message){
@@ -28,9 +31,7 @@ public class Appl {
 	 * Main Program 
 	 * @param args
 	 */
-	@SuppressWarnings("resource")
 	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Appl appl = SpringContextUtil.getBean(Appl.class);
 		appl.run();
 	}
