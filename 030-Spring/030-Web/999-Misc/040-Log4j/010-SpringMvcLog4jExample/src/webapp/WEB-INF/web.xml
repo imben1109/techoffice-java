@@ -13,6 +13,10 @@
 	<listener>
         <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
 	</listener>
+	  <context-param>
+      <param-name>log4jConfiguration</param-name>
+      <param-value>/WEB-INF/log4j.properties</param-value>
+   </context-param>
 	<servlet>
 		<servlet-name>SpringMVCExample</servlet-name>
     	<servlet-class>
