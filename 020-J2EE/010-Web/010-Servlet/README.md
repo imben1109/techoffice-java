@@ -2,13 +2,6 @@
 
 Servlet is a java program that extends server capacities. In J2EE, it is an interface that Java Class implements it and provides functionality. Also, J2EE specification also provides an abstract class called HttpServlet so that Java Program could extends it to handle HTTP request.
 
-## Example List
-* [ServletExample](ServletExample/)                
-* [ServletFilterExample](ServletFilterExample/)    
-* [ServletListenerExample](ServletListenerExample/)
-* [ServletFilterSessionExample](ServletFilterSessionExample/)
-* [ServletFilterLoginExample](ServletFilterLoginExample/)
-
 ## Web Application Deployment Descriptor (web.xml)
 web.xml define the servlet and its url mapping. Web Server would route the URL Request to the specified Servlet for handling.
 
@@ -32,6 +25,13 @@ web.xml define the servlet and its url mapping. Web Server would route the URL R
 * Tomcat
 * Jetty
 
+## Life Cycle of a Servlet
+
+* init()
+* service()
+* destroy()
+
 # Reference
 * https://techofficejava.wordpress.com/j2ee-servlet/
 * http://download.oracle.com/otn-pub/jcp/servlet-3.0-fr-eval-oth-JSpec/servlet-3_0-final-spec.pdf
+* https://docs.oracle.com/javaee/7/

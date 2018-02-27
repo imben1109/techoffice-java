@@ -12,11 +12,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class HelloWorldExample {
 	
+	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
 	private String message;
-	
-	public HelloWorldExample(){
-		System.out.println("Testing");
-	}
 	
 	public void setMessage(String message){
 		this.message = message;
@@ -31,7 +29,6 @@ public class HelloWorldExample {
 	 * @param args
 	 */
 	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		HelloWorldExample helloWorldExample = context.getBean(HelloWorldExample.class);
 		System.out.println(helloWorldExample.getMessage());
 	}
