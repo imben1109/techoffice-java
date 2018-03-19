@@ -1,0 +1,54 @@
+C:\Users\panwaicheng\git_workspace\TechOffice-Java\999-Dev\Text\ConsecutiveUppercaseExample\testingData\test\test.txt
+=================================================================
+Line Number                    Consecutive Uppercase Word List 
+4                                                      ASDDAS 
+7                                                      ASDDAS 
+15                 ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS 
+20         ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS, ASDDASDA 
+=================================================================
+
+C:\Users\panwaicheng\git_workspace\TechOffice-Java\999-Dev\Text\ConsecutiveUppercaseExample\testingData\test\test2.txt
+=================================================================
+Line Number                    Consecutive Uppercase Word List 
+4                                                      ASDDAS 
+7                                                      ASDDAS 
+15                 ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS 
+20         ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS, ASDDASDA 
+=================================================================
+
+C:\Users\panwaicheng\git_workspace\TechOffice-Java\999-Dev\Text\ConsecutiveUppercaseExample\testingData\test\test3.txt
+=================================================================
+Line Number                    Consecutive Uppercase Word List 
+4                                                      ASDDAS 
+7                                                      ASDDAS 
+15                 ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS 
+20         ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS, ASDDASDA 
+=================================================================
+
+C:\Users\panwaicheng\git_workspace\TechOffice-Java\999-Dev\Text\ConsecutiveUppercaseExample\testingData\test.txt
+=================================================================
+Line Number                    Consecutive Uppercase Word List 
+4                                                      ASDDAS 
+7                                                      ASDDAS 
+15                 ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS 
+20         ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS, ASDDASDA 
+=================================================================
+
+C:\Users\panwaicheng\git_workspace\TechOffice-Java\999-Dev\Text\ConsecutiveUppercaseExample\testingData\test2.txt
+=================================================================
+Line Number                    Consecutive Uppercase Word List 
+4                                                      ASDDAS 
+7                                                      ASDDAS 
+15                 ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS 
+20         ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS, ASDDASDA 
+=================================================================
+
+C:\Users\panwaicheng\git_workspace\TechOffice-Java\999-Dev\Text\ConsecutiveUppercaseExample\testingData\test3.txt
+=================================================================
+Line Number                    Consecutive Uppercase Word List 
+4                                                      ASDDAS 
+7                                                      ASDDAS 
+15                 ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS 
+20         ASDDAS, ASDDASDA, ASDDAS, ASDDASDA, ASDDAS, ASDDASDA 
+=================================================================
+

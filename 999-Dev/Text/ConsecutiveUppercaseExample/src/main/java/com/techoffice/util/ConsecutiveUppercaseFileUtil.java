@@ -117,7 +117,7 @@ public class ConsecutiveUppercaseFileUtil {
 	 * @throws IOException
 	 */
 	public static void outputFormattedReport(File outputFile, File folder, String[] extenstions) throws IOException{
-		String content = ConsecutiveUppercaseFileUtil.getFormattedReport(new File("C:\\Users\\panwaicheng\\git\\bosv_dev\\src\\WebContent\\sys\\pages"), new String[]{"html"});
+		String content = ConsecutiveUppercaseFileUtil.getFormattedReport(folder, extenstions);
 		FileUtils.writeStringToFile(outputFile, content, StandardCharsets.UTF_8);
 	}
 }
