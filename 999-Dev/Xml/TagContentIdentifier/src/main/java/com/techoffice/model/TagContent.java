@@ -5,11 +5,19 @@ public class TagContent {
 	private Integer startLineNumber;
 	private Integer endLineNumber;
 	private String content;
+	private boolean isEnded = false;
 	
-	public TagContent(Integer startLineNumber, Integer endLineNumber, String content){
+	public TagContent(String content, Integer startLineNumber, Integer endLineNumber){
+		this.content  = content;
 		this.startLineNumber  = startLineNumber;
 		this.endLineNumber  = endLineNumber;
+		this.isEnded = true;
+	}
+	
+	public TagContent(String content, Integer startLineNumber){
 		this.content  = content;
+		this.startLineNumber  = startLineNumber;
+		this.isEnded = false;
 	}
 	
 	public Integer getStartLineNumber() {
@@ -23,6 +31,7 @@ public class TagContent {
 	}
 	public void setEndLineNumber(Integer endLineNumber) {
 		this.endLineNumber = endLineNumber;
+		this.isEnded = true;
 	}
 	public String getContent() {
 		return content;
@@ -30,7 +39,9 @@ public class TagContent {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
+	public boolean isEnded(){
+		return this.isEnded;
+	}
 	
 	
 }

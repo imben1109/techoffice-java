@@ -6,7 +6,7 @@ import java.util.List;
 public class TagFile {
 
 	private File file;
-	private List<String> content;
+	List<TagContent> tagContentList 
 	
 	public TagFile(File file){
 		this.file = file;
@@ -18,11 +18,14 @@ public class TagFile {
 	public void setFile(File file) {
 		this.file = file;
 	}
-	public List<String> getContent() {
-		return content;
+
+	public List<TagContent> getTagContentList() {
+		return tagContentList;
 	}
-	public void setContent(List<String> content) {
-		this.content = content;
+
+	public void setTagContentList(List<TagContent> tagContentList) {
+		this.tagContentList = tagContentList;
 	}
+
 	
 }
