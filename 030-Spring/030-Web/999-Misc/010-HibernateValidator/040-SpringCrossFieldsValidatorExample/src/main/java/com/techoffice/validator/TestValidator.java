@@ -5,7 +5,7 @@ import javax.validation.ConstraintValidatorContext;
 
 import com.techoffice.validator.annoation.Test;
 
-public class TestValidator implements ConstraintValidator<Test, String>{
+public class TestValidator implements ConstraintValidator<Test, Object>{
 
 	private String field1;
 	private String field2;
@@ -21,7 +21,7 @@ public class TestValidator implements ConstraintValidator<Test, String>{
 	}
 
 	@Override
-	public boolean isValid(String arg0, ConstraintValidatorContext arg1) {
+	public boolean isValid(Object arg0, ConstraintValidatorContext arg1) {
 		return true;
 	}
 

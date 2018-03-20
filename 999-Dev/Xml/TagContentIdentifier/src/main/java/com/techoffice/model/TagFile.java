@@ -6,7 +6,7 @@ import java.util.List;
 public class TagFile {
 
 	private File file;
-	List<TagContent> tagContentList 
+	List<TagContent> tagContentList;
 	
 	public TagFile(File file){
 		this.file = file;
