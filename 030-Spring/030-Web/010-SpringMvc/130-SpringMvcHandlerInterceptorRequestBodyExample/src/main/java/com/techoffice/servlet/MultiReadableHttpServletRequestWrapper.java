@@ -18,6 +18,7 @@ public class MultiReadableHttpServletRequestWrapper extends HttpServletRequestWr
 	public MultiReadableHttpServletRequestWrapper(HttpServletRequest request) {
 		super(request);
 		try {
+			request.setCharacterEncoding("UTF-8");
 			body = IOUtils.toString(request.getReader());
 		} catch (IOException e) {
 			body = "";
