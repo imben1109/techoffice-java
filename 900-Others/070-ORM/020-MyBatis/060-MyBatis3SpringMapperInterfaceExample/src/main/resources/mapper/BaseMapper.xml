@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+  
+<mapper namespace="base">
+	
+	<select id="select" resultType="map">
+		SELECT * FROM ${table}
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO ${table} (
+		<foreach item="column" collection="columnList" separator=",">
+			${column.columnName}
+		</foreach>
+		) values (
+		<foreach item="column" collection="columnList" separator=",">
+			#{column.value}
+		</foreach>
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE ${table} 
+		SET
+		<foreach item="column" collection="columnList" separator=",">
+			${column.columnName} = #{column.value}
+		</foreach>
+		WHERE 
+		<foreach item="keyColumn" collection="keyColumnList" separator=",">
+			${keyColumn.columnName} = #{keyColumn.value}
+		</foreach>
+	</update>
+	
+	<delete id="delete">
+		DELETE ${table}
+		WHERE 
+		<foreach item="keyColumn" collection="keyColumnList" separator=",">
+			${keyColumn.columnName} = #{keyColumn.value}
+		</foreach>
+	</delete>
+	
+</mapper>
