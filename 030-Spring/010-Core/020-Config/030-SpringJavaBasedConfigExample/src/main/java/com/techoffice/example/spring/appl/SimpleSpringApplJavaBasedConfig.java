@@ -16,9 +16,13 @@ import com.techoffice.example.spring.bean.TestingSpringBeanB;
 @Configuration
 public class SimpleSpringApplJavaBasedConfig {
 	
+	static AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+	
 	@Bean
 	public TestingSpringBeanA testingSpringBeanA(){
-		return new TestingSpringBeanA();
+		TestingSpringBeanA testingSpringBeanA = new TestingSpringBeanA();
+		testingSpringBeanA.setName("Hello World");
+		return testingSpringBeanA;
 	}
 	
 	@Bean
@@ -28,7 +32,6 @@ public class SimpleSpringApplJavaBasedConfig {
 	}
 	
 	public static void main(String[] args){
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 		ctx.register(SimpleSpringApplJavaBasedConfig.class);
 		ctx.refresh();
 		TestingSpringBeanB testingSpringBeanB = ctx.getBean(TestingSpringBeanB.class);

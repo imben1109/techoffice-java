@@ -14,12 +14,14 @@ import com.techoffice.example.spring.bean.TestingSpringBeanA;
  */
 public class SimpleSpringAppl {
 	
+	static ApplicationContext context = new ClassPathXmlApplicationContext("simpleBeans.xml");
+	
 	/**
 	 * Main Program for SimpleSpringAppl
 	 * @param args
 	 */
 	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("simpleBeans.xml");
+		
 		TestingSpringBeanA testingSpringBeanA = (TestingSpringBeanA) context.getBean("testingSpringBeanA");
 		System.out.println(testingSpringBeanA.getName());
 	}

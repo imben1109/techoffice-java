@@ -15,12 +15,13 @@ import com.techoffice.example.spring.bean.TestingSpringBeanB;
  */
 public class SimpleSpringApplWithAnnotation {
 	
+	static ApplicationContext context = new ClassPathXmlApplicationContext("simpleBeansWithAnnotation.xml");
+	
 	/**
 	 * Main Program for SimpleSpringApplWithAnnotation
 	 * @param args
 	 */
 	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("simpleBeansWithAnnotation.xml");
 		TestingSpringBeanB testingSpringBeanB = (TestingSpringBeanB) context.getBean("testingSpringBeanB");
 		System.out.println(testingSpringBeanB.getTestingSpringBeanA().getName());
 	}

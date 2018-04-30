@@ -17,8 +17,10 @@ import com.techoffice.example.spring.bean.TestingSpringComponentBeanA;
  *
  */
 public class SimpleSpringApplWithComponentScan {
+	
+	static ApplicationContext context = new ClassPathXmlApplicationContext("simpleBeansWithComponentScan.xml");
+	
 	public static void main(String[] args){
-		ApplicationContext context = new ClassPathXmlApplicationContext("simpleBeansWithComponentScan.xml");
 		TestingSpringComponentBeanA testingSpringComponentBeanA = (TestingSpringComponentBeanA)context.getBean("testingSpringComponentBeanA");
     	System.out.println(testingSpringComponentBeanA.getName());
 	}
