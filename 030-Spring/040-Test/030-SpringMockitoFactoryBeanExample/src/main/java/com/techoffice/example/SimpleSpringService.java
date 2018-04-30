@@ -1,4 +1,4 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,6 +10,6 @@ public class SimpleSpringService {
 	private SimpleSpringBean simpleSpringBean;
 	
 	public String test(){
-		return "Test";
+		return simpleSpringBean.test();
 	}
 }

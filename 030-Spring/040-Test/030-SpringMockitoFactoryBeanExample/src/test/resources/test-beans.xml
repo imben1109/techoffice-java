@@ -5,8 +5,8 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="simpleSpringService" class="com.ittechoffice.example.mockito.MockitoFactoryBean" >
-		<constructor-arg value="com.ittechoffice.example.SimpleSpringService" />
+	<bean id="simpleSpringService" class="com.techoffice.example.mockito.MockitoFactoryBean" >
+		<constructor-arg value="com.techoffice.example.SimpleSpringService" />
 	</bean>
 
 </beans>

@@ -1,7 +1,9 @@
-package com.ittechoffice.example;
+package com.techoffice.example;
 
 import org.junit.Test;
 import org.mockito.Mockito;
+
+import com.techoffice.example.SimpleSpringService;
 
 public class MockitoTest {
 	

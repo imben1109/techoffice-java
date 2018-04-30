@@ -1,4 +1,4 @@
-package com.ittechoffice.example.mockito;
+package com.techoffice.example.mockito;
 
 import org.mockito.Mockito;
 import org.springframework.beans.factory.FactoryBean;
