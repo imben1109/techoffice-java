@@ -5,9 +5,11 @@ public class Field {
 	private String propertyName;
 	private String jdbcType;
 	private String javaType;
+	private String javaFullType;
 	private String columnName;
 	private int precision;
 	private int scale;
+	private boolean isNullable;
 	
 	public String getPropertyName() {
 		return propertyName;
@@ -45,5 +47,23 @@ public class Field {
 	public void setScale(int scale) {
 		this.scale = scale;
 	}
-	
+	public String getJavaFullType() {
+		return javaFullType;
+	}
+	public void setJavaFullType(String javaFullType) {
+		this.javaFullType = javaFullType;
+	}
+	public boolean isNullable() {
+		return isNullable;
+	}
+	public void setNullable(boolean isNullable) {
+		this.isNullable = isNullable;
+	}
+	public String getColumnDefinition(){
+		String columnDefinition = this.jdbcType;
+		if (this.jdbcType.equals("NUMBER")){
+			columnDefinition = this.jdbcType + "(" + this.precision + "," + this.scale + ")";
+		}
+		return columnDefinition;
+	}
 }

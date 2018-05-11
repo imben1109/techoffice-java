@@ -2,8 +2,6 @@ package com.techoffice.freemarker.util;
 
 import java.io.StringWriter;
 import java.io.Writer;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.sun.xml.internal.ws.util.StringUtils;
 import com.techoffice.freemarker.exception.FreemakerException;
@@ -56,14 +54,8 @@ public class FreemakerUtil {
 	}
 	
 	public static String generate(Class<?> clazz, Object dataModel){
-		String templateName = FreemakerUtil.getGeneratorTemplate(ProcedureSqlMapperGenerator.class);
+		String templateName = FreemakerUtil.getGeneratorTemplate(clazz);
 		return FreemakerUtil.generate(templateName, dataModel);
 	}
 	
-	public static void main(String[] args){
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("user", "Testing");
-        String content = generate("com/techoffice/mybatis/generator/template/procedure.ftlh", map);
-        System.out.println(content);
-	}
 }
