@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.model;
+package com.techoffice.database.model;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ public class Entity {
 	private String javaClassName;
 	private String tableName;
 	private List<Field> fieldList;
+	private Key primaryKey;
 	
 	public String getJavaClassName() {
 		return javaClassName;
@@ -25,6 +26,12 @@ public class Entity {
 	}
 	public void setFieldList(List<Field> fieldList) {
 		this.fieldList = fieldList;
+	}
+	public Key getPrimaryKey() {
+		return primaryKey;
+	}
+	public void setPrimaryKey(Key primaryKey) {
+		this.primaryKey = primaryKey;
 	}
 	
 	

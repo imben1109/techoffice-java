@@ -3,8 +3,9 @@ package com.techoffice.mybatis.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.techoffice.mybatis.model.Entity;
-import com.techoffice.mybatis.model.Field;
+import com.techoffice.database.model.Entity;
+import com.techoffice.database.model.Field;
+import com.techoffice.database.model.Key;
 
 public class MockUtil {
 
@@ -50,6 +51,15 @@ public class MockUtil {
 		return fieldList;
 	}
 	
+	public static Key getPrimaryKey(){
+		Key key = new Key();
+		List<Field> fieldList = getStringFieldList();
+		fieldList.remove(3);
+		fieldList.remove(3);
+		key.setFieldList(fieldList);
+		return key;
+	}
+	
 	public static Entity getMockEntity(){
 		Entity entity = new Entity();
 		entity.setJavaClassName("Test");
@@ -59,6 +69,7 @@ public class MockUtil {
 		fieldList.addAll(getNumberFieldList());
 		fieldList.addAll(getDateFieldList());
 		entity.setFieldList(fieldList);
+		entity.setPrimaryKey(getPrimaryKey());
 		return entity;
 	}
 	

@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.config.annoation;
+package com.techoffice.database.config.annoation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

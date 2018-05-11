@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.model;
+package com.techoffice.database.model;
 
 public class Field {
 

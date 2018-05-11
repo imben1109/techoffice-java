@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.config;
+package com.techoffice.database.config;
 
 import java.util.Collections;
 import java.util.HashSet;

@@ -1,7 +1,7 @@
 package com.techoffice.mybatis.generator;
 
+import com.techoffice.database.model.Entity;
 import com.techoffice.freemarker.util.FreemakerUtil;
-import com.techoffice.mybatis.model.Entity;
 import com.techoffice.mybatis.util.MockUtil;
 
 public class TableGenerator {
