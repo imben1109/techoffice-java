@@ -23,7 +23,7 @@ public class ProcedureSqlMapperGenerator {
 	}
 	
 	public static void main(String[] args){
-		String content = generate("PA_J_BM_SETL_ACTN_XREF_DETL", "PL_REV_VCHR_AND_SETL_HIST");
+		String content = generate("XXX", "XXX");
 		System.out.println(content);
 	}
 }

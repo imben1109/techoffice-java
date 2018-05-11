@@ -13,7 +13,9 @@ public class ColumnsDao {
 	
 	public static void main(String[] args){
 		List<Columns> columnsList = GetColumnsList("COLUMNS");
-		System.out.println(columnsList.size());
+		for (Columns columns: columnsList){
+			System.out.println(columns.getColumnName());
+		}
 	}
 	
 }
