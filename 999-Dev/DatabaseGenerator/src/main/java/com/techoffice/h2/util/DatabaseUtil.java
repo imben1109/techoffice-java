@@ -1,10 +1,10 @@
-package com.techoffice.mybatis.h2.util;
+package com.techoffice.h2.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.techoffice.mybatis.h2.config.Config;
+import com.techoffice.h2.config.Config;
 
 
 public class DatabaseUtil {

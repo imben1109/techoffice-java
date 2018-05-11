@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.h2.config;
+package com.techoffice.h2.config;
 
 import java.io.IOException;
 import java.io.InputStream;

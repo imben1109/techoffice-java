@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.h2.util;
+package com.techoffice.h2.util;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
