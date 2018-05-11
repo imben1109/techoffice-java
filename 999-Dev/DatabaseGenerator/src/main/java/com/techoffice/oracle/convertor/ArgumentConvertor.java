@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.sun.xml.internal.ws.util.StringUtils;
-import com.techoffice.oracle.config.annoation.SqlMapperMapping;
+import com.techoffice.mybatis.config.annoation.SqlMapperMapping;
 import com.techoffice.oracle.dao.AllArgumentDao;
 import com.techoffice.oracle.model.AllArgument;
 import com.techoffice.oracle.util.SqlMapperMappingUtil;

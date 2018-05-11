@@ -1,7 +1,7 @@
 package com.techoffice.oracle.util;
 
-import com.techoffice.oracle.config.annoation.SqlMapperMapping;
-import com.techoffice.oracle.config.annoation.SqlMapperMappings;
+import com.techoffice.mybatis.config.annoation.SqlMapperMapping;
+import com.techoffice.mybatis.config.annoation.SqlMapperMappings;
 
 @SqlMapperMappings(
 	value={
