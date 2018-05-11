@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.techoffice.mybatis.oracle.convertor.ArgumentConvertor;
+import com.techoffice.oracle.convertor.ArgumentConvertor;
 
 public class ProcedureUtil {
 

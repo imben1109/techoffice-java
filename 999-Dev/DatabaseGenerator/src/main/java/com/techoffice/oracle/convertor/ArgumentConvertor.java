@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.oracle.convertor;
+package com.techoffice.oracle.convertor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.sun.xml.internal.ws.util.StringUtils;
-import com.techoffice.mybatis.oracle.config.annoation.SqlMapperMapping;
-import com.techoffice.mybatis.oracle.util.SqlMapperMappingUtil;
+import com.techoffice.oracle.config.annoation.SqlMapperMapping;
 import com.techoffice.oracle.dao.AllArgumentDao;
 import com.techoffice.oracle.model.AllArgument;
+import com.techoffice.oracle.util.SqlMapperMappingUtil;
 import com.techoffice.util.StringUtil;
 
 public class ArgumentConvertor {

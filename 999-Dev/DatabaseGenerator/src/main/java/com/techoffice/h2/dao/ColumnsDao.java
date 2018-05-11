@@ -12,7 +12,7 @@ public class ColumnsDao {
 	}
 	
 	public static void main(String[] args){
-		List<Columns> columnsList = GetColumnsList("COLUMNS");
+		List<Columns> columnsList = GetColumnsList("TEST");
 		for (Columns columns: columnsList){
 			System.out.println(columns.getColumnName());
 		}
