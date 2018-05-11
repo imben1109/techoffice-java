@@ -1,6 +1,10 @@
 package com.techoffice.h2.model;
 
 import com.techoffice.database.config.annoation.ColumnName;
+import com.techoffice.database.config.annoation.IsNullable;
+import com.techoffice.database.config.annoation.JdbcType;
+import com.techoffice.database.config.annoation.Precision;
+import com.techoffice.database.config.annoation.Scale;
 
 public class Columns {
 	private String  tableCatalog			;
@@ -10,12 +14,16 @@ public class Columns {
 	private String  columnName				;
 	private Integer ordinalPosition			;
 	private String  columnDefault			;
+	@IsNullable
 	private String  isNullable				;
+	@JdbcType
 	private Integer	dataType				;
 	private Integer	characterMaximumLength	;
 	private Integer	characterOctetLength	;
+	@Precision
 	private Integer	numericPrecision		;
 	private Integer	numericPrecisionRadix	;
+	@Scale
 	private Integer	numericScale			;
 	private String  characterSetName		;
 	private String  collationName			;
