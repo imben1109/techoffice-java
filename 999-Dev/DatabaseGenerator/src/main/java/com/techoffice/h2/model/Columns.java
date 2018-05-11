@@ -1,9 +1,12 @@
 package com.techoffice.h2.model;
 
+import com.techoffice.database.config.annoation.ColumnName;
+
 public class Columns {
 	private String  tableCatalog			;
 	private String  tableSchema				;
 	private String  tableName				;
+	@ColumnName
 	private String  columnName				;
 	private Integer ordinalPosition			;
 	private String  columnDefault			;
