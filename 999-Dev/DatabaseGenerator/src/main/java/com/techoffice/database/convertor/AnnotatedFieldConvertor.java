@@ -1,10 +1,15 @@
 package com.techoffice.database.convertor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.techoffice.database.model.Field;
 import com.techoffice.database.util.FieldUtil;
 
 public class AnnotatedFieldConvertor {
 
+	private AnnotatedFieldConvertor(){}
+	
 	public static Field convert(Object object){
 		String columnName = FieldUtil.getColumnName	(object);
 		String jdbcType = FieldUtil.getJdcbType(object);
@@ -16,5 +21,14 @@ public class AnnotatedFieldConvertor {
 		filed.setPrecision(precision);
 		filed.setScale(scale);
 		return null;
+	}
+	
+	public static List<Field> convert(List<?> objectList){
+		List<Field> fieldList = new ArrayList<Field>();
+		for (Object object: objectList){
+			Field field = convert(object);
+			fieldList.add(field);
+		}
+		return fieldList;
 	}
 }
