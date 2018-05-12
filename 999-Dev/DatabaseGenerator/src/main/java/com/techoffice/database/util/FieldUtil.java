@@ -30,11 +30,12 @@ public class FieldUtil {
 			Object property = PropertyUtils.getProperty(object, propertyName);
 			if (property instanceof String){
 				return (String) property;
+			}else {
+				throw new RuntimeException("Invalid Date Type of annotation: " + annoataion.getName() + " for " + object.getClass().getName());
 			}
 		}catch (Exception e){
-			return null;	
+			throw new RuntimeException(e);	
 		}
-		return null;
 	}
 	
 	private static Integer getIntegerProperty(Object object, Class<? extends Annotation> annoataion){
@@ -43,11 +44,12 @@ public class FieldUtil {
 			Object property = PropertyUtils.getProperty(object, propertyName);
 			if (property instanceof Integer){
 				return (Integer) property;
+			}else {
+				throw new RuntimeException("Invalid Date Type of annotation: " + annoataion.getName() + " for " + object.getClass().getName());
 			}
 		}catch (Exception e){
-			return null;	
+			throw new RuntimeException(e);	
 		}
-		return null;
 	}
 	
 	public static String getColumnName(Object object){
