@@ -7,8 +7,8 @@ public class Field {
 	private String javaType;
 	private String javaFullType;
 	private String columnName;
-	private int precision;
-	private int scale;
+	private Integer precision;
+	private Integer scale;
 	private boolean isNullable;
 	
 	public String getPropertyName() {
@@ -35,16 +35,16 @@ public class Field {
 	public void setColumnName(String columnName) {
 		this.columnName = columnName;
 	}
-	public int getPrecision() {
+	public Integer getPrecision() {
 		return precision;
 	}
-	public void setPrecision(int precision) {
+	public void setPrecision(Integer precision) {
 		this.precision = precision;
 	}
-	public int getScale() {
+	public Integer getScale() {
 		return scale;
 	}
-	public void setScale(int scale) {
+	public void setScale(Integer scale) {
 		this.scale = scale;
 	}
 	public String getJavaFullType() {

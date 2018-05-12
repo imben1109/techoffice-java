@@ -13,7 +13,7 @@ import com.techoffice.database.config.annoation.Scale;
 
 public class FieldUtil {
 
-	private static String getAnnotatedProperty(Class<?> clazz, Class<? extends Annotation> annoataion){
+	private static String getAnnotatedPropertyName(Class<?> clazz, Class<? extends Annotation> annoataion){
 		Field[] fields = clazz.getFields();
 		for (int i=0; i<fields.length; i++){
 			Field field = fields[i];
@@ -24,8 +24,8 @@ public class FieldUtil {
 		return null;
 	}
 	
-	public static String getColumnName(Object object){
-		String propertyName = getColumnNamePropertyName(object.getClass());
+	private static String getStringProperty(Object object, Class<? extends Annotation> annoataion){
+		String propertyName = getAnnotatedPropertyName(object.getClass(), annoataion);
 		try {
 			Object property = PropertyUtils.getProperty(object, propertyName);
 			if (property instanceof String){
@@ -37,23 +37,36 @@ public class FieldUtil {
 		return null;
 	}
 	
-	public static String getColumnNamePropertyName(Class<?> clazz){
-		return getAnnotatedProperty(clazz, ColumnName.class);
+	private static Integer getIntegerProperty(Object object, Class<? extends Annotation> annoataion){
+		String propertyName = getAnnotatedPropertyName(object.getClass(), annoataion);
+		try {
+			Object property = PropertyUtils.getProperty(object, propertyName);
+			if (property instanceof Integer){
+				return (Integer) property;
+			}
+		}catch (Exception e){
+			return null;	
+		}
+		return null;
 	}
 	
-	public static String getJdcbTypePropertyName(Class<?> clazz){
-		return getAnnotatedProperty(clazz, JdbcType.class);
+	public static String getColumnName(Object object){
+		return getStringProperty(object, ColumnName.class);
 	}
 	
-	public static String getPrecisionPropertyName(Class<?> clazz){
-		return getAnnotatedProperty(clazz, Precision.class);
+	public static String getJdcbType(Object object){
+		return getStringProperty(object, JdbcType.class);
 	}
 	
-	public static String getScalePropertyName(Class<?> clazz){
-		return getAnnotatedProperty(clazz, Scale.class);
+	public static Integer getPrecisionProperty(Object object){
+		return getIntegerProperty(object, Precision.class);
 	}
 	
-	public static String getIsNullablePropertyName(Class<?> clazz){
-		return getAnnotatedProperty(clazz, IsNullable.class);
+	public static Integer getScaleProperty(Object object){
+		return getIntegerProperty(object, Scale.class);
+	}
+	
+	public static String getIsNullablePropertyName(Object object){
+		return getStringProperty(object, IsNullable.class);
 	}
 }
