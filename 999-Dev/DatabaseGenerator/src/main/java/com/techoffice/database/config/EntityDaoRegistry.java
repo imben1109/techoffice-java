@@ -1,24 +1,30 @@
 package com.techoffice.database.config;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.techoffice.database.dao.EntityDao;
 
 public class EntityDaoRegistry {
 
-	private static Set<EntityDao> registry = Collections.synchronizedSet(new HashSet<EntityDao>());
+	private static Map<Class<? extends EntityDao>, EntityDao> registry = new ConcurrentHashMap<Class<? extends EntityDao>, EntityDao>();
 
-	public static void add(EntityDao entityDao){
-		registry.add(entityDao);
+	public static void add(Class<? extends EntityDao> clazz, EntityDao entityDao){
+		registry.put(clazz, entityDao);
 	}
 	
-	public static Set<EntityDao> getRegistry(){
+	public static EntityDao getEntityDao(Class<? extends EntityDao> clazz){
+		return registry.get(clazz);
+	}
+	
+	public static Map<Class<? extends EntityDao>, EntityDao> getRegistry(){
 		return registry;
 	}
 	
-	public static boolean isExist(EntityDao entityDao){
-		return registry.contains(entityDao);
+	public static boolean isExist(Class<? extends EntityDao> clazz){
+		return registry.containsKey(clazz);
 	}
+	
+	private EntityDaoRegistry(){};
+	
 }

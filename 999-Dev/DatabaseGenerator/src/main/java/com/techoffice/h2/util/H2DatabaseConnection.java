@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import com.techoffice.h2.config.Config;
 
 
-public class DatabaseUtil {
+public class H2DatabaseConnection {
 
 	private static Connection conn = null;
 	
-	private DatabaseUtil(){}
+	private H2DatabaseConnection(){}
 	
 	public static Connection getConnection(){
 		if (conn == null){

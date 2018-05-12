@@ -1,4 +1,4 @@
-package com.techoffice.h2.util;
+package com.techoffice.database.util;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import com.techoffice.h2.util.H2DatabaseConnection;
 import com.techoffice.oracle.exception.DaoException;
 import com.techoffice.util.StringUtil;
 
@@ -40,4 +41,5 @@ public class DaoUtil {
 
 		return resultList;
 	}
+	
 }
