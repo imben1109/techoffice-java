@@ -14,7 +14,16 @@ public class EntityDaoRegistry {
 	}
 	
 	public static EntityDao getEntityDao(Class<? extends EntityDao> clazz){
-		return registry.get(clazz);
+		EntityDao entityDao = registry.get(clazz);
+		if (entityDao != null){
+			return entityDao;
+		}
+		try {
+			Class.forName(clazz.getName());
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+		return entityDao;
 	}
 	
 	public static Map<Class<? extends EntityDao>, EntityDao> getRegistry(){

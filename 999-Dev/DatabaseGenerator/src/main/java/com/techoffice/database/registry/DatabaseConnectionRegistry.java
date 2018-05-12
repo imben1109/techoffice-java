@@ -14,7 +14,16 @@ public class DatabaseConnectionRegistry {
 	}
 	
 	public static DatabaseConnection getDatabaseConnection(Class<? extends DatabaseConnection> clazz){
-		return registry.get(clazz);
+		DatabaseConnection databaseConnection = registry.get(clazz);
+		if (databaseConnection != null){
+			return databaseConnection;
+		}
+		try {
+			Class.forName(clazz.getName());
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+		return databaseConnection;
 	}
 	
 	public static Map<Class<?>, DatabaseConnection> getRegistry(){
