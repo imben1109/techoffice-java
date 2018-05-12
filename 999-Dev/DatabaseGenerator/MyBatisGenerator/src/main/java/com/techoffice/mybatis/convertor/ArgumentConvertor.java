@@ -1,4 +1,4 @@
-package com.techoffice.oracle.convertor;
+package com.techoffice.mybatis.convertor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.sun.xml.internal.ws.util.StringUtils;
-import com.techoffice.database.config.JdbcTypeMappingConfig;
-import com.techoffice.database.config.annoation.JdbcTypeMapping;
+import com.techoffice.mybatis.generator.config.SqlMapperMappingConfig;
+import com.techoffice.mybatis.generator.config.annotation.SqlMapperMapping;
 import com.techoffice.oracle.dao.AllArgumentDao;
 import com.techoffice.oracle.model.AllArgument;
 import com.techoffice.util.StringUtil;
@@ -23,7 +23,7 @@ public class ArgumentConvertor {
 				argumentName = argumentName.substring(2);
 				argumentName = StringUtils.decapitalize(argumentName);
 			}
-			JdbcTypeMapping sqlMapperMapping  = JdbcTypeMappingConfig.getJdbcTypeMapping(allArgument.getDataType());
+			SqlMapperMapping sqlMapperMapping  = SqlMapperMappingConfig.getSqlMapperMapping(allArgument.getDataType());
 			String jdbcType = sqlMapperMapping.jdbcType();
 			String javaType = sqlMapperMapping.javaType();
 			Map<String, String> map = new HashMap<String, String>();

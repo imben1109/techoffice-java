@@ -1,10 +1,10 @@
-package com.techoffice.database.config.annoation;
+package com.techoffice.mybatis.generator.config.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface JdbcTypeMapping {
+public @interface SqlMapperMapping {
 
 	String value();
 	String jdbcType();
