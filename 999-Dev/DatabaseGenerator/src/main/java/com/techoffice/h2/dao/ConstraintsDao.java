@@ -3,7 +3,7 @@ package com.techoffice.h2.dao;
 import java.util.List;
 
 import com.techoffice.h2.model.Constraints;
-import com.techoffice.h2.util.DaoUtil;
+import com.techoffice.h2.util.H2DaoUtil;
 
 public class ConstraintsDao {
 	
@@ -17,11 +17,11 @@ public class ConstraintsDao {
 	}
 	
 	public List<Constraints> getConstraintsList(String tableName){
-		return DaoUtil.list(Constraints.class, "SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE TABLE_NAME ='"+tableName+"'");
+		return H2DaoUtil.list(Constraints.class, "SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE TABLE_NAME ='"+tableName+"'");
 	}
 
 	public Constraints getPrimaryKeyConstraints(String tableName){
-		List<Constraints> constraintsList =  DaoUtil.list(Constraints.class, "SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME ='"+tableName+"'");
+		List<Constraints> constraintsList =  H2DaoUtil.list(Constraints.class, "SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME ='"+tableName+"'");
 		return constraintsList.get(0);
 	}
 }

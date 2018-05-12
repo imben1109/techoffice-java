@@ -8,16 +8,18 @@ import java.util.List;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import com.techoffice.h2.util.H2DatabaseConnection;
+import com.techoffice.database.connection.DatabaseConnection;
+import com.techoffice.database.registry.DatabaseConnectionRegistry;
 import com.techoffice.oracle.exception.DaoException;
 import com.techoffice.util.StringUtil;
 
 public class DaoUtil {
 
-	public static <T> List<T> list(Class<T> clazz, String query){
+	public static <T> List<T> list(Class<? extends DatabaseConnection> dbConnClazz, Class<T> clazz, String query){
 		List<T> resultList = new ArrayList<T>();
 		try {
-			Statement stmt = H2DatabaseConnection.getConnection().createStatement();
+			DatabaseConnection conn = DatabaseConnectionRegistry.getDatabaseConnection(dbConnClazz);
+			Statement stmt = conn.getConnection().createStatement();
 			ResultSet resultSet = stmt.executeQuery(query);
 			while(resultSet.next()){
 				ResultSetMetaData metaData = resultSet.getMetaData();
