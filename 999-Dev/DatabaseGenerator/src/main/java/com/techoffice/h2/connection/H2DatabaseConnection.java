@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 import com.techoffice.database.connection.DatabaseConnection;
 import com.techoffice.database.registry.DatabaseConnectionRegistry;
-import com.techoffice.h2.config.Config;
+import com.techoffice.h2.config.H2Config;
 
 
 public class H2DatabaseConnection implements DatabaseConnection{
@@ -24,9 +24,9 @@ public class H2DatabaseConnection implements DatabaseConnection{
 		if (conn == null){
 			try {
 				Class.forName("org.h2.Driver");
-				conn = DriverManager.getConnection(Config.getH2ConnectionUrl(), 
-						Config.getH2ConnectionUser(), 
-						Config.getH2ConnectionPassword());
+				conn = DriverManager.getConnection(H2Config.getH2ConnectionUrl(), 
+						H2Config.getH2ConnectionUser(), 
+						H2Config.getH2ConnectionPassword());
 			} catch (SQLException e) {
 				throw new RuntimeException("Cannot create database connection", e);
 			} catch (ClassNotFoundException e) {

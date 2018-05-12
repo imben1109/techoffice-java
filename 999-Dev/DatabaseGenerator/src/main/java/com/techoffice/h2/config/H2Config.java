@@ -1,10 +1,9 @@
 package com.techoffice.h2.config;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Config {
+public class H2Config {
 
 	public static String APP_PROPERTIES_FILE = "application.properties";
 	public static Properties prop = null;
@@ -15,12 +14,18 @@ public class Config {
 	
 	static {
 		try {
-			InputStream inputStream = Config.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
+			// load properties
+			InputStream inputStream = H2Config.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
 			prop = new Properties();
 			prop.load(inputStream);
 			inputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+			
+			// load Database Connection
+			Class.forName("com.techoffice.h2.connection.H2DatabaseConnection");
+			// load Entity Dao
+			Class.forName("com.techoffice.h2.dao.H2EntityDao");
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 	}
 	
