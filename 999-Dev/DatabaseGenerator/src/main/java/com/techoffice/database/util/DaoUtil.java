@@ -5,6 +5,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -15,7 +16,19 @@ import com.techoffice.util.StringUtil;
 
 public class DaoUtil {
 
-	public static <T> List<T> list(Class<? extends DatabaseConnection> dbConnClazz, Class<T> clazz, String query){
+	public static <T> List<T> list(Class<? extends DatabaseConnection> dbConnClazz, 
+		Class<?> daoClazz, Class<T> instanceClazz, String query){
+		Map<String, List<?>> cache = CacheUtil.getCache(daoClazz);
+		@SuppressWarnings("unchecked")
+		List<T> resultList = (List<T>) cache.get(query);
+		if (resultList == null ){
+			resultList = list(dbConnClazz, instanceClazz, query);
+		}
+		return resultList ;
+	}
+	
+	private static <T> List<T> list(Class<? extends DatabaseConnection> dbConnClazz, 
+			Class<T> instanceClazz, String query){
 		List<T> resultList = new ArrayList<T>();
 		try {
 			DatabaseConnection conn = DatabaseConnectionRegistry.getDatabaseConnection(dbConnClazz);
@@ -24,7 +37,7 @@ public class DaoUtil {
 			while(resultSet.next()){
 				ResultSetMetaData metaData = resultSet.getMetaData();
 				int columnCount = metaData.getColumnCount();
-				T obj = clazz.newInstance();
+				T obj = instanceClazz.newInstance();
 				for (int i=0; i<columnCount; i++){
 					try{
 						String propertyName = StringUtil.upperUnderscoreToLowercamel(metaData.getColumnName(i+1));

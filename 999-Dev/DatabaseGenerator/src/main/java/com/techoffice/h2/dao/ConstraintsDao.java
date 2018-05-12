@@ -17,11 +17,13 @@ public class ConstraintsDao {
 	}
 	
 	public List<Constraints> getConstraintsList(String tableName){
-		return H2DaoUtil.list(Constraints.class, "SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE TABLE_NAME ='"+tableName+"'");
+		return H2DaoUtil.list(Constraints.class, ConstraintsDao.class,
+				"SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE TABLE_NAME ='"+tableName+"'");
 	}
 
 	public Constraints getPrimaryKeyConstraints(String tableName){
-		List<Constraints> constraintsList =  H2DaoUtil.list(Constraints.class, "SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME ='"+tableName+"'");
+		List<Constraints> constraintsList =  H2DaoUtil.list(Constraints.class, ConstraintsDao.class, 
+				"SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME ='"+tableName+"'");
 		return constraintsList.get(0);
 	}
 }
