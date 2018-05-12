@@ -1,4 +1,4 @@
-package com.techoffice.database.config;
+package com.techoffice.database.registry;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
