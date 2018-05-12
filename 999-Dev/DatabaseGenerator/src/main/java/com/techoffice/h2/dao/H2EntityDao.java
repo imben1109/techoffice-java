@@ -31,6 +31,7 @@ public class H2EntityDao implements EntityDao{
 	@Override
 	public Entity getEntity(String tableName) {
 		Entity entity = new Entity();
+		entity.setTableName(tableName);
 		List<Field> fieldList = getFieldList(tableName);
 		Key key = getKey(tableName);
 		entity.setFieldList(fieldList);

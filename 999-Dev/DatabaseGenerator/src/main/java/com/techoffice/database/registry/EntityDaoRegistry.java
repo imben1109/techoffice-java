@@ -23,6 +23,10 @@ public class EntityDaoRegistry {
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
+		entityDao = registry.get(clazz);
+		if (entityDao == null){
+			throw new RuntimeException("Cannot find Entity Dao: " + clazz.getName());			
+		}
 		return entityDao;
 	}
 	

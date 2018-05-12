@@ -20,7 +20,7 @@ public class AnnotatedFieldConvertor {
 		filed.setJdbcType(jdbcType);
 		filed.setPrecision(precision);
 		filed.setScale(scale);
-		return null;
+		return filed;
 	}
 	
 	public static List<Field> convert(List<?> objectList){
