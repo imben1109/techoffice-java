@@ -15,7 +15,7 @@ import com.techoffice.util.StringUtil;
 public class ArgumentConvertor {
 	
 	public static List<Map<String,String>> getDataMap(String packageName, String procedureName) {
-		List<AllArgument> allArgumentList = AllArgumentDao.getPackageProcedureArgumentList(packageName, procedureName);
+		List<AllArgument> allArgumentList = AllArgumentDao.getInstance().getPackageProcedureArgumentList(packageName, procedureName);
 		List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 		for (AllArgument allArgument: allArgumentList){
 			String argumentName = StringUtil.upperUnderscoreToLowercamel(allArgument.getArgumentName());
