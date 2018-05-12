@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.techoffice.database.convertor.AnnotatedFieldConvertor;
+import com.techoffice.database.convertor.EntityConvertor;
 import com.techoffice.database.dao.EntityDao;
 import com.techoffice.database.model.Entity;
 import com.techoffice.database.model.Field;
@@ -32,10 +33,17 @@ public class H2EntityDao implements EntityDao{
 	public Entity getEntity(String tableName) {
 		Entity entity = new Entity();
 		entity.setTableName(tableName);
+		
+		// field list
 		List<Field> fieldList = getFieldList(tableName);
-		Key key = getKey(tableName);
 		entity.setFieldList(fieldList);
+		
+		// key
+		Key key = getKey(tableName);
 		entity.setPrimaryKey(key);
+		
+		// Java Class Name
+		entity = EntityConvertor.convert(entity);
 		return entity;
 	}
 

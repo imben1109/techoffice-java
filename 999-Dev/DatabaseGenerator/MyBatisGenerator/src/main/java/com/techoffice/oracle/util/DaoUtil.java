@@ -24,7 +24,7 @@ public class DaoUtil {
 				T obj = clazz.newInstance();
 				for (int i=0; i<columnCount; i++){
 					try{
-						String propertyName = StringUtil.upperUnderscoreToLowercamel(metaData.getColumnName(i+1));
+						String propertyName = StringUtil.upperUnderscoreToLowerCamel(metaData.getColumnName(i+1));
 						if (resultSet.getObject(i+1) != null){
 							BeanUtils.setProperty(obj, propertyName, resultSet.getObject(i+1));
 						}

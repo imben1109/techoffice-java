@@ -13,7 +13,7 @@ public class ProcedureSqlMapperGenerator {
 	public static String generate(String packageName, String procedureName){
 		Map<String, Object> dataModel = new HashMap<String, Object>();
 		String methodName = procedureName.replace("PL_", "");
-		methodName= StringUtil.upperUnderscoreToLowercamel(methodName);
+		methodName= StringUtil.upperUnderscoreToLowerCamel(methodName);
 		dataModel.put("methodName", methodName);
 		dataModel.put("pakcageName", packageName);
 		dataModel.put("procedureName", procedureName);

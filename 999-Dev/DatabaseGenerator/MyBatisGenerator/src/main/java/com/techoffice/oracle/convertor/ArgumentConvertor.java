@@ -18,7 +18,7 @@ public class ArgumentConvertor {
 		List<AllArgument> allArgumentList = AllArgumentDao.getInstance().getPackageProcedureArgumentList(packageName, procedureName);
 		List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 		for (AllArgument allArgument: allArgumentList){
-			String argumentName = StringUtil.upperUnderscoreToLowercamel(allArgument.getArgumentName());
+			String argumentName = StringUtil.upperUnderscoreToLowerCamel(allArgument.getArgumentName());
 			if (argumentName.startsWith("pi")){
 				argumentName = argumentName.substring(2);
 				argumentName = StringUtils.decapitalize(argumentName);
