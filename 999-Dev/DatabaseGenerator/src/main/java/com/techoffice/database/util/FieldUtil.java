@@ -14,7 +14,7 @@ import com.techoffice.database.config.annoation.Scale;
 public class FieldUtil {
 
 	private static String getAnnotatedPropertyName(Class<?> clazz, Class<? extends Annotation> annoataion){
-		Field[] fields = clazz.getFields();
+		Field[] fields = clazz.getDeclaredFields();
 		for (int i=0; i<fields.length; i++){
 			Field field = fields[i];
 			if (field.getAnnotation(annoataion) != null){

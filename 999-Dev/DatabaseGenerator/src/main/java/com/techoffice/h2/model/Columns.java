@@ -16,7 +16,6 @@ public class Columns {
 	private String  columnDefault			;
 	@IsNullable
 	private String  isNullable				;
-	@JdbcType
 	private Integer	dataType				;
 	private Integer	characterMaximumLength	;
 	private Integer	characterOctetLength	;
@@ -27,6 +26,7 @@ public class Columns {
 	private Integer	numericScale			;
 	private String  characterSetName		;
 	private String  collationName			;
+	@JdbcType
 	private String  typeName				;
 	private Integer	nullable				;
 	private Integer	selectivity				;
