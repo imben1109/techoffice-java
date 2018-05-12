@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 import com.techoffice.oracle.config.Config;
 
-public class DatabaseUtil {
+public class OracleDatabaseUtil {
 
 	private static Connection conn = null;
 	
-	private DatabaseUtil(){}
+	private OracleDatabaseUtil(){}
 	
 	public static Connection getConnection(){
 		if (conn == null){

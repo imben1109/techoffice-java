@@ -4,8 +4,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface SqlMapperMappings {
+public @interface JdbcTypeMappings {
 
-	SqlMapperMapping[] value();
-	SqlMapperMapping[] exceptionFields() default {};
+	JdcbTypeMapping[] value();
+	JdcbTypeMapping[] exceptionFields() default {};
 }

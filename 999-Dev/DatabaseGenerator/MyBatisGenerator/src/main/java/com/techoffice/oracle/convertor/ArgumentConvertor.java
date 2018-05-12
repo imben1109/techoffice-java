@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.sun.xml.internal.ws.util.StringUtils;
-import com.techoffice.database.config.annoation.SqlMapperMapping;
+import com.techoffice.database.config.annoation.JdcbTypeMapping;
+import com.techoffice.database.convertor.JdbcTypeMappingConvertor;
 import com.techoffice.oracle.dao.AllArgumentDao;
 import com.techoffice.oracle.model.AllArgument;
-import com.techoffice.oracle.util.SqlMapperMappingUtil;
 import com.techoffice.util.StringUtil;
 
 public class ArgumentConvertor {
@@ -23,7 +23,7 @@ public class ArgumentConvertor {
 				argumentName = argumentName.substring(2);
 				argumentName = StringUtils.decapitalize(argumentName);
 			}
-			SqlMapperMapping sqlMapperMapping  = SqlMapperMappingUtil.getSqlMapperMapping(allArgument.getDataType());
+			JdcbTypeMapping sqlMapperMapping  = JdbcTypeMappingConvertor.getSqlMapperMapping(allArgument.getDataType());
 			String jdbcType = sqlMapperMapping.jdbcType();
 			String javaType = sqlMapperMapping.javaType();
 			Map<String, String> map = new HashMap<String, String>();

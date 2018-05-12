@@ -11,12 +11,12 @@ import org.apache.commons.beanutils.BeanUtils;
 import com.techoffice.oracle.exception.DaoException;
 import com.techoffice.util.StringUtil;
 
-public class DaoUtil {
+public class OracleDaoUtil {
 
 	public static <T> List<T> list(Class<T> clazz, String query){
 		List<T> resultList = new ArrayList<T>();
 		try {
-			Statement stmt = DatabaseUtil.getConnection().createStatement();
+			Statement stmt = OracleDatabaseUtil.getConnection().createStatement();
 			ResultSet resultSet = stmt.executeQuery(query);
 			while(resultSet.next()){
 				ResultSetMetaData metaData = resultSet.getMetaData();
