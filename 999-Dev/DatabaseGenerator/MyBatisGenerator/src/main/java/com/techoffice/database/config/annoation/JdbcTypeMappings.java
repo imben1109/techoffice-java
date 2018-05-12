@@ -6,6 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface JdbcTypeMappings {
 
-	JdcbTypeMapping[] value();
-	JdcbTypeMapping[] exceptionFields() default {};
+	JdbcTypeMapping[] value();
+	JdbcTypeMapping[] exceptionFields() default {};
 }
