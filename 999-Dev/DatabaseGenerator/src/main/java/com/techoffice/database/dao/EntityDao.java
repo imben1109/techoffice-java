@@ -9,7 +9,7 @@ import com.techoffice.database.model.Key;
 public interface EntityDao {
 	
 	List<Field> getFieldList(String tableName);
-	Entity getEntity();
-	Key getKey();
+	Entity getEntity(String tableName);
+	Key getKey(String tableName);
 	
 }

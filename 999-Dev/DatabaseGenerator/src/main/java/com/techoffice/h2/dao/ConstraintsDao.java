@@ -12,7 +12,7 @@ public class ConstraintsDao {
 	private ConstraintsDao(){}
 	
 	
-	public ConstraintsDao getInstance(){
+	public static ConstraintsDao getInstance(){
 		return instance;
 	}
 	
