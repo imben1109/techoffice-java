@@ -65,7 +65,9 @@ public class Field {
 	public String getColumnDefinition(){
 		String columnDefinition = this.jdbcType;
 		if (this.jdbcType.equals("NUMBER")){
-			columnDefinition = this.jdbcType + "(" + this.precision + "," + this.scale + ")";
+			if (this.scale != null && this.precision != null ){
+				columnDefinition = this.jdbcType + "(" + this.precision + "," + this.scale + ")";
+			}
 		}
 		return columnDefinition;
 	}

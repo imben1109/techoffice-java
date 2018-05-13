@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.techoffice.database.config.JdbcTypeConfig;
 import com.techoffice.database.config.annoation.JdbcTypeMapping;
+import com.techoffice.database.config.annoation.JdbcTypeMappings;
 import com.techoffice.database.model.Field;
 
 public class JdbcTypeConvertor {
@@ -39,14 +40,17 @@ public class JdbcTypeConvertor {
 		return bool;
 	}
 	
-	public static synchronized String getJavaFullType(Field field){
+	public static synchronized String getJavaFullType(Class<?> clazz, Field field){
 		String javaFullType = "";
 		String jdbcType = field.getJdbcType();
 		javaFullType = javaTypeMappingCachedMap.get(jdbcType);
 		if (StringUtils.isNotEmpty(javaFullType)){
 			return javaFullType;
 		}
-		JdbcTypeMapping jdbcTypeMapping = JdbcTypeConfig.getJdbcTypeMapping(jdbcType);
+		JdbcTypeMapping jdbcTypeMapping = getJdbcTypeMapping(clazz, jdbcType);
+		if (jdbcTypeMapping == null){
+			throw new RuntimeException("Cannot find JDBC Type Mapping for " + jdbcType);
+		}
 		if (checkJdbcTypeMappingCondition(field, jdbcTypeMapping)){
 			javaFullType = jdbcTypeMapping.javaFullType();
 		}
@@ -57,18 +61,32 @@ public class JdbcTypeConvertor {
 		return javaFullType;
 	}
 	
-	public static Field convertJavaType(Field field){
-		String javaFullType = getJavaFullType(field);
+	public static Field convertJavaType(Class<?> clazz, Field field){
+		String javaFullType = getJavaFullType(clazz, field);
 		field.setJavaFullType(javaFullType);
 		return field;
 	}
 	
 	private JdbcTypeConvertor(){}
 	
-	public static void main(String[] args){
-		Field field = new Field();
-		field.setScale(100);
-		getJavaFullType(field);
+	public static JdbcTypeMappings getJdbcTypeMappings(Class<?> clazz){
+		return clazz.getAnnotation(JdbcTypeMappings.class);
+	}
+	
+	public static JdbcTypeMapping[] getJdbcTypeMappingArr(Class<?> clazz){
+		JdbcTypeMappings jdbcTypeMappings = getJdbcTypeMappings(clazz);
+		return jdbcTypeMappings.value();
+	}
+	
+	public static JdbcTypeMapping getJdbcTypeMapping(Class<?> clazz, String value){
+		JdbcTypeMapping[] jdbcTypeMappingArr = getJdbcTypeMappingArr(clazz);
+		for (int i=0; i<jdbcTypeMappingArr.length; i++){
+			JdbcTypeMapping jdbcTypeMapping = jdbcTypeMappingArr[i];
+			if (jdbcTypeMapping.value() == value ){
+				return jdbcTypeMapping;
+			}
+		}
+		return null;
 	}
 
 }

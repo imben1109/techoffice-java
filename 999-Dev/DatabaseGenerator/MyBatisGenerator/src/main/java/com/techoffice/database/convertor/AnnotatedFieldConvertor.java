@@ -23,11 +23,11 @@ public class AnnotatedFieldConvertor {
 		return filed;
 	}
 	
-	public static List<Field> convert(List<?> objectList){
+	public static List<Field> convert(Class<?> configClass, List<?> objectList){
 		List<Field> fieldList = new ArrayList<Field>();
 		for (Object object: objectList){
 			Field field = convert(object);
-			field = JdbcTypeConvertor.convertJavaType(field);
+			field = JdbcTypeConvertor.convertJavaType(configClass, field);
 			fieldList.add(field);
 		}
 		return fieldList;

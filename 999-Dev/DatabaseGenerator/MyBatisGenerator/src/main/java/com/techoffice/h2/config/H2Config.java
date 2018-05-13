@@ -3,6 +3,15 @@ package com.techoffice.h2.config;
 import java.io.InputStream;
 import java.util.Properties;
 
+import com.techoffice.database.config.annoation.JdbcTypeMapping;
+import com.techoffice.database.config.annoation.JdbcTypeMappings;
+
+@JdbcTypeMappings({
+	@JdbcTypeMapping(value = "NUMBER", javaFullType = "java.lang.Integer", condition = "field.scale == 0"),
+	@JdbcTypeMapping(value = "NUMBER", javaFullType = "java.math.BigDecimal", condition="field.scale != 0"),
+	@JdbcTypeMapping(value = "VARCHAR2", javaFullType="java.lang.String"),
+	@JdbcTypeMapping(value = "DATE", javaFullType = "java.util.Date")
+})
 public class H2Config {
 
 	public static String APP_PROPERTIES_FILE = "application.properties";

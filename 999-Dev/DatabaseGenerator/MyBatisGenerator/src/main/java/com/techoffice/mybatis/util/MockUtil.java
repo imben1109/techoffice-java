@@ -15,7 +15,7 @@ public class MockUtil {
 			Field field = new Field();
 			field.setColumnName("DATE_FIELD" + i);
 			field.setJavaFullType("java.util.Date");
-			field.setJdbcType("Number");
+			field.setJdbcType("DATE");
 			field.setPropertyName("dateField" + i);
 			fieldList.add(field);
 		}
@@ -28,8 +28,23 @@ public class MockUtil {
 			Field field = new Field();
 			field.setColumnName("NUMBER_FIELD" + i);
 			field.setJavaFullType("java.math.BigDeciaml");
-			field.setJdbcType("Number");
+			field.setJdbcType("NUMBER");
 			field.setPropertyName("numberField" + i);
+			fieldList.add(field);
+		}
+		return fieldList;
+	}
+	
+	public static List<Field> getIntegerFieldList(){
+		List<Field> fieldList = new ArrayList<Field>();
+		for (int i=0; i<5; i++){
+			Field field = new Field();
+			field.setColumnName("INTEGER_FIELD" + i);
+			field.setJavaFullType("java.lang.Integer");
+			field.setJdbcType("NUMBER");
+			field.setScale(0);
+			field.setPrecision(9);
+			field.setPropertyName("integerField" + i);
 			fieldList.add(field);
 		}
 		return fieldList;
@@ -65,6 +80,7 @@ public class MockUtil {
 		fieldList.addAll(getStringFieldList());
 		fieldList.addAll(getNumberFieldList());
 		fieldList.addAll(getDateFieldList());
+		fieldList.addAll(getIntegerFieldList());
 		entity.setFieldList(fieldList);
 		entity.setPrimaryKey(getPrimaryKey());
 		return entity;

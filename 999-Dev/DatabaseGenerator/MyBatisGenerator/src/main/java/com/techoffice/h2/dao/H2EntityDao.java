@@ -11,6 +11,7 @@ import com.techoffice.database.model.Entity;
 import com.techoffice.database.model.Field;
 import com.techoffice.database.model.Key;
 import com.techoffice.database.registry.EntityDaoRegistry;
+import com.techoffice.h2.config.H2Config;
 import com.techoffice.h2.model.Columns;
 import com.techoffice.h2.model.Constraints;
 
@@ -26,7 +27,8 @@ public class H2EntityDao implements EntityDao{
 	@Override
 	public List<Field> getFieldList(String tableName) {
 		List<Columns> columnsList = ColumnsDao.getInstance().getColumnsList(tableName);
-		return AnnotatedFieldConvertor.convert(columnsList);
+		List<Field> fieldList = AnnotatedFieldConvertor.convert(H2Config.class, columnsList);
+		return fieldList;
 	}
 
 	@Override
