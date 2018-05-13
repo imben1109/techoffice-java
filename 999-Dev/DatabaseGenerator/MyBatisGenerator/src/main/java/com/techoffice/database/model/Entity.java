@@ -2,6 +2,8 @@ package com.techoffice.database.model;
 
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Entity {
 
 	private String javaClassName;
@@ -32,6 +34,9 @@ public class Entity {
 	}
 	public void setPrimaryKey(Key primaryKey) {
 		this.primaryKey = primaryKey;
+	}
+	public String getUncaptialJavaClassName(){
+		return StringUtils.uncapitalize(javaClassName);
 	}
 	
 	

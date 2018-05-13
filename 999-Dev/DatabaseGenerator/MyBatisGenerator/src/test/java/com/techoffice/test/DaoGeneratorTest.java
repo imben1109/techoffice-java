@@ -1,21 +1,21 @@
-package com.techoffice.mybatis.generator;
+package com.techoffice.test;
+
+import org.junit.Test;
 
 import com.techoffice.database.dao.EntityDao;
 import com.techoffice.database.model.Entity;
 import com.techoffice.database.registry.EntityDaoRegistry;
-import com.techoffice.freemarker.util.FreemakerUtil;
 import com.techoffice.h2.dao.H2EntityDao;
+import com.techoffice.mybatis.generator.DaoGenerator;
 
-public class SqlMapperGenerator {
+public class DaoGeneratorTest {
 
-	public static String generate(Entity entity){
-		return FreemakerUtil.generate(SqlMapperGenerator.class, entity);
-	}
-	
-	public static void main(String[] args){
+	@Test
+	public void test(){
 		EntityDao entityDao = EntityDaoRegistry.getEntityDao(H2EntityDao.class);
 		Entity entity = entityDao.getEntity("TEST");
-		String content = SqlMapperGenerator.generate(entity);
+		String content = DaoGenerator.generate(entity);
 		System.out.println(content);
 	}
+	
 }
