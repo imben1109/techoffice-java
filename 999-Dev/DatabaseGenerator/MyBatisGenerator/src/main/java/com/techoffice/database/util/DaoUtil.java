@@ -18,7 +18,7 @@ public class DaoUtil {
 
 	public static <T> List<T> list(Class<? extends DatabaseConnection> dbConnClazz, 
 		Class<?> daoClazz, Class<T> instanceClazz, String query){
-		Map<String, List<?>> cache = CacheUtil.getCache(daoClazz);
+		Map<String, List<?>> cache = DaoQueryCacheUtil.getCache(daoClazz);
 		@SuppressWarnings("unchecked")
 		List<T> resultList = (List<T>) cache.get(query);
 		if (resultList == null ){
