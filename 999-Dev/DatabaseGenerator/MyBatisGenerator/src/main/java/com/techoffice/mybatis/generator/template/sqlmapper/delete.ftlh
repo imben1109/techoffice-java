@@ -1,1 +1,4 @@
-delete
+	<delete id="delete">
+	
+	
+	</delete>
