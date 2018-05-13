@@ -27,6 +27,7 @@ public class AnnotatedFieldConvertor {
 		List<Field> fieldList = new ArrayList<Field>();
 		for (Object object: objectList){
 			Field field = convert(object);
+			field = JdbcTypeConvertor.convertJavaType(field);
 			fieldList.add(field);
 		}
 		return fieldList;

@@ -10,7 +10,6 @@ import java.lang.annotation.Target;
 public @interface JdbcTypeMapping {
 	
 	String value();
-	String javaType();
 	String javaFullType();
 	String condition() default "";;
 	

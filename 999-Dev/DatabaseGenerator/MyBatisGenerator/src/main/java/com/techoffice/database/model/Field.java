@@ -4,7 +4,6 @@ public class Field {
 
 	private String propertyName;
 	private String jdbcType;
-	private String javaType;
 	private String javaFullType;
 	private String columnName;
 	private Integer precision;
@@ -24,10 +23,9 @@ public class Field {
 		this.jdbcType = jdbcType;
 	}
 	public String getJavaType() {
+		int position = this.javaFullType.lastIndexOf(".");
+		String javaType = this.javaFullType.substring(position);
 		return javaType;
-	}
-	public void setJavaType(String javaType) {
-		this.javaType = javaType;
 	}
 	public String getColumnName() {
 		return columnName;
@@ -58,6 +56,11 @@ public class Field {
 	}
 	public void setNullable(boolean isNullable) {
 		this.isNullable = isNullable;
+	}
+	public String getJavaPackage() {
+		int position = this.javaFullType.lastIndexOf(".");
+		String javaPackage = this.javaFullType.substring(0, position);
+		return javaPackage;
 	}
 	public String getColumnDefinition(){
 		String columnDefinition = this.jdbcType;

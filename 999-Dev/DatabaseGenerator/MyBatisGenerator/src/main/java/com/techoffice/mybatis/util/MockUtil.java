@@ -14,7 +14,6 @@ public class MockUtil {
 		for (int i=0; i<5; i++){
 			Field field = new Field();
 			field.setColumnName("DATE_FIELD" + i);
-			field.setJavaType("Date");
 			field.setJavaFullType("java.util.Date");
 			field.setJdbcType("Number");
 			field.setPropertyName("dateField" + i);
@@ -28,7 +27,6 @@ public class MockUtil {
 		for (int i=0; i<5; i++){
 			Field field = new Field();
 			field.setColumnName("NUMBER_FIELD" + i);
-			field.setJavaType("BigDecimal");
 			field.setJavaFullType("java.math.BigDeciaml");
 			field.setJdbcType("Number");
 			field.setPropertyName("numberField" + i);
@@ -42,7 +40,6 @@ public class MockUtil {
 		for (int i=0; i<5; i++){
 			Field field = new Field();
 			field.setColumnName("FIELD" + i);
-			field.setJavaType("String");
 			field.setJavaFullType("java.lang.String");
 			field.setJdbcType("VARCHAR2");
 			field.setPropertyName("field" + i);
