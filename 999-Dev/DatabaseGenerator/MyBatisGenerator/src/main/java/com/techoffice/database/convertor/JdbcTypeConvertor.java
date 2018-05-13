@@ -9,7 +9,6 @@ import javax.script.ScriptException;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.techoffice.database.config.JdbcTypeConfig;
 import com.techoffice.database.config.annoation.JdbcTypeMapping;
 import com.techoffice.database.config.annoation.JdbcTypeMappings;
 import com.techoffice.database.model.Field;
@@ -18,7 +17,7 @@ public class JdbcTypeConvertor {
 
 	private static ScriptEngineManager manager = new ScriptEngineManager();
 	private static ScriptEngine scriptEngine = manager.getEngineByName("js");
-	private static Map<String, String> javaTypeMappingCachedMap = new ConcurrentHashMap<String, String>();
+	private static Map<Field, String> javaTypeMappingCachedMap = new ConcurrentHashMap<Field, String>();
 	
 	private static synchronized boolean checkJdbcTypeMappingCondition(Field field, JdbcTypeMapping jdbcTypeMapping){
 		if (StringUtils.isEmpty(jdbcTypeMapping.condition())){
@@ -40,24 +39,22 @@ public class JdbcTypeConvertor {
 		return bool;
 	}
 	
-	public static synchronized String getJavaFullType(Class<?> clazz, Field field){
+	public static synchronized String getJavaFullType(Class<?> configClass, Field field){
 		String javaFullType = "";
-		String jdbcType = field.getJdbcType();
-		javaFullType = javaTypeMappingCachedMap.get(jdbcType);
+		javaFullType = javaTypeMappingCachedMap.get(field);
 		if (StringUtils.isNotEmpty(javaFullType)){
 			return javaFullType;
 		}
-		JdbcTypeMapping jdbcTypeMapping = getJdbcTypeMapping(clazz, jdbcType);
+		JdbcTypeMapping jdbcTypeMapping = getJdbcTypeMapping(configClass, field);
 		if (jdbcTypeMapping == null){
-			throw new RuntimeException("Cannot find JDBC Type Mapping for " + jdbcType);
+			throw new RuntimeException("Cannot find JDBC Type Mapping for " + field.getJavaFullType());
 		}
-		if (checkJdbcTypeMappingCondition(field, jdbcTypeMapping)){
-			javaFullType = jdbcTypeMapping.javaFullType();
-		}
+		javaFullType = jdbcTypeMapping.javaFullType();
 		if (StringUtils.isEmpty(javaFullType)){
-			throw new RuntimeException("Cannot find corresponding Java Type");
+			throw new RuntimeException("Cannot find corresponding Java Type for " 
+					+ field.getJdbcType() + "(" + field.getPrecision() + "," + field.getScale() + ")");
 		}
-		javaTypeMappingCachedMap.put(jdbcType, javaFullType);
+		javaTypeMappingCachedMap.put(field, javaFullType);
 		return javaFullType;
 	}
 	
@@ -69,21 +66,23 @@ public class JdbcTypeConvertor {
 	
 	private JdbcTypeConvertor(){}
 	
-	public static JdbcTypeMappings getJdbcTypeMappings(Class<?> clazz){
-		return clazz.getAnnotation(JdbcTypeMappings.class);
+	public static JdbcTypeMappings getJdbcTypeMappings(Class<?> configClass){
+		return configClass.getAnnotation(JdbcTypeMappings.class);
 	}
 	
-	public static JdbcTypeMapping[] getJdbcTypeMappingArr(Class<?> clazz){
-		JdbcTypeMappings jdbcTypeMappings = getJdbcTypeMappings(clazz);
+	public static JdbcTypeMapping[] getJdbcTypeMappingArr(Class<?> configClass){
+		JdbcTypeMappings jdbcTypeMappings = getJdbcTypeMappings(configClass);
 		return jdbcTypeMappings.value();
 	}
 	
-	public static JdbcTypeMapping getJdbcTypeMapping(Class<?> clazz, String value){
-		JdbcTypeMapping[] jdbcTypeMappingArr = getJdbcTypeMappingArr(clazz);
+	public static JdbcTypeMapping getJdbcTypeMapping(Class<?> configClass, Field field){
+		JdbcTypeMapping[] jdbcTypeMappingArr = getJdbcTypeMappingArr(configClass);
 		for (int i=0; i<jdbcTypeMappingArr.length; i++){
 			JdbcTypeMapping jdbcTypeMapping = jdbcTypeMappingArr[i];
-			if (jdbcTypeMapping.value() == value ){
-				return jdbcTypeMapping;
+			if (jdbcTypeMapping.value().equals(field.getJdbcType())){
+				if (checkJdbcTypeMappingCondition(field, jdbcTypeMapping)){
+					return jdbcTypeMapping;
+				}
 			}
 		}
 		return null;

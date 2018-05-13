@@ -24,7 +24,7 @@ public class Field {
 	}
 	public String getJavaType() {
 		int position = this.javaFullType.lastIndexOf(".");
-		String javaType = this.javaFullType.substring(position);
+		String javaType = this.javaFullType.substring(position+1);
 		return javaType;
 	}
 	public String getColumnName() {
