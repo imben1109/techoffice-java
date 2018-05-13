@@ -1,5 +1,7 @@
 package com.techoffice.database.model;
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
 public class Field {
 
 	private String propertyName;
@@ -22,11 +24,7 @@ public class Field {
 	public void setJdbcType(String jdbcType) {
 		this.jdbcType = jdbcType;
 	}
-	public String getJavaType() {
-		int position = this.javaFullType.lastIndexOf(".");
-		String javaType = this.javaFullType.substring(position+1);
-		return javaType;
-	}
+
 	public String getColumnName() {
 		return columnName;
 	}
@@ -56,6 +54,15 @@ public class Field {
 	}
 	public void setNullable(boolean isNullable) {
 		this.isNullable = isNullable;
+	}
+	public String getCaptialPropertyName(){
+		String captialPropertyName = StringUtils.capitalize(this.propertyName);
+		return captialPropertyName;
+	}
+	public String getJavaType() {
+		int position = this.javaFullType.lastIndexOf(".");
+		String javaType = this.javaFullType.substring(position+1);
+		return javaType;
 	}
 	public String getJavaPackage() {
 		int position = this.javaFullType.lastIndexOf(".");
