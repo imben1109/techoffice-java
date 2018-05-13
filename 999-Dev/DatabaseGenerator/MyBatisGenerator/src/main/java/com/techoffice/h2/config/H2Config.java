@@ -7,9 +7,9 @@ import com.techoffice.database.config.annoation.JdbcTypeMapping;
 import com.techoffice.database.config.annoation.JdbcTypeMappings;
 
 @JdbcTypeMappings({
-	@JdbcTypeMapping(value = "NUMBER", javaFullType = "java.lang.Integer", condition = "field.scale == 0"),
-	@JdbcTypeMapping(value = "NUMBER", javaFullType = "java.math.BigDecimal", condition="field.scale != 0"),
-	@JdbcTypeMapping(value = "VARCHAR2", javaFullType="java.lang.String"),
+	@JdbcTypeMapping(value = "DECIMAL", javaFullType = "java.lang.Integer", condition = "field.scale == 0"),
+	@JdbcTypeMapping(value = "DECIMAL", javaFullType = "java.math.BigDecimal", condition="field.scale != 0"),
+	@JdbcTypeMapping(value = "VARCHAR", javaFullType="java.lang.String"),
 	@JdbcTypeMapping(value = "DATE", javaFullType = "java.util.Date")
 })
 public class H2Config {
