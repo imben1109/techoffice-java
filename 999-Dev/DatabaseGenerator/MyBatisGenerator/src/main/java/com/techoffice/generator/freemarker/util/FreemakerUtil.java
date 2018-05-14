@@ -6,7 +6,6 @@ import java.io.Writer;
 import com.sun.xml.internal.ws.util.StringUtils;
 import com.techoffice.generator.freemarker.exception.FreemakerException;
 
-import freemarker.core.PlainTextOutputFormat;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateExceptionHandler;
