@@ -15,11 +15,13 @@ public class AnnotatedFieldConvertor {
 		String jdbcType = FieldUtil.getJdcbType(object);
 		Integer precision = FieldUtil.getPrecisionProperty(object);
 		Integer scale = FieldUtil.getScaleProperty(object);
+		Integer dataLength = FieldUtil.getDataLengthProperty(object);
 		Field filed = new Field();
 		filed.setColumnName(columnName);
 		filed.setJdbcType(jdbcType);
 		filed.setPrecision(precision);
 		filed.setScale(scale);
+		filed.setScale(dataLength);
 		return filed;
 	}
 	

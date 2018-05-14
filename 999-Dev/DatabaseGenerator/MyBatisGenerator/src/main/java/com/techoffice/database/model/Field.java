@@ -10,6 +10,7 @@ public class Field {
 	private String columnName;
 	private Integer precision;
 	private Integer scale;
+	private Integer dataLength;
 	private boolean isNullable;
 	
 	public String getPropertyName() {
@@ -48,6 +49,12 @@ public class Field {
 	}
 	public void setJavaFullType(String javaFullType) {
 		this.javaFullType = javaFullType;
+	}
+	public Integer getDataLength() {
+		return dataLength;
+	}
+	public void setDataLength(Integer dataLength) {
+		this.dataLength = dataLength;
 	}
 	public boolean isNullable() {
 		return isNullable;

@@ -1,6 +1,7 @@
 package com.techoffice.h2.model;
 
 import com.techoffice.database.config.annoation.ColumnName;
+import com.techoffice.database.config.annoation.DataLength;
 import com.techoffice.database.config.annoation.IsNullable;
 import com.techoffice.database.config.annoation.JdbcType;
 import com.techoffice.database.config.annoation.Precision;
@@ -17,6 +18,7 @@ public class Columns {
 	@IsNullable
 	private String  isNullable				;
 	private Integer	dataType				;
+	@DataLength
 	private Integer	characterMaximumLength	;
 	private Integer	characterOctetLength	;
 	@Precision

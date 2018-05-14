@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import org.apache.commons.beanutils.PropertyUtils;
 
 import com.techoffice.database.config.annoation.ColumnName;
+import com.techoffice.database.config.annoation.DataLength;
 import com.techoffice.database.config.annoation.IsNullable;
 import com.techoffice.database.config.annoation.JdbcType;
 import com.techoffice.database.config.annoation.Precision;
@@ -64,6 +65,10 @@ public class FieldUtil {
 		return getIntegerProperty(object, Precision.class);
 	}
 	
+	public static Integer getDataLengthProperty(Object object){
+		return getIntegerProperty(object, DataLength.class);
+	} 
+	
 	public static Integer getScaleProperty(Object object){
 		return getIntegerProperty(object, Scale.class);
 	}
@@ -71,4 +76,6 @@ public class FieldUtil {
 	public static String getIsNullablePropertyName(Object object){
 		return getStringProperty(object, IsNullable.class);
 	}
+	
+	
 }
