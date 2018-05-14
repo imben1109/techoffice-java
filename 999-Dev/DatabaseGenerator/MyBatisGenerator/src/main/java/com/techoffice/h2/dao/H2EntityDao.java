@@ -11,6 +11,7 @@ import com.techoffice.database.model.Entity;
 import com.techoffice.database.model.Field;
 import com.techoffice.database.model.Key;
 import com.techoffice.database.registry.EntityDaoRegistry;
+import com.techoffice.database.util.KeyFieldUtil;
 import com.techoffice.h2.config.H2Config;
 import com.techoffice.h2.model.Columns;
 import com.techoffice.h2.model.Constraints;
@@ -46,6 +47,8 @@ public class H2EntityDao implements EntityDao{
 		// key
 		Key key = getKey(tableName);
 		entity.setPrimaryKey(key);
+		KeyFieldUtil.markKeyField(key.getFieldList());
+		KeyFieldUtil.markKeyField(fieldList, key.getFieldList());
 		
 		// Java Class Name
 		entity = EntityConvertor.convert(entity);

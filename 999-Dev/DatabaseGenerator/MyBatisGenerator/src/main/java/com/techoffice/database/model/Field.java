@@ -11,6 +11,7 @@ public class Field {
 	private Integer precision;
 	private Integer scale;
 	private Integer dataLength;
+	private boolean isKey;
 	private boolean isNullable;
 	
 	public String getPropertyName() {
@@ -62,6 +63,12 @@ public class Field {
 	public void setNullable(boolean isNullable) {
 		this.isNullable = isNullable;
 	}
+	public boolean isKey() {
+		return isKey;
+	}
+	public void setKey(boolean isKey) {
+		this.isKey = isKey;
+	}
 	public String getCaptialPropertyName(){
 		String captialPropertyName = StringUtils.capitalize(this.propertyName);
 		return captialPropertyName;
@@ -84,5 +91,17 @@ public class Field {
 			}
 		}
 		return columnDefinition;
+	}
+	@Override
+	public boolean equals(Object object){
+		if (object instanceof Field){
+			Field field = (Field) object;
+			return field.getColumnName().equals(this.getColumnName());
+		}
+		return false;
+	}
+	@Override
+	public int hashCode(){
+		return this.getColumnName().hashCode();
 	}
 }

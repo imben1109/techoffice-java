@@ -43,7 +43,7 @@ public class FreemakerUtil {
 	
 	public static String getGeneratorTemplate(Class<?> clazz){
 		String className = clazz.getSimpleName();
-		String packageName = ProcedureSqlMapperGenerator.class.getPackage().getName();
+		String packageName = clazz.getPackage().getName();
 		String path = packageName.replace(".", "/");
 		String templateFileName = StringUtils.decapitalize(className);
 		if (templateFileName.endsWith("Generator")){

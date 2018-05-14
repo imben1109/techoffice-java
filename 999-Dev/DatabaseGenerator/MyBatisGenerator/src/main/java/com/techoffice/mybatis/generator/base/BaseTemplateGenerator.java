@@ -8,5 +8,8 @@ public abstract class BaseTemplateGenerator {
 	public String generate(Entity entity){
 		return FreemakerUtil.generate(this.getClass(), entity);
 	}
-	
+
+	public static void main(String[] args){
+		
+	}
 }
