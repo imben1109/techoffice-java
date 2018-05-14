@@ -5,7 +5,6 @@ import java.io.Writer;
 
 import com.sun.xml.internal.ws.util.StringUtils;
 import com.techoffice.freemarker.exception.FreemakerException;
-import com.techoffice.mybatis.generator.ProcedureSqlMapperGenerator;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

@@ -14,14 +14,14 @@ import com.techoffice.h2.dao.H2EntityDao;
 public class EntityDataGenerator {
 
 	private EntityDataGenerator(){}
+	private static FieldDataGenerator fieldDataGenerator = new FieldDataGenerator(); 
 	
 	public String generate(Entity entity){
 		EntityData entityData = new EntityData();
 		entityData.setEntity(entity);
 		List<FieldData> fieldDataList = new ArrayList<FieldData>();
 		for (Field field: entity.getFieldList()){
-			FieldData fieldData = new FieldData();
-			fieldData.setField(field);
+			FieldData fieldData = fieldDataGenerator.generate(field);
 			fieldDataList.add(fieldData);
 		}
 		entityData.setFieldDataList(fieldDataList);

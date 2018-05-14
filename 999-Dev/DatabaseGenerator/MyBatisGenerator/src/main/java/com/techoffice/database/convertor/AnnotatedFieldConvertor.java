@@ -21,7 +21,7 @@ public class AnnotatedFieldConvertor {
 		filed.setJdbcType(jdbcType);
 		filed.setPrecision(precision);
 		filed.setScale(scale);
-		filed.setScale(dataLength);
+		filed.setDataLength(dataLength);
 		return filed;
 	}
 	
