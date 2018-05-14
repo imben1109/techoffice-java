@@ -8,4 +8,5 @@ import com.techoffice.database.model.Entity;
 public abstract class MulitpleEntityTemplateGenerator {
 
 	public abstract List<File> generate(Entity entity);
+
 }

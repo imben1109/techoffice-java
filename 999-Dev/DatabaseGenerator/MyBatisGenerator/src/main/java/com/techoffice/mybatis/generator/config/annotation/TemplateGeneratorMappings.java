@@ -7,8 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface SqlMapperMappings {
+public @interface TemplateGeneratorMappings {
 
-	SqlMapperMapping[] value();
-	SqlMapperMapping[] exceptionFields() default {};
+	TemplateGeneratorMapping[] value();
+	
 }

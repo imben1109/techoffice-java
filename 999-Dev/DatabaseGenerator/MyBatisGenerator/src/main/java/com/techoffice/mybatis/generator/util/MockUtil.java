@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.util;
+package com.techoffice.mybatis.generator.util;
 
 import java.util.ArrayList;
 import java.util.List;
