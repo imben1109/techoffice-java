@@ -14,7 +14,7 @@ import com.techoffice.h2.dao.H2EntityDao;
 public class EntityDataGenerator {
 
 	private EntityDataGenerator(){}
-	private static FieldDataGenerator fieldDataGenerator = new FieldDataGenerator(); 
+	private static FieldDataGenerator fieldDataGenerator = FieldDataGenerator.getInstance(); 
 	
 	public String generate(Entity entity){
 		EntityData entityData = new EntityData();
