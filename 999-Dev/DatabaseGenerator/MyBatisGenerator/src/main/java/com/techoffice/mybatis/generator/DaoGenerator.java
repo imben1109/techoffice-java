@@ -5,8 +5,9 @@ import com.techoffice.database.model.Entity;
 import com.techoffice.database.registry.EntityDaoRegistry;
 import com.techoffice.freemarker.util.FreemakerUtil;
 import com.techoffice.h2.dao.H2EntityDao;
+import com.techoffice.mybatis.generator.base.BaseTemplateGenerator;
 
-public class DaoGenerator {
+public class DaoGenerator extends BaseTemplateGenerator {
 
 	public static String generate(Entity entity){
 		return FreemakerUtil.generate(DaoGenerator.class, entity);

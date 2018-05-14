@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import com.techoffice.database.dao.EntityDao;
 import com.techoffice.database.model.Entity;
-import com.techoffice.database.registry.EntityDaoRegistry;
-import com.techoffice.h2.dao.H2EntityDao;
 import com.techoffice.mybatis.generator.EntityGenerator;
 import com.techoffice.test.h2.base.BaseH2GeneratorTest;
 
@@ -13,7 +11,7 @@ public class EntityGeneratorTest extends BaseH2GeneratorTest{
 
 	@Test
 	public void test(){
-		EntityDao entityDao = EntityDaoRegistry.getEntityDao(H2EntityDao.class);
+		EntityDao entityDao = getEntityDao();
 		Entity entity = entityDao.getEntity("TEST");
 		String content = EntityGenerator.generate(entity);
 		System.out.println(content);

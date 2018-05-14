@@ -1,6 +1,8 @@
 package com.techoffice.mybatis.generator;
 
-public class ProcedureDaoGenerator {
+import com.techoffice.mybatis.generator.base.BaseTemplateGenerator;
+
+public class ProcedureDaoGenerator extends BaseTemplateGenerator  {
 
 	
 }
