@@ -7,9 +7,7 @@ public class BaseConfig {
 
 	public static String APP_PROPERTIES_FILE = "application.properties";
 	public static Properties prop = null;
-	
-	public static final String BASE_PACKAGE = "base.package";
-	
+		
 	static {
 		try {
 			// load properties
@@ -25,8 +23,5 @@ public class BaseConfig {
 	public static Properties getProperties(){
 		return prop;
 	}
-	
-	public static String getBasePackage(){
-		return prop.getProperty(BASE_PACKAGE);
-	}
+
 }
