@@ -1,23 +1,18 @@
 package com.techoffice.database.dao.model;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
 public class Entity {
 
-	private String basePackage;
 	private String javaClassName;
 	private String tableName;
 	private List<Field> fieldList;
 	private Key primaryKey;
+	private Map<Object, Object> metaMap;
 	
-	public String getBasePackage() {
-		return basePackage;
-	}
-	public void setBasePackage(String basePackage) {
-		this.basePackage = basePackage;
-	}
 	public String getJavaClassName() {
 		return javaClassName;
 	}
@@ -45,6 +40,12 @@ public class Entity {
 	public String getUncaptialJavaClassName(){
 		return StringUtils.uncapitalize(javaClassName);
 	}
-	
+	public Map<Object, Object> getMetaMap() {
+		return metaMap;
+	}
+	public void setMetaMap(Map<Object, Object> metaMap) {
+		this.metaMap = metaMap;
+	}
+
 	
 }

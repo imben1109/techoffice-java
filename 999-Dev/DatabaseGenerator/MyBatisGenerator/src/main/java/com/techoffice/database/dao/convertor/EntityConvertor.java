@@ -12,7 +12,6 @@ public class EntityConvertor {
 		String javaClassName = StringUtil.upperUnderscoreToUpperCamel(entity.getTableName());
 		entity.setJavaClassName(javaClassName);
 		String basePackage = BaseConfig.getBasePackage();
-		entity.setBasePackage(basePackage);
 
 		return entity;
 	}
