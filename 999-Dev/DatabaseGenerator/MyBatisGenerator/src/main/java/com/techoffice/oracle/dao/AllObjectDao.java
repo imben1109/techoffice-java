@@ -8,7 +8,8 @@ import com.techoffice.oracle.util.OracleDaoUtil;
 public class AllObjectDao {
 
 	public List<AllObject> getAllPackageObject() {
-		return OracleDaoUtil.list(AllObject.class, "SELECT * FROM ALL_OBJECTS WHERE OBJECT_TYPE = 'PACKAGE'");
+		return OracleDaoUtil.list(AllObject.class, this.getClass(),
+				"SELECT * FROM ALL_OBJECTS WHERE OBJECT_TYPE = 'PACKAGE'");
 	}
 	
 }

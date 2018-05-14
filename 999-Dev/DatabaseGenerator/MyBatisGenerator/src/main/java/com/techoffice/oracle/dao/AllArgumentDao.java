@@ -16,7 +16,8 @@ public class AllArgumentDao {
 	}
 	
 	public List<AllArgument> getPackageProcedureArgumentList(String packageName, String procedureName) {
-		return OracleDaoUtil.list(AllArgument.class, "SELECT * FROM ALL_ARGUMENTS WHERE OBJECT_NAME = '"+ procedureName + "' AND PACKAGE_NAME = '" + packageName + "'");
+		return OracleDaoUtil.list(AllArgument.class, this.getClass(),
+				"SELECT * FROM ALL_ARGUMENTS WHERE OBJECT_NAME = '"+ procedureName + "' AND PACKAGE_NAME = '" + packageName + "'");
 	}
 
 }
