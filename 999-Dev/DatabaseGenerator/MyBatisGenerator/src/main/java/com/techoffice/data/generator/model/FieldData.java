@@ -1,8 +1,11 @@
 package com.techoffice.data.generator.model;
 
+import java.util.Date;
+
+import com.techoffice.data.generator.config.EntityDataDateConfig;
 import com.techoffice.database.model.Field;
 
-public class FieldData {
+public class FieldData{
 
 	private Field field;
 	private Object value;
@@ -17,6 +20,18 @@ public class FieldData {
 	}
 	public void setValue(Object value) {
 		this.value = value;
+	}
+	@Override
+	public String toString(){
+		if (this.value instanceof String){
+			return "'" + this.value.toString() + "'";
+		}
+		if (this.value instanceof Date){
+			Date date = (Date) value;
+			String str = EntityDataDateConfig.getJdbcToDateString(date);
+			return str;
+		}
+		return this.value.toString();
 	}
 	
 	

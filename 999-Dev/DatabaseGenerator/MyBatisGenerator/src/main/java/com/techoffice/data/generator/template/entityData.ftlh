@@ -4,6 +4,6 @@ INSERT INTO ${entity.tableName}(
 </#list>
 )values(
 <#list fieldDataList as fieldData>
-	${"#{" + fieldData.field.propertyName + "}"}<#if fieldData?has_next>,</#if>
+	${fieldData.toString()}<#if fieldData?has_next>,</#if>
 </#list>
 );
