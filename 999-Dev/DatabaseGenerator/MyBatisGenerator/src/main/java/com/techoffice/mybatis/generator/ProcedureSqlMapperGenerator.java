@@ -7,7 +7,7 @@ import java.util.Map;
 import com.techoffice.freemarker.util.FreemakerUtil;
 import com.techoffice.mybatis.generator.base.SimpleEntityTemplateGenerator;
 import com.techoffice.mybatis.generator.util.ProcedureUtil;
-import com.techoffice.util.StringUtil;
+import com.techoffice.mybatis.generator.util.StringUtil;
 
 public class ProcedureSqlMapperGenerator extends SimpleEntityTemplateGenerator {
 	

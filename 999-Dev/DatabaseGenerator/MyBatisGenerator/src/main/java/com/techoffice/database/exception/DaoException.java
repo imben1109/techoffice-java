@@ -1,4 +1,4 @@
-package com.techoffice.oracle.exception;
+package com.techoffice.database.exception;
 
 public class DaoException extends RuntimeException{
 
