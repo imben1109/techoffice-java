@@ -24,11 +24,9 @@ public class ConstraintsDao {
 	public Constraints getPrimaryKeyConstraints(String tableName){
 		List<Constraints> constraintsList =  H2DaoUtil.list(Constraints.class, ConstraintsDao.class, 
 				"SELECT * FROM INFORMATION_SCHEMA.CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME ='"+tableName+"'");
-		if (constraintsList.size() > 0){
-			return constraintsList.get(0);	
-		}else {
-			throw new RuntimeException("cannot find primary key");
+		if (constraintsList.size() == 0){
+			throw new RuntimeException("Cannot find Primary Key for " + tableName);
 		}
-		
+		return constraintsList.get(0);
 	}
 }

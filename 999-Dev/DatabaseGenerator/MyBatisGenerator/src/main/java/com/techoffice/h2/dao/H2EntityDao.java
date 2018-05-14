@@ -27,6 +27,9 @@ public class H2EntityDao implements EntityDao{
 	@Override
 	public List<Field> getFieldList(String tableName) {
 		List<Columns> columnsList = ColumnsDao.getInstance().getColumnsList(tableName);
+		if (columnsList.size() ==0 ){
+			throw new RuntimeException("Cannot find any Column for " + tableName);
+		}
 		List<Field> fieldList = AnnotatedFieldConvertor.convert(H2Config.class, columnsList);
 		return fieldList;
 	}
@@ -52,8 +55,8 @@ public class H2EntityDao implements EntityDao{
 	@Override
 	public Key getKey(String tableName) {
 		Key key = new Key();
-		Constraints keyConstraints = ConstraintsDao.getInstance().getPrimaryKeyConstraints(tableName);
-		String collumnListStr = keyConstraints.getColumnList();
+		Constraints primaryKeyConstraints = ConstraintsDao.getInstance().getPrimaryKeyConstraints(tableName);
+		String collumnListStr = primaryKeyConstraints.getColumnList();
 		List<String> collumnList = Arrays.asList(collumnListStr.split(","));
 		List<Field> fieldList = getFieldList(tableName);
 		List<Field> keyFieldList = new ArrayList<Field>();
