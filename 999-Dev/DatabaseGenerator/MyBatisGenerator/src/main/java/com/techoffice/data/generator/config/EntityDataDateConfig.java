@@ -24,7 +24,7 @@ public class EntityDataDateConfig {
 	}
 	
 	public static String getJdbcToDateString(Date date){
-		return "TO_DATE(" + format(date) + ", '" + jdbcDateFormatStr +  "')";
+		return "PARSEDATETIME('" + format(date) + "', '" + jdbcDateFormatStr +  "')";
 	}
 	
 }
