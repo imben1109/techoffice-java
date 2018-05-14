@@ -2,9 +2,9 @@ package com.techoffice.database.dao;
 
 import java.util.List;
 
-import com.techoffice.database.model.Entity;
-import com.techoffice.database.model.Field;
-import com.techoffice.database.model.Key;
+import com.techoffice.database.dao.model.Entity;
+import com.techoffice.database.dao.model.Field;
+import com.techoffice.database.dao.model.Key;
 
 public interface EntityDao {
 	

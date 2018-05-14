@@ -2,8 +2,8 @@ package com.techoffice.test.h2;
 
 import org.junit.Test;
 
-import com.techoffice.h2.dao.H2EntityDao;
-import com.techoffice.mybatis.generator.DaoGenerator;
+import com.techoffice.database.h2.dao.H2EntityDao;
+import com.techoffice.generator.mybatis.DaoGenerator;
 import com.techoffice.test.base.BaseGeneratorTest;
 
 public class DaoGeneratorTest extends BaseGeneratorTest<DaoGenerator, H2EntityDao>{
