@@ -4,8 +4,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import com.techoffice.database.config.annoation.JdbcTypeMapping;
+import com.techoffice.database.config.annoation.JdbcTypeMappings;
 
-public class Config {
+@JdbcTypeMappings({
+	@JdbcTypeMapping(value = "NUMBER", javaFullType = "java.lang.Integer", condition = "field.scale == 0"),
+	@JdbcTypeMapping(value = "NUMBER", javaFullType = "java.math.BigDecimal", condition="field.scale != 0"),
+	@JdbcTypeMapping(value = "VARCHAR2", javaFullType="java.lang.String"),
+	@JdbcTypeMapping(value = "DATE", javaFullType = "java.util.Date")
+})
+public class OracleConfig {
 	
 	public static String APP_PROPERTIES_FILE = "application.properties";
 	public static Properties prop = null;
@@ -16,7 +24,7 @@ public class Config {
 	
 	static {
 		try {
-			InputStream inputStream = Config.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
+			InputStream inputStream = OracleConfig.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
 			prop = new Properties();
 			prop.load(inputStream);
 			inputStream.close();

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.techoffice.oracle.config.Config;
+import com.techoffice.oracle.config.OracleConfig;
 
 public class OracleDatabaseUtil {
 
@@ -16,9 +16,9 @@ public class OracleDatabaseUtil {
 		if (conn == null){
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				conn = DriverManager.getConnection(Config.getOracleConnectionUrl(), 
-						Config.getOracleConnectionUser(), 
-						Config.getOracleConnectionPassword());
+				conn = DriverManager.getConnection(OracleConfig.getOracleConnectionUrl(), 
+						OracleConfig.getOracleConnectionUser(), 
+						OracleConfig.getOracleConnectionPassword());
 			} catch (SQLException e) {
 				throw new RuntimeException("Cannot create database connection", e);
 			} catch (ClassNotFoundException e) {
