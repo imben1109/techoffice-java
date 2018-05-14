@@ -1,8 +1,8 @@
 package com.techoffice.h2.config;
 
-import java.io.InputStream;
 import java.util.Properties;
 
+import com.techoffice.database.config.BaseConfig;
 import com.techoffice.database.config.annoation.JdbcTypeMapping;
 import com.techoffice.database.config.annoation.JdbcTypeMappings;
 
@@ -24,10 +24,7 @@ public class H2Config {
 	static {
 		try {
 			// load properties
-			InputStream inputStream = H2Config.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
-			prop = new Properties();
-			prop.load(inputStream);
-			inputStream.close();
+			prop = BaseConfig.getProperties();
 			
 			// load Database Connection
 			Class.forName("com.techoffice.h2.connection.H2DatabaseConnection");

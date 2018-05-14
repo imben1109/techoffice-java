@@ -1,9 +1,8 @@
 package com.techoffice.oracle.config;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
+import com.techoffice.database.config.BaseConfig;
 import com.techoffice.database.config.annoation.JdbcTypeMapping;
 import com.techoffice.database.config.annoation.JdbcTypeMappings;
 
@@ -24,12 +23,15 @@ public class OracleConfig {
 	
 	static {
 		try {
-			InputStream inputStream = OracleConfig.class.getClassLoader().getResourceAsStream(APP_PROPERTIES_FILE);
-			prop = new Properties();
-			prop.load(inputStream);
-			inputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+			// load properties
+			prop = BaseConfig.getProperties();
+			
+			// load Database Connection
+			Class.forName("com.techoffice.oracle.connection.OracleDatabaseConnection");
+			// load Entity Dao
+			Class.forName("com.techoffice.oracle.dao.OracleEntityDao");
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 	}
 	

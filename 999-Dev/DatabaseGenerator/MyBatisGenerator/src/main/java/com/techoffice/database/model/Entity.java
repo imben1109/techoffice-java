@@ -6,11 +6,18 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Entity {
 
+	private String basePackage;
 	private String javaClassName;
 	private String tableName;
 	private List<Field> fieldList;
 	private Key primaryKey;
 	
+	public String getBasePackage() {
+		return basePackage;
+	}
+	public void setBasePackage(String basePackage) {
+		this.basePackage = basePackage;
+	}
 	public String getJavaClassName() {
 		return javaClassName;
 	}
