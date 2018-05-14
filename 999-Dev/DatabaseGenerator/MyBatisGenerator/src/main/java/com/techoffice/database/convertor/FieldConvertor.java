@@ -1,7 +1,7 @@
 package com.techoffice.database.convertor;
 
 import com.techoffice.database.model.Field;
-import com.techoffice.mybatis.generator.util.StringUtil;
+import com.techoffice.database.util.StringUtil;
 
 public class FieldConvertor {
 

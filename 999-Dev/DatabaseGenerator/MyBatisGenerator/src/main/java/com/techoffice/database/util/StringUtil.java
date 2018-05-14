@@ -1,4 +1,4 @@
-package com.techoffice.mybatis.generator.util;
+package com.techoffice.database.util;
 
 import com.google.common.base.CaseFormat;
 

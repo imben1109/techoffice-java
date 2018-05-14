@@ -2,7 +2,7 @@ package com.techoffice.database.convertor;
 
 import com.techoffice.database.config.BaseConfig;
 import com.techoffice.database.model.Entity;
-import com.techoffice.mybatis.generator.util.StringUtil;
+import com.techoffice.database.util.StringUtil;
 
 public class EntityConvertor {
 

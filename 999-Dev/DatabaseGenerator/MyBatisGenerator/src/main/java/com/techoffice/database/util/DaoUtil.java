@@ -12,7 +12,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import com.techoffice.database.connection.DatabaseConnection;
 import com.techoffice.database.exception.DaoException;
 import com.techoffice.database.registry.DatabaseConnectionRegistry;
-import com.techoffice.mybatis.generator.util.StringUtil;
 
 public class DaoUtil {
 

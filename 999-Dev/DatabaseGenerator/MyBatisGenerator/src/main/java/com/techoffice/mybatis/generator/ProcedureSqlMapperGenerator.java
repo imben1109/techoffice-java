@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.techoffice.database.util.StringUtil;
 import com.techoffice.freemarker.util.FreemakerUtil;
 import com.techoffice.mybatis.generator.base.SimpleEntityTemplateGenerator;
 import com.techoffice.mybatis.generator.util.ProcedureUtil;
-import com.techoffice.mybatis.generator.util.StringUtil;
 
 public class ProcedureSqlMapperGenerator extends SimpleEntityTemplateGenerator {
 	
