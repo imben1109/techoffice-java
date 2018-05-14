@@ -9,9 +9,9 @@ import com.techoffice.database.dao.EntityDao;
 import com.techoffice.database.model.Entity;
 import com.techoffice.database.registry.EntityDaoRegistry;
 import com.techoffice.h2.dao.H2EntityDao;
-import com.techoffice.mybatis.generator.base.BaseTemplateGenerator;
+import com.techoffice.mybatis.generator.base.SimpleEntityTemplateGenerator;
 
-public abstract class BaseGeneratorTest<T extends BaseTemplateGenerator, K extends EntityDao> {
+public abstract class BaseGeneratorTest<T extends SimpleEntityTemplateGenerator, K extends EntityDao> {
 
 	public List<Class<?>> getParameterClasslist(){
 		List<Class<?>> classList = new ArrayList<Class<?>>();
@@ -48,7 +48,7 @@ public abstract class BaseGeneratorTest<T extends BaseTemplateGenerator, K exten
 		return entity;
 	}
 	
-	public BaseTemplateGenerator getTemplateGenerator(){
+	public SimpleEntityTemplateGenerator getTemplateGenerator(){
 		Class<?> clazz = getParameterClasslist().get(0);
 		Object object;
 		try {
@@ -56,8 +56,8 @@ public abstract class BaseGeneratorTest<T extends BaseTemplateGenerator, K exten
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-		if (object instanceof BaseTemplateGenerator){
-			return (BaseTemplateGenerator) object;
+		if (object instanceof SimpleEntityTemplateGenerator){
+			return (SimpleEntityTemplateGenerator) object;
 		}else {
 			throw new RuntimeException("Fail to get Template Generator");		
 		}
@@ -65,7 +65,7 @@ public abstract class BaseGeneratorTest<T extends BaseTemplateGenerator, K exten
 	
 	public String generate(String tableName){
 		Entity entity = getEntity(tableName);
-		BaseTemplateGenerator tempalteGenerator = getTemplateGenerator();
+		SimpleEntityTemplateGenerator tempalteGenerator = getTemplateGenerator();
 		return tempalteGenerator.generate(entity);
 	}
 }

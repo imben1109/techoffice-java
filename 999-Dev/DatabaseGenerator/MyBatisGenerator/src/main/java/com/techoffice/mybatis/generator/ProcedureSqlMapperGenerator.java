@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import com.techoffice.freemarker.util.FreemakerUtil;
-import com.techoffice.mybatis.generator.base.BaseTemplateGenerator;
+import com.techoffice.mybatis.generator.base.SimpleEntityTemplateGenerator;
 import com.techoffice.mybatis.generator.util.ProcedureUtil;
 import com.techoffice.util.StringUtil;
 
-public class ProcedureSqlMapperGenerator extends BaseTemplateGenerator {
+public class ProcedureSqlMapperGenerator extends SimpleEntityTemplateGenerator {
 	
 	public static String generate(String packageName, String procedureName){
 		Map<String, Object> dataModel = new HashMap<String, Object>();

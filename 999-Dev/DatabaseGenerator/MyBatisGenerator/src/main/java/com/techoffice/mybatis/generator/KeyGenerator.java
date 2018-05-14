@@ -1,7 +1,7 @@
 package com.techoffice.mybatis.generator;
 
-import com.techoffice.mybatis.generator.base.BaseTemplateGenerator;
+import com.techoffice.mybatis.generator.base.SimpleEntityTemplateGenerator;
 
-public class KeyGenerator extends BaseTemplateGenerator  {
+public class KeyGenerator extends SimpleEntityTemplateGenerator  {
 
 }

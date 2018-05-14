@@ -1,8 +1,8 @@
 package com.techoffice.mybatis.generator;
 
-import com.techoffice.mybatis.generator.base.BaseTemplateGenerator;
+import com.techoffice.mybatis.generator.base.SimpleEntityTemplateGenerator;
 
-public class SqlMapperGenerator extends BaseTemplateGenerator  {
+public class SqlMapperGenerator extends SimpleEntityTemplateGenerator  {
 
 
 }
