@@ -1,4 +1,4 @@
-package com.techoffice.test;
+package com.techoffice.test.h2;
 
 import org.junit.Test;
 
