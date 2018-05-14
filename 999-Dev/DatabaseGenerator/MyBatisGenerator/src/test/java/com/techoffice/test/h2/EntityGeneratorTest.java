@@ -11,9 +11,7 @@ public class EntityGeneratorTest extends BaseH2GeneratorTest{
 
 	@Test
 	public void test(){
-		EntityDao entityDao = getEntityDao();
-		Entity entity = entityDao.getEntity("TEST");
-		String content = EntityGenerator.generate(entity);
+		String content = generate("TEST");
 		System.out.println(content);
 	}
 }
