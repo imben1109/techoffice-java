@@ -9,7 +9,7 @@ public class OracleDaoUtil {
 
 	static {
 		try {
-			Class.forName("com.techoffice.h2.connection.H2DatabaseConnection");
+			Class.forName("com.techoffice.database.oracle.connection.OracleDatabaseConnection");
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}

@@ -9,7 +9,7 @@ public class H2DaoUtil {
 
 	static {
 		try {
-			Class.forName("com.techoffice.h2.connection.H2DatabaseConnection");
+			Class.forName("com.techoffice.database.h2.connection.H2DatabaseConnection");
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}

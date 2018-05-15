@@ -27,9 +27,10 @@ public class H2Config {
 			prop = BaseConfig.getProperties();
 			
 			// load Database Connection
-			Class.forName("com.techoffice.h2.connection.H2DatabaseConnection");
+			
+			Class.forName("com.techoffice.database.h2.connection.H2DatabaseConnection");
 			// load Entity Dao
-			Class.forName("com.techoffice.h2.dao.H2EntityDao");
+			Class.forName("com.techoffice.database.h2.dao.H2EntityDao");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

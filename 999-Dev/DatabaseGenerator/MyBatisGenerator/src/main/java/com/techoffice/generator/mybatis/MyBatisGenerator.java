@@ -16,6 +16,8 @@ public class MyBatisGenerator extends MulitpleEntityTemplateGenerator{
 	private KeyGenerator keyGenerator;
 	private ServiceGenerator serviceGenerator;
 	private SqlMapperGenerator sqlMapperGenerator;
+	private ControllerGenerator controllerGenerator;
+	
 	private List<SimpleEntityTemplateGenerator> templateGeneratorList;
 	
 	public MyBatisGenerator(){
@@ -33,6 +35,7 @@ public class MyBatisGenerator extends MulitpleEntityTemplateGenerator{
 		templateGeneratorList.add(keyGenerator);
 		templateGeneratorList.add(serviceGenerator);
 		templateGeneratorList.add(sqlMapperGenerator);
+		templateGeneratorList.add(controllerGenerator);
 	}
 	
 	public List<File> generate(Entity entity) {

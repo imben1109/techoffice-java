@@ -8,7 +8,6 @@ import java.util.List;
 import com.techoffice.database.dao.EntityDao;
 import com.techoffice.database.dao.model.Entity;
 import com.techoffice.database.dao.registry.EntityDaoRegistry;
-import com.techoffice.database.h2.dao.H2EntityDao;
 import com.techoffice.generator.mybatis.base.SimpleEntityTemplateGenerator;
 
 public abstract class BaseGeneratorTest<T extends SimpleEntityTemplateGenerator, K extends EntityDao> {

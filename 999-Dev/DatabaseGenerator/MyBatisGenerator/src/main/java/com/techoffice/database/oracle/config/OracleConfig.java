@@ -27,9 +27,9 @@ public class OracleConfig {
 			prop = BaseConfig.getProperties();
 			
 			// load Database Connection
-			Class.forName("com.techoffice.oracle.connection.OracleDatabaseConnection");
+			Class.forName("com.techoffice.database.oracle.connection.OracleDatabaseConnection");
 			// load Entity Dao
-			Class.forName("com.techoffice.oracle.dao.OracleEntityDao");
+			Class.forName("com.techoffice.database.oracle.dao.OracleEntityDao");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
