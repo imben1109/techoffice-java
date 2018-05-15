@@ -5,8 +5,6 @@ import java.util.List;
 
 import com.techoffice.database.dao.model.Entity;
 import com.techoffice.database.dao.model.Field;
-import com.techoffice.database.dao.registry.EntityDaoRegistry;
-import com.techoffice.database.h2.dao.H2EntityDao;
 import com.techoffice.generator.data.model.EntityData;
 import com.techoffice.generator.data.model.FieldData;
 import com.techoffice.generator.freemarker.util.FreemakerUtil;
