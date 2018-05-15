@@ -29,8 +29,7 @@ public class TestController{
 	@ResponseBody
 	public List<Test> search(){
 		TestCriteria testCiteria = new TestCriteria();
-		List<Test> result =  testService.search(testCiteria);
-		return result;
+		return testService.search(testCiteria);
 	}
 	
 	@RequestMapping(value = "/find", method = {RequestMethod.POST}, produces = { MediaType.APPLICATION_JSON_VALUE })
