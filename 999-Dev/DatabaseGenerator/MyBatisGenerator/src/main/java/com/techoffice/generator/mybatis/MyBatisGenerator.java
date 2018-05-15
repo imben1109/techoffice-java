@@ -1,12 +1,16 @@
 package com.techoffice.generator.mybatis;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
 
 import com.techoffice.database.dao.model.Entity;
 import com.techoffice.generator.mybatis.base.MulitpleEntityTemplateGenerator;
 import com.techoffice.generator.mybatis.base.SimpleEntityTemplateGenerator;
+import com.techoffice.generator.mybatis.config.MyBatisGeneratorConfig;
 
 public class MyBatisGenerator extends MulitpleEntityTemplateGenerator{
 
@@ -27,6 +31,7 @@ public class MyBatisGenerator extends MulitpleEntityTemplateGenerator{
 		keyGenerator = new KeyGenerator();
 		serviceGenerator = new ServiceGenerator();
 		sqlMapperGenerator = new SqlMapperGenerator();
+		controllerGenerator = new ControllerGenerator();
 		
 		templateGeneratorList = new ArrayList<SimpleEntityTemplateGenerator>();
 		templateGeneratorList.add(criteriaGenerator);
@@ -39,9 +44,18 @@ public class MyBatisGenerator extends MulitpleEntityTemplateGenerator{
 	}
 	
 	public List<File> generate(Entity entity) {
+		
 		List<File> fileList = new ArrayList<File>();
 		for (SimpleEntityTemplateGenerator simpleEntityTemplateGenerator: templateGeneratorList){
-			simpleEntityTemplateGenerator.generate(entity);
+			File generateFile = MyBatisGeneratorConfig.getFile(simpleEntityTemplateGenerator, entity);
+			String content = simpleEntityTemplateGenerator.generate(entity);
+			try{
+				FileUtils.forceMkdirParent(generateFile);
+				FileUtils.writeStringToFile(generateFile, content, StandardCharsets.UTF_8);
+				System.out.println(generateFile.getAbsolutePath() + " generated");
+			}catch (Exception e){
+				throw new RuntimeException(e);
+			}
 		}
 		return fileList;
 	}
