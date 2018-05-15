@@ -2,8 +2,9 @@ package ${metaMap.basePackage}.dao;
 
 import java.util.List;
 
-import ${metaMap.basePackage}.entity.Test;
-import ${metaMap.basePackage}.key.TestKey;
+import ${metaMap.basePackage}.criteria.${javaClassName}Criteria;
+import ${metaMap.basePackage}.entity.${javaClassName};
+import ${metaMap.basePackage}.key.${javaClassName}Key;
 
 public interface ${javaClassName}Dao {
 

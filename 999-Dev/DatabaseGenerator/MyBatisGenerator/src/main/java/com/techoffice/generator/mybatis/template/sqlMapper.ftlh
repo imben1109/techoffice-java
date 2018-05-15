@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
   'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
   
-<mapper namespace="base">
+<mapper namespace="${metaMap.basePackage}.dao.${javaClassName}Dao">
 
 <#include "sqlmapper/resultMap.ftlh">
 
