@@ -1,3 +1,4 @@
+package ${metaMap.basePackage}.key;
 
 public class ${javaClassName}Key{
 

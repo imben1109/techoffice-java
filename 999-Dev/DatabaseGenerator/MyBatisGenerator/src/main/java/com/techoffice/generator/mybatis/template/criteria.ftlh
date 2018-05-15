@@ -1,3 +1,7 @@
+package ${metaMap.basePackage}.criteria;
+
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class ${javaClassName}Criteria {
 

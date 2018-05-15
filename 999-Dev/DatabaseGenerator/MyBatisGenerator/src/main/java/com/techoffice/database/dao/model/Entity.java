@@ -1,5 +1,6 @@
 package com.techoffice.database.dao.model;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +12,7 @@ public class Entity {
 	private String tableName;
 	private List<Field> fieldList;
 	private Key primaryKey;
-	private Map<Object, Object> metaMap;
+	private Map<Object, Object> metaMap = new HashMap<Object, Object>();
 	
 	public String getJavaClassName() {
 		return javaClassName;

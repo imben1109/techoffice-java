@@ -1,3 +1,9 @@
+package ${metaMap.basePackage}.dao;
+
+import java.util.List;
+
+import ${metaMap.basePackage}.entity.Test;
+import ${metaMap.basePackage}.key.TestKey;
 
 public interface ${javaClassName}Dao {
 

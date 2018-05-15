@@ -1,7 +1,26 @@
+package ${metaMap.basePackage}.controller;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import ${metaMap.basePackage}.criteria.${javaClassName}Criteria;
+import ${metaMap.basePackage}.entity.${javaClassName};
+import ${metaMap.basePackage}.key.${javaClassName}Key;
+import ${metaMap.basePackage}.service.${javaClassName}Service;
+
 
 @Controller
 @RequestMapping(value = "/${uncaptialJavaClassName}")
-public class ${javaClassName}Service{
+public class ${javaClassName}Controller{
 	
 	@Autowired
 	private ${javaClassName}Service ${uncaptialJavaClassName}Service;
@@ -33,7 +52,7 @@ public class ${javaClassName}Service{
 	@RequestMapping(value = "/delete", method = {RequestMethod.POST}, produces = { MediaType.APPLICATION_JSON_VALUE })
 	@ResponseBody
 	public void delete(@Valid @RequestBody ${javaClassName}Key ${uncaptialJavaClassName}Key){
-		${uncaptialJavaClassName}Service.update(${uncaptialJavaClassName}Key);
+		${uncaptialJavaClassName}Service.delete(${uncaptialJavaClassName}Key);
 	}
 
 }

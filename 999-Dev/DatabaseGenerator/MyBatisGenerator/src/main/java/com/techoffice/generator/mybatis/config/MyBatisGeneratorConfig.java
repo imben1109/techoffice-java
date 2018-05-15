@@ -18,6 +18,7 @@ public class MyBatisGeneratorConfig {
 
 	public static Properties prop = null;
 	private static final String PATH = "mybatis.generator.path";
+	private static final String PACKAGE_BASE		 = "mybatis.generator.package.base";
 	private static final String PACKAGE_ENTITY 		 = "mybatis.generator.package.entity";
 	private static final String PACKAGE_CRITERIA     = "mybatis.generator.package.criteria";
 	private static final String PACKAGE_KEY          = "mybatis.generator.package.key";
@@ -32,6 +33,10 @@ public class MyBatisGeneratorConfig {
 	
 	public static String getPath(){
 		return prop.getProperty(PATH);
+	}
+	
+	public static String getBasePackage(){
+		return prop.getProperty(PACKAGE_BASE);
 	}
 	
 	public static String getEntityPackage(){

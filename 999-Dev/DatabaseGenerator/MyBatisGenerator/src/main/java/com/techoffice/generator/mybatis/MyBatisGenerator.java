@@ -44,7 +44,7 @@ public class MyBatisGenerator extends MulitpleEntityTemplateGenerator{
 	}
 	
 	public List<File> generate(Entity entity) {
-		
+		entity.getMetaMap().put("basePackage", MyBatisGeneratorConfig.getBasePackage());
 		List<File> fileList = new ArrayList<File>();
 		for (SimpleEntityTemplateGenerator simpleEntityTemplateGenerator: templateGeneratorList){
 			File generateFile = MyBatisGeneratorConfig.getFile(simpleEntityTemplateGenerator, entity);
