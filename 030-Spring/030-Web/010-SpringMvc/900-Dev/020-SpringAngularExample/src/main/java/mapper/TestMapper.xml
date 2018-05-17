@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+  
+<mapper namespace="com.techoffice.dao.TestDao">
+
+	<resultMap id="testResultMap" type="com.techoffice.entity.Test">
+  		<result property="field0" column="FIELD0"/>
+  		<result property="field1" column="FIELD1"/>
+  		<result property="field2" column="FIELD2"/>
+  		<result property="field3" column="FIELD3"/>
+  		<result property="field4" column="FIELD4"/>
+  		<result property="numberField0" column="NUMBER_FIELD0"/>
+  		<result property="numberField1" column="NUMBER_FIELD1"/>
+  		<result property="numberField2" column="NUMBER_FIELD2"/>
+  		<result property="numberField3" column="NUMBER_FIELD3"/>
+  		<result property="numberField4" column="NUMBER_FIELD4"/>
+  		<result property="dateField0" column="DATE_FIELD0"/>
+  		<result property="dateField1" column="DATE_FIELD1"/>
+  		<result property="dateField2" column="DATE_FIELD2"/>
+  		<result property="dateField3" column="DATE_FIELD3"/>
+  		<result property="dateField4" column="DATE_FIELD4"/>
+  		<result property="integerField0" column="INTEGER_FIELD0"/>
+  		<result property="integerField1" column="INTEGER_FIELD1"/>
+  		<result property="integerField2" column="INTEGER_FIELD2"/>
+  		<result property="integerField3" column="INTEGER_FIELD3"/>
+  		<result property="integerField4" column="INTEGER_FIELD4"/>
+	</resultMap>
+
+	<sql id="testCriteria">
+		<if test="field0 != null and field0 != ''">
+			AND FIELD0 = field0
+		</if>
+		<if test="field1 != null and field1 != ''">
+			AND FIELD1 = field1
+		</if>
+		<if test="field2 != null and field2 != ''">
+			AND FIELD2 = field2
+		</if>
+		<if test="field3 != null and field3 != ''">
+			AND FIELD3 = field3
+		</if>
+		<if test="field4 != null and field4 != ''">
+			AND FIELD4 = field4
+		</if>
+		<if test="numberField0 != null and numberField0 != ''">
+			AND NUMBER_FIELD0 = numberField0
+		</if>
+		<if test="numberField1 != null and numberField1 != ''">
+			AND NUMBER_FIELD1 = numberField1
+		</if>
+		<if test="numberField2 != null and numberField2 != ''">
+			AND NUMBER_FIELD2 = numberField2
+		</if>
+		<if test="numberField3 != null and numberField3 != ''">
+			AND NUMBER_FIELD3 = numberField3
+		</if>
+		<if test="numberField4 != null and numberField4 != ''">
+			AND NUMBER_FIELD4 = numberField4
+		</if>
+		<if test="dateField0 != null and dateField0 != ''">
+			AND DATE_FIELD0 = dateField0
+		</if>
+		<if test="dateField1 != null and dateField1 != ''">
+			AND DATE_FIELD1 = dateField1
+		</if>
+		<if test="dateField2 != null and dateField2 != ''">
+			AND DATE_FIELD2 = dateField2
+		</if>
+		<if test="dateField3 != null and dateField3 != ''">
+			AND DATE_FIELD3 = dateField3
+		</if>
+		<if test="dateField4 != null and dateField4 != ''">
+			AND DATE_FIELD4 = dateField4
+		</if>
+		<if test="integerField0 != null and integerField0 != ''">
+			AND INTEGER_FIELD0 = integerField0
+		</if>
+		<if test="integerField1 != null and integerField1 != ''">
+			AND INTEGER_FIELD1 = integerField1
+		</if>
+		<if test="integerField2 != null and integerField2 != ''">
+			AND INTEGER_FIELD2 = integerField2
+		</if>
+		<if test="integerField3 != null and integerField3 != ''">
+			AND INTEGER_FIELD3 = integerField3
+		</if>
+		<if test="integerField4 != null and integerField4 != ''">
+			AND INTEGER_FIELD4 = integerField4
+		</if>
+	</sql>
+
+	<select id="search" resultMap="testResultMap">
+		SELECT * FROM TEST 
+		WHERE 1=1
+		<include refid="testCriteria"></include>
+	</select>
+
+	<select id="find" resultMap="testResultMap">
+		SELECT * FROM TEST 
+		WHERE 1=1
+			AND FIELD0 = #{field0}
+			AND FIELD1 = #{field1}
+			AND FIELD2 = #{field2}
+	</select>
+
+	<insert id="insert">
+		INSERT INTO TEST(
+			FIELD0,
+			FIELD1,
+			FIELD2,
+			FIELD3,
+			FIELD4,
+			NUMBER_FIELD0,
+			NUMBER_FIELD1,
+			NUMBER_FIELD2,
+			NUMBER_FIELD3,
+			NUMBER_FIELD4,
+			DATE_FIELD0,
+			DATE_FIELD1,
+			DATE_FIELD2,
+			DATE_FIELD3,
+			DATE_FIELD4,
+			INTEGER_FIELD0,
+			INTEGER_FIELD1,
+			INTEGER_FIELD2,
+			INTEGER_FIELD3,
+			INTEGER_FIELD4
+		)values(
+			#{field0},
+			#{field1},
+			#{field2},
+			#{field3},
+			#{field4},
+			#{numberField0},
+			#{numberField1},
+			#{numberField2},
+			#{numberField3},
+			#{numberField4},
+			#{dateField0},
+			#{dateField1},
+			#{dateField2},
+			#{dateField3},
+			#{dateField4},
+			#{integerField0},
+			#{integerField1},
+			#{integerField2},
+			#{integerField3},
+			#{integerField4}
+		)
+	
+	</insert>
+
+	<update id="update">
+		UPDATE TEST SET
+			FIELD0 = #{field0},
+			FIELD1 = #{field1},
+			FIELD2 = #{field2},
+			FIELD3 = #{field3},
+			FIELD4 = #{field4},
+			NUMBER_FIELD0 = #{numberField0},
+			NUMBER_FIELD1 = #{numberField1},
+			NUMBER_FIELD2 = #{numberField2},
+			NUMBER_FIELD3 = #{numberField3},
+			NUMBER_FIELD4 = #{numberField4},
+			DATE_FIELD0 = #{dateField0},
+			DATE_FIELD1 = #{dateField1},
+			DATE_FIELD2 = #{dateField2},
+			DATE_FIELD3 = #{dateField3},
+			DATE_FIELD4 = #{dateField4},
+			INTEGER_FIELD0 = #{integerField0},
+			INTEGER_FIELD1 = #{integerField1},
+			INTEGER_FIELD2 = #{integerField2},
+			INTEGER_FIELD3 = #{integerField3},
+			INTEGER_FIELD4 = #{integerField4}
+		WHERE 1=1
+			AND FIELD0 = #{field0}
+			AND FIELD1 = #{field1}
+			AND FIELD2 = #{field2}
+	</update>
+
+
+	<delete id="delete">
+		DELETE FROM TEST 
+		WHERE 1=1
+			AND FIELD0 = #{field0}
+			AND FIELD1 = #{field1}
+			AND FIELD2 = #{field2}
+	</delete>
+
+</mapper>
+
+
+

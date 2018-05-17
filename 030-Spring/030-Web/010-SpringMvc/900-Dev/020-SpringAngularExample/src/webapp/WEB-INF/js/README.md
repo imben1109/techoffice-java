@@ -1,0 +1,40 @@
+# Angular Hello World Example
+
+## Prerequisite
+* NodeJs
+* Webpack
+
+
+**package.json**
+```
+{
+  "name": "angular_hello_world_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --progress --colors --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^5.1.3",
+    "@angular/compiler": "^5.1.3",
+    "@angular/core": "^5.1.3",
+    "@angular/platform-browser": "^5.1.3",
+    "@angular/platform-browser-dynamic": "^5.1.3",
+    "core-js": "^2.5.3",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@types/node": "^9.3.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1"
+  }
+}
+```
