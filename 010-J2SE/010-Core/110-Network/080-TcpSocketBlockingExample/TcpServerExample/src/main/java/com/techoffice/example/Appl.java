@@ -29,6 +29,7 @@ public class Appl {
 			System.out.println("Someone is connecting to the server");
 			InputStream is = socket.getInputStream();
 			OutputStream os = socket.getOutputStream();
+//			InputStreamReader r;
 			PrintWriter writer = new PrintWriter(os);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 			String line = "";
@@ -36,6 +37,7 @@ public class Appl {
 				System.out.println(line);
 			}
 			writer.println("This is a Server Socket Test");
+			Thread.sleep(10000);
 			System.out.println("close");
 			socket.close();
 		}
