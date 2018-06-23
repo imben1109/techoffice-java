@@ -2,6 +2,7 @@ package com.techoffice.example;
 
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.URL;
 
 public class Handler {
 
@@ -26,8 +27,7 @@ public class Handler {
 				host = requestUrl.substring("http://".length());
 				host = host.substring(0, host.indexOf("/") );
 			}
-			Socket socket = new Socket(host, 80);
-			
+			Socket socket = new Socket(host, 80);			
 			PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
 			printWriter.print(content);
 			printWriter.flush();
