@@ -24,8 +24,9 @@
   		<property name="mapperLocations" value="classpath*:mapper/*Mapper.xml" />
 	</bean>
 	
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-  		<constructor-arg index="0" ref="sqlSessionFactory" />
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.techoffice.example.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 	
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

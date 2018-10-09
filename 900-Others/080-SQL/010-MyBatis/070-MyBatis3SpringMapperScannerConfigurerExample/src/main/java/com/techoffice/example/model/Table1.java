@@ -1,10 +1,7 @@
-package com.techoffice.example;
-
-import com.techoffice.dao.base.Key;
+package com.techoffice.example.model;
 
 public class Table1 {
 	
-	@Key
 	private String col1;
 	private String col2;
 	private Double col3;
@@ -26,7 +23,5 @@ public class Table1 {
 	public void setCol3(Double col3) {
 		this.col3 = col3;
 	}
-	
-	
 	
 }
