@@ -1,4 +1,4 @@
-# Spring Boot Example
+# Spring Boot JSP Example
 
 <version>4.3.0.RELEASE</version>
 
@@ -11,5 +11,4 @@
 
 ## Example
 
-## Spring Boot
-It provide static function **SpringApplication.run** to bootstrap Spring Boot Application 
+## Spring Boot JSP Integration 
