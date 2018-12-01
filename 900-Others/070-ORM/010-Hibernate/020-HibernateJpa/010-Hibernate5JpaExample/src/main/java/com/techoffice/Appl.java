@@ -1,4 +1,4 @@
-package com.techoffice.example;
+package com.techoffice;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.techoffice.example.model.Student;
+import com.techoffice.model.Student;
 
 public class Appl {
 	public static void main(String[] args){

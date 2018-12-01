@@ -1,4 +1,4 @@
-package com.techoffice.example.model;
+package com.techoffice.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
