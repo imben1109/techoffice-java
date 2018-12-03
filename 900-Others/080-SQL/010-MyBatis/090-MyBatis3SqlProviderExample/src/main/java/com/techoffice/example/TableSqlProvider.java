@@ -5,4 +5,5 @@ public class TableSqlProvider {
 	public static String getSelect(){
 		return "SELECT * FROM　Table1";
 	}
+	
 }
