@@ -4,7 +4,7 @@
   
 <mapper namespace="com.techoffice.dao.base.BaseTable1Dao">
 	
-	<resultMap id="resultMap" type="com.techoffice.entity.base.BaseTable1">
+	<resultMap id="resultMap" type="table1">
 		<result property="col1" column="COL1"/>
 		<result property="col2" column="COL2"/>
 		<result property="col3" column="COL3"/>
@@ -13,5 +13,5 @@
 	<select id="select" resultMap="resultMap">
 		SELECT * FROM TABLE1
 	</select>
-	
+
 </mapper>
