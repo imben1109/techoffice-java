@@ -21,16 +21,30 @@
     
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
   		<property name="dataSource" ref="dataSource" />
-  		<property name="mapperLocations" value="classpath*:mapper/*Mapper.xml" />
+  		<property name="mapperLocations" value="classpath*:mapper/**/*Mapper.xml" />
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.techoffice.example.dao" />
+		<property name="basePackage" value="com.techoffice.**.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 	
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 	    <property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<bean id="dbInit" class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+		<property name="scripts">
+			<list>
+				<value>db-schema.sql</value>
+			</list>
+		</property>
+		<property name="continueOnError" value="true"/>
+	</bean>
+	
+	<bean id="startupScripts" class="org.springframework.jdbc.datasource.init.DataSourceInitializer">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="databasePopulator"><ref bean="dbInit"/></property>
 	</bean>
     
 </beans>

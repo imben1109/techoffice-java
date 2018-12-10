@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.techoffice.Appl;
 import com.techoffice.example.dao.Table1Dao;
 
 @Component

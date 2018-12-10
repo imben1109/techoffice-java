@@ -1,4 +1,4 @@
-package com.techoffice.entity.base;
+package com.techoffice.example.entity;
 
 public class Table1 {
 	

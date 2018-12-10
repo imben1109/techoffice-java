@@ -1,6 +1,6 @@
-package com.techoffice.example.model;
+package com.techoffice.entity.base;
 
-public class Table1 {
+public class BaseTable1 {
 	
 	private String col1;
 	private String col2;

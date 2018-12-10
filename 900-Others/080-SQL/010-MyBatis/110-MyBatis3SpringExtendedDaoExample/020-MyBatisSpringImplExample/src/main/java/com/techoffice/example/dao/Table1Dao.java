@@ -2,7 +2,7 @@ package com.techoffice.example.dao;
 
 import java.util.List;
 
-import com.techoffice.example.model.Table1;
+import com.techoffice.example.entity.Table1;
 
 public interface Table1Dao  {
 
