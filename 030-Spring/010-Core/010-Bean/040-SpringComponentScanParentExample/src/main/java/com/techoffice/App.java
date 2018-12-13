@@ -20,7 +20,7 @@ public class App {
 	static ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 	
 	public static void main(String[] args){
-		TestingService1 testingBean1 = (TestingService1)context.getBean(TestingService1.class);
+		TestingService1 testingBean1 = context.getBean(TestingService1.class);
 		testingBean1.doSomething1();
 	}
 }
