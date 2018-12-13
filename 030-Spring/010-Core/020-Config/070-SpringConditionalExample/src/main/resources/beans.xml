@@ -5,8 +5,6 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.techoffice.TestBean">
-		<property name="message" value="Hello! This is a Spring Hello World Example By Tech Office - Java!" />
-	</bean>
+	<context:component-scan base-package="com.techoffice" />
 
 </beans>
