@@ -1,4 +1,4 @@
-package com.techoffice.example;
+package com.techoffice;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -10,26 +10,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author Ben_c
  *
  */
-public class HelloWorldExample {
+public class App {
 	
 	static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-	private String message;
-	
-	public void setMessage(String message){
-		this.message = message;
-	}
-	
-	public String getMessage(){
-		return message;
-	}
-	
 	/**
 	 * Main Program 
 	 * @param args
 	 */
 	public static void main(String[] args){
-		HelloWorldExample helloWorldExample = context.getBean(HelloWorldExample.class);
+		HelloWorld helloWorldExample = context.getBean(HelloWorld.class);
 		System.out.println(helloWorldExample.getMessage());
 	}
 }
