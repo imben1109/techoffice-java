@@ -9,7 +9,9 @@
 		http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package="com.techoffice"></context:component-scan>
+	<context:component-scan base-package="com.techoffice">
+		<context:include-filter type="annotation" expression=""/>
+	</context:component-scan>
 	<tx:annotation-driven transaction-manager="txManager"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
