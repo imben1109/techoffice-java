@@ -4,8 +4,8 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
-        <wb-resource deploy-path="/" source-path="/src/webapp" tag="defaultRootSource"/>
-        <property name="java-output-path" value="/SpringMvcExample/target/classes"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <property name="context-root" value="SpringMvcExample"/>
+        <property name="java-output-path" value="/SpringMvcResourceExample/target/classes"/>
     </wb-module>
 </project-modules>
