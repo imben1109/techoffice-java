@@ -1,4 +1,4 @@
-package com.techoffice.example.controller;
+package com.techoffice.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -25,6 +25,12 @@ public class SimpleController {
 			System.out.println("not authenticated");
 		}
 		return "access";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/auth")
+	public String auth(){
+		return "authenticated";
 	}
 }
 

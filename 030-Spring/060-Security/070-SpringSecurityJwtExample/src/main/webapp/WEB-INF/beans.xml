@@ -11,29 +11,52 @@
         http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<context:component-scan base-package="com.techoffice.example.controller" />
+	<context:component-scan base-package="com.techoffice" />
 
 	<!-- Spring MVC Config -->
-	
+
 	<!-- Add support of JSP -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
+
 	<!-- Spring Security Config -->
-	<security:http auto-config="true">
-		<!-- P.S. "**" means zero or more directories in the path -->
-		<security:intercept-url pattern="/**" access="hasAuthority('ADMIN')"/>
-	</security:http>
+	<security:global-method-security pre-post-annotations="enabled" />
 	
-	<security:authentication-manager>
+	<security:http pattern="/" security="none" />
+
+	<security:http pattern="/auth" entry-point-ref="jwtAuthenticationEntryPoint" >
+		<security:intercept-url pattern="/auth" access="permitAll" />
+		<security:custom-filter before="FORM_LOGIN_FILTER"
+			ref="jwtUsernamePasswordAuthenticationFilter" />
+	</security:http>
+
+	<security:http entry-point-ref="jwtAuthenticationEntryPoint">
+		<security:intercept-url pattern="/*"
+			access="hasAuthority('ADMIN')" />
+		<security:custom-filter before="FORM_LOGIN_FILTER"
+			ref="jwtTokenAuthenticationFilter" />
+	</security:http>
+
+
+	<security:authentication-manager alias="authenticationManager">
 		<security:authentication-provider>
 			<security:user-service>
-				<security:user name="user" password="password" authorities="ADMIN"/>
+				<security:user name="user" password="password"
+					authorities="ADMIN" />
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>
+
+	<bean id="jwtTokenAuthenticationFilter"
+		class="com.techoffice.security.filter.JwtTokenAuthenticationFilter" />
+	<bean id="jwtUsernamePasswordAuthenticationFilter"
+		class="com.techoffice.security.filter.JwtUsernamePasswordAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+	
+	<bean id="jwtAuthenticationEntryPoint" class="com.techoffice.security.web.JwtAuthenticationEntryPoint"/>
 
 </beans>
