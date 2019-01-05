@@ -30,7 +30,7 @@ public class JsonUtil {
 			T object = objectMapper.readValue(inputStream, clazz);	
 			return object;
 		}catch(Exception e){
-			log.error(e.getMessage(), e);
+//			log.error(e.getMessage(), e);
 		}
 		return null;
 	}

@@ -36,6 +36,9 @@ public class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAut
 	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 		try {
 			UserCredentials userCredentials = JsonUtil.getObject(request.getInputStream(), UserCredentials.class);
+			if (userCredentials == null){
+				throw new BadCredentialsException("Invalid Authentication: No Input");
+			}
 			Authentication authentication = new UsernamePasswordAuthenticationToken(userCredentials.getUsername(), userCredentials.getPassword());
 			return this.getAuthenticationManager().authenticate(authentication);
 		} catch (IOException e) {
