@@ -6,13 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.techoffice.security.model.ResponseData;
+
 @Controller
 public class SimpleController {
 	
 	@RequestMapping(value="/")
-	@ResponseBody
 	public String home(){
-		return "Hello Spring Sercurity Web Application";
+		return "index";
 	}
 	
 	@ResponseBody
@@ -29,8 +30,8 @@ public class SimpleController {
 	
 	@ResponseBody
 	@RequestMapping(value="/auth")
-	public String auth(){
-		return "authenticated";
+	public ResponseData<String> auth(){
+		return new ResponseData<String>("authenticated");
 	}
 }
 

@@ -14,9 +14,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.techoffice.security.model.UserCredentials;
+import com.techoffice.security.util.JwtUtil;
 import com.techoffice.util.JsonUtil;
+
+import io.jsonwebtoken.Jwts;
 
 /**
  * 
@@ -29,7 +33,7 @@ public class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAut
 	
 
 	public JwtUsernamePasswordAuthenticationFilter(){
-		super.setFilterProcessesUrl("/**");
+		super.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/**"));
 	}
 	
 	@Override
@@ -50,7 +54,7 @@ public class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAut
 	@Override
 	protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
 			Authentication auth) throws IOException, ServletException {
-        super.successfulAuthentication(request, response, chain, auth);
+		response.addHeader("Authorization", "Bearer " + JwtUtil.buildToken(auth));
         chain.doFilter(request, response);
 	}
 }

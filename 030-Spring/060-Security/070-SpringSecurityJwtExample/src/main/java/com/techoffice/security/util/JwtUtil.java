@@ -1,17 +1,15 @@
-package com.techoffice.security.jwt;
+package com.techoffice.security.util;
 
 import java.security.Key;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Date;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -34,11 +32,29 @@ public class JwtUtil {
 		String username = claims.getSubject();
 		if (username != null){
 			String authoritiesStr = claims.get("authorities").toString();
-			List<String> authoritiesList = Arrays.asList(authoritiesStr.split(","));
-			Collection<GrantedAuthority> authorities = authoritiesList.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+			Collection<GrantedAuthority> authorities = AuthenticationUtil.parseAuthorities(authoritiesStr);
 			UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, null, authorities);
 			return authToken;
 		}
 		return null;
 	}
+	
+	public static String buildToken(Authentication authentication){
+		JwtBuilder jwtBuilder = Jwts.builder();
+		jwtBuilder.setSubject(authentication.getName());
+		String authoritiesStr = AuthenticationUtil.getAuthoritiesStr(authentication.getAuthorities());
+		jwtBuilder.claim("authorities", authoritiesStr);
+		Long now = System.currentTimeMillis();
+		jwtBuilder.setIssuedAt(new Date(now));
+		jwtBuilder.setExpiration(getExpireDate(now));
+		jwtBuilder.signWith(getSecretKey());
+		return jwtBuilder.compact();
+	}
+	
+	public static Date getExpireDate(Long date){
+		Long expirationMinutes = 5L;
+		Long expiration = expirationMinutes * 60 * 1000;
+		return new Date(date + expiration);
+	}
+
 }
