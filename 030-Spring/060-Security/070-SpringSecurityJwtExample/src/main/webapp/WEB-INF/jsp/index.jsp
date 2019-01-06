@@ -9,6 +9,8 @@
 	<script type="text/javascript">
 		var app = angular.module("app", []);
 		app	.controller("appController",function($scope, $http){
+			
+			// submit functoin
 			$scope.submit = function(){
 				console.log("logging login form");
 				console.log($scope.loginForm);
@@ -26,8 +28,44 @@
 						console.log(response);
 						alert("Authenticated Failed!");
 					}
-				)
+				);
 			};
+			
+			// accessWithoutJwtToken
+			$scope.accessWithoutJwtToken = function(){
+				$http.post("./access", $scope.loginForm).then(
+					function(response, status,headers){
+						console.log("logging success response");
+						console.log(response);
+						alert("Response" + JSON.stringify(response.data));
+					},
+					function(response){
+						console.log("logging failed response");
+						console.log(response);
+						alert("failed call from access");
+					}
+				);
+			}
+			
+			// accessWithJwtToken
+			$scope.accessWithJwtToken = function(){
+				$http.post("./access", $scope.loginForm, {
+					headers : {
+						Authorization: $scope.authorizationHeader
+					}
+				}).then(
+					function(response, status,headers){
+						console.log("logging success response");
+						console.log(response);
+						alert("Response" + JSON.stringify(response.data));
+					},
+					function(response){
+						console.log("logging failed response");
+						console.log(response);
+						alert("failed call from access");
+					}
+				);
+			}
 		});
 	</script>
 </head>
@@ -54,7 +92,8 @@
 	</div>
 	
 	<div>
-		<button type="button">Access </button>
+		<button type="button" ng-click="accessWithoutJwtToken()">Access without JWT Token</button>
+		<button type="button" ng-click="accessWithJwtToken()">Access with JWT Token</button>
 	</div>
 </body>
 </html>

@@ -32,14 +32,16 @@
 	
 	<security:http pattern="/" security="none" />
 	<security:http pattern="/webjars" security="none"/>
-	<security:http pattern="/auth" entry-point-ref="jwtAuthenticationEntryPoint" >
-		<security:intercept-url pattern="/auth" access="permitAll" />
+	
+	<security:http pattern="/auth" entry-point-ref="jwtAuthenticationEntryPoint" create-session="stateless">
 		<security:csrf disabled="true"/>
+		<security:intercept-url pattern="/auth" access="permitAll" />
 		<security:custom-filter before="FORM_LOGIN_FILTER"
 			ref="jwtUsernamePasswordAuthenticationFilter" />
 	</security:http>
 
-	<security:http entry-point-ref="jwtAuthenticationEntryPoint">
+	<security:http entry-point-ref="jwtAuthenticationEntryPoint" create-session="stateless">
+		<security:csrf disabled="true"/>
 		<security:intercept-url pattern="/*"
 			access="hasAuthority('ADMIN')" />
 		<security:custom-filter before="FORM_LOGIN_FILTER"
