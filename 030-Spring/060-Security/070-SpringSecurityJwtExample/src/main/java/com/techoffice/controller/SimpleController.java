@@ -18,14 +18,14 @@ public class SimpleController {
 	
 	@ResponseBody
 	@RequestMapping(value="/access")
-	public String access(){
+	public ResponseData<String> access(){
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (authentication != null){
 			System.out.println(authentication.getName() + ": authenticated" );
 		}else{
 			System.out.println("not authenticated");
 		}
-		return "access";
+		return new ResponseData<String>("access");
 	}
 	
 	@ResponseBody

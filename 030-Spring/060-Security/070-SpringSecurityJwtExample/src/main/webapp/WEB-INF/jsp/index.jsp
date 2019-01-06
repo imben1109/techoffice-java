@@ -13,14 +13,18 @@
 				console.log("logging login form");
 				console.log($scope.loginForm);
 				$http.post("./auth", $scope.loginForm).then(
-					function(response){
+					function(response, status,headers){
 						console.log("logging authentication success response");
 						console.log(response);
+						alert("Authenticated Response" + JSON.stringify(response.data));
+						var authorizationHeader = response.headers("Authorization");
+						console.log(authorizationHeader);
+						$scope.authorizationHeader = authorizationHeader;
 					},
 					function(response){
 						console.log("logging authentication failed response");
 						console.log(response);
-						alert(response);
+						alert("Authenticated Failed!");
 					}
 				)
 			};
@@ -29,7 +33,7 @@
 </head>
 <body ng-app="app" ng-controller="appController">
 	<h1>Spring Security JWT Example</h1>
-	<form >
+	<form ng-submit="submit()">
 		<table>
 			<tr>
 				<td><span>User Name: </span></td>
@@ -40,9 +44,17 @@
 				<td><input type="text" ng-model="loginForm.password"/></td>
 			</tr>
 			<tr colspan="2">
-				<td><button type="button" ng-click="submit()">Submit</button></td>
+				<td><button type="submit" >Submit</button></td>
 			</tr>
 		</table>
 	</form>
+	
+	<div>
+		Authorization Header: {{authorizationHeader}}
+	</div>
+	
+	<div>
+		<button type="button">Access </button>
+	</div>
 </body>
 </html>
