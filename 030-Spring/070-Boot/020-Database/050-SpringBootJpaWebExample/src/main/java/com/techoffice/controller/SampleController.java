@@ -11,7 +11,4 @@ public class SampleController {
 		return "welcome";
 	}
 
-
-
-
 }
