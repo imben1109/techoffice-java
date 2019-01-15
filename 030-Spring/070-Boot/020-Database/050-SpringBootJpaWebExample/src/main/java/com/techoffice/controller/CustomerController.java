@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.techoffice.http.model.ResponseData;
 import com.techoffice.model.Customer;
 import com.techoffice.service.CustomerService;
 

@@ -11,20 +11,59 @@
 			var app = angular.module("app", []);
 			app.controller("appController",function($scope, $http){
 				
+				$scope.editing = false;
+				
+				// search 
+				$scope.search = function(){
+					$http.post("./customer/findAll"
+					).then(function(response){
+						$scope.customerList = response.data;
+					});
+				}
+				
+				// select
+				$scope.select = function(customer){
+					$scope.customer = customer;
+					$scope.editing = true;
+				};
+				
+				// submit
 				$scope.submit = function(){
 					$http.post("./customer/update", 
 						$scope.customer
 					).then(function(response){
-						debugger;
+						if ($scope.customer.id){
+							alert($scope.customer.id + " Updated.");
+						}else {
+							alert(response.data.id + " Created.");
+						}
+						$scope.search();
 					});	
 				};
+				
+				// create
+				$scope.create = function(){
+					$scope.editing = true;
+					$scope.customer = {};
+				}
+				
 				
 			});
 		</script>
 	</head>
 
 	<body ng-app="app" ng-controller="appController">
-		<form ng-submit="submit()">
+		<button ng-click="search()">Search</button>
+		<button ng-click="create()">Create</button>
+		<table border="1">
+			<tr ng-repeat="customer in customerList" ng-click="select(customer)">
+				<td>{{customer.id}}</td>
+				<td>{{customer.firstName}}</td>
+				<td>{{customer.lastName}}</td>
+			</tr>
+		</table>
+	
+		<form ng-submit="submit()" ng-if="editing">
 			<table>
 				<tr>
 					<td><span>User Name: </span></td>
