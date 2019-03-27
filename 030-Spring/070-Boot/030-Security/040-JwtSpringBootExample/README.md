@@ -1,4 +1,14 @@
-# Spring Boot Security Example
+# Spring Boot JSP Example
 
-The Default User: user
-The Default Password: <Generatein Startup. Obtain in Console>
+<version>4.3.0.RELEASE</version>
+
+## Prerequisite
+* Maven 3
+* Eclipse Mars 4.5
+
+## Dependencies
+* Spring Boot 1.4
+
+## Example
+
+## Spring Boot JSP Integration 
