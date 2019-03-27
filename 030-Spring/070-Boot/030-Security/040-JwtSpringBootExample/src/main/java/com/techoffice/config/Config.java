@@ -49,7 +49,7 @@ public class Config extends WebSecurityConfigurerAdapter {
 			.authenticationEntryPoint(unauthorizedHandler)
 			.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 			.and().csrf().disable()
-			.authorizeRequests().anyRequest().authenticated()
+			.authorizeRequests().anyRequest().access("hasRole('USER')")
 			.and().addFilterBefore(new JwtTokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
 //		http.authorizeRequests().antMatchers("/**").permitAll().and()
