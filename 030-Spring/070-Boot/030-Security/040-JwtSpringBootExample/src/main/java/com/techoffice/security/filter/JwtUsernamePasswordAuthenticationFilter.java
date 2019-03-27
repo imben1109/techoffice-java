@@ -15,12 +15,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.stereotype.Component;
 
 import com.techoffice.security.model.UserCredentials;
 import com.techoffice.security.util.JwtUtil;
 import com.techoffice.util.JsonUtil;
-
-import io.jsonwebtoken.Jwts;
 
 /**
  * 
@@ -31,9 +30,8 @@ public class JwtUsernamePasswordAuthenticationFilter extends UsernamePasswordAut
 
 	private static Log log = LogFactory.getLog(JwtUsernamePasswordAuthenticationFilter.class);
 	
-
 	public JwtUsernamePasswordAuthenticationFilter(){
-		super.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/**"));
+		super.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/*"));
 	}
 	
 	@Override
