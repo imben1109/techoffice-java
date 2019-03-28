@@ -24,7 +24,7 @@ public class JwtUtil {
 		return JwtUtil.secretKey;
 	}
 	
-	public void setSecretKey(Key key){
+	public static void setSecretKey(Key key){
 		JwtUtil.secretKey = key;
 	}
 	
