@@ -12,8 +12,13 @@ import com.techoffice.security.util.KeyUtil;
 @Controller
 public class SimpleController {
 	
-	@RequestMapping(value="/index")
+	@RequestMapping(value="/")
 	public String home(){
+		return "index";
+	}
+	
+	@RequestMapping(value="/index")
+	public String index(){
 		return "index";
 	}
 	
