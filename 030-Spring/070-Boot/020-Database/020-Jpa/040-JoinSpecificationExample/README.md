@@ -1,2 +1,0 @@
-# Spring Boot Hibernate Example
-
