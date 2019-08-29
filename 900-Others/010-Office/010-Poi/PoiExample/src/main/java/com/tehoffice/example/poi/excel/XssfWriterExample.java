@@ -9,11 +9,11 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class SimpleExcelWriterExample {
+public class XssfWriterExample {
 	
 	private String content;
 	
-	public SimpleExcelWriterExample(String content){
+	public XssfWriterExample(String content){
 		this.content = content;
 	}
 	
@@ -29,7 +29,7 @@ public class SimpleExcelWriterExample {
 	}
 	
 	public static void main(String[] args) throws IOException{
-		SimpleExcelWriterExample SimpleExcelWriterExample = new SimpleExcelWriterExample("Testing Contents");
-		SimpleExcelWriterExample.write("SimpleExcelWriterExample.xlsx");
+		XssfWriterExample SimpleExcelWriterExample = new XssfWriterExample("Testing Contents");
+		SimpleExcelWriterExample.write("XssfWriterExample.xlsx");
 	}
 }

@@ -10,7 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
-public class SimpleExcelReaderExample {
+public class HssfReaderExample {
 	
 	public static void main(String[] args) throws IOException{
 		FileInputStream file = new FileInputStream(new File("SimpleExcelReaderExample.xls"));
