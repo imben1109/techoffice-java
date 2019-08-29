@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab8d054c-163f-4ba6-8e8e-678016ae8e94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/HssfWriterExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfReaderExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfWriterExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleExcelWriterExample.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleExcelWriterExample.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/SimpleExcelReaderExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/HssfReaderExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/SimpleExcelWriterExample.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SaxReaderExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SaxReaderExample/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -36,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfWriterExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
+            <state relative-caret-position="158">
               <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-end-line="21" />
             </state>
           </provider>
@@ -45,7 +39,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfReaderExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
+            <state relative-caret-position="-10">
               <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -324,13 +318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfWriterExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.10-FINAL/poi-ooxml-3.10-FINAL.jar!/org/apache/poi/xssf/usermodel/XSSFWorkbook.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -345,9 +332,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfWriterExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tehoffice/example/poi/excel/XssfReaderExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
+        <state relative-caret-position="-10">
           <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
