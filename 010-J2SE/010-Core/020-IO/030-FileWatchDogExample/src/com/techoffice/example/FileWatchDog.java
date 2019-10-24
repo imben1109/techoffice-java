@@ -1,21 +1,20 @@
 package com.techoffice.example;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileSystems;
-import java.nio.file.Path;
-import java.nio.file.StandardWatchEventKinds;
-import java.nio.file.WatchEvent;
-import java.nio.file.WatchKey;
-import java.nio.file.WatchService;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
+import java.nio.file.*;
 
 public class FileWatchDog extends Thread{
 
 	private Path path;
 	private WatchService watcher;
-	private static final long delay = 10000;
+	private static final long delay = 1000;
 	
 	public FileWatchDog(Path path) throws IOException{
-		this.path = path;
+        System.out.println("Start Watch Dog on " + path.toFile().getAbsolutePath());
+        this.path = path;
 		this.watcher = FileSystems.getDefault().newWatchService();
 		this.path.register(this.watcher, StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_DELETE, StandardWatchEventKinds.ENTRY_MODIFY);
 	}
@@ -31,7 +30,14 @@ public class FileWatchDog extends Thread{
 	            		WatchEvent<?> ev = (WatchEvent<?>)event;
 	            		if (ev.context() instanceof Path){
 	            			Path filename = (Path) ev.context();
-		                    System.out.println(filename + "Updated");
+							Path filePath = new File(this.path.toFile(), filename.toString()).toPath();
+							try{
+								FileChannel fileChannel = FileChannel.open(filePath, StandardOpenOption.READ);
+                                FileLock lock = fileChannel.lock(0, Long.MAX_VALUE, true);
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                            System.out.println(filename + "Updated");
 	            		}
 	            	}
 	            }
