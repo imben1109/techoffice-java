@@ -9,8 +9,5 @@
         <module name="WatchDogExample" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="WatchDogExample" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
