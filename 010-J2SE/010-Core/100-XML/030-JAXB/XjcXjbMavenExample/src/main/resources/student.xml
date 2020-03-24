@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<student>
-    <name>testing</name>
-</student>
+<ns1:student xmlns:ns1="testingNamespace2">
+    <ns1:name>testing</ns1:name>
+</ns1:student>

@@ -11,9 +11,12 @@ import javax.xml.transform.stream.StreamSource;
 import com.techoffice.example.student.model.Student;
 
 public class XmlToBean {
+
+	private static final String url = "com.techoffice.example.student.model";
+
 	public static void main(String[] args) throws JAXBException {
 		InputStream stream = XmlToBean.class.getClassLoader().getResourceAsStream("student.xml");
-		JAXBContext jaxbContext = JAXBContext.newInstance(Student.class);
+		JAXBContext jaxbContext = JAXBContext.newInstance(url);
 		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		StreamSource streamSource = new StreamSource(stream);
 		JAXBElement<Student> studentJaxbElement = jaxbUnmarshaller.unmarshal(streamSource, Student.class);
